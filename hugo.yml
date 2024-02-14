@@ -1,0 +1,8 @@
+baseURL: "/"
+languageCode: "en-us"
+title: "Christian José Torrealba Rondón"
+theme: "paper"
+params:
+    color: "light"
+    github: "christianjtr"
+    linkedin: "christianjtr"

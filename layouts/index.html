@@ -1,0 +1,227 @@
+{{ define "main" }}
+  <section class="grid-section-container align-items--center">
+    <article class="w-11/12">
+      <h1 class="upper-title">
+        👋🏻 Hi there folks, I am
+        <span class="title">
+          Christian José <br/> Torrealba Rondón
+        </span>
+      </h1>
+      <p>
+        Product-oriented professional who leverages know-how of <span class="highlighted-text">systems design thinking</span>,
+        <span class="highlighted-text">engineering</span> principles, <span class="highlighted-text">data insights</span>, 
+        and an <span class="highlighted-text">agile mindset</span> to deliver user-centric solutions that drive impact.
+      </p>
+    </article>
+    <img
+      src="./images/home-office.svg"
+      alt="A remote worker who is at home in front a computer"
+      width="100%"/>
+  </section>
+  <!-- SUMMARY -->
+  <section class="summary">
+    <div>
+      <span class="title">
+        <i class="fa fa-smile color--pink"></i>
+        About Me
+      </span>
+      <p>
+        {{ .Params.summary_about }}
+        <span class="block">{{ .Params.summary_hobbies }}</span>
+      </p>
+    </div>
+    <div>
+      <span class="title">
+        <i class="fa fa-glasses color--pink"></i>
+        Interests
+      </span>
+      <p>
+        {{ range .Params.summary_interests }}
+        <span class="tag">{{ . }}</span>
+        {{ end }}
+      </p>
+    </div>
+    <div>
+      <span class="title">
+        <i class="fa fa-language color--pink"></i>
+        Languages
+      </span>
+      <ul>
+        {{ range .Params.summary_languages }}
+        <li>
+          <span class="block">{{ .language }}</span>
+          <span class="block"><small>{{ .proficiency }}</small></span>
+          <span class="progress" style="--level: {{ .level }}"></span>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+  </section>
+  <!-- ABOUT ME -->
+  <h2 class="subtitle">Knowledgeable<span>.</span></h2>
+  <section class="grid-section-container align-items--flex-start justify-content--inherit">
+    <article>
+      <ul class="knowledge-list">
+        {{ range $key, $value := .Params.knowledge }}
+        <li>
+          <i class="{{ .CSSIconClass }}"></i>
+          {{ .description }}
+        </li>
+        {{ end }}
+      </ul>
+      <h3>Projects published 💡</h3>
+      <span class="normal-text block">
+        Contributed to several projects presented at international conferences. Besides, I participated in crafting other 
+        academic projects you can see on <a href="https://www.linkedin.com/in/christianjtr/" rel="external" class="color--pink" target="_blank" title="LinkedIn">
+          LinkedIn
+        </a>
+      </span>
+      <div class="project-container">
+        {{ range $key, $value := .Params.projects_published }}
+        <p class="project-card">
+          <span class="title block">
+            {{ .title }}
+            <small class="data-detail  block">
+              {{ .flag }} · {{ .period }}
+            </small>
+            <small class="data-detail  block">
+              {{ .owner }}
+            </small>
+          </span>
+          <a href="{{ .url }}" rel="external" class="text--small color--pink" target="_blank">
+            See details <i class="fa fa-external-link-alt"></i>
+          </a>
+        </p>
+        {{ end }}
+      </div>
+      <h3>Organizations 🏛️</h3>
+      <p class="normal-text">
+        I am member of the <strong>Venezuela College of Engineers</strong> and the <strong>Society of Petroleum Engineers.</strong>
+      </p>
+      <div class="logo-wrapper">
+        <img src="./images/colegio_ingenieros_venezuela.jpg" 
+          widt="40px" 
+          height="40px" 
+          alt="Venezuelan Engineers School logo"
+          title="Venezuela College of Engineers"
+        />
+        <img 
+          src="./images/spe_international.jpg" 
+          widt="40px" 
+          height="40px" 
+          title="Society of Petroleum Engineers"
+          alt="Society of Petroleum Engineers logo"
+        />
+      </div>
+    </article>
+    <article>
+      <h3>Technologies 🔮</h3>
+      <span class="normal-text">
+        Here is a collection of technologies I used to play with.
+      </span>
+      <img
+        src="./images/word-cloud.svg"
+        alt="word cloud of technologies I used to play with"
+        width="100%"/>
+      <h3>Credentials 🎈</h3>
+      <span class="normal-text">Some of the certifications I have got so far</span>
+      <div class="credentials-wrapper">
+        <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="f4d80edd-5f42-4234-bab2-8805d5121ecb" data-share-badge-host="https://www.credly.com"></div>
+        <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="26b9f00b-156e-4832-8808-a424f43af345" data-share-badge-host="https://www.credly.com"></div>
+        <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="e4c9bf26-0936-4460-97a2-eeb1d620a55c" data-share-badge-host="https://www.credly.com"></div>
+      </div>
+    </article>
+  </section>
+  <!-- BACKGROUND -->
+  <hr>
+  <h2 class="subtitle">Background<span>.</span></h2>
+  <section class="grid-section-container align-items--flex-start justify-content--inherit">
+    <!--- BACKGROUND ::: PROFESSIONAL EXPERIENCE -->
+    <article>
+      <h3>Professional Experience 🧑🏻‍💼</h3>
+      <div class="timeline">
+          {{ range $key, $value := .Params.experiences }}
+          <div class="card" id="experience_{{ $key }}">
+            <div class="info">
+              <small>📍 {{ .location }}</small>
+              <h3 class="title">{{ .position }}</h3>
+              <span class="subtitle block">{{ .company }}</span>
+              <span class="subtitle--secondary block">
+                <i class="fa fa-industry"></i>
+                {{ .sector }}
+              </span>
+              <span class="subtitle--secondary block">
+                <i class="fa fa-calendar"></i>
+                {{ .period }}
+              </span>
+              <p>{{ .description }}</p>
+            </div>
+          </div>
+          {{ end }}
+      </div>
+    </article>
+    <article>
+      <!--- BACKGROUND ::: STUDIES -->
+      <h3>Studies 📚</h3>
+      <div class="experience-topic_container">
+        <span class="ribbon"><i class="fa fa-user-graduate"></i></span>
+        {{ range $key, $value := .Params.studies }}
+        <div id="studies_{{ $key }}">
+          <small>📍 {{ .location }}</small>
+          {{ range .studies }}
+          <div class="experience-topic">
+            {{ if eq .isOngoing true }}
+            <small class="block">
+              <i class="fa fa-book color--pink" title="On-going"></i>
+              On-going
+            </small>
+            {{ end }}
+            <h4 class="title margin-top--none">{{ .degree }}</h4>
+            <span class="subtitle--secondary block">
+              <i class="fa fa-university"></i>
+              {{ .school }}
+            </span>
+            <span class="subtitle--secondary block">
+              <i class="fa fa-calendar"></i>
+              {{ .period }}
+            </span>
+            <p>
+              {{ range .topics }}
+              <span class="tag">{{ . }}</span>
+              {{ end }}
+            </p>
+          </div>
+          {{ end }}
+        </div>
+        {{ end }}
+      </div>
+      <!--- BACKGROUND ::: CERTIFICATIONS -->
+      <h3>Certifications 🤓</h3>
+      <div class="experience-topic_container">
+        <span class="ribbon"><i class="fa fa-medal"></i></span>
+        {{ range $key, $value := .Params.certifications }}
+        <div id="certification_{{ $key }}" class="experience-topic">
+          <h4 class="title margin-top--none">{{ .organization }}</h4>
+          <ul>
+            {{ range .certifications }}
+            <li>
+              <span class="subtitle block">{{ .title }}</span>
+              <span class="subtitle--secondary block">
+                <i class="fa fa-calendar"></i>
+                {{ .date }}
+                {{ if eq .showCredential true }} · Credential Id: {{ .credential }}{{ end }}
+              </span>
+              {{ if eq .showURL true }}
+              <a href="{{ .url }}" rel="external" class="text--small color--pink" target="_blank">
+                Show credential <i class="fa fa-external-link-alt"></i>
+              </a>
+              {{ end }}
+            </li>
+            {{ end }}
+          </ul>
+        </div>
+        {{ end }}
+      </div>
+    </article>
+  </section>
+{{ end }}
