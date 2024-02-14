@@ -379,13 +379,6 @@ footer a {
     grid-template-columns: repeat(1, 1fr);
     background: white;
 }
-.experience-topic_container a {
-    text-decoration: none;
-}
-.experience-topic_container a:hover {
-    color: var(--pink-color);
-    text-decoration: underline dotted var(--bluegray-color);
-}
 .experience-topic_container .title {
     color: var(--green-color);
     position: relative;
