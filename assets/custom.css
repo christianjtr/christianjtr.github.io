@@ -1,11 +1,11 @@
 /* Place custom css here. */
 
 :root {
-    --green-color: #30CEB5;
+    --green-color: #30ceb5;
     --pink-color: deeppink;
-    --text-color: #37474F;
-    --grey-color: #E8E8E8;
-    --bluegray-color: #607D8B;
+    --text-color: #37474f;
+    --grey-color: #e8e8e8;
+    --bluegray-color: #607d8b;
 }
 
 html {
@@ -13,14 +13,14 @@ html {
 }
 
 .knowledge-list {
-    list-style: none; 
-    padding: 0; 
-    font-size: 16px; 
+    list-style: none;
+    padding: 0;
+    font-size: 16px;
     color: var(--text-color);
 }
 
 .logo-wrapper {
-    display: flex; 
+    display: flex;
     align-items: center;
 }
 
@@ -29,10 +29,17 @@ html {
 }
 
 .credentials-wrapper {
-    display: flex; 
-    justify-content: space-around; 
+    display: flex;
+    justify-content: space-around;
     padding: 0 25px;
     margin: 15px 0px;
+}
+
+@media (max-width: 768px) {
+    .credentials-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .myBtn {
@@ -48,10 +55,17 @@ html {
     padding: 15px;
     border-radius: 20px;
     font-size: 25px;
-    }
+}
 
 .myBtn:hover {
     background-color: #07356d;
+}
+
+@media (max-width: 768px) {
+    .myBtn {
+        bottom: 150px;
+        right: 20px;
+    }
 }
 
 .no-user-select {
@@ -61,7 +75,11 @@ html {
 }
 
 .blur-background {
-    background-image: radial-gradient(circle farthest-side at top left, rgba(49, 27, 146, 0.05) 1%, rgb(255, 255, 255) 100%);
+    background-image: radial-gradient(
+        circle farthest-side at top left,
+        rgba(49, 27, 146, 0.05) 1%,
+        rgb(255, 255, 255) 100%
+    );
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -70,16 +88,27 @@ html {
 }
 
 h2.subtitle {
-    color:var(--green-color);
+    color: var(--green-color);
     font-size: 30px;
     margin: 0;
 }
 h2.subtitle > span {
-    color:var(--pink-color);
+    color: var(--pink-color);
 }
 
 footer a {
     margin: 0px 5px;
+}
+
+@media (max-width: 768px) {
+    footer {
+        display: contents !important;
+    }
+    footer a {
+        display: block;
+        text-align: center;
+        margin: 0;
+    }
 }
 
 .normal-text {
@@ -94,7 +123,7 @@ footer a {
     color: var(--bluegray-color);
 }
 .color--green {
-    color: var(--green-color)
+    color: var(--green-color);
 }
 .text--small {
     font-size: 13px;
@@ -133,7 +162,7 @@ footer a {
     box-shadow: 0 8px 16px 0 rgb(0 0 0 / 16%);
     margin: 0px 0px 50px 0px;
     padding: 16px;
-    display: flex; 
+    display: flex;
     justify-content: space-between;
     gap: calc(1vh + 1px) calc(1vw + 1px);
 }
@@ -142,7 +171,7 @@ footer a {
     border-right: 1.5px solid var(--grey-color);
 }
 .summary > div span.title {
-    font-size: 18px; 
+    font-size: 18px;
     font-weight: 400;
 }
 .summary > div:last-child {
@@ -156,10 +185,10 @@ footer a {
 .summary ul {
     list-style: none;
     margin-bottom: 0;
-    padding: 0
+    padding: 0;
 }
 .summary ul li {
-    display: flex; 
+    display: flex;
     align-items: end;
 }
 .summary ul li span:first-child {
@@ -216,7 +245,7 @@ footer a {
     }
     .project-container p {
         margin: 10px;
-    }    
+    }
 }
 
 /* Grid container... */
@@ -227,20 +256,20 @@ footer a {
     justify-content: center;
 }
 .grid-section-container .upper-title {
-    color: var(--green-color); 
-    font-size: 1.2rem; 
+    color: var(--green-color);
+    font-size: 1.2rem;
     font-weight: 400;
 }
 .grid-section-container .title {
     color: black;
-    display: block; 
-    font-weight: 600; 
-    padding-top: 1rem; 
-    font-size: 2.5rem; 
+    display: block;
+    font-weight: 600;
+    padding-top: 1rem;
+    font-size: 2.5rem;
     line-height: 2.7rem;
 }
 .grid-section-container p {
-    font-weight: 400; 
+    font-weight: 400;
     color: var(--text-color);
 }
 
@@ -306,7 +335,7 @@ footer a {
     border-radius: 10px;
     padding: 10px;
     background: transparent;
-    font-size:16px;
+    font-size: 16px;
 }
 .timeline .title {
     color: var(--pink-color);
@@ -324,7 +353,7 @@ footer a {
     border-radius: 999px;
     border: 4px solid var(--green-color);
 }
-.timeline .subtitle  {
+.timeline .subtitle {
     font-weight: 500;
     font-size: 18px;
 }
@@ -333,15 +362,22 @@ footer a {
     font-size: 14px;
 }
 
+@media (max-width: 768px) {
+    .timeline .title,
+    .timeline .subtitle {
+        line-height: 1.5625rem;
+    }
+}
+
 /* Background... */
 .experience-topic_container {
     margin: 15px;
     padding: 15px;
     border: 1px solid var(--grey-color);
     border-radius: 10px;
-    display: grid; 
+    display: grid;
     grid-template-columns: repeat(1, 1fr);
-    background: white;    
+    background: white;
 }
 .experience-topic_container a {
     text-decoration: none;
@@ -390,13 +426,13 @@ footer a {
 }
 .experience-topic ul.simple-list {
     margin: 15px 0px;
-
 }
 .experience-topic ul.simple-list li {
     font-size: 16px;
     padding-left: 20px;
 }
-.experience-topic .tag, .tag {
+.experience-topic .tag,
+.tag {
     padding: 5px;
     border-radius: 3px;
     color: cornflowerblue;
@@ -406,6 +442,12 @@ footer a {
     margin: 15px 0px;
 }
 
+@media (max-width: 768px) {
+    .experience-topic_container .title,
+    .experience-topic_container .subtitle {
+        line-height: 1.5625rem;
+    }
+}
 
 /* Others... */
 
@@ -422,23 +464,39 @@ footer a {
 }
 
 .ribbon {
-    --r: .8em;
+    --r: 0.8em;
 
     font-size: 30px;
     position: absolute;
     right: 60px;
     color: #fff;
-    border-inline: .5em solid #0000;
-    padding: .5em .2em calc(var(--r) + .2em);
-    clip-path: polygon(0 0,100% 0,100% 100%,calc(100% - .5em) 100%,50% calc(100% - var(--r)),.5em 100%,0 100%);
-    background: radial-gradient(50% .15em at top,#000a,#0000) border-box, var(--pink-color) padding-box;
+    border-inline: 0.5em solid #0000;
+    padding: 0.5em 0.2em calc(var(--r) + 0.2em);
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 100%,
+        calc(100% - 0.5em) 100%,
+        50% calc(100% - var(--r)),
+        0.5em 100%,
+        0 100%
+    );
+    background: radial-gradient(50% 0.15em at top, #000a, #0000) border-box,
+        var(--pink-color) padding-box;
     width: 75px;
     text-align: center;
 }
 
+@media (max-width: 768px) {
+    .ribbon {
+        color: var(--pink-color);
+        background: transparent;
+    }
+}
+
 .progress {
-    min-width:120px;
-    height:15px;
+    min-width: 120px;
+    height: 15px;
     border-radius: 20px;
     display: block;
     background: linear-gradient(orange 0 0) 0/0% no-repeat lightblue;
@@ -451,7 +509,7 @@ footer a {
 }
 
 .container--highlighted {
-	box-shadow: 0.2rem 0.2rem 0 var(--pink-color);
-	border-radius: 0.625rem;
-	border: 0.15rem solid;
- }
+    box-shadow: 0.2rem 0.2rem 0 var(--pink-color);
+    border-radius: 0.625rem;
+    border: 0.15rem solid;
+}
