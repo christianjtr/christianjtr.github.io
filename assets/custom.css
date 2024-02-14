@@ -456,6 +456,17 @@ footer a {
     }
 }
 
+@media (max-width: 768px) {
+    .nav-bar_social-network-text {
+        font-size: 20px;
+        align-self: center;
+    }
+    .nav-bar_social-network-link {
+        width: 60px;
+        height: 60px;
+    }
+}
+
 .ribbon {
     --r: 0.8em;
 
