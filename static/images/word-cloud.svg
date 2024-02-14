@@ -1,0 +1,36 @@
+<svg width="950" height="500" viewBox="470 150 100 400" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <g transform="translate(500,350)">
+        <text text-anchor="middle" transform="translate(-181, -58)" style="font-size: 70px; user-select: none; cursor: default; font-family: Roboto; fill: rgb(166, 65, 130);">reactjs</text>
+        <text text-anchor="middle" transform="translate(-108, 66)" style="font-size: 70px; user-select: none; cursor: default; font-family: Roboto; fill: rgb(166, 65, 130);">vuejs</text>
+        <text text-anchor="middle" transform="translate(99, 47)" style="font-size: 43px; user-select: none; cursor: default; font-family: Roboto; fill: rgb(166, 65, 130);">nodejs</text>
+        <text text-anchor="middle" transform="translate(266, 136)" style="font-size: 43px; user-select: none; cursor: default; font-family: Roboto; fill: rgb(166, 65, 130);">typescript</text>
+        <text text-anchor="middle" transform="translate(-141, 0)" style="font-size: 43px; user-select: none; cursor: default; font-family: Roboto; fill: rgb(166, 65, 130);">apis</text>
+        <text text-anchor="middle" transform="translate(-161, -116)" style="font-size: 43px; user-select: none; cursor: default; font-family: Roboto; fill: rgb(166, 65, 130);">jest</text>
+        <text text-anchor="middle" transform="translate(213, 6)" style="font-size: 43px; user-select: none; cursor: default; font-family: Roboto; fill: rgb(166, 65, 130);">enzyme</text>
+        <text text-anchor="middle" transform="translate(286, 47)" style="font-size: 43px; user-select: none; cursor: default; font-family: Roboto; fill: rgb(59, 50, 115);">figma</text>
+        <text text-anchor="middle" transform="translate(113, 89)" style="font-size: 43px; user-select: none; cursor: default; font-family: Roboto; fill: rgb(59, 50, 115);">python</text>
+        <text text-anchor="middle" transform="translate(196, -33)" style="font-size: 43px; user-select: none; cursor: default; font-family: Roboto; fill: rgb(59, 50, 115);">sql</text>
+        <text text-anchor="middle" transform="translate(-65, 103)" style="font-size: 29.5px; user-select: none; cursor: default; font-family: Roboto; fill: rgb(59, 50, 115);">expressjs</text>
+        <text text-anchor="middle" transform="translate(-237, -19)" style="font-size: 29.5px; user-select: none; cursor: default; font-family: Roboto; fill: rgb(59, 50, 115);">graphql</text>
+        <text text-anchor="middle" transform="translate(-72, 133)" style="font-size: 29.5px; user-select: none; cursor: default; font-family: Roboto; fill: rgb(59, 50, 115);">css</text>
+        <text text-anchor="middle" transform="translate(-2, 24)" style="font-size: 29.5px; user-select: none; cursor: default; font-family: Roboto; fill: rgb(242, 236, 145);">sass</text>
+        <text text-anchor="middle" transform="translate(-39, -28)" style="font-size: 29.5px; user-select: none; cursor: default; font-family: Roboto; fill: rgb(242, 236, 145);">tailwind</text>
+        <text text-anchor="middle" transform="translate(-187, 105)" style="font-size: 29.5px; user-select: none; cursor: default; font-family: Roboto; fill: rgb(242, 236, 145);">cypress</text>
+        <text text-anchor="middle" transform="translate(32, 130)" style="font-size: 29.5px; user-select: none; cursor: default; font-family: Roboto; fill: rgb(242, 236, 145);">zeplin</text>
+        <text text-anchor="middle" transform="translate(-83, -132)" style="font-size: 29.5px; user-select: none; cursor: default; font-family: Roboto; fill: rgb(242, 236, 145);">nosql</text>
+        <text text-anchor="middle" transform="translate(-131, -157)" style="font-size: 29.5px; user-select: none; cursor: default; font-family: Roboto; fill: rgb(242, 236, 145);">data</text>
+        <text text-anchor="middle" transform="translate(-267, 75)" style="font-size: 29.5px; user-select: none; cursor: default; font-family: Roboto; fill: rgb(242, 158, 109);">visualization</text>
+        <text text-anchor="middle" transform="translate(285, -31)" style="font-size: 29.5px; user-select: none; cursor: default; font-family: Roboto; fill: rgb(242, 158, 109);">business</text>
+        <text text-anchor="middle" transform="translate(-56, 164)" style="font-size: 29.5px; user-select: none; cursor: default; font-family: Roboto; fill: rgb(242, 158, 109);">intelligence</text>
+        <text text-anchor="middle" transform="translate(-14, -80)" style="font-size: 29.5px; user-select: none; cursor: default; font-family: Roboto; fill: rgb(242, 158, 109);">web</text>
+        <text text-anchor="middle" transform="translate(238, 175)" style="font-size: 29.5px; user-select: none; cursor: default; font-family: Roboto; fill: rgb(242, 158, 109);">development</text>
+        <text text-anchor="middle" transform="translate(139, -97)" style="font-size: 29.5px; user-select: none; cursor: default; font-family: Roboto; fill: rgb(242, 158, 109);">user</text>
+        <text text-anchor="middle" transform="translate(88, -56)" style="font-size: 29.5px; user-select: none; cursor: default; font-family: Roboto; fill: rgb(242, 125, 114);">experience</text>
+        <text text-anchor="middle" transform="translate(10, -121)" style="font-size: 29.5px; user-select: none; cursor: default; font-family: Roboto; fill: rgb(242, 125, 114);">product</text>
+        <text text-anchor="middle" transform="translate(339, 5)" style="font-size: 29.5px; user-select: none; cursor: default; font-family: Roboto; fill: rgb(242, 125, 114);">design</text>
+        <text text-anchor="middle" transform="translate(233, -77)" style="user-select: none; cursor: default; font-family: Roboto; fill: rgb(242, 125, 114);">jquery</text>
+        <text text-anchor="middle" transform="translate(226, 103)" style="user-select: none; cursor: default; font-family: Roboto; fill: rgb(242, 125, 114);">sketch</text>
+        <text text-anchor="middle" transform="translate(-201, -156)" style="user-select: none; cursor: default; font-family: Roboto; fill: rgb(242, 125, 114);">invision</text>
+    </g>
+</svg>
