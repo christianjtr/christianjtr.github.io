@@ -37,10 +37,10 @@
     <nav
       class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-12 lg:mt-0 lg:items-center lg:space-x-6"
     >
-      <span class="text--small color--pink">Let's connect</span>
+      <span class="text--small color--pink nav-bar_social-network-text">Let's connect</span>
       {{ range . }}<!---->
       <a
-        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6 nav-bar_social-network-link"
         style="--url: url(./{{ . }}.svg)"
         href="{{ if eq . `rss` }}{{ `index.xml` | absURL }}{{ else if eq . `mastodon` }}{{ index site.Params . }}{{ else }}https://{{ . }}.com/{{ if eq . `linkedin` }}in/{{ end }}{{ index site.Params . }}{{ end }}"
         target="_blank"
