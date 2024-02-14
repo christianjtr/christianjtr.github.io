@@ -103,7 +103,7 @@ experiences: [
         "location": "Buenos Aires, Argentina",
         "position": "Frontend User Interface Developer",
         "period": "Jun 2016 - Oct 2017",
-        "description": "Automated front-end workflows and crafted a data-driven chatbot UI with interactive visualizations and an augmented reality mashup app to visualize sales trends, leveraging modern web technologies and chatbot frameworks.",
+        "description": "Developed a web-based back-office platform for a vehicle free-flow tolling system, streamlining toll collection management across various aspects: Customer management, Payment processing, Tag device management, Vehicle monitoring, and others.",
     },
     {
         "company": "Petroleum of Venezuela (PDVSA)",
