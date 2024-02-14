@@ -6,3 +6,5 @@ params:
     color: "light"
     github: "christianjtr"
     linkedin: "christianjtr"
+    description: "A personal website to share my background and professional experiences"
+    imageURL: "https://raw.githubusercontent.com/christianjtr/christianjtr.github.io/main/assets/front_page.png"
