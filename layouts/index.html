@@ -1,5 +1,5 @@
 {{ define "main" }}
-  <section class="grid-section-container align-items--center">
+  <section class="grid-section-container align-items--center landing-section">
     <article class="w-11/12">
       <h1 class="upper-title">
         👋🏻 Hi there folks, I am
@@ -55,6 +55,7 @@
         </li>
         {{ end }}
       </ul>
+      <small class="color--bluegray">* Polishing them up continuously</small>
     </div>
   </section>
   <!-- ABOUT ME -->
@@ -115,16 +116,30 @@
       </div>
     </article>
     <article>
-      <h3>Technologies 🔮</h3>
+      <h3>Technologies and Tools 🔮</h3>
       <span class="normal-text">
-        Here is a collection of technologies I used to play with.
+        Here is a collection of technologies and tools I used to play with.
       </span>
       <img
         src="./images/word-cloud.svg"
         alt="word cloud of technologies I used to play with"
-        width="100%"/>
+        width="100%"
+        class="margin--none"/>
+      <div class="project-container" style="padding: 0px 20px">
+        {{ range $key, $value := .Params.tools }}
+        <p class="normal-text" id="tool_category_{{ $key }}">
+          <span class="block">
+            <i class="{{ .icon }} color--pink"></i>
+            {{ .category }}
+          </span>
+          {{ range .tools }}
+          <span class="tag">{{ . }}</span>
+          {{ end }}
+        </p>
+        {{ end }}
+      </div>
       <h3>Credentials 🎈</h3>
-      <span class="normal-text">Some of the certifications I have got so far.</span>
+      <span class="normal-text">Some of the certifications I have got so far. Refer to my <a href="https://www.credly.com/users/christianjtr/badges" rel="external" class="color--pink" target="_blank" title="Credly">Credly</a> profile.</span>
       <div class="credentials-wrapper">
         <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="f4d80edd-5f42-4234-bab2-8805d5121ecb" data-share-badge-host="https://www.credly.com"></div>
         <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="26b9f00b-156e-4832-8808-a424f43af345" data-share-badge-host="https://www.credly.com"></div>
@@ -135,6 +150,11 @@
   <!-- BACKGROUND -->
   <hr>
   <h2 class="subtitle">Background<span>.</span></h2>
+  <p class="normal-text margin-top--20">
+    An overview of my contributions as an engineer, <strong>in three (3) different countries now</strong>, 
+    by collaborating with other peers in multicultural environments. On the other hand, 
+    a summary of the development path I have chosen to enrich my career journey.
+  </p>
   <section class="grid-section-container align-items--flex-start justify-content--inherit">
     <!--- BACKGROUND ::: PROFESSIONAL EXPERIENCE -->
     <article>

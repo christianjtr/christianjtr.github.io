@@ -11,6 +11,7 @@ summary_interests: [
     "Business Intelligence", 
     "Web Technologies", 
     "e-Business",
+    "2D Animation"
 ]
 summary_languages: [
     {
@@ -70,6 +71,23 @@ projects_published: [
         "owner": "© PDVSA",
         "url": "https://www.searchanddiscovery.com/pdfz/documents/2011/40798garcia/ndx_garcia.pdf.html",
         "period": "August 2011"
+    },
+]
+tools: [
+    {
+        "icon": "fa fa-palette",
+        "category": "Design and Prototyping",
+        "tools": ["Adobe Creative Suite (Ai/Xd)", "Sketch", "Zeplin", "Figma"],
+    },
+    {
+        "icon": "fa fa-chart-line",
+        "category": "Business Intelligence and Data Analysis",
+        "tools": ["Pentaho BI", "SSAS/SSIS", "PowerBI", "Qlik"],
+    },
+    {
+        "icon": "fa fa-hand-holding-heart",
+        "category": "Colaborative",
+        "tools": ["Atlassian Suite (Jira, Confluence, SourceTree)", "Slack", "MS Teams", "Google Meets", "Miro"],
     },
 ]
 experiences: [

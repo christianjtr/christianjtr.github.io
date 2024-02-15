@@ -10,6 +10,13 @@
 
 html {
     scroll-behavior: smooth;
+    background-color: white;
+}
+
+@media (max-width: 768px) {
+    .landing-section {
+        margin-top: 30px;
+    }
 }
 
 .knowledge-list {
@@ -55,6 +62,7 @@ html {
     padding: 15px;
     border-radius: 20px;
     font-size: 25px;
+    opacity: 0.8;
 }
 
 .myBtn:hover {
@@ -130,6 +138,12 @@ footer a {
 }
 .margin-top--none {
     margin-top: 0px;
+}
+.margin-top--20 {
+    margin-top: 20px;
+}
+.margin--none {
+    margin: 0;
 }
 .highlighted-text {
     color: var(--pink-color);
