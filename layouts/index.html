@@ -82,10 +82,13 @@
         <p class="project-card">
           <span class="title block">
             {{ .title }}
-            <small class="data-detail  block">
+            <small class="data-detail block margin-top--10">
+              {{ .showcased_at }}
+            </small>
+            <small class="data-detail block">
               {{ .flag }} · {{ .period }}
             </small>
-            <small class="data-detail  block">
+            <small class="data-detail block">
               {{ .owner }}
             </small>
           </span>
@@ -95,23 +98,28 @@
         </p>
         {{ end }}
       </div>
-      <h3>Organizations 🏛️</h3>
+      <h3>Organizations and Relevant Diplomas 🏛️</h3>
       <p class="normal-text">
-        I am member of the <strong>Venezuela College of Engineers</strong> and the <strong>Society of Petroleum Engineers.</strong>
+        I am member of the <strong>Venezuela College of Engineers</strong> and the <strong>Society of Petroleum Engineers</strong>.
+        I got a Diploma from the <strong>Massachusetts Institute of Technology (MIT)</strong> in Systems Thinking for Project Management.
       </p>
       <div class="logo-wrapper">
-        <img src="./images/colegio_ingenieros_venezuela.jpg" 
-          widt="40px" 
-          height="40px" 
-          alt="Venezuelan Engineers School logo"
+        <img src="./images/colegio_ingenieros_venezuela.jpeg" 
+          width="20%" 
           title="Venezuela College of Engineers"
+          alt="Venezuelan Engineers School logo"
         />
         <img 
-          src="./images/spe_international.jpg" 
-          widt="40px" 
-          height="40px" 
+          src="./images/spe.png" 
+          width="20%" 
           title="Society of Petroleum Engineers"
           alt="Society of Petroleum Engineers logo"
+        />
+        <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/49093578" 
+          style="border: 1px solid var(--grey-color)"
+          width="45%" 
+          title="Massachusetts Institute of Technology Diploma"
+          alt="Diploma from MIT as a Systems Thinker" 
         />
       </div>
     </article>
@@ -138,7 +146,7 @@
         </p>
         {{ end }}
       </div>
-      <h3>Credentials 🎈</h3>
+      <h3>Certifications 🎈</h3>
       <span class="normal-text">Some of the certifications I have got so far. Refer to my <a href="https://www.credly.com/users/christianjtr/badges" rel="external" class="color--pink" target="_blank" title="Credly">Credly</a> profile.</span>
       <div class="credentials-wrapper">
         <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="f4d80edd-5f42-4234-bab2-8805d5121ecb" data-share-badge-host="https://www.credly.com"></div>
