@@ -56,7 +56,7 @@ projects_published: [
     },
     {
         "title": "Representation of geographical data related to the Venezuelan Petroleum Industry by using Keyhole Markup Language (KML)",
-        "showcased_at": "Sixth Congress of Cartographic Science",
+        "showcased_at": "6º Congress of Cartographic Science",
         "location": "Buenos Aires, Argentina",
         "flag": "🇦🇷",
         "owner": "© PDVSA",
