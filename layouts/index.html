@@ -116,7 +116,7 @@
           alt="Society of Petroleum Engineers logo"
         />
         <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/49093578" 
-          style="border: 1px solid var(--grey-color)"
+          class="border--grey"
           width="45%" 
           title="Massachusetts Institute of Technology Diploma"
           alt="Diploma from MIT as a Systems Thinker" 
@@ -133,7 +133,7 @@
         alt="word cloud of technologies I used to play with"
         width="100%"
         class="margin--none"/>
-      <div class="project-container" style="padding: 0px 20px">
+      <div class="project-container">
         {{ range $key, $value := .Params.tools }}
         <p class="normal-text" id="tool_category_{{ $key }}">
           <span class="block">
