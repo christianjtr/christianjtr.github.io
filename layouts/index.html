@@ -14,7 +14,7 @@
       </p>
     </article>
     <img
-      src="./images/home-office.svg"
+      src="/images/home-office.svg"
       alt="A remote worker who is at home in front a computer"
       width="100%"/>
   </section>
@@ -65,17 +65,14 @@
       <ul class="knowledge-list">
         {{ range $key, $value := .Params.knowledge }}
         <li>
-          <i class="{{ .CSSIconClass }}"></i>
+          <i class="{{ .CSSIconClass }} color--pink"></i>
           {{ .description }}
         </li>
         {{ end }}
       </ul>
-      <h3>Projects published 💡</h3>
+      <h3>Projects showcased 💡</h3>
       <span class="normal-text block">
-        Contributed to several projects presented at international conferences. Besides, I participated in crafting other 
-        academic projects you can see on <a href="https://www.linkedin.com/in/christianjtr/" rel="external" class="color--pink" target="_blank" title="LinkedIn">
-          LinkedIn.
-        </a>
+        Projects presented at international conferences. See additional details on <a href="https://www.linkedin.com/in/christianjtr/" rel="external" class="color--pink" target="_blank" title="LinkedIn">LinkedIn.</a>
       </span>
       <div class="project-container">
         {{ range $key, $value := .Params.projects_published }}
@@ -99,18 +96,18 @@
         {{ end }}
       </div>
       <h3>Organizations and Relevant Diplomas 🏛️</h3>
-      <p class="normal-text">
-        I am member of the <strong>Venezuela College of Engineers</strong> and the <strong>Society of Petroleum Engineers</strong>.
-        I got a Diploma from the <strong>Massachusetts Institute of Technology (MIT)</strong> in Systems Thinking for Project Management.
+      <p class="normal-text margin-top--20">
+        I am member of the <strong>Venezuela College of Engineers</strong> and the <strong>Society of Petroleum Engineers</strong>. Additionally,
+        I hold a Diploma in Systems Thinking for Project Management from the <strong>Massachusetts Institute of Technology (MIT)</strong>.
       </p>
       <div class="logo-wrapper">
-        <img src="./images/colegio_ingenieros_venezuela.jpeg" 
+        <img src="/images/colegio_ingenieros_venezuela.jpeg" 
           width="20%" 
           title="Venezuela College of Engineers"
           alt="Venezuelan Engineers School logo"
         />
         <img 
-          src="./images/spe.png" 
+          src="/images/spe.png" 
           width="20%" 
           title="Society of Petroleum Engineers"
           alt="Society of Petroleum Engineers logo"
@@ -123,13 +120,13 @@
         />
       </div>
     </article>
-    <article>
+    <article class="padding-side-by-side--20">
       <h3>Technologies and Tools 🔮</h3>
       <span class="normal-text">
         Here is a collection of technologies and tools I used to play with.
       </span>
       <img
-        src="./images/word-cloud.svg"
+        src="/images/word-cloud.svg"
         alt="word cloud of technologies I used to play with"
         width="100%"
         class="margin--none"/>
@@ -146,14 +143,42 @@
         </p>
         {{ end }}
       </div>
-      <h3>Certifications 🎈</h3>
-      <span class="normal-text">Some of the certifications I have got so far. Refer to my <a href="https://www.credly.com/users/christianjtr/badges" rel="external" class="color--pink" target="_blank" title="Credly">Credly</a> profile.</span>
+      <h3>Credentials 🎈</h3>
+      <span class="normal-text">Some of the most relevant certifications I have gotten so far. Refer to my <a href="https://www.credly.com/users/christianjtr/badges" rel="external" class="color--pink" target="_blank" title="Credly">Credly</a> profile.</span>
       <div class="credentials-wrapper">
         <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="f4d80edd-5f42-4234-bab2-8805d5121ecb" data-share-badge-host="https://www.credly.com"></div>
         <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="26b9f00b-156e-4832-8808-a424f43af345" data-share-badge-host="https://www.credly.com"></div>
         <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="e4c9bf26-0936-4460-97a2-eeb1d620a55c" data-share-badge-host="https://www.credly.com"></div>
       </div>
     </article>
+  </section>
+  <!-- PROJECTS -->
+  <hr>
+  <h2 class="subtitle">Highlights<span>.</span></h2>
+  <p class="normal-text margin-top--20">
+    Here are some of the <strong>projects I have participated in</strong>, either as an author or contributor, by taking active participation in the conception stage, data/product analyst phases, and the business ideation processes.
+  </p>
+  <section class="grid-articles-container margin-top--20">
+    {{ range $key, $value := .Params.highlighted_projects }}
+    <article>
+      <div class="article-wrapper">
+        <figure>
+          <img src={{ .image }} alt="" />
+        </figure>
+        <div class="article-body">
+          <h4>{{ .title }}</h4>
+          <p class="normal-text">
+            {{ .description }}
+          </p>
+          <p>
+            {{ range .tags }}
+            <span class="tag">{{ . }}</span>
+            {{ end }}
+          </p>
+        </div>
+      </div>
+    </article>
+    {{ end }}
   </section>
   <!-- BACKGROUND -->
   <hr>
