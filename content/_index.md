@@ -90,6 +90,26 @@ tools: [
         "tools": ["Atlassian Suite (Jira, Confluence, SourceTree)", "Slack", "MS Teams", "Google Meets", "Miro"],
     },
 ]
+highlighted_projects: [
+    {
+        title: "BI Project: Adventure Works Cycles",
+        description: "This project aims to enhance knowledge creation by optimizing data management, empowering data-driven decision-making, and extracting value from information.",
+        image: "/images/bi_project.png",
+        tags: ["Data Analysis / Visualization", "Business Intelligence", "Databases", "ETL / DWH", "Data-driven applications"]
+    },
+    {
+        title: "Circuitos",
+        description: "Reference platform to discover your artistic and cultural interests. Aimed at people looking for new experiences and eager to share their art with the community.",
+        image: "/images/circuitos.png",
+        tags: ["Product Design", "User Experience", "A/B Testing", "Prototyping", "Usability"]
+    },
+    {
+        title: "Idea: Cultural-oriented app",
+        description: "We provide an accessible platform that facilitates participation in cultural events and activities by creating a cultural network tailored to each individual's preferences.",
+        image: "/images/design_process.png",
+        tags: ["e-Business", "Lean Startup", "Design Thinking", "Empathy Maps", "Business Model Canvas", "Prototyping"]
+    },
+]
 experiences: [
     {
         "company": "Stuart Delivery",
