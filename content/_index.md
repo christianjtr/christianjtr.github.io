@@ -40,9 +40,40 @@ knowledge: [
         "description": "Dedicated to continuous learning and professional development."
     },
     {
+        "CSSIconClass": "fa fa-flask",
+        "description": "Fascinated by user experience and service design."
+    },
+    {
+        "CSSIconClass": "fa fa-users",
+        "description": "Foster synergies and collaboration within teams."
+    },
+    {
         "CSSIconClass": "fa fa-bullseye",
         "description": "Goals-oriented and motivated with a strong work ethic."
     },
+]
+memberships: [
+    {
+        "organization": "Massachusetts Institute of Technology",
+        "imageURL": "/images/mit_logo.jpeg",
+        "degree": "System Thinking for Project Management",
+        "showMembershipId": false,
+        "member_no": ""
+    },
+    {
+        "organization": "Venezuelan College of Engineers",
+        "imageURL": "/images/colegio_ingenieros_vzla.jpeg",
+        "degree": "",
+        "showMembershipId": true,
+        "member_no": "209752"
+    },
+    {
+        "organization": "Society of Petroleum Engineers",
+        "imageURL": "/images/spe.jpeg",
+        "degree": "",
+        "showMembershipId": true,
+        "member_no": "4403695"
+    }, 
 ]
 projects_published: [
     {
@@ -52,43 +83,50 @@ projects_published: [
         "flag": "🇺🇲",
         "owner": "© SDG Group",
         "url": "https://cdn2.hubspot.net/hubfs/4041825/SDG_Group_Augmented_Intelligence.pdf",
-        "period": "May 2019"
+        "period": "May 2019",
+        "technologies": ["VueJS", "NodeJS", "Qlik Sense Hub", "SignalR Client", "DialogFlow"],
+        "contributions": "Collaborated with engineers to create an AR/MR user experience, empowering users to make data-driven decisions through an engaging and immersive experience by building a mashup app to visualize sales trends and a chatbot UI for data visualization."
     },
     {
         "title": "Representation of geographical data related to the Venezuelan Petroleum Industry by using Keyhole Markup Language (KML)",
-        "showcased_at": "6º Congress of Cartographic Science",
+        "showcased_at": "6th Congress of Cartographic Science",
         "location": "Buenos Aires, Argentina",
         "flag": "🇦🇷",
         "owner": "© PDVSA",
         "url": "https://www.ign.gob.ar/Novedades/FinalizoElSextoCongresoDeLaCienciaCartogr%C3%A1fica.",
-        "period": "June 2012"
+        "period": "June 2012",
+        "technologies": ["Google Earth / Maps", "CESIUM 3D Geospatial", "KML / KMZ", "ArcGIS", "Global Mapper"],
+        "contributions": "Worked alongside geologists and geographers to improve the accessibility and usability of geographical data for the Venezuelan petroleum industry; by implementing functionalities for the creation and editing of KML/KMZ files (Interactive hydrocarbons maps)."
     },
     {
         "title": "Integrated System of Opportunity Portfolios (SIPO)",
-        "showcased_at": "American Association of Petroleum Geologists (AAPG)",
+        "showcased_at": "American Association of Petroleum Geologists",
         "location": "Houston TX, United States of America",
         "flag": "🇺🇲",
         "owner": "© PDVSA",
         "url": "https://www.searchanddiscovery.com/pdfz/documents/2011/40798garcia/ndx_garcia.pdf.html",
-        "period": "August 2011"
+        "period": "August 2011",
+        "technologies": ["HTML5 / jQuery / CSS", "PHP", "MySQL", "PostgreSQL", "R", "Pentaho BI", "ETL / DWH", "HighCharts", "ArcGIS"],
+        "contributions": "Partnered with a team of engineers, economists, geologists, and geographers in the creation and launch of a real-time web application to facilitate economic scenario analysis and to effectively visualize both geoscience and economic data."
     },
 ]
 tools: [
     {
+        "icon": "fa fa-hand-holding-heart",
+        "category": "Colaborative",
+        "tools": ["Atlassian Suite (Jira, Confluence, SourceTree)", "GitHub", "AWS", "Slack", "Microsoft Teams", "Google Meets", "Miro", "Postman", "Sentry", "Grafana"],
+    },
+    {
         "icon": "fa fa-palette",
         "category": "Design and Prototyping",
-        "tools": ["Adobe Creative Suite (Ai/Xd)", "Sketch", "Zeplin", "Figma"],
+        "tools": ["Adobe Creative Suite (Ai / Xd)", "Sketch", "Zeplin", "Figma", "Video iMovie"],
     },
     {
         "icon": "fa fa-chart-line",
         "category": "Business Intelligence and Data Analysis",
-        "tools": ["Pentaho BI", "SSAS/SSIS", "PowerBI", "Qlik"],
+        "tools": ["SQL / NoSQL clients", "Pentaho BI", "SSAS / SSIS", "PowerBI", "Qlik", "R Studio"],
     },
-    {
-        "icon": "fa fa-hand-holding-heart",
-        "category": "Colaborative",
-        "tools": ["Atlassian Suite (Jira, Confluence, SourceTree)", "Slack", "MS Teams", "Google Meets", "Miro"],
-    },
+    
 ]
 highlighted_projects: [
     {
@@ -101,13 +139,13 @@ highlighted_projects: [
         title: "Circuitos",
         description: "Reference platform to discover your artistic and cultural interests. Aimed at people looking for new experiences and eager to share their art with the community.",
         image: "/images/circuitos.png",
-        tags: ["Product Design", "User Experience", "A/B Testing", "Prototyping", "Usability"]
+        tags: ["Product Design", "User Experience", "A/B Testing", "Prototyping", "Usability", "Design Thinking", "User Research"]
     },
     {
-        title: "Idea: Cultural-oriented app",
+        title: "Idea: Cultural activities app",
         description: "We provide an accessible platform that facilitates participation in cultural events and activities by creating a cultural network tailored to each individual's preferences.",
         image: "/images/design_process.png",
-        tags: ["e-Business", "Lean Startup", "Design Thinking", "Empathy Maps", "Business Model Canvas", "Prototyping"]
+        tags: ["e-Business", "Lean Startup", "Design Thinking", "Empathy Maps", "Business Model Canvas", "Prototyping", "SEO / SEA", "Digital Marketing"]
     },
 ]
 experiences: [
@@ -170,7 +208,7 @@ studies: [
                 "isOngoing": true,
                 "level": "Specialization",
                 "period": "Sep 2023 - ...",
-                "topics": ["Tech Leadership", "Agile Project Management", "Web Development", "Cybersecurity", "QA & Testing", "DevOps"],
+                "topics": ["Tech Leadership", "Agile Project Management", "Web Development", "Cybersecurity", "QA and Testing", "DevOps"],
             },
             {
                 "school": "University of Barcelona",
@@ -196,7 +234,7 @@ studies: [
         "studies": [
             {
                 "school": "Digital House Coding School",
-                "degree": "Diploma in UX Design & Research",
+                "degree": "Diploma in UX Design and Research",
                 "isOngoing": false,
                 "level": "Bootcamp",
                 "period": "Mar 2017 - Jul 2017",
