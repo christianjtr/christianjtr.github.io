@@ -78,9 +78,9 @@ html {
 }
 
 .no-user-select {
-    /* -webkit-user-select: none;
+    -webkit-user-select: none;
     -ms-user-select: none;
-    user-select: none; */
+    user-select: none;
 }
 
 .blur-background {
@@ -488,7 +488,7 @@ footer a {
     margin: 10px 0px;
 }
 .experience-topic {
-    padding: 10px 0px;
+    padding: 20px 0px;
 }
 .experience-topic:last-child {
     border: none;
@@ -645,4 +645,9 @@ footer a {
 }
 .article-wrapper .article-body {
     padding: 12px;
+}
+
+.tool-wrapper {
+    border: 1px solid var(--grey-color);
+    border-radius: 10px;
 }

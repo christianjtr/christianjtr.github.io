@@ -132,7 +132,7 @@
       <span class="normal-text block">A brief compilation of tools I have used.</span>
       <div class="project-container">
         {{ range $key, $value := .Params.tools }}
-        <p class="normal-text padding--20" id="tool_category_{{ $key }}" style="border: 1px solid var(--grey-color); border-radius: 10px;">
+        <p class="normal-text padding--20 tool-wrapper" id="tool_category_{{ $key }}">
           <span class="block margin-bottom--20">
             <i class="{{ .icon }} color--pink"></i>
             {{ .category }}
@@ -162,10 +162,10 @@
             <strong>{{ .showcased_at }}</strong>
             <br>
             {{ .flag }} {{ .location }}
-            <small class="block">
+            <span class="block">
               <i class="fa fa-calendar"></i>
               {{ .period }} · {{ .owner }}
-            </small>
+            </span>
           </span>
           <h4>
             {{ .title }}
@@ -210,6 +210,7 @@
             <span class="tag">{{ . }}</span>
             {{ end }}
           </p>
+          <small class="color--pink">@{{ .role }}</small>
         </div>
       </div>
     </article>
@@ -264,19 +265,11 @@
             </small>
             {{ end }}
             <h4 class="title margin-top--none">{{ .degree }}</h4>
-            <span class="subtitle--secondary block">
-              <i class="fa fa-university"></i>
-              {{ .school }}
-            </span>
+            <span class="subtitle--secondary block">{{ .school }}</span>
             <span class="subtitle--secondary block">
               <i class="fa fa-calendar"></i>
               {{ .period }}
             </span>
-            <p>
-              {{ range .topics }}
-              <span class="tag">{{ . }}</span>
-              {{ end }}
-            </p>
           </div>
           {{ end }}
         </div>
