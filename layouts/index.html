@@ -12,6 +12,10 @@
         <span class="highlighted-text">systems design thinking, engineering, data insights, 
         and an agile mindset</span> to deliver user-centric solutions that drive impact.
       </p>
+      <div class="btn-container">
+        <a href="#projects" class="btn" aria-label="Go to projects section" title="Projects">🥁 Projects</a>
+        <a href="#background" class="btn" aria-label="Go to background section" title="Background">🎞️ Background</a>
+      </div>
     </article>
     <article class="w-1">
     <img
@@ -61,7 +65,7 @@
     </div>
   </section>
   <!-- ABOUT ME -->
-  <h2 class="subtitle">Knowledgeable<span>.</span></h2>
+  <h2 class="subtitle">💡 Knowledgeable<span>.</span></h2>
   <section class="grid-section-container align-items--flex-start justify-content--inherit">
     <article>
       <h3>Aptitudes 🧘🏻‍♂️</h3>
@@ -149,9 +153,10 @@
   </section>
   <!-- PROJECTS -->
   <hr>
-  <h2 class="subtitle">Significant Projects<span>.</span></h2>
+  <h2 class="subtitle" id="projects">🥁 Projects<span>.</span></h2>
   <section class="grid-section-container align-items--flex-start justify-content--inherit">
     <article>
+      <h3>Showcased Projects 🛸</h3>
       <span class="normal-text block margin-top--10">
         Presented at <strong>International Conferences.</strong> See additional details on <a href="https://www.linkedin.com/in/christianjtr/" rel="external" class="color--pink" target="_blank" title="LinkedIn">LinkedIn.</a>
       </span>
@@ -186,11 +191,9 @@
       </div>
     </article>
   </section>
-  </section>
-  <!-- HIGLIGHTS -->
-  <hr>
-  <h2 class="subtitle">Highlights<span>.</span></h2>
-  <p class="normal-text margin-top--10">
+  <br>
+  <h3>Highlighted Projects 🚀</h3>
+  <p class="normal-text margin-top--20">
     Here are some of the <strong>projects I have participated in</strong>, either as an author or contributor.
   </p>
   <section class="grid-articles-container margin-top--20">
@@ -218,15 +221,15 @@
   </section>
   <!-- BACKGROUND -->
   <hr>
-  <h2 class="subtitle">Background<span>.</span></h2>
-  <p class="normal-text margin-top--10">
-    An overview of contributions done as an engineer, <strong>in three (3) different countries so far</strong>
-    , in addition to the educational path I have chosen to enrich my career journey.
+  <h2 class="subtitle" id="background">🎞️ Background<span>.</span></h2>
+  <p class="normal-text margin-top--10 margin-bottom--10">
+    An overview of contributions done as an engineer, <strong>in three (3) different countries so far.</strong>
   </p>
   <section class="grid-section-container align-items--flex-start justify-content--inherit">
     <!--- BACKGROUND ::: PROFESSIONAL EXPERIENCE -->
     <article>
       <h3>Professional Experience 🧑🏻‍💼</h3>
+      <p class="normal-text">Brief summary of responsbilities done in different companies.</p>
       <div class="timeline">
           {{ range $key, $value := .Params.experiences }}
           <div class="card" id="experience_{{ $key }}">
@@ -251,6 +254,7 @@
     <article>
       <!--- BACKGROUND ::: STUDIES -->
       <h3>Studies 📚</h3>
+      <p class="normal-text">Educational path I have chosen to enrich my career journey.</p>
       <div class="experience-topic_container">
         <span class="ribbon"><i class="fa fa-user-graduate"></i></span>
         {{ range $key, $value := .Params.studies }}
