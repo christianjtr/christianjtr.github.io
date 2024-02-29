@@ -1,6 +1,6 @@
 {{ define "main" }}
   <section class="grid-section-container align-items--center landing-section">
-    <article class="w-10/12">
+    <div class="w-10/12">
       <h1 class="upper-title">
         👋🏻 Hi there folks, I am
         <span class="title">
@@ -16,31 +16,31 @@
         <a href="#projects" class="btn" aria-label="Go to projects section" title="Projects">🥁 Projects</a>
         <a href="#background" class="btn" aria-label="Go to background section" title="Background">🎞️ Background</a>
       </div>
-    </article>
-    <article class="w-1">
-    <img
-      src="/images/home-office.svg"
-      alt="A remote worker who is at home in front a computer"
-      width="100%"/>
-    </article>
+    </div>
+    <div class="w-1">
+      <img
+        src="/images/home-office.svg"
+        alt="A remote worker who is at home in front a computer"
+      />
+    </div>
   </section>
   <!-- SUMMARY -->
   <section class="summary">
     <div>
-      <span class="title">
+      <h6 class="title">
         <i class="fa fa-smile color--pink"></i>
         About Me
-      </span>
+      </h6>
       <p>
         {{ .Params.summary_about }}
         <span class="block margin-top--20">{{ .Params.summary_hobbies }}</span>
       </p>
     </div>
     <div>
-      <span class="title">
+      <h6 class="title">
         <i class="fa fa-glasses color--pink"></i>
         Interests
-      </span>
+      </h6>
       <p>
         {{ range .Params.summary_interests }}
         <span class="tag">{{ . }}</span>
@@ -48,10 +48,10 @@
       </p>
     </div>
     <div>
-      <span class="title">
+      <h6 class="title">
         <i class="fa fa-language color--pink"></i>
         Languages
-      </span>
+      </h6>
       <ul>
         {{ range .Params.summary_languages }}
         <li>
@@ -67,7 +67,7 @@
   <!-- ABOUT ME -->
   <h2 class="subtitle">💡 Knowledgeable<span>.</span></h2>
   <section class="grid-section-container align-items--flex-start justify-content--inherit">
-    <article>
+    <div>
       <h3>Aptitudes 🧘🏻‍♂️</h3>
       <ul class="knowledge-list">
         {{ range $key, $value := .Params.knowledge }}
@@ -77,7 +77,7 @@
         </li>
         {{ end }}
       </ul>
-    </article>
+    </div>
     <article>
       <h3>Relevant Diplomas and Organizations 🏛️</h3>
       {{ range $key, $value := .Params.memberships }}
@@ -87,7 +87,7 @@
             src="{{ .imageURL }}" 
             title="{{ .organization }}"
             alt="{{ .organization }} logo"
-            width="50%"
+            width="45"
             id="membership_organization_{{ $key }}"
           />  
         </div>
@@ -108,7 +108,7 @@
     </article>
   </section>
   <section class="grid-section-container align-items--flex-start justify-content--inherit">
-    <article>
+    <div>
       <h3>Technologies 🔮</h3>
       <span class="normal-text margin-bottom--10 block">
         Some techs I used to play with. 
@@ -117,10 +117,10 @@
       <img
         src="/images/word-cloud.svg"
         alt="word cloud of technologies I used to play with"
-        width="90%"
+        width="500"
         class="margin--none"/>
-    </article>
-    <article>
+    </div>
+    <div>
       <h3>Credentials 🎈</h3>
       <span class="normal-text block margin-bottom--20">Relevant certifications I have gotten so far. Refer to my <a href="https://www.credly.com/users/christianjtr/badges" rel="external" class="color--pink" target="_blank" title="Credly">Credly</a> profile.</span>
       <div class="credentials-wrapper">
@@ -128,10 +128,10 @@
         <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="26b9f00b-156e-4832-8808-a424f43af345" data-share-badge-host="https://www.credly.com"></div>
         <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="e4c9bf26-0936-4460-97a2-eeb1d620a55c" data-share-badge-host="https://www.credly.com"></div>
       </div>
-    </article>
+    </div>
   </section>
   <section class="grid-section-container align-items--flex-start justify-content--inherit">
-    <article>
+    <div>
       <h3 class="margin--none margin-bottom--10">Tools 🎨</h3>
       <span class="normal-text block">A brief compilation of tools I have used.</span>
       <div class="project-container">
@@ -149,13 +149,13 @@
         </p>
         {{ end }}
       </div>
-    </article>
+    </div>
   </section>
   <!-- PROJECTS -->
   <hr>
   <h2 class="subtitle" id="projects">🥁 Projects<span>.</span></h2>
   <section class="grid-section-container align-items--flex-start justify-content--inherit">
-    <article>
+    <div>
       <h3>Showcased Projects 🛸</h3>
       <span class="normal-text block margin-top--10">
         Presented at <strong>International Conferences.</strong> See additional details on <a href="https://www.linkedin.com/in/christianjtr/" rel="external" class="color--pink" target="_blank" title="LinkedIn">LinkedIn.</a>
@@ -189,7 +189,7 @@
         </div>
         {{ end }}
       </div>
-    </article>
+    </div>
   </section>
   <br>
   <h3>Highlighted Projects 🚀</h3>
@@ -198,7 +198,7 @@
   </p>
   <section class="grid-articles-container margin-top--20">
     {{ range $key, $value := .Params.highlighted_projects }}
-    <article>
+    <div>
       <div class="article-wrapper">
         <figure>
           <img src={{ .image }} alt="Preview image of {{ .title }}"/>
@@ -216,7 +216,7 @@
           <small class="color--pink">@{{ .role }}</small>
         </div>
       </div>
-    </article>
+    </div>
     {{ end }}
   </section>
   <!-- BACKGROUND -->
@@ -227,7 +227,7 @@
   </p>
   <section class="grid-section-container align-items--flex-start justify-content--inherit">
     <!--- BACKGROUND ::: PROFESSIONAL EXPERIENCE -->
-    <article>
+    <div>
       <h3>Professional Experience 🧑🏻‍💼</h3>
       <p class="normal-text">Brief summary of responsbilities done in different companies.</p>
       <div class="timeline">
@@ -250,8 +250,8 @@
           </div>
           {{ end }}
       </div>
-    </article>
-    <article>
+    </div>
+    <div>
       <!--- BACKGROUND ::: STUDIES -->
       <h3>Studies 📚</h3>
       <p class="normal-text">Educational path I have chosen to enrich my career journey.</p>
@@ -306,6 +306,6 @@
         </div>
         {{ end }}
       </div>
-    </article>
+    </div>
   </section>
 {{ end }}

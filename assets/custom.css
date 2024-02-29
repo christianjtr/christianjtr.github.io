@@ -21,6 +21,11 @@ html {
     }
 }
 
+.brand-logo {
+    width: 60px;
+    height: 60px;
+}
+
 .knowledge-list {
     list-style: none;
     padding: 0;
@@ -316,6 +321,9 @@ footer a {
 .membership-wrapper div:nth-child(even) {
     display: flex;
     flex-flow: column;
+}
+.membership-wrapper div:has(img) {
+    margin: 10px;
 }
 .membership-wrapper img {
     margin: auto;

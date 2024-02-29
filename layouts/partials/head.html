@@ -10,7 +10,8 @@
   <title>{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ site.Title }}</title>
 
   <!-- Meta -->
-  <meta name="theme-color" />
+  {{ $bg_color := $.Scratch.Get "bg_color" }}
+  <meta name="theme-color" content="{{ $bg_color }}" />
 
   <!-- Author -->
   {{ $site_author := or site.Author.name site.Params.name site.Title }}
@@ -28,14 +29,13 @@
   {{ end }}
 
   <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="{{ site.Title }}" />
-  <meta property="og:description" content="{{ site.Params.description }}" />
-  <meta property="og:site_name" content="{{ site.Title }}" />
-  <meta property="og:locale" content="{{ site.LanguageCode }}" />
-  <meta property="og:image" content="{{ site.Params.imageURL }}" />
+  <meta name="og:type" property="og:type" content="website" />
+  <meta name="og:title" property="og:title" content="{{ site.Title }}" />
+  <meta name="og:description" property="og:description" content="{{ site.Params.description }}" />
+  <meta name="og:site_name" property="og:site_name" content="{{ site.Title }}" />
+  <meta name="og:locale" property="og:locale" content="{{ site.LanguageCode }}" />
+  <meta name="og:image" property="og:image" content="{{ site.Params.imageURL }}" />
   
-
   <!-- CSS & JS -->
   {{ $main := resources.Get "main.css" }}
   <!---->
@@ -100,5 +100,6 @@
 
   <!--FontAwesome-->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
-  <script type="text/javascript" defer src="//cdn.credly.com/assets/utilities/embed.js"></script>
+  <!--Credly-->
+  <script defer src="//cdn.credly.com/assets/utilities/embed.js"></script>
 </head>
