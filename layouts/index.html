@@ -198,23 +198,21 @@
   </p>
   <section class="grid-articles-container margin-top--20">
     {{ range $key, $value := .Params.highlighted_projects }}
-    <div>
-      <div class="article-wrapper">
-        <figure>
-          <img src={{ .image }} alt="Preview image of {{ .title }}"/>
-        </figure>
-        <div class="article-body">
-          <h4>{{ .title }}</h4>
-          <p class="normal-text">
-            {{ .description }}
-          </p>
-          <p>
-            {{ range .tags }}
-            <span class="tag">{{ . }}</span>
-            {{ end }}
-          </p>
-          <small class="color--pink">@{{ .role }}</small>
-        </div>
+    <div class="article-wrapper">
+      <figure>
+        <img src={{ .image }} alt="Preview image of {{ .title }}"/>
+      </figure>
+      <div class="article-body">
+        <h4>{{ .title }}</h4>
+        <p class="normal-text">
+          {{ .description }}
+        </p>
+        <p>
+          {{ range .tags }}
+          <span class="tag">{{ . }}</span>
+          {{ end }}
+        </p>
+        <small class="color--pink">@{{ .role }}</small>
       </div>
     </div>
     {{ end }}
@@ -234,7 +232,7 @@
           {{ range $key, $value := .Params.experiences }}
           <div class="card" id="experience_{{ $key }}">
             <div class="info">
-              <small>📍 {{ .location }}</small>
+              <span class="normal-text">📍 {{ .location }}</span>
               <h3 class="title">{{ .position }}</h3>
               <span class="subtitle block">{{ .company }}</span>
               <span class="subtitle--secondary block">
@@ -259,7 +257,7 @@
         <span class="ribbon"><i class="fa fa-user-graduate"></i></span>
         {{ range $key, $value := .Params.studies }}
         <div id="studies_{{ $key }}">
-          <small>📍 {{ .location }}</small>
+          <span class="normal-text">📍 {{ .location }}</span>
           {{ range .studies }}
           <div class="experience-topic">
             {{ if eq .isOngoing true }}
@@ -281,11 +279,14 @@
       </div>
       <!--- BACKGROUND ::: CERTIFICATIONS -->
       <h3>Certifications 🤓</h3>
+      <p class="normal-text">Official certifications I earned.</p>
       <div class="experience-topic_container">
         <span class="ribbon"><i class="fa fa-medal"></i></span>
         {{ range $key, $value := .Params.certifications }}
         <div id="certification_{{ $key }}" class="experience-topic">
-          <h4 class="title margin-top--none">{{ .organization }}</h4>
+          <span class="normal-text margin-top--none">
+            🏫 {{ .organization }}
+          </span>
           <ul>
             {{ range .certifications }}
             <li>

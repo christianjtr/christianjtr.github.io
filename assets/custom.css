@@ -69,7 +69,7 @@ html {
     padding: 15px;
     border-radius: 20px;
     font-size: 25px;
-    opacity: 0.8;
+    background: white;
 }
 
 .myBtn:hover {
@@ -274,7 +274,7 @@ footer a {
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 0 30px 30px 0;
+    border-width: 0 35px 35px 0;
     border-color: transparent var(--green-color) transparent transparent;
     right: 0;
     top: 0;
@@ -465,7 +465,7 @@ footer a {
     background: white;
 }
 .experience-topic_container .title {
-    color: var(--green-color);
+    color: var(--text-color);
     position: relative;
     font-weight: 400;
     line-height: 0.5px;
@@ -475,7 +475,7 @@ footer a {
 .experience-topic_container .subtitle {
     font-size: 18px;
     font-weight: 400;
-    color: black;
+    color: var(--text-color);
 }
 .experience-topic_container .subtitle--secondary {
     color: var(--bluegray-color);
@@ -577,14 +577,14 @@ footer a {
         0 100%
     );
     background: radial-gradient(50% 0.15em at top, #000a, #0000) border-box,
-        var(--pink-color) padding-box;
+        var(--green-color) padding-box;
     width: 75px;
     text-align: center;
 }
 
 @media (max-width: 768px) {
     .ribbon {
-        color: var(--pink-color);
+        color: var(--green-color);
         background: transparent;
     }
 }
@@ -625,7 +625,7 @@ footer a {
     }
 }
 
-.grid-articles-container article {
+.grid-articles-container div:not(.article-body) {
     --img-scale: 1;
     --link-icon-translate: -20px;
     --link-icon-opacity: 0;
@@ -642,11 +642,12 @@ footer a {
     padding: 0;
     aspect-ratio: 16/9;
     overflow: hidden;
+    border-radius: 10px 10px 0px 0px;
 }
-.grid-articles-container article img {
-    max-width: 100%;
-    transform-origin: center;
-    transform: scale(var(--img-scale));
+.grid-articles-container div img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
 }
 .article-wrapper img {
     border-radius: 10%;
