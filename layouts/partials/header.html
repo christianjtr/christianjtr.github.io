@@ -57,18 +57,17 @@
       {{ end }}<!---->
     </div>
   </div>
+  <script>
+    // base
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+  
+    // mobile menu
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+  </script>
 </header>
-
-<script>
-  // base
-  const htmlClass = document.documentElement.classList;
-  setTimeout(() => {
-    htmlClass.remove('not-ready');
-  }, 10);
-
-  // mobile menu
-  const btnMenu = document.querySelector('.btn-menu');
-  btnMenu.addEventListener('click', () => {
-    htmlClass.toggle('open');
-  });
-</script>
