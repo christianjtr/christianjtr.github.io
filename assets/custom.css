@@ -537,7 +537,15 @@ footer a {
     }
 }
 
-@media (min-width: 428px) and (max-width: 500px) {
+@media (max-width: 650px) {
+    .grid-section-container.flexible-first-column,
+    .grid-section-container.first-column-wider {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        margin-top: 400px;
+    }
+}
+
+@media (max-width: 425px) {
     .grid-section-container.flexible-first-column,
     .grid-section-container.first-column-wider {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
