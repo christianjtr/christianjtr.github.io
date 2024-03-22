@@ -35,14 +35,14 @@
     <button id="myBtn" class="myBtn" aria-label="Scroll to top button" onclick="topFunction()">☝️</button>
     <script>
       let mybutton = document.getElementById("myBtn");
-      const scrollDownUntil = 800;
+      const scrollDownUntil = 1000;
       window.onscroll = function() { scrollFunction(); };
       function removeAnchors() {
         window.history.replaceState({}, "", window.location.href.split("#")[0]);
       }
       function scrollFunction() {
         const validation = document.body.scrollTop > scrollDownUntil || document.documentElement.scrollTop > scrollDownUntil;
-        mybutton.style.display = validation ? "block" : "none";
+        mybutton.style.display = validation ? "flex" : "none";
       }
       function topFunction() {
         document.body.scrollTop = 0;
