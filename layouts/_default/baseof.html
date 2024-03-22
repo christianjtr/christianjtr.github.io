@@ -28,10 +28,7 @@
   {{ partial "head.html" . }}
   <body class="text-black duration-200 ease-out dark:text-white no-user-select">
     {{ partial "header.html" . }}
-
-    <main
-      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] px-8 py-16 pt-8 dark:prose-invert"
-    >
+    <main>
       {{ block "main" . }}{{ end }}
     </main>
     {{ partial "footer.html" . }}

@@ -1,11 +1,11 @@
 ---
 summary_about: "A passionate technologist in creating digital experiences. I enjoy participating in all project stages, from conception and beyond."
-summary_hobbies: "🏖️ 🎡 🍦 🕹️ 🏃🏻 🐶 🇻🇪"
+summary_hobbies: "☀️ 🏖️ 🎡 🍦 🕹️ 🏃🏻 🐶 🇻🇪 🇦🇷 🇪🇸"
 summary_interests: [
     "Agile Leadership", 
     "Augmented Reality AR", 
-    "Artificial intelligence AI", 
     "User Research", 
+    "Artificial intelligence AI", 
     "Product and Service Design", 
     "Data Analysis and Visualization", 
     "Business Intelligence", 
@@ -15,18 +15,21 @@ summary_interests: [
 ]
 summary_languages: [
     {
-        "language": "💃🏻 Spanish",
+        "emoji": "💃🏻",
+        "language": "Spanish",
         "proficiency": "Native",
         "level": "110%"
     },
     {
-        "language": "💂🏻 English",
-        "proficiency": "Professional",
+        "emoji": "💂🏻",
+        "language": "English",
+        "proficiency": "Professional (B2+)",
         "level": "75%"
     },
     {
-        "language": "🥐 French",
-        "proficiency": "Elementary",
+        "emoji": "🥐",
+        "language": "French",
+        "proficiency": "Elementary (A2)",
         "level": "30%"
     }
 ]
@@ -54,22 +57,25 @@ knowledge: [
 ]
 memberships: [
     {
+        "type": "Diploma",
         "organization": "Massachusetts Institute of Technology",
-        "imageURL": "/images/mit_logo.jpeg",
+        "imageURL": "/images/mit_logo.png",
         "degree": "System Thinking for Project Management",
         "showMembershipId": false,
         "member_no": ""
     },
     {
+        "type": "Membership",
         "organization": "Venezuelan College of Engineers",
-        "imageURL": "/images/colegio_ingenieros_vzla.jpeg",
+        "imageURL": "/images/colegio_ingenieros_vzla.png",
         "degree": "",
         "showMembershipId": true,
         "member_no": "209752"
     },
     {
+        "type": "Membership",
         "organization": "Society of Petroleum Engineers",
-        "imageURL": "/images/spe.jpeg",
+        "imageURL": "/images/spe.png",
         "degree": "",
         "showMembershipId": true,
         "member_no": "4403695"
@@ -84,7 +90,8 @@ projects_published: [
         "owner": "© SDG Group",
         "url": "https://cdn2.hubspot.net/hubfs/4041825/SDG_Group_Augmented_Intelligence.pdf",
         "period": "May 2019",
-        "technologies": ["VueJS", "NodeJS", "Qlik Sense Hub", "SignalR Client", "DialogFlow"],
+        "contribute_as": "Frontend Software Engineer",
+        "technologies": ["VueJS", "NodeJS", "Qlik Sense Hub", "SignalR Client", "DialogFlow", "AR.js"],
         "contributions": "Collaborated with engineers to create an AR/MR user experience, empowering users to make data-driven decisions through an engaging and immersive experience by building a mashup app to visualize sales trends and a chatbot UI for data visualization."
     },
     {
@@ -95,6 +102,7 @@ projects_published: [
         "owner": "© PDVSA",
         "url": "https://www.ign.gob.ar/Novedades/FinalizoElSextoCongresoDeLaCienciaCartogr%C3%A1fica.",
         "period": "June 2012",
+        "contribute_as": "Product Developer Engineer",
         "technologies": ["Google Earth / Maps", "CESIUM 3D Geospatial", "KML / KMZ", "ArcGIS", "Global Mapper"],
         "contributions": "Worked alongside geologists and geographers to improve the accessibility and usability of geographical data for the Venezuelan petroleum industry; by implementing functionalities for the creation and editing of KML/KMZ files (Interactive hydrocarbons maps)."
     },
@@ -106,6 +114,7 @@ projects_published: [
         "owner": "© PDVSA",
         "url": "https://www.searchanddiscovery.com/pdfz/documents/2011/40798garcia/ndx_garcia.pdf.html",
         "period": "August 2011",
+        "contribute_as": "Product Software Engineer · Data Analyst · Web Developer",
         "technologies": ["HTML5 / jQuery / CSS", "PHP", "MySQL", "PostgreSQL", "R", "Pentaho BI", "ETL / DWH", "HighCharts", "ArcGIS"],
         "contributions": "Partnered with a team of engineers, economists, geologists, and geographers in the creation and launch of a real-time web application to facilitate economic scenario analysis and to effectively visualize both geoscience and economic data."
     },
@@ -113,22 +122,29 @@ projects_published: [
 tools: [
     {
         "icon": "fa fa-hand-holding-heart",
-        "category": "Colaborative",
-        "tools": ["Atlassian Suite (Jira, Confluence, SourceTree)", "GitHub", "AWS", "Slack", "Microsoft Teams", "Google Meets", "Miro", "Postman", "Sentry", "Grafana"],
+        "category": "Colaborative and Monitoring",
+        "tools": ["Jira", "Confluence", "SourceTree", "GitHub", "AWS", "Slack", "Microsoft Teams", "Google Meets", "Miro", "Postman", "Sentry", "Grafana"],
     },
     {
         "icon": "fa fa-palette",
         "category": "Design and Prototyping",
-        "tools": ["Adobe Creative Suite (Ai / Xd)", "Sketch", "Zeplin", "Figma", "Video iMovie"],
+        "tools": ["Adobe Creative Suite (Ai / Xd)", "Sketch", "Zeplin", "Figma", "InVision", "Video iMovie"],
     },
     {
         "icon": "fa fa-chart-line",
-        "category": "Business Intelligence and Data Analysis",
-        "tools": ["SQL / NoSQL clients", "Pentaho BI", "SSAS / SSIS", "PowerBI", "Qlik", "R Studio"],
+        "category": "Business Intelligence and DA",
+        "tools": ["SQL / NoSQL clients", "Pentaho BI", "SSAS / SSIS", "PowerBI", "Qlik", "Tableau", "R Studio"],
     },
     
 ]
 highlighted_projects: [
+    {
+        "title": "TV movie-streaming-like webapp",
+        "description": "Full-stack project showcasing how React and Express works together to deliver a movie-tv-like application. Apart from implementing an API RESTFul, it includes a simple CD/CI process leveraged on GitHub actions and Docker.",
+        "image": "/images/tv-app.png",
+        "tags": ["FullStack Development", "ReactJS / NodeJS", "Tailwind CSS", "Unit / E2E Testing", "Jest / Cypress", "TypeScript", "Docker", "GitHub Actions", "CI/CD process"],
+        "role": "Author"
+    },
     {
         "title": "BI Project: Adventure Works Cycles",
         "description": "This project aims to enhance knowledge creation by optimizing data management, empowering data-driven decision-making, and extracting value from information.",
@@ -211,6 +227,8 @@ studies: [
                 "isOngoing": true,
                 "level": "Specialization",
                 "period": "Sep 2023 - ...",
+                "location": "Spain",
+                "description": "CTO focus formation intended to successfully lead technological projects and acquire the essential skills of the role.",
                 "topics": ["Tech Leadership", "Agile Project Management", "Web Development", "Cybersecurity", "QA and Testing", "DevOps"],
             },
             {
@@ -219,6 +237,8 @@ studies: [
                 "isOngoing": false,
                 "level": "Master",
                 "period": "Oct 2019 - Jun 2020",
+                "location": "Spain",
+                "description": "Studies related to the effective management of different Internet-based businesses, and how to implement marketing plans, customer experience strategies, digital product developments, and e-commerce optimization.",
                 "topics": ["Lean Startup", "Digital Marketing", "Social Media", "SEO · SEA · ASO", "StartUps"],
 
             },
@@ -228,6 +248,8 @@ studies: [
                 "isOngoing": false,
                 "level": "Postgraduate",
                 "period": "Nov 2017 - Jul 2018",
+                "location": "Spain",
+                "description": "Studies related to the development and management of business intelligence projects, data analysis, data mining, data visualization, machine learning, and big data.",
                 "topics": ["Data Modeler", "Big Data", "Data Visualization", "Machine Learning", "DWH", "ETL"]
             },
         ]
@@ -241,6 +263,8 @@ studies: [
                 "isOngoing": false,
                 "level": "Bootcamp",
                 "period": "Mar 2017 - Jul 2017",
+                "location": "Argentina",
+                "description": "Studies related to the process of developing digital products focused on user experience.",
                 "topics": ["Design Thinking", "Usability", "Prototyping", "A/B Testing", "Product Design", "User Research"]
             },
         ]
@@ -254,6 +278,8 @@ studies: [
                 "isOngoing": false,
                 "level": "Postgraduate",
                 "period": "Sep 2014 - 2015",
+                "location": "Venezuela",
+                "description": "Studies related to the development of enterprise management skills.",
                 "topics": ["Leadership", "Coaching and Teamwork", "Strategic Planning", "Negotiation", "Financial Analysis", "Enterprise Management"]
             },
             {
@@ -262,6 +288,8 @@ studies: [
                 "isOngoing": false,
                 "level": "Specialization",
                 "period": "Sep 2013 - Apr 2014",
+                "location": "Venezuela",
+                "description": "Studies related to business intelligence with open source technologies.",
                 "topics": ["Data Cleansing", "ETL Design", "DWH", "Open Data Projects"]
             },
             {
@@ -270,6 +298,8 @@ studies: [
                 "isOngoing": false,
                 "level": "Bachelor in Systems Engineering",
                 "period": "Sep 2004 - 2009",
+                "location": "Venezuela",
+                "description": "Degree in Systems Engineering. European Higher Education Area (EHEA): Knowledge related to engineering and architecture in the specific field of Information and Communication Technologies (ICT)",
                 "topics": ["Information and Communication Technologies (ICT)"]
             },
         ]
