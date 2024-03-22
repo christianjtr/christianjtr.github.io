@@ -697,7 +697,7 @@ footer a {
 }
 
 .container {
-    padding: 15px 0px;
+    padding: 15px 30px;
     position: relative;
     background: inherit;
     width: 50%;
@@ -813,6 +813,7 @@ footer a {
 
     .container {
         width: 100%;
+        padding: 15px 0px;
     }
 
     .container .date-content {
