@@ -227,6 +227,8 @@ studies: [
                 "isOngoing": true,
                 "level": "Specialization",
                 "period": "Sep 2023 - ...",
+                "location": "Spain",
+                "description": "CTO focus formation intended to successfully lead technological projects and acquire the essential skills of the role.",
                 "topics": ["Tech Leadership", "Agile Project Management", "Web Development", "Cybersecurity", "QA and Testing", "DevOps"],
             },
             {
@@ -235,6 +237,8 @@ studies: [
                 "isOngoing": false,
                 "level": "Master",
                 "period": "Oct 2019 - Jun 2020",
+                "location": "Spain",
+                "description": "Studies related to the effective management of different Internet-based businesses, and how to implement marketing plans, customer experience strategies, digital product developments, and e-commerce optimization.",
                 "topics": ["Lean Startup", "Digital Marketing", "Social Media", "SEO · SEA · ASO", "StartUps"],
 
             },
@@ -244,6 +248,8 @@ studies: [
                 "isOngoing": false,
                 "level": "Postgraduate",
                 "period": "Nov 2017 - Jul 2018",
+                "location": "Spain",
+                "description": "Studies related to the development and management of business intelligence projects, data analysis, data mining, data visualization, machine learning, and big data.",
                 "topics": ["Data Modeler", "Big Data", "Data Visualization", "Machine Learning", "DWH", "ETL"]
             },
         ]
@@ -257,6 +263,8 @@ studies: [
                 "isOngoing": false,
                 "level": "Bootcamp",
                 "period": "Mar 2017 - Jul 2017",
+                "location": "Argentina",
+                "description": "Studies related to the process of developing digital products focused on user experience.",
                 "topics": ["Design Thinking", "Usability", "Prototyping", "A/B Testing", "Product Design", "User Research"]
             },
         ]
@@ -270,6 +278,8 @@ studies: [
                 "isOngoing": false,
                 "level": "Postgraduate",
                 "period": "Sep 2014 - 2015",
+                "location": "Venezuela",
+                "description": "Studies related to the development of enterprise management skills.",
                 "topics": ["Leadership", "Coaching and Teamwork", "Strategic Planning", "Negotiation", "Financial Analysis", "Enterprise Management"]
             },
             {
@@ -278,6 +288,8 @@ studies: [
                 "isOngoing": false,
                 "level": "Specialization",
                 "period": "Sep 2013 - Apr 2014",
+                "location": "Venezuela",
+                "description": "Studies related to business intelligence with open source technologies.",
                 "topics": ["Data Cleansing", "ETL Design", "DWH", "Open Data Projects"]
             },
             {
@@ -286,6 +298,8 @@ studies: [
                 "isOngoing": false,
                 "level": "Bachelor in Systems Engineering",
                 "period": "Sep 2004 - 2009",
+                "location": "Venezuela",
+                "description": "Degree in Systems Engineering. European Higher Education Area (EHEA): Knowledge related to engineering and architecture in the specific field of Information and Communication Technologies (ICT)",
                 "topics": ["Information and Communication Technologies (ICT)"]
             },
         ]
