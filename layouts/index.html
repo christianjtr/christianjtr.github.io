@@ -334,6 +334,7 @@
         <div class="container {{if not (modBool $key 2)}} right {{else}} left {{ end }}">
           <div class="date">{{ .period }}</div>
           <div class="content">
+            <small class="date-content">{{ .period }}</small>
             <h2>{{ .position }}</h2>
             <span class="subtitle block font-size--18">{{ .company }}</span>
             <span class="subtitle--secondary block color--normal">
@@ -364,11 +365,10 @@
       <section class="align-items--flex-start justify-content--inherit">
         <div>
           {{ range $key, $value := .Params.studies }}
-          <div id="studies_{{ $key }}">
-            <span class="block font-size--20 font-weight--500">
+          <div id="studies_{{ $key }}" class="margin-bottom--20 studies-wrapper">
+            <span class="block font-size--20 margin-bottom--20 font-weight--500">
               <i class="fa fa-map-pin color--pink mr-2"></i>{{ .location }}
             </span>
-            <hr class="green-divider">
             <div class="studies-grid">
               {{ range .studies }}
               <div class="experience-topic margin-bottom--30 study-item">

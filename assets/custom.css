@@ -317,9 +317,23 @@ footer a {
     column-gap: 20px;
 }
 
-hr.green-divider {
-    border-top: 2px dashed var(--green-color);
-    margin: 20px 10px;
+.studies-wrapper {
+    background-color: white;
+    border-radius: 20px;
+    padding: 25px;
+    position: relative;
+}
+.studies-wrapper:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 50px 50px 0;
+    border-radius: 0px 20px 0px 0px;
+    border-color: transparent var(--green-color) transparent transparent;
+    right: 0;
+    top: 0;
+    position: absolute;
 }
 
 .studies-grid .study-item,
@@ -788,15 +802,22 @@ hr.green-divider {
     color: var(--text-color);
 }
 
+.container .date-content {
+    display: none;
+}
+
 @media (max-width: 767.98px) {
     .timeline::after {
         left: 90px;
+        display: none;
     }
 
     .container {
         width: 100%;
-        padding-left: 120px;
-        padding-right: 30px;
+    }
+
+    .container .date-content {
+        display: block;
     }
 
     .container.right {
@@ -806,12 +827,14 @@ hr.green-divider {
     .container.left::after,
     .container.right::after {
         left: 82px;
+        display: none;
     }
 
     .container.left::before,
     .container.right::before {
         left: 100px;
         border-color: transparent #006e51 transparent transparent;
+        display: none;
     }
 
     .container.left .date,
@@ -819,6 +842,7 @@ hr.green-divider {
         right: auto;
         left: 15px;
         width: 50px;
+        display: none;
     }
 
     .container.left .icon,
@@ -1022,9 +1046,12 @@ hr.green-divider {
 
 .myBtn {
     display: none;
+    align-items: center;
     position: fixed;
-    bottom: 20px;
-    right: 30px;
+    width: 62px;
+    height: 60px;
+    bottom: 40px;
+    right: 50px;
     z-index: 1;
     outline: none;
     cursor: pointer;
@@ -1037,13 +1064,12 @@ hr.green-divider {
         linear-gradient(#0f5d94, #0f5d94) border-box;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .myBtn {
         bottom: 150px;
-        right: 20px;
+        right: 40px;
         width: 62px;
         height: 60px;
-        display: flex !important;
         align-items: center;
     }
 }
