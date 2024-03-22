@@ -14,13 +14,17 @@
           <span class="highlighted-text">systems design thinking, engineering, data insights, 
           and an agile mindset</span> to deliver user-centric solutions that drive impact.
         </p>
-        <!-- <div class="btn-container">
-          <a href="#projects" class="btn" aria-label="Go to projects section" title="Projects">🥁 Projects</a>
-          <a href="#background" class="btn" aria-label="Go to background section" title="Background">🎞️ Background</a>
-        </div> -->
+        <div class="btn-container margin-top--20">
+          <a href="#projects" class="btn" aria-label="Go to projects section" title="Projects">
+            Projects<span class="color--pink text--18">.</span>
+          </a>
+          <a href="#background" class="btn" aria-label="Go to background section" title="Background">
+            Background<span class="color--pink text--18">.</span>
+          </a>
+        </div>
       </div>
       <lottie-player 
-        src="/lottie/lottie.json" 
+        src="/lottie/astronaut_pc.json" 
         background="transparent"
         speed="1" 
         class="lottie"
@@ -55,7 +59,7 @@
       </section>
     </div>
   </div>
-  <!-- ABOUT ME -->
+  <!-- KNOWLEDGE -->
   <div class="background--grey">
     <div class="prose prose-neutral mx-auto min-h-[calc(100%-9rem)] px-8 py-16 pt-8 dark:prose-invert about-me-container">
       <section class="grid-section-container flexible-first-column align-items--flex-start justify-content--inherit">
@@ -131,6 +135,7 @@
       </div>
     </div>
   </div>
+  <!-- CREDENTIALS -->
   <div class="background--cross-dots margin-bottom--20 margin-top--10">
     <div class="prose prose-neutral mx-auto min-h-[calc(100%-9rem)] px-8 py-16 pt-8 dark:prose-invert">
       <section class="grid-section-container align-items--flex-start justify-content--inherit">
@@ -148,6 +153,7 @@
       </section>
     </div>
   </div>
+  <!-- TECHNOLOGIES -->
   <div class="background--cross-dots margin-bottom--20">
     <div class="prose prose-neutral mx-auto min-h-[calc(100%-9rem)] px-8 py-16 pt-8 dark:prose-invert">
       <section class="grid-section-container align-items--flex-start justify-content--inherit">
@@ -166,16 +172,25 @@
         </div>
         <div class="flex-align-self--center info-card-container">
           <div class="background--grey info-card">
-            <h6>
+            <h6 class="margin-bottom--10">
               <i class="fa fa-code color--pink"></i>
-              Tech stack
+              Tech stack knowledge
             </h6>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis incidunt aliquid dicta, pariatur id suscipit provident non maiores, asperiores illo vel rem quisquam voluptatibus!</p>
+            <span class="block color--normal">
+              As a generalist engineer, who is interested in several areas of knowledge, I am into these technologies for:
+            </span>
+            <ul class="color--normal padding--none list-style--none">
+              <li>💡 Product (Ideation, Design Thinking, Prototyping).</li>
+              <li>💅 Frontend (Web applications, Tooling).</li>
+              <li>👾 Backend (APIs).</li>
+              <li>📊 Data (Modeling, ETL, Visualization).</li>
+            </ul>
           </div>
         </div>
       </section>
     </div>
   </div>
+  <!-- TOOLS -->
   <div class="background--grey padding-up-and-down--50">
     <div class="prose prose-neutral mx-auto min-h-[calc(100%-9rem)] px-8 py-16 pt-8 dark:prose-invert">
       <section class="grid-section-container align-items--flex-start justify-content--inherit">
@@ -191,7 +206,7 @@
                 </h6>
                 <p id="tool_category_{{ $key }}">
                   {{ range .tools }}
-                  <span class="tag tag--green">
+                  <span class="tag">
                     {{ . }}
                   </span>
                   {{ end }}
@@ -211,7 +226,7 @@
             src="/lottie/ovni.json" 
             background="transparent"
             speed="1" 
-            aria-label="Astronaut in front of a computer"
+            aria-label="Ovni"
             class="lottie-aside-title"
             loop 
           autoplay>
@@ -262,7 +277,8 @@
         </section>    
     </div>
   </div>
-  <div class="background--cross-dots">
+  <!-- HIGHLIGHTED PROJECTS -->
+  <div class="background--green padding-up-and-down--50">
     <div class="prose prose-neutral mx-auto min-h-[calc(100%-9rem)] px-8 py-16 pt-8 dark:prose-invert">
         <div>
           <h3 class="margin--none margin-bottom--10">Highlighted Projects 🚀</h3>
@@ -277,7 +293,7 @@
               <img src={{ .image }} alt="Preview image of {{ .title }}"/>
             </figure>
             <div class="article-body border--grey">
-              <h4>{{ .title }}</h4>
+              <h4 class="margin--none text--18">{{ .title }}</h4>
               <span class="color--pink">@{{ .role }}</span>
               <p class="normal-text">
                 {{ .description }}
@@ -296,150 +312,128 @@
   <!-- BACKGROUND -->
   <div class="background--cross-dots padding-up-and-down--50">
     <div class="prose prose-neutral mx-auto min-h-[calc(100%-9rem)] px-8 py-16 pt-8 dark:prose-invert">
-      <h2 class="subtitle block" id="projects">🎞️ Background<span>.</span></h2>
-      <section class="grid-section-container align-items--flex-start justify-content--inherit">
-          <div>
-            <h3 class="margin--none margin-bottom--10">Professional Experience 🧑🏻‍💼</h3>
-            <span class="normal-text block margin-bottom--30">
-              Brief summary of responsbilities done in different companies.
+      <div class="section-title-wrapper margin-bottom--30">
+        <lottie-player 
+            src="/lottie/astronaut_reading.json" 
+            background="transparent"
+            speed="1" 
+            aria-label="Astronaut reading"
+            class="lottie-aside-title"
+            loop 
+          autoplay>
+        </lottie-player>
+        <h2 class="subtitle block margin-top--10" id="background">Background<span>.</span></h2>
+      </div>
+      <h3 class="margin--none margin-bottom--10">Professional Experiences 🧑🏻‍💼</h3>
+      <span class="normal-text block margin-bottom--30">
+        An overview of contributions done as an engineer, <strong>in three (3) different countries so far.</strong>
+      </span>
+      <section class="padding-up-and-down--50">
+      <div class="timeline">
+        {{ range $key, $value := .Params.experiences }}
+        <div class="container {{if not (modBool $key 2)}} right {{else}} left {{ end }}">
+          <div class="date">{{ .period }}</div>
+          <div class="content">
+            <h2>{{ .position }}</h2>
+            <span class="subtitle block font-size--18">{{ .company }}</span>
+            <span class="subtitle--secondary block color--normal">
+              <i class="fa fa-industry mr-1"></i>
+              {{ .sector }}
             </span>
-            ...
-          </div>
-        </section>
-    </div>
-  </div>
-  <div class="background--cross-dots padding-up-and-down--50">
-    <div class="prose prose-neutral mx-auto min-h-[calc(100%-9rem)] px-8 py-16 pt-8 dark:prose-invert">
-      <section class="grid-section-container align-items--flex-start justify-content--inherit">
-          <div>
-            <h3 class="margin--none margin-bottom--10">Studies 📚</h3>
-            <span class="normal-text block margin-bottom--30">
-              Educational path I have chosen to enrich my career journey.
+            <span class="subtitle--secondary block margin-bottom--20 color--normal">
+              <i class="fa fa-map-pin mr-1"></i>
+              {{ .location }}
             </span>
-            ...
-          </div>
-        </section>
-    </div>
-  </div>
-  <!--
-      <h3>Highlighted Projects 🚀</h3>
-      <p class="normal-text margin-top--20">
-        Here are some of the <strong>projects I have participated in</strong>, either as an author or contributor.
-      </p>
-      <section class="grid-articles-container margin-top--20">
-        {{ range $key, $value := .Params.highlighted_projects }}
-        <div class="article-wrapper">
-          <figure>
-            <img src={{ .image }} alt="Preview image of {{ .title }}"/>
-          </figure>
-          <div class="article-body">
-            <h4>{{ .title }}</h4>
-            <p class="normal-text">
+            <p class="font-size--18 color--normal">
               {{ .description }}
             </p>
-            <p>
-              {{ range .tags }}
-              <span class="tag">{{ . }}</span>
-              {{ end }}
-            </p>
-            <small class="color--pink">@{{ .role }}</small>
           </div>
         </div>
         {{ end }}
+      </div>
       </section>
     </div>
-  </div> -->
-  <!-- BACKGROUND -->
-  <!-- <div style="background: pink">
-    <div class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] px-8 py-16 pt-8 dark:prose-invert">
-      <hr>
-      <h2 class="subtitle" id="background">🎞️ Background<span>.</span></h2>
-      <p class="normal-text margin-top--10 margin-bottom--10">
-        An overview of contributions done as an engineer, <strong>in three (3) different countries so far.</strong>
-      </p>
-      <section class="grid-section-container align-items--flex-start justify-content--inherit">
+  </div>
+  <!-- STUDIES -->
+  <div class="background--grey padding-up-and-down--50">
+    <div class="prose prose-neutral mx-auto min-h-[calc(100%-9rem)] px-8 py-16 pt-8 dark:prose-invert">
+      <h3 class="margin--none margin-bottom--10">Studies 📚</h3>
+      <span class="normal-text block margin-bottom--30">
+        Educational path chosen for career growth.
+      </span>
+      <section class="align-items--flex-start justify-content--inherit">
         <div>
-          <h3>Professional Experience 🧑🏻‍💼</h3>
-          <p class="normal-text">Brief summary of responsbilities done in different companies.</p>
-          <div class="timeline">
-              {{ range $key, $value := .Params.experiences }}
-              <div class="card" id="experience_{{ $key }}">
-                <div class="info">
-                  <span class="normal-text">📍 {{ .location }}</span>
-                  <h3 class="title">{{ .position }}</h3>
-                  <span class="subtitle block">{{ .company }}</span>
-                  <span class="subtitle--secondary block">
-                    <i class="fa fa-industry"></i>
-                    {{ .sector }}
-                  </span>
-                  <span class="subtitle--secondary block">
-                    <i class="fa fa-calendar"></i>
-                    {{ .period }}
-                  </span>
-                  <p>{{ .description }}</p>
-                </div>
-              </div>
-              {{ end }}
-          </div>
-        </div>
-        <div>
-          <h3>Studies 📚</h3>
-          <p class="normal-text">Educational path I have chosen to enrich my career journey.</p>
-          <div class="experience-topic_container">
-            <span class="ribbon"><i class="fa fa-user-graduate"></i></span>
-            {{ range $key, $value := .Params.studies }}
-            <div id="studies_{{ $key }}">
-              <span class="normal-text">📍 {{ .location }}</span>
+          {{ range $key, $value := .Params.studies }}
+          <div id="studies_{{ $key }}">
+            <span class="block font-size--20 font-weight--500">
+              <i class="fa fa-map-pin color--pink mr-2"></i>{{ .location }}
+            </span>
+            <hr class="green-divider">
+            <div class="studies-grid">
               {{ range .studies }}
-              <div class="experience-topic">
+              <div class="experience-topic margin-bottom--30 study-item">
                 {{ if eq .isOngoing true }}
-                <small class="block">
+                <span class="block text--18">
                   <i class="fa fa-book color--pink" title="On-going"></i>
                   On-going
-                </small>
+                </span>
                 {{ end }}
-                <h4 class="title margin-top--none">{{ .degree }}</h4>
-                <span class="subtitle--secondary block">{{ .school }}</span>
+                <h4 class="title margin--none">{{ .degree }}</h4>
+                <span class="normal-text block">{{ .school }}</span>
                 <span class="subtitle--secondary block">
                   <i class="fa fa-calendar"></i>
                   {{ .period }}
                 </span>
+                <p class="color--normal">
+                  {{ .description }}
+                </p>
+                <p class="margin--none">
+                  {{ range .topics }}
+                  <span class="tag">{{ . }}</span>
+                  {{ end }}
+                </p>
               </div>
               {{ end }}
             </div>
-            {{ end }}
           </div>
-          <h3>Certifications 🤓</h3>
-          <p class="normal-text">Official certifications I earned.</p>
-          <div class="experience-topic_container">
-            <span class="ribbon"><i class="fa fa-medal"></i></span>
-            {{ range $key, $value := .Params.certifications }}
-            <div id="certification_{{ $key }}" class="experience-topic">
-              <span class="normal-text margin-top--none">
-                🏫 {{ .organization }}
-              </span>
-              <ul>
-                {{ range .certifications }}
-                <li>
-                  <span class="subtitle block">{{ .title }}</span>
-                  <span class="subtitle--secondary block">
-                    <i class="fa fa-calendar"></i>
-                    {{ .date }}
-                    {{ if eq .showCredential true }} · Credential Id: {{ .credential }}{{ end }}
-                  </span>
-                  {{ if eq .showURL true }}
-                  <a href="{{ .url }}" rel="external" class="text--small color--pink" target="_blank">
-                    Show credential <i class="fa fa-external-link-alt"></i>
-                  </a>
-                  {{ end }}
-                </li>
-                {{ end }}
-              </ul>
-            </div>
-            {{ end }}
-          </div>
+          {{ end }}
         </div>
       </section>
     </div>
-  </div> -->
+  </div>
+  <!-- CERTIFICATIONS -->
+  <div class="background--green padding-up-and-down--50">
+    <div class="prose prose-neutral mx-auto min-h-[calc(100%-9rem)] px-8 py-16 pt-8 dark:prose-invert">
+      <h3 class="margin--none margin-bottom--30">Certifications 🤓</h3>
+      <div class="experience-grid">
+        {{ range $key, $value := .Params.certifications }}
+        <div id="certification_{{ $key }}" class="experience-topic">
+          <h6 class="cert-title block">
+            <i class="fa fa-school color--pink"></i>
+            {{ .organization }}
+          </h6>
+          <ul>
+            {{ range .certifications }}
+            <li class="margin-bottom--20">
+              <span class="cert-subtitle block color--normal">{{ .title }}</span>
+              <span class="subtitle--secondary block">
+                <i class="fa fa-calendar"></i>
+                {{ .date }}
+                {{ if eq .showCredential true }}
+                <span class="block">Credential Id: {{ .credential }}</span>
+                {{ end }}
+              </span>
+              {{ if eq .showURL true }}
+              <a href="{{ .url }}" rel="external" class="text--small color--pink" target="_blank">
+                Show credential <i class="fa fa-external-link-alt"></i>
+              </a>
+              {{ end }}
+            </li>
+            {{ end }}
+          </ul>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
 {{ end }}
