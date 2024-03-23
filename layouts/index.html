@@ -129,6 +129,11 @@
               {{ .degree }}
               {{ end }}
             </span>
+            {{ if eq .showURL true }}
+              <a href="{{ .url }}" rel="external" class="text--small color--pink margin-top--10" target="_blank">
+                Show credential <i class="fa fa-external-link-alt"></i>
+              </a>
+            {{ end }}
           </div>
         </div>
         {{ end }}
@@ -136,7 +141,7 @@
     </div>
   </div>
   <!-- CREDENTIALS -->
-  <div class="background--cross-dots margin-bottom--20 margin-top--10">
+  <div class="background--cross-dots margin-bottom--20 margin-top--20">
     <div class="prose prose-neutral mx-auto min-h-[calc(100%-9rem)] px-8 py-16 pt-8 dark:prose-invert">
       <section class="grid-section-container align-items--flex-start justify-content--inherit">
         <div>
@@ -177,10 +182,9 @@
               Tech stack knowledge
             </h6>
             <span class="block color--normal">
-              As a generalist engineer, who is interested in several areas of knowledge, I am into these technologies for:
+              As a generalist engineer, I am into these technologies for:
             </span>
             <ul class="color--normal padding--none list-style--none">
-              <li>💡 Product (Ideation, Design Thinking, Prototyping).</li>
               <li>💅 Frontend (Web applications, Tooling).</li>
               <li>👾 Backend (APIs).</li>
               <li>📊 Data (Modeling, ETL, Visualization).</li>
@@ -214,6 +218,7 @@
               </div>
               {{ end }}
             </div>
+            <span class="color--normal font-size--18">💡 I have used these set of tools for: Ideation, Design Thinking, Prototyping, Communication, Monitoring, Documentation, and others.</span>
           </div>
         </section>
     </div>
@@ -342,7 +347,7 @@
               {{ .sector }}
             </span>
             <span class="subtitle--secondary block margin-bottom--20 color--normal">
-              <i class="fa fa-map-pin mr-1"></i>
+              <i class="fa fa-map-pin color--pink mr-1"></i>
               {{ .location }}
             </span>
             <p class="font-size--18 color--normal">
@@ -371,14 +376,16 @@
             </span>
             <div class="studies-grid">
               {{ range .studies }}
-              <div class="experience-topic margin-bottom--30 study-item">
+              <div class="experience-topic study-item">
                 {{ if eq .isOngoing true }}
                 <span class="block text--18">
                   <i class="fa fa-book color--pink" title="On-going"></i>
                   On-going
                 </span>
                 {{ end }}
-                <h4 class="title margin--none">{{ .degree }}</h4>
+                <h4 class="title margin--none">
+                  <i class="fa fa-user-graduate color--pink"></i>{{ .degree }}
+                </h4>
                 <span class="normal-text block">{{ .school }}</span>
                 <span class="subtitle--secondary block">
                   <i class="fa fa-calendar"></i>
@@ -404,9 +411,10 @@
   <!-- CERTIFICATIONS -->
   <div class="background--green padding-up-and-down--50">
     <div class="prose prose-neutral mx-auto min-h-[calc(100%-9rem)] px-8 py-16 pt-8 dark:prose-invert">
-      <h3 class="margin--none margin-bottom--30">Certifications 🤓</h3>
+      <h3 class="margin--none margin-bottom--30">Other Certifications 🤓</h3>
       <div class="experience-grid">
         {{ range $key, $value := .Params.certifications }}
+        {{ if eq .display true }}
         <div id="certification_{{ $key }}" class="experience-topic">
           <h6 class="cert-title block">
             <i class="fa fa-school color--pink"></i>
@@ -432,6 +440,7 @@
             {{ end }}
           </ul>
         </div>
+        {{ end }}
         {{ end }}
       </div>
     </div>
