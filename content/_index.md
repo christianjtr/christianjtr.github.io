@@ -62,7 +62,9 @@ memberships: [
         "imageURL": "/images/mit_logo.png",
         "degree": "System Thinking for Project Management",
         "showMembershipId": false,
-        "member_no": ""
+        "member_no": "",
+        "showURL": true,
+        "url": "https://www.credential.net/b7cce254-083d-414b-aabc-81afc07ba4ed#gs.4vcqj4"
     },
     {
         "type": "Membership",
@@ -70,7 +72,9 @@ memberships: [
         "imageURL": "/images/colegio_ingenieros_vzla.png",
         "degree": "",
         "showMembershipId": true,
-        "member_no": "209752"
+        "member_no": "209752",
+        "showURL": false,
+        "url": ""
     },
     {
         "type": "Membership",
@@ -78,7 +82,9 @@ memberships: [
         "imageURL": "/images/spe.png",
         "degree": "",
         "showMembershipId": true,
-        "member_no": "4403695"
+        "member_no": "4403695",
+        "showURL": false,
+        "url": ""
     }, 
 ]
 projects_published: [
@@ -309,6 +315,7 @@ certifications: [
     {
         "identifier": "scrum",
         "organization": "Scrum.org",
+        "display": false,
         "certifications": [
             {
                 "title": "Professional Agile Leadership (PAL-I)",
@@ -331,6 +338,7 @@ certifications: [
     {
         "identifier": "management30",
         "organization": "Management 3.0",
+        "display": true,
         "certifications": [
             {
                 "title": "Management 3.0 Certification",
@@ -345,6 +353,7 @@ certifications: [
     {
         "identifier": "ibm",
         "organization": "IBM",
+        "display": false,
         "certifications": [
             {
                 "title": "Enterprise Design Thinking Practitioner",
@@ -359,6 +368,7 @@ certifications: [
     {
         "identifier": "mit",
         "organization": "Massachusetts Institute of Technology",
+        "display": false,
         "certifications": [
             {
                 "title": "System Thinking for Project Management",
@@ -373,6 +383,7 @@ certifications: [
     {
         "identifier": "google",
         "organization": "Google Digital Garage",
+        "display": true,
         "certifications": [
             {
                 "title": "Fundamentals of Digital Marketing",
@@ -387,6 +398,7 @@ certifications: [
     {
         "identifier": "european-scrum",
         "organization": "EuropeanScrum.org",
+        "display": false,
         "certifications": [
             {
                 "title": "Scrum Master Certificate of Proficiency",
