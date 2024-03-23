@@ -35,7 +35,22 @@
   <meta name="og:site_name" property="og:site_name" content="{{ site.Title }}" />
   <meta name="og:locale" property="og:locale" content="{{ site.LanguageCode }}" />
   <meta name="og:image" property="og:image" content="{{ site.Params.imageURL }}" />
-  
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://christianjtr.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ site.Title }}">
+  <meta property="og:description" content="{{ site.Params.description }}">
+  <meta property="og:image" content="{{ site.Params.imageURL }}">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="christianjtr.github.io">
+  <meta property="twitter:url" content="https://christianjtr.github.io/">
+  <meta name="twitter:title" content="{{ site.Title }}">
+  <meta name="twitter:description" content="{{ site.Params.description }}">
+  <meta name="twitter:image" content="{{ site.Params.imageURL }}">
+
   <!-- CSS & JS -->
   {{ $main := resources.Get "main.css" }}
   <!---->
