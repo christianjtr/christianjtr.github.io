@@ -145,6 +145,13 @@ tools: [
 ]
 highlighted_projects: [
     {
+        "title": "Pokédex PWA application",
+        "description": "Progressive web application (PWA) built using Svelte, a modern JavaScript framework. It leverages the Pokémon API to provide a comprehensive and engaging Pokédex experience, data persistence with LocalStorage, the SpeechSynthesis, and Plotly charts.",
+        "image": "/images/pokedex_detail.png",
+        "tags": ["Front-end development", "Svelte", "Bulma CSS", "Vite+PWA", "SpeechSynthesis API", "Data persistence", "Plotly JavaScript Open Source Graphing Library"],
+        "role": "Author"
+    },
+    {
         "title": "TV movie-streaming-like webapp",
         "description": "Full-stack project showcasing how React and Express works together to deliver a movie-tv-like application. Apart from implementing an API RESTFul, it includes a simple CD/CI process leveraged on GitHub actions and Docker.",
         "image": "/images/tv-app.png",
