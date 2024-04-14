@@ -145,6 +145,13 @@ tools: [
 ]
 highlighted_projects: [
     {
+        "title": "Restaurant's browser application",
+        "description": "Mini application to see the closest restaurants and their menus/products. It's built by using React+TS and also the Geolocation API.",
+        "image": "/images/restaurant_browser.jpeg",
+        "tags": ["Front-end development", "ReactJS", "Tailwind CCS", "Vite", "Geolocation API", "Data persistence - LocalStorage", "Daisy UI", "Typescript"],
+        "role": "Author"
+    },
+    {
         "title": "Pokédex PWA application",
         "description": "Progressive web application (PWA) built using Svelte, a modern JavaScript framework. It leverages the Pokémon API to provide a comprehensive and engaging Pokédex experience, data persistence with LocalStorage, the SpeechSynthesis, and Plotly charts.",
         "image": "/images/pokedex_detail.png",
