@@ -287,9 +287,9 @@
   <div class="background--green padding-up-and-down--50">
     <div class="prose prose-neutral mx-auto min-h-[calc(100%-9rem)] px-8 py-16 pt-8 dark:prose-invert">
         <div>
-          <h3 class="margin--none margin-bottom--10">Highlighted Projects 🚀</h3>
+          <h3 class="margin--none margin-bottom--10">Highlighted Projects, PoCs, and assessments 🚀</h3>
           <span class="normal-text block margin-bottom--30">
-            Here are some of the <strong>projects I have participated in</strong>, either as an author or contributor.
+            Here are some of the <strong>projects I have participated in</strong>, either as an author or contributor. In addition to every other assigment I was encouraged to take.
           </span>
         </div>
         <section class="masorny-container no-margin-top align-items--flex-start justify-content--inherit">
@@ -299,6 +299,7 @@
               <img src={{ .image }} alt="Preview image of {{ .title }}"/>
             </figure>
             <div class="article-body border--grey">
+              <h6 class="margin--none color--bluegray">{{ .category }}</h6>
               <h4 class="margin--none text--18">{{ .title }}</h4>
               <span class="color--pink">@{{ .role }}</span>
               <p class="normal-text">
