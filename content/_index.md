@@ -145,46 +145,60 @@ tools: [
 ]
 highlighted_projects: [
     {
-        "title": "Restaurant's browser application",
-        "description": "Mini application to see the closest restaurants and their menus/products. It's built by using React+TS and also the Geolocation API.",
-        "image": "/images/restaurant_browser.jpeg",
-        "tags": ["Front-end development", "ReactJS", "Tailwind CCS", "Vite", "Geolocation API", "Data persistence - LocalStorage", "Daisy UI", "Typescript"],
-        "role": "Author"
-    },
-    {
-        "title": "Pokédex PWA application",
-        "description": "Progressive web application (PWA) built using Svelte, a modern JavaScript framework. It leverages the Pokémon API to provide a comprehensive and engaging Pokédex experience, data persistence with LocalStorage, the SpeechSynthesis, and Plotly charts.",
-        "image": "/images/pokedex_detail.png",
-        "tags": ["Front-end development", "Svelte", "Bulma CSS", "Vite+PWA", "SpeechSynthesis API", "Data persistence", "Plotly JavaScript Open Source Graphing Library"],
-        "role": "Author"
-    },
-    {
-        "title": "TV movie-streaming-like webapp",
-        "description": "Full-stack project showcasing how React and Express works together to deliver a movie-tv-like application. Apart from implementing an API RESTFul, it includes a simple CD/CI process leveraged on GitHub actions and Docker.",
-        "image": "/images/tv-app.png",
-        "tags": ["FullStack Development", "ReactJS / NodeJS", "Tailwind CSS", "Unit / E2E Testing", "Jest / Cypress", "TypeScript", "Docker", "GitHub Actions", "CI/CD process"],
-        "role": "Author"
-    },
-    {
         "title": "BI Project: Adventure Works Cycles",
         "description": "This project aims to enhance knowledge creation by optimizing data management, empowering data-driven decision-making, and extracting value from information.",
         "image": "/images/bi_project.png",
         "tags": ["Data Analysis / Visualization", "Business Intelligence", "Databases", "ETL / DWH", "Data-driven applications"],
-        "role": "Author"
+        "role": "Author",
+        "category": "Project",
     },
     {
         "title": "Circuitos",
         "description": "Reference platform to discover your artistic and cultural interests. Aimed at people looking for new experiences and eager to share their art with the community.",
         "image": "/images/circuitos.png",
         "tags": ["Product Design", "User Experience", "A/B Testing", "Prototyping", "Usability", "Design Thinking", "User Research"],
-        "role": "Contributor"
+        "role": "Contributor",
+        "category": "Project",
     },
     {
         "title": "Idea: Cultural activities app",
         "description": "We provide an accessible platform that facilitates participation in cultural events and activities by creating a cultural network tailored to each individual's preferences.",
         "image": "/images/design_process.png",
         "tags": ["e-Business", "Lean Startup", "Design Thinking", "Empathy Maps", "Business Model Canvas", "Prototyping", "SEO / SEA", "Digital Marketing"],
-        "role": "Author"
+        "role": "Author",
+        "category": "Project",
+    },
+    {
+        "title": "TV movie-streaming-like webapp",
+        "description": "Full-stack project showcasing how React and Express works together to deliver a movie-tv-like application. Apart from implementing an API RESTFul, it includes a simple CD/CI process leveraged on GitHub actions and Docker.",
+        "image": "/images/tv-app.png",
+        "tags": ["FullStack Development", "ReactJS / NodeJS", "Tailwind CSS", "Unit / E2E Testing", "Jest / Cypress", "TypeScript", "Docker", "GitHub Actions", "CI/CD process"],
+        "role": "Author",
+        "category": "Assignment",
+    },
+    {
+        "title": "Pokédex PWA application",
+        "description": "Progressive web application (PWA) built using Svelte, a modern JavaScript framework. It leverages the Pokémon API to provide a comprehensive and engaging Pokédex experience, data persistence with LocalStorage, the SpeechSynthesis, and Plotly charts.",
+        "image": "/images/pokedex_detail.png",
+        "tags": ["Front-end development", "Svelte", "Bulma CSS", "Vite+PWA", "SpeechSynthesis API", "Data persistence", "Plotly JavaScript Open Source Graphing Library"],
+        "role": "Author",
+        "category": "PoC",
+    },
+    {
+        "title": "Book collection",
+        "description": "Basic book collections web application that allows you to add, edit, and track your book purchases.",
+        "image": "/images/book_collection.png",
+        "tags": ["Front-end development", "ReactJS", "Styled components", "Vite", "TypeScript"],
+        "role": "Author",
+        "category": "Assignment",
+    },
+    {
+        "title": "Restaurant's browser application",
+        "description": "Mini application to see the closest restaurants and their menus/products. It's built by using React+TS and also the Geolocation API.",
+        "image": "/images/restaurant_browser.jpeg",
+        "tags": ["Front-end development", "ReactJS", "Tailwind CCS", "Vite", "Geolocation API", "Data persistence - LocalStorage", "Daisy UI", "TypeScript"],
+        "role": "Author",
+        "category": "Assignment",
     },
 ]
 experiences: [
