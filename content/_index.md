@@ -7,10 +7,7 @@ summary_interests: [
     "User Research", 
     "Artificial intelligence AI", 
     "Product and Service Design", 
-    "Data Analysis and Visualization", 
-    "Business Intelligence", 
-    "Web Technologies", 
-    "e-Business",
+    "Data Visualization", 
     "2D Animation"
 ]
 summary_languages: [
@@ -18,7 +15,7 @@ summary_languages: [
         "emoji": "💃🏻",
         "language": "Spanish",
         "proficiency": "Native",
-        "level": "110%"
+        "level": "100%"
     },
     {
         "emoji": "💂🏻",
