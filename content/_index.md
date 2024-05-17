@@ -14,48 +14,52 @@ summary_languages: [
     {
         "emoji": "💃🏻",
         "language": "Spanish",
-        "proficiency": "Native",
-        "level": "100%"
+        "proficiency": "Native speaker",
+        "proficiencyValue": 100,
     },
     {
         "emoji": "💂🏻",
         "language": "English",
         "proficiency": "Professional (B2+)",
-        "level": "75%"
+        "proficiencyValue": 100,
     },
     {
         "emoji": "🥐",
         "language": "French",
         "proficiency": "Elementary (A2)",
-        "level": "30%"
+        "proficiencyValue": 100,
     }
 ]
 knowledge: [
     {
         "CSSIconClass": "fa fa-pencil-ruler",
-        "description": "Creative thinker with a proven ability to solve complex problems."
+        "description": "Creative thinker at facing challenges."
     },
     {
         "CSSIconClass": "fa fa-seedling",
-        "description": "Dedicated to continuous learning and professional development."
+        "description": "Dedicated to continuous learning."
     },
     {
         "CSSIconClass": "fa fa-flask",
-        "description": "Fascinated by user experience and service design."
+        "description": "Fascinated by products and service design."
     },
     {
         "CSSIconClass": "fa fa-users",
-        "description": "Foster synergies and collaboration within teams."
+        "description": "Encourage synergies and collaboration."
     },
     {
         "CSSIconClass": "fa fa-bullseye",
-        "description": "Goals-oriented and motivated with a strong work ethic."
+        "description": "Goals-oriented and self-motivated."
+    },
+    {
+        "CSSIconClass": "fa fa-briefcase",
+        "description": "Good listener with strong work ethics."
     },
 ]
 memberships: [
     {
         "type": "Diploma",
-        "organization": "Massachusetts Institute of Technology",
+        "organization": "Massachusetts Institute of Technology (MIT)",
         "imageURL": "/images/mit_logo.png",
         "degree": "System Thinking for Project Management",
         "showMembershipId": false,
@@ -88,17 +92,17 @@ projects_published: [
     {
         "title": "Augmented Intelligence for Data Visualization Analytics",
         "showcased_at": "Qlik Connections Global Conference",
-        "location": "Dallas TX, United States of America",
+        "location": "Dallas TX, USA",
         "flag": "🇺🇲",
         "owner": "© SDG Group",
         "url": "https://cdn2.hubspot.net/hubfs/4041825/SDG_Group_Augmented_Intelligence.pdf",
         "period": "May 2019",
         "contribute_as": "Frontend Software Engineer",
         "technologies": ["VueJS", "NodeJS", "Qlik Sense Hub", "SignalR Client", "DialogFlow", "AR.js"],
-        "contributions": "Collaborated with engineers to create an AR/MR user experience, empowering users to make data-driven decisions through an engaging and immersive experience by building a mashup app to visualize sales trends and a chatbot UI for data visualization."
+        "contributions": "Collaborated with engineers to create an AR/MR user experience, empowering them to make data-driven decisions through an app to visualize sales trends and a chatbot for data visualization."
     },
     {
-        "title": "Representation of geographical data related to the Venezuelan Petroleum Industry by using Keyhole Markup Language (KML)",
+        "title": "Representation of geographical data related to the Venezuelan Petroleum Industry by using Keyhole Markup Language",
         "showcased_at": "6th Congress of Cartographic Science",
         "location": "Buenos Aires, Argentina",
         "flag": "🇦🇷",
@@ -107,35 +111,40 @@ projects_published: [
         "period": "June 2012",
         "contribute_as": "Product Developer Engineer",
         "technologies": ["Google Earth / Maps", "CESIUM 3D Geospatial", "KML / KMZ", "ArcGIS", "Global Mapper"],
-        "contributions": "Worked alongside geologists and geographers to improve the accessibility and usability of geographical data for the Venezuelan petroleum industry; by implementing functionalities for the creation and editing of KML/KMZ files (Interactive hydrocarbons maps)."
+        "contributions": "Worked alongside geologists and geographers to improve the accessibility and usability of geographical data for the Venezuelan petroleum industry; by automatically creating and editing KML/KMZ files."
     },
     {
-        "title": "Integrated System of Opportunity Portfolios (SIPO)",
+        "title": "Integrated System of Opportunity Portfolios",
         "showcased_at": "American Association of Petroleum Geologists",
-        "location": "Houston TX, United States of America",
+        "location": "Houston TX, USA",
         "flag": "🇺🇲",
         "owner": "© PDVSA",
         "url": "https://www.searchanddiscovery.com/pdfz/documents/2011/40798garcia/ndx_garcia.pdf.html",
         "period": "August 2011",
-        "contribute_as": "Product Software Engineer · Data Analyst · Web Developer",
-        "technologies": ["HTML5 / jQuery / CSS", "PHP", "MySQL", "PostgreSQL", "R", "Pentaho BI", "ETL / DWH", "HighCharts", "ArcGIS"],
-        "contributions": "Partnered with a team of engineers, economists, geologists, and geographers in the creation and launch of a real-time web application to facilitate economic scenario analysis and to effectively visualize both geoscience and economic data."
+        "contribute_as": "Product Software Engineer · Data Analyst",
+        "technologies": ["HTML5 / jQuery / CSS", "PHP", "MySQL", "PostgreSQL", "R Studio", "Pentaho BI", "ETL / DWH", "HighCharts", "ArcGIS"],
+        "contributions": "Partnered with a team of engineers, economists, geologists, and geographers in creating and launching a real-time web application to facilitate economic scenario analysis and effectively visualize both geoscience and financial data."
     },
+]
+tech_knowledge: [
+    "💅 Frontend (Web applications, UIs, Tooling).",
+    "📊 Data (Modeling, ETL, Visualization).",
+    "👾 Backend (APIs and services).",
 ]
 tools: [
     {
         "icon": "fa fa-hand-holding-heart",
-        "category": "Colaborative and Monitoring",
+        "category": "Colaborative",
         "tools": ["Jira", "Confluence", "SourceTree", "GitHub", "AWS", "Slack", "Microsoft Teams", "Google Meets", "Miro", "Postman", "Sentry", "Grafana"],
     },
     {
         "icon": "fa fa-palette",
-        "category": "Design and Prototyping",
-        "tools": ["Adobe Creative Suite (Ai / Xd)", "Sketch", "Zeplin", "Figma", "InVision", "Video iMovie"],
+        "category": "Prototyping",
+        "tools": ["Adobe Illustrator", "Adobe XD", "Sketch", "Zeplin", "Figma", "InVision", "Video iMovie"],
     },
     {
         "icon": "fa fa-chart-line",
-        "category": "Business Intelligence and DA",
+        "category": "Business Intelligence",
         "tools": ["SQL / NoSQL clients", "Pentaho BI", "SSAS / SSIS", "PowerBI", "Qlik", "Tableau", "R Studio"],
     },
     
@@ -144,7 +153,7 @@ highlighted_projects: [
     {
         "title": "BI Project: Adventure Works Cycles",
         "description": "This project aims to enhance knowledge creation by optimizing data management, empowering data-driven decision-making, and extracting value from information.",
-        "image": "/images/bi_project.png",
+        "image": "/images/bi_project.jpg",
         "tags": ["Data Analysis / Visualization", "Business Intelligence", "Databases", "ETL / DWH", "Data-driven applications"],
         "role": "Author",
         "category": "Project",
@@ -152,7 +161,7 @@ highlighted_projects: [
     {
         "title": "Circuitos",
         "description": "Reference platform to discover your artistic and cultural interests. Aimed at people looking for new experiences and eager to share their art with the community.",
-        "image": "/images/circuitos.png",
+        "image": "/images/circuitos.jpg",
         "tags": ["Product Design", "User Experience", "A/B Testing", "Prototyping", "Usability", "Design Thinking", "User Research"],
         "role": "Contributor",
         "category": "Project",
@@ -160,7 +169,7 @@ highlighted_projects: [
     {
         "title": "Idea: Cultural activities app",
         "description": "We provide an accessible platform that facilitates participation in cultural events and activities by creating a cultural network tailored to each individual's preferences.",
-        "image": "/images/design_process.png",
+        "image": "/images/design_process.jpg",
         "tags": ["e-Business", "Lean Startup", "Design Thinking", "Empathy Maps", "Business Model Canvas", "Prototyping", "SEO / SEA", "Digital Marketing"],
         "role": "Author",
         "category": "Project",
@@ -168,15 +177,23 @@ highlighted_projects: [
     {
         "title": "TV movie-streaming-like webapp",
         "description": "Full-stack project showcasing how React and Express works together to deliver a movie-tv-like application. Apart from implementing an API RESTFul, it includes a simple CD/CI process leveraged on GitHub actions and Docker.",
-        "image": "/images/tv-app.png",
+        "image": "/images/tv-app.jpg",
         "tags": ["FullStack Development", "ReactJS / NodeJS", "Tailwind CSS", "Unit / E2E Testing", "Jest / Cypress", "TypeScript", "Docker", "GitHub Actions", "CI/CD process"],
         "role": "Author",
-        "category": "Assignment",
+        "category": "Assessment",
+    },
+    {
+        "title": "Restaurant's browser application",
+        "description": "Mini application to see the closest restaurants and their menus/products. It's built by using React+TS and also the Geolocation API.",
+        "image": "/images/restaurant_browser.jpg",
+        "tags": ["Front-end development", "ReactJS", "Tailwind CCS", "Vite", "Geolocation API", "Data persistence - LocalStorage", "Daisy UI", "TypeScript"],
+        "role": "Author",
+        "category": "Assessment",
     },
     {
         "title": "Pokédex PWA application",
         "description": "Progressive web application (PWA) built using Svelte, a modern JavaScript framework. It leverages the Pokémon API to provide a comprehensive and engaging Pokédex experience, data persistence with LocalStorage, the SpeechSynthesis, and Plotly charts.",
-        "image": "/images/pokedex_detail.png",
+        "image": "/images/pokedex.jpg",
         "tags": ["Front-end development", "Svelte", "Bulma CSS", "Vite+PWA", "SpeechSynthesis API", "Data persistence", "Plotly JavaScript Open Source Graphing Library"],
         "role": "Author",
         "category": "PoC",
@@ -184,18 +201,10 @@ highlighted_projects: [
     {
         "title": "Book collection",
         "description": "Basic book collections web application that allows you to add, edit, and track your book purchases.",
-        "image": "/images/book_collection.png",
+        "image": "/images/books.jpg",
         "tags": ["Front-end development", "ReactJS", "Styled components", "Vite", "TypeScript"],
         "role": "Author",
-        "category": "Assignment",
-    },
-    {
-        "title": "Restaurant's browser application",
-        "description": "Mini application to see the closest restaurants and their menus/products. It's built by using React+TS and also the Geolocation API.",
-        "image": "/images/restaurant_browser.jpeg",
-        "tags": ["Front-end development", "ReactJS", "Tailwind CCS", "Vite", "Geolocation API", "Data persistence - LocalStorage", "Daisy UI", "TypeScript"],
-        "role": "Author",
-        "category": "Assignment",
+        "category": "Assessment",
     },
 ]
 experiences: [
@@ -248,92 +257,102 @@ experiences: [
         "description": "Spearheaded the design and development of a web-based CRM, integrating departments to enhance customer service management and crafting a self-service kiosk for automated queue management and balance inquiries.",
     }
 ]
+industry_courses: [
+    {
+        "industry": "Soft skills",
+        "courses": [
+            "Oratory and effective speaking - Speak up training.",
+            "Emotional intelligence at work - Udemy.",
+            "13 steps to public speaking - Udemy."
+        ]
+    },
+    {
+        "industry": "Hydrocarbons",
+        "courses": [
+            "Exploration and production of oil and gas for engineers.", 
+            "Economic evaluation of petroleum investments projects.", 
+            "Key management indicators and strategic planning."
+        ],
+    },
+]
 studies: [
     {
+        "school": "Polytechnic University of Valencia",
+        "degree": "Expert Diploma in Tech Management",
+        "isOngoing": true,
+        "level": "Specialization",
+        "period": "Sep 2023 - Present",
         "location": "Spain",
-        "studies": [
-            {
-                "school": "Polytechnic University of Valencia",
-                "degree": "Expert Diploma in Tech Management",
-                "isOngoing": true,
-                "level": "Specialization",
-                "period": "Sep 2023 - ...",
-                "location": "Spain",
-                "description": "CTO focus formation intended to successfully lead technological projects and acquire the essential skills of the role.",
-                "topics": ["Tech Leadership", "Agile Project Management", "Web Development", "Cybersecurity", "QA and Testing", "DevOps"],
-            },
-            {
-                "school": "University of Barcelona",
-                "degree": "Master in e-Business Management",
-                "isOngoing": false,
-                "level": "Master",
-                "period": "Oct 2019 - Jun 2020",
-                "location": "Spain",
-                "description": "Studies related to the effective management of different Internet-based businesses, and how to implement marketing plans, customer experience strategies, digital product developments, and e-commerce optimization.",
-                "topics": ["Lean Startup", "Digital Marketing", "Social Media", "SEO · SEA · ASO", "StartUps"],
+        "description": "CTO focus formation intended to successfully lead technological projects and acquire the essential skills of the role.",
+        "topics": ["Tech Leadership", "Agile Project Management", "Web Development", "Cybersecurity", "QA and Testing", "DevOps"],
+        "key": "Technical Leadership"
+    },
+    {
+        "school": "University of Barcelona",
+        "degree": "Master in e-Business Management",
+        "isOngoing": false,
+        "level": "Master",
+        "period": "Oct 2019 - Jun 2020",
+        "location": "Spain",
+        "description": "Studies related to the effective management of different Internet-based businesses, and how to implement marketing plans, customer experience strategies, digital product developments, and e-commerce optimization.",
+        "topics": ["Lean Startup", "Digital Marketing", "Social Media", "SEO · SEA · ASO", "StartUps"],
+        "key": "Digital Business Management and Startups"
 
-            },
-            {
-                "school": "Escoles Gimbernat i Tomàs Cerdà · Autonomous University of Barcelona",
-                "degree": "Postgraduate in Business Intelligence",
-                "isOngoing": false,
-                "level": "Postgraduate",
-                "period": "Nov 2017 - Jul 2018",
-                "location": "Spain",
-                "description": "Studies related to the development and management of business intelligence projects, data analysis, data mining, data visualization, machine learning, and big data.",
-                "topics": ["Data Modeler", "Big Data", "Data Visualization", "Machine Learning", "DWH", "ETL"]
-            },
-        ]
     },
     {
+        "school": "Escoles Gimbernat i Tomàs Cerdà · Autonomous University of Barcelona",
+        "degree": "Postgraduate in Business Intelligence",
+        "isOngoing": false,
+        "level": "Postgraduate",
+        "period": "Nov 2017 - Jul 2018",
+        "location": "Spain",
+        "description": "Studies related to the development and management of business intelligence projects, data analysis, data mining, data visualization, machine learning, and big data.",
+        "topics": ["Data Modeler", "Big Data", "Data Visualization", "Machine Learning", "DWH", "ETL"],
+        "key": "Data Engineering"
+    },
+    {
+        "school": "Digital House Coding School",
+        "degree": "Diploma in UX Design and Research",
+        "isOngoing": false,
+        "level": "Bootcamp",
+        "period": "Mar 2017 - Jul 2017",
         "location": "Argentina",
-        "studies": [
-            {
-                "school": "Digital House Coding School",
-                "degree": "Diploma in UX Design and Research",
-                "isOngoing": false,
-                "level": "Bootcamp",
-                "period": "Mar 2017 - Jul 2017",
-                "location": "Argentina",
-                "description": "Studies related to the process of developing digital products focused on user experience.",
-                "topics": ["Design Thinking", "Usability", "Prototyping", "A/B Testing", "Product Design", "User Research"]
-            },
-        ]
+        "description": "Studies related to the process of developing digital products focused on user experience.",
+        "topics": ["Design Thinking", "Usability", "Prototyping", "A/B Testing", "Product Design", "User Research"],
+        "key": "Digital Product Development and User Research"
     },
     {
+        "school": "Metropolitan University (UNIMET)",
+        "degree": "Diploma in Business Management",
+        "isOngoing": false,
+        "level": "Postgraduate",
+        "period": "Sep 2014 - Jul 2015",
         "location": "Venezuela",
-        "studies": [
-            {
-                "school": "Metropolitan University (UNIMET)",
-                "degree": "Diploma in Business Management",
-                "isOngoing": false,
-                "level": "Postgraduate",
-                "period": "Sep 2014 - 2015",
-                "location": "Venezuela",
-                "description": "Studies related to the development of enterprise management skills.",
-                "topics": ["Leadership", "Coaching and Teamwork", "Strategic Planning", "Negotiation", "Financial Analysis", "Enterprise Management"]
-            },
-            {
-                "school": "Central University of Venezuela",
-                "degree": "Diploma in Business Intelligence",
-                "isOngoing": false,
-                "level": "Specialization",
-                "period": "Sep 2013 - Apr 2014",
-                "location": "Venezuela",
-                "description": "Studies related to business intelligence with open source technologies.",
-                "topics": ["Data Cleansing", "ETL Design", "DWH", "Open Data Projects"]
-            },
-            {
-                "school": "Experimental and Polytechnic University of the Armed Forces (UNEFA)",
-                "degree": "Degree in Systems Engineering",
-                "isOngoing": false,
-                "level": "Bachelor in Systems Engineering",
-                "period": "Sep 2004 - 2009",
-                "location": "Venezuela",
-                "description": "Degree in Systems Engineering. European Higher Education Area (EHEA): Knowledge related to engineering and architecture in the specific field of Information and Communication Technologies (ICT)",
-                "topics": ["Information and Communication Technologies (ICT)"]
-            },
-        ]
+        "description": "Studies related to the development of enterprise management skills.",
+        "topics": ["Leadership", "Coaching and Teamwork", "Strategic Planning", "Negotiation", "Financial Analysis", "Enterprise Management"],
+        "key": "Leadership, Management, and Negotiation"
+    },
+    {
+        "school": "Central University of Venezuela",
+        "degree": "Diploma in Business Intelligence",
+        "isOngoing": false,
+        "level": "Specialization",
+        "period": "Sep 2013 - Apr 2014",
+        "location": "Venezuela",
+        "description": "Studies related to business intelligence with open source technologies.",
+        "topics": ["Data Cleansing", "ETL Design", "DWH", "Open Data Projects"],
+        "key": "Business Intelligence"
+    },
+    {
+        "school": "Experimental and Polytechnic University of the Armed Forces (UNEFA)",
+        "degree": "Degree in Systems Engineering",
+        "isOngoing": false,
+        "level": "Bachelor of Systems Engineering",
+        "period": "Sep 2004 - Sep 2009",
+        "location": "Venezuela",
+        "description": "Degree in Systems Engineering. European Higher Education Area (EHEA): Knowledge related to engineering and architecture in the specific field of Information and Communication Technologies (ICT)",
+        "topics": ["Information and Communication Technologies (ICT)"],
+        "key": "Information and Communication Technologies (ICT)"
     },
 ]
 certifications: [
@@ -392,7 +411,7 @@ certifications: [
     },
     {
         "identifier": "mit",
-        "organization": "Massachusetts Institute of Technology",
+        "organization": "Massachusetts Institute of Technology ",
         "display": false,
         "certifications": [
             {
