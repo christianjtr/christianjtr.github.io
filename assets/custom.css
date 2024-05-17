@@ -484,6 +484,32 @@ nav.side_navigation ul li div {
     position: relative;
 }
 
+@media screen and (min-width: 320px) and (max-width: 425px) {
+    p.data-detail {
+        flex-direction: column;
+    }
+
+    .lottie:before {
+        width: 200px;
+    }
+
+    h1.title {
+        font-size: 40px;
+    }
+
+    h2.subtitle {
+        font-size: 20px;
+    }
+
+    h2.subtitle + span {
+        font-size: 16px;
+    }
+
+    .grid-two-columns-container ul > li {
+        flex-direction: column;
+    }
+}
+
 @media screen and (max-width: 768px) {
     footer {
         display: block !important;
@@ -506,6 +532,7 @@ nav.side_navigation ul li div {
 
     .myBtn {
         align-items: center;
+        font-size: 25px;
     }
 
     .nav-bar_social-network-text {
@@ -554,7 +581,7 @@ nav.side_navigation ul li div {
     }
 
     .grid-three-columns-container.language-section {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .grid-three-columns-container.language-section p {
