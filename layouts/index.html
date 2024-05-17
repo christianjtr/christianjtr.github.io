@@ -1,450 +1,422 @@
 {{ define "main" }}
-  <!-- HEADLINE -->
-  <div class="background--cross-dots min-height--730">
-    <section class="grid-section-container align-items--center landing-section prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] px-8 py-16 pt-8 dark:prose-invert">
-      <div class="w-10/12 position--relative top--30">
-        <h1 class="upper-title">
-          👋🏻 Hi there folks, I am
-          <span class="title">
-            Christian José<br/>Torrealba Rondón
-          </span>
-        </h1>
-        <p>
-          Product-oriented professional who leverages
-          <span class="highlighted-text">systems design thinking, engineering, data insights, 
-          and an agile mindset</span> to deliver user-centric solutions that drive impact.
-        </p>
-        <div class="btn-container margin-top--20">
-          <a href="#projects" class="btn" aria-label="Go to projects section" title="Projects">
-            Projects<span class="color--pink text--18">.</span>
-          </a>
-          <a href="#background" class="btn" aria-label="Go to background section" title="Background">
-            Background<span class="color--pink text--18">.</span>
-          </a>
-        </div>
-      </div>
+<!-- HEADLINE -->
+<div class="background--cross-dots padding-top--50">
+  <div class="grid-two-columns-container align-items--center prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] padding--20 dark:prose-invert">
+    <div>
+      <span class="pre-title">👋🏻 Hi there folks, I am</span>
+      <h1 class="title" id="home">Christian José<br />Torrealba Rondón</h1>
+      <p>
+        Product-oriented professional focused on <span class="highlighted-text">systems engineering and design thinking skills</span> to deliver user-centric solutions that drive impact.
+      </p>
+    </div>
+    <lottie-player 
+      src="/lottie/astronaut_pc.json" 
+      background="transparent"
+      speed="1" 
+      class="lottie"
+      aria-label="Astronaut in front of a computer"
+      loop 
+      autoplay>
+    </lottie-player>
+  </div>
+  <div class="grid-two-columns-container about-me-section align-items--center prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)]">
+    <div>
+      <h6 class="padding--none font-size--20 font-weight--600 margin-bottom--20">
+        <i class="fa fa-smile color--pink"></i>
+        About Me
+      </h6>
+      <p class="padding-side-by-side--10 font-size--18 color--black margin--none">
+        {{ .Params.summary_about }}
+        <span class="block margin-top--20 font-size--25">{{ .Params.summary_hobbies }}</span>
+      </p>
+    </div>
+    <div>
+      <h6 class="padding--none font-size--20 font-weight--600 margin-bottom--20">
+        <i class="fa fa-glasses color--pink"></i>
+        Interests
+      </h6>
+      <p class="padding-side-by-side--10 font-size--18 color--black margin--none">
+        {{ range .Params.summary_interests }}
+        <span class="tag">{{ . }}</span>
+        {{ end }}
+      </p>
+    </div>
+  </div>
+</div>
+<!-- APTITUDES -->
+<div class="background--grey padding-up-and-down--50">
+  <div class="prose prose-neutral mx-auto min-h-[calc(100%-9rem)] dark:prose-invert special-padding">
+    <h3 id="aptitudes">Aptitudes 🧘🏻‍♂️</h3>
+    <div class="grid-two-columns-container align-items--flex-start justify-content--inherit color--black">
+      <ul class="font-size--18 list-style--none padding--none">
+        {{ range $key, $value := first 3 .Params.knowledge }}
+        <li>
+          <i class="{{ .CSSIconClass }} color--purple-blue"></i>
+          {{ .description }}
+        </li>
+        {{ end }}
+      </ul>
+      <ul class="font-size--18 list-style--none padding--none">
+        {{ range $key, $value := last 3 .Params.knowledge }}
+        <li>
+          <i class="{{ .CSSIconClass }} color--purple-blue"></i>
+          {{ .description }}
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    <h3>Languages 💬</h3>
+    <small class="color-text--base">* Polishing them up continuously</small>
+    <div class="margin-top--20 grid-three-columns-container language-section font-size--18">
+      {{ range .Params.summary_languages }}
+      <p class="margin--none flex flex-direction--column justify-center align-items--center block">
+        <span class="block"><strong>{{ .emoji }} {{ .language }}</strong></span>
+        <small class="block color-text--base">{{ .proficiency }}</small>
+      </p>
+      {{ end }}
+    </div>
+  </div>
+</div>
+<!-- PROJECTS -->
+<div class="background--cross-dots padding-up-and-down--50">
+  <div class="prose prose-neutral mx-auto min-h-[calc(100%-9rem)] padding-side-by-side--20 dark:prose-invert">
+    <div class="flex align-items--center margin-bottom--20">
       <lottie-player 
-        src="/lottie/astronaut_pc.json" 
-        background="transparent"
-        speed="1" 
-        class="lottie"
-        aria-label="Astronaut in front of a computer"
-        loop 
+          src="/lottie/ovni.json" 
+          background="transparent"
+          speed="1" 
+          aria-label="Ovni"
+          class="lottie-aside-title"
+          loop 
         autoplay>
       </lottie-player>
-    </section>
-    <div class="prose prose-neutral mx-auto min-h-[calc(100%-9rem)] px-8 py-16 pt-8 dark:prose-invert relative padding--none">
-      <section class="summary absolute top--30">
+      <div>
+        <h2 class="subtitle" id="projects">Showcased projects<span>.</span></h2>
+        <span class="block margin-bottom--30 font-size--18">
+          Presented at <strong>International Conferences.</strong> See additional details on <a href="https://www.linkedin.com/in/christianjtr/" rel="external" class="color--pink" target="_blank" title="LinkedIn">LinkedIn.</a>
+        </span>
+      </div>
+    </div>
+    <div class="grid-two-columns-container">
+      {{ range $key, $value := .Params.projects_published }}
+      <div class="card background--white padding--20 flex flex-direction--column">
+        <p class="data-detail margin--none margin-bottom--10">
+          <span class="block">{{ .showcased_at }}</span>
+          <span class="block color--pink">{{ .owner }}</span>
+        </p>
+        <span class="data-detail block margin-bottom--10">{{ .flag }} {{ .location }} · {{ .period }}</span>
+        <h4 class="font-size--18 margin--none margin-bottom--10">
+          {{ .title }}
+        </h4>
+        <span class="block color--purple-blue margin-bottom--10">{{ .contribute_as }}</span>
+        <p class="margin--none font-size--16">
+          {{ .contributions }}
+        </p>
+        <p class="tag-list-wrapper">
+          {{ range .technologies }}
+          <span class="tag">{{ . }}</span>
+          {{ end }}
+        </p>
+        <a href="{{ .url }}" rel="external" class="color--pink block" target="_blank" aria-label="See details of project link">
+          See details <i class="fa fa-external-link-alt"></i>
+        </a>
+      </div>
+      {{ end }}
+    </div>    
+  </div>
+</div>
+<!-- TECHNOLOGIES -->
+<div class="background--grey padding-up-and-down--50">
+  <div class="prose prose-neutral mx-auto min-h-[calc(100%-9rem)] dark:prose-invert padding-side-by-side--20">
+    <h3 id="technologies">Technologies 🔮</h3>
+    <p class="margin-bottom--10 block">
+      Some techs I used to play with. Examples on <a href="https://github.com/christianjtr" rel="external" class="color--pink" target="_blank" aria-label="Link to GitHub" title="GitHub">GitHub</a>.
+    </p>
+    <div class="grid-two-columns-container align-items--flex-start justify-content--inherit">
+      <img
+          src="/images/word-cloud.svg"
+          alt="word cloud of technologies I used to play with"
+          class="margin--none"
+      />
+      <div class="flex-align-self--center background--white padding--20 flex-direction--column">
+        <h6 class="font-size--20 font-weight--600">
+          <i class="fa fa-code color--pink"></i>
+          Tech knowledge
+        </h6>
+        <ul class="padding--none list-style--none">
+          {{ range $key, $value := .Params.tech_knowledge }}
+          <li id="tech_{{ $key }}">{{ . }}</li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- PLAYGROUND... OJOOOO... -->
+<div class="background--cross-dots padding-up-and-down--50">
+  <div class="prose prose-neutral mx-auto min-h-[calc(100%-9rem)] dark:prose-invert padding-side-by-side--20">
+    <div class="flex align-items--center margin-bottom--20">
+      <lottie-player 
+          src="/lottie/ovni.json" 
+          background="transparent"
+          speed="1" 
+          aria-label="Ovni"
+          class="lottie-aside-title"
+          loop 
+        autoplay>
+      </lottie-player>
+      <div>
+        <h2 class="subtitle block" id="playground">Playground<span>.</span></h2>
+        <span class="block margin-bottom--30 font-size--18">
+          Collection of projects, PoCs, and every other assessment I find interesting to showcase.
+        </span>
+      </div>
+    </div>
+    <div class="margin-top--none align-items--flex-start justify-content--inherit">
+      {{ range $key, $value := .Params.highlighted_projects }}
+      <div id="playground_{{ $key }}" class="border-solid--grey margin-bottom--20">
         <div>
-          <h6 class="title">
-            <i class="fa fa-smile color--pink"></i>
-            About Me
-          </h6>
-          <p>
-            {{ .Params.summary_about }}
-            <span class="block margin-top--20 font-size--25">{{ .Params.summary_hobbies }}</span>
-          </p>
+          <img src={{ .image }} alt="Preview image of {{ .title }}" class="margin--none"/>
         </div>
-        <div>
-          <h6 class="title">
-            <i class="fa fa-glasses color--pink"></i>
-            Interests
-          </h6>
-          <p>
-            {{ range .Params.summary_interests }}
+        <div class="background--white padding--20">
+          <p class="margin--none font-size--14" style="display: flex; flex-direction: row; justify-content: space-between;">
+            <span class="margin--none color--bluegray">{{ .category }}</span>
+            <span class="color--pink">@{{ .role }}</span>
+          </p>
+          <h4 class="margin--none font-size--18 margin-bottom--20">{{ .title }}</h4>
+          <p class="font-size--16 margin--none margin-bottom--10">{{ .description }}</p>
+          <p class="margin--none">
+            {{ range .tags }}
             <span class="tag">{{ . }}</span>
             {{ end }}
           </p>
         </div>
-      </section>
+      </div>
+      {{ end }}
     </div>
   </div>
-  <!-- KNOWLEDGE -->
-  <div class="background--grey">
-    <div class="prose prose-neutral mx-auto min-h-[calc(100%-9rem)] px-8 py-16 pt-8 dark:prose-invert about-me-container">
-      <section class="grid-section-container flexible-first-column align-items--flex-start justify-content--inherit">
-        <div>
-          <h3>Aptitudes 🧘🏻‍♂️</h3>
-          <ul class="knowledge-list text--18">
-            {{ range $key, $value := .Params.knowledge }}
-            <li>
-              <i class="{{ .CSSIconClass }} color--pink"></i>
-              {{ .description }}
-            </li>
-            {{ end }}
-          </ul>
-        </div>
-        <div>
-          <h3>Languages 💬</h3>
-          <small class="color--normal">* Polishing them up continuously</small>
-          <ul class="padding--none lang-list">
-            {{ range .Params.summary_languages }}
-            <li class="margin-bottom--10">
-              <span class="block mr-5">{{ .emoji }}</span>
-              <p class="margin--none">
-                <span class="block">{{ .language }}</span>
-                <small class="block">{{ .proficiency }}</small>
-              </p>
-              <span class="progress" style="--level: {{ .level }};"></span>
-            </li>
-            {{ end }}
-          </ul>
-        </div>
-      </section>
+</div>
+<!-- TOOLS -->
+<div class="background--grey padding-up-and-down--50">
+  <div class="prose prose-neutral mx-auto min-h-[calc(100%-9rem)] dark:prose-invert padding-side-by-side--20">
+    <h3 class="margin--none margin-bottom--10" id="tools">Tools 🎨</h3>
+    <span class="block margin-bottom--20 font-size--18">A brief compilation of tools I have used for: Ideation, Prototyping, Comms., Monitoring, Documentation, etc.</span>
+    <div class="grid-three-columns-container">
+      {{ range $key, $value := .Params.tools }}
+      <div id="toolset_{{ $key }}">
+        <span class="title block font-size--20">
+          <i class="{{ .icon }} color--pink"></i>
+          {{ .category }}
+        </span>
+        <p id="tool_category_{{ $key }}" class="margin--none">
+          {{ range .tools }}
+          <span class="tag">{{ . }}</span>
+          {{ end }}
+        </p>
+      </div>
+      {{ end }}
     </div>
   </div>
-  <!-- DIPLOMAS AND ORGANIZATIONS -->
-  <div class="background--green padding-up-and-down--50">
-    <div class="prose prose-neutral mx-auto min-h-[calc(100%-9rem)] px-8 py-16 pt-8 dark:prose-invert padding--none">
-      <h3 class="margin-bottom--30 padding-side-by-side--20">Prestigious Diplomas and Memberships 🏛️</h3>
-      <div class="membership-container">
-        {{ range $key, $value := .Params.memberships }}
-        <div class="membership-wrapper">
-          <div>
-              <img 
-                src="{{ .imageURL }}" 
-                title="{{ .organization }}"
-                alt="{{ .organization }} logo"
-                width="50"
-                id="membership_organization_{{ $key }}"
-              />  
-          </div>
-          <div class="text--18">
+</div>
+<!-- BACKGROUND -->
+<div class="background--cross-dots padding-up-and-down--50">
+  <div class="prose prose-neutral mx-auto min-h-[calc(100%-9rem)] dark:prose-invert padding-side-by-side--20">
+    <div class="flex align-items--center margin-bottom--30">
+      <lottie-player 
+          src="/lottie/ovni.json" 
+          background="transparent"
+          speed="1" 
+          aria-label="Ovni"
+          class="lottie-aside-title"
+          loop 
+        autoplay>
+      </lottie-player>
+      <div>
+        <h2 class="subtitle block" id="background">Professional Experiences<span>.</span></h2>
+        <span class="block margin-bottom--30 font-size--18">
+          An overview of contributions done as an engineer, <strong>in three (3) different countries so far.</strong>
+        </span>
+      </div>
+    </div>
+    <div class="grid-one-columns-container">
+      {{ range $key, $value := .Params.experiences }}
+      <div id="experience_{{ $key }}" class="plain-card align-items--center">
+        <div>
+          <h4 class="font-size--18 margin--none">{{ .position }}</h4>
+          <span class="block color--purple-blue">{{ .company }}</span>
+          <p class="font-size--16">{{ .description }}</p>
+        </div>
+        <p class="margin--none font-size--14 detail-data w-100">
+          <span class="period block">
+            <strong>{{ .sector }}</strong>
+          </span>
+          <span class="period block color-text--base">
+            {{ .location }}
+          </span>
+          <span class="period block color-text--base">
+            {{ .period }}
+          </span>
+        </p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>
+<!-- TRAINING -->
+<div class="background--grey padding-up-and-down--50">
+  <div class="prose prose-neutral mx-auto min-h-[calc(100%-9rem)] dark:prose-invert padding-side-by-side--20">
+    <h3 class="margin--none margin-bottom--10" id="tools">Training 💼</h3>
+    <span class="block margin-bottom--20 font-size--18">Specific courses that are focused either on soft skills or a particular industry.</span>
+    <div class="grid-two-columns-container">
+      {{ range $key, $value := .Params.industry_courses }}
+      <div id="training_{{ $key }}" class="background--white padding--20">
+        <h6 class="block margin-bottom--10 font-size--20 font-weight--600">
+          <i class="fa fa-chalkboard-teacher color--pink"></i>
+          {{ .industry }}
+        </h6>
+        <ul class="margin--none padding--none">
+          {{ range .courses }}
+          <li class="padding--none font-size--16 margin-bottom--10 flex justify-content--space-between">
+            <span class="block">{{ . }}</span>
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>
+<!-- DIPLOMAS AND STUDIES -->
+<div class="background--cross-dots padding-up-and-down--50">
+  <div class="prose prose-neutral mx-auto min-h-[calc(100%-9rem)] dark:prose-invert padding-side-by-side--20">
+    <div class="flex align-items--center margin-bottom--30">
+      <lottie-player 
+          src="/lottie/ovni.json" 
+          background="transparent"
+          speed="1" 
+          aria-label="Ovni"
+          class="lottie-aside-title"
+          loop 
+        autoplay>
+      </lottie-player>
+      <div>
+        <h2 class="subtitle block" id="diplomas">Diplomas, memberships, and studies<span>.</span></h2>
+        <span class="block margin-bottom--30 font-size--18">
+          Educational path I have chosen for my career development.
+        </span>
+      </div>
+    </div>
+    <div class="grid-three-columns-container margin-bottom--30">
+      {{ range $key, $value := .Params.memberships }}
+      <div id="membership_{{ $key }}" class="card font-size--18 relative background--white w-100">
+        <div class="card__content padding--20">
+          <img 
+            src="{{ .imageURL }}" 
+            title="{{ .organization }}"
+            alt="{{ .organization }} logo"
+            width="70"
+            id="membership_organization_{{ $key }}"
+          />  
+          <p class="margin--none content">
             <small class="block color--bluegray">
               {{ if eq .showMembershipId true }}
               <i class="fa fa-building mr-1"></i>
-              Membership
+              Membership · Nº {{ .member_no }}
               {{ else }}
               <i class="fa fa-graduation-cap mr-1"></i>
               Diploma
               {{ end }}
             </small>
-            <span class="block normal-text">
+            <span class="block">
               <strong>{{ .organization }}</strong>
             </span>
-            <span class="block normal-text">
-              {{ if eq .showMembershipId true }}
-              Credential Id: {{ .member_no }}
-              {{ else }}
+            <span class="font-size--16 color-text--base">
               {{ .degree }}
-              {{ end }}
             </span>
-            {{ if eq .showURL true }}
-              <a href="{{ .url }}" rel="external" class="text--small color--pink margin-top--10" target="_blank">
-                Show credential <i class="fa fa-external-link-alt"></i>
-              </a>
-            {{ end }}
-          </div>
+          </p>
         </div>
+        {{ if eq .showURL true }}
+        <a href="{{ .url }}" title="Show diploma" rel="external" target="_blank" class="color--pink font-size--14" aria-label="Link to diploma" style="position: absolute; top: 15px; right: 10px;">
+          Show <i class="fa fa-external-link-alt"></i>
+        </a>
         {{ end }}
       </div>
+      {{ end }}
     </div>
-  </div>
-  <!-- CREDENTIALS -->
-  <div class="background--cross-dots margin-bottom--20 margin-top--20">
-    <div class="prose prose-neutral mx-auto min-h-[calc(100%-9rem)] px-8 py-16 pt-8 dark:prose-invert">
-      <section class="grid-section-container align-items--flex-start justify-content--inherit">
-        <div>
-          <h3>Credentials 🎈</h3>
-          <span class="normal-text block margin-bottom--30">
-            Official certifications I have gotten so far. Refer to my <a href="https://www.credly.com/users/christianjtr/badges" rel="external" class="color--pink" target="_blank" title="Credly">Credly</a> profile.
-          </span>
-          <div class="credentials-wrapper">
-            <div data-iframe-width="350" data-iframe-height="240" data-share-badge-id="f4d80edd-5f42-4234-bab2-8805d5121ecb" data-share-badge-host="https://www.credly.com"></div>
-            <div data-iframe-width="350" data-iframe-height="240" data-share-badge-id="26b9f00b-156e-4832-8808-a424f43af345" data-share-badge-host="https://www.credly.com"></div>
-            <div data-iframe-width="350" data-iframe-height="240" data-share-badge-id="e4c9bf26-0936-4460-97a2-eeb1d620a55c" data-share-badge-host="https://www.credly.com"></div>
-            <div data-iframe-width="350" data-iframe-height="240" data-share-badge-id="b7370ae3-4802-4fe9-b393-fbdd52859c0a" data-share-badge-host="https://www.credly.com"></div>
-          </div>
-        </div>
-      </section>
-    </div>
-  </div>
-  <!-- TECHNOLOGIES -->
-  <div class="background--cross-dots margin-bottom--20">
-    <div class="prose prose-neutral mx-auto min-h-[calc(100%-9rem)] px-8 py-16 pt-8 dark:prose-invert">
-      <section class="grid-section-container align-items--flex-start justify-content--inherit">
-        <div>
-          <h3>Technologies 🔮</h3>
-          <span class="normal-text margin-bottom--10 block">
-            Some techs I used to play with. 
-            Examples on <a href="https://github.com/christianjtr" rel="external" class="color--pink" target="_blank" title="GitHub">GitHub</a>.
-          </span>
-          <img
-            src="/images/word-cloud.svg"
-            alt="word cloud of technologies I used to play with"
-            width="1000"
-            class="margin--none"
-          />
-        </div>
-        <div class="flex-align-self--center info-card-container">
-          <div class="background--grey info-card">
-            <h6 class="margin-bottom--10">
-              <i class="fa fa-code color--pink"></i>
-              Tech stack knowledge
-            </h6>
-            <span class="block color--normal">
-              As a generalist engineer, I am into these technologies for:
-            </span>
-            <ul class="color--normal padding--none list-style--none">
-              <li>💅 Frontend (Web applications, Tooling).</li>
-              <li>👾 Backend (APIs).</li>
-              <li>📊 Data (Modeling, ETL, Visualization).</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-    </div>
-  </div>
-  <!-- TOOLS -->
-  <div class="background--grey padding-up-and-down--50">
-    <div class="prose prose-neutral mx-auto min-h-[calc(100%-9rem)] px-8 py-16 pt-8 dark:prose-invert">
-      <section class="grid-section-container align-items--flex-start justify-content--inherit">
-          <div>
-            <h3 class="margin--none margin-bottom--10">Tools 🎨</h3>
-            <span class="normal-text block margin-bottom--30">A brief compilation of tools I have used.</span>
-            <div class="project-container">
-              {{ range $key, $value := .Params.tools }}
-              <div>
-                <h6 class="title block margin-bottom--20">
-                  <i class="{{ .icon }} color--pink"></i>
-                  {{ .category }}
-                </h6>
-                <p id="tool_category_{{ $key }}">
-                  {{ range .tools }}
-                  <span class="tag">
-                    {{ . }}
-                  </span>
-                  {{ end }}
-                </p>
-              </div>
-              {{ end }}
+    <br />
+    <h3 class="margin--none margin-bottom--20 marging-top--10">Studies 📚</h3>
+    <div class="align-items--flex-start justify-content--inherit margin-bottom--30">
+      <div>
+        <div class="grid-one-columns-container">
+          {{ range $key, $value := .Params.studies }}
+          <div id="study_{{ $key }}" class="plain-card">
+            <div>
+              <h4 class="font-size--18 margin--none">{{ .degree }}</h4>
+              <span class="block color--purple-blue">{{ .key }}</span>
+              <span class="block font-size--16">{{ .school }}</span>
             </div>
-            <span class="color--normal font-size--18">💡 I have used this set of tools for: Ideation, Design Thinking, Prototyping, Communication, Monitoring, Documentation, and others.</span>
-          </div>
-        </section>
-    </div>
-  </div>
-  <!-- PROJECTS -->
-  <div class="background--cross-dots padding-up-and-down--50">
-    <div class="prose prose-neutral mx-auto min-h-[calc(100%-9rem)] px-8 py-16 pt-8 dark:prose-invert">
-      <div class="section-title-wrapper">
-        <lottie-player 
-            src="/lottie/ovni.json" 
-            background="transparent"
-            speed="1" 
-            aria-label="Ovni"
-            class="lottie-aside-title"
-            loop 
-          autoplay>
-        </lottie-player>
-        <h2 class="subtitle block margin-top--10" id="projects">Projects<span>.</span></h2>
-      </div>
-      <section class="grid-section-container align-items--flex-start justify-content--inherit">
-          <div>
-            <h3 class="margin-bottom--10 margin-top--20">Showcased Projects 🛸</h3>
-            <span class="normal-text block margin-bottom--30">
-              Presented at <strong>International Conferences.</strong> See additional details on <a href="https://www.linkedin.com/in/christianjtr/" rel="external" class="color--pink" target="_blank" title="LinkedIn">LinkedIn.</a>
-            </span>
-          </div>
-        </section>
-        <section class="grid-section-container flexible-first-column no-margin-top align-items--flex-start justify-content--inherit">
-          {{ range $key, $value := .Params.projects_published }}
-          <div class="info-card-container">
-            <div class="info-card project-card border--grey background--white">
-              <span class="data-detail block">
-                <strong class="color--pink text--18">{{ .showcased_at }}</strong>
-                <br>
-                {{ .flag }} {{ .location }}
-                <span class="block">
-                  <i class="fa fa-calendar"></i>
-                  {{ .period }} · {{ .owner }}
-                </span>
-                <span class="block">
-                  Contributed as: {{ .contribute_as }}
-                </span>
+            <p class="margin--none font-size--14 detail-data">
+              <span class="block">
+                {{ .location }}
               </span>
-              <h4 class="text--18">
-                {{ .title }}
-              </h4>
-              <p class="normal-text margin--none">
-                {{ .contributions }}
-              </p>
-              <p>
-                {{ range .technologies }}
-                <span class="tag">{{ . }}</span>
-                {{ end }}
-              </p>
-              <a href="{{ .url }}" rel="external" class="text--small color--pink block" target="_blank">
-                See details <i class="fa fa-external-link-alt"></i>
-              </a>
-            </div>
-          </div>
-          {{ end }}
-        </section>    
-    </div>
-  </div>
-  <!-- HIGHLIGHTED PROJECTS -->
-  <div class="background--green padding-up-and-down--50">
-    <div class="prose prose-neutral mx-auto min-h-[calc(100%-9rem)] px-8 py-16 pt-8 dark:prose-invert">
-        <div>
-          <h3 class="margin--none margin-bottom--10">Highlighted Projects, PoCs, and assessments 🚀</h3>
-          <span class="normal-text block margin-bottom--30">
-            Here are some of the <strong>projects I have participated in</strong>, either as an author or contributor. In addition to every other assigment I was encouraged to take.
-          </span>
-        </div>
-        <section class="masorny-container no-margin-top align-items--flex-start justify-content--inherit">
-          {{ range $key, $value := .Params.highlighted_projects }}
-          <article class="article-wrapper margin-bottom--30">
-            <figure>
-              <img src={{ .image }} alt="Preview image of {{ .title }}"/>
-            </figure>
-            <div class="article-body border--grey">
-              <h6 class="margin--none color--bluegray">{{ .category }}</h6>
-              <h4 class="margin--none text--18">{{ .title }}</h4>
-              <span class="color--pink">@{{ .role }}</span>
-              <p class="normal-text">
-                {{ .description }}
-              </p>
-              <p>
-                {{ range .tags }}
-                <span class="tag">{{ . }}</span>
-                {{ end }}
-              </p>
-            </div>
-          </article>
-          {{ end }}
-        </section>
-    </div>
-  </div>
-  <!-- BACKGROUND -->
-  <div class="background--cross-dots padding-up-and-down--50">
-    <div class="prose prose-neutral mx-auto min-h-[calc(100%-9rem)] px-8 py-16 pt-8 dark:prose-invert">
-      <div class="section-title-wrapper margin-bottom--30">
-        <lottie-player 
-            src="/lottie/astronaut_reading.json" 
-            background="transparent"
-            speed="1" 
-            aria-label="Astronaut reading"
-            class="lottie-aside-title"
-            loop 
-          autoplay>
-        </lottie-player>
-        <h2 class="subtitle block margin-top--10" id="background">Background<span>.</span></h2>
-      </div>
-      <h3 class="margin--none margin-bottom--10">Professional Experiences 🧑🏻‍💼</h3>
-      <span class="normal-text block margin-bottom--30">
-        An overview of contributions done as an engineer, <strong>in three (3) different countries so far.</strong>
-      </span>
-      <section class="padding-up-and-down--50">
-      <div class="timeline">
-        {{ range $key, $value := .Params.experiences }}
-        <div class="container {{if not (modBool $key 2)}} right {{else}} left {{ end }}">
-          <div class="date">{{ .period }}</div>
-          <div class="content">
-            <small class="date-content">{{ .period }}</small>
-            <h2>{{ .position }}</h2>
-            <span class="subtitle block font-size--18">{{ .company }}</span>
-            <span class="subtitle--secondary block color--normal">
-              <i class="fa fa-industry mr-1"></i>
-              {{ .sector }}
-            </span>
-            <span class="subtitle--secondary block margin-bottom--20 color--normal">
-              <i class="fa fa-map-pin color--pink mr-1"></i>
-              {{ .location }}
-            </span>
-            <p class="font-size--18 color--normal">
-              {{ .description }}
+              <span class="block">
+                <strong>{{ .level }}</strong>
+              </span>
+              <span class="block color-text--base">
+                {{ .period }}
+              </span>
             </p>
           </div>
-        </div>
-        {{ end }}
-      </div>
-      </section>
-    </div>
-  </div>
-  <!-- STUDIES -->
-  <div class="background--grey padding-up-and-down--50">
-    <div class="prose prose-neutral mx-auto min-h-[calc(100%-9rem)] px-8 py-16 pt-8 dark:prose-invert">
-      <h3 class="margin--none margin-bottom--10">Studies 📚</h3>
-      <span class="normal-text block margin-bottom--30">
-        Educational path chosen for career growth.
-      </span>
-      <section class="align-items--flex-start justify-content--inherit">
-        <div>
-          {{ range $key, $value := .Params.studies }}
-          <div id="studies_{{ $key }}" class="margin-bottom--20 studies-wrapper">
-            <span class="block font-size--20 margin-bottom--20 font-weight--500">
-              <i class="fa fa-map-pin color--pink mr-2"></i>{{ .location }}
-            </span>
-            <div class="studies-grid">
-              {{ range .studies }}
-              <div class="experience-topic study-item">
-                {{ if eq .isOngoing true }}
-                <span class="block text--18">
-                  <i class="fa fa-book color--pink" title="On-going"></i>
-                  On-going
-                </span>
-                {{ end }}
-                <h4 class="title margin--none">
-                  <i class="fa fa-user-graduate color--pink"></i>{{ .degree }}
-                </h4>
-                <span class="normal-text block">{{ .school }}</span>
-                <span class="subtitle--secondary block">
-                  <i class="fa fa-calendar"></i>
-                  {{ .period }}
-                </span>
-                <p class="color--normal">
-                  {{ .description }}
-                </p>
-                <p class="margin--none">
-                  {{ range .topics }}
-                  <span class="tag">{{ . }}</span>
-                  {{ end }}
-                </p>
-              </div>
-              {{ end }}
-            </div>
-          </div>
           {{ end }}
         </div>
-      </section>
-    </div>
-  </div>
-  <!-- CERTIFICATIONS -->
-  <div class="background--green padding-up-and-down--50">
-    <div class="prose prose-neutral mx-auto min-h-[calc(100%-9rem)] px-8 py-16 pt-8 dark:prose-invert">
-      <h3 class="margin--none margin-bottom--30">Other Certifications 🤓</h3>
-      <div class="experience-grid">
-        {{ range $key, $value := .Params.certifications }}
-        {{ if eq .display true }}
-        <div id="certification_{{ $key }}" class="experience-topic">
-          <h6 class="cert-title block">
-            <i class="fa fa-school color--pink"></i>
-            {{ .organization }}
-          </h6>
-          <ul>
-            {{ range .certifications }}
-            <li class="margin-bottom--20">
-              <span class="cert-subtitle block color--normal">{{ .title }}</span>
-              <span class="subtitle--secondary block">
-                <i class="fa fa-calendar"></i>
-                {{ .date }}
-                {{ if eq .showCredential true }}
-                <span class="block">Credential Id: {{ .credential }}</span>
-                {{ end }}
-              </span>
-              {{ if eq .showURL true }}
-              <a href="{{ .url }}" rel="external" class="text--small color--pink" target="_blank">
-                Show credential <i class="fa fa-external-link-alt"></i>
-              </a>
-              {{ end }}
-            </li>
-            {{ end }}
-          </ul>
-        </div>
-        {{ end }}
-        {{ end }}
       </div>
     </div>
   </div>
+</div>
+<!-- CREDENTIALS -->
+<div class="background--grey padding-up-and-down--50">
+  <div class="prose prose-neutral mx-auto min-h-[calc(100%-9rem)] dark:prose-invert padding-side-by-side--20">
+    <h3 class="margin-top--20" id="credentials">Credentials 🎈</h3>
+    <div class="grid-two-columns-container">
+      <div>
+        <span class="block margin-bottom--30 font-size--18">
+          Official certifications. Refer to my <a href="https://www.credly.com/users/christianjtr/badges" rel="external" aria-label="Link to Credly profile" class="color--pink" target="_blank" title="Credly">Credly</a> profile.
+        </span>
+        <div class="grid-three-columns-container">
+          <div data-iframe-width="295" data-iframe-height="240" data-share-badge-id="f4d80edd-5f42-4234-bab2-8805d5121ecb" data-share-badge-host="https://www.credly.com"></div>
+          <div data-iframe-width="295" data-iframe-height="240" data-share-badge-id="26b9f00b-156e-4832-8808-a424f43af345" data-share-badge-host="https://www.credly.com"></div>
+          <div data-iframe-width="295" data-iframe-height="240" data-share-badge-id="e4c9bf26-0936-4460-97a2-eeb1d620a55c" data-share-badge-host="https://www.credly.com"></div>
+          <div data-iframe-width="295" data-iframe-height="240" data-share-badge-id="b7370ae3-4802-4fe9-b393-fbdd52859c0a" data-share-badge-host="https://www.credly.com"></div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <h3 class="margin--none margin-bottom--30">Other certifications 🤓</h3>
+    <div class="grid-two-columns-container">
+      {{ range $key, $value := .Params.certifications }}
+      {{ if eq .display true }}
+      <div id="certification_{{ $key }}" class="background--white padding--20">
+        <h6 class="block margin-bottom--10 font-size--20 font-weight--600">
+          <i class="fa fa-school color--pink"></i>
+          {{ .organization }}
+        </h6>
+        <ul class="margin--none padding--none">
+          {{ range .certifications }}
+          <li class="padding--none font-size--16 margin-bottom--10 flex justify-content--space-between">
+            <span class="block">{{ .title }}</span>
+            <span class="block">{{ .date }}</span>
+            {{ if eq .showURL true }}
+            <a href="{{ .url }}" rel="external" class="color--pink font-size--14" title="Show certification" target="_blank" aria-label="Show credential link">
+              Show <i class="fa fa-external-link-alt"></i>
+            </a>
+            {{ end }}
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</div>
 {{ end }}

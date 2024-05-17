@@ -5,10 +5,9 @@
         class="-translate-x-[1px] -translate-y-[1px] text-2xl font-semibold brand-icon"
         href="{{ `` | absURL }}"
         >
-        <img class="brand-logo" src="/brand_logo.png" alt="Brand logo of main site">  
+        <img class="brand-logo" src="/brand_logo.png" alt="Brand logo of main site" />  
       </a>
     </div>
-  
     <div
       class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
       role="button"
@@ -63,7 +62,7 @@
     setTimeout(() => {
       htmlClass.remove('not-ready');
     }, 10);
-  
+    
     // mobile menu
     const btnMenu = document.querySelector('.btn-menu');
     btnMenu.addEventListener('click', () => {
