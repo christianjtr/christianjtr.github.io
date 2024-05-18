@@ -29,11 +29,13 @@
   <body class="text-black duration-200 ease-out dark:text-white no-user-select">
     {{ partial "header.html" . }}
     <main>
-      <!-- {{ partial "sidebar_navigation.html" . }} -->
+      {{ partial "sidebar_navigation.html" . }}
       {{ block "main" . }}{{ end }}
     </main>
     {{ partial "footer.html" . }}
-    <button id="myBtn" class="myBtn" aria-label="Scroll to top button" onclick="topFunction()">☝️</button>
+    <button id="myBtn" class="myBtn" aria-label="Scroll to top button" onclick="topFunction()">
+      <i class="fa fa-hand-point-up color--white"></i>
+    </button>
     <script>
       let mybutton = document.getElementById("myBtn");
       const scrollDownUntil = 1000;
