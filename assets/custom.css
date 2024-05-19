@@ -281,6 +281,16 @@ footer a {
     list-style: none;
 }
 
+.shadow-box {
+    box-shadow: 0 8px 25px 0 rgb(0 0 0 / 16%);
+}
+
+.top-right-link {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+}
+
 .card {
     height: 100%;
     border-radius: 15px;
@@ -333,6 +343,10 @@ footer a {
     justify-content: space-between;
     border: 1px solid var(--grey-color);
     border-left: 3px solid var(--bluegray-color);
+}
+
+.plain-card.wider-first-column {
+    grid-template-columns: 350px auto;
 }
 
 .plain-card:nth-child(odd) {

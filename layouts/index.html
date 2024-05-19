@@ -179,7 +179,7 @@
           <img src={{ .image }} alt="Preview image of {{ .title }}" class="margin--none"/>
         </div>
         <div class="background--white padding--20">
-          <p class="margin--none font-size--14" style="display: flex; flex-direction: row; justify-content: space-between;">
+          <p class="margin--none font-size--14 flex justify-content--space-between">
             <span class="margin--none color--bluegray">{{ .category }}</span>
             <span class="color--pink">@{{ .role }}</span>
           </p>
@@ -240,11 +240,16 @@
     </div>
     <div class="grid-one-columns-container">
       {{ range $key, $value := .Params.experiences }}
-      <div id="experience_{{ $key }}" class="plain-card align-items--center">
+      <div id="experience_{{ $key }}" class="plain-card wider-first-column align-items--center">
         <div>
           <h4 class="font-size--18 margin--none">{{ .position }}</h4>
           <span class="block color--purple-blue">{{ .company }}</span>
           <p class="font-size--16">{{ .description }}</p>
+          <p >
+            {{ range .tech }}
+            <span class="tag">{{ . }}</span>
+            {{ end }}
+          </p>
         </div>
         <p class="margin--none font-size--14 detail-data w-100">
           <span class="period block">
@@ -336,7 +341,7 @@
           </p>
         </div>
         {{ if eq .showURL true }}
-        <a href="{{ .url }}" title="Show diploma" rel="external" target="_blank" class="color--pink font-size--14" aria-label="Link to diploma" style="position: absolute; top: 15px; right: 10px;">
+        <a href="{{ .url }}" title="Show diploma" rel="external" target="_blank" class="color--pink font-size--14 top-right-link" aria-label="Link to diploma">
           Show <i class="fa fa-external-link-alt"></i>
         </a>
         {{ end }}
