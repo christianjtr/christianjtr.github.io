@@ -215,6 +215,26 @@ experiences: [
         "position": "Solutions Engineer",
         "period": "Oct 2020 - Jun 2023",
         "description": "Contributor to crafting technological solutions that optimized customer experiences in last-mile logistics. (Backoffices for streamlining external API integrations, monitoring tools, and product design development).",
+        "tech": [
+            "ReactJS", 
+            "TypeScript",
+            "NodeJS", 
+            "Jest", 
+            "Enzyme", 
+            "Cypress", 
+            "GraphQL", 
+            "RESTful API", 
+            "Sequelize", 
+            "Grafana", 
+            "Jira", 
+            "MySQL", 
+            "Tableau", 
+            "Git", 
+            "Figma",
+            "CloudWatch", 
+            "S3", 
+            "X-Ray", 
+            "Jenkins"]
     },
     {
         "company": "Zank Financial",
@@ -223,6 +243,17 @@ experiences: [
         "position": "Frontend Developer Architect",
         "period": "Nov 2019 - Oct 2020",
         "description": "Led the front-end architecture of a fintech web app, driving compliance, user experience, and functionality through integrations and improvements following product requirements.",
+        "tech": [
+            "VueJS", 
+            "NodeJS", 
+            "HTML5", 
+            "CSS/SASS", 
+            "RESTful API", 
+            "Trello", 
+            "MySQL", 
+            "Slack", 
+            "Postman", 
+            "Elastic"]
     },
     {
         "company": "SDG Group",
@@ -231,6 +262,17 @@ experiences: [
         "position": "Frontend Software Engineer",
         "period": "Nov 2018 - Oct 2019",
         "description": "Automated front-end workflows and crafted a data-driven chatbot UI with interactive visualizations and an augmented reality mashup app to visualize sales trends, leveraging modern web technologies and chatbot frameworks.",
+        "tech": [
+            "VueJS", 
+            "Angular", 
+            "NodeJS", 
+            "HTML5", 
+            "CSS/SASS", 
+            "RESTful API", 
+            "Webpack", 
+            "Qlik Sense Hub", 
+            "Git", 
+            "Jira"]
     },
     {  
         "company": "Kapsch TrafficCom AG",
@@ -239,6 +281,16 @@ experiences: [
         "position": "Frontend User Interface Developer",
         "period": "Jun 2016 - Oct 2017",
         "description": "Developed a web-based back-office platform for a vehicle free-flow tolling system, streamlining toll collection management across various aspects: Customer management, Payment processing, Tag device management, Vehicle monitoring, and others.",
+        "tech": [
+            "Angular", 
+            "NodeJS", 
+            "HTML5", 
+            "CSS/SASS", 
+            "RESTful API", 
+            "Swagger", 
+            "JasperReports", 
+            "SQL Server", 
+            "Microsoft TFS"]
     },
     {
         "company": "Petroleum of Venezuela (PDVSA)",
@@ -247,6 +299,19 @@ experiences: [
         "position": "Product Software Engineer",
         "period": "May 2011 - Jan 2016",
         "description": "Collaborated with cross-functional teams to conceive, design, develop, and deliver a real-time web app for economic scenario analysis, leveraging GIS and data intelligence tools to visualize, analyze, and model geoscience, financial, and hydrocarbon production data, empowering data-driven decision-making.",
+        "tech": [
+            "jQuery", 
+            "PHP", 
+            "MySQL", 
+            "HTML5", 
+            "CSS/SASS", 
+            "HighCharts",
+            "R",
+            "MySQL", 
+            "PostgreSQL", 
+            "Pentaho BI", 
+            "ArcGIS", 
+            "Adobe Creative Suite"]
     },
     {
         "company": "Savings and Loan Association of Miranda’s Public Employees (CAPEM)",
@@ -255,6 +320,12 @@ experiences: [
         "position": "IT Systems Responsible",
         "period": "Nov 2009 - May 2011",
         "description": "Spearheaded the design and development of a web-based CRM, integrating departments to enhance customer service management and crafting a self-service kiosk for automated queue management and balance inquiries.",
+        "tech": [
+            "jQuery", 
+            "HTML5", 
+            "Flash Action Script 3", 
+            "PHP", 
+            "MySQL"]
     }
 ]
 industry_courses: [
