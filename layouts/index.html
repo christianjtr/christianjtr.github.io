@@ -238,29 +238,32 @@
         </span>
       </div>
     </div>
+    <h3 class="margin--none margin-bottom--20 marging-top--10">Background 💼</h3>
     <div class="grid-one-columns-container">
       {{ range $key, $value := .Params.experiences }}
-      <div id="experience_{{ $key }}" class="plain-card wider-first-column align-items--center">
-        <div>
-          <h4 class="font-size--18 margin--none">{{ .position }}</h4>
-          <span class="block color--purple-blue">{{ .company }}</span>
-          <p class="font-size--16">{{ .description }}</p>
-          <p >
-            {{ range .tech }}
-            <span class="tag">{{ . }}</span>
-            {{ end }}
-          </p>
+      <div id="experience_{{ $key }}" class="plain-card align-items--center flex-direction--column">
+        <div class="w-100 flex justify-content--space-between">
+          <div>
+            <h4 class="font-size--18 margin--none">{{ .position }}</h4>
+            <span class="block color--purple-blue">{{ .company }}</span>
+            <span class="period block color-text--base font-size--14">{{ .sector }}</span>
+          </div>
+          <div>
+            <p class="margin--none font-size--14 w-100">
+              <span class="period block color-text--base">
+                {{ .location }}
+              </span>
+              <span class="period block color-text--base">
+                {{ .period }}
+              </span>
+            </p>
+          </div>
         </div>
-        <p class="margin--none font-size--14 detail-data w-100">
-          <span class="period block">
-            <strong>{{ .sector }}</strong>
-          </span>
-          <span class="period block color-text--base">
-            {{ .location }}
-          </span>
-          <span class="period block color-text--base">
-            {{ .period }}
-          </span>
+        <p class="font-size--16 margin--none">{{ .description }}</p>
+        <p class="margin--none w-100">
+          {{ range .tech }}
+          <span class="tag">{{ . }}</span>
+          {{ end }}
         </p>
       </div>
       {{ end }}
@@ -282,7 +285,7 @@
         <ul class="margin--none padding--none">
           {{ range .courses }}
           <li class="padding--none font-size--16 margin-bottom--10 flex justify-content--space-between">
-            <span class="block">{{ . }}</span>
+            <span class="block">&#x2022; {{ . }}</span>
           </li>
           {{ end }}
         </ul>
