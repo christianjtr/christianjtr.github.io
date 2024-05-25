@@ -1,7 +1,7 @@
 {{ define "main" }}
-<div class="flex justify-center margin-top--20" style="min-height:100vh; align-items: center;">
+<div class="flex justify-center margin-top--20 align-items--center min-height-100vh">
     <h1 class="absolute margin-top--20 color--pink">
-      😅 <strong>Ups, holiday time!</strong>
+      😅 <strong>{{ .Params.ups_holiday_time }}</strong>
     </h1>
 </div>
 {{ end }}
