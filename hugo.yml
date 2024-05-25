@@ -1,7 +1,21 @@
 baseURL: "/"
-languageCode: "en-us"
 title: "Christian José Torrealba Rondón"
 theme: "paper"
+defaultContentLanguage: es
+defaultContentLanguageInSubdir: true
+languages:
+    en:
+        contentDir: content/en
+        languageCode: "en-us"
+        languageDirection: "ltr"
+        languageName: "English"
+        disabled: false
+    es:
+        contentDir: content/es
+        languageCode: "es"
+        languageDirection: "ltr"
+        languageName: "Spanish"
+        disabled: false
 params:
     color: "light"
     github: "christianjtr"
