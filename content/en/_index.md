@@ -553,7 +553,7 @@ certifications: [
         ]
     },
 ]
-languages: [
+available_languages: [
     {
         title: "English",
         value: "en"
