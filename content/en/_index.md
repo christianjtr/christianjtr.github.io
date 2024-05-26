@@ -553,30 +553,40 @@ certifications: [
         ]
     },
 ]
+languages: [
+    {
+        title: "English",
+        value: "en"
+    },
+    {
+        title: "Spanish",
+        value: "es"
+    },
+]
 sidebar: [
     {
         title: "Projects",
         href: "#projects",
         iconClass: "fa fa-lightbulb",
-        ariaLabel: "Go to projects section"
+        ariaLabel: "Go to projects section",
     },
     {
         title: "Playground",
         href: "#playground",
         iconClass: "fa fa-puzzle-piece",
-        ariaLabel: "Go to playground section"
+        ariaLabel: "Go to playground section",
     },
     {
         title: "Background",
         href: "#background",
         iconClass: "fa fa-briefcase",
-        ariaLabel: "Go to background section"
+        ariaLabel: "Go to background section",
     },
     {
         title: "Diplomas",
         href: "#diplomas",
         iconClass: "fa fa-graduation-cap",
-        ariaLabel: "Go to diplomas section"
-    }
+        ariaLabel: "Go to diplomas section",
+    },
 ]
 ---

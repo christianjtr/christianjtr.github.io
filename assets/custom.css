@@ -52,6 +52,12 @@ h6.title {
     color: var(--black-color);
 }
 
+select {
+    padding: 5px;
+    border: 1px solid var(--grey-color);
+    border-radius: 5px;
+}
+
 footer {
     display: flex;
     justify-content: center;
@@ -534,6 +540,12 @@ nav.side_navigation ul li:hover a span {
     }
 }
 
+.language-picker {
+    display: flex;
+    align-items: center;
+    margin: 10px auto;
+}
+
 @media screen and (max-width: 768px) {
     nav.side_navigation {
         display: none;
@@ -563,8 +575,8 @@ nav.side_navigation ul li:hover a span {
         align-self: center;
     }
     .nav-bar_social-network-link {
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
     }
 
     .lottie-aside-title {

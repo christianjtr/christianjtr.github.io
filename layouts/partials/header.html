@@ -33,6 +33,7 @@
       {{ end }}<!---->
   
       {{ $lets_connect := .Params.lets_connect }}
+      {{ $languages := .Params.languages }}
       {{ with $.Scratch.Get "social_list" }}
       <nav
         class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-12 lg:mt-0 lg:items-center lg:space-x-6"
@@ -53,6 +54,13 @@
           {{ . }}
         </a>
         {{ end }}<!---->
+        <div class="language-picker">
+          <select name="language" id="language-select" onchange="changeLanguage()">
+              {{ range $languages }}
+              <option value="{{ .value }}">{{ .title }}</option>
+              {{ end }}
+          </select>
+      </div>
       </nav>
       {{ end }}<!---->
     </div>
@@ -69,5 +77,18 @@
     btnMenu.addEventListener('click', () => {
       htmlClass.toggle('open');
     });
+
+    const [, language] = window.location.pathname.split("/");
+    if (language) {
+      const selectElement = document.getElementById("language-select");
+      selectElement.value = language;
+    }
+
+    function changeLanguage() {
+      const selectedLanguage = document.getElementById("language-select").value;
+      const baseUrl = window.location.origin;
+      const newUrl = `${baseUrl}/${selectedLanguage}`;
+      window.location.href = newUrl;
+    }
   </script>
 </header>

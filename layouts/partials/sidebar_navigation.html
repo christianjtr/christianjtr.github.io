@@ -1,7 +1,7 @@
 <nav class="side_navigation">
     <ul>
-        {{ range .Params.sidebar }}
-        <li>
+        {{ range $key, $value := .Params.sidebar }}
+        <li id="option_{{ $key }}">
             <a href="{{ .href }}" role="button" aria-label="{{ .ariaLabel }}">
                 <i class="{{ .iconClass }}"></i>
                 <span>{{ .title }}</span>

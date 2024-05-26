@@ -553,30 +553,40 @@ certifications: [
         ]
     },
 ]
+languages: [
+    {
+        title: "Inglés",
+        value: "en"
+    },
+    {
+        title: "Español",
+        value: "es"
+    },
+]
 sidebar: [
     {
         title: "Proyectos",
         href: "#projects",
         iconClass: "fa fa-lightbulb",
-        ariaLabel: "Ve a la sección de proyectos"
+        ariaLabel: "Ve a la sección de proyectos",
     },
     {
         title: "Juguemos",
         href: "#playground",
         iconClass: "fa fa-puzzle-piece",
-        ariaLabel: "Ve a la sección de sala de juegos"
+        ariaLabel: "Ve a la sección de sala de juegos",
     },
     {
         title: "Experiencias",
         href: "#background",
         iconClass: "fa fa-briefcase",
-        ariaLabel: "Ve a la sección de experiencias"
+        ariaLabel: "Ve a la sección de experiencias",
     },
     {
         title: "Diplomas",
         href: "#diplomas",
         iconClass: "fa fa-graduation-cap",
-        ariaLabel: "Ve a la sección de diplomas"
-    }
+        ariaLabel: "Ve a la sección de diplomas",
+    },
 ]
 ---
