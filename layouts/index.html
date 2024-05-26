@@ -3,10 +3,9 @@
 <div class="background--cross-dots padding-top--50">
   <div class="grid-two-columns-container align-items--center prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] padding--20 dark:prose-invert">
     <div>
-      <span class="pre-title">👋🏻 Hi there folks, I am</span>
-      <h1 class="title" id="home">Christian José<br />Torrealba Rondón</h1>
+      {{ .Params.greetings | safeHTML }}
       <p>
-        Product-oriented professional focused on <span class="highlighted-text">systems engineering and design thinking skills</span> to deliver user-centric solutions that drive impact.
+        {{ .Params.presentation | safeHTML }}
       </p>
     </div>
     <lottie-player 
@@ -23,7 +22,7 @@
     <div>
       <h6 class="padding--none font-size--20 font-weight--600 margin-bottom--20">
         <i class="fa fa-smile color--pink"></i>
-        About Me
+        {{ .Params.about_me }}
       </h6>
       <p class="padding-side-by-side--10 font-size--18 color--black margin--none">
         {{ .Params.summary_about }}
@@ -33,7 +32,7 @@
     <div>
       <h6 class="padding--none font-size--20 font-weight--600 margin-bottom--20">
         <i class="fa fa-glasses color--pink"></i>
-        Interests
+        {{ .Params.interests }}
       </h6>
       <p class="padding-side-by-side--10 font-size--18 color--black margin--none">
         {{ range .Params.summary_interests }}
@@ -46,7 +45,7 @@
 <!-- APTITUDES -->
 <div class="background--grey padding-up-and-down--50">
   <div class="prose prose-neutral mx-auto min-h-[calc(100%-9rem)] dark:prose-invert special-padding">
-    <h3 id="aptitudes">Aptitudes 🧘🏻‍♂️</h3>
+    <h3 id="aptitudes">{{ .Params.aptitudes }} 🧘🏻‍♂️</h3>
     <div class="grid-two-columns-container align-items--flex-start justify-content--inherit color--black">
       <ul class="font-size--18 list-style--none padding--none">
         {{ range $key, $value := first 3 .Params.knowledge }}
@@ -65,8 +64,8 @@
         {{ end }}
       </ul>
     </div>
-    <h3>Languages 💬</h3>
-    <small class="color-text--base">* Polishing them up continuously</small>
+    <h3>{{ .Params.languages }} 💬</h3>
+    <small class="color-text--base">{{ .Params.polishing_langs }}</small>
     <div class="margin-top--20 grid-three-columns-container language-section font-size--18">
       {{ range .Params.summary_languages }}
       <p class="margin--none flex flex-direction--column justify-center align-items--center block">
@@ -91,13 +90,11 @@
         autoplay>
       </lottie-player>
       <div>
-        <h2 class="subtitle">Showcased projects<span>.</span></h2>
-        <span class="block margin-bottom--30 font-size--18">
-          Presented at <strong>International Conferences.</strong> See additional details on <a href="https://www.linkedin.com/in/christianjtr/" rel="external" class="color--pink" target="_blank" title="LinkedIn">LinkedIn.</a>
-        </span>
+        {{ .Params.showcased_projects | safeHTML }}
       </div>
     </div>
     <div class="grid-two-columns-container">
+      {{ $see_details := .Params.see_details }}
       {{ range $key, $value := .Params.projects_published }}
       <div class="card background--white padding--20 flex flex-direction--column">
         <p class="data-detail margin--none margin-bottom--10">
@@ -117,8 +114,8 @@
           <span class="tag">{{ . }}</span>
           {{ end }}
         </p>
-        <a href="{{ .url }}" rel="external" class="color--pink block" target="_blank" aria-label="See details of project link">
-          See details <i class="fa fa-external-link-alt"></i>
+        <a href="{{ .url }}" rel="external" class="color--pink block" target="_blank" aria-label="{{ $see_details }} of project link">
+          {{ $see_details }} <i class="fa fa-external-link-alt"></i>
         </a>
       </div>
       {{ end }}
@@ -128,9 +125,9 @@
 <!-- TECHNOLOGIES -->
 <div class="background--grey padding-up-and-down--50">
   <div class="prose prose-neutral mx-auto min-h-[calc(100%-9rem)] dark:prose-invert padding-side-by-side--20">
-    <h3 id="technologies">Technologies 🔮</h3>
+    <h3 id="technologies">{{ .Params.technologies }} 🔮</h3>
     <p class="margin-bottom--10 block">
-      Some techs I used to play with. Examples on <a href="https://github.com/christianjtr" rel="external" class="color--pink" target="_blank" aria-label="Link to GitHub" title="GitHub">GitHub</a>.
+      {{ .Params.techs_used }} <a href="https://github.com/christianjtr" rel="external" class="color--pink" target="_blank" aria-label="Link to GitHub" title="GitHub">GitHub</a>.
     </p>
     <div class="grid-two-columns-container align-items--flex-start justify-content--inherit">
       <img
@@ -141,7 +138,7 @@
       <div class="flex-align-self--center background--white padding--20 flex-direction--column">
         <h6 class="font-size--20 font-weight--600">
           <i class="fa fa-code color--pink"></i>
-          Tech knowledge
+          {{ .Params.tech_knowledge_title }}
         </h6>
         <ul class="padding--none list-style--none">
           {{ range $key, $value := .Params.tech_knowledge }}
@@ -166,10 +163,7 @@
         autoplay>
       </lottie-player>
       <div>
-        <h2 class="subtitle block">Playground<span>.</span></h2>
-        <span class="block margin-bottom--30 font-size--18">
-          Collection of projects, PoCs, and every other assessment I find interesting to showcase.
-        </span>
+        {{ .Params.playground | safeHTML }}
       </div>
     </div>
     <div class="margin-top--none align-items--flex-start justify-content--inherit">
@@ -199,8 +193,8 @@
 <!-- TOOLS -->
 <div class="background--grey padding-up-and-down--50">
   <div class="prose prose-neutral mx-auto min-h-[calc(100%-9rem)] dark:prose-invert padding-side-by-side--20">
-    <h3 class="margin--none margin-bottom--10" id="tools">Tools 🎨</h3>
-    <span class="block margin-bottom--20 font-size--18">A brief compilation of tools I have used for: Ideation, Prototyping, Comms., Monitoring, Documentation, etc.</span>
+    <h3 class="margin--none margin-bottom--10" id="tools">{{ .Params.tools_title }} 🎨</h3>
+    <span class="block margin-bottom--20 font-size--18">{{ .Params.tools_desc }}</span>
     <div class="grid-three-columns-container">
       {{ range $key, $value := .Params.tools }}
       <div id="toolset_{{ $key }}">
@@ -232,13 +226,10 @@
         autoplay>
       </lottie-player>
       <div>
-        <h2 class="subtitle block">Professional Experiences<span>.</span></h2>
-        <span class="block margin-bottom--30 font-size--18">
-          An overview of contributions done as an engineer, <strong>in three (3) different countries so far.</strong>
-        </span>
+        {{ .Params.professional_experiences_title | safeHTML }}
       </div>
     </div>
-    <h3 class="margin--none margin-bottom--20 marging-top--10">Background 💼</h3>
+    <h3 class="margin--none margin-bottom--20 marging-top--10">{{ .Params.background_title }} 💼</h3>
     <div class="grid-one-columns-container">
       {{ range $key, $value := .Params.experiences }}
       <div id="experience_{{ $key }}" class="plain-card align-items--center flex-direction--column">
@@ -273,8 +264,8 @@
 <!-- TRAINING -->
 <div class="background--grey padding-up-and-down--50">
   <div class="prose prose-neutral mx-auto min-h-[calc(100%-9rem)] dark:prose-invert padding-side-by-side--20">
-    <h3 class="margin--none margin-bottom--10" id="tools">Training 💼</h3>
-    <span class="block margin-bottom--20 font-size--18">Specific courses that are focused either on soft skills or a particular industry.</span>
+    <h3 class="margin--none margin-bottom--10" id="tools">{{ .Params.training }} 💼</h3>
+    <span class="block margin-bottom--20 font-size--18">{{ .Params.training_desc }}</span>
     <div class="grid-two-columns-container">
       {{ range $key, $value := .Params.industry_courses }}
       <div id="training_{{ $key }}" class="background--white padding--20">
@@ -308,13 +299,11 @@
         autoplay>
       </lottie-player>
       <div>
-        <h2 class="subtitle block">Diplomas, memberships, and studies<span>.</span></h2>
-        <span class="block margin-bottom--30 font-size--18">
-          Educational path I have chosen for my career development.
-        </span>
+        {{ .Params.diplomas_title_section | safeHTML }}
       </div>
     </div>
     <div class="grid-three-columns-container margin-bottom--30">
+      {{ $show_details := .Params.show_details }}
       {{ range $key, $value := .Params.memberships }}
       <div id="membership_{{ $key }}" class="card font-size--18 relative background--white w-100">
         <div class="card__content padding--20">
@@ -329,10 +318,10 @@
             <small class="block color--bluegray">
               {{ if eq .showMembershipId true }}
               <i class="fa fa-building mr-1"></i>
-              Membership · Nº {{ .member_no }}
+              {{ .type }} · Nº {{ .member_no }}
               {{ else }}
               <i class="fa fa-graduation-cap mr-1"></i>
-              Diploma
+              {{ .type }}
               {{ end }}
             </small>
             <span class="block">
@@ -344,15 +333,15 @@
           </p>
         </div>
         {{ if eq .showURL true }}
-        <a href="{{ .url }}" title="Show diploma" rel="external" target="_blank" class="color--pink font-size--14 top-right-link" aria-label="Link to diploma">
-          Show <i class="fa fa-external-link-alt"></i>
+        <a href="{{ .url }}" title="{{ $show_details }} diploma" rel="external" target="_blank" class="color--pink font-size--14 top-right-link" aria-label="Link to diploma">
+          {{ $show_details }} <i class="fa fa-external-link-alt"></i>
         </a>
         {{ end }}
       </div>
       {{ end }}
     </div>
     <br />
-    <h3 class="margin--none margin-bottom--20 marging-top--10">Studies 📚</h3>
+    <h3 class="margin--none margin-bottom--20 marging-top--10">{{ .Params.studies_title }} 📚</h3>
     <div class="align-items--flex-start justify-content--inherit margin-bottom--30">
       <div>
         <div class="grid-one-columns-container">
@@ -384,11 +373,11 @@
 <!-- CREDENTIALS -->
 <div class="background--grey padding-up-and-down--50">
   <div class="prose prose-neutral mx-auto min-h-[calc(100%-9rem)] dark:prose-invert padding-side-by-side--20">
-    <h3 class="margin-top--20" id="credentials">Credentials 🎈</h3>
+    <h3 class="margin-top--20" id="credentials">{{ .Params.credentials_title }} 🎈</h3>
     <div class="grid-two-columns-container">
       <div>
         <span class="block margin-bottom--30 font-size--18">
-          Official certifications. Refer to my <a href="https://www.credly.com/users/christianjtr/badges" rel="external" aria-label="Link to Credly profile" class="color--pink" target="_blank" title="Credly">Credly</a> profile.
+          {{ .Params.certs_desc }} <a href="https://www.credly.com/users/christianjtr/badges" rel="external" aria-label="Link to Credly profile" class="color--pink" target="_blank" title="Credly">Credly</a>.
         </span>
         <div class="grid-three-columns-container">
           <div data-iframe-width="295" data-iframe-height="240" data-share-badge-id="f4d80edd-5f42-4234-bab2-8805d5121ecb" data-share-badge-host="https://www.credly.com"></div>
@@ -399,7 +388,7 @@
       </div>
     </div>
     <br />
-    <h3 class="margin--none margin-bottom--30">Other certifications 🤓</h3>
+    <h3 class="margin--none margin-bottom--30">{{ .Params.other_certs }} 🤓</h3>
     <div class="grid-two-columns-container">
       {{ range $key, $value := .Params.certifications }}
       {{ if eq .display true }}
@@ -414,8 +403,8 @@
             <span class="block">{{ .title }}</span>
             <span class="block">{{ .date }}</span>
             {{ if eq .showURL true }}
-            <a href="{{ .url }}" rel="external" class="color--pink font-size--14" title="Show certification" target="_blank" aria-label="Show credential link">
-              Show <i class="fa fa-external-link-alt"></i>
+            <a href="{{ .url }}" rel="external" class="color--pink font-size--14" title="{{ $show_details }} certification" target="_blank" aria-label="Show credential link">
+              {{ $show_details }} <i class="fa fa-external-link-alt"></i>
             </a>
             {{ end }}
           </li>

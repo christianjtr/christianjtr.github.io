@@ -32,13 +32,14 @@
       </nav>
       {{ end }}<!---->
   
+      {{ $lets_connect := .Params.lets_connect }}
       {{ with $.Scratch.Get "social_list" }}
       <nav
         class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-12 lg:mt-0 lg:items-center lg:space-x-6"
       >
         <span class="normal-text color--pink nav-bar_social-network-text">
           <i class="fa fa-comments mr-1"></i>
-          Let's connect
+          {{ $lets_connect }}
         </span>
         {{ range . }}<!---->
         <a

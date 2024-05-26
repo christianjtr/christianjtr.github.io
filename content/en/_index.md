@@ -1,4 +1,31 @@
 ---
+show_details: "Show"
+see_details: "See details"
+lets_connect: "Let's connect"
+ups_holiday_time: "Ups holiday time!"
+about_me: "About me"
+interests: "Interests"
+aptitudes: "Aptitudes"
+languages: "Languages"
+technologies: "Technologies"
+tools_title: "Tools"
+background_title: "Background"
+training: "Training"
+studies_title: "Studies"
+credentials_title: "Credentials"
+other_certs: "Other certifications"
+greetings: '<span class="pre-title">👋🏻 Hi there folks, I am</span><h1 class="title" id="home">Christian José<br />Torrealba Rondón</h1>'
+presentation: 'Product-oriented professional focused on <span class="highlighted-text">systems engineering and design thinking skills</span> to deliver user-centric solutions that drive impact.'
+polishing_langs: "* Polishing them up continuously"
+showcased_projects: '<h2 class="subtitle">Showcased projects<span>.</span></h2><span class="block margin-bottom--30 font-size--18">Presented at <strong>International Conferences.</strong> See additional details on <a href="https://www.linkedin.com/in/christianjtr/" rel="external" class="color--pink" target="_blank" title="LinkedIn">LinkedIn.</a></span>'
+techs_used: "Some techs I used to play with. Examples on"
+tech_knowledge_title: "Tech knowledge"
+playground: '<h2 class="subtitle block">Playground<span>.</span></h2><span class="block margin-bottom--30 font-size--18">Collection of projects, PoCs, and every other assessment I find interesting to showcase.</span>'
+tools_desc: "A brief compilation of tools I have used for: Ideation, Prototyping, Comms., Monitoring, Documentation, etc."
+professional_experiences_title: '<h2 class="subtitle block">Professional Experiences<span>.</span></h2><span class="block margin-bottom--30 font-size--18">An overview of contributions done as an engineer, <strong>in three (3) different countries so far.</strong></span>'
+training_desc: "Specific courses that are focused either on soft skills or a particular industry."
+diplomas_title_section: '<h2 class="subtitle block">Diplomas, memberships, and studies<span>.</span></h2><span class="block margin-bottom--30 font-size--18">Educational path I have chosen for my career development.</span>'
+certs_desc: "Official certifications. Refer to my profile at "
 summary_about: "A passionate technologist in creating digital experiences. I enjoy participating in all project stages, from conception and beyond."
 summary_hobbies: "☀️ 🏖️ 🎡 🍦 🕹️ 🏃🏻 🐶 🇻🇪 🇦🇷 🇪🇸"
 summary_interests: [
@@ -53,7 +80,7 @@ knowledge: [
     },
     {
         "CSSIconClass": "fa fa-briefcase",
-        "description": "Good listener with strong work ethics."
+        "description": "Good listener with a strong work ethic."
     },
 ]
 memberships: [
@@ -176,7 +203,7 @@ highlighted_projects: [
     },
     {
         "title": "TV movie-streaming-like webapp",
-        "description": "Full-stack project showcasing how React and Express works together to deliver a movie-tv-like application. Apart from implementing an API RESTFul, it includes a simple CD/CI process leveraged on GitHub actions and Docker.",
+        "description": "Full-stack project showcasing how React and Express work together to deliver a movie-tv-like application. Apart from implementing an API RESTFul, it includes a simple CD/CI process leveraged on GitHub actions and Docker.",
         "image": "/images/tv-app.jpg",
         "tags": ["FullStack Development", "ReactJS / NodeJS", "Tailwind CSS", "Unit / E2E Testing", "Jest / Cypress", "TypeScript", "Docker", "GitHub Actions", "CI/CD process"],
         "role": "Author",
@@ -341,7 +368,7 @@ industry_courses: [
         "industry": "Hydrocarbons",
         "courses": [
             "Exploration and production of oil and gas for engineers.", 
-            "Economic evaluation of petroleum investments projects.", 
+            "Economic evaluation of petroleum investment projects.", 
             "Key management indicators and strategic planning."
         ],
     },
@@ -482,7 +509,7 @@ certifications: [
     },
     {
         "identifier": "mit",
-        "organization": "Massachusetts Institute of Technology ",
+        "organization": "Massachusetts Institute of Technology",
         "display": false,
         "certifications": [
             {
@@ -525,5 +552,31 @@ certifications: [
             },
         ]
     },
+]
+sidebar: [
+    {
+        title: "Projects",
+        href: "#projects",
+        iconClass: "fa fa-lightbulb",
+        ariaLabel: "Go to projects section"
+    },
+    {
+        title: "Playground",
+        href: "#playground",
+        iconClass: "fa fa-puzzle-piece",
+        ariaLabel: "Go to playground section"
+    },
+    {
+        title: "Background",
+        href: "#background",
+        iconClass: "fa fa-briefcase",
+        ariaLabel: "Go to background section"
+    },
+    {
+        title: "Diplomas",
+        href: "#diplomas",
+        iconClass: "fa fa-graduation-cap",
+        ariaLabel: "Go to diplomas section"
+    }
 ]
 ---

@@ -1,28 +1,12 @@
 <nav class="side_navigation">
     <ul>
+        {{ range .Params.sidebar }}
         <li>
-            <a href="#projects" role="button" aria-label="Go to projects section">
-                <i class="fa fa-lightbulb"></i>
-                <span>Projects</span>
+            <a href="{{ .href }}" role="button" aria-label="{{ .ariaLabel }}">
+                <i class="{{ .iconClass }}"></i>
+                <span>{{ .title }}</span>
             </a>
         </li>
-        <li>
-            <a href="#playground" role="button" aria-label="Go to playground section">
-                <i class="fa fa-puzzle-piece"></i>
-                <span>Playground</span>
-            </a>
-        </li>
-        <li>
-            <a href="#background" role="button" aria-label="Go to experiences section">
-                <i class="fa fa-briefcase"></i>
-                <span>Background</span>
-            </a>
-        </li>
-        <li>
-            <a href="#diplomas" role="button" aria-label="Go to diplomas section">
-                <i class="fa fa-graduation-cap"></i>
-                <span>Diplomas</span>
-            </a>
-        </li>
+        {{ end }}
     </ul>
 </nav>
