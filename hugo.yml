@@ -1,7 +1,7 @@
 baseURL: "/"
 title: "Christian José Torrealba Rondón"
 theme: "paper"
-defaultContentLanguage: es
+defaultContentLanguage: en
 defaultContentLanguageInSubdir: true
 languages:
     en:
