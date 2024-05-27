@@ -233,7 +233,7 @@
     <div class="grid-one-columns-container">
       {{ range $key, $value := .Params.experiences }}
       <div id="experience_{{ $key }}" class="plain-card align-items--center flex-direction--column">
-        <div class="w-100 flex justify-content--space-between">
+        <div class="w-100 flex justify-content--space-between background-header">
           <div>
             <h4 class="font-size--18 margin--none">{{ .position }}</h4>
             <span class="block color--purple-blue">{{ .company }}</span>
@@ -242,7 +242,7 @@
           <div>
             <p class="margin--none font-size--14 w-100">
               <span class="period block color-text--base">
-                {{ .location }}
+                <strong>{{ .location }}</strong>
               </span>
               <span class="period block color-text--base">
                 {{ .period }}
