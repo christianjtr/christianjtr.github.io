@@ -199,8 +199,8 @@ footer a {
 .w-100 {
     width: 100%;
 }
-.max-width--100ch {
-    max-width: 100ch;
+.max-width--110ch {
+    max-width: 110ch;
 }
 .min-height-100vh {
     min-height: 100vh;
