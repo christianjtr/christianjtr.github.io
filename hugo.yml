@@ -16,6 +16,12 @@ languages:
         languageDirection: "ltr"
         languageName: "Spanish"
         disabled: false
+    fr:
+        contentDir: content/fr
+        languageCode: "fr"
+        languageDirection: "ltr"
+        languageName: "French"
+        disabled: false
 params:
     color: "light"
     github: "christianjtr"
