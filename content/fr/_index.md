@@ -1,21 +1,21 @@
 ---
-show_details: "Mostrar"
-see_details: "Ver detalles"
-lets_connect: "Vamos a conectar"
-ups_holiday_time: "Ups holiday time!"
-about_me: "Acerca de mí"
-interests: "Intereses"
+show_details: "Montrer"
+see_details: "Voir les détails"
+lets_connect: "Contactez-moi"
+ups_holiday_time: "Ups Je suis en vancance!"
+about_me: "Sur moi"
+interests: "Intérêts"
 aptitudes: "Aptitudes"
-languages: "Idiomas"
-technologies: "Tecnologías"
-tools_title: "Herramientas"
-background_title: "Experiencias"
-training: "Formación"
-studies_title: "Estudios"
-credentials_title: "Credenciales"
-other_certs: "Otras certificaciones"
-greetings: '<span class="pre-title">👋🏻 Hola amig@s, soy</span><h1 class="title" id="home">Christian José<br />Torrealba Rondón</h1>'
-presentation: 'Profesional orientado al desarrollo de productos, utilizo mis habilidades de <span class="highlighted-text">ingeniería de sistemas y pensamiento de diseño</span>, para crear soluciones centradas en el usuario que generen impacto.'
+languages: "Langues"
+technologies: "Technologies"
+tools_title: "Outils"
+background_title: "Expériences"
+training: "Formation"
+studies_title: "Études"
+credentials_title: "Certifications"
+other_certs: "D`autres certifications"
+greetings: '<span class="pre-title">👋🏻 Salut mes amis.es, moi c`est</span><h1 class="title" id="home">Christian José<br />Torrealba Rondón</h1>'
+presentation: 'Je suis un professionnel orienté au développement de produits digitales, j`utilise mes compétences en <span class="highlighted-text">ingénierie des systèmes et design thinking</span> pour créer des solutions centrées sur l`utilisateur qui génèrent d`impact.'
 polishing_langs: "* Mejorándolos continuamente"
 showcased_projects: '<h2 class="subtitle">Proyectos destacados<span>.</span></h2><span class="block margin-bottom--30 font-size--18">Presentados en <strong>Conferencias Internacionales.</strong> Ver detalles adicionales en <a href="https://www.linkedin.com/in/christianjtr/" rel="external" class="color--pink" target="_blank" title="LinkedIn">LinkedIn.</a></span>'
 techs_used: "Algunas tecnologías que suelo usar. Ejemplos en"
@@ -29,58 +29,58 @@ certs_desc: "Certificaciones oficiales. Vea más en mi perfil de "
 summary_about: "Un profesional en tecnología apasionado por la creación de experiencias digitales. Disfruto participar de todas las etapas de un proyecto, desde la concepción y más allá."
 summary_hobbies: "☀️ 🏖️ 🎡 🍦 🕹️ 🏃🏻 🐶 🇻🇪 🇦🇷 🇪🇸"
 summary_interests: [
-    "Liderazgo Ágil", 
-    "Realidad Aumentada RA", 
-    "Investigación de Usuarios", 
-    "Inteligencia Artificial IA", 
-    "Diseño de Productos y Servicios", 
-    "Visualización de datos", 
-    "Animación 2D"
+    "Leadership Agile", 
+    "Réalité Augmentée AR", 
+    "Recherche utilisateur", 
+    "Intelligence artificielle IA", 
+    "Conception de Produits et Services", 
+    "Visualisation de données", 
+    "Animations 2D"
 ]
 summary_languages: [
     {
         "emoji": "💃🏻",
-        "language": "Castellano",
-        "proficiency": "Nativo",
+        "language": "Espagnol",
+        "proficiency": "Natif",
         "proficiencyValue": 100,
     },
     {
         "emoji": "💂🏻",
-        "language": "Inglés",
-        "proficiency": "Profesional (B2+)",
+        "language": "Anglais",
+        "proficiency": "Professionnel (B2+)",
         "proficiencyValue": 100,
     },
     {
         "emoji": "🥐",
-        "language": "Francés",
-        "proficiency": "Elemental (A2)",
+        "language": "Français",
+        "proficiency": "Élémentaire (A2)",
         "proficiencyValue": 100,
     }
 ]
 knowledge: [
     {
         "CSSIconClass": "fa fa-pencil-ruler",
-        "description": "Pensamiento creativo para enfrentar desafíos."
+        "description": "Pensée créative pour relever les défis."
     },
     {
         "CSSIconClass": "fa fa-seedling",
-        "description": "Dedicado al aprendizaje continuo."
+        "description": "Dédié à l`apprentissage continu."
     },
     {
         "CSSIconClass": "fa fa-flask",
-        "description": "Fascinado por el diseño de productos y servicios."
+        "description": "Passionné par la conception de produits et de services."
     },
     {
         "CSSIconClass": "fa fa-users",
-        "description": "Fomenta la sinergia y la colaboración."
+        "description": "Favorise la synergie et la collaboration."
     },
     {
         "CSSIconClass": "fa fa-bullseye",
-        "description": "Orientado a objetivos y motivado."
+        "description": "Orienté vers les objectifs et motivé."
     },
     {
         "CSSIconClass": "fa fa-briefcase",
-        "description": "Buen oyente con una sólida ética de trabajo."
+        "description": "Bon auditeur avec une solide éthique de travail."
     },
 ]
 memberships: [
@@ -555,42 +555,42 @@ certifications: [
 ]
 available_languages: [
     {
-        title: "Inglés",
+        title: "Anglais",
         value: "en"
     },
     {
-        title: "Francés",
+        title: "Français",
         value: "fr"
     },
     {
-        title: "Español",
+        title: "Espagnol",
         value: "es"
     },
 ]
 sidebar: [
     {
-        title: "Proyectos",
+        title: "Projets",
         href: "#projects",
         iconClass: "fa fa-lightbulb",
-        ariaLabel: "Ve a la sección de proyectos",
+        ariaLabel: "Allez à la section Projets",
     },
     {
-        title: "Laboratorio",
+        title: "Laboratoire",
         href: "#lab",
         iconClass: "fa fa-flask",
-        ariaLabel: "Ve a la sección de laboratorio",
+        ariaLabel: "Allez à la section Laboratoire",
     },
     {
-        title: "Experiencias",
+        title: "Expériences",
         href: "#background",
         iconClass: "fa fa-briefcase",
-        ariaLabel: "Ve a la sección de experiencias",
+        ariaLabel: "Allez à la section Expériences",
     },
     {
-        title: "Diplomas",
+        title: "Diplômes",
         href: "#diplomas",
         iconClass: "fa fa-graduation-cap",
-        ariaLabel: "Ve a la sección de diplomas",
+        ariaLabel: "Allez à la section Diplômes",
     },
 ]
 ---

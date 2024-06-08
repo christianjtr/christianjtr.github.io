@@ -559,6 +559,10 @@ available_languages: [
         value: "en"
     },
     {
+        title: "French",
+        value: "fr"
+    },
+    {
         title: "Spanish",
         value: "es"
     },
@@ -571,10 +575,10 @@ sidebar: [
         ariaLabel: "Go to projects section",
     },
     {
-        title: "Playground",
-        href: "#playground",
-        iconClass: "fa fa-puzzle-piece",
-        ariaLabel: "Go to playground section",
+        title: "Labs",
+        href: "#lab",
+        iconClass: "fa fa-flask",
+        ariaLabel: "Go to lab section",
     },
     {
         title: "Background",
