@@ -166,20 +166,20 @@
         {{ .Params.playground | safeHTML }}
       </div>
     </div>
-    <div class="margin-top--none align-items--flex-start justify-content--inherit">
+    <div class="margin-top--none align-items--flex-start justify-content--inherit grid-two-columns-container">
       {{ range $key, $value := .Params.highlighted_projects }}
-      <div id="playground_{{ $key }}" class="border-solid--grey margin-bottom--20">
+      <div id="playground_{{ $key }}" class="border-solid--grey margin-bottom--20 available-height-container">
         <div>
           <img src={{ .image }} alt="Preview image of {{ .title }}" class="margin--none"/>
         </div>
-        <div class="background--white padding--20">
+        <div class="background--white padding--20 flex flex-direction--column">
           <p class="margin--none font-size--14 flex justify-content--space-between">
             <span class="margin--none color--bluegray">{{ .category }}</span>
             <span class="color--pink">@{{ .role }}</span>
           </p>
           <h4 class="margin--none font-size--18 margin-bottom--20">{{ .title }}</h4>
           <p class="font-size--16 margin--none margin-bottom--10">{{ .description }}</p>
-          <p class="margin--none">
+          <p class="margin--none margin--auto">
             {{ range .tags }}
             <span class="tag">{{ . }}</span>
             {{ end }}
@@ -374,17 +374,15 @@
 <div class="background--grey padding-up-and-down--50">
   <div class="prose prose-neutral mx-auto min-h-[calc(100%-9rem)] dark:prose-invert padding-side-by-side--20">
     <h3 class="margin-top--20" id="credentials">{{ .Params.credentials_title }} 🎈</h3>
-    <div class="grid-two-columns-container">
-      <div>
-        <span class="block margin-bottom--30 font-size--18">
-          {{ .Params.certs_desc }} <a href="https://www.credly.com/users/christianjtr/badges" rel="external" aria-label="Link to Credly profile" class="color--pink" target="_blank" title="Credly">Credly</a>.
-        </span>
-        <div class="grid-three-columns-container">
-          <div data-iframe-width="295" data-iframe-height="240" data-share-badge-id="f4d80edd-5f42-4234-bab2-8805d5121ecb" data-share-badge-host="https://www.credly.com"></div>
-          <div data-iframe-width="295" data-iframe-height="240" data-share-badge-id="26b9f00b-156e-4832-8808-a424f43af345" data-share-badge-host="https://www.credly.com"></div>
-          <div data-iframe-width="295" data-iframe-height="240" data-share-badge-id="e4c9bf26-0936-4460-97a2-eeb1d620a55c" data-share-badge-host="https://www.credly.com"></div>
-          <div data-iframe-width="295" data-iframe-height="240" data-share-badge-id="b7370ae3-4802-4fe9-b393-fbdd52859c0a" data-share-badge-host="https://www.credly.com"></div>
-        </div>
+    <div>
+      <span class="block margin-bottom--30 font-size--18">
+        {{ .Params.certs_desc }} <a href="https://www.credly.com/users/christianjtr/badges" rel="external" aria-label="Link to Credly profile" class="color--pink" target="_blank" title="Credly">Credly</a>.
+      </span>
+      <div class="grid-three-columns-container justify-items--center gap--40">
+        <div data-iframe-width="100%" data-iframe-height="250" data-share-badge-id="f4d80edd-5f42-4234-bab2-8805d5121ecb" data-share-badge-host="https://www.credly.com"></div>
+        <div data-iframe-width="100%" data-iframe-height="250" data-share-badge-id="26b9f00b-156e-4832-8808-a424f43af345" data-share-badge-host="https://www.credly.com"></div>
+        <div data-iframe-width="100%" data-iframe-height="250" data-share-badge-id="e4c9bf26-0936-4460-97a2-eeb1d620a55c" data-share-badge-host="https://www.credly.com"></div>
+        <div data-iframe-width="100%" data-iframe-height="250" data-share-badge-id="b7370ae3-4802-4fe9-b393-fbdd52859c0a" data-share-badge-host="https://www.credly.com"></div>
       </div>
     </div>
     <br />

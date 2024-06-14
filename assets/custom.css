@@ -231,6 +231,9 @@ footer a {
 .margin--none {
     margin: 0;
 }
+.margin--auto {
+    margin: auto;
+}
 .margin-bottom--10 {
     margin-bottom: 10px;
 }
@@ -347,6 +350,16 @@ footer a {
 
 .card > .card__content img {
     margin: 0;
+}
+
+.available-height-container {
+    display: flex;
+    flex-direction: column;
+    height: -webkit-fill-available;
+}
+
+.available-height-container div:nth-child(2) {
+    height: inherit;
 }
 
 .plain-card {
