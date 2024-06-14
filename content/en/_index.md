@@ -20,7 +20,7 @@ polishing_langs: "* Polishing them up continuously"
 showcased_projects: '<h2 class="subtitle">Showcased projects<span>.</span></h2><span class="block margin-bottom--30 font-size--18">Presented at <strong>International Conferences.</strong> See additional details on <a href="https://www.linkedin.com/in/christianjtr/" rel="external" class="color--pink" target="_blank" title="LinkedIn">LinkedIn.</a></span>'
 techs_used: "Some techs I used to play with. Examples on"
 tech_knowledge_title: "Tech knowledge"
-playground: '<h2 class="subtitle block">Playground<span>.</span></h2><span class="block margin-bottom--30 font-size--18">Collection of projects, PoCs, and every other assessment I find interesting to showcase.</span>'
+playground: '<h2 class="subtitle block">Lab<span>.</span></h2><span class="block margin-bottom--30 font-size--18">Collection of projects, PoCs, and every other assessment I find interesting to showcase.</span>'
 tools_desc: "A brief compilation of tools I have used for: Ideation, Prototyping, Comms., Monitoring, Documentation, etc."
 professional_experiences_title: '<h2 class="subtitle block">Professional Experiences<span>.</span></h2><span class="block margin-bottom--30 font-size--18">An overview of contributions done as an engineer, <strong>in three (3) different countries so far.</strong></span>'
 training_desc: "Specific courses that are focused either on soft skills or a particular industry."
