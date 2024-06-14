@@ -20,7 +20,7 @@ polishing_langs: "* Mejorándolos continuamente"
 showcased_projects: '<h2 class="subtitle">Proyectos destacados<span>.</span></h2><span class="block margin-bottom--30 font-size--18">Presentados en <strong>Conferencias Internacionales.</strong> Ver detalles adicionales en <a href="https://www.linkedin.com/in/christianjtr/" rel="external" class="color--pink" target="_blank" title="LinkedIn">LinkedIn.</a></span>'
 techs_used: "Algunas tecnologías que suelo usar. Ejemplos en"
 tech_knowledge_title: "Conocimiento técnico"
-playground: '<h2 class="subtitle block">Juguemos<span>.</span></h2><span class="block margin-bottom--30 font-size--18">Colección de proyectos, pruebas de concepto y algunos test que encuentro interesante en mostrar.</span>'
+playground: '<h2 class="subtitle block">Laboratorio<span>.</span></h2><span class="block margin-bottom--30 font-size--18">Colección de proyectos, pruebas de concepto y algunos test que encuentro interesante en mostrar.</span>'
 tools_desc: "Una breve recopilación de herramientas que he usado para: Ideación, Prototipado, Comunicaciones, Monitoreo, Documentación, etc."
 professional_experiences_title: '<h2 class="subtitle block">Experiencias Profesionales<span>.</span></h2><span class="block margin-bottom--30 font-size--18">Un resúmen de las contribuciones hechas como ingeniero, <strong>en tres (3) países diferentes, hasta ahora.</strong></span>'
 training_desc: "Cursos específicos a una industria en particular o habilidades blandas."
@@ -126,7 +126,7 @@ projects_published: [
         "period": "Mayo 2019",
         "contribute_as": "Ingeniero de Desarrollo Frontend",
         "technologies": ["VueJS", "NodeJS", "Qlik Sense Hub", "SignalR Client", "DialogFlow", "AR.js"],
-        "contributions": "Colaboración con ingenieros para crear una experiencia de usuario de AR/MR, permitiéndo tomar decisiones basadas en datos a través de una aplicación para visualizar tendencias de ventas y un chatbot para visualización de datos."
+        "contributions": "Colaboración con ingenieros para crear una experiencia de usuario de AR/MR, permitiendo tomar decisiones basadas en datos a través de una aplicación para visualizar tendencias de ventas y un chatbot para visualización de datos."
     },
     {
         "title": "Representación de datos geográficos relacionados con la Industria Petrolera Venezolana mediante el uso de Keyhole Markup Language",
@@ -142,7 +142,7 @@ projects_published: [
     },
     {
         "title": "Sistema Integrado de Portafolio de Oportunidades",
-        "showcased_at": "American Association of Petroleum Geologists",
+        "showcased_at": "Asociación Estadounidense de Geólogos del Petróleo",
         "location": "Houston TX, USA",
         "flag": "🇺🇲",
         "owner": "© PDVSA",

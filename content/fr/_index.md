@@ -16,17 +16,17 @@ credentials_title: "Certifications"
 other_certs: "D`autres certifications"
 greetings: '<span class="pre-title">👋🏻 Salut mes amis.es, moi c`est</span><h1 class="title" id="home">Christian José<br />Torrealba Rondón</h1>'
 presentation: 'Je suis un professionnel orienté au développement de produits digitales, j`utilise mes compétences en <span class="highlighted-text">ingénierie des systèmes et design thinking</span> pour créer des solutions centrées sur l`utilisateur qui génèrent d`impact.'
-polishing_langs: "* Mejorándolos continuamente"
-showcased_projects: '<h2 class="subtitle">Proyectos destacados<span>.</span></h2><span class="block margin-bottom--30 font-size--18">Presentados en <strong>Conferencias Internacionales.</strong> Ver detalles adicionales en <a href="https://www.linkedin.com/in/christianjtr/" rel="external" class="color--pink" target="_blank" title="LinkedIn">LinkedIn.</a></span>'
-techs_used: "Algunas tecnologías que suelo usar. Ejemplos en"
-tech_knowledge_title: "Conocimiento técnico"
-playground: '<h2 class="subtitle block">Juguemos<span>.</span></h2><span class="block margin-bottom--30 font-size--18">Colección de proyectos, pruebas de concepto y algunos test que encuentro interesante en mostrar.</span>'
-tools_desc: "Una breve recopilación de herramientas que he usado para: Ideación, Prototipado, Comunicaciones, Monitoreo, Documentación, etc."
-professional_experiences_title: '<h2 class="subtitle block">Experiencias Profesionales<span>.</span></h2><span class="block margin-bottom--30 font-size--18">Un resúmen de las contribuciones hechas como ingeniero, <strong>en tres (3) países diferentes, hasta ahora.</strong></span>'
-training_desc: "Cursos específicos a una industria en particular o habilidades blandas."
-diplomas_title_section: '<h2 class="subtitle block">Diplomas, membresías y estudios<span>.</span></h2><span class="block margin-bottom--30 font-size--18">El camino educativo que he elegido para mi desarrollo profesional.</span>'
-certs_desc: "Certificaciones oficiales. Vea más en mi perfil de "
-summary_about: "Un profesional en tecnología apasionado por la creación de experiencias digitales. Disfruto participar de todas las etapas de un proyecto, desde la concepción y más allá."
+polishing_langs: "* En les améliorant continuellement."
+showcased_projects: '<h2 class="subtitle">Projets importants<span>.</span></h2><span class="block margin-bottom--30 font-size--18">Présentés à des <strong>Conférences Internationales.</strong> Voir plus de détails sur <a href="https://www.linkedin.com/in/christianjtr/" rel="external" class="color--pink" target="_blank" title="LinkedIn">LinkedIn.</a></span>'
+techs_used: "Des technologies que J`utilise d`habitude. Exemples sur "
+tech_knowledge_title: "Connaissances techniques"
+playground: '<h2 class="subtitle block">Credentials<span>.</span></h2><span class="block margin-bottom--30 font-size--18">Collection de projets, tests de concept et quelques tests que Je trouve intéressant de montrer.</span>'
+tools_desc: "Une brève compilation d'outils que j'ai utilisés pour: Idée, Prototypage, Communications, Surveillance, Documentation, etc."
+professional_experiences_title: '<h2 class="subtitle block">Expériences Professionnelles<span>.</span></h2><span class="block margin-bottom--30 font-size--18">Un résumé des contributions faites en tant qu`ingénieur, <strong>dans trois (3) pays différents, jusqu`à présent.</strong></span>'
+training_desc: "Cours spécifiques à une industrie particulière ou compétences générales."
+diplomas_title_section: '<h2 class="subtitle block">Diplômes, adhésions et études<span>.</span></h2><span class="block margin-bottom--30 font-size--18">Le chemin d`éducation que J`ai choisi pour mon développement professionnel.</span>'
+certs_desc: "Certifications officielles. Voir plus sur mon profil "
+summary_about: "Un professionnel de la technologie passionné par la création d'expériences numériques. J'aime participer à toutes les étapes d'un projet, de la conception et au-delà."
 summary_hobbies: "☀️ 🏖️ 🎡 🍦 🕹️ 🏃🏻 🐶 🇻🇪 🇦🇷 🇪🇸"
 summary_interests: [
     "Leadership Agile", 
@@ -85,18 +85,18 @@ knowledge: [
 ]
 memberships: [
     {
-        "type": "Diploma",
+        "type": "Diplôma",
         "organization": "Massachusetts Institute of Technology (MIT)",
         "imageURL": "/images/mit_logo.png",
-        "degree": "Pensamiento Sistémico para la Gestión de Proyectos",
+        "degree": "Pensée Systémique pour la Gestion de Projet",
         "showMembershipId": false,
         "member_no": "",
         "showURL": true,
         "url": "https://www.credential.net/b7cce254-083d-414b-aabc-81afc07ba4ed#gs.4vcqj4"
     },
     {
-        "type": "Membresía",
-        "organization": "Colegio de Ingenieros de Venezuela",
+        "type": "Adhésion",
+        "organization": "Collège des Ingénieurs du Venezuela",
         "imageURL": "/images/colegio_ingenieros_vzla.png",
         "degree": "",
         "showMembershipId": true,
@@ -105,8 +105,8 @@ memberships: [
         "url": ""
     },
     {
-        "type": "Membresía",
-        "organization": "Sociedad de Ingenieros de Petróleo",
+        "type": "Adhésion",
+        "organization": "Société des Ingénieurs du Pétrole",
         "imageURL": "/images/spe.png",
         "degree": "",
         "showMembershipId": true,
@@ -117,131 +117,131 @@ memberships: [
 ]
 projects_published: [
     {
-        "title": "Análisis de inteligencia y visualización de datos en realidad aumentada",
-        "showcased_at": "Qlik Connections Global Conference",
+        "title": "Intelligence analytique et visualisation des données en réalité augmentée",
+        "showcased_at": "Conférence mondiale Qlik Connections",
         "location": "Dallas TX, USA",
         "flag": "🇺🇲",
         "owner": "© SDG Group",
         "url": "https://cdn2.hubspot.net/hubfs/4041825/SDG_Group_Augmented_Intelligence.pdf",
-        "period": "Mayo 2019",
-        "contribute_as": "Ingeniero de Desarrollo Frontend",
+        "period": "Mai 2019",
+        "contribute_as": "Ingénieur de Développement Front-end",
         "technologies": ["VueJS", "NodeJS", "Qlik Sense Hub", "SignalR Client", "DialogFlow", "AR.js"],
-        "contributions": "Colaboración con ingenieros para crear una experiencia de usuario de AR/MR, permitiéndo tomar decisiones basadas en datos a través de una aplicación para visualizar tendencias de ventas y un chatbot para visualización de datos."
+        "contributions": "Collaboration avec des ingénieurs pour créer une expérience utilisateur AR/MR, permettant de prendre des décisions basées sur les données via une application pour visualiser les tendances des ventes et un chatbot pour la visualisation des données."
     },
     {
-        "title": "Representación de datos geográficos relacionados con la Industria Petrolera Venezolana mediante el uso de Keyhole Markup Language",
-        "showcased_at": "6th Congreso de la Ciencia Cartográfica",
-        "location": "Buenos Aires, Argentina",
+        "title": "Représentation des données géographiques relatives à l'industrie pétrolière Vénézuélienne à l'aide de Keyhole Markup Language",
+        "showcased_at": "6ème Congrès de la Science Cartographique",
+        "location": "Buenos Aires, Argentine",
         "flag": "🇦🇷",
         "owner": "© PDVSA",
         "url": "https://www.ign.gob.ar/Novedades/FinalizoElSextoCongresoDeLaCienciaCartogr%C3%A1fica.",
-        "period": "Junio 2012",
-        "contribute_as": "Ingeniero de Desarrollo de Producto",
+        "period": "Juin 2012",
+        "contribute_as": "Ingénieur Développement de Produits Numériques",
         "technologies": ["Google Earth / Maps", "CESIUM 3D Geospatial", "KML / KMZ", "ArcGIS", "Global Mapper"],
-        "contributions": "Colaboración junto a geólogos y geógrafos para mejorar la accesibilidad y usabilidad de datos geográficos para la industria petrolera Venezolana; creando y editando automáticamente archivos KML/KMZ."
+        "contributions": "Collaboration avec des géologues et des géographes pour améliorer l ' accessibilité et l ' utilisation des données géographiques pour l ' industrie pétrolière Vénézuélienne; création et édition automatiques de fichiers KML/KMZ."
     },
     {
-        "title": "Sistema Integrado de Portafolio de Oportunidades",
-        "showcased_at": "American Association of Petroleum Geologists",
+        "title": "Système Intégré de Portefeuille d'Opportunités",
+        "showcased_at": "Association Américaine des Géologues Pétroliers",
         "location": "Houston TX, USA",
         "flag": "🇺🇲",
         "owner": "© PDVSA",
         "url": "https://www.searchanddiscovery.com/pdfz/documents/2011/40798garcia/ndx_garcia.pdf.html",
-        "period": "Agosto 2011",
-        "contribute_as": "Ingeniero de Desarrollo de Software y Producto · Analista de Datos",
+        "period": "Août 2011",
+        "contribute_as": "Ingénieur Développement Logiciel et Produit · Analyste de Données",
         "technologies": ["HTML5 / jQuery / CSS", "PHP", "MySQL", "PostgreSQL", "R Studio", "Pentaho BI", "ETL / DWH", "HighCharts", "ArcGIS"],
-        "contributions": "Colaboración con un equipo de ingenieros, economistas, geólogos y geógrafos para crear y lanzar una aplicación web en tiempo real para facilitar el análisis de escenarios económicos y visualizar de manera efectiva datos geocientíficos y financieros."
+        "contributions": "Collaboration avec une équipe d ' ingénieurs, d ' économistes, de géologues et de géographes en vue de créer et de lancer une application Web en temps réel pour faciliter l ' analyse de scénarios économiques et la visualisation efficace des données géoscientifiques et financières."
     },
 ]
 tech_knowledge: [
-    "💅 Frontend (Aplicaciones Web, UIs, Herramientas).",
-    "📊 Datos (Modelado, ETL, Visualización).",
-    "👾 Backend (APIs y servicios).",
+    "💅 Frontend (Applications Web, UI, Outils).",
+    "📊 Données (Modélisation, ETL, Visualisation).",
+    "👾 Backend (API et services).",
 ]
 tools: [
     {
         "icon": "fa fa-hand-holding-heart",
-        "category": "Colaboración",
+        "category": "Collaboration",
         "tools": ["Jira", "Confluence", "SourceTree", "GitHub", "AWS", "Slack", "Microsoft Teams", "Google Meets", "Miro", "Postman", "Sentry", "Grafana"],
     },
     {
         "icon": "fa fa-palette",
-        "category": "Prototipado",
+        "category": "Prototypage",
         "tools": ["Adobe Illustrator", "Adobe XD", "Sketch", "Zeplin", "Figma", "InVision", "Video iMovie"],
     },
     {
         "icon": "fa fa-chart-line",
-        "category": "Inteligencia de Negocios",
+        "category": "Business Intelligence",
         "tools": ["SQL / NoSQL clients", "Pentaho BI", "SSAS / SSIS", "PowerBI", "Qlik", "Tableau", "R Studio"],
     },
     
 ]
 highlighted_projects: [
     {
-        "title": "Proyecto BI: Adventure Works Cycles",
-        "description": "Este proyecto tiene como objetivo mejorar la creación de conocimiento optimizando la gestión de datos, potenciando la toma de decisiones basada en datos y extrayendo valor de la información.",
+        "title": "Projet BI: Adventure Works Cycles",
+        "description": "Ce projet vise à améliorer la création de connaissances en optimisant la gestion des données, en renforçant la prise de décision fondée sur les données et en valorisant les informations.",
         "image": "/images/bi_project.jpg",
-        "tags": ["Análisis de Datos / Visualización", "Inteligencia de Negocios", "Bases de datos", "ETL / DWH", "Aplicaciones basadas en datos"],
-        "role": "Autor",
-        "category": "Proyecto",
+        "tags": ["Analyse de données / visualisation", "Business Intelligence", "Bases de données", "ETL / DWH", "Applications basées sur les données"],
+        "role": "Auteur",
+        "category": "Projet",
     },
     {
         "title": "Circuitos",
-        "description": "Plataforma de referencia para descubrir tus intereses artísticos y culturales. Dirigido a personas que buscan nuevas experiencias y con ganas de compartir su arte con la comunidad.",
+        "description": "Plateforme de référence pour découvrir vos intérêts artistiques et culturels. Destiné aux personnes à la recherche de nouvelles expériences et désireuses de partager leur art avec la communauté.",
         "image": "/images/circuitos.jpg",
-        "tags": ["Diseño de Producto", "Experiencia de Usuario", "Pruebas A/B", "Prototipado", "Usabilidad", "Design Thinking", "Investigación de Usuario"],
-        "role": "Colaborador",
-        "category": "Proyecto",
+        "tags": ["Conception du produit", "Expérience utilisateur", "Tests A/B", "Prototypage", "Utilisabilité", "Design Thinking", "Recherche utilisateur"],
+        "role": "Collaborateur",
+        "category": "Projet",
     },
     {
-        "title": "Idea: Aplicación para Actividades Culturales",
-        "description": "Proporcionamos una plataforma accesible que facilita la participación en eventos y actividades culturales mediante la creación de una red cultural adaptada a las preferencias de cada individuo.",
+        "title": "Idée: Application aux Activités Culturelles",
+        "description": "Nous fournissons une plate-forme accessible qui facilite la participation à des événements et activités culturels en créant un réseau culturel adapté aux préférences de chacun.",
         "image": "/images/design_process.jpg",
-        "tags": ["e-Business", "Lean Startup", "Design Thinking", "Mapas de Empatía", "Business Model Canvas", "Prototipado", "SEO / SEA", "Marketing Digital"],
-        "role": "Autor",
-        "category": "Proyecto",
+        "tags": ["e-Business", "Lean Startup", "Design Thinking", "Cartes d'empathie", "Business Model Canvas", "Prototypage", "SEO / SEA", "Marketing numérique"],
+        "role": "Auteur",
+        "category": "Projet",
     },
     {
-        "title": "Aplicación web similar a la de transmisión de películas de TV",
-        "description": "Proyecto completo que muestra cómo React y Express trabajan juntos para ofrecer una aplicación similar a una película de televisión. Además de implementar una API RESTFul, incluye un proceso CD/CI simple aprovechado en acciones de GitHub y Docker.",
+        "title": "Application web similaire à la diffusion de films télévisés",
+        "description": "Projet complet montrant comment React et Express travaillent ensemble pour offrir une application similaire à un téléfilm. En plus d'implémenter une API RESTFul, il inclut un processus CD/CI simple exploité dans les actions GitHub et Docker.",
         "image": "/images/tv-app.jpg",
-        "tags": ["Desarrollo FullStack", "ReactJS / NodeJS", "Tailwind CSS", "Unit / E2E Testing", "Jest / Cypress", "TypeScript", "Docker", "GitHub Actions", "Procesos CI/CD"],
-        "role": "Autor",
-        "category": "Evaluación",
+        "tags": ["Développement FullStack", "ReactJS / NodeJS", "Tailwind CSS", "Unit / E2E Testing", "Jest / Cypress", "TypeScript", "Docker", "GitHub Actions", "Processus CI/CD"],
+        "role": "Auteur",
+        "category": "Évaluation",
     },
     {
-        "title": "Aplicación para buscar restaurantes",
-        "description": "Mini aplicación para ver los restaurantes más cercanos y sus menús/productos. Está construido usando React+TS y también la API de geolocalización.",
+        "title": "Application de recherche de restaurants",
+        "description": "Mini application pour voir les restaurants les plus proches et leurs menus/produits. Il est construit en utilisant React+TS et aussi l'API de géolocalisation.",
         "image": "/images/restaurant_browser.jpg",
-        "tags": ["Desarrollo Front-end", "ReactJS", "Tailwind CCS", "Vite", "Geolocation API", "Persistencia de datos - LocalStorage", "Daisy UI", "TypeScript"],
-        "role": "Autor",
-        "category": "Evaluación",
+        "tags": ["Développement frontal", "ReactJS", "Tailwind CCS", "Vite", "Geolocation API", "Persistance des données - LocalStorage", "Daisy UI", "TypeScript"],
+        "role": "Auteur",
+        "category": "Évaluation",
     },
     {
-        "title": "Pokédex PWA aplicación",
-        "description": "Aplicación web progresiva (PWA) creada con Svelte, un framework de JavaScript moderno. Aprovecha la API de Pokémon para proporcionar una experiencia Pokédex integral y atractiva, persistencia de datos con LocalStorage, SpeechSynthesis y gráficos Plotly.",
+        "title": "Pokédex PWA application",
+        "description": "Application web progressive (PWA) créée avec Svelte, un framework JavaScript moderne. Tirez parti de l'API Pokémon pour offrir une expérience Pokédex complète et attrayante, la persistance des données avec LocalStorage, SpeechSynthesis et les graphiques Plotly.",
         "image": "/images/pokedex.jpg",
-        "tags": ["Desarrollo Front-end", "Svelte", "Bulma CSS", "Vite+PWA", "SpeechSynthesis API", "Persistencia de datos", "Plotly JavaScript Open Source Graphing Library"],
-        "role": "Autor",
-        "category": "Prueba de concepto",
+        "tags": ["Développement frontal", "Svelte", "Bulma CSS", "Vite+PWA", "SpeechSynthesis API", "Persistance des données", "Plotly JavaScript Open Source Graphing Library"],
+        "role": "Auteur",
+        "category": "Test de concept",
     },
     {
-        "title": "Colección de Libros",
-        "description": "Aplicación web básica de colecciones de libros que le permite agregar, editar y realizar un seguimiento de sus compras de libros.",
+        "title": "Collection de livres",
+        "description": "Application Web de base de collections de livres qui vous permet d'ajouter, modifier et suivre vos achats de livres.",
         "image": "/images/books.jpg",
-        "tags": ["Desarrollo Front-end", "ReactJS", "Styled components", "Vite", "TypeScript"],
-        "role": "Autor",
-        "category": "Evaluación",
+        "tags": ["Développement frontal", "ReactJS", "Styled components", "Vite", "TypeScript"],
+        "role": "Auteur",
+        "category": "Évaluation",
     },
 ]
 experiences: [
     {
         "company": "Stuart Delivery",
-        "sector": "Servicios Logísticos",
-        "location": "Barcelona, España",
-        "position": "Ingenieros de Soluciones",
-        "period": "Oct 2020 - Jun 2023",
-        "description": "Colaborador en la elaboración de soluciones tecnológicas que optimicen la experiencia del cliente en logística de última milla. (Backoffices para agilizar integraciones de API externas, herramientas de monitoreo y desarrollo de diseño de productos).",
+        "sector": "Services Logistiques",
+        "location": "Barcelone, Espagne",
+        "position": "Ingénieurs de Solutions",
+        "period": "Oct 2020 - Juin 2023",
+        "description": "Collaborateur dans l'élaboration de solutions technologiques qui optimisent l'expérience client en logistique de dernier kilomètre. (Backoffices pour rationaliser les intégrations d'API externes, les outils de surveillance et le développement de conception de produits).",
         "tech": [
             "ReactJS", 
             "TypeScript",
@@ -265,11 +265,11 @@ experiences: [
     },
     {
         "company": "Zank Financial",
-        "sector": "Servicios Financieros",
-        "location": "Barcelona, España",
-        "position": "Arquitecto de Desarrollo Frontend",
+        "sector": "Services Financiers",
+        "location": "Barcelone, Espagne",
+        "position": "Architecte de Développement Frontend",
         "period": "Nov 2019 - Oct 2020",
-        "description": "Responsable de la arquitectura front-end de una aplicación web Fintech, impulsando el cumplimiento, la experiencia del usuario y la funcionalidad a través de integraciones y mejoras siguiendo los requisitos del producto.",
+        "description": "Responsable de l'architecture front-end d'une application Web Fintech, améliorant la conformité, l'expérience utilisateur et la fonctionnalité grâce à des intégrations et des améliorations en fonction des exigences du produit.",
         "tech": [
             "VueJS", 
             "NodeJS", 
@@ -284,11 +284,11 @@ experiences: [
     },
     {
         "company": "SDG Group",
-        "sector": "Inteligencia de Negocio y Análisis de Datos",
-        "location": "Barcelona, España",
-        "position": "Ingeniero de Desarrollo Frontend",
+        "sector": "Business Intelligence et Analyse de Données",
+        "location": "Barcelone, Espagne",
+        "position": "Ingénieur Développement Frontend",
         "period": "Nov 2018 - Oct 2019",
-        "description": "Automatización de flujos de trabajo de front-end, creación de una interfaz de usuario de chatbot basada en datos con visualizaciones interactivas y una aplicación combinada de realidad aumentada para visualizar tendencias de ventas, aprovechando tecnologías web modernas.",
+        "description": "Automatisation des workflows front-end, création d'une interface utilisateur de chatbot basée sur les données avec des visualisations interactives et une application combinée de réalité augmentée pour visualiser les tendances des ventes en tirant parti des technologies Web modernes.",
         "tech": [
             "VueJS", 
             "Angular", 
@@ -303,11 +303,11 @@ experiences: [
     },
     {  
         "company": "Kapsch TrafficCom AG",
-        "sector": "Soluciones de Transporte Inteligente",
-        "location": "Buenos Aires, Argentina",
-        "position": "Desarrollador de Interfaces de Usuario y Frontend",
-        "period": "Jun 2016 - Oct 2017",
-        "description": "Desarrollo de una plataforma administrativa, basada en web, para un sistema de peaje de flujo libre de vehículos, agilizando la gestión del cobro de peajes en varios aspectos: gestión de clientes, procesamiento de pagos, gestión de dispositivos de etiquetas, monitoreo de vehículos y otros.",
+        "sector": "Solutions de Transport Intelligentes",
+        "location": "Buenos Aires, Argentine",
+        "position": "Développeur d'Interfaces Utilisateur et Frontend",
+        "period": "Juin 2016 - Oct 2017",
+        "description": "Mise au point d ' une plate-forme de gestion en ligne pour un système de péage sans circulation des véhicules, rationalisant la gestion des péages dans plusieurs domaines : gestion des clients, traitement des paiements, gestion des dispositifs d ' étiquetage, surveillance des véhicules, etc.",
         "tech": [
             "Angular", 
             "NodeJS", 
@@ -320,12 +320,12 @@ experiences: [
             "Microsoft TFS"]
     },
     {
-        "company": "Petróleos de Venezuela (PDVSA)",
-        "sector": "Energía e Hidrocarburos",
+        "company": "Pétrole Vénézuélienne (PDVSA)",
+        "sector": "Énergie et Hydrocarbures",
         "location": "Caracas, Venezuela",
-        "position": "Ingerniero de Desarrollo de Productos de Software",
-        "period": "May 2011 - Ene 2016",
-        "description": "Colaboración con equipos multifuncionales para concebir, diseñar, desarrollar y entregar una aplicación web en tiempo real para el análisis de escenarios económicos, aprovechando un SIG y herramientas de inteligencia de datos para visualizar, analizar y modelar datos geocientíficos, financieros y de producción de hidrocarburos, potenciando los datos y la toma de decisiones.",
+        "position": "Ingénieur en Développement de Produits Logiciels",
+        "period": "Mai 2011 - Janv 2016",
+        "description": "Collaboration avec des équipes polyvalentes pour concevoir, développer et fournir une application Web en temps réel pour l ' analyse de scénarios économiques, utilisant un SIG et des outils d ' intelligence des données pour visualiser, analyser et modéliser les données géoscientifiques, financières et relatives à la production d ' hydrocarbures, afin d ' améliorer les données et la prise de décisions.",
         "tech": [
             "jQuery", 
             "PHP", 
@@ -341,12 +341,12 @@ experiences: [
             "Adobe Creative Suite"]
     },
     {
-        "company": "Caja de Ahorro y Préstamos de los trabajadores públicos del Estado Miranda (CAPEM)",
-        "sector": "Organización de Finanzas sin fines de lucro",
+        "company": "Caisse d'épargne et de prêts des fonctionnaires de l'État de Miranda (CAPEM)",
+        "sector": "Organisation financière à but non lucratif",
         "location": "Los Teques, Venezuela",
-        "position": "Responsable IT de Sistemas",
-        "period": "Nov 2009 - May 2011",
-        "description": "Lideré el diseño y desarrollo de un CRM basado en web, integrando departamentos para mejorar la gestión del servicio al cliente y creando un quiosco de autoservicio para la gestión automatizada de colas y consultas de saldo.",
+        "position": "Responsable des Systèmes Informatiques",
+        "period": "Nov 2009 - Mai 2011",
+        "description": "J'ai dirigé la conception et le développement d'un CRM basé sur le Web, l'intégration des départements pour améliorer la gestion du service à la clientèle et la création d'un kiosque libre-service pour la gestion automatisée des files d'attente et des demandes de solde.",
         "tech": [
             "jQuery", 
             "HTML5", 
@@ -357,100 +357,100 @@ experiences: [
 ]
 industry_courses: [
     {
-        "industry": "Habilidades blandas",
+        "industry": "Compétences générales (Soft skills)",
         "courses": [
-            "Oratoria y expresión oral efectiva - Speak up training.",
-            "Inteligencia emocional en el trabajo - Udemy.",
-            "13 pasos para hablar en público - Udemy."
+            "Oratoire et expression orale efficace - Speak up training.",
+            "Intelligence émotionnelle au travail - Udemy.",
+            "13 étapes pour parler en public - Udemy."
         ]
     },
     {
-        "industry": "Hidrocarburos",
+        "industry": "Hydrocarbures",
         "courses": [
-            "Exploración y producción de petróleo y gas para ingenieros.", 
-            "Evaluación económica de proyectos de inversión petrolera.", 
-            "Indicadores clave de gestión y planificación estratégica."
+            "Exploration et production de pétrole et de gaz.", 
+            "Évaluation économique des projets d'investissement pétrolier.", 
+            "Indicateurs clefs de gestion et de planification stratégique."
         ],
     },
 ]
 studies: [
     {
-        "school": "Universidad Politécnica de Valencia",
-        "degree": "Diploma de Experto en Gestión Tecnológica",
+        "school": "Université polytechnique de Valence",
+        "degree": "Diplôme d'Expert en Gestion de la Technologie",
         "isOngoing": true,
-        "level": "Especialización",
-        "period": "Sep 2023 - Actualmente",
-        "location": "España",
+        "level": "Spécialisation",
+        "period": "Sept 2023 - Actuellement",
+        "location": "Espagne",
         "description": "Formación enfocada en CTO destinada a liderar con éxito proyectos tecnológicos y adquirir las habilidades esenciales del rol.",
         "topics": ["Liderazgo Tecnológico", "Gestión Ágil de Proyectos", "Desarrollo Web", "Cyberseguridad", "QA y Testing", "DevOps"],
-        "key": "Liderazgo Tecnológico"
+        "key": "Leadership Technologique"
     },
     {
-        "school": "Universidad de Barcelona",
-        "degree": "Master en Gestión de Negocios en Internet",
+        "school": "Université de Barcelone",
+        "degree": "Master en Gestion d'Entreprise sur Internet",
         "isOngoing": false,
-        "level": "Máster",
-        "period": "Oct 2019 - Jun 2020",
-        "location": "España",
+        "level": "Master",
+        "period": "Oct 2019 - Juin 2020",
+        "location": "Espagne",
         "description": "Estudios relacionados con la gestión efectiva de diferentes negocios basados en Internet, y cómo implementar planes de marketing, estrategias de experiencia del cliente, desarrollos de productos digitales y optimización del comercio electrónico.",
         "topics": ["Lean Startup", "Marketing Digital", "Redes Sociales", "SEO · SEA · ASO", "StartUps"],
-        "key": "Gestión de Negocios Digitales y Startups"
+        "key": "Gestion d'Affaires Numériques et Startups"
 
     },
     {
-        "school": "Escoles Gimbernat i Tomàs Cerdà · Universidad Autónoma de Barcelona",
-        "degree": "Posgrado en Inteligencia de Negocios",
+        "school": "Escoles Gimbernat i Tomàs Cerdà · Université Autonome de Barcelone",
+        "degree": "Diplôme d'Études Supérieures en Business Intelligence",
         "isOngoing": false,
-        "level": "Posgrado",
-        "period": "Nov 2017 - Jul 2018",
-        "location": "España",
+        "level": "Diplôme d'Études Supérieures",
+        "period": "Nov 2017 - Juill 2018",
+        "location": "Espagne",
         "description": "Estudios relacionados con el desarrollo y gestión de proyectos de inteligencia de negocios, análisis de datos, minería de datos, visualización de datos, aprendizaje automático y big data.",
         "topics": ["Modelado de datos", "Big Data", "Visualización de datos", "Machine Learning", "DWH", "ETL"],
-        "key": "Ingeniería de Datos"
+        "key": "Ingénierie des Données"
     },
     {
         "school": "Digital House Coding School",
-        "degree": "Diploma en Diseño e Investigación UX",
+        "degree": "Diplôme en Design et Recherche UX",
         "isOngoing": false,
         "level": "Bootcamp",
-        "period": "Mar 2017 - Jul 2017",
-        "location": "Argentina",
+        "period": "Mars 2017 - Juill 2017",
+        "location": "Argentine",
         "description": "Estudios relacionados con el proceso de desarrollo de productos digitales enfocados a la experiencia del usuario.",
         "topics": ["Design Thinking", "Usabilidad", "Prototipado", "Pruebas A/B", "Diseño de Producto", "Investigación de Usuario"],
-        "key": "Desarrollo de productos digitales e investigación de usuarios"
+        "key": "Développement de Produits Numériques et Recherche sur les Utilisateurs"
     },
     {
-        "school": "Universidad Metropolitana (UNIMET)",
-        "degree": "Diploma en Gestión de Negocios",
+        "school": "Université Métropolitaine (UNIMET)",
+        "degree": "Diplôme en Gestion d'Entreprise",
         "isOngoing": false,
-        "level": "Posgrado",
-        "period": "Sep 2014 - Jul 2015",
+        "level": "Diplôme d'Études Supérieures",
+        "period": "Sept 2014 - Juill 2015",
         "location": "Venezuela",
         "description": "Estudios relacionados con el desarrollo de habilidades de gestión empresarial.",
         "topics": ["Liderazgo", "Coaching y Trabajo en Equipo", "Planificación Estratégica", "Negociación", "Análisis Financiero", "Gestión Empresarial"],
-        "key": "Liderazgo, Gestión y Negociación"
+        "key": "Leadership, Gestion et Négociation"
     },
     {
-        "school": "Universidad Central de Venezuela",
-        "degree": "Diploma en Inteligencia de Negocios",
+        "school": "Université Centrale du Venezuela",
+        "degree": "Diplôme en Business Intelligence",
         "isOngoing": false,
-        "level": "Especialización",
-        "period": "Sep 2013 - Abr 2014",
+        "level": "Spécialisation",
+        "period": "Sept 2013 - Avr 2014",
         "location": "Venezuela",
         "description": "Estudios relacionados con la inteligencia de negocios con tecnologías de código abierto.",
         "topics": ["Limpieza de datos", "Diseño ETL", "DWH", "Proyectos Open Source"],
-        "key": "Inteligencia de Negocios"
+        "key": "Business Intelligence"
     },
     {
-        "school": "Universidad Experimental y Politécnica de las Fuerzas Armadas (UNEFA)",
-        "degree": "Grado en Ingeniería de Sistemas",
+        "school": "Université Expérimentale et Polytechnique des Forces Armées (UNEFA)",
+        "degree": "Ingénierie des Systèmes",
         "isOngoing": false,
-        "level": "Ingeniería de Sistemas",
-        "period": "Sep 2004 - Sep 2009",
+        "level": "Diplôme en Ingénierie des Systèmes, Cinq (5) années",
+        "period": "Sept 2004 - Sept 2009",
         "location": "Venezuela",
         "description": "Licenciatura en Ingeniería de Sistemas. Espacio Europeo de Educación Superior (EEES): Conocimientos relacionados con la ingeniería y la arquitectura en el ámbito específico de las Tecnologías de la Información y las Comunicaciones (TIC)",
         "topics": ["Tecnologías de la Información y las Comunicaciones (TIC)"],
-        "key": "Tecnologías de la Información y las Comunicaciones (TIC)"
+        "key": "Technologies de l'Information et des Communications (TIC)"
     },
 ]
 certifications: [
@@ -483,8 +483,8 @@ certifications: [
         "display": true,
         "certifications": [
             {
-                "title": "Certificación Management 3.0",
-                "date": "Sep 2022",
+                "title": "Certification Management 3. 0",
+                "date": "Sept 2022",
                 "url": "https://management30.com/badges/christian-jose-torrealba-rondon-1573594984633325cab11ac/",
                 "credential": "",
                 "showURL": true,
@@ -499,7 +499,7 @@ certifications: [
         "certifications": [
             {
                 "title": "Practicante de Pensamiento de Diseño Empresarial",
-                "date": "Abr 2022",
+                "date": "Avr 2022",
                 "url": "https://www.credly.com/badges/e4c9bf26-0936-4460-97a2-eeb1d620a55c/print",
                 "credential": "",
                 "showURL": true,
@@ -514,7 +514,7 @@ certifications: [
         "certifications": [
             {
                 "title": "Pensamiento sistémico para la Gestión de Proyectos",
-                "date": "Mar 2022",
+                "date": "Mars 2022",
                 "url": "https://www.credential.net/b7cce254-083d-414b-aabc-81afc07ba4ed#gs.4vcqj4",
                 "credential": "",
                 "showURL": true,
@@ -528,8 +528,8 @@ certifications: [
         "display": true,
         "certifications": [
             {
-                "title": "Fundamentos del Marketing Digital",
-                "date": "Jun 2020",
+                "title": "Principes fondamentaux du marketing numérique",
+                "date": "Juin 2020",
                 "url": "https://learndigital.withgoogle.com/digitalgarage/validate-certificate-code",
                 "credential": "LEP 6F3 NM7",
                 "showURL": false,
@@ -544,7 +544,7 @@ certifications: [
         "certifications": [
             {
                 "title": "Certificado de competencia como Scrum Master",
-                "date": "Jul 2019",
+                "date": "Juill 2019",
                 "url": "",
                 "credential": "5781206",
                 "showURL": false,
