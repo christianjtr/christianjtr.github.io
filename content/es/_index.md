@@ -233,6 +233,30 @@ highlighted_projects: [
         "role": "Autor",
         "category": "Evaluación",
     },
+    {
+        "title": "Visualización de datos - Gráfico de reporte de errores",
+        "description": "Creamos un gráfico interactivo para una aplicación de BI utilizando la biblioteca D3.js. Este gráfico debería permitir a los usuarios visualizar datos por día, semana, mes o año.",
+        "image": "/images/chart.jpg",
+        "tags": ["Desarrollo Front-end", "VueJS", "D3/C3", "Vuetify", "Vuex - State management", "SASS", "NodeJS - Express"],
+        "role": "Autor",
+        "category": "Evaluación",
+    },
+    {
+        "title": "Panel de control de gestión de empleados",
+        "description": "Panel de gestión de empleados con funcionalidad CRUD (Crear, Leer, Actualizar, Eliminar) en el lado del cliente.",
+        "image": "/images/erp_management.jpg",
+        "tags": ["Desarrollo Front-end", "VueJS", "Material Design", "Vuetify", "Vuex - State management"],
+        "role": "Autor",
+        "category": "Evaluación",
+    },
+    {
+        "title": "Planificador de citas semanal interactivo",
+        "description": "Desarrollo de una solución para agilizar el proceso de programación de citas. Este planificador semanal interactivo mejora la eficiencia de la toma de citas diaria dada una semana.",
+        "image": "/images/appointment.jpg",
+        "tags": ["Desarrollo Front-end", "VueJS", "Axios", "Bulma CSS / SASS", "Vuex - State management"],
+        "role": "Autor",
+        "category": "Evaluación",
+    },    
 ]
 experiences: [
     {

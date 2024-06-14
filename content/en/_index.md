@@ -233,6 +233,30 @@ highlighted_projects: [
         "role": "Author",
         "category": "Assessment",
     },
+    {
+        "title": "Data Visualization - Error reporting chart",
+        "description": "Let's create an interactive chart for a BI application using the D3.js library. This chart should allow users to visualize data by day, week, month, or year.",
+        "image": "/images/chart.jpg",
+        "tags": ["Front-end development", "VueJS", "D3/C3", "Vuetify", "Vuex - State management", "SASS", "NodeJS - Express"],
+        "role": "Author",
+        "category": "Assessment",
+    },
+    {
+        "title": "Manage employees dashboard",
+        "description": "Employee management dashboard with CRUD functionality (Create, Read, Update, Delete) on the client-side.",
+        "image": "/images/erp_management.jpg",
+        "tags": ["Front-end development", "VueJS", "Material Design", "Vuetify", "Vuex - State management"],
+        "role": "Author",
+        "category": "Assessment",
+    },
+    {
+        "title": "Interactive Weekly Appointment Scheduler",
+        "description": "Developed a solution to streamline the appointment scheduling process. This interactive weekly scheduler with daily slots reduces scheduling conflicts and improves efficiency.",
+        "image": "/images/appointment.jpg",
+        "tags": ["Front-end development", "VueJS", "Axios", "Bulma CSS / SASS", "Vuex - State management"],
+        "role": "Author",
+        "category": "Assessment",
+    },    
 ]
 experiences: [
     {
