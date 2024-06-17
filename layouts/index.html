@@ -168,7 +168,7 @@
     </div>
     <div class="margin-top--none align-items--flex-start justify-content--inherit grid-two-columns-container">
       {{ range $key, $value := .Params.highlighted_projects }}
-      <div id="playground_{{ $key }}" class="border-solid--grey margin-bottom--20 available-height-container">
+      <div id="playground_{{ $key }}" class="border-solid--grey available-height-container">
         <div>
           <img src={{ .image }} alt="Preview image of {{ .title }}" class="margin--none"/>
         </div>
@@ -264,7 +264,7 @@
 <!-- TRAINING -->
 <div class="background--grey padding-up-and-down--50">
   <div class="prose prose-neutral mx-auto min-h-[calc(100%-9rem)] dark:prose-invert padding-side-by-side--20">
-    <h3 class="margin--none margin-bottom--10" id="tools">{{ .Params.training }} 💼</h3>
+    <h3 class="margin--none margin-bottom--10" id="tools">{{ .Params.training }} 📝</h3>
     <span class="block margin-bottom--20 font-size--18">{{ .Params.training_desc }}</span>
     <div class="grid-two-columns-container">
       {{ range $key, $value := .Params.industry_courses }}
@@ -342,75 +342,36 @@
     </div>
     <br />
     <h3 class="margin--none margin-bottom--20 marging-top--10">{{ .Params.studies_title }} 📚</h3>
+    <p class="block font-size--18">
+      {{ .Params.certs_desc }} <a href="https://www.credly.com/users/christianjtr/badges" rel="external" aria-label="Link to Credly profile" class="color--pink" target="_blank" title="Credly">Credly</a>.
+    </p>
     <div class="align-items--flex-start justify-content--inherit margin-bottom--30">
-      <div>
-        <div class="grid-one-columns-container">
+      <div class="grid-two-columns-first-column-grid-wider">
+        <div class="flex flex-direction--column gap--20">
           {{ range $key, $value := .Params.studies }}
           <div id="study_{{ $key }}" class="plain-card">
-            <div>
+            <div class="w-100">
+              <p class="flex justify-content--space-between font-size--14 margin-bottom--10 margin--none">
+                <span class="block">{{ .level }}</span>  
+                <span class="block">
+                  <strong>{{ .location }}</strong>
+                </span>
+              </p>
               <h4 class="font-size--18 margin--none">{{ .degree }}</h4>
               <span class="block color--purple-blue">{{ .key }}</span>
               <span class="block font-size--16">{{ .school }}</span>
+              <span class="block color-text--base font-size--14 detail-data">{{ .period }}</span>
             </div>
-            <p class="margin--none font-size--14 detail-data">
-              <span class="block">
-                {{ .location }}
-              </span>
-              <span class="block">
-                <strong>{{ .level }}</strong>
-              </span>
-              <span class="block color-text--base">
-                {{ .period }}
-              </span>
-            </p>
           </div>
           {{ end }}
         </div>
+        <div class="flex flex-direction--column justify-center justify-content--inherit gap--20">
+          <div data-iframe-width="100%" data-iframe-height="240" data-share-badge-id="f4d80edd-5f42-4234-bab2-8805d5121ecb" data-share-badge-host="https://www.credly.com"></div>
+          <div data-iframe-width="100%" data-iframe-height="240" data-share-badge-id="26b9f00b-156e-4832-8808-a424f43af345" data-share-badge-host="https://www.credly.com"></div>
+          <div data-iframe-width="100%" data-iframe-height="240" data-share-badge-id="e4c9bf26-0936-4460-97a2-eeb1d620a55c" data-share-badge-host="https://www.credly.com"></div>
+          <div data-iframe-width="100%" data-iframe-height="240" data-share-badge-id="b7370ae3-4802-4fe9-b393-fbdd52859c0a" data-share-badge-host="https://www.credly.com"></div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
-<!-- CREDENTIALS -->
-<div class="background--grey padding-up-and-down--50">
-  <div class="prose prose-neutral mx-auto min-h-[calc(100%-9rem)] dark:prose-invert padding-side-by-side--20">
-    <h3 class="margin-top--20" id="credentials">{{ .Params.credentials_title }} 🎈</h3>
-    <div>
-      <span class="block margin-bottom--30 font-size--18">
-        {{ .Params.certs_desc }} <a href="https://www.credly.com/users/christianjtr/badges" rel="external" aria-label="Link to Credly profile" class="color--pink" target="_blank" title="Credly">Credly</a>.
-      </span>
-      <div class="grid-three-columns-container justify-items--center gap--40">
-        <div data-iframe-width="100%" data-iframe-height="250" data-share-badge-id="f4d80edd-5f42-4234-bab2-8805d5121ecb" data-share-badge-host="https://www.credly.com"></div>
-        <div data-iframe-width="100%" data-iframe-height="250" data-share-badge-id="26b9f00b-156e-4832-8808-a424f43af345" data-share-badge-host="https://www.credly.com"></div>
-        <div data-iframe-width="100%" data-iframe-height="250" data-share-badge-id="e4c9bf26-0936-4460-97a2-eeb1d620a55c" data-share-badge-host="https://www.credly.com"></div>
-        <div data-iframe-width="100%" data-iframe-height="250" data-share-badge-id="b7370ae3-4802-4fe9-b393-fbdd52859c0a" data-share-badge-host="https://www.credly.com"></div>
-      </div>
-    </div>
-    <br />
-    <h3 class="margin--none margin-bottom--30">{{ .Params.other_certs }} 🤓</h3>
-    <div class="grid-two-columns-container">
-      {{ range $key, $value := .Params.certifications }}
-      {{ if eq .display true }}
-      <div id="certification_{{ $key }}" class="background--white padding--20">
-        <h6 class="block margin-bottom--10 font-size--20 font-weight--600">
-          <i class="fa fa-school color--pink"></i>
-          {{ .organization }}
-        </h6>
-        <ul class="margin--none padding--none">
-          {{ range .certifications }}
-          <li class="padding--none font-size--16 margin-bottom--10 flex justify-content--space-between">
-            <span class="block">{{ .title }}</span>
-            <span class="block">{{ .date }}</span>
-            {{ if eq .showURL true }}
-            <a href="{{ .url }}" rel="external" class="color--pink font-size--14" title="{{ $show_details }} certification" target="_blank" aria-label="Show credential link">
-              {{ $show_details }} <i class="fa fa-external-link-alt"></i>
-            </a>
-            {{ end }}
-          </li>
-          {{ end }}
-        </ul>
-      </div>
-      {{ end }}
-      {{ end }}
     </div>
   </div>
 </div>
