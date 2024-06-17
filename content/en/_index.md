@@ -20,12 +20,12 @@ polishing_langs: "* Polishing them up continuously"
 showcased_projects: '<h2 class="subtitle">Showcased projects<span>.</span></h2><span class="block margin-bottom--30 font-size--18">Presented at <strong>International Conferences.</strong> See additional details on <a href="https://www.linkedin.com/in/christianjtr/" rel="external" class="color--pink" target="_blank" title="LinkedIn">LinkedIn.</a></span>'
 techs_used: "Some techs I used to play with. Examples on"
 tech_knowledge_title: "Tech knowledge"
-playground: '<h2 class="subtitle block">Lab<span>.</span></h2><span class="block margin-bottom--30 font-size--18">Collection of projects, PoCs, and every other assessment I find interesting to showcase.</span>'
+playground: '<h2 class="subtitle block">Labs<span>.</span></h2><span class="block margin-bottom--30 font-size--18">Collection of projects, PoCs, and every other assessment I find interesting to showcase.</span>'
 tools_desc: "A brief compilation of tools I have used for: Ideation, Prototyping, Comms., Monitoring, Documentation, etc."
 professional_experiences_title: '<h2 class="subtitle block">Professional Experiences<span>.</span></h2><span class="block margin-bottom--30 font-size--18">An overview of contributions done as an engineer, <strong>in three (3) different countries so far.</strong></span>'
 training_desc: "Specific courses that are focused either on soft skills or a particular industry."
 diplomas_title_section: '<h2 class="subtitle block">Diplomas, memberships, and studies<span>.</span></h2><span class="block margin-bottom--30 font-size--18">Educational path I have chosen for my career development.</span>'
-certs_desc: "Official certifications. Refer to my profile at "
+certs_desc: "Educational path and official certifications. Refer to my profile at "
 summary_about: "A passionate technologist in creating digital experiences. I enjoy participating in all project stages, from conception and beyond."
 summary_hobbies: "☀️ 🏖️ 🎡 🍦 🕹️ 🏃🏻 🐶 🇻🇪 🇦🇷 🇪🇸"
 summary_interests: [
@@ -383,10 +383,19 @@ industry_courses: [
     {
         "industry": "Soft skills",
         "courses": [
+            "Management 3.0 certification.",
             "Oratory and effective speaking - Speak up training.",
             "Emotional intelligence at work - Udemy.",
             "13 steps to public speaking - Udemy."
         ]
+    },
+    {
+        "industry": "Digital competences",
+        "courses": [
+            "Fundamentals of digital marketing - Google.",
+            "How to build digital products - Product School.",
+            "Game development with HTML5 and Phaser.", 
+        ],
     },
     {
         "industry": "Hydrocarbons",

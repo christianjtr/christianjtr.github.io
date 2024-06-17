@@ -25,7 +25,7 @@ tools_desc: "Une brève compilation d'outils que j'ai utilisés pour: Idée, Pro
 professional_experiences_title: '<h2 class="subtitle block">Expériences Professionnelles<span>.</span></h2><span class="block margin-bottom--30 font-size--18">Un résumé des contributions faites en tant qu`ingénieur, <strong>dans trois (3) pays différents, jusqu`à présent.</strong></span>'
 training_desc: "Cours spécifiques à une industrie particulière ou compétences générales."
 diplomas_title_section: '<h2 class="subtitle block">Diplômes, adhésions et études<span>.</span></h2><span class="block margin-bottom--30 font-size--18">Le chemin d`éducation que J`ai choisi pour mon développement professionnel.</span>'
-certs_desc: "Certifications officielles. Voir plus sur mon profil "
+certs_desc: "Parcours éducatif et certifications officielles. Voir plus sur mon profil "
 summary_about: "Un professionnel de la technologie passionné par la création d'expériences numériques. J'aime participer à toutes les étapes d'un projet, de la conception et au-delà."
 summary_hobbies: "☀️ 🏖️ 🎡 🍦 🕹️ 🏃🏻 🐶 🇻🇪 🇦🇷 🇪🇸"
 summary_interests: [
@@ -387,6 +387,14 @@ industry_courses: [
             "Intelligence émotionnelle au travail - Udemy.",
             "13 étapes pour parler en public - Udemy."
         ]
+    },
+    {
+        "industry": "Compétences numériques",
+        "courses": [
+            "Principes fondamentaux du marketing numérique - Google.",
+            "Comment construire des produits numériques - Product School.",
+            "Développement de jeux video avec HTML5 et Phaser.", 
+        ],
     },
     {
         "industry": "Hydrocarbures",
