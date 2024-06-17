@@ -2,7 +2,7 @@
 show_details: "Mostrar"
 see_details: "Ver detalles"
 lets_connect: "Vamos a conectar"
-ups_holiday_time: "Ups holiday time!"
+ups_holiday_time: "Ups estoy de vacaciones!"
 about_me: "Acerca de mí"
 interests: "Intereses"
 aptitudes: "Aptitudes"

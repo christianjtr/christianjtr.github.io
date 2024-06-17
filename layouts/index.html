@@ -229,6 +229,29 @@
         {{ .Params.professional_experiences_title | safeHTML }}
       </div>
     </div>
+    <div class="card font-size--18 relative background--white w-100 margin-bottom--30 padding--20">
+      <h4 class="margin--none margin-bottom--20">V-Shape Professional Profile 👨‍🚀</h4>
+      <div id="chart-container">
+        <table class="charts-css bar multiple stacked">
+          <tbody>
+            <tr>
+              <td style="--size:0.40; --color:#EFD81B;" class="font-size--14">
+                <span class="data padding-side-by-side--20">Software</span>
+              </td>
+              <td style="--size:0.20; --color:#2AB8CB;" class="color--white font-size--14">
+                <span class="data padding-side-by-side--20">Data</span>
+              </td>
+              <td style="--size:0.20; --color:#7161EC;" class="color--white font-size--14">
+                <span class="data padding-side-by-side--20">Product</span>
+              </td>
+              <td style="--size:0.20; --color:#F24B03;" class="color--white font-size--14">
+                <span class="data padding-side-by-side--20">User Experience</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
     <h3 class="margin--none margin-bottom--20 marging-top--10">{{ .Params.background_title }} 💼</h3>
     <div class="grid-one-columns-container">
       {{ range $key, $value := .Params.experiences }}
