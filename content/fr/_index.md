@@ -13,6 +13,7 @@ background_title: "Expériences"
 training: "Formation"
 studies_title: "Études"
 credentials_title: "Certifications"
+v_shape_professional: "Profil professionnel V-Shape 👨‍🚀"
 other_certs: "D`autres certifications"
 greetings: '<span class="pre-title">👋🏻 Salut mes amis.es, moi c`est</span><h1 class="title" id="home">Christian José<br />Torrealba Rondón</h1>'
 presentation: 'Je suis un professionnel orienté au développement de produits digitales, j`utilise mes compétences en <span class="highlighted-text">ingénierie des systèmes et design thinking</span> pour créer des solutions centrées sur l`utilisateur qui génèrent d`impact.'

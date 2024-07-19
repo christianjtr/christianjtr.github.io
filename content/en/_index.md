@@ -13,6 +13,7 @@ background_title: "Background"
 training: "Training"
 studies_title: "Studies"
 credentials_title: "Credentials"
+v_shape_professional: "V-Shape Professional Profile 👨‍🚀"
 other_certs: "Other certifications"
 greetings: '<span class="pre-title">👋🏻 Hi there folks, I am</span><h1 class="title" id="home">Christian José<br />Torrealba Rondón</h1>'
 presentation: 'Product-oriented professional focused on <span class="highlighted-text">systems engineering and design thinking skills</span> to deliver user-centric solutions that drive impact.'
