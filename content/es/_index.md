@@ -54,7 +54,7 @@ summary_languages: [
     {
         "emoji": "🥐",
         "language": "Francés",
-        "proficiency": "Elemental (A2)",
+        "proficiency": "Intermedio-medio (B1)",
         "proficiencyValue": 100,
     }
 ]
@@ -261,6 +261,26 @@ highlighted_projects: [
 ]
 experiences: [
     {
+        "company": "Zeelo",
+        "sector": "Soluciones de Movilidad Inteligentes",
+        "location": "Barcelona, España",
+        "position": "Senior Product Software Engineer (Front-end focus)",
+        "period": "May 2024 - Presente",
+        "description": "Impulsar colaborativamente la evolución de la plataforma de aplicaciones web anticipando oportunidades, asegurando una calidad de aplicación robusta y contribuyendo al desarrollo de funcionalidades innovadoras que se alinean con las tendencias de la industria en el sector de la movilidad.",
+        "tech": [
+            "ReactJS", 
+            "TypeScript",
+            "NodeJS", 
+            "Jest", 
+            "Cypress", 
+            "Jira/Bitbucket", 
+            "Git",
+            "Python",  
+            "Figma",
+            "Storybook", 
+            "Notion"]
+    },
+    {
         "company": "Stuart Delivery",
         "sector": "Servicios Logísticos",
         "location": "Barcelona, España",
@@ -410,9 +430,9 @@ studies: [
     {
         "school": "Universidad Politécnica de Valencia",
         "degree": "Diploma de Experto en Gestión Tecnológica",
-        "isOngoing": true,
+        "isOngoing": false,
         "level": "Especialización",
-        "period": "Sep 2023 - Actualmente",
+        "period": "Sep 2023 - Jun 2024",
         "location": "España",
         "description": "Formación enfocada en CTO destinada a liderar con éxito proyectos tecnológicos y adquirir las habilidades esenciales del rol.",
         "topics": ["Liderazgo Tecnológico", "Gestión Ágil de Proyectos", "Desarrollo Web", "Cyberseguridad", "QA y Testing", "DevOps"],

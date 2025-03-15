@@ -54,7 +54,7 @@ summary_languages: [
     {
         "emoji": "🥐",
         "language": "French",
-        "proficiency": "Elementary (A2)",
+        "proficiency": "Mid-Intermediate (B1)",
         "proficiencyValue": 100,
     }
 ]
@@ -261,6 +261,26 @@ highlighted_projects: [
 ]
 experiences: [
     {
+        "company": "Zeelo",
+        "sector": "Intelligent Mobility Solutions",
+        "location": "Barcelona, Spain",
+        "position": "Senior Product Software Engineer (Front-end focus)",
+        "period": "May 2024 - Present",
+        "description": "Collaboratively driving the evolution of the web application platform by anticipating opportunities, ensuring robust application quality, and contributing to innovative feature development that aligns with industry trends in the mobility sector.",
+        "tech": [
+            "ReactJS", 
+            "TypeScript",
+            "NodeJS", 
+            "Jest", 
+            "Cypress", 
+            "Jira/Bitbucket", 
+            "Git",
+            "Python",  
+            "Figma",
+            "Storybook", 
+            "Notion"]
+    },
+    {
         "company": "Stuart Delivery",
         "sector": "Logistic Services",
         "location": "Barcelona, Spain",
@@ -411,9 +431,9 @@ studies: [
     {
         "school": "Polytechnic University of Valencia",
         "degree": "Expert Diploma in Tech Management",
-        "isOngoing": true,
+        "isOngoing": false,
         "level": "Specialization",
-        "period": "Sep 2023 - Present",
+        "period": "Sep 2023 - Jun 2024",
         "location": "Spain",
         "description": "CTO focus formation intended to successfully lead technological projects and acquire the essential skills of the role.",
         "topics": ["Tech Leadership", "Agile Project Management", "Web Development", "Cybersecurity", "QA and Testing", "DevOps"],

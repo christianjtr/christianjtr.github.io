@@ -54,7 +54,7 @@ summary_languages: [
     {
         "emoji": "🥐",
         "language": "Français",
-        "proficiency": "Élémentaire (A2)",
+        "proficiency": "Moyen-Intermédiaire (B1)",
         "proficiencyValue": 100,
     }
 ]
@@ -261,6 +261,26 @@ highlighted_projects: [
 ]
 experiences: [
     {
+        "company": "Zeelo",
+        "sector": "Solutions de mobilité intelligente",
+        "location": "Barcelone, Espagne",
+        "position": "Ingénieur Logiciel Produit Senior (Orientation Front-end)",
+        "period": "Mai 2024 - Actuellement",
+        "description": "Piloter collaborativement l'évolution de la plateforme d'applications web en anticipant les opportunités, en assurant une qualité d'application robuste et en contribuant au développement de fonctionnalités innovantes qui s'alignent sur les tendances de l'industrie dans le secteur de la mobilité.",
+        "tech": [
+            "ReactJS", 
+            "TypeScript",
+            "NodeJS", 
+            "Jest", 
+            "Cypress", 
+            "Jira/Bitbucket", 
+            "Git",
+            "Python",  
+            "Figma",
+            "Storybook", 
+            "Notion"]
+    },
+    {
         "company": "Stuart Delivery",
         "sector": "Services Logistiques",
         "location": "Barcelone, Espagne",
@@ -410,9 +430,9 @@ studies: [
     {
         "school": "Université polytechnique de Valence",
         "degree": "Diplôme d'Expert en Gestion de la Technologie",
-        "isOngoing": true,
+        "isOngoing": false,
         "level": "Spécialisation",
-        "period": "Sept 2023 - Actuellement",
+        "period": "Sept 2023 - Juin 2024",
         "location": "Espagne",
         "description": "Formación enfocada en CTO destinada a liderar con éxito proyectos tecnológicos y adquirir las habilidades esenciales del rol.",
         "topics": ["Liderazgo Tecnológico", "Gestión Ágil de Proyectos", "Desarrollo Web", "Cyberseguridad", "QA y Testing", "DevOps"],
