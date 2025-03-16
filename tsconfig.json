@@ -7,7 +7,9 @@
     "jsxImportSource": "astro",
     "baseUrl": ".",
     "paths": {
+      "@components": ["src/components"],
       "@components/*": ["src/components/*"],
+      "@layouts": ["src/layouts"],
       "@layouts/*": ["src/layouts/*"],
       "@styles/*": ["src/styles/*"]
     },
