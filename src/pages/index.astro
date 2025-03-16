@@ -1,8 +1,22 @@
 ---
 import "@styles/global.css";
-import BaseLayout from "@layouts/BaseLayout.astro";
+import { Header, Footer } from "@layouts";
+
+const pageTitle = "My page title";
 ---
 
-<BaseLayout>
-    <h1>My section title</h1>
-</BaseLayout>
+<html lang="en" data-theme="cmyk">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{pageTitle}</title>
+    </head>
+    <body>
+        <Header />
+        <button class="btn">Hello daisyUI</button>
+        <slot />
+        <Footer />
+    </body>
+</html>
