@@ -11,9 +11,9 @@
     },
     "dependencies": {
         "@astrojs/check": "^0.9.4",
-        "@astrojs/tailwind": "^6.0.0",
+        "@astrojs/tailwind": "^6.0.2",
         "@tailwindcss/typography": "^0.5.16",
-        "astro": "^5.5.2",
+        "astro": "^5.13.2",
         "daisyui": "^5.0.4"
     },
     "devDependencies": {
