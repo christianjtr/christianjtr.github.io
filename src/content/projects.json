@@ -1,0 +1,64 @@
+[
+    {
+        "id": "project-augmented-intelligence",
+        "title": "Augmented Intelligence for Data Visualization Analytics",
+        "showcased_at": "Qlik Connections Global Conference",
+        "location": "Dallas TX, USA",
+        "flag": "🇺🇲",
+        "owner": "© SDG Group",
+        "url": "https://cdn2.hubspot.net/hubfs/4041825/SDG_Group_Augmented_Intelligence.pdf",
+        "period": "May 2019",
+        "contribute_as": "Frontend Software Engineer",
+        "technologies": [
+            "VueJS",
+            "NodeJS",
+            "Qlik Sense Hub",
+            "SignalR Client",
+            "DialogFlow",
+            "AR.js"
+        ],
+        "contributions": "Collaborated with engineers to create an AR/MR user experience, empowering them to make data-driven decisions through an app to visualize sales trends and a chatbot for data visualization."
+    },
+    {
+        "id": "project-kml-visualization",
+        "title": "Representation of geographical data related to the Venezuelan Petroleum Industry by using Keyhole Markup Language",
+        "showcased_at": "6th Congress of Cartographic Science",
+        "location": "Buenos Aires, Argentina",
+        "flag": "🇦🇷",
+        "owner": "© PDVSA",
+        "url": "https://www.ign.gob.ar/Novedades/FinalizoElSextoCongresoDeLaCienciaCartogr%C3%A1fica.",
+        "period": "June 2012",
+        "contribute_as": "Product Developer Engineer",
+        "technologies": [
+            "Google Earth / Maps",
+            "CESIUM 3D Geospatial",
+            "KML / KMZ",
+            "ArcGIS",
+            "Global Mapper"
+        ],
+        "contributions": "Worked alongside geologists and geographers to improve the accessibility and usability of geographical data for the Venezuelan petroleum industry; by automatically creating and editing KML/KMZ files."
+    },
+    {
+        "id": "project-opportunity-portfolios-sipo",
+        "title": "Integrated System of Opportunity Portfolios",
+        "showcased_at": "American Association of Petroleum Geologists",
+        "location": "Houston TX, USA",
+        "flag": "🇺🇲",
+        "owner": "© PDVSA",
+        "url": "https://www.searchanddiscovery.com/pdfz/documents/2011/40798garcia/ndx_garcia.pdf.html",
+        "period": "August 2011",
+        "contribute_as": "Product Software Engineer · Data Analyst",
+        "technologies": [
+            "HTML5 / jQuery / CSS",
+            "PHP",
+            "MySQL",
+            "PostgreSQL",
+            "R Studio",
+            "Pentaho BI",
+            "ETL / DWH",
+            "HighCharts",
+            "ArcGIS"
+        ],
+        "contributions": "Partnered with a team of engineers, economists, geologists, and geographers in creating and launching a real-time web application to facilitate economic scenario analysis and effectively visualize both geoscience and financial data."
+    }
+]

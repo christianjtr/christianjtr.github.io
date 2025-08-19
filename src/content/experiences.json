@@ -1,0 +1,155 @@
+[
+    {
+        "id": "experience-zeelo",
+        "company": "Zeelo",
+        "sector": "Intelligent Mobility Solutions",
+        "location": "Barcelona, Spain",
+        "position": "Senior Product Software Engineer (Front-end focus)",
+        "period": "May 2024 - Present",
+        "description": "Collaboratively driving the evolution of the web application platform by anticipating opportunities, ensuring robust application quality, and contributing to innovative feature development that aligns with industry trends in the mobility sector.",
+        "technologies": [
+            "ReactJS",
+            "TypeScript",
+            "NodeJS",
+            "Jest",
+            "Cypress",
+            "Jira/Bitbucket",
+            "Git",
+            "Python",
+            "Figma",
+            "Storybook",
+            "Notion"
+        ]
+    },
+    {
+        "id": "experience-stuart",
+        "company": "Stuart Delivery",
+        "sector": "Logistic Services",
+        "location": "Barcelona, Spain",
+        "position": "Solutions Engineer",
+        "period": "Oct 2020 - Jun 2023",
+        "description": "Contributor to crafting technological solutions that optimized customer experiences in last-mile logistics. (Backoffices for streamlining external API integrations, monitoring tools, and product design development).",
+        "technologies": [
+            "ReactJS",
+            "TypeScript",
+            "NodeJS",
+            "Jest",
+            "Enzyme",
+            "Cypress",
+            "GraphQL",
+            "RESTful API",
+            "Sequelize",
+            "Grafana",
+            "Jira",
+            "MySQL",
+            "Tableau",
+            "Git",
+            "Figma",
+            "CloudWatch",
+            "S3",
+            "X-Ray",
+            "Jenkins"
+        ]
+    },
+    {
+        "id": "experience-zank-financial",
+        "company": "Zank Financial",
+        "sector": "Financial Services",
+        "location": "Barcelona, Spain",
+        "position": "Frontend Developer Architect",
+        "period": "Nov 2019 - Oct 2020",
+        "description": "Led the front-end architecture of a fintech web app, driving compliance, user experience, and functionality through integrations and improvements following product requirements.",
+        "technologies": [
+            "VueJS",
+            "NodeJS",
+            "HTML5",
+            "CSS/SASS",
+            "RESTful API",
+            "Trello",
+            "MySQL",
+            "Slack",
+            "Postman",
+            "Elastic"
+        ]
+    },
+    {
+        "id": "experience-sdg-group",
+        "company": "SDG Group",
+        "sector": "Business Intelligence and Data Analysis",
+        "location": "Barcelona, Spain",
+        "position": "Frontend Software Engineer",
+        "period": "Nov 2018 - Oct 2019",
+        "description": "Automated front-end workflows and crafted a data-driven chatbot UI with interactive visualizations and an augmented reality mashup app to visualize sales trends, leveraging modern web technologies and chatbot frameworks.",
+        "technologies": [
+            "VueJS",
+            "Angular",
+            "NodeJS",
+            "HTML5",
+            "CSS/SASS",
+            "RESTful API",
+            "Webpack",
+            "Qlik Sense Hub",
+            "Git",
+            "Jira"
+        ]
+    },
+    {
+        "id": "experience-kapsch-trafficcom",
+        "company": "Kapsch TrafficCom AG",
+        "sector": "Intelligent Transportation Solutions",
+        "location": "Buenos Aires, Argentina",
+        "position": "Frontend User Interface Developer",
+        "period": "Jun 2016 - Oct 2017",
+        "description": "Developed a web-based back-office platform for a vehicle free-flow tolling system, streamlining toll collection management across various aspects: Customer management, Payment processing, Tag device management, Vehicle monitoring, and others.",
+        "technologies": [
+            "Angular",
+            "NodeJS",
+            "HTML5",
+            "CSS/SASS",
+            "RESTful API",
+            "Swagger",
+            "JasperReports",
+            "SQL Server",
+            "Microsoft TFS"
+        ]
+    },
+    {
+        "id": "experience-pdvsa",
+        "company": "Petroleum of Venezuela (PDVSA)",
+        "sector": "Energy and Hydrocarbons",
+        "location": "Caracas, Venezuela",
+        "position": "Product Software Engineer",
+        "period": "May 2011 - Jan 2016",
+        "description": "Collaborated with cross-functional teams to conceive, design, develop, and deliver a real-time web app for economic scenario analysis, leveraging GIS and data intelligence tools to visualize, analyze, and model geoscience, financial, and hydrocarbon production data, empowering data-driven decision-making.",
+        "technologies": [
+            "jQuery",
+            "PHP",
+            "MySQL",
+            "HTML5",
+            "CSS/SASS",
+            "HighCharts",
+            "R",
+            "MySQL",
+            "PostgreSQL",
+            "Pentaho BI",
+            "ArcGIS",
+            "Adobe Creative Suite"
+        ]
+    },
+    {
+        "id": "experience-capem",
+        "company": "Savings and Loan Association of Miranda’s Public Employees (CAPEM)",
+        "sector": "Non-profit Finances",
+        "location": "Los Teques, Venezuela",
+        "position": "IT Systems Responsible",
+        "period": "Nov 2009 - May 2011",
+        "description": "Spearheaded the design and development of a web-based CRM, integrating departments to enhance customer service management and crafting a self-service kiosk for automated queue management and balance inquiries.",
+        "technologies": [
+            "jQuery",
+            "HTML5",
+            "Flash Action Script 3",
+            "PHP",
+            "MySQL"
+        ]
+    }
+]
