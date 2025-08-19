@@ -1,0 +1,16 @@
+---
+import { getCollection } from 'astro:content';
+import { Section } from "../";
+
+const experiences = await getCollection('experiences');
+---
+
+<Section title="Professional Experience" class="space-y-4">
+    {experiences.map(experience => (
+        <article class="card bg-base-300 rounded-box p-4 shadow-md">
+            <h2 class="text-xl font-semibold">{experience.data.position}</h2>
+            <p class="text-sm text-gray-600">{experience.data.company}</p>
+            <p class="mt-2">{experience.data.description}</p>
+        </article>
+    ))}
+</Section>

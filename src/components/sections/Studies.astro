@@ -1,0 +1,16 @@
+---
+import { getCollection } from 'astro:content';
+import { Section } from "../";
+
+const studies = await getCollection('studies');
+---
+
+<Section title="Studies" class="space-y-4">
+    {studies.map(studies => (
+        <article class="card bg-base-300 rounded-box p-4 shadow-md">
+            <h2 class="text-xl font-semibold">{studies.data.degree}</h2>
+            <p class="text-sm text-gray-600">{studies.data.level}</p>
+            <p class="mt-2">{studies.data.description}</p>
+        </article>
+    ))}
+</Section>

@@ -1,0 +1,17 @@
+---
+import { getCollection } from 'astro:content';
+import { Section } from "../";
+
+const projects = await getCollection('projects');
+---
+
+<Section title="Projects" class="space-y-4">
+    {projects.map(project => (
+        <article class="card bg-base-300 rounded-box p-4 shadow-md">
+            <h2 class="text-xl font-semibold">{project.data.title}</h2>
+            <p class="text-sm text-gray-600">{project.data.showcased_at}</p>
+            <p class="mt-2">{project.data.contributions}</p>
+            <a href={project.data.url} class="text-blue-500 hover:underline mt-2 block">View Project</a>
+        </article>
+    ))}
+</Section>
