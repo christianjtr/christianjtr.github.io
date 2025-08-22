@@ -1,12 +1,8 @@
 ---
 import "@styles/global.css";
-import { getCollection } from 'astro:content';
 import { Header, Footer, MainWrapper } from "@layouts";
 
 const pageTitle = "My page title";
-
-const experiences = await getCollection('experiences');
-
 ---
 
 <html lang="en" data-theme="cmyk">
@@ -19,7 +15,7 @@ const experiences = await getCollection('experiences');
     </head>
     <body>
         <Header />
-        <MainWrapper>
+        <MainWrapper />
         <Footer />
     </body>
 </html>

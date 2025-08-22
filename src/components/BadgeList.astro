@@ -1,0 +1,17 @@
+---
+type BadgeContentType = string | number;
+
+interface Props {
+    items: BadgeContentType[];
+    wrapperClass?: string;
+    badgeClass?: string;
+}
+
+const { items, badgeClass = 'badge-neutral badge-outline', wrapperClass = 'flex flex-wrap gap-2' } = Astro.props;
+---
+
+<div class={wrapperClass}>
+    {items.map((item) => (
+        <div class={`badge ${badgeClass}`}>{item}</div>
+    ))}
+</div>

@@ -8,6 +8,7 @@ const { title, class: className } = Astro.props;
 ---
 
 <section class={className}>
-    <h1 class="text-2xl font-bold">{title}</h1>
+    <!-- <h2 class="text-base font-semibold leading-7 text-pink-500">Key highlights</h2> -->
+    <h1 class="mt-2 text-2xl font-semibold tracking-tight text-gray-900 sm:text-3xl">{title}</h1>
     <slot/>
 </section>

@@ -7,10 +7,28 @@ const studies = await getCollection('studies');
 
 <Section title="Studies" class="space-y-4">
     {studies.map(studies => (
-        <article class="card bg-base-300 rounded-box p-4 shadow-md">
-            <h2 class="text-xl font-semibold">{studies.data.degree}</h2>
-            <p class="text-sm text-gray-600">{studies.data.level}</p>
-            <p class="mt-2">{studies.data.description}</p>
-        </article>
+        // <article class="card bg-base-300 rounded-box p-4 shadow-md">
+        //     <h2 class="text-xl font-semibold">{studies.data.degree}</h2>
+        //     <p class="text-sm text-gray-600">{studies.data.level}</p>
+        //     <p class="mt-2">{studies.data.description}</p>
+        // </article>
+        <div class="card bg-base-100 w-96 shadow-sm">
+        <figure>
+            <img
+            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+            alt="Shoes" />
+        </figure>
+        <div class="card-body">
+            <h2 class="card-title">
+                {studies.data.degree}
+                <div class="badge badge-secondary">{studies.data.level}</div>
+            </h2>
+            <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+            <div class="card-actions justify-end">
+            <div class="badge badge-outline">Fashion</div>
+            <div class="badge badge-outline">Products</div>
+            </div>
+        </div>
+        </div>
     ))}
 </Section>
