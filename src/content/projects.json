@@ -2,7 +2,7 @@
     {
         "id": "project-augmented-intelligence",
         "title": "Augmented Intelligence for Data Visualization Analytics",
-        "showcased_at": "Qlik Connections Global Conference",
+        "showcased_at": "Qlik Qonnections Global Conference",
         "location": "Dallas TX, USA",
         "flag": "🇺🇲",
         "owner": "© SDG Group",
@@ -17,7 +17,8 @@
             "DialogFlow",
             "AR.js"
         ],
-        "contributions": "Collaborated with engineers to create an AR/MR user experience, empowering them to make data-driven decisions through an app to visualize sales trends and a chatbot for data visualization."
+        "contributions": "Collaborated with engineers to create an AR/MR user experience, empowering them to make data-driven decisions through an app to visualize sales trends and a chatbot for data visualization.",
+        "overview": "The concept of \"Augmented Intelligence\" is a great example of how we can make data more accessible. The project was conceived to achieve data democratization by making it easier for all employees—not just data experts—to find insights in large datasets. To achieve this, the project uses Mixed Reality, Augmented Reality, and Virtual Assistants to make interacting with and understanding data more intuitive and user-friendly."
     },
     {
         "id": "project-kml-visualization",
@@ -25,7 +26,7 @@
         "showcased_at": "6th Congress of Cartographic Science",
         "location": "Buenos Aires, Argentina",
         "flag": "🇦🇷",
-        "owner": "© PDVSA",
+        "owner": "© Petroleum of Venezuela (PDVSA)",
         "url": "https://www.ign.gob.ar/Novedades/FinalizoElSextoCongresoDeLaCienciaCartogr%C3%A1fica.",
         "period": "June 2012",
         "contribute_as": "Product Developer Engineer",
@@ -36,7 +37,8 @@
             "ArcGIS",
             "Global Mapper"
         ],
-        "contributions": "Worked alongside geologists and geographers to improve the accessibility and usability of geographical data for the Venezuelan petroleum industry; by automatically creating and editing KML/KMZ files."
+        "contributions": "Worked alongside geologists and geographers to improve the accessibility and usability of geographical data for the Venezuelan petroleum industry; by automatically creating and editing KML/KMZ files.",
+        "overview": "The project's central focus was to make complex geographical data from the Venezuelan petroleum industry—such as geological formations, oil fields, and infrastructure—more accessible and user-friendly for a wider audience. The main challenge was that this data was likely stored in specialized formats that required specific, often expensive, software like ArcGIS to view."
     },
     {
         "id": "project-opportunity-portfolios-sipo",
@@ -44,7 +46,7 @@
         "showcased_at": "American Association of Petroleum Geologists",
         "location": "Houston TX, USA",
         "flag": "🇺🇲",
-        "owner": "© PDVSA",
+        "owner": "© Petroleum of Venezuela (PDVSA)",
         "url": "https://www.searchanddiscovery.com/pdfz/documents/2011/40798garcia/ndx_garcia.pdf.html",
         "period": "August 2011",
         "contribute_as": "Product Software Engineer · Data Analyst",
@@ -59,6 +61,7 @@
             "HighCharts",
             "ArcGIS"
         ],
-        "contributions": "Partnered with a team of engineers, economists, geologists, and geographers in creating and launching a real-time web application to facilitate economic scenario analysis and effectively visualize both geoscience and financial data."
+        "contributions": "Partnered with a team of engineers, economists, geologists, and geographers in creating and launching a real-time web application to facilitate economic scenario analysis and effectively visualize both geoscience and financial data.",
+        "overview": "The Integrated System of Opportunity Portfolios (SIPO) is a web-based information system for the oil business. It provides reliable, real-time information to eliminate redundancy and support decision-making. SIPO is also a hybrid web application that combines two open-source products: Fusion-Charts Free for displaying analysis charts in economic simulations and the Google Earth API for incorporating new geographic and geoscience data."
     }
 ]
