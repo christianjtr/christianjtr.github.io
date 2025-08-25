@@ -1,34 +1,25 @@
 ---
 import { getCollection } from 'astro:content';
-import { Section } from "../";
+import { BadgeList, Section } from "../";
 
 const studies = await getCollection('studies');
 ---
 
 <Section title="Studies" class="space-y-4">
-    {studies.map(studies => (
-        // <article class="card bg-base-300 rounded-box p-4 shadow-md">
-        //     <h2 class="text-xl font-semibold">{studies.data.degree}</h2>
-        //     <p class="text-sm text-gray-600">{studies.data.level}</p>
-        //     <p class="mt-2">{studies.data.description}</p>
-        // </article>
-        <div class="card bg-base-100 w-96 shadow-sm">
-        <figure>
-            <img
-            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-            alt="Shoes" />
-        </figure>
-        <div class="card-body">
-            <h2 class="card-title">
-                {studies.data.degree}
-                <div class="badge badge-secondary">{studies.data.level}</div>
-            </h2>
-            <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-            <div class="card-actions justify-end">
-            <div class="badge badge-outline">Fashion</div>
-            <div class="badge badge-outline">Products</div>
+    {studies.map(({ data: study }) => (
+        <article class="flex gap-3">
+            <div class="card bg-amber-600 w-1/4 p-3 text-right">
+                <span>{study.location}</span>
+                <h3 class="text-lg font-semibold">{study.level}</h3>
+                <span class="text-sm text-gray-600">{study.subject}</span>
+                <span class="mt-2">{study.period}</span>
             </div>
-        </div>
-        </div>
+            <div class="card bg-blue-300 w-3/4 p-3">
+                <h2 class="text-xl font-semibold">{study.degree}</h2>
+                <span class="text-sm text-gray-600">{study.school}</span>
+                <p class="my-3">{study.description}</p>
+                <BadgeList items={study.topics} />
+            </div>
+        </article>
     ))}
 </Section>

@@ -1,16 +1,25 @@
 ---
 import { getCollection } from 'astro:content';
-import { Section } from "../";
+import { BadgeList, Section } from "../";
 
 const experiences = await getCollection('experiences');
+const countries = [...new Set(experiences.map(experience => experience.data.country))];
 ---
 
-<Section title="Professional Experience" class="space-y-4">
-    {experiences.map(experience => (
-        <article class="card bg-base-300 rounded-box p-4 shadow-md">
-            <h2 class="text-xl font-semibold">{experience.data.position}</h2>
-            <p class="text-sm text-gray-600">{experience.data.company}</p>
-            <p class="mt-2">{experience.data.description}</p>
+<Section title="Professional Experiences" class="space-y-4">
+    {experiences.map(({ data: experience }) => (
+        <article class="flex gap-3">
+            <div class="card bg-amber-400 w-1/4 p-3 text-right">
+                <span>{experience.location}</span>
+                <h3 class="text-lg font-semibold">{experience.company}</h3>
+                <span class="text-sm text-gray-600">{experience.sector}</span>
+                <span class="mt-2">{experience.period}</span>
+            </div>
+            <div class="card bg-blue-200 w-3/4 p-3">
+                <h2 class="text-xl font-semibold">{experience.position}</h2>
+                <p class="my-3">{experience.description}</p>
+                <BadgeList items={experience.technologies} />
+            </div>
         </article>
     ))}
 </Section>
