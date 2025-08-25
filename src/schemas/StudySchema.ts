@@ -8,6 +8,7 @@ export const StudySchema = z.object({
     level: z.string(),
     period: z.string(),
     description: z.string(),
+    location: z.string(),
     topics: z.array(z.string()),
     subject: z.string(),
 });
