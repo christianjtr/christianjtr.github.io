@@ -3,6 +3,7 @@ import { file } from 'astro/loaders';
 import { ProjectSchema } from './schemas/ProjectSchema';
 import { ExperienceSchema } from './schemas/ExperienceSchema';
 import { StudySchema } from './schemas/StudySchema';
+import { ExperimentSchema } from './schemas/ExperimentSchema';
 
 // const about = defineCollection({
 //     loader: file("./src/content/about.json"),
@@ -57,4 +58,9 @@ const studies = defineCollection({
     schema: StudySchema,
 });
 
-export const collections = { experiences, studies, projects };
+const experiments = defineCollection({
+    loader: file("./src/content/experiments.json"),
+    schema: ExperimentSchema,
+});
+
+export const collections = { experiences, studies, projects, experiments };

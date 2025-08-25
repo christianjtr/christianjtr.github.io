@@ -1,0 +1,29 @@
+---
+import { getCollection } from 'astro:content';
+import { BadgeList, Section } from "../";
+
+const experiments = await getCollection('experiments');
+
+---
+
+<Section title="Case of Studies and Experiments">
+    <div class="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-2">
+        {experiments.map(({ data: experiment }) => (
+            <article class="card bg-base-100 overflow-hidden rounded-lg shadow-sm">
+                <figure>
+                    <img src={experiment.image} alt={experiment.title} />
+                </figure>
+                <div class="card-body">
+                    <div class="badge badge-secondary badge-soft badge-sm mb-2">
+                        {experiment.category}
+                    </div>
+                    <h2 class="card-title">{experiment.title}</h2>
+                    <p class="mb-10">{experiment.description}</p>
+                    <div class="card-actions"> 
+                        <BadgeList items={experiment.tags} />
+                    </div>
+                </div>
+        </article>
+        ))}
+    </div>
+</Section>

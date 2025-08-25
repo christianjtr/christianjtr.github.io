@@ -1,0 +1,154 @@
+[
+    {
+        "id": "experiment-healthy-culture-engineering-teams",
+        "title": "Case of Study: Promoting a healthy culture within engineering teams",
+        "description": "Examine the critical role of leadership in fostering a healthy culture within engineering teams. We argue that a technology leader's role extends beyond strategy and implementation to actively promoting a positive work environment.",
+        "image": "/src/assets/images/engineer_management.jpg",
+        "tags": [
+            "Engineering Management",
+            "Leadership Development",
+            "Team Dynamics",
+            "Change Management",
+            "Psychological Safety",
+            "Organizational Culture"
+        ],
+        "role": "Author",
+        "category": "Case of Study"
+    },
+    {
+        "id": "experiment-bi-adventure-works",
+        "title": "Business Intelligence Project: Adventure Works Cycles",
+        "description": "Enhance knowledge creation by streamlining data management through the creation of ETL pipelines and data refinement processes. This enables smarter, data-driven decisions supported by a custom web application and dashboards.",
+        "image": "/src/assets/images/bi_project.jpg",
+        "tags": [
+            "Data Analysis / Visualization",
+            "Business Intelligence",
+            "Databases",
+            "ETL / DWH",
+            "Data-driven applications"
+        ],
+        "role": "Author",
+        "category": "Project"
+    },
+    {
+        "id": "experiment-circuitos",
+        "title": "Circuitos",
+        "description": "Discover and share your artistic and cultural interests with a like-minded community. Our platform is a go-to for anyone who wants to explore new experiences and connect with others who love art as much as they do.",
+        "image": "/src/assets/images/circuitos.jpg",
+        "tags": [
+            "Product Design",
+            "User Experience",
+            "A/B Testing",
+            "Prototyping",
+            "Usability",
+            "Design Thinking",
+            "User Research"
+        ],
+        "role": "Contributor",
+        "category": "Project"
+    },
+    {
+        "id": "experiment-idea-cultural-activities-app",
+        "title": "Idea: Cultural activities application",
+        "description": "This platform helps you find and participate in cultural events by creating a network tailored to your specific preferences. We make it simple to discover and connect with a community of people who share your artistic and cultural interests.",
+        "image": "/src/assets/images/design_process.jpg",
+        "tags": [
+            "e-Business",
+            "Lean Startup",
+            "Design Thinking",
+            "Empathy Maps",
+            "Business Model Canvas",
+            "Prototyping",
+            "SEO / SEA",
+            "Digital Marketing"
+        ],
+        "role": "Author",
+        "category": "Project"
+    },
+    {
+        "id": "experiment-tv-movie-streaming-like-webapp",
+        "title": "Web application based on the movie database (TMDB)",
+        "description": "Full-stack project showcasing how React and Express work together to deliver a movie-tv-like application. Apart from implementing an API RESTFul, it includes a simple CD/CI process leveraged on GitHub actions and Docker.",
+        "image": "/src/assets/images/tv-app.jpg",
+        "tags": [
+            "FullStack Development",
+            "ReactJS / NodeJS",
+            "Tailwind CSS",
+            "Unit / E2E Testing",
+            "Jest / Cypress",
+            "TypeScript",
+            "Docker",
+            "GitHub Actions",
+            "CI/CD process"
+        ],
+        "role": "Author",
+        "category": "Proof of Concept (PoC)"
+    },
+    {
+        "id": "experiment-restaurant-browser-app",
+        "title": "Restaurant's browser",
+        "description": "Conceptual application to see the closest restaurants and their menus/products. It's built by using React+TS and also the Geolocation API.",
+        "image": "/src/assets/images/restaurant_browser.jpg",
+        "tags": [
+            "Front-end development",
+            "ReactJS",
+            "Tailwind CCS",
+            "Vite",
+            "Geolocation API",
+            "Data persistence - LocalStorage",
+            "Daisy UI",
+            "TypeScript"
+        ],
+        "role": "Author",
+        "category": "Proof of Concept (PoC)"
+    },
+    {
+        "id": "experiment-pokedex-pwa-application",
+        "title": "Pokédex",
+        "description": "Progressive web application (PWA) built using Svelte, a modern JavaScript framework. It leverages the Pokémon API to provide a comprehensive and engaging Pokédex experience, data persistence with LocalStorage, the SpeechSynthesis, and Plotly charts.",
+        "image": "/src/assets/images/pokedex.jpg",
+        "tags": [
+            "Front-end development",
+            "Svelte",
+            "Bulma CSS",
+            "Vite+PWA",
+            "SpeechSynthesis API",
+            "Data persistence",
+            "Plotly JavaScript Open Source Graphing Library"
+        ],
+        "role": "Author",
+        "category": "Proof of Concept (PoC)"
+    },
+    {
+        "id": "experiment-data-visualization-error-reporting-chart",
+        "title": "Data Visualization for error reporting charts",
+        "description": "Let's create an interactive chart for a BI application using the D3.js library. This chart should allow users to visualize data by day, week, month, or year.",
+        "image": "/src/assets/images/chart.jpg",
+        "tags": [
+            "Front-end development",
+            "VueJS",
+            "D3/C3",
+            "Vuetify",
+            "Vuex - State management",
+            "SASS",
+            "NodeJS - Express"
+        ],
+        "role": "Author",
+        "category": "Proof of Concept (PoC)"
+    },
+    {
+        "id": "experiment-erp-management-dashboard",
+        "title": "Management dashboard",
+        "description": "Employee management dashboard with CRUD functionality (Create, Read, Update, Delete) on the client-side.",
+        "image": "/src/assets/images/erp_management.jpg",
+        "tags": [
+            "Front-end development",
+            "VueJS",
+            "Material Design",
+            "Vuetify",
+            "Vuex - State management"
+        ],
+        "role": "Author",
+        "category": "Proof of Concept (PoC)"
+    }
+]

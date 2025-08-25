@@ -1,5 +1,4 @@
 import { z } from 'astro:content';
-import { count } from 'console';
 
 export const ExperienceSchema = z.object({
     id: z.string(),
