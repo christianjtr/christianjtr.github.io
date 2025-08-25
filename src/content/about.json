@@ -1,0 +1,93 @@
+{
+    "fullName": "Christian José Torrealba Rondón",
+    "profession": "Product Systems Engineering | Data & Web | User Experience",
+    "linkedInURL": "https://www.linkedin.com/in/christianjtr/",
+    "githubURL": "https://github.com/christianjtr",
+    "hobbies": "☀️ 🏖️ 🎡 🍦 🕹️ 🏃🏻 🐶",
+    "introduction": {
+        "greetings": "<span class='pre-title'>👋🏻 Hi there folks, I am</span><h1 class='title' id='home'>Christian José<br />Torrealba Rondón</h1>",
+        "presentation": "Product-oriented professional focused on <span class='highlighted-text'>systems engineering and design thinking skills</span> to deliver user-centric solutions that drive impact",
+        "about": "A passionate technologist in creating digital experiences. I enjoy participating in all project stages, from conception and beyond"
+    },
+    "languages": [
+        {
+            "id": "language-1",
+            "emoji": "💃🏻",
+            "language": "Spanish",
+            "proficiency": "Native speaker",
+            "proficiencyValue": 100
+        },
+        {
+            "id": "language-2",
+            "emoji": "💂🏻",
+            "language": "English",
+            "proficiency": "Professional (B2+)",
+            "proficiencyValue": 100
+        },
+        {
+            "id": "language-3",
+            "emoji": "🥐",
+            "language": "French",
+            "proficiency": "Pre-Intermediate (B1+)",
+            "proficiencyValue": 100
+        }
+    ],
+    "knowledge": [
+        "Agile Leadership, Coaching, Product ownership",
+        "Strategic Thinking and Data Analytical Skills",
+        "Business Intelligence and API Design",
+        "Product Development and Digital Marketing",
+        "Experimentation, PoCs, and Tech Research"
+    ],
+    "aptitudes": [
+        "Creative thinker at facing challenges",
+        "Dedicated to continuous learning",
+        "Fascinated by products and service design",
+        "Encourage synergies and collaboration",
+        "Goals-oriented and self-motivated",
+        "Good listener with a strong work ethic"
+    ],
+    "tech_knowledge": [
+        "💅 Web applications, user interfaces, and front-end tooling",
+        "📊 Data modeling, ETL, and visualization",
+        "👾 API Design, services and integrations"
+    ],
+    "memberships": [
+        {
+            "id": "membership-1",
+            "type": "Diploma",
+            "organization": "Massachusetts Institute of Technology (MIT)",
+            "imageURL": "/images/mit_logo.png",
+            "degree": "System Thinking for Project Management",
+            "showMembershipId": false,
+            "member_no": null,
+            "showURL": true,
+            "url": "https://www.credential.net/b7cce254-083d-414b-aabc-81afc07ba4ed#gs.4vcqj4",
+            "display": true
+        },
+        {
+            "id": "membership-2",
+            "type": "Membership",
+            "organization": "Venezuelan College of Engineers",
+            "imageURL": "/images/colegio_ingenieros_vzla.png",
+            "degree": null,
+            "showMembershipId": true,
+            "member_no": "209752",
+            "showURL": false,
+            "url": null,
+            "display": true
+        },
+        {
+            "id": "membership-3",
+            "type": "Membership",
+            "organization": "Society of Petroleum Engineers",
+            "imageURL": "/images/spe.png",
+            "degree": null,
+            "showMembershipId": true,
+            "member_no": "4403695",
+            "showURL": false,
+            "url": null,
+            "display": false
+        }
+    ]
+}

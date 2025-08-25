@@ -2,10 +2,11 @@
     {
         "id": "experience-zeelo",
         "company": "Zeelo",
+        "country": "Spain",
         "sector": "Intelligent Mobility Solutions",
         "location": "Barcelona, Spain",
         "position": "Senior Product Software Engineer (Front-end focus)",
-        "period": "May 2024 - Present",
+        "period": "May 2024 - Jul 2025",
         "description": "Collaboratively driving the evolution of the web application platform by anticipating opportunities, ensuring robust application quality, and contributing to innovative feature development that aligns with industry trends in the mobility sector.",
         "technologies": [
             "ReactJS",
@@ -24,9 +25,10 @@
     {
         "id": "experience-stuart",
         "company": "Stuart Delivery",
+        "country": "Spain",
         "sector": "Logistic Services",
         "location": "Barcelona, Spain",
-        "position": "Solutions Engineer",
+        "position": "Solutions Engineer · Full Stack Software Engineer",
         "period": "Oct 2020 - Jun 2023",
         "description": "Contributor to crafting technological solutions that optimized customer experiences in last-mile logistics. (Backoffices for streamlining external API integrations, monitoring tools, and product design development).",
         "technologies": [
@@ -54,11 +56,12 @@
     {
         "id": "experience-zank-financial",
         "company": "Zank Financial",
+        "country": "Spain",
         "sector": "Financial Services",
         "location": "Barcelona, Spain",
         "position": "Frontend Developer Architect",
         "period": "Nov 2019 - Oct 2020",
-        "description": "Led the front-end architecture of a fintech web app, driving compliance, user experience, and functionality through integrations and improvements following product requirements.",
+        "description": "Led the front-end architecture of a fintech web app, driving compliance, user experience, and functionality through integrations (payment gateway, e-mailing/SMS systems, loggers) and improvements following product requirements.",
         "technologies": [
             "VueJS",
             "NodeJS",
@@ -75,6 +78,7 @@
     {
         "id": "experience-sdg-group",
         "company": "SDG Group",
+        "country": "Spain",
         "sector": "Business Intelligence and Data Analysis",
         "location": "Barcelona, Spain",
         "position": "Frontend Software Engineer",
@@ -96,6 +100,7 @@
     {
         "id": "experience-kapsch-trafficcom",
         "company": "Kapsch TrafficCom AG",
+        "country": "Argentina",
         "sector": "Intelligent Transportation Solutions",
         "location": "Buenos Aires, Argentina",
         "position": "Frontend User Interface Developer",
@@ -116,9 +121,10 @@
     {
         "id": "experience-pdvsa",
         "company": "Petroleum of Venezuela (PDVSA)",
+        "country": "Venezuela",
         "sector": "Energy and Hydrocarbons",
         "location": "Caracas, Venezuela",
-        "position": "Product Software Engineer",
+        "position": "Product Software Engineer (Web technologies, Data Engineering, and I+D+i)",
         "period": "May 2011 - Jan 2016",
         "description": "Collaborated with cross-functional teams to conceive, design, develop, and deliver a real-time web app for economic scenario analysis, leveraging GIS and data intelligence tools to visualize, analyze, and model geoscience, financial, and hydrocarbon production data, empowering data-driven decision-making.",
         "technologies": [
@@ -128,7 +134,7 @@
             "HTML5",
             "CSS/SASS",
             "HighCharts",
-            "R",
+            "R Statistics",
             "MySQL",
             "PostgreSQL",
             "Pentaho BI",
@@ -139,6 +145,7 @@
     {
         "id": "experience-capem",
         "company": "Savings and Loan Association of Miranda’s Public Employees (CAPEM)",
+        "country": "Venezuela",
         "sector": "Non-profit Finances",
         "location": "Los Teques, Venezuela",
         "position": "IT Systems Responsible",

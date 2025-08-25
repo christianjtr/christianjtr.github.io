@@ -7,7 +7,7 @@
         "level": "Specialization",
         "period": "Sep 2023 - Jun 2024",
         "location": "Spain",
-        "description": "CTO focus formation intended to successfully lead technological projects and acquire the essential skills of the role.",
+        "description": "Strategic formation focused on equipping future CTOs with the skills to successfully lead technological projects and drive innovation.",
         "topics": [
             "Tech Leadership",
             "Agile Project Management",
@@ -26,7 +26,7 @@
         "level": "Master",
         "period": "Oct 2019 - Jun 2020",
         "location": "Spain",
-        "description": "Studies related to the effective management of different Internet-based businesses, and how to implement marketing plans, customer experience strategies, digital product developments, and e-commerce optimization.",
+        "description": "Expertise in the strategic management of Internet-based businesses, with a focus on implementing robust marketing plans, enhancing customer experience, developing digital products, and optimizing e-commerce performance.",
         "topics": [
             "Lean Startup",
             "Digital Marketing",
@@ -44,7 +44,7 @@
         "level": "Postgraduate",
         "period": "Nov 2017 - Jul 2018",
         "location": "Spain",
-        "description": "Studies related to the development and management of business intelligence projects, data analysis, data mining, data visualization, machine learning, and big data.",
+        "description": "Focused on developing and managing business intelligence projects to drive data-informed decision-making. Proficient in a range of analytical techniques, including data mining, data visualization, machine learning, and big data analysis.",
         "topics": [
             "Data Modeler",
             "Big Data",
@@ -63,7 +63,7 @@
         "level": "Bootcamp",
         "period": "Mar 2017 - Jul 2017",
         "location": "Argentina",
-        "description": "Studies related to the process of developing digital products focused on user experience.",
+        "description": "Comprehensive training in digital product development with an emphasis on user experience (UX) design.",
         "topics": [
             "Design Thinking",
             "Usability",
@@ -82,7 +82,7 @@
         "level": "Postgraduate",
         "period": "Sep 2014 - Jul 2015",
         "location": "Venezuela",
-        "description": "Studies related to the development of enterprise management skills.",
+        "description": "Developed a robust skillset in enterprise management, encompassing strategic planning, financial analysis, and cross-functional leadership to drive organizational growth.",
         "topics": [
             "Leadership",
             "Coaching and Teamwork",
@@ -101,7 +101,7 @@
         "level": "Specialization",
         "period": "Sep 2013 - Apr 2014",
         "location": "Venezuela",
-        "description": "Studies related to business intelligence with open source technologies.",
+        "description": "Applied knowledge of open-source business intelligence tools to analyze large datasets and create interactive dashboards that drove data-informed decisions.",
         "topics": ["Data Cleansing", "ETL Design", "DWH", "Open Data Projects"],
         "subject": "Business Intelligence"
     },
