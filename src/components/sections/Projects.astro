@@ -5,7 +5,7 @@ import { BadgeList, ExternalLinkButton, Section } from "../";
 const projects = await getCollection('projects');
 ---
 
-<Section title="Showcased projects" class="space-y-6">
+<Section title="Showcased Projects" class="space-y-6">
     {projects.map(({ data: project }) => (
         <article>
             <div class="card bg-zinc-50 border-zinc-200 text-primary-content">
