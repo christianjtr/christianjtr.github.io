@@ -1,14 +1,15 @@
 ---
-interface Props {
-    title: string;
-    class?: string;
+import type { HTMLAttributes } from 'astro/types';
+
+interface Props extends HTMLAttributes<'section'> {
+    headingTitle: string;
+    headingClass?: string;
 }
 
-const { title, class: className } = Astro.props;
+const { headingTitle, headingClass = "mt-2 text-2xl font-semibold tracking-tight text-gray-900 sm:text-3xl", ...rest } = Astro.props;
 ---
 
-<section class={className}>
-    <!-- <h2 class="text-base font-semibold leading-7 text-pink-500">Key highlights</h2> -->
-    <h1 class="mt-2 text-2xl font-semibold tracking-tight text-gray-900 sm:text-3xl">{title}</h1>
+<section class={rest.class} id={rest.id} {...rest}>
+    <h1 class={headingClass}>{headingTitle}</h1>
     <slot/>
 </section>

@@ -5,7 +5,7 @@ import { BadgeList, ExternalLinkButton, Section } from "../";
 const projects = await getCollection('projects');
 ---
 
-<Section title="Showcased Projects" class="space-y-6">
+<Section headingTitle="Showcased Projects" class="space-y-6">
     {projects.map(({ data: project }) => (
         <article>
             <div class="card bg-zinc-50 border-zinc-200 text-primary-content">
@@ -28,7 +28,7 @@ const projects = await getCollection('projects');
                                 <span class="w-full block">{project.showcased_at}</span>
                                 <span class="w-full block">{project.flag} {project.location}</span>
                                 <span class="w-full block">{project.period}</span>
-                                <ExternalLinkButton>View details</ExternalLinkButton>
+                                <ExternalLinkButton class="flex gap-2">View details</ExternalLinkButton>
                             </p>
                         </div>
                     </div>

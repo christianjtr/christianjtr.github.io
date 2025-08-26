@@ -5,7 +5,7 @@ import { BadgeList, Section } from "../";
 const studies = await getCollection('studies');
 ---
 
-<Section title="Studies" class="space-y-4">
+<Section headingTitle="Studies" class="space-y-4">
     {studies.map(({ data: study }) => (
         <article class="flex gap-3">
             <div class="card bg-amber-600 w-1/4 p-3 text-right">

@@ -6,7 +6,7 @@ const experiences = await getCollection('experiences');
 const countries = [...new Set(experiences.map(experience => experience.data.country))];
 ---
 
-<Section title="Professional Experiences" class="space-y-4">
+<Section headingTitle="Professional Experiences" class="space-y-4">
     {experiences.map(({ data: experience }) => (
         <article class="flex gap-3">
             <div class="card bg-amber-400 w-1/4 p-3 text-right">
