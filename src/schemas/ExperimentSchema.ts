@@ -8,4 +8,6 @@ export const ExperimentSchema = z.object({
     tags: z.array(z.string()),
     role: z.string(),
     category: z.string(),
+    type: z.string(),
+    url: z.string().url().nullable(),
 });
