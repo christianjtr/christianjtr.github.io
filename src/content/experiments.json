@@ -13,7 +13,9 @@
             "Organizational Culture"
         ],
         "role": "Author",
-        "category": "Case of Study"
+        "type": "Thought Leadership Essay",
+        "category": "Case of Study",
+        "url": null
     },
     {
         "id": "experiment-bi-adventure-works",
@@ -22,13 +24,14 @@
         "image": "/src/assets/images/bi_project.jpg",
         "tags": [
             "Data Analysis / Visualization",
-            "Business Intelligence",
             "Databases",
             "ETL / DWH",
             "Data-driven applications"
         ],
         "role": "Author",
-        "category": "Project"
+        "type": "BI and Data Engineering",
+        "category": "Project",
+        "url": null
     },
     {
         "id": "experiment-circuitos",
@@ -45,7 +48,9 @@
             "User Research"
         ],
         "role": "Contributor",
-        "category": "Project"
+        "type": "UX Design and Research Concept",
+        "category": "Project",
+        "url": null
     },
     {
         "id": "experiment-idea-cultural-activities-app",
@@ -63,12 +68,14 @@
             "Digital Marketing"
         ],
         "role": "Author",
-        "category": "Project"
+        "type": "e-Business Concept and Market Niche Analysis",
+        "category": "Project",
+        "url": null
     },
     {
         "id": "experiment-tv-movie-streaming-like-webapp",
-        "title": "Web application based on the movie database (TMDB)",
-        "description": "Full-stack project showcasing how React and Express work together to deliver a movie-tv-like application. Apart from implementing an API RESTFul, it includes a simple CD/CI process leveraged on GitHub actions and Docker.",
+        "title": "The Movie and TV series database (TMDB)",
+        "description": "This is a full-stack web application designed for anyone who loves movies and TV shows. It provides a seamless, fast way to browse a comprehensive catalog of titles, giving you all the details you need in one place. You can explore a wide variety of content through a user-friendly interface.",
         "image": "/src/assets/images/tv-app.jpg",
         "tags": [
             "FullStack Development",
@@ -82,12 +89,14 @@
             "CI/CD process"
         ],
         "role": "Author",
-        "category": "Proof of Concept (PoC)"
+        "category": "Proof of Concept (PoC)",
+        "type": "Web Application (Movie/TV Catalog)",
+        "url": "https://christianjtr.github.io/tv-app/"
     },
     {
         "id": "experiment-restaurant-browser-app",
         "title": "Restaurant's browser",
-        "description": "Conceptual application to see the closest restaurants and their menus/products. It's built by using React+TS and also the Geolocation API.",
+        "description": "This is a conceptual application designed to help users discover and connect with local restaurants. Built as a Progressive Web Application (PWA), it gives you the convenience of a native app without requiring a download from an app store. Using your device's Geolocation API, the app instantly finds the restaurants closest to you.",
         "image": "/src/assets/images/restaurant_browser.jpg",
         "tags": [
             "Front-end development",
@@ -100,29 +109,31 @@
             "TypeScript"
         ],
         "role": "Author",
-        "category": "Proof of Concept (PoC)"
+        "category": "Proof of Concept (PoC)",
+        "type": "Web Application (PWA)",
+        "url": "https://christianjtr.github.io/restaurant-browser-app/"
     },
     {
-        "id": "experiment-pokedex-pwa-application",
-        "title": "Pokédex",
-        "description": "Progressive web application (PWA) built using Svelte, a modern JavaScript framework. It leverages the Pokémon API to provide a comprehensive and engaging Pokédex experience, data persistence with LocalStorage, the SpeechSynthesis, and Plotly charts.",
-        "image": "/src/assets/images/pokedex.jpg",
+        "id": "experiment-erp-management-dashboard",
+        "title": "Management Dashboard",
+        "description": "This is a management dashboard designed to streamline employee data handling. It's a simple web application that provides you with complete control over your team's information. With straightforward CRUD (Create, Read, Update, Delete) functionality.",
+        "image": "/src/assets/images/erp_management.jpg",
         "tags": [
             "Front-end development",
-            "Svelte",
-            "Bulma CSS",
-            "Vite+PWA",
-            "SpeechSynthesis API",
-            "Data persistence",
-            "Plotly JavaScript Open Source Graphing Library"
+            "VueJS",
+            "Material Design",
+            "Vuetify",
+            "Vuex - State management"
         ],
         "role": "Author",
-        "category": "Proof of Concept (PoC)"
+        "category": "Proof of Concept (PoC)",
+        "type": "Web Application (BackOffice)",
+        "url": "https://christianjtr.github.io/manage-employees-dashboard/#/"
     },
     {
         "id": "experiment-data-visualization-error-reporting-chart",
-        "title": "Data Visualization for error reporting charts",
-        "description": "Let's create an interactive chart for a BI application using the D3.js library. This chart should allow users to visualize data by day, week, month, or year.",
+        "title": "Visualization Dashboard for Monitoring",
+        "description": "This is a web application designed to help you easily understand complex data. Using the powerful D3.js library, it creates interactive and visually engaging charts for a business intelligence dashboard. You can effortlessly switch between different timeframes—by day, week, month, or year—to analyze error reports and other data.",
         "image": "/src/assets/images/chart.jpg",
         "tags": [
             "Front-end development",
@@ -134,21 +145,27 @@
             "NodeJS - Express"
         ],
         "role": "Author",
-        "category": "Proof of Concept (PoC)"
+        "category": "Proof of Concept (PoC)",
+        "type": "Web Application (Monitoring Dashboard)",
+        "url": null
     },
     {
-        "id": "experiment-erp-management-dashboard",
-        "title": "Management dashboard",
-        "description": "Employee management dashboard with CRUD functionality (Create, Read, Update, Delete) on the client-side.",
-        "image": "/src/assets/images/erp_management.jpg",
+        "id": "experiment-pokedex-pwa-application",
+        "title": "Pokédex",
+        "description": "Progressive web application (PWA) built under Svelte, a modern JavaScript framework. It leverages the Pokémon API to provide a comprehensive and engaging Pokédex experience, data persistence with LocalStorage, the SpeechSynthesis, and Plotly charts.",
+        "image": "/src/assets/images/pokedex.jpg",
         "tags": [
             "Front-end development",
-            "VueJS",
-            "Material Design",
-            "Vuetify",
-            "Vuex - State management"
+            "Svelte",
+            "Bulma CSS",
+            "Vite+PWA",
+            "SpeechSynthesis API",
+            "Data persistence",
+            "Plotly JavaScript Open Source Graphing Library"
         ],
         "role": "Author",
-        "category": "Proof of Concept (PoC)"
+        "category": "Proof of Concept (PoC)",
+        "type": "Web Application (PWA)",
+        "url": "https://christianjtr.github.io/svelte-pokedex-pwa/"
     }
 ]
