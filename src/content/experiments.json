@@ -7,10 +7,7 @@
         "tags": [
             "Engineering Management",
             "Leadership Development",
-            "Team Dynamics",
-            "Change Management",
-            "Psychological Safety",
-            "Organizational Culture"
+            "Team Dynamics"
         ],
         "role": "Author",
         "type": "Thought Leadership Essay",
@@ -24,7 +21,6 @@
         "image": "/src/assets/images/bi_project.jpg",
         "tags": [
             "Data Analysis / Visualization",
-            "Databases",
             "ETL / DWH",
             "Data-driven applications"
         ],
@@ -39,13 +35,9 @@
         "description": "Discover and share your artistic and cultural interests with a like-minded community. Our platform is a go-to for anyone who wants to explore new experiences and connect with others who love art as much as they do.",
         "image": "/src/assets/images/circuitos.jpg",
         "tags": [
-            "Product Design",
-            "User Experience",
-            "A/B Testing",
-            "Prototyping",
-            "Usability",
-            "Design Thinking",
-            "User Research"
+            "Product Design and Prototyping",
+            "User Experience and Research",
+            "Design Thinking"
         ],
         "role": "Contributor",
         "type": "UX Design and Research Concept",
@@ -59,13 +51,9 @@
         "image": "/src/assets/images/design_process.jpg",
         "tags": [
             "e-Business",
-            "Lean Startup",
-            "Design Thinking",
-            "Empathy Maps",
             "Business Model Canvas",
-            "Prototyping",
-            "SEO / SEA",
-            "Digital Marketing"
+            "Lean Startup",
+            "Digital Marketing (SEO/SEA)"
         ],
         "role": "Author",
         "type": "e-Business Concept and Market Niche Analysis",
@@ -79,14 +67,9 @@
         "image": "/src/assets/images/tv-app.jpg",
         "tags": [
             "FullStack Development",
-            "ReactJS / NodeJS",
-            "Tailwind CSS",
+            "ReactJS / NodeJS / TypeScript",
             "Unit / E2E Testing",
-            "Jest / Cypress",
-            "TypeScript",
-            "Docker",
-            "GitHub Actions",
-            "CI/CD process"
+            "CI/CD processes"
         ],
         "role": "Author",
         "category": "Proof of Concept (PoC)",
@@ -100,13 +83,9 @@
         "image": "/src/assets/images/restaurant_browser.jpg",
         "tags": [
             "Front-end development",
-            "ReactJS",
-            "Tailwind CCS",
-            "Vite",
-            "Geolocation API",
-            "Data persistence - LocalStorage",
-            "Daisy UI",
-            "TypeScript"
+            "ReactJS / TypeScript / Vite",
+            "Daisy UI / Tailwind CCS",
+            "Geolocation API"
         ],
         "role": "Author",
         "category": "Proof of Concept (PoC)",
@@ -120,10 +99,8 @@
         "image": "/src/assets/images/erp_management.jpg",
         "tags": [
             "Front-end development",
-            "VueJS",
-            "Material Design",
-            "Vuetify",
-            "Vuex - State management"
+            "VueJS / Vuetify / Vuex",
+            "Material Design"
         ],
         "role": "Author",
         "category": "Proof of Concept (PoC)",
@@ -137,12 +114,9 @@
         "image": "/src/assets/images/chart.jpg",
         "tags": [
             "Front-end development",
-            "VueJS",
-            "D3/C3",
-            "Vuetify",
-            "Vuex - State management",
-            "SASS",
-            "NodeJS - Express"
+            "VueJS / Vuetify / Vuex",
+            "NodeJS / Express",
+            "D3.js"
         ],
         "role": "Author",
         "category": "Proof of Concept (PoC)",
@@ -156,12 +130,9 @@
         "image": "/src/assets/images/pokedex.jpg",
         "tags": [
             "Front-end development",
-            "Svelte",
-            "Bulma CSS",
-            "Vite+PWA",
+            "Svelte / Vite+PWA",
             "SpeechSynthesis API",
-            "Data persistence",
-            "Plotly JavaScript Open Source Graphing Library"
+            "Plotly Graphing Library"
         ],
         "role": "Author",
         "category": "Proof of Concept (PoC)",
