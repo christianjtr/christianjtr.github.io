@@ -1,11 +1,13 @@
 ---
 import { getCollection } from 'astro:content';
 import { BadgeList, ExternalLinkButton, Section } from "../";
+import Logo from '@assets/svg/projects.svg';
 
 const projects = await getCollection('projects');
 ---
 
 <Section headingTitle="Showcased Projects" class="space-y-6">
+    <Logo slot="beforeHeading" width={64} height={64} />
     {projects.map(({ data: project }) => (
         <article>
             <div class="card bg-zinc-50 border-zinc-200 text-primary-content">

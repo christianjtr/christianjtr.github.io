@@ -1,12 +1,14 @@
 ---
 import { getCollection } from 'astro:content';
 import { BadgeList, Section } from "../";
+import Logo from '@assets/svg/case_of_studies.svg';
 
 const experiments = await getCollection('experiments');
 
 ---
 
 <Section headingTitle="Case of Studies and Conceptual Projects">
+    <Logo slot="beforeHeading" width={64} height={64} />
     <div class="mx-auto mt-12 grid max-w-lg gap-7 lg:max-w-none lg:grid-cols-2">
         {experiments.map(({ data: experiment }) => (
             <article class="card bg-base-100 overflow-hidden rounded-lg shadow-lg">
