@@ -1,17 +1,27 @@
 ---
+import type { HTMLAttributes } from 'astro/types';
+
 type BadgeContentType = string | number;
 
-interface Props {
+interface Props extends HTMLAttributes<'div'> {
     items: BadgeContentType[];
     wrapperClass?: string;
     badgeClass?: string;
 }
 
-const { items, badgeClass = 'badge-neutral badge-outline', wrapperClass = 'flex flex-wrap gap-2' } = Astro.props;
+const { items, badgeClass, wrapperClass = "", ...attributes } = Astro.props;
 ---
 
-<div class={wrapperClass}>
+<div class:list={['badge-list-wrapper', [wrapperClass] ]} {...attributes}>
     {items.map((item) => (
-        <div class={`badge ${badgeClass}`}>{item}</div>
+        <span class:list={['badge badge-soft badge-primary', [badgeClass] ]}>{item}</span>
     ))}
 </div>
+
+<style>
+    @reference "tailwindcss";
+    
+    .badge-list-wrapper {
+        @apply flex flex-wrap gap-3;
+    }
+</style>
