@@ -6,37 +6,60 @@ import Logo from '@assets/svg/projects.svg';
 const projects = await getCollection('projects');
 ---
 
-<Section headingTitle="Showcased Projects" subtitle='Presented projects at international conferences' class="space-y-5">
+<Section headingTitle="Showcased Projects" subtitle='Presented projects at international conferences' class="space-y-10">
     <Logo slot="beforeHeading" width={64} height={64} />
     {projects.map(({ data: project }) => (
-        <article>
-            <div class="card bg-zinc-50 border-zinc-200 text-primary-content">
-                <div class="card-body">
-                    <h5 class="text-sm text-secondary">{project.owner}</h5>
-                    <h2 class="card-title text-xl">{project.title}</h2>
-                    <div class="grid gap-x-[120px] gap-y-0 grid-cols-[2fr_1fr] mt-5">
-                        <div class="space-y-3">
-                            <span class="w-full text-accent">Overview</span>
-                            <p>{project.overview}</p>
-                            <span class="w-full text-accent">Contribuitions</span>
-                            <p>{project.contributions}</p>
-                            <BadgeList items={project.technologies} />
+        <article class="card shadow-sm">
+            <div class="card-body p-10">
+                <h2 class="card-title">{project.title}</h2>
+                <h3 class="card-subtitle text-primary">{project.owner}</h3>
+                <div class="card-body-container">
+                    <div class="space-y-3 text-lg leading-9">
+                        <span class="w-full text-neutral-400 text-sm uppercase">Overview</span>
+                        <p class="text-neutral-800">{project.overview}</p>
+                        <span class="w-full text-neutral-400 text-sm uppercase mt-7">Contribuitions</span>
+                        <p class="text-neutral-800">{project.contributions}</p>
+                    </div>
+                    <div class="space-y-3 text-neutral-800 leading-9">
+                        <span class="w-full text-neutral-400 text-sm uppercase">Role</span>
+                        <p class="font-semibold text-lg">{project.contribute_as}</p>
+                        <span class="w-full text-neutral-400 text-sm uppercase mt-7">Showcased at</span>
+                        <div class="flex items-center gap-2 text-lg">
+                            <img src={project.flag_asset} alt="" />
+                            <span>{project.location}</span>
                         </div>
-                        <div class="space-y-3">
-                            <span class="w-full text-accent">Role</span>
-                            <p class="font-semibold">{project.contribute_as}</p>
-                            <span class="w-full text-accent">Showcased at</span>
-                            <p>
-                                <span class="w-full block">{project.showcased_at}</span>
-                                <span class="w-full block">{project.flag} {project.location}</span>
-                                <span class="w-full block">{project.period}</span>
-                                <ExternalLinkButton class="flex gap-2">View details</ExternalLinkButton>
-                            </p>
-                        </div>
+                        <span class="w-full block text-lg font-semibold">{project.showcased_at}</span>
+                        <span class="w-full block text-lg">{project.period}</span>
                     </div>
                 </div>
+                <div class="card-body-container">
+                    <BadgeList items={project.technologies} badgeClass='font-semibold' />
+                    <ExternalLinkButton displayIcon svgConfig={{ fill: '#29f2b9'}}>View details</ExternalLinkButton>
+                </div>
+                
             </div>
         </article>
     ))}
 </Section>
+
+<style>
+    @reference "tailwindcss";
+
+    .card {
+        @apply border-0 rounded-lg;
+        color: var(--color-neutral-dark);
+    }
+
+    .card-body-container {
+        @apply grid gap-x-[100px] gap-y-5 md:grid-cols-[2fr_1fr] mt-5;
+    }
+
+    .card-title {
+        @apply text-2xl;
+    }
+
+    .card-subtitle {
+        @apply text-lg font-light;
+    }
+</style>
 

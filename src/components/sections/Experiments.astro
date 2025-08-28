@@ -7,7 +7,7 @@ const experiments = await getCollection('experiments');
 
 ---
 
-<Section headingTitle="Case of Studies and Conceptual Projects" subtitle="A curated collection of some of my professional projects and works">
+<Section headingTitle="Case of Studies and Conceptual Projects" subtitle="A curated collection of some of my projects and works">
     <Logo slot="beforeHeading" width={64} height={64} />
     <div class="mx-auto grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-2">
         {experiments.map(({ data: experiment }) => (
