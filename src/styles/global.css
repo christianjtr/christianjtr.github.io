@@ -1,5 +1,16 @@
 @import "tailwindcss";
+@import "@styles/variables/colors.css";
 @plugin "@tailwindcss/typography";
 @plugin "daisyui" {
-    themes: light --default, dark --prefersdark, cmyk, dracula;
+    themes: light --default, dark --prefersdark;
+}
+@plugin "daisyui/theme" {
+    name: "light";
+    default: true;
+
+    --color-primary: var(--color-cobalt-blue);
+    --color-secondary: var(--color-navy);
+    --color-accent: var(--color-electric-teal);
+    --color-neutral-dark: var(--color-charcoal);
+    --color-neutral-light: var(--color-light-gray);
 }
