@@ -3,16 +3,43 @@ import type { HTMLAttributes } from 'astro/types';
 
 interface Props extends HTMLAttributes<'section'> {
     headingTitle: string;
+    subtitle?: string;
     headingClass?: string;
 }
 
-const { headingTitle, headingClass = "text-3xl font-semibold md:text-4xl", ...rest } = Astro.props;
+const { headingTitle, headingClass, subtitle, ...attributes } = Astro.props;
 ---
 
-<section class={rest.class} id={rest.id} {...rest}>
-    <div class="flex items-center gap-3 text-my-cobalt-blue">
+<section {...attributes}>
+    <div class="title-wrapper">
         <slot name="beforeHeading"/>
-        <h1 class={headingClass}>{headingTitle}</h1>
+        <div>
+            <h1 class={headingClass}>{headingTitle}</h1>
+            {subtitle && (<p class="subtitle">{subtitle}</p>)}
+        </div>
     </div>
-    <slot/>
+    <slot />
 </section>
+
+<style>
+    @reference "tailwindcss";
+    
+    .title-wrapper {
+        @apply flex items-center gap-3 my-6;
+    }
+
+    .subtitle {
+        @apply text-neutral-500 text-lg font-light;
+    }
+
+    h1 {
+        @apply text-3xl font-semibold md:text-4xl mb-1;
+        color: var(--color-neutral-dark);
+    }
+
+    h1::after {
+        @apply text-5xl;
+        content: ".";
+        color: var(--color-accent);
+    }
+</style>
