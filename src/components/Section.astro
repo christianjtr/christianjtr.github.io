@@ -15,7 +15,7 @@ const { headingTitle, headingClass, subtitle, ...attributes } = Astro.props;
         <slot name="beforeHeading"/>
         <div>
             <h1 class={headingClass}>{headingTitle}</h1>
-            {subtitle && (<p class="subtitle">{subtitle}</p>)}
+            {subtitle && (<span class="subtitle">{subtitle}</span>)}
         </div>
     </div>
     <slot />
@@ -29,7 +29,7 @@ const { headingTitle, headingClass, subtitle, ...attributes } = Astro.props;
     }
 
     .subtitle {
-        @apply text-neutral-500 text-lg font-light;
+        @apply text-neutral-500 text-lg font-light block;
     }
 
     h1 {
