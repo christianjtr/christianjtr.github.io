@@ -6,7 +6,7 @@ import Logo from '@assets/svg/projects.svg';
 const projects = await getCollection('projects');
 ---
 
-<Section headingTitle="Showcased Projects" class="space-y-6">
+<Section headingTitle="Showcased Projects" subtitle='Presented projects at international conferences' class="space-y-5">
     <Logo slot="beforeHeading" width={64} height={64} />
     {projects.map(({ data: project }) => (
         <article>
