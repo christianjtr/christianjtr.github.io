@@ -16,7 +16,7 @@
     },
     {
         "id": "experiment-bi-adventure-works",
-        "title": "Business Intelligence Project: Adventure Works Cycles",
+        "title": "Business Intelligence Enterprise Project: Adventure Works Cycles",
         "description": "Enhance knowledge creation by streamlining data management through the creation of ETL pipelines and data refinement processes. This enables smarter, data-driven decisions supported by a custom web application and dashboards.",
         "image": "/src/assets/images/bi_project.jpg",
         "tags": [
@@ -31,7 +31,7 @@
     },
     {
         "id": "experiment-circuitos",
-        "title": "Circuitos",
+        "title": "Circuitos: Discover Your Artistic Hub",
         "description": "Discover and share your artistic and cultural interests with a like-minded community. Our platform is a go-to for anyone who wants to explore new experiences and connect with others who love art as much as they do.",
         "image": "/src/assets/images/circuitos.jpg",
         "tags": [
@@ -46,7 +46,7 @@
     },
     {
         "id": "experiment-idea-cultural-activities-app",
-        "title": "Idea: Cultural activities application",
+        "title": "Idea: Application for promoting cultural activities",
         "description": "This platform helps you find and participate in cultural events by creating a network tailored to your specific preferences. We make it simple to discover and connect with a community of people who share your artistic and cultural interests.",
         "image": "/src/assets/images/design_process.jpg",
         "tags": [
@@ -125,7 +125,7 @@
     },
     {
         "id": "experiment-pokedex-pwa-application",
-        "title": "Pokédex",
+        "title": "Pokédex: Gotta Catch 'Em All",
         "description": "Progressive web application (PWA) built under Svelte, a modern JavaScript framework. It leverages the Pokémon API to provide a comprehensive and engaging Pokédex experience, data persistence with LocalStorage, the SpeechSynthesis, and Plotly charts.",
         "image": "/src/assets/images/pokedex.jpg",
         "tags": [
