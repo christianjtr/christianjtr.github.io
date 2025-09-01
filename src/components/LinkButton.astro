@@ -1,0 +1,33 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+import ExternalLinkIcon from '@components/icons/ExternalLinkIcon.astro';
+
+interface Props extends HTMLAttributes<'a'> {
+    displayDefaultIcon?: boolean;
+    class?: string;
+}
+
+const { displayDefaultIcon = false, class: className = "", ...attributes } = Astro.props;
+---
+
+<a role="button" class:list={['btn btn-lg bg-primary animated-btn hover:bg-secondary hover:shadow-primary', [className]]} {...attributes}>
+    <slot />
+    <slot name="icon" />
+    {displayDefaultIcon && <ExternalLinkIcon />}
+</a>
+
+<style>
+    @reference "tailwindcss";
+
+    a {
+        @apply text-white w-fit rounded-4xl border-0 flex gap-2;
+    }
+
+    a.animated-btn {
+        @apply transition-all duration-300 ease-in-out transform;
+    }
+
+    a.animated-btn:hover {
+        @apply shadow-lg scale-110;
+    }
+</style>

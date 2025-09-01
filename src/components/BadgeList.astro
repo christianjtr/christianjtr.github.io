@@ -14,7 +14,7 @@ const { items, badgeClass, wrapperClass = "", ...attributes } = Astro.props;
 
 <div class:list={['badge-list-wrapper', [wrapperClass] ]} {...attributes}>
     {items.map((item) => (
-        <span class:list={['badge badge-soft badge-primary', [badgeClass] ]}>{item}</span>
+        <span class:list={['badge badge-soft badge-neutral', [badgeClass] ]}>{item}</span>
     ))}
 </div>
 
