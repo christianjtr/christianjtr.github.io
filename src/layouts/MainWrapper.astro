@@ -7,8 +7,19 @@ import { About, Projects, ProfessionalExperiences, Studies, Experiments } from "
         <!-- <About />
         <div class="divider">OR</div> -->
         <Projects />
+        <div class="main-container-spacer"></div>
         <Experiments />
+        <div class="main-container-spacer"></div>
         <ProfessionalExperiences />
+        <div class="main-container-spacer"></div>
         <Studies /> 
     </div>
 </main>
+
+<style>
+    @reference "tailwindcss";
+
+    .main-container-spacer {
+        @apply mt-10;
+    }
+</style>
