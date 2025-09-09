@@ -10,7 +10,7 @@ const experiments = await getCollection('experiments');
 <div class="bg-white">
     <Section headingTitle="Case of Studies and Conceptual Projects" subtitle="A curated collection of some of my projects and works" class="container mx-auto">
         <Logo slot="beforeHeading" width={64} height={64} />
-        <div class="mt-16 mx-auto grid gap-16 lg:grid-cols-2">
+        <div class="mt-16 mx-auto grid gap-10 px-10 lg:grid-cols-2">
             {experiments.map(({ data: experiment }) => (
                 <article class="card">
                     <figure>
@@ -23,12 +23,11 @@ const experiments = await getCollection('experiments');
                         </div>
                         <h2 class="card-title">{experiment.title}</h2>
                         <p class="flex justify-between items-center mb-2"> 
-                            <span class="card-text-info">{experiment.type}</span>
-                            <span class="card-text-info">{experiment.role}</span>
+                            <span class="card-text-info">{experiment.role} | {experiment.type}</span>
                         </p>
                         <p class="card-text-content">{experiment.description}</p>
                         <div class="card-actions"> 
-                            <BadgeList items={experiment.tags} badgeClass="font-semibold" />
+                            <BadgeList items={experiment.tags} badgeClass="font-semibold badge-soft badge-neutral" />
                         </div>
                     </div>
             </article>
@@ -40,8 +39,12 @@ const experiments = await getCollection('experiments');
 <style>
     @reference "tailwindcss";
     .card {
-        @apply overflow-hidden rounded-lg;
+        @apply overflow-hidden rounded-lg border border-neutral-200;
         color: var(--color-neutral-dark);
+    }
+
+    .card:hover {
+        @apply border-indigo-200 shadow-xl shadow-indigo-100;
     }
 
     .card-pretitle-wrapper {

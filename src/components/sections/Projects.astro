@@ -6,7 +6,7 @@ import Logo from '@assets/svg/projects.svg';
 const projects = await getCollection('projects');
 ---
 <div class="bg-primary/5">
-    <Section headingTitle="Showcased Projects" subtitle='Presented projects at international conferences' class="space-y-5 container mx-auto">
+    <Section headingTitle="Showcased Projects" subtitle='Presented projects at international conferences' class="space-y-3 container mx-auto">
         <Logo slot="beforeHeading" width={64} height={64} />
         {projects.map(({ data: project }) => (
             <article class="card">
@@ -14,32 +14,29 @@ const projects = await getCollection('projects');
                     <h2 class="card-title">{project.title}</h2>
                     <h3 class="card-subtitle text-secondary">{project.owner}</h3>
                     <div class="card-body-container">
-                        <div class="space-y-3 text-lg leading-9">
-                            <span class="w-full text-neutral-400 text-sm uppercase my-6">Overview</span>
-                            <p class="text-neutral-800">{project.overview}</p>
-                            <span class="w-full text-neutral-400 text-sm uppercase my-6">Contribuitions</span>
-                            <p class="text-neutral-800">{project.contributions}</p>
-                            <span class="block w-full text-neutral-400 text-sm uppercase mt-6">Date</span>
-                            <span class="w-full block text-lg text-neutral-800">{project.period}</span>
+                        <div>
+                            <span class="card-info-title">💡 Overview</span>
+                            <p>{project.overview}</p>
+                            <span class="card-info-title">✍️ Contribuitions</span>
+                            <p>{project.contributions}</p>
+                            <span class="card-info-title">🗓️ Date</span>
+                            <span class="block">{project.period}</span>
                         </div>
-                        <div class="space-y-3 text-neutral-800 leading-9">
-                            <span class="w-full text-neutral-400 text-sm uppercase my-6">Role</span>
-                            <p class="font-semibold text-lg">{project.contribute_as}</p>
-                            <span class="w-full text-neutral-400 text-sm uppercase my-6">Showcased at</span>
-                            <span class="w-full block text-lg font-semibold">{project.showcased_at}</span>
-                            <div class="flex items-center gap-2 text-lg">
-                                <img src={project.flag_asset} alt="" />
+                        <div>
+                            <span class="card-info-title">🧑‍💻 Role</span>
+                            <p class="font-semibold">{project.contribute_as}</p>
+                            <span class="card-info-title">📍 Showcased at</span>
+                            <span class="block font-semibold">{project.showcased_at}</span>
+                            <div class="flex items-center gap-2">
+                                <img src={project.flag_asset} alt={`Flag ${project.location}`} />
                                 <span>{project.location}</span>
                             </div>
-                            <span class="block w-full text-neutral-400 text-sm uppercase my-6">Technologies</span>
-                            <BadgeList items={project.technologies} badgeClass='font-semibold' />
+                            <span class="card-info-title my-6 block">💻 Technologies</span>
+                            <BadgeList items={project.technologies} badgeClass="font-semibold badge-accent" />
                         </div>
                     </div>
-                    <div class="block my-5 test"></div>
-                    <div class="flex">
-                        <LinkButton displayDefaultIcon>View details</LinkButton>
-                    </div>
-                    
+                    <div class="block my-2"></div>
+                    <LinkButton href={project.url} target="_blank" rel="noreferrer" displayDefaultIcon>View details</LinkButton>
                 </div>
             </article>
         ))}
@@ -58,6 +55,10 @@ const projects = await getCollection('projects');
         @apply grid gap-x-[100px] gap-y-5 md:grid-cols-[2fr_1fr] mt-5;
     }
 
+    .card-body-container > div {
+        @apply space-y-3 text-lg leading-9 text-neutral-800;
+    }
+
     .card-title {
         @apply text-3xl;
     }
@@ -65,5 +66,8 @@ const projects = await getCollection('projects');
     .card-subtitle {
         @apply text-lg font-light;
     }
-</style>
 
+    .card-info-title {
+        @apply w-full text-neutral-400 text-sm uppercase my-6;
+    }
+</style>
