@@ -5,51 +5,52 @@ import Logo from '@assets/svg/projects.svg';
 
 const projects = await getCollection('projects');
 ---
-
-<Section headingTitle="Showcased Projects" subtitle='Presented projects at international conferences' class="space-y-10">
-    <Logo slot="beforeHeading" width={64} height={64} />
-    {projects.map(({ data: project }) => (
-        <article class="card">
-            <div class="card-body">
-                <h2 class="card-title">{project.title}</h2>
-                <h3 class="card-subtitle text-secondary">{project.owner}</h3>
-                <div class="card-body-container">
-                    <div class="space-y-3 text-lg leading-9">
-                        <span class="w-full text-neutral-400 text-sm uppercase my-6">Overview</span>
-                        <p class="text-neutral-800">{project.overview}</p>
-                        <span class="w-full text-neutral-400 text-sm uppercase my-6">Contribuitions</span>
-                        <p class="text-neutral-800">{project.contributions}</p>
-                        <span class="block w-full text-neutral-400 text-sm uppercase mt-6">Date</span>
-                        <span class="w-full block text-lg text-neutral-800">{project.period}</span>
-                    </div>
-                    <div class="space-y-3 text-neutral-800 leading-9">
-                        <span class="w-full text-neutral-400 text-sm uppercase my-6">Role</span>
-                        <p class="font-semibold text-lg">{project.contribute_as}</p>
-                        <span class="w-full text-neutral-400 text-sm uppercase my-6">Showcased at</span>
-                        <span class="w-full block text-lg font-semibold">{project.showcased_at}</span>
-                        <div class="flex items-center gap-2 text-lg">
-                            <img src={project.flag_asset} alt="" />
-                            <span>{project.location}</span>
+<div class="bg-primary/5">
+    <Section headingTitle="Showcased Projects" subtitle='Presented projects at international conferences' class="space-y-5 container mx-auto">
+        <Logo slot="beforeHeading" width={64} height={64} />
+        {projects.map(({ data: project }) => (
+            <article class="card">
+                <div class="card-body">
+                    <h2 class="card-title">{project.title}</h2>
+                    <h3 class="card-subtitle text-secondary">{project.owner}</h3>
+                    <div class="card-body-container">
+                        <div class="space-y-3 text-lg leading-9">
+                            <span class="w-full text-neutral-400 text-sm uppercase my-6">Overview</span>
+                            <p class="text-neutral-800">{project.overview}</p>
+                            <span class="w-full text-neutral-400 text-sm uppercase my-6">Contribuitions</span>
+                            <p class="text-neutral-800">{project.contributions}</p>
+                            <span class="block w-full text-neutral-400 text-sm uppercase mt-6">Date</span>
+                            <span class="w-full block text-lg text-neutral-800">{project.period}</span>
                         </div>
-                        <span class="block w-full text-neutral-400 text-sm uppercase my-6">Technologies</span>
-                        <BadgeList items={project.technologies} badgeClass='font-semibold' />
+                        <div class="space-y-3 text-neutral-800 leading-9">
+                            <span class="w-full text-neutral-400 text-sm uppercase my-6">Role</span>
+                            <p class="font-semibold text-lg">{project.contribute_as}</p>
+                            <span class="w-full text-neutral-400 text-sm uppercase my-6">Showcased at</span>
+                            <span class="w-full block text-lg font-semibold">{project.showcased_at}</span>
+                            <div class="flex items-center gap-2 text-lg">
+                                <img src={project.flag_asset} alt="" />
+                                <span>{project.location}</span>
+                            </div>
+                            <span class="block w-full text-neutral-400 text-sm uppercase my-6">Technologies</span>
+                            <BadgeList items={project.technologies} badgeClass='font-semibold' />
+                        </div>
                     </div>
+                    <div class="block my-5 test"></div>
+                    <div class="flex">
+                        <LinkButton displayDefaultIcon>View details</LinkButton>
+                    </div>
+                    
                 </div>
-                <div class="divider"></div>
-                <div class="flex">
-                    <LinkButton displayDefaultIcon>View details</LinkButton>
-                </div>
-                
-            </div>
-        </article>
-    ))}
-</Section>
+            </article>
+        ))}
+    </Section>
+</div>
 
 <style>
     @reference "tailwindcss";
 
     .card {
-        @apply rounded-lg p-4 shadow-sm border border-neutral-400;
+        @apply rounded-lg p-4;
         color: var(--color-neutral-dark);
     }
 

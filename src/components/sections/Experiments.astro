@@ -7,38 +7,40 @@ const experiments = await getCollection('experiments');
 
 ---
 
-<Section headingTitle="Case of Studies and Conceptual Projects" subtitle="A curated collection of some of my projects and works">
-    <Logo slot="beforeHeading" width={64} height={64} />
-    <div class="mx-auto grid gap-10 lg:grid-cols-2">
-        {experiments.map(({ data: experiment }) => (
-            <article class="card">
-                <figure>
-                    <img src={experiment.image} alt={experiment.title} />
-                </figure>
-                <div class="card-body p-8">
-                    <div class="card-pretitle-wrapper">
-                        <span class="badge badge-sm badge-primary">{experiment.category}</span>
-                        {experiment.url && <LinkButton href={experiment.url} target="_blank" rel="noreferrer" class='btn-circle' displayDefaultIcon />}
+<div class="bg-white">
+    <Section headingTitle="Case of Studies and Conceptual Projects" subtitle="A curated collection of some of my projects and works" class="container mx-auto">
+        <Logo slot="beforeHeading" width={64} height={64} />
+        <div class="mt-16 mx-auto grid gap-16 lg:grid-cols-2">
+            {experiments.map(({ data: experiment }) => (
+                <article class="card">
+                    <figure>
+                        <img src={experiment.image} alt={experiment.title} />
+                    </figure>
+                    <div class="card-body p-8">
+                        <div class="card-pretitle-wrapper">
+                            <span class="badge badge-sm badge-primary">{experiment.category}</span>
+                            {experiment.url && <LinkButton href={experiment.url} target="_blank" rel="noreferrer" class='btn-circle' displayDefaultIcon />}
+                        </div>
+                        <h2 class="card-title">{experiment.title}</h2>
+                        <p class="flex justify-between items-center mb-2"> 
+                            <span class="card-text-info">{experiment.type}</span>
+                            <span class="card-text-info">{experiment.role}</span>
+                        </p>
+                        <p class="card-text-content">{experiment.description}</p>
+                        <div class="card-actions"> 
+                            <BadgeList items={experiment.tags} badgeClass="font-semibold" />
+                        </div>
                     </div>
-                    <h2 class="card-title">{experiment.title}</h2>
-                    <p class="flex justify-between items-center mb-2"> 
-                        <span class="card-text-info">{experiment.type}</span>
-                        <span class="card-text-info">{experiment.role}</span>
-                    </p>
-                    <p class="card-text-content">{experiment.description}</p>
-                    <div class="card-actions"> 
-                        <BadgeList items={experiment.tags} badgeClass="font-semibold" />
-                    </div>
-                </div>
-        </article>
-        ))}
-    </div>
-</Section>
+            </article>
+            ))}
+        </div>
+    </Section>
+</div>
 
 <style>
     @reference "tailwindcss";
     .card {
-        @apply overflow-hidden rounded-lg shadow-sm border border-neutral-400;
+        @apply overflow-hidden rounded-lg;
         color: var(--color-neutral-dark);
     }
 

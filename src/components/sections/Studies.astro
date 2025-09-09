@@ -6,27 +6,30 @@ import Logo from '@assets/svg/studies.svg';
 const studies = await getCollection('studies');
 ---
 
-<Section headingTitle="Studies" subtitle="The path chosen for my academic development" class="space-y-5">
-    <Logo slot="beforeHeading" width={64} height={64} />
-    {studies.map(({ data: study }) => (
-        <article class="flex gap-3">
-            <div class="flex flex-col">
-                <span class="h-10 w-10 flex items-center justify-center text-white font-bold">1</span>
-            </div>
-            <div class="card w-2/5">
-                <h3 class="text-xl font-semibold">{study.level}</h3>
-                <span class="text-sm text-gray-600">{study.subject}</span>
-                <p class="mt-2 flex flex-col">
-                    <span>{study.location}</span>
-                    <span>{study.period}</span>
-                </p>
-            </div>
-            <div class="card w-4/5 p-3">
-                <h2 class="text-xl font-semibold">{study.degree}</h2>
-                <span class="text-sm text-gray-600">{study.school}</span>
-                <p class="my-3">{study.description}</p>
-                {/* <BadgeList items={study.topics} /> */}
-            </div>
-        </article>
-    ))}
-</Section>
+<div class="bg-white">
+    <Section headingTitle="Studies" subtitle="The path chosen for my academic development" class="space-y-5 container mx-auto">
+        <Logo slot="beforeHeading" width={64} height={64} />
+        <div class="mt-16 block"></div>
+        {studies.map(({ data: study }) => (
+            <article class="flex gap-3">
+                <div class="flex flex-col">
+                    <span class="h-10 w-10 flex items-center justify-center text-white font-bold">1</span>
+                </div>
+                <div class="card w-2/5">
+                    <h3 class="text-xl font-semibold">{study.level}</h3>
+                    <span class="text-sm text-gray-600">{study.subject}</span>
+                    <p class="mt-2 flex flex-col">
+                        <span>{study.location}</span>
+                        <span>{study.period}</span>
+                    </p>
+                </div>
+                <div class="card w-4/5 p-3">
+                    <h2 class="text-xl font-semibold">{study.degree}</h2>
+                    <span class="text-sm text-gray-600">{study.school}</span>
+                    <p class="my-3">{study.description}</p>
+                    {/* <BadgeList items={study.topics} /> */}
+                </div>
+            </article>
+        ))}
+    </Section>
+</div>

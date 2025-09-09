@@ -10,7 +10,7 @@ interface Props extends HTMLAttributes<'a'> {
 const { displayDefaultIcon = false, class: className = "", ...attributes } = Astro.props;
 ---
 
-<a role="button" class:list={['btn btn-lg bg-primary animated-btn hover:bg-secondary hover:shadow-primary', [className]]} {...attributes}>
+<a role="button" class:list={['btn btn-lg bg-primary animated-btn', [className]]} {...attributes}>
     <slot />
     <slot name="icon" />
     {displayDefaultIcon && <ExternalLinkIcon />}
@@ -32,6 +32,6 @@ const { displayDefaultIcon = false, class: className = "", ...attributes } = Ast
     }
 
     a.animated-btn:hover {
-        @apply shadow-lg scale-110;
+        @apply scale-110;
     }
 </style>
