@@ -1,20 +1,21 @@
 ---
-import type { HTMLAttributes } from 'astro/types';
+import type { AstroBuiltinAttributes } from 'astro';
+import type { HTMLAttributes, } from 'astro/types';
 
 type BadgeContentType = string | number;
 
 interface Props extends HTMLAttributes<'div'> {
     items: BadgeContentType[];
-    wrapperClass?: string;
-    badgeClass?: string;
+    wrapperClass?: AstroBuiltinAttributes['class:list'];
+    badgeClass?: AstroBuiltinAttributes['class:list'];
 }
 
-const { items, badgeClass, wrapperClass = "", ...attributes } = Astro.props;
+const { items, badgeClass = "badge-soft badge-neutral", wrapperClass, ...attributes } = Astro.props;
 ---
 
-<div class:list={['badge-list-wrapper', [wrapperClass] ]} {...attributes}>
+<div class:list={['badge-list-wrapper', wrapperClass]} {...attributes}>
     {items.map((item) => (
-        <span class:list={['badge badge-soft badge-neutral', [badgeClass] ]}>{item}</span>
+        <span class:list={['badge', badgeClass]}>{item}</span>
     ))}
 </div>
 
