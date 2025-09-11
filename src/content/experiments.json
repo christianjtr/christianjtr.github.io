@@ -47,7 +47,7 @@
     {
         "id": "experiment-idea-cultural-activities-app",
         "title": "Idea: Application for promoting cultural activities",
-        "description": "This platform helps you find and participate in cultural events by creating a network tailored to your specific preferences. We make it simple to discover and connect with a community of people who share your artistic and cultural interests.",
+        "description": "Platform that helps you find and participate in cultural events by creating a network tailored to your specific preferences. We make it simple to discover and connect with a community of people who share your artistic and cultural interests.",
         "image": "/src/assets/images/design_process.jpg",
         "tags": [
             "e-Business",
@@ -63,7 +63,7 @@
     {
         "id": "experiment-tv-movie-streaming-like-webapp",
         "title": "The Movie and TV series database (TMDB)",
-        "description": "This is a full-stack web application designed for anyone who loves movies and TV shows. It provides a seamless, fast way to browse a comprehensive catalog of titles, giving you all the details you need in one place. You can explore a wide variety of content through a user-friendly interface.",
+        "description": "Full-stack web application designed for anyone who loves movies and TV shows. It provides a seamless, fast way to browse a comprehensive catalog of titles, giving you all the details you need in one place. You can explore a wide variety of content through a user-friendly interface.",
         "image": "/src/assets/images/tv-app.jpg",
         "tags": [
             "FullStack Development",
@@ -79,7 +79,7 @@
     {
         "id": "experiment-restaurant-browser-app",
         "title": "Restaurant's browser",
-        "description": "This is a conceptual application designed to help users discover and connect with local restaurants. Built as a Progressive Web Application (PWA), it gives you the convenience of a native app without requiring a download from an app store. Using your device's Geolocation API, the app instantly finds the restaurants closest to you.",
+        "description": "Conceptual application designed to help users discover and connect with local restaurants. Built as a Progressive Web Application (PWA), it gives you the convenience of a native app without requiring a download from an app store. Using your device's Geolocation API, the app instantly finds the restaurants closest to you.",
         "image": "/src/assets/images/restaurant_browser.jpg",
         "tags": [
             "Front-end development",
@@ -95,7 +95,7 @@
     {
         "id": "experiment-erp-management-dashboard",
         "title": "Management Dashboard",
-        "description": "This is a management dashboard designed to streamline employee data handling. It's a simple web application that provides you with complete control over your team's information. With straightforward CRUD (Create, Read, Update, Delete) functionality.",
+        "description": "Management dashboard designed to streamline employee data handling. It's a simple web application that provides you with complete control over your team's information. With straightforward CRUD (Create, Read, Update, Delete) functionality.",
         "image": "/src/assets/images/erp_management.jpg",
         "tags": [
             "Front-end development",
@@ -110,7 +110,7 @@
     {
         "id": "experiment-data-visualization-error-reporting-chart",
         "title": "Visualization Dashboard for Monitoring",
-        "description": "This is a web application designed to help you easily understand complex data. Using the powerful D3.js library, it creates interactive and visually engaging charts for a business intelligence dashboard. You can effortlessly switch between different timeframes—by day, week, month, or year—to analyze error reports and other data.",
+        "description": "Web application designed to help you easily understand complex data. Using the powerful D3.js library, it creates interactive and visually engaging charts for a business intelligence dashboard. You can effortlessly switch between different timeframes—by day, week, month, or year—to analyze error reports and other data.",
         "image": "/src/assets/images/chart.jpg",
         "tags": [
             "Front-end development",
