@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
-import { BadgeList, LinkButton, Section } from "../";
+import { BadgeList, LinkButton, Section, HorizontalSpacer } from "../";
 import Logo from '@assets/svg/projects.svg';
 
 const projects = await getCollection('projects');
@@ -8,7 +8,35 @@ const projects = await getCollection('projects');
 <div class="bg-primary/5">
     <Section headingTitle="Showcased Projects" subtitle='Presented projects at international conferences' class="space-y-3 container mx-auto">
         <Logo slot="beforeHeading" width={64} height={64} />
-        {projects.map(({ data: project }) => (
+        <HorizontalSpacer />
+        <div class="grid grid-cols-5 gap-4">
+            <div class="col-span-2" tabindex="0">
+                {projects.map(({ data: project }, index) => (
+                    // <div class:list={["collapse bg-base-100 border border-base-300", index === 0 ? "collapse-open" : ""]}>
+                    <div class:list={["collapse bg-base-100 border border-base-300 p-3 mb-2"]}>
+                        <input type="radio" name="my-accordion-1" />
+                        <h2 class="collapse-title card-title">{project.title}</h2>
+                        {/* <h3 class="card-subtitle text-secondary">{project.owner}</h3> */}
+                        {/* <div class="collapse-content text-sm">{project.contributions}</div> */}
+                        <div class="collapse-content card-body-container space-y-5">
+                            {/* <span class="card-info-title">💡 Overview</span> */}
+                            {/* <p>{project.overview}</p> */}
+                            <span class="card-info-title">✍️ Contribuitions</span>
+                            <p class="leading-8">{project.contributions}</p>
+                            {/* <span class="card-info-title">🗓️ Date</span> */}
+                            {/* <span class="block">{project.period}</span> */}
+                            <HorizontalSpacer />
+                            <LinkButton href={project.url} target="_blank" rel="noreferrer" displayDefaultIcon>View details</LinkButton>
+                        </div>
+                    </div>    
+                ))}
+            </div>
+            <div class="col-span-3">
+                __CONTENT__
+            </div>
+        </div>
+        
+        <!-- {projects.map(({ data: project }) => (
             <article class="card">
                 <div class="card-body">
                     <h2 class="card-title">{project.title}</h2>
@@ -39,7 +67,7 @@ const projects = await getCollection('projects');
                     <LinkButton href={project.url} target="_blank" rel="noreferrer" displayDefaultIcon>View details</LinkButton>
                 </div>
             </article>
-        ))}
+        ))} -->
     </Section>
 </div>
 
@@ -51,16 +79,12 @@ const projects = await getCollection('projects');
         color: var(--color-neutral-dark);
     }
 
-    .card-body-container {
-        @apply grid gap-x-[100px] gap-y-5 md:grid-cols-[2fr_1fr] mt-5;
-    }
-
     .card-body-container > div {
         @apply space-y-3 text-lg leading-9 text-neutral-800;
     }
 
     .card-title {
-        @apply text-3xl;
+        @apply text-2xl;
     }
 
     .card-subtitle {
@@ -68,6 +92,6 @@ const projects = await getCollection('projects');
     }
 
     .card-info-title {
-        @apply w-full text-neutral-400 text-sm uppercase my-6;
+        @apply w-full text-neutral-400 text-sm uppercase my-3 block;
     }
 </style>

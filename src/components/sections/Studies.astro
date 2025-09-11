@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
-import { BadgeList, Section } from "../";
+import { BadgeList, Section, HorizontalSpacer } from "../";
 import Logo from '@assets/svg/studies.svg';
 
 const studies = await getCollection('studies');
@@ -9,8 +9,8 @@ const studies = await getCollection('studies');
 <div class="bg-white">
     <Section headingTitle="Studies" subtitle="The path chosen for my academic development" class="space-y-5 container mx-auto">
         <Logo slot="beforeHeading" width={64} height={64} />
-        <div class="mt-16 block"></div>
-        {studies.map(({ data: study }) => (
+        <HorizontalSpacer />
+        <!-- {studies.map(({ data: study }) => (
             <article class="flex gap-3">
                 <div class="flex flex-col">
                     <span class="h-10 w-10 flex items-center justify-center text-white font-bold">1</span>
@@ -30,7 +30,7 @@ const studies = await getCollection('studies');
                     {/* <BadgeList items={study.topics} /> */}
                 </div>
             </article>
-        ))}
+        ))} -->
     </Section>
 </div>
 
