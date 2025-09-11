@@ -1,7 +1,13 @@
 ---
 import { getCollection } from 'astro:content';
 import { BadgeList, LinkButton, Section } from "../";
+import type { ExperimentRole } from '@schemas/ExperimentSchema';
 import Logo from '@assets/svg/case_of_studies.svg';
+
+const roleIcons: Record<ExperimentRole, string> = {
+    'Author': '👨‍💻',
+    'Contributor': '🤝'
+};
 
 const experiments = await getCollection('experiments');
 
@@ -23,7 +29,9 @@ const experiments = await getCollection('experiments');
                         </div>
                         <h2 class="card-title">{experiment.title}</h2>
                         <p class="flex justify-between items-center mb-2"> 
-                            <span class="card-text-info">{experiment.role} | {experiment.type}</span>
+                            <span class="card-text-info">
+                                {roleIcons[experiment.role]} {experiment.role} | {experiment.type}
+                            </span>
                         </p>
                         <p class="card-text-content">{experiment.description}</p>
                         <div class="card-actions"> 

@@ -14,7 +14,9 @@
             "@components/*": ["src/components/*"],
             "@layouts": ["src/layouts"],
             "@layouts/*": ["src/layouts/*"],
-            "@styles/*": ["src/styles/*"]
+            "@styles/*": ["src/styles/*"],
+            "@schemas": ["src/schemas/*"],
+            "@schemas/*": ["src/schemas/*"]
         },
         "plugins": [
             {
