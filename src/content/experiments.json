@@ -77,22 +77,6 @@
         "url": "https://christianjtr.github.io/tv-app/"
     },
     {
-        "id": "experiment-restaurant-browser-app",
-        "title": "Restaurant's browser",
-        "description": "Conceptual application designed to help users discover and connect with local restaurants. Built as a Progressive Web Application (PWA), it gives you the convenience of a native app without requiring a download from an app store. Using your device's Geolocation API, the app instantly finds the restaurants closest to you.",
-        "image": "/src/assets/images/restaurant_browser.jpg",
-        "tags": [
-            "Front-end development",
-            "ReactJS / TypeScript / Vite",
-            "Daisy UI / Tailwind CCS",
-            "Geolocation API"
-        ],
-        "role": "Author",
-        "category": "Proof of Concept (PoC)",
-        "type": "Web Application (PWA)",
-        "url": "https://christianjtr.github.io/restaurant-browser-app/"
-    },
-    {
         "id": "experiment-erp-management-dashboard",
         "title": "Management Dashboard",
         "description": "Management dashboard designed to streamline employee data handling. It's a simple web application that provides you with complete control over your team's information. With straightforward CRUD (Create, Read, Update, Delete) functionality.",
@@ -122,6 +106,22 @@
         "category": "Proof of Concept (PoC)",
         "type": "Web Application (Monitoring Dashboard)",
         "url": null
+    },
+    {
+        "id": "experiment-restaurant-browser-app",
+        "title": "Restaurant's browser",
+        "description": "Conceptual application designed to help users discover and connect with local restaurants. Built as a Progressive Web Application (PWA), it gives you the convenience of a native app without requiring a download from an app store. Using your device's Geolocation API, the app instantly finds the restaurants closest to you.",
+        "image": "/src/assets/images/restaurant_browser.jpg",
+        "tags": [
+            "Front-end development",
+            "ReactJS / TypeScript / Vite",
+            "Daisy UI / Tailwind CCS",
+            "Geolocation API"
+        ],
+        "role": "Author",
+        "category": "Proof of Concept (PoC)",
+        "type": "Web Application (PWA)",
+        "url": "https://christianjtr.github.io/restaurant-browser-app/"
     },
     {
         "id": "experiment-pokedex-pwa-application",
