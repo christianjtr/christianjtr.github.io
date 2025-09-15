@@ -4,28 +4,22 @@ import { BadgeList, LinkButton, Section, HorizontalSpacer } from "../";
 import Logo from '@assets/svg/projects.svg';
 
 const projects = await getCollection('projects');
+const selectedProject = projects[0].data;
 ---
 <div class="bg-primary/5">
-    <Section headingTitle="Showcased Projects" subtitle='Presented projects at international conferences' class="space-y-3 container mx-auto">
+    <Section headingTitle="Showcased Projects" subtitle='Presented projects at international conferences' class="space-y-3 container mx-auto mb-5">
         <Logo slot="beforeHeading" width={64} height={64} />
         <HorizontalSpacer />
-        <div class="grid grid-cols-5 gap-4">
-            <div class="col-span-2" tabindex="0">
+        <div class="grid grid-cols-5 gap-4 px-10">
+            <div class="col-span-2">
                 {projects.map(({ data: project }, index) => (
-                    // <div class:list={["collapse bg-base-100 border border-base-300", index === 0 ? "collapse-open" : ""]}>
-                    <div class:list={["collapse bg-base-100 border border-base-300 p-3 mb-2"]}>
-                        <input type="radio" name="my-accordion-1" />
+                    <div class="collapse" tabindex={index}>
                         <h2 class="collapse-title card-title">{project.title}</h2>
-                        {/* <h3 class="card-subtitle text-secondary">{project.owner}</h3> */}
-                        {/* <div class="collapse-content text-sm">{project.contributions}</div> */}
                         <div class="collapse-content card-body-container space-y-5">
-                            {/* <span class="card-info-title">💡 Overview</span> */}
-                            {/* <p>{project.overview}</p> */}
                             <span class="card-info-title">✍️ Contribuitions</span>
-                            <p class="leading-8">{project.contributions}</p>
-                            {/* <span class="card-info-title">🗓️ Date</span> */}
-                            {/* <span class="block">{project.period}</span> */}
-                            <HorizontalSpacer />
+                            <span class="font-semibold text-primary">{project.contribute_as}</span>
+                            <p class="leading-8 mt-2">{project.contributions}</p>
+                            <br />
                             <LinkButton href={project.url} target="_blank" rel="noreferrer" displayDefaultIcon>View details</LinkButton>
                         </div>
                     </div>    
@@ -33,6 +27,7 @@ const projects = await getCollection('projects');
             </div>
             <div class="col-span-3">
                 __CONTENT__
+                <!-- <BadgeList items={selectedProject.technologies} badgeClass="font-semibold badge-accent" /> -->
             </div>
         </div>
         
@@ -88,10 +83,18 @@ const projects = await getCollection('projects');
     }
 
     .card-subtitle {
-        @apply text-lg font-light;
+        @apply font-light text-sm;
     }
 
     .card-info-title {
         @apply w-full text-neutral-400 text-sm uppercase my-3 block;
+    }
+
+    .collapse {
+        @apply p-3 mb-3 border border-neutral-200 text-neutral-950;
+    }
+
+    .collapse:focus, .collapse:hover {
+        @apply border-indigo-200 shadow-xl shadow-indigo-100 cursor-pointer;
     }
 </style>
