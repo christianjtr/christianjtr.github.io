@@ -15,7 +15,7 @@ const { items, badgeClass = "badge-soft badge-neutral", wrapperClass, ...attribu
 
 <div class:list={['badge-list-wrapper', wrapperClass]} {...attributes}>
     {items.map((item) => (
-        <span class:list={['badge', badgeClass]}>{item}</span>
+        <span class:list={['badge font-semibold', badgeClass]}>{item}</span>
     ))}
 </div>
 
