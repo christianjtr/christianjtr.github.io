@@ -10,7 +10,7 @@ const selectedProject = projects[0].data;
     <Section headingTitle="Showcased Projects" subtitle='Presented projects at international conferences' class="space-y-3 container mx-auto mb-5">
         <Logo slot="beforeHeading" width={64} height={64} />
         <HorizontalSpacer />
-        <div class="grid grid-cols-5 gap-4 px-10">
+        <div class="grid grid-cols-5 gap-6 px-10">
             <div class="col-span-2">
                 {projects.map(({ data: project }, index) => (
                     <div class="collapse" tabindex={index}>
@@ -26,43 +26,30 @@ const selectedProject = projects[0].data;
                 ))}
             </div>
             <div class="col-span-3">
-                __CONTENT__
-                <!-- <BadgeList items={selectedProject.technologies} badgeClass="font-semibold badge-accent" /> -->
+                <div class="card bg-base-100 w-full">
+                    <figure>
+                        <img
+                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                        alt="Shoes" />
+                    </figure>
+                    <div class="card-body-container p-5">
+                        <div class="flex items-center justify-between">
+                            <span class="text-secondary text-sm uppercase">{selectedProject.owner}</span>
+                            <span class="badge badge-sm badge-primary font-semibold uppercase">{selectedProject.period}</span>
+                        </div>
+                        <span class="card-info-title">📍 Showcased at</span>
+                        <span class="block font-semibold mb-2">{selectedProject.showcased_at}</span>
+                        <p class="flex items-center gap-2 mb-5">
+                            <img src={selectedProject.flag_asset} alt={`Flag ${selectedProject.location}`} />
+                            <span>{selectedProject.location}</span>
+                        </p>
+                        <span class="card-info-title">💡 Overview</span>
+                        <p class="leading-8 mb-5">{selectedProject.overview}</p>
+                        <BadgeList items={selectedProject.technologies} />
+                    </div>
+                </div>
             </div>
         </div>
-        
-        <!-- {projects.map(({ data: project }) => (
-            <article class="card">
-                <div class="card-body">
-                    <h2 class="card-title">{project.title}</h2>
-                    <h3 class="card-subtitle text-secondary">{project.owner}</h3>
-                    <div class="card-body-container">
-                        <div>
-                            <span class="card-info-title">💡 Overview</span>
-                            <p>{project.overview}</p>
-                            <span class="card-info-title">✍️ Contribuitions</span>
-                            <p>{project.contributions}</p>
-                            <span class="card-info-title">🗓️ Date</span>
-                            <span class="block">{project.period}</span>
-                        </div>
-                        <div>
-                            <span class="card-info-title">🧑‍💻 Role</span>
-                            <p class="font-semibold">{project.contribute_as}</p>
-                            <span class="card-info-title">📍 Showcased at</span>
-                            <span class="block font-semibold">{project.showcased_at}</span>
-                            <div class="flex items-center gap-2">
-                                <img src={project.flag_asset} alt={`Flag ${project.location}`} />
-                                <span>{project.location}</span>
-                            </div>
-                            <span class="card-info-title my-6 block">💻 Technologies</span>
-                            <BadgeList items={project.technologies} badgeClass="font-semibold badge-accent" />
-                        </div>
-                    </div>
-                    <div class="block my-2"></div>
-                    <LinkButton href={project.url} target="_blank" rel="noreferrer" displayDefaultIcon>View details</LinkButton>
-                </div>
-            </article>
-        ))} -->
     </Section>
 </div>
 
@@ -70,7 +57,7 @@ const selectedProject = projects[0].data;
     @reference "tailwindcss";
 
     .card {
-        @apply rounded-lg p-4;
+        @apply rounded-lg;
         color: var(--color-neutral-dark);
     }
 
@@ -91,10 +78,10 @@ const selectedProject = projects[0].data;
     }
 
     .collapse {
-        @apply p-3 mb-3 border border-neutral-200 text-neutral-950;
+        @apply p-3 mb-3 border border-neutral-200 text-neutral-400;
     }
 
     .collapse:focus, .collapse:hover {
-        @apply border-indigo-200 shadow-xl shadow-indigo-100 cursor-pointer;
+        @apply border-indigo-200 shadow-xl shadow-indigo-100 text-neutral-950 cursor-pointer;
     }
 </style>
