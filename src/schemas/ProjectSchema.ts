@@ -6,6 +6,7 @@ export const ProjectSchema = z.object({
     showcased_at: z.string(),
     flag: z.string(),
     flag_asset: z.string(),
+    project_asset: z.string(),
     owner: z.string(),
     url: z.string().url(),
     period: z.string(),
