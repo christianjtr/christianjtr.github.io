@@ -1,3 +1,4 @@
+export { default as Badge } from './Badge.astro';
 export { default as BadgeList } from './BadgeList.astro';
 export { default as HorizontalSpacer } from './HorizontalSpacer.astro';
 export { default as LinkButton } from './LinkButton.astro';

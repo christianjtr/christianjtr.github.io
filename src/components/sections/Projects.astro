@@ -1,49 +1,54 @@
 ---
 import { getCollection } from 'astro:content';
-import { BadgeList, LinkButton, Section, HorizontalSpacer } from "../";
+import { Badge, BadgeList, LinkButton, Section, HorizontalSpacer } from "../";
 import Logo from '@assets/svg/projects.svg';
 
 const projects = await getCollection('projects');
-const projectsJson = JSON.stringify(projects);
-let selectedProject = projects[0].data;
+const projectsJSON = JSON.stringify(projects);
 ---
 
 <div class="bg-primary/5">
     <Section headingTitle="Showcased Projects" subtitle='Presented projects at international conferences' class="space-y-3 container mx-auto mb-5">
         <Logo slot="beforeHeading" width={64} height={64} />
         <HorizontalSpacer />
-        <div class="grid grid-cols-5 gap-6 px-10">
-            <div class="col-span-2">
-                {projects.map(({ data: project }, index) => (
-                    <div class="collapse" tabindex={index} role="button" data-project-index={index}>
-                        <h2 class="collapse-title card-title">{project.title}</h2>
-                        <div class="collapse-content card-body-container space-y-5">
-                            <span id="project-owner" class="badge badge-sm badge-accent font-semibold uppercase">{project.owner}</span>
-                            <span class="card-info-title">✍️ Contribuitions</span>
-                            <span class="font-semibold text-primary">{project.contribute_as}</span>
-                            <p class="leading-8 mt-2">{project.contributions}</p>
-                            <br />
-                            <LinkButton href={project.url} target="_blank" rel="noreferrer" displayDefaultIcon>View details</LinkButton>
+        <div x-data="collapsible" data-projects={projectsJSON}>
+            <div class="grid grid-cols-5 gap-6 px-10">
+                <div class="col-span-2">
+                    {projects.map(({ data: project }, index) => (
+                        <div class="collapse" tabindex={index} role="button" x-on:click={`setSelectedProject(${index})`}>
+                            <h2 class="collapse-title card-title">{project.title}</h2>
+                            <div class="collapse-content card-body-container space-y-5">
+                                <span id="project-owner" class="badge badge-sm badge-accent font-semibold uppercase">{project.owner}</span>
+                                <span class="card-info-title">✍️ Contribuitions</span>
+                                <span class="font-semibold text-primary">{project.contribute_as}</span>
+                                <p class="leading-8 mt-2">{project.contributions}</p>
+                                <br />
+                                <LinkButton href={project.url} target="_blank" rel="noreferrer" displayDefaultIcon>View details</LinkButton>
+                            </div>
+                        </div>    
+                    ))}
+                </div>
+                <div class="col-span-3">
+                    <div class="card border border-indigo-200 shadow-xl shadow-indigo-100 w-full">
+                        <figure>
+                            <img :src="selectedProject.project_asset" :alt="selectedProject.title" />
+                        </figure>
+                        <div class="card-body-container p-7">
+                            <span class="card-info-title">📍 Showcased at</span>
+                            <span class="block font-semibold mb-2 text-xl" x-text="selectedProject.showcased_at"></span>
+                            <p class="flex items-center gap-2 mb-5">
+                                <img :src="selectedProject.flag_asset" :alt="selectedProject.title" />
+                                <span x-text="selectedProject.location"></span>
+                                <span class="badge badge-sm badge-accent font-semibold uppercase" x-text="selectedProject.period"></span>
+                            </p>
+                            <span class="card-info-title">💡 Overview</span>
+                            <p class="leading-8 mb-5" x-text="selectedProject.overview"></p>
+                            <BadgeList>
+                                <template x-for="item in selectedProject.technologies" :key="item">
+                                    <Badge x-text="item"></Badge>
+                                </template>
+                            </BadgeList>
                         </div>
-                    </div>    
-                ))}
-            </div>
-            <div class="col-span-3">
-                <div class="card border border-indigo-200 shadow-xl shadow-indigo-100 w-full" data-dynamic-content>
-                    <figure>
-                        <img id="project-img" src={selectedProject.project_asset} alt={selectedProject.title} />
-                    </figure>
-                    <div class="card-body-container p-7">
-                        <span class="card-info-title">📍 Showcased at</span>
-                        <span id="project-showcased-at" class="block font-semibold mb-2 text-xl">{selectedProject.showcased_at}</span>
-                        <p class="flex items-center gap-2 mb-5">
-                            <img id="project-flag-asset" src={selectedProject.flag_asset} alt={`Flag ${selectedProject.location}`} />
-                            <span id="project-location">{selectedProject.location}</span>
-                            <span id="project-period" class="badge badge-sm badge-accent font-semibold uppercase">{selectedProject.period}</span>
-                        </p>
-                        <span class="card-info-title">💡 Overview</span>
-                        <p id="project-overview" class="leading-8 mb-5">{selectedProject.overview}</p>
-                        <BadgeList id="project-technologies" items={selectedProject.technologies} />
                     </div>
                 </div>
             </div>
@@ -51,39 +56,22 @@ let selectedProject = projects[0].data;
     </Section>
 </div>
 
-<script define:vars={{ projectsJson }} is:inline>
-    const parsedProjects = JSON.parse(projectsJson);
-    
-    function updateProjectDetails(event, dataElements) {
-        const index = (event.currentTarget).dataset.projectIndex;
-        const project = parsedProjects[index].data;
+<script>
+    import Alpine from 'alpinejs';
+    import type { Project } from '@schemas/ProjectSchema';
 
-        dataElements.projectImg.src = project.project_asset;
-        dataElements.projectImg.alt = project.title;
-        dataElements.projectOwner.textContent = project.owner;
-        dataElements.projectPeriod.textContent = project.period;
-        dataElements.projectShowcasedAt.textContent = project.showcased_at;
-        dataElements.projectFlag.src = project.flag_asset;
-        dataElements.projectLocation.textContent = project.location;
-        dataElements.projectOverview.textContent = project.overview;
-    }
+    const element = document.querySelector('[data-projects]') as HTMLElement;
+    const projects: { data: Project }[] = element ? JSON.parse(element.dataset.projects ?? '[]') : [];
+    const initialProject = projects[0].data;
 
-    document.addEventListener('DOMContentLoaded', () => {
-        const dataElements = {
-            projectImg: document.getElementById('project-img'),
-            projectOwner: document.getElementById('project-owner'),
-            projectPeriod: document.getElementById('project-period'),
-            projectShowcasedAt: document.getElementById('project-showcased-at'),
-            projectFlag: document.getElementById('project-flag-asset'),
-            projectLocation: document.getElementById('project-location'),
-            projectOverview: document.getElementById('project-overview'),
-            // projectBadges: document.getElementById('project-technologies')
-        };
-        
-        const projectTriggers = document.querySelectorAll('[data-project-index]');
-        projectTriggers.forEach((trigger) => {
-            trigger.addEventListener('click', (event) => updateProjectDetails(event, dataElements));
-        });
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('collapsible', () => ({
+            projects,
+            selectedProject: initialProject,
+            setSelectedProject(index: number): void {
+                this.selectedProject = this.projects[index].data;
+            }
+        }))
     });
 </script>
 
