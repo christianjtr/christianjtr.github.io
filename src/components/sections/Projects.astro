@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
-import { Badge, BadgeList, LinkButton, Section, HorizontalSpacer } from "../";
+import { BadgeList, LinkButton, Section, HorizontalSpacer } from "../";
 import Logo from '@assets/svg/projects.svg';
 
 const projects = await getCollection('projects');
@@ -12,10 +12,16 @@ const projectsJSON = JSON.stringify(projects);
         <Logo slot="beforeHeading" width={64} height={64} />
         <HorizontalSpacer />
         <div x-data="collapsible" data-projects={projectsJSON}>
-            <div class="grid grid-cols-5 gap-6 px-10">
+            <div class="grid grid-cols-5 gap-8 px-10">
                 <div class="col-span-2">
                     {projects.map(({ data: project }, index) => (
-                        <div class="collapse" tabindex={index} role="button" x-on:click={`setSelectedProject(${index})`}>
+                        <div 
+                            class="collapse collapse-arrow"
+                            tabindex={index + 1} 
+                            role="button" 
+                            x-on:click={`setSelectedProject(${index})`}
+                        >
+                            <input type="radio" name="project" aria-hidden="true" data-project/>
                             <h2 class="collapse-title card-title">{project.title}</h2>
                             <div class="collapse-content card-body-container space-y-5">
                                 <span id="project-owner" class="badge badge-sm badge-accent font-semibold uppercase">{project.owner}</span>
@@ -23,15 +29,17 @@ const projectsJSON = JSON.stringify(projects);
                                 <span class="font-semibold text-primary">{project.contribute_as}</span>
                                 <p class="leading-8 mt-2">{project.contributions}</p>
                                 <br />
-                                <LinkButton href={project.url} target="_blank" rel="noreferrer" displayDefaultIcon>View details</LinkButton>
+                                <div class="card-actions">
+                                    <BadgeList items={project.technologies} badgeClass="font-semibold badge-soft badge-neutral" />
+                                </div>
                             </div>
                         </div>    
                     ))}
                 </div>
                 <div class="col-span-3">
-                    <div class="card border border-indigo-200 shadow-xl shadow-indigo-100 w-full">
+                    <div class="card border border-indigo-200 w-full">
                         <figure>
-                            <img :src="selectedProject.project_asset" :alt="selectedProject.title" />
+                            <img class="w-full" :src="selectedProject.project_asset" :alt="selectedProject.title" />
                         </figure>
                         <div class="card-body-container p-7">
                             <span class="card-info-title">📍 Showcased at</span>
@@ -42,12 +50,10 @@ const projectsJSON = JSON.stringify(projects);
                                 <span class="badge badge-sm badge-accent font-semibold uppercase" x-text="selectedProject.period"></span>
                             </p>
                             <span class="card-info-title">💡 Overview</span>
-                            <p class="leading-8 mb-5" x-text="selectedProject.overview"></p>
-                            <BadgeList>
-                                <template x-for="item in selectedProject.technologies" :key="item">
-                                    <Badge x-text="item"></Badge>
-                                </template>
-                            </BadgeList>
+                            <p class="leading-8 mb-7" x-text="selectedProject.overview"></p>
+                            <div class="card-actions">
+                                <LinkButton :href="selectedProject.url" target="_blank" rel="noreferrer" displayDefaultIcon>View details</LinkButton>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -64,13 +70,16 @@ const projectsJSON = JSON.stringify(projects);
     const projects: { data: Project }[] = element ? JSON.parse(element.dataset.projects ?? '[]') : [];
     const initialProject = projects[0].data;
 
+    const projectSelectorElements = document.querySelectorAll('[data-project]') as NodeListOf<HTMLInputElement>;
+    projectSelectorElements[0].checked = true;
+
     document.addEventListener('alpine:init', () => {
         Alpine.data('collapsible', () => ({
             projects,
             selectedProject: initialProject,
-            setSelectedProject(index: number): void {
-                this.selectedProject = this.projects[index].data;
-            }
+            setSelectedProject(indexToSelect: number): void {
+                this.selectedProject = this.projects[indexToSelect].data;
+            },
         }))
     });
 </script>
@@ -100,10 +109,10 @@ const projectsJSON = JSON.stringify(projects);
     }
 
     .collapse {
-        @apply p-3 mb-3 border border-neutral-200 text-neutral-400;
+        @apply p-3 mb-3 border border-indigo-200 text-neutral-900;
     }
-
-    .collapse:focus, .collapse:hover {
-        @apply border-indigo-200 shadow-xl shadow-indigo-100 text-neutral-950 cursor-pointer;
+    
+    .collapse:hover {
+        @apply border-indigo-400 shadow-lg shadow-indigo-100 cursor-pointer;
     }
 </style>
