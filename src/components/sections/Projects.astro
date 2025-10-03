@@ -37,11 +37,11 @@ const projectsJSON = JSON.stringify(projects);
                     ))}
                 </div>
                 <div class="col-span-3">
-                    <div class="card border border-indigo-200 w-full">
+                    <div class="card w-full">
                         <figure>
                             <img class="w-full" :src="selectedProject.project_asset" :alt="selectedProject.title" />
                         </figure>
-                        <div class="card-body-container p-7">
+                        <div class="card-body-container pt-5">
                             <span class="card-info-title">📍 Showcased at</span>
                             <span class="block font-semibold mb-2 text-xl" x-text="selectedProject.showcased_at"></span>
                             <p class="flex items-center gap-2 mb-5">
@@ -51,7 +51,7 @@ const projectsJSON = JSON.stringify(projects);
                             </p>
                             <span class="card-info-title">💡 Overview</span>
                             <p class="leading-8 mb-7" x-text="selectedProject.overview"></p>
-                            <div class="card-actions">
+                            <div class="card-actions flex justify-end">
                                 <LinkButton :href="selectedProject.url" target="_blank" rel="noreferrer" displayDefaultIcon>View details</LinkButton>
                             </div>
                         </div>
@@ -111,7 +111,7 @@ const projectsJSON = JSON.stringify(projects);
 
     .collapse {
         @apply p-3 mb-3 border border-indigo-200 text-neutral-900;
-        background-image: linear-gradient(35deg, #F6F6FD, 90%, rgba(255, 255, 255, .168627451)), linear-gradient(#ffffff 1px, transparent 0), linear-gradient(90deg, #ffffff 1px, transparent 0);
+        background-image: linear-gradient(35deg, #F6F6FD, 95%, rgba(255, 255, 255, .168627451)), linear-gradient(#ffffff 1px, transparent 0), linear-gradient(90deg, #ffffff 1px, transparent 0);
         background-color: #aeaefda1;
         background-size: 100% 100%, 1ch 1ch, 1ch 1ch;
     }
