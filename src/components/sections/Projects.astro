@@ -27,7 +27,6 @@ const projectsJSON = JSON.stringify(projects);
                                 <span class="card-info-title">✍️ Contribuitions</span>
                                 <span class="font-semibold text-primary text-lg">{project.contribute_as}</span>
                                 <p class="leading-8 mt-2">{project.contributions}</p>
-                                <br />
                                 <div class="card-actions">
                                     <BadgeList items={project.technologies} badgeClass="font-semibold badge-soft badge-neutral" />
                                 </div>
@@ -41,7 +40,7 @@ const projectsJSON = JSON.stringify(projects);
                             <img class="w-full" :src="selectedProject.project_asset" :alt="selectedProject.title" />
                         </figure>
                         <div class="card-body-container pt-5">
-                            <p class="flex justify-between align-middle">
+                            <p class="flex justify-between align-middle mb-3">
                                 <span class="card-info-title w-fit">📍 Showcased at</span>
                                 <span id="project-owner" class="max-w-fit badge badge-sm badge-accent font-semibold uppercase my-3" x-text="selectedProject.owner"></span>
                             </p>
