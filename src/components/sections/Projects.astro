@@ -24,9 +24,9 @@ const projectsJSON = JSON.stringify(projects);
                             <input type="radio" name="project" aria-hidden="true" data-project/>
                             <h2 class="collapse-title card-title">{project.title}</h2>
                             <div class="collapse-content card-body-container space-y-5">
-                                <span id="project-owner" class="badge badge-sm badge-accent font-semibold uppercase">{project.owner}</span>
+                                {/* <span id="project-owner" class="badge badge-sm badge-accent font-semibold uppercase">{project.owner}</span> */}
                                 <span class="card-info-title">✍️ Contribuitions</span>
-                                <span class="font-semibold text-primary">{project.contribute_as}</span>
+                                <span class="font-semibold text-primary text-lg">{project.contribute_as}</span>
                                 <p class="leading-8 mt-2">{project.contributions}</p>
                                 <br />
                                 <div class="card-actions">
@@ -42,12 +42,15 @@ const projectsJSON = JSON.stringify(projects);
                             <img class="w-full" :src="selectedProject.project_asset" :alt="selectedProject.title" />
                         </figure>
                         <div class="card-body-container pt-5">
-                            <span class="card-info-title">📍 Showcased at</span>
+                            <p class="flex justify-between align-middle">
+                                <span class="card-info-title w-fit">📍 Showcased at</span>
+                                <span id="project-owner" class="max-w-fit badge badge-sm badge-accent font-semibold uppercase my-3" x-text="selectedProject.owner"></span>
+                            </p>
                             <span class="block font-semibold mb-2 text-xl" x-text="selectedProject.showcased_at"></span>
                             <p class="flex items-center gap-2 mb-5">
                                 <img :src="selectedProject.flag_asset" :alt="selectedProject.title" />
                                 <span x-text="selectedProject.location"></span>
-                                <span class="badge badge-sm badge-accent font-semibold uppercase" x-text="selectedProject.period"></span>
+                                <span class="badge badge-sm badge-primary font-semibold uppercase" x-text="selectedProject.period"></span>
                             </p>
                             <span class="card-info-title">💡 Overview</span>
                             <p class="leading-8 mb-7" x-text="selectedProject.overview"></p>
@@ -106,7 +109,7 @@ const projectsJSON = JSON.stringify(projects);
     }
 
     .card-info-title {
-        @apply w-full text-neutral-400 text-sm uppercase my-3 block;
+        @apply text-neutral-400 text-sm uppercase my-3 block;
     }
 
     .collapse {
