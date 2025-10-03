@@ -4,40 +4,59 @@ import { BadgeList, Section, HorizontalSpacer } from "../";
 import Logo from '@assets/svg/studies.svg';
 
 const studies = await getCollection('studies');
+const uniqueCountries = new Set(studies.map(({ data: study} ) => study.location));
 ---
 
 <div class="bg-white">
-    <Section headingTitle="Studies" subtitle="The path chosen for my academic development" class="space-y-5 container mx-auto">
+    <Section headingTitle="Studies" subtitle="The path chosen for my academic development has been across different countries" class="space-y-5 container mx-auto">
         <Logo slot="beforeHeading" width={64} height={64} />
         <HorizontalSpacer />
-        <!-- {studies.map(({ data: study }) => (
-            <article class="flex gap-3">
-                <div class="flex flex-col">
-                    <span class="h-10 w-10 flex items-center justify-center text-white font-bold">1</span>
-                </div>
-                <div class="card w-2/5">
-                    <h3 class="text-xl font-semibold">{study.level}</h3>
-                    <span class="text-sm text-gray-600">{study.subject}</span>
-                    <p class="mt-2 flex flex-col">
-                        <span>{study.location}</span>
-                        <span>{study.period}</span>
-                    </p>
-                </div>
-                <div class="card w-4/5 p-3">
-                    <h2 class="text-xl font-semibold">{study.degree}</h2>
-                    <span class="text-sm text-gray-600">{study.school}</span>
-                    <p class="my-3">{study.description}</p>
-                    {/* <BadgeList items={study.topics} /> */}
-                </div>
-            </article>
-        ))} -->
+        <div class="timeline-wrapper">
+            {studies.map(({ data: study }) => (
+                <article class="card flex flex-row p-4">
+                    <div class="w-1/5 p-3 space-y-3">
+                        <h3 class="text-xl font-semibold">{study.level}</h3>
+                        <span class="text-sm text-gray-600 block mb-2">{study.subject}</span>
+                        <span class="badge badge-sm badge-primary font-semibold uppercase text-white">{study.period}</span>
+                        <p class="flex gap-2 items-center text-lg">
+                            <img src={study.flag_asset} alt={study.location} />
+                            <span>{study.location}</span>
+                        </p>
+                    </div>
+                    <div class="w-4/5 p-3">
+                        <h2 class="text-2xl font-semibold mb-1">
+                            {study.degree} {study.isOngoing && <span class="badge badge-sm badge-accent uppercase">Ongoing</span>}
+                        </h2>
+                        <span class="text-lg text-gray-600">{study.school}</span>
+                        <span class="text-neutral-400 text-sm uppercase mt-5 mb-3 block">📚 Subject</span>
+                        <p class="text-neutral-800 text-lg leading-9">{study.description}</p>
+                        <br />
+                        <BadgeList items={study.topics} badgeClass="font-semibold badge-soft badge-neutral" />
+                    </div>
+                </article>
+            ))}
+        </div>
     </Section>
 </div>
 
 <style>
-        /* background-image: linear-gradient(35deg,#ffffff,90%,rgba(255,255,255,.168627451)),linear-gradient(#ffffff 1px,transparent 0),linear-gradient(90deg,#ffffff 1px,transparent 0);
-        position: relative;
-        color:#000;
-        background-size: 100% 100%,1ch 1ch,1ch 1ch;
-        background-color: var(--color-primary); */
+    @reference "tailwindcss";
+    
+    .timeline-wrapper {
+        @apply px-10 space-y-7 z-1 relative;
+    }
+
+    .timeline-wrapper::after {
+        @apply border-indigo-500 border-1 border-dashed absolute bottom-0 top-0 left-24 z-0 w-0;
+        content: '';
+    }
+    
+    .card {
+        @apply overflow-hidden rounded-lg border border-neutral-200 bg-white z-1;
+        color: var(--color-neutral-dark);
+    }
+
+    .card:hover {
+        @apply border-indigo-200 shadow-xl shadow-indigo-100;
+    }
 </style>

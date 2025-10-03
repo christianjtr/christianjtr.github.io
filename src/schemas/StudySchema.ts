@@ -9,6 +9,7 @@ export const StudySchema = z.object({
     period: z.string(),
     description: z.string(),
     location: z.string(),
+    flag_asset: z.string(),
     topics: z.array(z.string()),
     subject: z.string(),
 });
