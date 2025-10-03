@@ -6,8 +6,10 @@ export const ExperienceSchema = z.object({
     country: z.string(),
     sector: z.string(),
     location: z.string(),
+    flag_asset: z.string(),
     position: z.string(),
     period: z.string(),
+    isOngoing: z.boolean(),
     description: z.string(),
     technologies: z.array(z.string()),
 });
