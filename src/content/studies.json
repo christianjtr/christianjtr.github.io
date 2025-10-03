@@ -7,6 +7,7 @@
         "level": "Specialization",
         "period": "Sep 2023 - Jun 2024",
         "location": "Spain",
+        "flag_asset": "/src/assets/svg/flag_spain.svg",
         "description": "Strategic formation focused on equipping future CTOs with the skills to successfully lead technological projects and drive innovation.",
         "topics": [
             "Tech Leadership",
@@ -26,6 +27,7 @@
         "level": "Master Diploma",
         "period": "Oct 2019 - Jun 2020",
         "location": "Spain",
+        "flag_asset": "/src/assets/svg/flag_spain.svg",
         "description": "Expertise in the strategic management of Internet-based businesses, with a focus on implementing robust marketing plans, enhancing customer experience, developing digital products, and optimizing e-commerce performance.",
         "topics": [
             "Lean Startup",
@@ -44,6 +46,7 @@
         "level": "Postgraduate Diploma",
         "period": "Nov 2017 - Jul 2018",
         "location": "Spain",
+        "flag_asset": "/src/assets/svg/flag_spain.svg",
         "description": "Focused on developing and managing business intelligence projects to drive data-informed decision-making. Proficient in a range of analytical techniques, including data mining, data visualization, machine learning, and big data analysis.",
         "topics": [
             "Data Modeler",
@@ -63,6 +66,7 @@
         "level": "Bootcamp",
         "period": "Mar 2017 - Jul 2017",
         "location": "Argentina",
+        "flag_asset": "/src/assets/svg/flag_argentina.svg",
         "description": "Comprehensive training in digital product development with an emphasis on user experience (UX) design.",
         "topics": [
             "Design Thinking",
@@ -82,6 +86,7 @@
         "level": "Postgraduate Diploma",
         "period": "Sep 2014 - Jul 2015",
         "location": "Venezuela",
+        "flag_asset": "/src/assets/svg/flag_venezuela.svg",
         "description": "Developed a robust skillset in enterprise management, encompassing strategic planning, financial analysis, and cross-functional leadership to drive organizational growth.",
         "topics": [
             "Leadership",
@@ -101,6 +106,7 @@
         "level": "Specialization",
         "period": "Sep 2013 - Apr 2014",
         "location": "Venezuela",
+        "flag_asset": "/src/assets/svg/flag_venezuela.svg",
         "description": "Applied knowledge of open-source business intelligence tools to analyze large datasets and create interactive dashboards that drove data-informed decisions.",
         "topics": ["Data Cleansing", "ETL Design", "DWH", "Open Data Projects"],
         "subject": "Business Intelligence"
@@ -113,6 +119,7 @@
         "level": "Bachelor of Systems Engineering",
         "period": "Sep 2004 - Sep 2009",
         "location": "Venezuela",
+        "flag_asset": "/src/assets/svg/flag_venezuela.svg",
         "description": "Degree in Systems Engineering. European Higher Education Area (EHEA): Knowledge related to engineering and architecture in the specific field of Information and Communication Technologies (ICT)",
         "topics": ["Information and Communication Technologies (ICT)"],
         "subject": "Information and Communication Technologies (ICT)"
