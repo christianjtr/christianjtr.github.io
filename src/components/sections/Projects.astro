@@ -8,7 +8,7 @@ const projectsJSON = JSON.stringify(projects);
 ---
 
 <div class="bg-primary/5">
-    <Section headingTitle="Showcased Projects" subtitle='Presented projects at international conferences' class="space-y-3 container mx-auto mb-5">
+    <Section headingTitle="Showcased Projects" subtitle="Presented projects at international conferences" class="space-y-3 container mx-auto mb-5">
         <Logo slot="beforeHeading" width={64} height={64} />
         <HorizontalSpacer />
         <div x-data="collapsible" data-projects={projectsJSON}>
@@ -91,7 +91,7 @@ const projectsJSON = JSON.stringify(projects);
     .card {
         @apply rounded-lg;
         color: var(--color-neutral-dark);
-        background-color: #F6F6FD;
+        background-color: var(--color-pale-lavender);
     }
 
     .card-body-container > div {
@@ -112,9 +112,6 @@ const projectsJSON = JSON.stringify(projects);
 
     .collapse {
         @apply p-3 mb-3 border border-indigo-200 text-neutral-900;
-        background-image: linear-gradient(35deg, #F6F6FD, 95%, rgba(255, 255, 255, .168627451)), linear-gradient(#ffffff 1px, transparent 0), linear-gradient(90deg, #ffffff 1px, transparent 0);
-        background-color: #aeaefda1;
-        background-size: 100% 100%, 1ch 1ch, 1ch 1ch;
     }
     
     .collapse:hover {

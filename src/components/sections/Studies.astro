@@ -4,7 +4,7 @@ import { BadgeList, Section, HorizontalSpacer } from "../";
 import Logo from '@assets/svg/studies.svg';
 
 const studies = await getCollection('studies');
-const uniqueCountries = new Set(studies.map(({ data: study} ) => study.location));
+const uniqueCountries = [...new Set(studies.map(({ data: study} ) => study.location))];
 ---
 
 <div class="bg-white">
@@ -28,8 +28,8 @@ const uniqueCountries = new Set(studies.map(({ data: study} ) => study.location)
                             {study.degree} {study.isOngoing && <span class="badge badge-sm badge-accent uppercase">Ongoing</span>}
                         </h2>
                         <span class="text-lg text-gray-600">{study.school}</span>
-                        <span class="text-neutral-400 text-sm uppercase mt-5 mb-3 block">📚 Subject</span>
-                        <p class="text-neutral-800 text-lg leading-9">{study.description}</p>
+                        <span class="card-info-title">📚 Subject</span>
+                        <p class="card-content">{study.description}</p>
                         <br />
                         <BadgeList items={study.topics} badgeClass="font-semibold badge-soft badge-neutral" />
                     </div>
@@ -58,5 +58,13 @@ const uniqueCountries = new Set(studies.map(({ data: study} ) => study.location)
 
     .card:hover {
         @apply border-indigo-200 shadow-xl shadow-indigo-100;
+    }
+
+    .card-info-title {
+        @apply text-neutral-400 text-sm uppercase my-3 block;
+    }
+
+    .card-content {
+        @apply text-neutral-800 text-lg leading-9;
     }
 </style>

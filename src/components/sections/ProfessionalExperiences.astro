@@ -4,32 +4,67 @@ import { BadgeList, Section, HorizontalSpacer } from "../";
 import Logo from '@assets/svg/background.svg';
 
 const experiences = await getCollection('experiences');
-const countries = [...new Set(experiences.map(experience => experience.data.country))];
+const uniqueCountries = [...new Set(experiences.map(({data : experience}) => experience.country))];
 ---
 
 <div class="bg-primary/5 py-10">
-    <Section headingTitle="Professional Experiences" subtitle='A comprehensive look at my professional growth and key accomplishments' class="space-y-5 container mx-auto">
+    <Section headingTitle="Professional Experiences" subtitle="A comprehensive look at my professional growth and key accomplishments across different countries" class="space-y-5 container mx-auto">
         <Logo slot="beforeHeading" width={64} height={64} />
         <HorizontalSpacer />
-        <!-- {experiences.map(({ data: experience }) => (
-            <article class="flex gap-2">
-                <div class="flex flex-col">
-                    <span class="h-10 w-10 flex items-center justify-center text-white font-bold">1</span>
-                </div>
-                <div class="card w-2/5 flex flex-col">
-                    <h3 class="text-xl font-semibold">{experience.company}</h3>
-                    <span class="text-sm text-gray-600">{experience.sector}</span>
-                    <p class="mt-2 flex flex-col">
-                        <span>{experience.location}</span>
-                        <span>{experience.period}</span>
-                    </p>
-                </div>
-                <div class="card w-4/5">
-                    <h2 class="text-xl font-semibold">{experience.position}</h2>
-                    <p class="my-3 text-gray-800">{experience.description}</p>
-                    {/* <BadgeList items={experience.technologies} /> */}
-                </div>
-            </article>
-        ))} -->
+        <div class="timeline-wrapper">
+            {experiences.map(({ data: experience }) => (
+                <article class="card flex flex-row p-4">
+                    <div class="w-1/5 p-3 space-y-3">
+                        <h3 class="text-xl font-semibold">{experience.company}</h3>
+                        <span class="text-sm text-gray-600 block mb-2">{experience.sector}</span>
+                        <span class="badge badge-sm badge-primary font-semibold uppercase text-white">{experience.period}</span>
+                        <p class="flex gap-2 items-center text-lg">
+                            <img src={experience.flag_asset} alt={experience.country} />
+                            <span>{experience.country}</span>
+                        </p>
+                    </div>
+                    <div class="w-4/5 p-3">
+                        <h2 class="text-2xl font-semibold mb-1">
+                            {experience.position} {experience.isOngoing && <span class="badge badge-sm badge-accent uppercase">Ongoing</span>}
+                        </h2>
+                        <span class="card-info-title">✍️ Key Contribuition</span>
+                        <p class="card-content">{experience.description}</p>
+                        <br />
+                        <BadgeList items={experience.technologies} />
+                    </div>
+                </article>
+            ))}
+        </div>
     </Section>
 </div>
+
+<style>
+    @reference "tailwindcss";
+    
+    .timeline-wrapper {
+        @apply px-10 space-y-7 z-1 relative;
+    }
+
+    .timeline-wrapper::after {
+        @apply border-indigo-500 border-1 border-dashed absolute bottom-0 top-0 left-24 z-0 w-0;
+        content: '';
+    }
+    
+    .card {
+        @apply rounded-lg border border-indigo-200 text-neutral-900 z-1;
+        color: var(--color-neutral-dark);
+        background-color: var(--color-pale-lavender);
+    }
+
+    .card:hover {
+        @apply border-indigo-400 shadow-lg shadow-indigo-100;
+    }
+
+    .card-info-title {
+        @apply text-neutral-400 text-sm uppercase my-3 block;
+    }
+
+    .card-content {
+        @apply text-neutral-800 text-lg leading-9;
+    }
+</style>
