@@ -12,8 +12,8 @@ const projectsJSON = JSON.stringify(projects);
         <Logo slot="beforeHeading" width={64} height={64} />
         <HorizontalSpacer />
         <div x-data="collapsible" data-projects={projectsJSON}>
-            <div class="grid grid-cols-5 gap-8 px-10">
-                <div class="col-span-2">
+            <div class="grid md:grid-cols-5 md:gap-8 md:px-10 px-8">
+                <div class="md:col-span-2">
                     {projects.map(({ data: project }, index) => (
                         <div 
                             class="collapse collapse-arrow"
@@ -34,7 +34,7 @@ const projectsJSON = JSON.stringify(projects);
                         </div>    
                     ))}
                 </div>
-                <div class="col-span-3">
+                <div class="md:col-span-3">
                     <div class="card w-full">
                         <figure>
                             <img class="w-full" :src="selectedProject.project_asset" :alt="selectedProject.title" />
