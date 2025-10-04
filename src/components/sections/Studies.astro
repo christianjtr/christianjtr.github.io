@@ -13,8 +13,8 @@ const uniqueCountries = [...new Set(studies.map(({ data: study} ) => study.locat
         <HorizontalSpacer />
         <div class="timeline-wrapper">
             {studies.map(({ data: study }) => (
-                <article class="card flex flex-row p-4">
-                    <div class="w-1/5 p-3 space-y-3">
+                <article class="card flex md:flex-row flex-col p-4">
+                    <div class="md:w-1/5 w-full p-3 space-y-3">
                         <h3 class="text-xl font-semibold">{study.level}</h3>
                         <span class="text-sm text-gray-600 block mb-2">{study.subject}</span>
                         <span class="badge badge-sm badge-primary font-semibold uppercase text-white">{study.period}</span>
@@ -23,7 +23,7 @@ const uniqueCountries = [...new Set(studies.map(({ data: study} ) => study.locat
                             <span>{study.location}</span>
                         </p>
                     </div>
-                    <div class="w-4/5 p-3">
+                    <div class="md:w-4/5 w-full p-3">
                         <h2 class="text-2xl font-semibold mb-1">
                             {study.degree} {study.isOngoing && <span class="badge badge-sm badge-accent uppercase">Ongoing</span>}
                         </h2>
@@ -57,7 +57,7 @@ const uniqueCountries = [...new Set(studies.map(({ data: study} ) => study.locat
     }
 
     .card:hover {
-        @apply border-indigo-200 shadow-xl shadow-indigo-100;
+        @apply border-indigo-400 shadow-lg shadow-indigo-100;
     }
 
     .card-info-title {
