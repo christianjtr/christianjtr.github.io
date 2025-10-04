@@ -12,11 +12,10 @@
         "period": "May 2019",
         "contribute_as": "Frontend Software Engineer",
         "technologies": [
-            "VueJS",
-            "NodeJS",
+            "VueJS / NodeJS",
             "Qlik Sense Hub",
             "SignalR Client",
-            "DialogFlow",
+            "Dialog Flow",
             "AR.js"
         ],
         "contributions": "Collaborated with engineers to create an AR/MR user experience, through an app to visualize sales trends and a chatbot for data visualization.",
@@ -59,12 +58,11 @@
         "technologies": [
             "HTML5 / jQuery / CSS",
             "PHP",
-            "MySQL",
-            "PostgreSQL",
-            "R Statistics",
-            "Pentaho BI",
-            "ETL / DWH",
+            "MySQL / PostgreSQL",
             "HighCharts",
+            "R Statistics",
+            "ETL / DWH",
+            "Pentaho BI",
             "ArcGIS"
         ],
         "contributions": "Partnered with a team of engineers, economists, geologists, and geographers in creating and launching a real-time web application to facilitate economic scenario analysis and effectively visualize both geoscience and financial data.",
