@@ -1,27 +1,169 @@
 ---
-import { getCollection } from 'astro:content';
-import { Section } from "../";
 
-const projects = await getCollection('projects');
+const aboutMe = "A technologist dedicated to crafting exceptional digital experiences. I thrive on contributing across the entire project lifecycle, from initial concept and strategy through to launch and ongoing refinement";
+
+const languages = [
+    {
+        "id": "language-1",
+        "emoji": "💃🏻",
+        "name": "Spanish",
+        "proficiency": "Native speaker",
+    },
+    {
+        "id": "language-2",
+        "emoji": "💂🏻",
+        "name": "English",
+        "proficiency": "Professional Proficiency",
+    },
+    {
+        "id": "language-3",
+        "emoji": "🥐",
+        "name": "French",
+        "proficiency": "Everyday Situational",
+    }
+];
+
+const competencies = [
+    "Goal-oriented and self-motivated to continous learning",
+    "Good listener with a strong work ethic",
+    "Strategic and Creative Thinker",
+    "Agile Leadership, Coaching, Product ownership",
+    // "Product Development and Digital Marketing",
+    "Experimentation, PoCs, and Tech Research",
+    // "Business Intelligence and Data Analytical Skills"
+];
 ---
 
-<Section title="Showcased Projects" class="space-y-4">
-    <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-2">
-    {projects.map(project => (
-        // <article class="card bg-base-300 rounded-box p-4 shadow-md">
-        //     <h2 class="text-xl font-semibold">{project.data.title}</h2>
-        //     <p class="text-sm text-gray-600">{project.data.showcased_at}</p>
-        //     <p class="mt-2">{project.data.contributions}</p>
-        //     <a href={project.data.url} class="text-blue-500 hover:underline mt-2 block">View Project</a>
-        // </article>
-        <div class="card w-96 bg-base-100 shadow-sm">
-            <div class="card-body">
-                <span class="badge badge-md badge-success">Most Popular</span>
-                <div class="flex justify-between">
-                    <h3 class="text-lg">{project.data.title}</h3>
+<div class="space-y-5 container mx-auto">
+    <div class="bg-primary my-3">
+            <div class="grid md:grid-cols-5 md:gap-8 md:px-10 mx-auto px-8 py-16">
+                <div class="md:col-span-3">
+                    <h1
+                        class="max-w-2xl mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl">
+                        Christian José <br>Torrealba Rondón.
+                    </h1>
+                    <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
+                        {aboutMe}
+                    </p>
                 </div>
+                <div class="md:col-span-2">
+                    ...
+                </div>
+
             </div>
-        </div>
-    ))}
     </div>
-</Section>
+    <div class="max-w-screen-[1440px] mx-auto">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 p-2">
+
+                <div class="p-4 bg-white shadow border rounded-[10px]">
+
+                    <button class="p-2 bg-[#F5F8FF] rounded-[10px] cursor-default">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 4V5M12 19V20M5.07178 8L5.9378 8.5M18.0622 15.5L18.9282 16M18.9282 7.99999L18.0622 8.49999M5.93781 15.5L5.07178 16M16 12C16 9.79086 14.2091 8 12 8C9.79084 8 7.99998 9.79086 7.99998 12C7.99998 14.2091 9.79084 16 12 16C14.2091 16 16 14.2091 16 12Z"
+                                stroke="#252432" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+
+                    <p class="font-[Inter] text-lg text-[#252432] my-5">Web Design</p>
+
+                    <p class="font-[Inter] text-sm text-[#8987A1] font-[400]">From concept to launch, we create
+                        stunning, user-centric websites that elevate your brand and engage your audience.</p>
+
+                </div>
+
+                <div class="p-4 bg-white shadow border rounded-[10px]">
+
+                    <button class="p-2 bg-[#F5F8FF] rounded-[10px] cursor-default">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10.2442 4.86956C11.0022 3.47968 12.9979 3.47968 13.7559 4.86956L14.9723 7.09993C15.2599 7.62738 15.7694 7.99758 16.36 8.10817L18.8571 8.57579C20.4132 8.86719 21.0299 10.7653 19.9422 11.9157L18.1969 13.7617C17.7842 14.1983 17.5895 14.7973 17.6668 15.3931L17.9938 17.9125C18.1975 19.4824 16.5829 20.6555 15.1527 19.9766L12.8577 18.8871C12.3149 18.6295 11.6851 18.6295 11.1424 18.8871L8.84732 19.9766C7.41713 20.6555 5.80257 19.4824 6.00629 17.9125L6.3332 15.3931C6.41051 14.7973 6.21588 14.1983 5.80313 13.7617L4.05781 11.9157C2.97019 10.7653 3.58689 8.86719 5.14299 8.57579L7.64007 8.10817C8.2306 7.99758 8.74014 7.62738 9.02779 7.09993L10.2442 4.86956Z"
+                                stroke="#252432" stroke-width="1.5" stroke-linejoin="round" />
+                        </svg>
+
+                    </button>
+
+                    <p class="font-[Inter] text-lg text-[#252432] my-5">UI/UX Design</p>
+
+                    <p class="font-[Inter] text-sm text-[#8987A1] font-[400]">From concept to launch, we create
+                        stunning, user-centric websites that elevate your brand and engage your audience.</p>
+
+                </div>
+
+                <div class="p-4 bg-white shadow border rounded-[10px]">
+
+                    <button class="p-2 bg-[#F5F8FF] rounded-[10px] cursor-default">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 18H6C4.34315 18 3 16.6569 3 15V6C3 4.34315 4.34315 3 6 3H18C19.6569 3 21 4.34315 21 6V15C21 16.6569 19.6569 18 18 18H14M10 18V21M10 18H14M14 18V21M10 21H14M10 21H9M14 21H15"
+                                stroke="#252432" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </button>
+
+                    <p class="font-[Inter] text-lg text-[#252432] my-5">Responsive Design</p>
+
+                    <p class="font-[Inter] text-sm text-[#8987A1] font-[400]">From concept to launch, we create
+                        stunning, user-centric websites that elevate your brand and engage your audience.</p>
+
+                </div>
+
+
+                <div class="p-4 bg-white shadow border rounded-[10px] lg:row-span-2">
+                    <h4>Key Competencies</h4>
+                    <ul class="list bg-base-100 my-3">
+                        {competencies.map((competency, index) => (
+                            <li class="list-row">
+                                {/* <div class="text-4xl font-thin opacity-30 tabular-nums">{`0${index + 1}`}</div> */}
+                                <span>{competency}</span>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+
+                <div class="p-4 bg-white shadow border rounded-[10px] lg:col-span-2 flex justify-between gap-5">
+
+                    <div>
+                        <button class="p-3 py-4 bg-[#F5F8FF] rounded-[10px] cursor-default">
+                            <svg width="21" height="13" viewBox="0 0 21 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M21 0L14.3528 12.8765H8.05945L10.8101 7.61233H10.6832C8.37078 10.5927 4.91823 12.5553 0 13V7.6855C0 7.6855 3.1455 7.50067 4.99585 5.57067H0.0023098V0H5.71431L5.61596 4.58333H5.74275L8.03687 0H12.5781L12.2834 4.555H12.4103L14.7885 0H21Z"
+                                    fill="#5B54FF" />
+                            </svg>
+
+                        </button>
+
+                        <p class="font-[Inter] text-lg text-[#252432] my-5">Webflow</p>
+
+                        <p class="font-[Inter] text-sm text-[#8987A1] font-[400]">From concept to launch, we create
+                            stunning, user-centric websites that elevate your brand and engage your audience.</p>
+
+                    </div>
+                    <div>
+                        <img class="hidden lg:block mt-5 rounded-[10px]" src="https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=400" alt="Pictures" />
+                    </div>
+
+                </div>
+
+
+                <div class="p-4 bg-white shadow border rounded-[10px]">
+                    <h4>Languages</h4>
+                    <ul class="list bg-base-100 my-3">
+                        <li class="text-xs opacity-60 tracking-wide">They are constantly being polished up</li>
+                        {languages.map(language => (
+                            <li class="list-row">
+                                <div class="text-2xl">{language.emoji}</div>
+                                <div>
+                                    <div class="text-lg font-medium">{language.name}</div>
+                                    <div class="text-xs uppercase opacity-60">{language.proficiency}</div>
+                                </div>
+                            </li>
+                        ))}
+                    </ul>
+
+                </div>
+
+            </div>
+    </div>
+</div>  
