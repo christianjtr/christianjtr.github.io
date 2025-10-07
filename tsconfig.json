@@ -10,6 +10,8 @@
         "paths": {
             "@assets": ["src/assets"],
             "@assets/*": ["src/assets/*"],
+            "@content": ["src/content"],
+            "@content/*": ["src/content/*"],
             "@components": ["src/components"],
             "@components/*": ["src/components/*"],
             "@layouts": ["src/layouts"],
