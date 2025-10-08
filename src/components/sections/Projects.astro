@@ -9,7 +9,7 @@ const projectsJSON = JSON.stringify(projects);
 
 <div class="bg-primary/5">
     <Section headingTitle="Showcased Projects" subtitle="Presented projects at international conferences" class="space-y-3 container mx-auto mb-5">
-        <Logo slot="beforeHeading" width={64} height={64} />
+        <Logo slot="beforeHeading" width={96} height={96} />
         <HorizontalSpacer />
         <div x-data="collapsible" data-projects={projectsJSON}>
             <div class="grid md:grid-cols-5 md:gap-8">
@@ -42,7 +42,7 @@ const projectsJSON = JSON.stringify(projects);
                         <div class="card-body-container pt-5">
                             <p class="flex justify-between align-middle mb-3">
                                 <span class="card-info-title w-fit">📍 Showcased at</span>
-                                <span id="project-owner" class="max-w-fit badge badge-sm badge-accent font-semibold uppercase my-3" x-text="selectedProject.owner"></span>
+                                <span id="project-owner" class="badge badge-sm badge-accent font-semibold uppercase my-3" x-text="selectedProject.owner"></span>
                             </p>
                             <span class="block font-semibold mb-2 text-xl" x-text="selectedProject.showcased_at"></span>
                             <p class="flex items-center gap-2 mb-5">

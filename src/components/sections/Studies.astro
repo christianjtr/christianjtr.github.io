@@ -9,9 +9,9 @@ const uniqueCountries = [...new Set(studies.map(({ data: study} ) => study.locat
 
 <div class="bg-white">
     <Section headingTitle="Studies" subtitle="The path chosen for my academic development has been across different countries" class="space-y-5 container mx-auto">
-        <Logo slot="beforeHeading" width={64} height={64} />
+        <Logo slot="beforeHeading" width={96} height={96} />
         <HorizontalSpacer />
-        <div class="timeline-wrapper">
+        <div class="timeline-wrapper px-5 md:p-0">
             {studies.map(({ data: study }) => (
                 <article class="card flex md:flex-row flex-col p-4">
                     <div class="md:w-1/5 w-full p-3 space-y-3">
