@@ -2,13 +2,11 @@
 import type { AstroBuiltinAttributes } from 'astro';
 import type { HTMLAttributes } from 'astro/types';
 
-interface Props extends HTMLAttributes<'span'> {
-    badgeClass?: AstroBuiltinAttributes['class:list'];
-}
+interface Props extends HTMLAttributes<'span'> {}
 
-const { badgeClass = "badge-soft badge-neutral", ...attributes } = Astro.props;
+const { class: customizedClasses, ...attributes } = Astro.props;
 ---
 
-<span class:list={['badge font-semibold', badgeClass]} {...attributes}>
+<span class:list={['badge font-semibold', customizedClasses]} {...attributes}>
     <slot />
 </span>

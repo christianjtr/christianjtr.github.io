@@ -8,17 +8,17 @@ type BadgeContentType = string | number;
 interface Props extends HTMLAttributes<'div'> {
     items?: BadgeContentType[];
     wrapperClass?: AstroBuiltinAttributes['class:list'];
-    badgeClass?: AstroBuiltinAttributes['class:list'];
+    badgeClass?: string;
 }
 
-const { items = [], badgeClass = "badge-soft badge-neutral", wrapperClass, ...attributes } = Astro.props;
+const { items = [], badgeClass = "badge-soft", wrapperClass, ...attributes } = Astro.props;
 const shouldRenderItems = items.length > 0;
 ---
 
 <div  class:list={['badge-list-wrapper', wrapperClass]} {...attributes}>
     <slot />
     {shouldRenderItems && items?.map((item) => (
-        <Badge badgeClass={badgeClass}>{item}</Badge>
+        <Badge class={badgeClass}>{item}</Badge>
     ))}
 </div>
 
