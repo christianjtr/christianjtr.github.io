@@ -31,7 +31,7 @@ const uniqueCountries = [...new Set(studies.map(({ data: study} ) => study.locat
                         <span class="card-info-title">📚 Subject</span>
                         <p class="card-content">{study.description}</p>
                         <br />
-                        <BadgeList items={study.topics} badgeClass="font-semibold badge-soft badge-neutral" />
+                        <BadgeList items={study.topics} badgeClass="font-semibold badge-soft" />
                     </div>
                 </article>
             ))}
