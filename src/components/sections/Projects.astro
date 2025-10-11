@@ -1,149 +1,123 @@
 ---
 import { getCollection } from 'astro:content';
-import { LinkButton, Section, HorizontalSpacer, Badge } from "../";
+import { LinkButton, Section, HorizontalSpacer, BadgeList } from "../";
 import Logo from '@assets/svg/projects.svg';
 import Pin from '@assets/svg/pin.svg';
 import SmileFace from '@assets/svg/smile-face.svg';
 import Monitor from '@assets/svg/monitor.svg';
+import Book from '@assets/svg/book.svg';
+import type { Project } from '@schemas/ProjectSchema';
 
 const projects = await getCollection('projects');
-const projectsJSON = JSON.stringify(projects);
 ---
 
 <div class="bg-primary/5">
     <Section headingTitle="Showcased Projects" subtitle="Presented project work at multiple international conferences" class="container mx-auto py-5">
         <Logo slot="beforeHeading" width={96} height={96} />
         <HorizontalSpacer />
-        <div x-data="collapsible" data-projects={projectsJSON}>
-            <div class="grid md:grid-cols-5 md:gap-8 mx-auto px-5 md:p-0">
-                <div class="md:col-span-3">
-                    {projects.map(({ data: project }, index) => (
-                        <div 
-                            class="collapse collapse-arrow"
-                            tabindex={index + 1} 
-                            role="button" 
-                            x-on:click={`setSelectedProject(${index})`}
-                        >
-                            <input type="radio" name="project" aria-hidden="true" data-project/>
-                            <div class="flex flex-col collapse-title space-y-3">
-                                <div class="avatar avatar-placeholder">
-                                    <div class="bg-accent text-neutral w-12 rounded-full">
-                                        <span class="text-3xl font-thin">{`0${index+1}`}</span>
-                                    </div>
+        <div>
+            <div class="mx-auto px-5 md:p-0">
+                {projects.map(({ data: project }: { data: Project }, index) => (
+                    <div  class="collapse collapse-arrow" tabindex={index + 1} role="button">
+                        <input type="radio" name="project" aria-hidden="true" checked={index === 0} />
+                        <div class="flex gap-8 collapse-title">
+                            <div class="block avatar avatar-placeholder grow-0">
+                                <div class="bg-accent text-neutral w-14 rounded-full">
+                                    <span class="text-3xl font-thin">{`0${index+1}`}</span>
                                 </div>
-                                <h2 class="card-title">{project.title}</h2>
-                                <span class="text-primary text-lg font-medium">{project.owner}</span>
                             </div>
-                            <div class="collapse-content">
-                                <p class="leading-9 text-lg">{project.overview}</p>
-                                <br />
+                            <div class="flex flex-col space-y-1">
+                                <h2 class="collapse__title">{project.title}</h2>
+                                <span class="block text-neutral-600">🎯 {project.summary}</span>
+                                <span class="block text-primary font-medium">{project.owner}</span>
+                            </div>
+                        </div>
+                        <div class="collapse-content">
+                            <br />
+                            <div class="grid md:grid-cols-5 gap-8">
+                                <div class="md:col-span-3 col-span-full">
+                                    <ul class="list">
+                                        <li class="list-row py-5 rounded-none border-none hover:bg-primary/5">
+                                            <Book width={24} height={24} />
+                                            <div class="list-col-grow space-y-2">
+                                                <span class="text-neutral-500 block">Overview</span>
+                                                <p class="leading-9 text-lg">{project.overview}</p>
+                                            </div>
+                                        </li>
+                                        <li class="list-row py-5 rounded-none border-none hover:bg-primary/5">
+                                            <SmileFace width={24} height={24} />
+                                            <div class="list-col-grow space-y-2">
+                                                <span class="text-neutral-500 block">Role</span>
+                                                <div>
+                                                    <span class="mb-3 block font-medium text-secondary text-lg">{project.contribute_as}</span>
+                                                    <p class="leading-9 text-lg">{project.contributions}</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-row py-5 rounded-none border-none hover:bg-primary/5">
+                                            <Pin width={24} height={24} />
+                                            <div class="list-col-grow space-y-2">
+                                                <div class="text-neutral-500">Showcased at</div>
+                                                <div class="space-y-2">
+                                                    <span class="block font-medium text-lg">{project.showcased_at}</span>
+                                                    <p class="flex items-center gap-2">
+                                                        <img src={project.flag_asset} alt={project.title} />
+                                                        <span>{project.location}</span>
+                                                        <span class="badge badge-sm badge-primary font-semibold uppercase">{project.period}</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="md:col-span-2 col-span-full">
+                                    <ul class="list">
+                                        <li class="relative">
+                                            <figure>
+                                                <img class="framed w-full border-1 border-neutral-600" src={project.project_asset} alt={project.title} />
+                                            </figure>
+                                        </li>
+                                        <li class="list-row py-5 rounded-none border-none hover:bg-primary/5 my-3">
+                                            <Monitor width={24} height={24} />
+                                            <div class="list-col-grow space-y-2">
+                                                <div class="text-neutral-500">Core technologies</div>
+                                                <br />
+                                                <BadgeList items={project.technologies} />
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="flex justify-end">
                                 <LinkButton href={project.url} target="_blank" rel="noopener noreferrer" displayDefaultIcon>View details</LinkButton>
                             </div>
-                        </div>    
-                    ))}
-                </div>
-                <div class="md:col-span-2">
-                    <div class="card">
-                        <div class="card-body-container">
-                            <ul class="list">
-                                <li class="border-3 border-secondary">
-                                    <figure>
-                                        <img class="w-full" :src="selectedProject.project_asset" :alt="selectedProject.title"/>
-                                    </figure>
-                                </li>
-                                <li class="list-row py-5 rounded-none border-none hover:bg-primary/5">
-                                    <Pin width={24} height={24} />
-                                    <div class="list-col-grow space-y-2">
-                                        <div class="text-neutral-500">Showcased at</div>
-                                        <div>
-                                            <span class="font-medium text-lg" x-text="selectedProject.showcased_at"></span>
-                                            <p class="flex items-center gap-2">
-                                                <img :src="selectedProject.flag_asset" :alt="selectedProject.title" />
-                                                <span x-text="selectedProject.location"></span>
-                                                <span class="badge badge-sm badge-primary font-semibold uppercase" x-text="selectedProject.period"></span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="list-row py-5 rounded-none border-none hover:bg-primary/5">
-                                    <SmileFace width={24} height={24} />
-                                    <div class="list-col-grow space-y-2">
-                                        <div class="text-neutral-500">Role</div>
-                                        <div>
-                                            <span class="mb-3 block font-medium text-primary text-lg" x-text="selectedProject.contribute_as"></span>
-                                            <p class="leading-9 text-lg" x-text="selectedProject.contributions"></p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="list-row py-5 rounded-none border-none hover:bg-primary/5">
-                                    <Monitor width={24} height={24} />
-                                    <div class="list-col-grow space-y-2">
-                                        <div class="text-neutral-500">Core technologies</div>
-                                        <br />
-                                        <div class="flex flex-wrap gap-3">
-                                            <template x-for="technology in selectedProject.technologies">
-                                                <Badge class="badge-soft" x-text="technology"></Badge>
-                                            </template>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
                         </div>
-                    </div>
-                </div>
+                        {/* <span class="absolute rounded-lg inset-x-0 bottom-0 h-1 bg-gradient-to-r from-accent via-blue-500 to-primary"></span> */}
+                    </div>    
+                ))}
             </div>
         </div>
     </Section>
 </div>
 
-<script>
-    import Alpine from 'alpinejs';
-    import type { Project } from '@schemas/ProjectSchema';
-
-    const element = document.querySelector('[data-projects]') as HTMLElement;
-    const projects: { data: Project }[] = element ? JSON.parse(element.dataset.projects ?? '[]') : [];
-    const initialProject = projects[0].data;
-
-    const projectSelectorElements = document.querySelectorAll('[data-project]') as NodeListOf<HTMLInputElement>;
-    projectSelectorElements[0].checked = true;
-
-    document.addEventListener('alpine:init', () => {
-        Alpine.data('collapsible', () => ({
-            projects,
-            selectedProject: initialProject,
-            setSelectedProject(indexToSelect: number): void {
-                this.selectedProject = this.projects[indexToSelect].data;
-            },
-        }))
-    });
-</script>
-
 <style>
     @reference "tailwindcss";
 
-    .card {
-        @apply rounded-lg;
-        color: var(--color-neutral-dark);
-        background-color: var(--color-pale-lavender);
+    .collapse {
+        @apply p-3 mb-5 border border-indigo-200;
     }
 
-    .card-body-container > div {
-        @apply space-y-3 text-lg leading-9 text-neutral-800;
+    .collapse:hover {
+        @apply border-indigo-400 shadow-lg shadow-indigo-100;
     }
 
-    .card-title {
+    .collapse .collapse__title {
         @apply text-2xl leading-10 font-medium;
     }
 
-    .card-subtitle {
-        @apply font-light text-sm;
-    }
-
-    .collapse {
-        @apply p-3 mb-3 border border-indigo-200 text-neutral-900;
-    }
-    
-    .collapse:hover {
-        @apply border-indigo-400 shadow-lg shadow-indigo-100 cursor-pointer;
-    }
+img.framed {
+  box-shadow: -50px -50px 0 -40px var(--color-electric-teal), 50px 50px 0 -40px var(--color-cobalt-blue);
+  border-top-right-radius: 1.5rem;
+  border-bottom-left-radius: .5rem;
+}
 </style>

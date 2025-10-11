@@ -14,6 +14,7 @@ export const ProjectSchema = z.object({
     contribute_as: z.string(),
     contributions: z.string(),
     overview: z.string(),
+    summary: z.string(),
     technologies: z.array(z.string()),
 });
 
