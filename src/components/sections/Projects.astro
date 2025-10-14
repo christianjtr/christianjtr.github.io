@@ -15,87 +15,87 @@ const projects = await getCollection('projects');
     <Section headingTitle="Showcased Projects" subtitle="Presented project work at multiple international conferences" class="container mx-auto py-5">
         <Logo slot="beforeHeading" width={96} height={96} />
         <HorizontalSpacer />
-        <div>
-            <div class="mx-auto px-5 md:p-0">
-                {projects.map(({ data: project }: { data: Project }, index) => (
-                    <div  class="collapse collapse-arrow" tabindex={index + 1} role="button">
-                        <input type="radio" name="project" aria-hidden="true" checked={index === 0} />
-                        <div class="flex gap-8 collapse-title">
-                            <div class="block avatar avatar-placeholder grow-0">
-                                <div class="bg-accent text-neutral w-14 rounded-full">
-                                    <span class="text-3xl font-thin">{`0${index+1}`}</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-col space-y-1">
-                                <h2 class="collapse__title">{project.title}</h2>
-                                <span class="block text-neutral-600">🎯 {project.summary}</span>
-                                <span class="block text-primary font-medium">{project.owner}</span>
+        <div class="mx-auto px-5 md:p-0">
+            {projects.map(({ data: project }: { data: Project }, index) => (
+                <div  class="collapse collapse-arrow" tabindex={index + 1} role="button">
+                    <input type="radio" name="project" aria-hidden="true" checked={index === 0} />
+                    <div class="flex flex-col md:flex-row gap-8 collapse-title">
+                        <div class="block avatar avatar-placeholder grow-0">
+                            <div class="bg-accent text-neutral w-14 rounded-full">
+                                <span class="text-3xl font-thin">{`0${index+1}`}</span>
                             </div>
                         </div>
-                        <div class="collapse-content">
-                            <br />
-                            <div class="grid md:grid-cols-5 gap-8">
-                                <div class="md:col-span-3 col-span-full">
-                                    <ul class="list">
-                                        <li class="list-row py-5 rounded-none border-none hover:bg-primary/5">
-                                            <Book width={24} height={24} />
-                                            <div class="list-col-grow space-y-2">
-                                                <span class="text-neutral-500 block">Overview</span>
-                                                <p class="leading-9 text-lg">{project.overview}</p>
+                        <div class="flex flex-col space-y-2">
+                            <h2 class="collapse__title">{project.title}</h2>
+                            <span class="block text-neutral-600">🎯 {project.summary}</span>
+                            <span class="block text-secondary font-medium">{project.owner}</span>
+                        </div>
+                    </div>
+                    <div class="collapse-content">
+                        <br />
+                        <div class="grid md:grid-cols-5 gap-8 mb-5">
+                            <div class="md:col-span-3 col-span-full">
+                                <ul class="list">
+                                    <li class="list-row py-5 rounded-none border-none hover:bg-primary/5">
+                                        <Book width={24} height={24} />
+                                        <div class="list-col-grow space-y-2">
+                                            <span class="text-neutral-500 block">Overview</span>
+                                            <p class="leading-9 text-lg">{project.overview}</p>
+                                        </div>
+                                    </li>
+                                    <li class="list-row py-5 rounded-none border-none hover:bg-primary/5">
+                                        <SmileFace width={24} height={24} />
+                                        <div class="list-col-grow space-y-2">
+                                            <span class="text-neutral-500 block">Role</span>
+                                            <div>
+                                                <span class="mb-3 block font-medium text-secondary text-lg">🧑‍💻 {project.contribute_as}</span>
+                                                <p class="leading-9 text-lg">{project.contributions}</p>
                                             </div>
-                                        </li>
-                                        <li class="list-row py-5 rounded-none border-none hover:bg-primary/5">
-                                            <SmileFace width={24} height={24} />
-                                            <div class="list-col-grow space-y-2">
-                                                <span class="text-neutral-500 block">Role</span>
-                                                <div>
-                                                    <span class="mb-3 block font-medium text-secondary text-lg">{project.contribute_as}</span>
-                                                    <p class="leading-9 text-lg">{project.contributions}</p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="list-row py-5 rounded-none border-none hover:bg-primary/5">
-                                            <Pin width={24} height={24} />
-                                            <div class="list-col-grow space-y-2">
-                                                <div class="text-neutral-500">Showcased at</div>
-                                                <div class="space-y-2">
-                                                    <span class="block font-medium text-lg">{project.showcased_at}</span>
-                                                    <p class="flex items-center gap-2">
-                                                        <img src={project.flag_asset} alt={project.title} />
-                                                        <span>{project.location}</span>
-                                                        <span class="badge badge-sm badge-primary font-semibold uppercase">{project.period}</span>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="md:col-span-2 col-span-full">
-                                    <ul class="list">
-                                        <li class="relative">
-                                            <figure>
-                                                <img class="framed w-full border-1 border-neutral-600" src={project.project_asset} alt={project.title} />
-                                            </figure>
-                                        </li>
-                                        <li class="list-row py-5 rounded-none border-none hover:bg-primary/5 my-3">
-                                            <Monitor width={24} height={24} />
-                                            <div class="list-col-grow space-y-2">
-                                                <div class="text-neutral-500">Core technologies</div>
-                                                <br />
-                                                <BadgeList items={project.technologies} />
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-row py-5 rounded-none border-none hover:bg-primary/5">
+                                        <Monitor width={24} height={24} />
+                                        <div class="list-col-grow space-y-2">
+                                            <span class="text-neutral-500 block">Technologies</span>
+                                            <br />
+                                            <BadgeList items={project.technologies} />
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="flex justify-end">
-                                <LinkButton href={project.url} target="_blank" rel="noopener noreferrer" displayDefaultIcon>View details</LinkButton>
+                            <div class="md:col-span-2 col-span-full">
+                                <div class="card w-full bg-base-100 shadow-lg mb-3">
+                                    <div class="card-body p-4">
+                                        <figure>
+                                            <img class="w-full border-1 border-neutral-500" src={project.project_asset} alt={project.title} />
+                                        </figure>
+                                    </div>
+                                </div>
+                                <ul class="list">
+                                    <li class="list-row py-5 rounded-none border-none hover:bg-primary/5">
+                                        <Pin width={24} height={24} />
+                                        <div class="list-col-grow space-y-2">
+                                            <div class="text-neutral-500">Showcased at</div>
+                                            <div class="space-y-2">
+                                                <span class="block font-medium text-lg">{project.showcased_at}</span>
+                                                <p class="flex items-center gap-2">
+                                                    <img src={project.flag_asset} alt={project.title} />
+                                                    <span>{project.location}</span>
+                                                    <span class="badge badge-sm badge-warning font-semibold uppercase">{project.period}</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        {/* <span class="absolute rounded-lg inset-x-0 bottom-0 h-1 bg-gradient-to-r from-accent via-blue-500 to-primary"></span> */}
-                    </div>    
-                ))}
-            </div>
+                        <div class="flex justify-start md:justify-end">
+                            <LinkButton href={project.url} target="_blank" rel="noopener noreferrer" displayDefaultIcon>View more</LinkButton>
+                        </div>
+                    </div>
+                    <span class="absolute rounded-lg inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-accent via-blue-500 to-primary"></span>
+                </div>    
+            ))}
         </div>
     </Section>
 </div>
@@ -115,9 +115,7 @@ const projects = await getCollection('projects');
         @apply text-2xl leading-10 font-medium;
     }
 
-img.framed {
-  box-shadow: -50px -50px 0 -40px var(--color-electric-teal), 50px 50px 0 -40px var(--color-cobalt-blue);
-  border-top-right-radius: 1.5rem;
-  border-bottom-left-radius: .5rem;
-}
+/* img.framed {
+  box-shadow: -50px -50px 0 -45px rgb(255, 208, 120), 50px 50px 0 -45px rgb(255, 102, 0);
+} */
 </style>
