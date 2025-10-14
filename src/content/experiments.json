@@ -73,7 +73,7 @@
         ],
         "role": "Author",
         "category": "Proof of Concept (PoC)",
-        "type": "Web Application (Movie/TV Series Catalog)",
+        "type": "Web app (Movie/TV Series Catalog)",
         "url": "https://christianjtr.github.io/tv-app/"
     },
     {
@@ -88,7 +88,7 @@
         ],
         "role": "Author",
         "category": "Proof of Concept (PoC)",
-        "type": "Web Application (Simple Employee Management Dashboard)",
+        "type": "Web app (Employee Management Dashboard)",
         "url": "https://christianjtr.github.io/manage-employees-dashboard/#/"
     },
     {
@@ -104,13 +104,13 @@
         ],
         "role": "Author",
         "category": "Proof of Concept (PoC)",
-        "type": "Web Application (Error Monitoring Dashboard)",
+        "type": "Web app (Error Monitoring Dashboard)",
         "url": null
     },
     {
         "id": "experiment-restaurant-browser-app",
         "title": "Restaurant's browser",
-        "description": "Conceptual application designed to help users discover and connect with local restaurants. Built as a Progressive Web Application (PWA), it gives you the convenience of a native app without requiring a download from an app store. Using your device's Geolocation API, the app instantly finds the restaurants closest to you.",
+        "description": "Conceptual application designed to help users discover and connect with local restaurants. Built as a Progressive Web app (PWA), it gives you the convenience of a native app without requiring a download from an app store. Using your device's Geolocation API, the app instantly finds the restaurants closest to you.",
         "image": "/src/assets/images/restaurant_browser.jpg",
         "tags": [
             "Front-end development",
@@ -120,7 +120,7 @@
         ],
         "role": "Author",
         "category": "Proof of Concept (PoC)",
-        "type": "Web Application (Restaurants application)",
+        "type": "Web app (Restaurants application)",
         "url": "https://christianjtr.github.io/restaurant-browser-app/"
     },
     {
@@ -136,7 +136,7 @@
         ],
         "role": "Author",
         "category": "Proof of Concept (PoC)",
-        "type": "Web Application (Pokémon Catalog)",
+        "type": "Web app (Pokémon Catalog)",
         "url": "https://christianjtr.github.io/svelte-pokedex-pwa/"
     }
 ]
