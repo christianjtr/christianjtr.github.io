@@ -10,7 +10,7 @@
             "Team Dynamics"
         ],
         "role": "Author",
-        "type": "Thought Leadership Essay",
+        "type": "Leadership Essay",
         "category": "Case of Study",
         "url": null
     },
@@ -25,7 +25,7 @@
             "Data-driven applications"
         ],
         "role": "Author",
-        "type": "BI and Data Engineering",
+        "type": "Data Engineering",
         "category": "Project",
         "url": null
     },
@@ -73,7 +73,7 @@
         ],
         "role": "Author",
         "category": "Proof of Concept (PoC)",
-        "type": "Web Application (Movie/TV Catalog)",
+        "type": "Web Application (Movie/TV Series Catalog)",
         "url": "https://christianjtr.github.io/tv-app/"
     },
     {
@@ -88,7 +88,7 @@
         ],
         "role": "Author",
         "category": "Proof of Concept (PoC)",
-        "type": "Web Application (BackOffice)",
+        "type": "Web Application (Simple Employee Management Dashboard)",
         "url": "https://christianjtr.github.io/manage-employees-dashboard/#/"
     },
     {
@@ -104,7 +104,7 @@
         ],
         "role": "Author",
         "category": "Proof of Concept (PoC)",
-        "type": "Web Application (Monitoring Dashboard)",
+        "type": "Web Application (Error Monitoring Dashboard)",
         "url": null
     },
     {
@@ -120,7 +120,7 @@
         ],
         "role": "Author",
         "category": "Proof of Concept (PoC)",
-        "type": "Web Application (PWA)",
+        "type": "Web Application (Restaurants application)",
         "url": "https://christianjtr.github.io/restaurant-browser-app/"
     },
     {
@@ -136,7 +136,7 @@
         ],
         "role": "Author",
         "category": "Proof of Concept (PoC)",
-        "type": "Web Application (PWA)",
+        "type": "Web Application (Pokémon Catalog)",
         "url": "https://christianjtr.github.io/svelte-pokedex-pwa/"
     }
 ]
