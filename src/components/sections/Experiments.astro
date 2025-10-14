@@ -30,7 +30,7 @@ const experiments = await getCollection('experiments');
                         <h2 class="card-title">{experiment.title}</h2>
                         <p class="flex justify-between items-center mb-2"> 
                             <span class="card-text-info">
-                                {roleIcons[experiment.role as ExperimentRole]} {experiment.role} | {experiment.type}
+                                {roleIcons[experiment.role as ExperimentRole]} {experiment.type} · {experiment.role}
                             </span>
                         </p>
                         <p class="card-text-content">{experiment.description}</p>
