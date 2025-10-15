@@ -11,5 +11,6 @@ export const ExperienceSchema = z.object({
     period: z.string(),
     isOngoing: z.boolean(),
     description: z.string(),
-    technologies: z.array(z.string()),
+    contribuitions: z.array(z.string()),
+    technologies: z.array(z.string())
 });

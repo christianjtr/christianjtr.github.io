@@ -15,7 +15,7 @@ const uniqueCountries = [...new Set(experiences.map(({data : experience}) => exp
             {experiences.map(({ data: experience }) => (
                 <article class="card flex md:flex-row flex-col p-4">
                     <div class="md:w-1/5 w-full p-3 space-y-3">
-                        <h3 class="text-xl font-semibold">{experience.company}</h3>
+                        <h3 class="text-xl font-medium">{experience.company}</h3>
                         <span class="text-sm text-gray-600 block mb-2">{experience.sector}</span>
                         <span class="badge badge-sm badge-primary font-semibold uppercase text-white">{experience.period}</span>
                         <p class="flex gap-2 items-center text-lg">
@@ -24,11 +24,22 @@ const uniqueCountries = [...new Set(experiences.map(({data : experience}) => exp
                         </p>
                     </div>
                     <div class="md:w-4/5 w-full p-3">
-                        <h2 class="text-2xl font-semibold mb-1">
+                        <h2 class="text-2xl font-medium mb-3">
                             {experience.position} {experience.isOngoing && <span class="badge badge-sm badge-accent uppercase">Ongoing</span>}
                         </h2>
-                        <span class="card-info-title">✍️ Key Contribuition</span>
-                        <p class="card-content">{experience.description}</p>
+                        <div class="grid md:grid-cols-5 gap-4 md:gap-8 mb-5">
+                            <div class="col-span-1 md:col-span-5">
+                                <span class="card-info-title">✍🏼 Key Contribuitions</span>
+                                <ul class="mt-6 flex flex-col gap-2">
+                                    {experience.contribuitions.map((contribuition) => (
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                                            <span class="text-neutral-800">{contribuition}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
                         <br />
                         <BadgeList items={experience.technologies} />
                     </div>
