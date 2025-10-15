@@ -27,7 +27,7 @@ const experiments = await getCollection('experiments');
                             <span class="badge badge-sm badge-primary">{experiment.category}</span>
                             {experiment.url && <LinkButton href={experiment.url} target="_blank" rel="noreferrer" class='btn-circle' displayDefaultIcon />}
                         </div>
-                        <h2 class="card-title">{experiment.title}</h2>
+                        <h2 class="card-title font-medium">{experiment.title}</h2>
                         <p class="flex justify-between items-center mb-2"> 
                             <span class="card-text-info">
                                 {roleIcons[experiment.role as ExperimentRole]} {experiment.type} · {experiment.role}
