@@ -12,7 +12,7 @@
         "description": "Collaboratively driving the evolution of the web application platform by anticipating opportunities, ensuring robust application quality, and contributing to innovative feature development that aligns with industry trends in the mobility sector.",
         "contribuitions": [
             "Collaborate to drive the evolution of the web application platform (Marketplace to sell trips, platform to manage routes).",
-            "Anticipate opportunities and ensure robust application quality (E2E testing, Regression testing).",
+            "Anticipate opportunities and ensure robust application quality (E2E and Regression testing).",
             "Contribute to innovative feature development that aligns with mobility sector trends."
         ],
         "technologies": [
@@ -26,10 +26,6 @@
             "Python",
             "Figma",
             "Notion"
-        ],
-        "products": [
-            "Marketplace for travel pass sales",
-            "Platform to manage routes, vehicles, and passengers"
         ]
     },
     {
@@ -180,7 +176,7 @@
         "description": "Spearheaded the design and development of a web-based CRM, integrating departments to enhance customer service management and crafting a self-service kiosk for automated queue management and balance inquiries.",
         "contribuitions": [
             "Spearheaded the design and development of a web-based CRM (Client support, monitor employee performance, etc.).",
-            "Integrated various departments to enhance customer service management.",
+            "Integrated various department's systems to enhance customer service management.",
             "Crafted a self-service kiosk for: automated queue management, balance inquires."
         ],
         "technologies": [

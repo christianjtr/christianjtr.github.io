@@ -64,7 +64,7 @@
         "id": "experiment-tv-movie-streaming-like-webapp",
         "title": "The Movie and TV series database (TMDB)",
         "description": "Full-stack web application designed for anyone who loves movies and TV shows. It provides a seamless, fast way to browse a comprehensive catalog of titles, giving you all the details you need in one place. You can explore a wide variety of content through a user-friendly interface.",
-        "image": "/src/assets/images/tv-app.jpg",
+        "image": "/src/assets/images/tv_app.jpg",
         "tags": [
             "FullStack Development",
             "ReactJS / NodeJS / TypeScript",
@@ -74,7 +74,7 @@
         "role": "Author",
         "category": "Proof of Concept (PoC)",
         "type": "Web app (Movie/TV Series Catalog)",
-        "url": "https://christianjtr.github.io/tv-app/"
+        "url": "https://christianjtr.github.io/tv_app/"
     },
     {
         "id": "experiment-erp-management-dashboard",
