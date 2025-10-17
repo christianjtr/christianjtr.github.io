@@ -30,15 +30,12 @@ const keySubjects = [
                     <span class="font-semibold text-xl mt-3">
                         Master's Degree Level
                     </span>
-                    <p class="stat-desc">Qualifications earned across <strong class="text-lg text-pink-500">0{uniqueCountries.length}</strong> countries</p>
+                    <p class="stat-desc mt-2">Qualifications earned across these countries</p>
                     <p class="stat-actions mt-2">
                         {uniqueCountries.map((country) => (
-                            <span class="badge badge-soft badge-sm mr-1.5">{country}</span>
+                            <span class="badge badge-warning badge-sm font-semibold mr-1.5">{country}</span>
                         ))}
                     </p>
-                    <!-- <p class="block text-neutral leading-7 text-sm">
-                        Higher level of studies which includes Master's degree and several Postgraduate/Specialization Diplomas.
-                    </p> -->
                 </div>
                 <div class="stat">
                     <div class="stat-figure">

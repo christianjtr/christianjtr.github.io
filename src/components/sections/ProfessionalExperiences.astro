@@ -13,10 +13,16 @@ const countryCounts = Object.entries(experiences.reduce((acc: Record<string, num
   return acc;
 }, {}));
 
-const additionalCountries = [
-    "USA",
-    "UK",
-    "France"
+const regions = [
+    "Europe",
+    "North America",
+    "LATAM"
+];
+
+const keySubjects = [
+    "Product Engineering",
+    "Software Development",
+    "Data Analytics"
 ];
 
 ---
@@ -33,23 +39,12 @@ const additionalCountries = [
                     </div>
                     <span class="stat-title uppercase">Countries Worked In</span>
                     <span class="stat-value text-primary text-5xl text-thin">0{countryCounts.length}</span>
-                    <p class="stat-desc mt-3">Collaborated with peers from</p>
-                    <div class="stat-actions">
-                        {additionalCountries.map((country) => (
-                            <span class="badge badge-sm mr-1.5 badge-soft text-white">{country}</span>
+                    <p class="stat-desc mt-2">Collaborated with peers across</p>
+                    <p class="stat-actions mt-2">
+                        {countryCounts.map(([country]) => (
+                            <span class="badge badge-warning badge-sm font-semibold mr-1.5">{country}</span>
                         ))}
-                    </div>
-                </div>
-                <div class="stat">
-                    <span class="stat-title uppercase">Experience by country</span>
-                    <div class="mt-5 space-y-2">
-                        {countryCounts.map(([country, count]) => (
-                            <p class="mr-1.5 flex justify-between">
-                                <span>{country}</span>
-                                <span class="w-5 badge border-0 rounded-full px-4 bg-pink-500 text-white">{count}</span>
-                            </p>
-                        ))}
-                    </div>
+                    </p>
                 </div>
                 <div class="stat">
                     <div class="stat-figure">
@@ -57,7 +52,14 @@ const additionalCountries = [
                     </div>
                     <span class="stat-title uppercase">Companies Worked For</span>
                     <span class="stat-value text-primary text-5xl">0{experiences.length}</span>
-                    <p class="stat-desc w-32 flex flex-wrap">Mostly B2B product companies</p>
+                    <p class="stat-desc mt-2">
+                        B2B companies across different regions
+                    </p>
+                    <p class="stat-actions mt-2">
+                        {regions.map((region) => (
+                            <span class="badge badge-soft badge-sm font-semibold mr-1.5">{region}</span>
+                        ))}
+                    </p>
                 </div>
                 <div class="stat">
                     <div class="stat-figure">
@@ -65,9 +67,9 @@ const additionalCountries = [
                     </div>
                     <span class="stat-title uppercase">Key areas</span>
                     <ul class="mt-3 space-y-2">
-                        <li><span class="text-accent mr-3">●</span>Product Engineering</li>
-                        <li><span class="text-accent mr-3">●</span>Software Development</li>
-                        <li><span class="text-accent mr-3">●</span>Data Analytics</li>
+                        {keySubjects.map((subject) => 
+                            <li><span class="text-accent mr-3">●</span>{subject}</li>
+                        )}
                     </ul>
                 </div>
             </div>
