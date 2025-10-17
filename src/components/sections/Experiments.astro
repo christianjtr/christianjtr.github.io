@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import { BadgeList, LinkButton, Section, HorizontalSpacer } from "../";
 import type { ExperimentRole } from '@schemas/ExperimentSchema';
 import Logo from '@assets/svg/case_of_studies.svg';
+import { section_experiments } from '@content/common.json';
 
 const roleIcons: Record<ExperimentRole, string> = {
     'Author': '🧑🏻‍💻',
@@ -13,22 +14,22 @@ const experiments = await getCollection('experiments');
 ---
 
 <div class="bg-white">
-    <Section headingTitle="Case of Studies and Conceptual Projects" subtitle="A curated collection of some of my projects and works" class="container mx-auto">
+    <Section headingTitle={section_experiments.title} subtitle={section_experiments.subtitle} class="container mx-auto">
         <Logo slot="beforeHeading" width={96} height={96} />
         <HorizontalSpacer />
         <div class="mx-auto grid gap-8 md:grid-cols-2 px-5 md:px-10">
             {experiments.map(({ data: experiment }) => (
-                <article class="card">
+                <div class="card">
                     <figure>
-                        <img src={experiment.image} alt={experiment.title} />
+                        <img src={experiment.image} alt={experiment.title} aria-label={experiment.title} />
                     </figure>
-                    <div class="card-body p-8">
-                        <div class="card-pretitle-wrapper">
+                    <div class="card-body">
+                        <div class="card-pre-content-wrapper">
                             <span class="badge badge-sm badge-primary">{experiment.category}</span>
                             {experiment.url && <LinkButton href={experiment.url} target="_blank" rel="noreferrer" class='btn-circle' displayDefaultIcon />}
                         </div>
-                        <h2 class="card-title font-medium">{experiment.title}</h2>
-                        <p class="flex justify-between items-center mb-2"> 
+                        <h2 class="card-title">{experiment.title}</h2>
+                        <p class="card-pre-content-wrapper"> 
                             <span class="card-text-info">
                                 {roleIcons[experiment.role as ExperimentRole]} {experiment.type} · {experiment.role}
                             </span>
@@ -38,7 +39,7 @@ const experiments = await getCollection('experiments');
                             <BadgeList items={experiment.tags} badgeClass="font-semibold badge-soft" />
                         </div>
                     </div>
-            </article>
+            </div>
             ))}
         </div>
     </Section>
@@ -46,20 +47,26 @@ const experiments = await getCollection('experiments');
 
 <style>
     @reference "tailwindcss";
+    
     .card {
         @apply overflow-hidden rounded-lg border border-neutral-200;
         color: var(--color-neutral-dark);
+    }
+
+    .card-body {
+        @apply p-8;
     }
 
     .card:hover {
         @apply border-indigo-400 shadow-lg shadow-indigo-100;
     }
 
-    .card-pretitle-wrapper {
-        @apply flex justify-between items-center mb-1;
+    .card-pre-content-wrapper {
+        @apply flex justify-between items-center mb-2;
     }
+
     .card-title {
-        @apply text-2xl my-3;
+        @apply text-2xl my-3 font-medium;
     }
     .card-text-info {
         @apply text-gray-400 text-sm uppercase;

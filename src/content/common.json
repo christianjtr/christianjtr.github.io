@@ -1,7 +1,34 @@
 {
-    "titles": {
-        "showcased_projects": "Showcased Projects",
-        "professional_experience": "Professional Experience",
-        "Academics": "Academics"
+    "common": {
+        "overview": "Overview",
+        "role": "Role",
+        "technologies": "Technologies",
+        "showcased_at": "Showcased at",
+        "view_more": "View more",
+        "countries_worked_in": "Countries worked in",
+        "companies_worked_for": "Companies worked for",
+        "key_areas": "Key areas",
+        "key_contribuitions": "Key contribuitions",
+        "ongoing": "Ongoing"
+    },
+    "section_projects": {
+        "title": "Showcased Projects",
+        "subtitle": "Presented project work at multiple international conferences"
+    },
+    "section_experiments": {
+        "title": "Case of Studies and Conceptual Projects",
+        "subtitle": "A curated collection of some of my projects and works"
+    },
+    "section_experiences": {
+        "title": "Professional Experiences",
+        "subtitle": "A comprehensive look at my professional growth and key accomplishments across different countries",
+        "collaborated_with": "Collaborated with peers across",
+        "companies_across_regions": "B2B companies across different regions",
+        "regions": ["Europe", "North America", "LATAM"],
+        "key_areas": [
+            "Product Engineering",
+            "Software Development",
+            "Data Analytics"
+        ]
     }
 }
