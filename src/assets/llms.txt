@@ -1,0 +1,82 @@
+# LLMS.txt - Context File for Large Language Models
+
+## Personal Information
+Name: Christian José Torrealba Rondón
+Location: Barcelona, Catalonia, Spain
+Website: christianjtr.github.io
+Languages: ES (Native), EN (Professional), FR (Pre-Intermediate)
+Contact: Available on website (christianjtr.github.io)
+
+---
+
+## Professional Summary (Focus on Frontend/Full Stack and Leadership)
+
+### 1. Senior Product Software Engineer (Frontend-focus) - Zeelo (May 2024–Jul 2025)
+- Role: Senior Product Software Engineer (Frontend-focus)
+- Focus: Proactive identification and definition of solutions for the web platform, optimizing service for a growing user base (RFCs, documenting specs, adoption of best practices). Ensuring application quality, addressing tech debt, and comprehensive testing.
+- Key Tech: ReactJS, NodeJS, Jest, Enzyme, Cypress, GraphQL, RESTful API, Sequelize, Git, Figma, Jenkins.
+
+### 2. Solutions Engineer Full Stack Software Engineer - Stuart Delivery (Oct 2020–Jun 2023)
+- Role: Solutions Engineer Full Stack Software Engineer
+- Focus: Developed solutions for last-mile logistics platforms, optimizing processes and enabling seamless integrations with strategic partners. Built and architected solutions like live monitoring tools, fleet tracking systems, and API integrations.
+- Key Tech: ReactJS, NodeJS, Jest, Enzyme, Cypress, GraphQL, RESTful API, Sequelize, Git, Figma, Jenkins, Grafana.
+
+### 3. Frontend Developer Architect - Zank Financial PFP (Nov 2019–Oct 2020)
+- Role: Frontend Developer Architect
+- Focus: Led development and maintenance of the front-end architecture for a fintech web app, ensuring an exceptional user experience and strict regulatory compliance. Implemented critical third-party integrations (payment gateway, e-mailing/SMS systems).
+- Key Tech: VueJS, NodeJS, HTML5, CSS, SASS, MySQL, Git.
+
+### 4. Frontend Software Engineer - SDG Group Iberia (Nov 2018–Oct 2019)
+- Role: Frontend Software Engineer
+- Focus: Responsible for automating front-end environments for data analytics web applications, reducing setup/deployment times. Led development of the user interface for a KPI-displaying chatbot with appealing charts (showcased at Qlik Connections Conference in 2019).
+- Key Tech: VueJS, Angular, NodeJS, Webpack, HTML5, CSS, SASS, RESTful API, Qlik Sense Hub, Git.
+
+### 5. Frontend User Interface Developer - Kapsch TrafficCom AG (Jul 2016–Oct 2017)
+- Role: Frontend User Interface Developer
+- Focus: Developed a web-based commercial back office for a vehicle free-flow tolling system (modules: customer, payments, tag device management, reporting with JasperReports). Developed a mocked-up RESTful API according to back-end specs to accelerate feature delivery and ensure reliability.
+- Key Tech: Angular, NodeJS, HTML5, CSS, SASS, Swagger, JasperReports, SQL Server, Microsoft TFS.
+
+### 6. Product Software Engineer (Web technologist, Data, Research, and I+D+i) - Petroleum of Venezuela (PDVSA) (May 2011–Jan 2016)
+- Role: Product Software Engineer (Web technologist, Data, Research, and I+D+i)
+- Focus: Led the conception and delivery of a real-time web app for economic scenario analysis, leveraging GIS technologies (Google Earth, KML/KMZ) to transform data visualization (showcased at the American Association of Petroleum Geologists in 2011). Created data models and business intelligence tools to summarize hydrocarbon production data (ETL/DWH design, data visualization).
+- Key Tech: jQuery, HTML5, PHP, MySQL, PostgreSQL, R. Pentaho BI, HighCharts, ArcG15.
+
+### 7. IT Systems Responsible - CAPEM (Nov 2009–May 2011)
+- Role: IT Systems Responsible
+- Focus: Led the design and development of a web-based CRM, improving customer service management (client support, procedure monitoring, employee performance). Developed a web queuing system, including a self-service interactive kiosk, to automate balance checks and reduce wait times.
+- Key Tech: jQuery, HTML5, Flash, AS3, PHP, MySQL.
+
+---
+
+## Technical Skills (Full Stack, Data, and Design)
+
+### Web & Frontend:
+ReactJS, VueJS, Astro, NodeJS, TypeScript, Redux, React-Query TankStack, ExpressJS, GraphQL, HTML5, CSS/SASS, Tailwind, jQuery.
+
+### Testing & Tools:
+Webpack, Vite, Gulp, Jest, Enzyme, Cypress, Storybook.
+
+### Data & Server-side:
+Python, SQL Server, MySQL, PostgreSQL, NoSQL, MongoDB, R Statistics. Pentaho BI, SSAS/SSIS, PowerBI, Qlik.
+
+---
+
+## Full Education
+
+* **Polytechnic University of Valencia, Spain** (Sep 2023–Jun 2024): Expert Diploma in Tech Management Technical Leadership.
+* **University of Barcelona, Spain** (Oct 2019–Jun 2020): Master in e-Business Management Digital Business Management and Startups.
+* **Escuela Universitaria Gimbernat, Autonomous University of Barcelona, Spain** (Nov 2017–Jul 2018): Postgraduate in Business Intelligence; Data Engineering.
+* **Digital House Coding School, Argentina** (Mar 2017–Jul 2017): Diploma in UX Design & Research: Digital Product Development and User Research.
+* **Metropolitan University (UNIMET), Venezuela** (Nov 2014–Jul 2015): Diploma in Business Management, Leadership, Management, and Negotiation.
+* **Central University of Venezuela, Venezuela** (Nov 2013–Apr 2014): Diploma in Business Intelligence; Data Engineering.
+* **Experimental and Polytechnic University of the Armed Forces (UNEFA), Venezuela** (Sep 2004–Sep 2009): Degree in Systems Engineering: Bachelor in Systems Engineering.
+
+---
+
+## Certifications (Leadership/Product Focus)
+
+* Professional Scrum Product Owner (PSPO-I), Scrum.org (Aug 2025).
+* Software Engineer / React Developer, HackerRank (Apr 2024).
+* Microlearning in Generative AI Overview for Product Managers, PMI (Apr 2024).
+* Professional Agile Leadership (PAL-I), Scrum.org (Oct 2023).
+* Professional Scrum Master (PSM-I), Scrum.org (Oct 2023).

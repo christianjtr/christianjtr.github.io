@@ -1,0 +1,39 @@
+---
+import LinkedInIcon from '@assets/svg/linkedin.svg';
+import GitHubIcon from '@assets/svg/github.svg';
+import LLMSIcon from '@assets/svg/llms.svg';
+
+interface Props {
+    iconSize?: number;
+    extraClasses?: string;
+}
+
+type LinkIcon = "linkedin" | "github" | "llms";
+
+const links: Array<{id: LinkIcon, text: string; url: string}> = [
+    { id: "linkedin", text: "LinkedIn", url: "https://www.linkedin.com/in/christianjtr" },
+    { id: "github", text: "GitHub", url: "https://github.com/christianjtr" },
+    { id: "llms", text: "LLMS.txt", url: "/src/assets/llms.txt"}
+];
+
+const { iconSize = 32, extraClasses = "menu-lg bg-primary/7 rounded-box" } = Astro.props;
+---
+
+<ul class:list={["menu", extraClasses]}>
+    {links.map((eachLink) => (
+        <li>
+            <a 
+                href={eachLink.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-tip={eachLink.text} 
+                aria-label={eachLink.text}
+                class="tooltip tooltip-right tooltip-primary"
+            >
+                {eachLink.id === "github" && <GitHubIcon width={iconSize} height={iconSize} />}
+                {eachLink.id === "linkedin" && <LinkedInIcon width={iconSize} height={iconSize} />}
+                {eachLink.id === "llms" && <LLMSIcon width={iconSize} height={iconSize} />}
+            </a>
+        </li>
+    ))}
+</ul>
