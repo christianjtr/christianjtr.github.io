@@ -9,10 +9,75 @@
         "companies_worked_for": "Companies worked for",
         "key_areas": "Key areas",
         "key_contribuitions": "Key contribuitions",
-        "ongoing": "Ongoing"
+        "ongoing": "Ongoing",
+        "cannot_load_content": "Content could not be loaded"
+    },
+    "section_about": {
+        "greeting": "Hi there folks, I am",
+        "about_me": "As a Systems Engineer with a deep passion for the digital experiences, I thrive on leveraging new technologies to build and scale innovative products. I am a tech generalist who focuses on bridging the gap among several areas of knowledge. My expertise lies at the intersection of various disciplines, and I enjoy participating in all project stages, from conception and beyond",
+        "summary": "Applying systems engineering discipline and design thinking empathy to deliver  user-centric solutions that drive impact",
+        "languages": [
+            {
+                "id": "language-1",
+                "emoji": "💃🏻",
+                "name": "Spanish",
+                "proficiency": "Native speaker",
+                "value": 100
+            },
+            {
+                "id": "language-2",
+                "emoji": "💂🏻",
+                "name": "English",
+                "proficiency": "Professional Proficiency",
+                "value": 80
+            },
+            {
+                "id": "language-3",
+                "emoji": "🥐",
+                "name": "French",
+                "proficiency": "Everyday Situational",
+                "value": 35
+            }
+        ],
+        "expertise": {
+            "title": "My areas of expertise",
+            "subjects": [
+                {
+                    "name": "Product Engineering",
+                    "category": "product",
+                    "topics": [
+                        "Agile Leadership, Coaching, and Mentorship",
+                        "Product ownership, PoCs, and Tech Research",
+                        "Digital Marketing"
+                    ]
+                },
+                {
+                    "name": "Software Development",
+                    "category": "coding",
+                    "topics": [
+                        "Frontend (Web apps, Design Systems, Tooling)",
+                        "Backend (APIs and services)",
+                        "Testing and automation"
+                    ]
+                },
+                {
+                    "name": "Business Intelligence",
+                    "category": "data",
+                    "topics": [
+                        "Data Engineering",
+                        "Analytical Skills",
+                        "ETL/DWH, Data Modeling and Visualization"
+                    ]
+                }
+            ]
+        }
+    },
+    "section_credentials": {
+        "title": "Credentials and Certifications",
+        "subtitle": "Explore some of my verified credentials and certifications I can bring to the table"
     },
     "section_projects": {
-        "title": "Showcased Projects",
+        "title": "Featured Projects",
         "subtitle": "Presented project work at multiple international conferences"
     },
     "section_experiments": {
@@ -23,12 +88,12 @@
         "title": "Professional Experiences",
         "subtitle": "A comprehensive look at my professional growth and key accomplishments across different countries",
         "collaborated_with": "Collaborated with peers across",
-        "companies_across_regions": "B2B companies across different regions",
+        "companies_across_regions": "B2B companies across different markets",
         "regions": ["Europe", "North America", "LATAM"],
         "key_areas": [
             "Product Engineering",
             "Software Development",
-            "Data Analytics"
+            "Business Intelligence"
         ]
     }
 }
