@@ -1,62 +1,65 @@
 ---
 import { getCollection } from 'astro:content';
-import { LinkButton, Section, HorizontalSpacer, BadgeList } from "../";
+import { LinkButton, Section, HorizontalSpacer, BadgeList, Badge } from "../";
 import Logo from '@assets/svg/projects.svg';
-import Pin from '@assets/svg/pin.svg';
-import SmileFace from '@assets/svg/smile-face.svg';
-import Monitor from '@assets/svg/monitor.svg';
-import Book from '@assets/svg/book.svg';
+import PinIcon from '@assets/svg/pin.svg';
+import PenIcon from '@assets/svg/pen.svg';
+import MonitorIcon from '@assets/svg/monitor.svg';
+import BookIcon from '@assets/svg/book.svg';
 import type { Project } from '@schemas/ProjectSchema';
+import { section_projects, common } from '@content/common.json';
 
 const projects = await getCollection('projects');
 ---
 
 <div class="bg-primary/5">
-    <Section headingTitle="Showcased Projects" subtitle="Presented project work at multiple international conferences" class="container mx-auto py-5">
+    <HorizontalSpacer />
+    <Section headingTitle={section_projects.title} subtitle={section_projects.subtitle} class="container mx-auto">
         <Logo slot="beforeHeading" width={96} height={96} />
         <HorizontalSpacer />
-        <div class="mx-auto px-5 md:px-10">
+        <div class="mx-auto px-5 md:px-14">
             {projects.map(({ data: project }: { data: Project }, index) => (
-                <div  class="collapse collapse-arrow" tabindex={index + 1}>
+                <div class="collapse collapse-arrow" tabindex={index + 1}>
                     <input type="radio" name="project" aria-hidden="true" checked={index === 0} />
-                    <div class="flex flex-col md:flex-row gap-8 collapse-title">
+                    <div class="collapse-title">
                         <div class="block avatar avatar-placeholder grow-0">
-                            <div class="bg-accent text-neutral w-14 rounded-full">
-                                <span class="text-3xl font-thin">{`0${index+1}`}</span>
+                            <div class="bg-primary text-neutral w-14 rounded-full">
+                                <span class="text-3xl text-white">{`0${index+1}`}</span>
                             </div>
                         </div>
                         <div class="flex flex-col space-y-2">
-                            <h2 class="collapse__title">{project.title}</h2>
-                            <span class="block text-neutral-600">🎯 {project.summary}</span>
-                            <span class="block text-secondary font-medium">{project.owner}</span>
+                            <h2 class="title">{project.title}</h2>
+                            <span class="text-neutral-600">
+                                <font class="text-2xl">🎯</font> {project.summary}
+                            </span>
+                            <span class="text-secondary font-medium">{project.owner}</span>
                         </div>
                     </div>
-                    <div class="collapse-content px-10">
+                    <div class="collapse-content">
                         <br />
-                        <div class="grid md:grid-cols-5 gap-8 mb-5">
+                        <div class="grid md:grid-cols-5 gap-8">
                             <div class="md:col-span-3 col-span-full">
                                 <ul class="list">
-                                    <li class="list-row py-5 rounded-none border-none hover:bg-primary/5">
-                                        <Book width={24} height={24} />
-                                        <div class="list-col-grow space-y-2">
-                                            <span class="text-neutral-500 block">Overview</span>
-                                            <p class="leading-9 text-lg">{project.overview}</p>
+                                    <li class="list-row hover:bg-primary/5">
+                                        <BookIcon width={32} height={32} />
+                                        <div class="list-col-grow">
+                                            <span class="pre-content-title">{common.overview}</span>
+                                            <p>{project.overview}</p>
                                         </div>
                                     </li>
-                                    <li class="list-row py-5 rounded-none border-none hover:bg-primary/5">
-                                        <SmileFace width={24} height={24} />
-                                        <div class="list-col-grow space-y-2">
-                                            <span class="text-neutral-500 block">Role</span>
-                                            <div>
-                                                <span class="mb-3 block font-medium text-secondary text-lg">🧑‍💻 {project.contribute_as}</span>
-                                                <p class="leading-9 text-lg">{project.contributions}</p>
-                                            </div>
+                                    <li class="list-row hover:bg-primary/5">
+                                        <PenIcon width={32} height={32} />
+                                        <div class="list-col-grow">
+                                            <span class="pre-content-title">{common.contribuition}</span>
+                                            <br />
+                                            <Badge class="badge-accent badge-sm uppercase">{project.contribute_as}</Badge>
+                                            <p>{project.contributions}</p>
                                         </div>
                                     </li>
-                                    <li class="list-row py-5 rounded-none border-none hover:bg-primary/5">
-                                        <Monitor width={24} height={24} />
-                                        <div class="list-col-grow space-y-2">
-                                            <span class="text-neutral-500 block">Technologies</span>
+                                    <li class="list-row hover:bg-primary/5">
+                                        <MonitorIcon width={32} height={32} />
+                                        <div class="list-col-grow">
+                                            <span class="pre-content-title">{common.technologies}</span>
                                             <br />
                                             <BadgeList items={project.technologies} />
                                         </div>
@@ -64,24 +67,20 @@ const projects = await getCollection('projects');
                                 </ul>
                             </div>
                             <div class="md:col-span-2 col-span-full">
-                                <div class="card w-full bg-base-100 mb-5 shadow-xl">
-                                    <div class="card-body p-4">
-                                        <figure>
-                                            <img class="w-full rounded-lg border-2 border-neutral-600" src={project.project_asset} alt={project.title} />
-                                        </figure>
-                                    </div>
-                                </div>
+                                <figure>
+                                    <img src={project.project_asset} alt={project.title} />
+                                </figure>
                                 <ul class="list">
-                                    <li class="list-row py-5 rounded-none border-none hover:bg-primary/5">
-                                        <Pin width={24} height={24} />
-                                        <div class="list-col-grow space-y-2">
-                                            <div class="text-neutral-500">Showcased at</div>
-                                            <div class="space-y-2">
-                                                <span class="block font-medium text-lg">{project.showcased_at}</span>
-                                                <p class="flex items-center gap-2">
-                                                    <img src={project.flag_asset} alt={project.title} />
-                                                    <span>{project.location}</span>
-                                                    <span class="badge badge-sm badge-warning font-semibold uppercase">{project.period}</span>
+                                    <li class="list-row hover:bg-primary/5">
+                                        <PinIcon width={32} height={32} />
+                                        <div class="list-col-grow">
+                                            <div class="pre-content-title">{common.showcased_at}</div>
+                                            <div>
+                                                <span class="block font-medium text-lg my-1">{project.showcased_at}</span>
+                                                <p class="flex items-center gap-3">
+                                                    <img src={project.flag_asset} alt={project.title} aria-label={project.title} />
+                                                    <span class="text-sm">{project.location}</span>
+                                                    <Badge class="badge-warning badge-sm uppercase">{project.period}</Badge>
                                                 </p>
                                             </div>
                                         </div>
@@ -93,7 +92,7 @@ const projects = await getCollection('projects');
                             <LinkButton href={project.url} target="_blank" rel="noopener noreferrer" displayDefaultIcon>View more</LinkButton>
                         </div>
                     </div>
-                    <span class="absolute rounded-lg inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-accent via-blue-500 to-primary"></span>
+                    {/* <span class="absolute rounded-lg inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-accent via-blue-500 to-primary"></span> */}
                 </div>    
             ))}
         </div>
@@ -104,14 +103,40 @@ const projects = await getCollection('projects');
     @reference "tailwindcss";
 
     .collapse {
-        @apply p-3 mb-8 border border-indigo-400;
+        @apply mb-8 border border-neutral-300 p-3 bg-white;
     }
-
     .collapse:hover {
-        @apply shadow-xl shadow-indigo-100;
+        @apply shadow-xl shadow-indigo-200 border-indigo-500;
     }
 
-    .collapse .collapse__title {
+    .collapse-title {
+        @apply flex flex-col md:flex-row gap-8;
+    }
+
+    .collapse-content {
+        /* @apply text-2xl leading-10 font-medium; */
+    }
+
+    .pre-content-title {
+        @apply text-neutral-600 block;
+    }
+    
+    .title {
         @apply text-2xl leading-10 font-medium;
+    }
+
+    .list-row {
+        @apply py-5;
+    }
+    .list-row p {
+        @apply leading-9 text-lg;
+    }
+
+    .list-col-grow {
+        @apply space-y-2;
+    }
+
+    figure {
+        @apply w-full rounded-lg border-3 border-neutral-600;
     }
 </style>

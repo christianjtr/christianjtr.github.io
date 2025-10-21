@@ -20,7 +20,7 @@ const countryCounts = Object.entries(experiences.reduce((acc: Record<string, num
         <Logo slot="beforeHeading" width={96} height={96} />
         <HorizontalSpacer />
         <div class="flex md:flex-row flex-col px-5 md:px-10">
-            <div class="stats lg:stats-horizontal stats-vertical bg-base-100 w-full shadow-lg shadow-indigo-100">
+            <div class="stats lg:stats-horizontal stats-vertical bg-base-100 w-full shadow-lg shadow-indigo-200">
                 <div class="stat">
                     <Pin width={40} height={40} class="stat-figure" />
                     <span class="stat-title uppercase">{common.countries_worked_in}</span>
@@ -106,13 +106,13 @@ const countryCounts = Object.entries(experiences.reduce((acc: Record<string, num
     }
     
     .card {
-        @apply rounded-lg border border-indigo-200 text-neutral-900 z-1 bg-white;
+        @apply rounded-lg border border-indigo-200 text-neutral-900 z-1;
         color: var(--color-neutral-dark);
-        /* background-color: var(--color-pale-lavender); */
+        background-color: var(--color-pale-lavender);
     }
 
     .card:hover {
-        @apply border-indigo-400 shadow-lg shadow-indigo-100;
+        @apply border-indigo-400 shadow-lg shadow-indigo-200;
     }
 
     .card-info-title {

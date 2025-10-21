@@ -15,12 +15,12 @@ const keySubjects = [
 ];
 ---
 
-<div class="bg-white">
-    <Section headingTitle="Studies" subtitle="The path chosen for my academic development has been across different countries" class="space-y-5 container mx-auto">
+<div class="bg-base-100">
+    <Section headingTitle="Studies" subtitle="Academic development path across different countries" class="space-y-5 container mx-auto">
         <Logo slot="beforeHeading" width={96} height={96} />
         <HorizontalSpacer />
         <div class="flex md:flex-row flex-col px-5 md:px-10">
-            <div class="stats lg:stats-horizontal stats-vertical border border-neutral-200 bg-base-100 w-full shadow-lg shadow-indigo-100">
+            <div class="stats lg:stats-horizontal stats-vertical border border-neutral-200 bg-base-100 w-full shadow-lg shadow-indigo-200">
                 <div class="stat">
                     <div class="stat-figure">
                         <AcademicCap width={40} height={40} />
@@ -92,12 +92,12 @@ const keySubjects = [
     }
     
     .card {
-        @apply overflow-hidden rounded-lg border border-neutral-200 bg-white z-1;
+        @apply overflow-hidden rounded-lg border border-neutral-200 z-1;
         color: var(--color-neutral-dark);
     }
 
     .card:hover {
-        @apply border-indigo-400 shadow-lg shadow-indigo-100;
+        @apply border-indigo-400 shadow-lg shadow-indigo-200;
     }
 
     .card-info-title {
