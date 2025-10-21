@@ -70,6 +70,7 @@ const projects = await getCollection('projects');
                                 <figure>
                                     <img src={project.project_asset} alt={project.title} />
                                 </figure>
+                                <br />
                                 <ul class="list">
                                     <li class="list-row hover:bg-primary/5">
                                         <PinIcon width={32} height={32} />
@@ -88,11 +89,10 @@ const projects = await getCollection('projects');
                                 </ul>
                             </div>
                         </div>
-                        <div class="flex justify-start md:justify-end">
+                        <div class="flex justify-start md:justify-end mt-5">
                             <LinkButton href={project.url} target="_blank" rel="noopener noreferrer" displayDefaultIcon>View more</LinkButton>
                         </div>
                     </div>
-                    {/* <span class="absolute rounded-lg inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-accent via-blue-500 to-primary"></span> */}
                 </div>    
             ))}
         </div>
