@@ -23,6 +23,28 @@ import CodeFileIcon from '@assets/svg/code_file.svg';
             </figure>
         </div>
     </div>
+    <div class="grid md:grid-cols-8 gap-8 shadow-lg rounded-lg px-5 py-3 border border-neutral-100">
+        <div class="col-span-2 w-full rounded-lg">
+            <span class="block font-semibold text-xl my-2">{section_about.hobbies_title}</span>
+            <span class="block text-xl">{section_about.hobbies}</span>
+            <span class="block text-xs my-3 text-neutral-600">{section_about.language_tip}</span>
+        </div>
+        <div class="col-span-6 flex items-center">
+            <div class="stats stats-vertical md:stats-horizontal w-full">
+                {section_about.languages.map(language => (
+                    <div class="stat space-y-1">
+                        <div class="stat-figure text-4xl">
+                            {language.emoji}
+                        </div>
+                        <div class="stat-value font-semibold text-xl">{language.name}</div>
+                        <div class="stat-desc">{language.proficiency}</div>
+                        <progress class="progress progress-primary w-40" value={language.value} max="100" />
+                    </div>
+                ))}
+            </div>
+        </div>
+    </div>
+    <HorizontalSpacer />
     <div class="grid md:grid-cols-6 gap-8">
         <div class="col-span-1">
             <h3 class="text-3xl font-semibold" set:html={section_about.expertise.title}></h3>
@@ -46,11 +68,11 @@ import CodeFileIcon from '@assets/svg/code_file.svg';
             </p>
         </div>
         {section_about.expertise.subjects.map((subject) => (
-            <div class="col-span-2 border-1 border-neutral-300 px-5 py-7 rounded-lg hover:bg-primary/5">
+            <div class="card-informative border-neutral-300">
                 <div class="bg-primary/5 w-fit rounded-full p-3">
-                    {subject.category === "product" && <RocketIcon width={40} height={40} />}
-                    {subject.category === "coding" && <CodeFileIcon width={40} height={40} />}
-                    {subject.category === "data" && <MagicStickIcon width={40} height={40} />}
+                    {subject.category === "product" && <RocketIcon width={32} height={32} />}
+                    {subject.category === "coding" && <CodeFileIcon width={32} height={32} />}
+                    {subject.category === "data" && <MagicStickIcon width={32} height={32} />}
                 </div>
                 <span class="block my-5 text-2xl font-medium">{subject.name}</span>
                 <ul class="space-y-2">
@@ -61,28 +83,19 @@ import CodeFileIcon from '@assets/svg/code_file.svg';
             </div>
         ))}
     </div>
-    <div class="grid md:grid-cols-8 gap-8 shadow rounded-lg px-5 border border-neutral-100 mt-8">
-        <div class="col-span-2 w-full rounded-lg">
-            <span class="block font-semibold text-xl my-2">{section_about.hobbies_title}</span>
-            <span class="block text-xl">{section_about.hobbies}</span>
-            <span class="block text-xs my-3 text-neutral-600">{section_about.language_tip}</span>
-        </div>
-        <div class="col-span-6 flex items-center">
-            <div class="stats stats-vertical md:stats-horizontal w-full">
-                {section_about.languages.map(language => (
-                    <div class="stat space-y-1">
-                        <div class="stat-figure text-4xl">
-                            {language.emoji}
-                        </div>
-                        <div class="stat-value font-semibold text-xl">{language.name}</div>
-                        <div class="stat-desc">{language.proficiency}</div>
-                        <progress class="progress progress-primary w-40" value={language.value} max="100" />
-                    </div>
-                ))}
-            </div>
-        </div>
-    </div>
-    <HorizontalSpacer />
+    <br />
     <Credentials />
     <HorizontalSpacer />
 </div>
+
+<style>
+    @reference "tailwindcss";
+    
+    .card-informative {
+        @apply col-span-1 md:col-span-2 border-1 px-5 py-7 rounded-lg;
+    }
+
+    .card-informative:hover {
+        @apply border-indigo-400 shadow-lg shadow-indigo-200;
+    }
+</style>
