@@ -21,14 +21,14 @@ const { iconSize = 32, extraClasses = "menu-lg bg-primary/7 rounded-box" } = Ast
 
 <ul class:list={["menu", extraClasses]}>
     {links.map((eachLink) => (
-        <li>
+        <li class="my-1">
             <a 
                 href={eachLink.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 data-tip={eachLink.text} 
                 aria-label={eachLink.text}
-                class="tooltip tooltip-right tooltip-primary"
+                class="tooltip tooltip-left tooltip-primary"
             >
                 {eachLink.id === "github" && <GitHubIcon width={iconSize} height={iconSize} />}
                 {eachLink.id === "linkedin" && <LinkedInIcon width={iconSize} height={iconSize} />}
