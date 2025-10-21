@@ -2,6 +2,7 @@
     "common": {
         "overview": "Overview",
         "role": "Role",
+        "contribuition": "Contribuition",
         "technologies": "Technologies",
         "showcased_at": "Showcased at",
         "view_more": "View more",
@@ -14,8 +15,14 @@
     },
     "section_about": {
         "greeting": "Hi there folks, I am",
-        "about_me": "As a Systems Engineer with a deep passion for the digital experiences, I thrive on leveraging new technologies to build and scale innovative products. I am a tech generalist who focuses on bridging the gap among several areas of knowledge. My expertise lies at the intersection of various disciplines, and I enjoy participating in all project stages, from conception and beyond",
-        "summary": "Applying systems engineering discipline and design thinking empathy to deliver  user-centric solutions that drive impact",
+        "my_name": "Christian José <br>Torrealba Rondón<span class='text-accent'>.</span>",
+        "about_me": "I define myself as a generalist professional interested in different disciplines that accelerate product delivery.",
+        "summary": "Applying systems engineering discipline and design thinking empathy to deliver  user-centric solutions that drive impact.",
+        "hobbies_title": "Hobbies",
+        "hobbies": "☀️ 🏖️ 🎡 🍦 🕹️ 🏃🏻 🐶 ✈️",
+        "v_shaped_profile": "V-Shaped Profile",
+        "v_shaped_explanation": "Combines specialization in one relevant area with broad, cross-functional knowledge",
+        "language_tip": "Refining fluency and proficiency in languages",
         "languages": [
             {
                 "id": "language-1",
@@ -36,27 +43,28 @@
                 "emoji": "🥐",
                 "name": "French",
                 "proficiency": "Everyday Situational",
-                "value": 35
+                "value": 40
             }
         ],
         "expertise": {
-            "title": "My areas of expertise",
+            "title": "Areas of <br />knowledge",
             "subjects": [
                 {
                     "name": "Product Engineering",
                     "category": "product",
                     "topics": [
-                        "Agile Leadership, Coaching, and Mentorship",
-                        "Product ownership, PoCs, and Tech Research",
-                        "Digital Marketing"
+                        "Agile Leadership",
+                        "Product Ownership and Ideation",
+                        "Coaching and Mentorship",
+                        "Tech Research and Digital Marketing"
                     ]
                 },
                 {
                     "name": "Software Development",
                     "category": "coding",
                     "topics": [
-                        "Frontend (Web apps, Design Systems, Tooling)",
-                        "Backend (APIs and services)",
+                        "Web apps and Design Systems",
+                        "APIs and integrating services",
                         "Testing and automation"
                     ]
                 },
@@ -64,9 +72,9 @@
                     "name": "Business Intelligence",
                     "category": "data",
                     "topics": [
-                        "Data Engineering",
                         "Analytical Skills",
-                        "ETL/DWH, Data Modeling and Visualization"
+                        "Data Engineering and Modeling",
+                        "ETL/DWH and Data Visualization"
                     ]
                 }
             ]
