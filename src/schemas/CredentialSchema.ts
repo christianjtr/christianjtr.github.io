@@ -1,6 +1,6 @@
 import { z } from 'astro:content';
 
-const iconKeys = ["book", "pallete", "code"] as const;
+const category = ["theoretical", "coding"] as const;
 
 const CredlyCredentialSchema = z.object({
     id: z.string(),
@@ -17,7 +17,7 @@ const CertificationSchema = z.object({
     date: z.string(),
     organization: z.string(),
     url: z.string().url(),
-    icon_key: z.enum(iconKeys),
+    category: z.enum(category),
     code: z.string().nullable(),
     display: z.boolean(),
 });
@@ -27,5 +27,5 @@ export const CrendentialSchema = z.object({
     certifications: z.array(CertificationSchema),
 });
 
-export type IconKey = typeof iconKeys[number];
+export type Category = typeof category[number];
 export type Credentials = z.infer<typeof CrendentialSchema>;
