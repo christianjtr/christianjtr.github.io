@@ -4,6 +4,7 @@
         "role": "Role",
         "contribuition": "Contribuition",
         "technologies": "Technologies",
+        "subjects": "Subjects",
         "showcased_at": "Showcased at",
         "view_more": "View more",
         "countries_worked_in": "Countries worked in",
@@ -102,6 +103,14 @@
             "Product Engineering",
             "Software Development",
             "Business Intelligence"
+        ]
+    },
+    "section_studies": {
+        "key_subjects": [
+            "Information and Communication Technologies",
+            "Tech Leadership and Strategy",
+            "Business Intelligence and Data Engineering",
+            "User Experience and Research"
         ]
     }
 }
