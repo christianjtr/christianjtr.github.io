@@ -1,39 +1,99 @@
 ---
 import { getCollection } from 'astro:content';
-import { BadgeList, Section, HorizontalSpacer } from "../";
+import { Badge, BadgeList, Section, HorizontalSpacer } from "../";
 import Logo from '@assets/svg/background.svg';
-import Pin from '@assets/svg/pin.svg';
-import Monitor from '@assets/svg/monitor.svg';
-import Building from '@assets/svg/building.svg';
+import BuildingIcon from '@assets/svg/building.svg';
+import AcademicCapIcon from '@assets/svg/academic_cap.svg';
 import { common, section_experiences } from '@content/common.json';
 
+type BackgroundType = "work" | "study";
+
+interface Background {
+    start_year: number;
+    end_year: number;
+    period: string;
+    title: string;
+    organization: string;
+    isOngoing: boolean;
+    description: string;
+    flag_asset: string;
+    country: string;
+    topics: string[];
+    category: string;
+    type: BackgroundType;
+};
+
 const experiences = await getCollection('experiences');
+const studies = await getCollection('studies');
+
+const backgroundItems: Background[] = [
+    ...experiences.map(({ data: eachExperience }) => ({
+        start_year: eachExperience.start_year,
+        end_year: eachExperience.end_year,
+        period: eachExperience.period,
+        title: eachExperience.position,
+        organization: eachExperience.company,
+        isOngoing: eachExperience.isOngoing,
+        description: eachExperience.description,
+        flag_asset: eachExperience.flag_asset,
+        country: eachExperience.country,
+        topics: eachExperience.technologies,
+        category: eachExperience.sector,
+        type: "work" as BackgroundType
+    })),
+    ...studies.map(({ data: eachStudy }) => ({
+        start_year: eachStudy.start_year,
+        end_year: eachStudy.end_year,
+        period: eachStudy.period,
+        title: eachStudy.degree,
+        organization: eachStudy.school,
+        isOngoing: eachStudy.isOngoing,
+        description: eachStudy.description,
+        flag_asset: eachStudy.flag_asset,
+        country: eachStudy.country,
+        topics: eachStudy.topics,
+        category: eachStudy.subject,
+        type: "study" as BackgroundType
+    })),
+].sort((a, b) => {
+    const yearA = a.end_year;
+    const yearB = b.end_year;
+    return yearB - yearA;
+});
+
 const countryCounts = Object.entries(experiences.reduce((acc: Record<string, number>, item) => {
   const country = item.data.country;
   acc[country] = (acc[country] || 0) + 1;
   return acc;
 }, {}));
+
+const uniqueCountries = Array.from(new Set(studies.map(({ data: study }) => study.location )));
+const keySubjects = [
+    "Information and Communication Technologies",
+    "Tech Leadership and Strategy",
+    "Business Intelligence and Data Engineering",
+    "User Experience and Research"
+];
 ---
 
 <div class="bg-primary/5 py-10">
     <Section headingTitle={section_experiences.title} subtitle={section_experiences.subtitle} class="space-y-5 container mx-auto">
         <Logo slot="beforeHeading" width={96} height={96} />
-        <HorizontalSpacer />
         <div class="flex md:flex-row flex-col px-5 md:px-10">
-            <div class="stats lg:stats-horizontal stats-vertical bg-base-100 w-full shadow-lg shadow-indigo-200">
-                <div class="stat">
-                    <Pin width={40} height={40} class="stat-figure" />
-                    <span class="stat-title uppercase">{common.countries_worked_in}</span>
-                    <span class="stat-value text-primary text-5xl">0{countryCounts.length}</span>
-                    <p class="stat-desc mt-2">{section_experiences.collaborated_with}</p>
-                    <p class="stat-actions mt-2">
-                        {countryCounts.map(([country]) => (
+            <div class="stats lg:stats-horizontal stats-vertical bg-base-100 w-full">
+                 <div class="stat">
+                    <img src="/src/assets/gifs/world.gif" width="48" height="40" alt="Crystal ball" aria-label="Crystal ball" class="stat-figure"/> 
+                     <span class="stat-title uppercase">Countries Lived and Studied in</span>
+                     <span class="stat-value text-primary text-5xl">0{countryCounts.length}</span>
+                     <p class="stat-desc mt-2">{section_experiences.collaborated_with}</p>
+                     <p class="stat-actions mt-2">
+                         {countryCounts.map(([country]) => (
                             <span class="badge badge-warning badge-sm font-semibold mr-1.5">{country}</span>
                         ))}
                     </p>
                 </div>
                 <div class="stat">
-                    <Building width={40} height={40} class="stat-figure" />
+                    <BuildingIcon width={40} height={40} class="stat-figure" />
                     <span class="stat-title uppercase">{common.companies_worked_for}</span>
                     <span class="stat-value text-primary text-5xl">0{experiences.length}</span>
                     <p class="stat-desc mt-2">{section_experiences.companies_across_regions}</p>
@@ -44,7 +104,7 @@ const countryCounts = Object.entries(experiences.reduce((acc: Record<string, num
                     </p>
                 </div>
                 <div class="stat">
-                    <Monitor width={40} height={40} class="stat-figure" />
+                    <BuildingIcon width={40} height={40} class="stat-figure" />
                     <span class="stat-title uppercase">{common.key_areas}</span>
                     <ul class="mt-3 space-y-2">
                         {section_experiences.key_areas.map((subject) => 
@@ -55,71 +115,94 @@ const countryCounts = Object.entries(experiences.reduce((acc: Record<string, num
             </div>
         </div>
         <br />
-        <div class="timeline-wrapper px-5 md:px-10">
-            {experiences.map(({ data: experience }) => (
-                <div class="card flex md:flex-row flex-col p-4">
-                    <div class="md:w-1/5 w-full p-3 space-y-3">
-                        <h3 class="text-xl font-medium">{experience.company}</h3>
-                        <span class="text-sm text-gray-600 block mb-2">{experience.sector}</span>
-                        <span class="badge badge-sm badge-primary font-semibold uppercase text-white">{experience.period}</span>
-                        <p class="flex gap-2 items-center text-lg">
-                            <img src={experience.flag_asset} alt={experience.country} />
-                            <span>{experience.country}</span>
-                        </p>
+        <div class="flex md:flex-row flex-col px-5 md:px-10">
+            <div class="stats lg:stats-horizontal stats-vertical border border-neutral-200 bg-base-100 w-full">
+                <div class="stat">
+                    <div class="stat-figure">
+                        <AcademicCapIcon width={40} height={40} />
                     </div>
-                    <div class="md:w-4/5 w-full p-3">
-                        <h2 class="text-2xl font-medium mb-3">
-                            {experience.position} {experience.isOngoing && <span class="badge badge-sm badge-accent uppercase">{common.ongoing}</span>}
-                        </h2>
-                        <div class="grid md:grid-cols-5 gap-4 md:gap-8 mb-5">
-                            <div class="col-span-1 md:col-span-5">
-                                <span class="card-info-title">✍🏼 {common.key_contribuitions}</span>
-                                <ul class="mt-6 flex flex-col gap-2">
-                                    {experience.contribuitions.map((contribuition) => (
-                                        <li class="flex items-center gap-3">
-                                            <span class="text-accent">●</span>
-                                            <span class="text-neutral-800">{contribuition}</span>
-                                        </li>
-                                    ))}
-                                </ul>
+                    <span class="stat-title uppercase">Formal Studies Taken</span>
+                    <span class="stat-value text-primary text-5xl">0{studies.length}</span>
+                    <span class="font-semibold text-xl mt-3">
+                        Master's Degree Level
+                    </span>
+                    <p class="stat-desc mt-2">Qualifications earned across these countries</p>
+                    <p class="stat-actions mt-2">
+                        {uniqueCountries.map((country) => (
+                            <span class="badge badge-warning badge-sm font-semibold mr-1.5">{country}</span>
+                        ))}
+                    </p>
+                </div>
+                <div class="stat">
+                    <div class="stat-figure">
+                        <AcademicCapIcon width={40} height={40} />
+                    </div>
+                    <span class="stat-title uppercase">Key areas</span>
+                    <ul class="mt-3 space-y-2">
+                        {keySubjects.map((subject) => 
+                            <li><span class="text-accent mr-3">●</span>{subject}</li>
+                        )}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <br />
+        <ul class="timeline timeline-vertical px-5 md:px-14">
+            {backgroundItems.map((item: Background , index) => (
+                <li>
+                    {index !== 0 && <hr class="bg-secondary" />}
+                    <div class:list={["timeline-box shadow-none border-neutral-300 w-full p-2", { "timeline-start": item.type  === "work" }, { "timeline-end": item.type  === "study" }]}>
+                        <div class="card card-lg p-4">
+                            <p class="flex justify-between mb-2">
+                                <span class="text-gray-600 text-sm">{item.organization}</span>
+                                {item.isOngoing && <Badge class="badge-sm badge-accent uppercase mx-0.5">{common.ongoing}</Badge>}
+                            </p>
+                            <span class="card-title w-full mb-2">{item.title}</span>
+                            <Badge class="badge-sm badge-primary uppercase">{item.period}</Badge>
+                            <div class="flex flex-col gap-1 text-gray-600 my-3">
+                                <p class="flex gap-3 items-center">
+                                    <font class="text-2xl">
+                                        {item.type === "study" && <>📚</>}
+                                        {item.type === "work" && <>🎯</>}
+                                    </font>
+                                    <span class="text-sm">{item.category}</span>
+                                </p>
+                                <p class="flex gap-3 items-center">
+                                    <img src={item.flag_asset} alt={item.country} width={28} height={28} alt={item.country} aria-label={item.country} />
+                                    <span class="text-sm">{item.country}</span>
+                                </p>
+                            </div>
+                            <div class="card-body p-0">
+                                <p class="leading-8 mb-2">{item.description}</p>
+                                <div tabindex="0" class="collapse collapse-arrow bg-primary/5 px-3">
+                                    <div class="collapse-title font-semibold p-0 text-sm flex items-center">
+                                        {item.type === "work" && <>{common.technologies}</>}
+                                        {item.type === "study" && <>{common.subjects}</>}
+                                    </div>
+                                    <div class="collapse-content text-sm">
+                                        <BadgeList items={item.topics} />
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <br />
-                        <BadgeList items={experience.technologies} />
                     </div>
-                </div>
+                    <div class="timeline-middle mx-3">
+                        <div class="bg-base-100 w-fit rounded-full p-3 border-4 border-secondary">
+                            {item.type === "study" && <AcademicCapIcon width={42} height={42} />}
+                            {item.type === "work" && <BuildingIcon width={42} height={42} />}
+                        </div>
+                    </div>
+                    {index < backgroundItems.length - 1 && <hr class="bg-secondary" />}
+                </li>
             ))}
-        </div>
+        </ul>
     </Section>
 </div>
 
 <style>
     @reference "tailwindcss";
-    
-    .timeline-wrapper {
-        @apply space-y-7 z-1 relative;
-    }
 
-    .timeline-wrapper::after {
-        @apply border-indigo-500 border-1 border-dashed absolute bottom-0 top-0 left-24 z-0 w-0;
-        content: '';
-    }
-    
-    .card {
-        @apply rounded-lg border border-indigo-200 text-neutral-900 z-1;
-        color: var(--color-neutral-dark);
-        background-color: var(--color-pale-lavender);
-    }
-
-    .card:hover {
-        @apply border-indigo-400 shadow-lg shadow-indigo-200;
-    }
-
-    .card-info-title {
-        @apply text-neutral-400 text-sm uppercase my-3 block;
-    }
-
-    .card-content {
-        @apply text-neutral-800 text-lg leading-9;
+    .timeline-box:hover {
+        @apply border border-indigo-500 shadow-lg shadow-indigo-200;
     }
 </style>

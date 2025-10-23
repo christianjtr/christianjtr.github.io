@@ -13,8 +13,7 @@ const roleIcons: Record<ExperimentRole, string> = {
 const experiments = await getCollection('experiments');
 ---
 
-<div class="bg-base-100">
-    <HorizontalSpacer />
+<div class="bg-base-100 py-10">
     <Section headingTitle={section_experiments.title} subtitle={section_experiments.subtitle} class="container mx-auto">
         <Logo slot="beforeHeading" width={96} height={96} />
         <HorizontalSpacer />
