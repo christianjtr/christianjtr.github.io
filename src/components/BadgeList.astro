@@ -11,14 +11,14 @@ interface Props extends HTMLAttributes<'div'> {
     badgeClass?: string;
 }
 
-const { items = [], badgeClass = "badge-soft", wrapperClass, ...attributes } = Astro.props;
+const { items = [], badgeClass = "", wrapperClass, ...attributes } = Astro.props;
 const shouldRenderItems = items.length > 0;
 ---
 
 <div  class:list={['badge-list-wrapper', wrapperClass]} {...attributes}>
     <slot />
     {shouldRenderItems && items?.map((item) => (
-        <Badge class={badgeClass}>{item}</Badge>
+        <Badge class:list={["badge-soft", badgeClass]}>{item}</Badge>
     ))}
 </div>
 
