@@ -94,15 +94,29 @@
         "subtitle": "A curated collection of some of my projects and works"
     },
     "section_experiences": {
-        "title": "Professional Experiences",
+        "title": "Background",
         "subtitle": "A comprehensive look at my professional growth and key accomplishments across different countries",
-        "collaborated_with": "Collaborated with peers across",
-        "companies_across_regions": "B2B companies across different markets",
+        "collaborated_with": "Collaborated with peers from",
+        "companies_across_regions": "Worked across different markets",
         "regions": ["Europe", "North America", "LATAM"],
+        "countries": [
+            "Venezuela",
+            "Argentina",
+            "Spain",
+            "France",
+            "United Kingdom",
+            "United States"
+        ],
         "key_areas": [
             "Product Engineering",
             "Software Development",
             "Business Intelligence"
+        ],
+        "key_studies": [
+            "Information and Communication Technologies",
+            "Tech Leadership and Strategy",
+            "Business Intelligence and Data Engineering",
+            "User Experience and Research"
         ]
     },
     "section_studies": {
