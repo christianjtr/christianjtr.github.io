@@ -24,6 +24,13 @@
         "v_shaped_profile": "V-Shaped Profile",
         "v_shaped_explanation": "Combines specialization in one relevant area with broad, cross-functional knowledge",
         "language_tip": "Refining fluency and proficiency in languages",
+        "linkedInURL": "https://www.linkedin.com/in/christianjtr/",
+        "githubURL": "https://github.com/christianjtr",
+        "avatar_messages": [
+            "Hi there! Let's connect",
+            "My portfolio is just below!",
+            "So glad you stopped by!"
+        ],
         "languages": [
             {
                 "id": "language-1",
@@ -58,6 +65,14 @@
                         "Product Ownership and Ideation",
                         "Coaching and Mentorship",
                         "Tech Research and Digital Marketing"
+                    ],
+                    "tools": [
+                        "Segment, Amplitude",
+                        "Google Analytics Ads",
+                        "Atlassian Suite (Jira, Confluence)",
+                        "Sketch, Figma, Zeplin",
+                        "Notion, Slack, Teams",
+                        "GitHub, BitBucket"
                     ]
                 },
                 {
@@ -67,6 +82,15 @@
                         "Web apps and Design Systems",
                         "APIs and integrating services",
                         "Testing and automation"
+                    ],
+                    "tools": [
+                        "JavaScript, TypeScript",
+                        "React, Vue, Svelte, Astro",
+                        "Zod, ORMs (Sequelize)",
+                        "Jest, Cypress",
+                        "NodeJS, GraphQL, REST APIs",
+                        "Python, R Statistics",
+                        "MySQL, PostgreSQL, MongoDB, Redis"
                     ]
                 },
                 {
@@ -76,10 +100,37 @@
                         "Analytical Skills",
                         "Data Engineering and Modeling",
                         "ETL/DWH and Data Visualization"
-                    ]
+                    ],
+                    "tools": ["SSAS/SSIS, Pentaho BI", "Tableau", "PowerBI"]
                 }
             ]
-        }
+        },
+        "memberships": [
+            {
+                "id": "membership-1",
+                "type": "Membership",
+                "organization": "Venezuelan College of Engineers",
+                "imageURL": "/images/colegio_ingenieros_vzla.png",
+                "degree": null,
+                "showMembershipId": true,
+                "member_no": "209752",
+                "showURL": false,
+                "url": null,
+                "display": true
+            },
+            {
+                "id": "membership-2",
+                "type": "Membership",
+                "organization": "Society of Petroleum Engineers",
+                "imageURL": "/images/spe.png",
+                "degree": null,
+                "showMembershipId": true,
+                "member_no": "4403695",
+                "showURL": false,
+                "url": null,
+                "display": false
+            }
+        ]
     },
     "section_credentials": {
         "title": "Credentials and Certifications",
