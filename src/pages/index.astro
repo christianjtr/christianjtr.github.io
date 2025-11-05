@@ -3,7 +3,7 @@ import "@styles/global.css";
 import { Header, Footer, MainWrapper } from "@layouts";
 import { VerticalIconMenu } from "@components";
 
-const pageTitle = "My page title";
+const pageTitle = "Christian José Torrealba Rondón";
 ---
 
 <html lang="en" data-theme="light">
@@ -21,6 +21,13 @@ const pageTitle = "My page title";
         <div class="vertical-icon-menu-wrapper">
             <VerticalIconMenu />
         </div>
+        <button 
+            id="scroll-top-button" 
+            class="btn btn-xl btn-circle scroll-top-button" 
+            aria-label="Scroll to top button"
+        >
+            <span class="text-5xl">☝🏼</span>
+        </button>
     </body>
 </html>
 
@@ -30,5 +37,36 @@ const pageTitle = "My page title";
     .vertical-icon-menu-wrapper {
         @apply fixed top-1/3 right-5 z-1;
     }
+
+    .scroll-top-button {
+        @apply hidden fixed justify-center items-center w-[75px] h-[75px] bottom-10 right-[50px] z-1 focus:outline-none;
+        background: var(--color-vibrant-pink);
+    }
 </style>
+
+<script>
+      window.onscroll = function() { scroll(); };
+      
+      const scrollDownUntil = 1000;
+      
+      const scrollToTopButton = document.getElementById("scroll-top-button");
+      scrollToTopButton?.addEventListener("click", () => {
+        goTotop();
+      });
+      
+    //   function removeAnchors() {
+    //     window.history.replaceState({}, "", window.location.href.split("#")[0]);
+    //   }
+
+      function scroll() {
+        const validation = document.body.scrollTop > scrollDownUntil || document.documentElement.scrollTop > scrollDownUntil;
+        scrollToTopButton!.style.display = validation ? "flex" : "none";
+      }
+
+      function goTotop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+        // removeAnchors();
+      }
+</script>
  
