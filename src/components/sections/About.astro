@@ -12,15 +12,29 @@ import CodeFileIcon from '@assets/svg/code_file.svg';
         <div class="col-span-3 space-y-4 content-center">
             <p class="flex items-center gap-2 font-medium">
                 <img src="/src/assets/gifs/wave.gif" width="64" height="64" alt="Waving" aria-label="Waving"/>
-                <span class="text-3xl font-semibold">{section_about.greeting}</span>
+                <span class="text-3xl font-semibold text-accent">{section_about.greeting}</span>
             </p>
             <h1 class="font-semibold text-7xl leading-20" set:html={section_about.my_name} />
             <p class="text-xl leading-8 p-2 text-neutral-600 m-0">{section_about.summary}</p>
         </div>
         <div class="col-span-3">
-            <figure>
-                <img class="w-full p-10" src="/src/assets/images/me.png" alt="My image" aria-label="My image"/>
-            </figure>
+            <div class="p-24 relative">
+                <figure class="avatar-image">
+                    <img src="/src/assets/images/me.png" alt="My image" aria-label="My image"/>
+                </figure>
+                <div class="chat chat-end absolute top-60 left-0 w-1/3">
+                    <div class="chat-bubble">
+                        <div class="text-slider-mask">
+                            <div class="text-slider">
+                                {section_about.avatar_messages.map(message => (
+                                    <p>{message}</p>
+                                ))}
+                                <p>{section_about.avatar_messages[0]}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="grid md:grid-cols-8 gap-8 shadow-lg rounded-lg px-5 py-3 border border-neutral-100">
@@ -33,9 +47,7 @@ import CodeFileIcon from '@assets/svg/code_file.svg';
             <div class="stats stats-vertical md:stats-horizontal w-full">
                 {section_about.languages.map(language => (
                     <div class="stat space-y-1">
-                        <div class="stat-figure text-4xl">
-                            {language.emoji}
-                        </div>
+                        <div class="stat-figure text-4xl">{language.emoji}</div>
                         <div class="stat-value font-semibold text-xl">{language.name}</div>
                         <div class="stat-desc">{language.proficiency}</div>
                         <progress class="progress progress-primary w-40" value={language.value} max="100" />
@@ -97,5 +109,33 @@ import CodeFileIcon from '@assets/svg/code_file.svg';
 
     .card-informative:hover {
         @apply border-indigo-400 shadow-lg shadow-indigo-200;
+    }
+    .avatar-image {
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--color-cobalt-blue) 0%, var(--color-electric-teal) 100%);
+    }
+
+    .text-slider-mask {
+        @apply h-[2.6rem] overflow-hidden;
+    }
+
+    .text-slider {
+        animation: slideText 16s infinite cubic-bezier(0.7, 0, 0.3, 1);
+    }
+
+    .text-slider p {
+        line-height: 1.3em;
+    }
+
+    .text-slider-item {
+        @apply leading-[1.3rem];
+    }
+
+    @keyframes slideText {
+        0%, 25% { transform: translateY(0%); }
+        30%, 45% { transform: translateY(-25%); }
+        50%, 70% { transform: translateY(-50%); }
+        75%, 94.99% { transform: translateY(-75%); } 
+        95%, 100% { transform: translateY(0%); } 
     }
 </style>

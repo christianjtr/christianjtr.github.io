@@ -2,6 +2,7 @@
 import LinkedInIcon from '@assets/svg/linkedin.svg';
 import GitHubIcon from '@assets/svg/github.svg';
 import LLMSIcon from '@assets/svg/llms.svg';
+import { section_about } from '@content/common.json';
 
 interface Props {
     iconSize?: number;
@@ -11,8 +12,8 @@ interface Props {
 type LinkIcon = "linkedin" | "github" | "llms";
 
 const links: Array<{id: LinkIcon, text: string; url: string}> = [
-    { id: "linkedin", text: "LinkedIn", url: "https://www.linkedin.com/in/christianjtr" },
-    { id: "github", text: "GitHub", url: "https://github.com/christianjtr" },
+    { id: "linkedin", text: "LinkedIn", url: section_about.linkedInURL },
+    { id: "github", text: "GitHub", url: section_about.githubURL },
     { id: "llms", text: "LLMS.txt", url: "/src/assets/llms.txt"}
 ];
 
