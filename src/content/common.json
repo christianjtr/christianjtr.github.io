@@ -149,15 +149,8 @@
         "subtitle": "A comprehensive look at my professional growth and key accomplishments across different countries",
         "collaborated_with": "Collaborated with peers from",
         "companies_across_regions": "Worked across different markets",
-        "regions": ["Europe", "North America", "LATAM"],
-        "countries": [
-            "Venezuela",
-            "Argentina",
-            "Spain",
-            "France",
-            "United Kingdom",
-            "United States"
-        ],
+        "regions": ["EMEA", "NAMER", "LATAM"],
+        "countries": ["Venezuela", "Argentina", "Spain", "France", "UK", "USA"],
         "key_areas": [
             "Product Engineering",
             "Software Development",
