@@ -76,7 +76,7 @@ const uniqueCountries = Array.from(new Set(experiences.map(({ data: eachExperien
                     <span class="stat-value text-primary text-5xl mt-2">0{uniqueCountries.length}</span>
                     <span class="stat-desc my-4">{section_experiences.collaborated_with}</span>
                     <div class="stat-actions">
-                        <BadgeList badgeClass='badge-sm' items={section_experiences.countries} />
+                        <BadgeList badgeClass='badge-sm badge-secondary' items={section_experiences.countries} />
                     </div>
                 </div>
                 <div class="stat w-full">
@@ -85,7 +85,7 @@ const uniqueCountries = Array.from(new Set(experiences.map(({ data: eachExperien
                     <span class="stat-value text-primary text-5xl mt-2">0{experiences.length}</span>
                     <span class="stat-desc my-4">{section_experiences.companies_across_regions}</span>
                     <div class="stat-actions">
-                        <BadgeList badgeClass='badge-sm' items={section_experiences.regions} />
+                        <BadgeList badgeClass='badge-sm badge-secondary' items={section_experiences.regions} />
                     </div>
                 </div>
                 <div class="stat w-full">

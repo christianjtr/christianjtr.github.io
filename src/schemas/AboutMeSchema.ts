@@ -56,7 +56,10 @@ const SectionAboutSchema = z.object({
     expertise: z.object({
         title: z.string(),
         subjects: z.array(SubjectSchema)
-    })
+    }),
+    linkedInURL: z.string(),
+    githubURL: z.string(),
+    avatar_messages: z.array(z.string()),
 });
 
 export {

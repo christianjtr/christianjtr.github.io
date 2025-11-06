@@ -18,7 +18,7 @@
         "greeting": "Hi there folks, I am",
         "my_name": "Christian José <br>Torrealba Rondón<span class='text-accent'>.</span>",
         "about_me": "I define myself as a generalist professional interested in different disciplines that accelerate product delivery.",
-        "summary": "Applying systems engineering discipline and design thinking empathy to deliver  user-centric solutions that drive impact.",
+        "summary": "Driving impact through user-centric solutions, built on a foundation of Systems Engineering and Design Thinking.",
         "hobbies_title": "Hobbies",
         "hobbies": "☀️ 🏖️ 🎡 🍦 🕹️ 🏃🏻 🐶 ✈️",
         "v_shaped_profile": "V-Shaped Profile",
@@ -141,7 +141,7 @@
         "subtitle": "Presented project work at multiple international conferences"
     },
     "section_experiments": {
-        "title": "Case of Studies and Conceptual Projects",
+        "title": "Case of Studies and Projects",
         "subtitle": "A curated collection of some of my projects and works"
     },
     "section_experiences": {
