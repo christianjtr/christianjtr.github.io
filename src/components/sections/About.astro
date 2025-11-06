@@ -27,7 +27,7 @@ import CodeFileIcon from '@assets/svg/code_file.svg';
                         <div class="text-slider-mask">
                             <div class="text-slider">
                                 {section_about.avatar_messages.map(message => (
-                                    <p>{message}</p>
+                                    <p class="no-select">{message}</p>
                                 ))}
                                 <p>{section_about.avatar_messages[0]}</p>
                             </div>
@@ -134,6 +134,8 @@ import CodeFileIcon from '@assets/svg/code_file.svg';
 
     .text-slider p {
         line-height: 1.3em;
+        user-select: none;
+        -webkit-user-select: none;
     }
 
     .text-slider-item {

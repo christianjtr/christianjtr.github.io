@@ -12,14 +12,15 @@ import { section_projects, common } from '@content/common.json';
 const projects = await getCollection('projects');
 ---
 
-<div class="bg-primary/5 py-10">
+<div class="bg-primary/5 py-10" id={common.main_sections[0].anchorId}>
+    <br />
     <Section headingTitle={section_projects.title} subtitle={section_projects.subtitle} class="container mx-auto">
         <Logo slot="beforeHeading" width={96} height={96} />
         <HorizontalSpacer />
         <div class="mx-auto px-5 md:px-14">
             {projects.map(({ data: project }: { data: Project }, index) => (
                 <div class="collapse collapse-arrow" tabindex={index + 1}>
-                    <input type="radio" name="project" aria-hidden="true" checked={index === 0} />
+                    <input type="radio" name="project" aria-hidden="true" />
                     <div class="collapse-title">
                         <div class="block avatar avatar-placeholder grow-0">
                             <div class="bg-primary text-neutral w-14 rounded-full">

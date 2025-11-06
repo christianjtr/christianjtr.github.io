@@ -9,7 +9,7 @@ const pageTitle = "Christian José Torrealba Rondón";
 <html lang="en" data-theme="light">
     <head>
         <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>{pageTitle}</title>
@@ -34,12 +34,16 @@ const pageTitle = "Christian José Torrealba Rondón";
 <style>
     @reference "tailwindcss";
     
+    html {
+        scroll-behavior: smooth;
+    }
+    
     .vertical-icon-menu-wrapper {
         @apply fixed top-1/3 right-5 z-1;
     }
 
     .scroll-top-button {
-        @apply hidden fixed justify-center items-center w-[75px] h-[75px] bottom-10 right-[50px] z-1 focus:outline-none;
+        @apply hidden fixed justify-center items-center w-20 h-20 bottom-10 right-12 z-1 focus:outline-none;
         background: var(--color-vibrant-pink);
     }
 </style>
@@ -54,9 +58,9 @@ const pageTitle = "Christian José Torrealba Rondón";
         goTotop();
       });
       
-    //   function removeAnchors() {
-    //     window.history.replaceState({}, "", window.location.href.split("#")[0]);
-    //   }
+      function removeAnchors() {
+        window.history.replaceState({}, "", window.location.href.split("#")[0]);
+      }
 
       function scroll() {
         const validation = document.body.scrollTop > scrollDownUntil || document.documentElement.scrollTop > scrollDownUntil;
@@ -66,7 +70,7 @@ const pageTitle = "Christian José Torrealba Rondón";
       function goTotop() {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
-        // removeAnchors();
+        removeAnchors();
       }
 </script>
  

@@ -12,7 +12,23 @@
         "key_areas": "Key areas",
         "key_contribuitions": "Key contribuitions",
         "ongoing": "Ongoing",
-        "cannot_load_content": "Content could not be loaded"
+        "cannot_load_content": "Content could not be loaded",
+        "languages_title": "Languages",
+        "languages": ["English", "French", "Spanish"],
+        "main_sections": [
+            {
+                "anchorId": "featured_projects",
+                "label": "Featured Projects"
+            },
+            {
+                "anchorId": "case_of_studies",
+                "label": "Case of Studies"
+            },
+            {
+                "anchorId": "background",
+                "label": "Background"
+            }
+        ]
     },
     "section_about": {
         "greeting": "Hi there folks, I am",
@@ -69,9 +85,10 @@
                     "tools": [
                         "Segment, Amplitude",
                         "Google Analytics Ads",
+                        "Goole Maps, CESIUM, Mapbox",
                         "Atlassian Suite (Jira, Confluence)",
                         "Sketch, Figma, Zeplin",
-                        "Notion, Slack, Teams",
+                        "Notion, Slack, Microsoft Teams",
                         "GitHub, BitBucket"
                     ]
                 },
@@ -87,7 +104,7 @@
                         "JavaScript, TypeScript",
                         "React, Vue, Svelte, Astro",
                         "Zod, ORMs (Sequelize)",
-                        "Jest, Cypress",
+                        "Jest, Cypress, Web bundlers",
                         "NodeJS, GraphQL, REST APIs",
                         "Python, R Statistics",
                         "MySQL, PostgreSQL, MongoDB, Redis"
@@ -104,6 +121,7 @@
                     "tools": [
                         "SQL Server Analysis Services",
                         "SQL Server Integration Services",
+                        "Relational Databases, NoSQL",
                         "Pentaho BI",
                         "Tableau",
                         "PowerBI"

@@ -64,7 +64,8 @@ const backgroundItems: Background[] = [
 const uniqueCountries = Array.from(new Set(experiences.map(({ data: eachExperience }) => eachExperience.country )));
 ---
 
-<div class="bg-primary/5 py-10">
+<div class="bg-primary/5 py-10" id={common.main_sections[2].anchorId}>
+    <br />
     <Section headingTitle={section_experiences.title} subtitle={section_experiences.subtitle} class="container mx-auto">
         <Logo slot="beforeHeading" width={96} height={96} />
         <HorizontalSpacer />

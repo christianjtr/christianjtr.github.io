@@ -1,77 +1,90 @@
 ---
-import { Image } from 'astro:assets';
-import MyBrandLogo from '@/assets/brand_logo.png';
+import LanguageIcon from "@assets/svg/language.svg";
+import SunIcon from "@assets/svg/sun.svg";
+import MoonIcon from "@assets/svg/moon.svg";
+import { common } from "@content/common.json";
 
 ---
 
 <header>
-    <div class="navbar bg-base-100 shadow-sm">
-        <div class="navbar-start">
-            <a class="btn btn-ghost text-xl">daisyUI</a>
-        </div>
-        <!-- <div class="navbar-center">
-            <a class="btn btn-ghost text-lg">Projects</a>
-            <a class="btn btn-ghost text-lg">Background</a>
-            <a class="btn btn-ghost text-lg">Academics</a>
-        </div> -->
-        <div class="navbar-end">
-            <div class="dropdown dropdown-end">
-                <div
-                    tabindex="0"
-                    role="button"
-                    class="btn btn-ghost rounded-field"
-                >
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 16 16"
-                        fill="currentColor"
-                        class="h-4 w-4"
-                    >
-                        <path
-                            fill-rule="evenodd"
-                            d="M11 5a.75.75 0 0 1 .688.452l3.25 7.5a.75.75 0 1 1-1.376.596L12.89 12H9.109l-.67 1.548a.75.75 0 1 1-1.377-.596l3.25-7.5A.75.75 0 0 1 11 5Zm-1.24 5.5h2.48L11 7.636 9.76 10.5ZM5 1a.75.75 0 0 1 .75.75v1.261a25.27 25.27 0 0 1 2.598.211.75.75 0 1 1-.2 1.487c-.22-.03-.44-.056-.662-.08A12.939 12.939 0 0 1 5.92 8.058c.237.304.488.595.752.873a.75.75 0 0 1-1.086 1.035A13.075 13.075 0 0 1 5 9.307a13.068 13.068 0 0 1-2.841 2.546.75.75 0 0 1-.827-1.252A11.566 11.566 0 0 0 4.08 8.057a12.991 12.991 0 0 1-.554-.938.75.75 0 1 1 1.323-.707c.049.09.099.181.15.271.388-.68.708-1.405.952-2.164a23.941 23.941 0 0 0-4.1.19.75.75 0 0 1-.2-1.487c.853-.114 1.72-.185 2.598-.211V1.75A.75.75 0 0 1 5 1Z"
-                            clip-rule="evenodd"
-                        >
-                        </path>
-                    </svg>
-                    Language
-                </div>
-                <ul
-                    tabindex="0"
-                    class="menu dropdown-content bg-base-200 rounded-box z-1 mt-4 w-52 p-2 shadow-sm"
-                >
-                    <li><a>English</a></li>
-                    <li><a>French</a></li>
-                    <li><a>Spanish</a></li>
-                </ul>
+    <div class="navbar-container">
+        <div class="navbar">
+            <div class="navbar-start">
+                <a class="btn btn-link" href="/">
+                    <img src="/src/assets/brand_logo.png" width="50px" height="50px" alt="Brand logo" aria-label="Brand logo" />
+                </a>
             </div>
-            <button class="btn btn-ghost btn-circle">
-                <label class="swap swap-rotate">
-                    <input type="checkbox" class="theme-controller" value="synthwave" />
-                    <!-- sun icon -->
-                    <svg
-                        class="swap-on h-6 w-6 fill-current"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
+            <div class="navbar-center gap-20">
+                {common.main_sections.map(section => (
+                    <a 
+                        role="button"
+                        class="animated-link hover:text-primary" 
+                        href={`#${section.anchorId}`}
+                        aria-label={`Go to ${section.label}`}
                     >
-                        <path
-                            d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"
-                        >
-                        </path>
-                    </svg>
-                    <!-- moon icon -->
-                    <svg
-                        class="swap-off h-6 w-6 fill-current"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
+                        <font class="font-semibold text-accent text-xl">•</font>
+                        {section.label}
+                        <font class="font-semibold text-accent text-xl">•</font>
+                    </a>
+                ))}
+            </div>
+            <div class="navbar-end gap-1">
+                <div class="dropdown dropdown-end">
+                    <div
+                        tabindex="0"
+                        role="button"
+                        class="btn btn-ghost btn-circle"
                     >
-                        <path
-                            d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"
-                        >
-                        </path>
-                    </svg>
-                </label>
-            </button>
+                        <LanguageIcon class="h-6 w-6" />
+                    </div>
+                    <ul tabindex="0" class="menu dropdown-content bg-base-300 rounded-box dropdown-menu-content">
+                        {common.languages.map(languange => (
+                            <li><a>{languange}</a></li>
+                        ))}
+                    </ul>
+                </div>
+                <button class="btn btn-ghost btn-circle">
+                    <label class="swap swap-rotate">
+                        <input type="checkbox" class="theme-controller" value="synthwave" />
+                        <SunIcon />
+                        <MoonIcon />
+                    </label>
+                </button>
+            </div>
         </div>
     </div>
 </header>
+
+<style>
+    @reference "tailwindcss";
+
+    header {
+        @apply sticky top-0 z-50 transition-all duration-300;
+    }
+
+    .navbar-container {
+        @apply w-full flex items-center justify-between bg-white/10 backdrop-blur-sm shadow-sm h-20 px-24;
+    }
+
+    .animated-link {
+        @apply relative inline-block text-xl no-underline transition-colors duration-300 font-semibold;
+    }
+
+    .animated-link::before {
+        content: '';
+        @apply absolute bottom-0 left-1/2 w-0 h-0.5 bg-indigo-400 transition-all duration-300 ease-in-out;
+        transform: translateX(-50%);
+    }
+
+    .animated-link:hover::before, .animated-link.from-left:hover::before {
+          @apply w-full;
+    }
+
+    .animated-link.from-left::before {
+        @apply left-0 translate-x-0;
+    }
+
+    .dropdown-menu-content {
+        @apply z-1 mt-1 p-2 shadow-sm;
+    }
+</style>
