@@ -131,7 +131,7 @@ const uniqueCountries = Array.from(new Set(experiences.map(({ data: eachExperien
                             <span class="text-lg text-gray-600 block mb-5">{item.organization}</span>
                             <p class="card-content leading-8">{item.description}</p>
                             <br />
-                            <BadgeList items={item.topics} badgeClass="font-semibold badge-soft" />
+                            <BadgeList items={item.topics} badgeClass="badge-sm badge-soft" />
                         </div>
                     </div>
                 ))}
@@ -169,7 +169,7 @@ const uniqueCountries = Array.from(new Set(experiences.map(({ data: eachExperien
                                             {item.type === "study" && <>{common.subjects}</>}
                                         </div>
                                         <div class="collapse-content text-sm">
-                                            <BadgeList items={item.topics} />
+                                            <BadgeList items={item.topics} badgeClass="badge-sm badge-soft" />
                                         </div>
                                     </div>
                                 </div>
