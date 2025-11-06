@@ -18,13 +18,11 @@ import { common } from "@content/common.json";
                 {common.main_sections.map(section => (
                     <a 
                         role="button"
-                        class="animated-link hover:text-primary" 
+                        class="navbar-link hover:text-primary" 
                         href={`#${section.anchorId}`}
                         aria-label={`Go to ${section.label}`}
                     >
-                        <font class="font-semibold text-accent text-xl">•</font>
                         {section.label}
-                        <font class="font-semibold text-accent text-xl">•</font>
                     </a>
                 ))}
             </div>
@@ -66,24 +64,9 @@ import { common } from "@content/common.json";
         @apply w-full flex items-center justify-between bg-white/10 backdrop-blur-sm shadow-sm h-20 px-24;
     }
 
-    .animated-link {
-        @apply relative inline-block text-xl no-underline transition-colors duration-300 font-semibold;
+    .navbar-link {
+        @apply text-xl no-underline font-semibold;
     }
-
-    .animated-link::before {
-        content: '';
-        @apply absolute bottom-0 left-1/2 w-0 h-0.5 bg-indigo-400 transition-all duration-300 ease-in-out;
-        transform: translateX(-50%);
-    }
-
-    .animated-link:hover::before, .animated-link.from-left:hover::before {
-          @apply w-full;
-    }
-
-    .animated-link.from-left::before {
-        @apply left-0 translate-x-0;
-    }
-
     .dropdown-menu-content {
         @apply z-1 mt-1 p-2 shadow-sm;
     }
