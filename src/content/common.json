@@ -101,7 +101,13 @@
                         "Data Engineering and Modeling",
                         "ETL/DWH and Data Visualization"
                     ],
-                    "tools": ["SSAS/SSIS, Pentaho BI", "Tableau", "PowerBI"]
+                    "tools": [
+                        "SQL Server Analysis Services",
+                        "SQL Server Integration Services",
+                        "Pentaho BI",
+                        "Tableau",
+                        "PowerBI"
+                    ]
                 }
             ]
         },

@@ -1,7 +1,7 @@
 ---
 import { Credentials } from '.';
 import { section_about } from '@content/common.json';
-import { HorizontalSpacer } from "../";
+import { HorizontalSpacer, BadgeList } from "../";
 import RocketIcon from '@assets/svg/rocket.svg';
 import MagicStickIcon from '@assets/svg/magic_stick.svg';
 import CodeFileIcon from '@assets/svg/code_file.svg';
@@ -80,18 +80,27 @@ import CodeFileIcon from '@assets/svg/code_file.svg';
             </p>
         </div>
         {section_about.expertise.subjects.map((subject) => (
-            <div class="card-informative border-neutral-300">
-                <div class="bg-primary/5 w-fit rounded-full p-3">
-                    {subject.category === "product" && <RocketIcon width={42} height={42} />}
-                    {subject.category === "coding" && <CodeFileIcon width={42} height={42} />}
-                    {subject.category === "data" && <MagicStickIcon width={42} height={42} />}
+            <div class="col-span-1 md:col-span-2">
+                <div class="group flex h-full w-full">
+                    <div class="card-informative border-neutral-300 transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                        <div class="[backface-visibility:hidden]">
+                            <div class="bg-primary/5 w-fit rounded-full p-3">
+                                {subject.category === "product" && <RocketIcon width={42} height={42} />}
+                                {subject.category === "coding" && <CodeFileIcon width={42} height={42} />}
+                                {subject.category === "data" && <MagicStickIcon width={42} height={42} />}
+                            </div>
+                            <span class="block my-5 text-2xl font-medium">{subject.name}<font class="text-accent text-3xl">.</font></span>
+                            <ul class="space-y-2">
+                                {subject.topics.map((topic) => (
+                                    <li class="md:text-sm text-lg text-neutral-600">{topic}</li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div class="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] p-5 flex items-center">
+                            <BadgeList items={subject.tools} badgeClass="badge-sm badge-secondary" />
+                        </div>
+                    </div>
                 </div>
-                <span class="block my-5 text-2xl font-medium">{subject.name}</span>
-                <ul class="space-y-2">
-                    {subject.topics.map((topic) => (
-                        <li class="md:text-sm text-lg text-neutral-600">{topic}</li>
-                    ))}
-                </ul>
             </div>
         ))}
     </div>
@@ -104,7 +113,7 @@ import CodeFileIcon from '@assets/svg/code_file.svg';
     @reference "tailwindcss";
     
     .card-informative {
-        @apply col-span-1 md:col-span-2 border-1 px-5 py-7 rounded-lg;
+        @apply border-1 p-5 rounded-lg;
     }
 
     .card-informative:hover {
