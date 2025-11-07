@@ -45,6 +45,7 @@ const SectionExperimentsSchema = z.object({
 const SectionAboutSchema = z.object({
     greeting: z.string(),
     my_name: z.string(),
+    my_name_template: z.string(),
     about_me: z.string(),
     summary: z.string(),
     hobbies_title: z.string(),

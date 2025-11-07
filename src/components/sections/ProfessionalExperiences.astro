@@ -1,10 +1,10 @@
 ---
 import { getCollection } from 'astro:content';
-import { Badge, BadgeList, Section, HorizontalSpacer } from "../";
+import { Badge, BadgeList, Section, VerticalSpacer } from "../";
 import Logo from '@assets/svg/background.svg';
 import BuildingIcon from '@assets/svg/building.svg';
 import AcademicCapIcon from '@assets/svg/academic_cap.svg';
-import { common, section_experiences } from '@content/common.json';
+import { common, section_experiences, header } from '@content/common.json';
 
 type BackgroundType = "work" | "study";
 
@@ -64,48 +64,39 @@ const backgroundItems: Background[] = [
 const uniqueCountries = Array.from(new Set(experiences.map(({ data: eachExperience }) => eachExperience.country )));
 ---
 
-<div class="bg-primary/5 py-10" id={common.main_sections[2].anchorId}>
+<div class="bg-primary/5 py-10" id={header.main_sections[2].anchorId}>
     <br />
     <Section headingTitle={section_experiences.title} subtitle={section_experiences.subtitle} class="container mx-auto">
         <Logo slot="beforeHeading" width={96} height={96} />
-        <HorizontalSpacer />
+        <br />
         <div class="px-5 md:px-14">
             <div class="stats md:stats-horizontal stats-vertical bg-base-100 w-full shadow-lg rounded-lg border border-neutral-100">
                 <div class="stat w-full">
                     <img src="/src/assets/gifs/world.gif" width="50" height="50" alt="World" aria-label="World" class="stat-figure"/>
-                    <span class="stat-title uppercase">Countries Lived and Studied in</span>
-                    <span class="stat-value text-primary text-5xl mt-2">0{uniqueCountries.length}</span>
+                    <span class="stat-title uppercase">Countries Lived, Worked, and Studied in</span>
+                    <span class="stat-value font-semibold text-primary text-5xl mt-2">0{uniqueCountries.length}</span>
                     <span class="stat-desc my-4">{section_experiences.collaborated_with}</span>
                     <div class="stat-actions">
-                        <BadgeList badgeClass='badge-sm badge-secondary' items={section_experiences.countries} />
+                        <BadgeList badgeClass='badge-secondary' items={section_experiences.full_countries} />
                     </div>
                 </div>
                 <div class="stat w-full">
-                    <img src="/src/assets/gifs/handshake.gif" width="65" height="65" alt="Handshake" aria-label="Handshake" class="stat-figure"/>
-                    <span class="stat-title uppercase">{common.companies_worked_for}</span>
-                    <span class="stat-value text-primary text-5xl mt-2">0{experiences.length}</span>
-                    <span class="stat-desc my-4">{section_experiences.companies_across_regions}</span>
-                    <div class="stat-actions">
-                        <BadgeList badgeClass='badge-sm badge-secondary' items={section_experiences.regions} />
-                    </div>
-                </div>
-                <div class="stat w-full">
-                    <img src="/src/assets/gifs/academic_cap.gif" width="65" height="65" alt="Academic cap" aria-label="Academic cap" class="stat-figure"/>
+                    <img src="/src/assets/gifs/academic_cap.gif" width="50" height="50" alt="World" aria-label="World" class="stat-figure"/>
                     <span class="stat-title uppercase">Formal Studies Taken</span>
-                    <span class="stat-value text-primary text-5xl mt-2">0{studies.length}</span>
-                    <span class="font-semibold text-xl mt-2">Master's Degree Level</span>
-                    <span class="stat-desc">Qualifications earned across different countries</span>
+                    <span class="stat-value font-semibold text-primary text-5xl mt-2">0{studies.length}</span>
+                    <span class="stat-desc my-4">Eductational level</span>
+                    <span class="stat-actions font-semibold text-lg">Master Degree</span>
                 </div>
             </div>
-            <HorizontalSpacer />
+            <VerticalSpacer />
             <div class="grid md:grid-cols-6 gap-8">
                 <div class="col-span-1">
                     <h3 class="text-3xl font-semibold">Experiences</h3>
                 </div>
                 <div class="col-span-5">
                     <div class="divider divider-end flex items-center">
-                        <input class="btn rounded-full w-20" type="radio" name="layout" value="list" aria-label="List" checked="checked"/>
-                        <input class="btn rounded-full w-20" type="radio" name="layout" value="timeline" aria-label="Timeline"/>
+                        <input class="btn rounded-2xl w-24" type="radio" name="layout" value="list" aria-label="📋 List" checked="checked"/>
+                        <input class="btn rounded-2xl w-24" type="radio" name="layout" value="timeline" aria-label="⏳ Timeline"/>
                     </div>
                 </div>
             </div>

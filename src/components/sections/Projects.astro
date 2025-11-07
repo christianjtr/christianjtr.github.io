@@ -1,22 +1,22 @@
 ---
 import { getCollection } from 'astro:content';
-import { LinkButton, Section, HorizontalSpacer, BadgeList, Badge } from "../";
+import { LinkButton, Section, VerticalSpacer, BadgeList, Badge } from "../";
 import Logo from '@assets/svg/projects.svg';
 import PinIcon from '@assets/svg/pin.svg';
 import PenIcon from '@assets/svg/pen.svg';
 import MonitorIcon from '@assets/svg/monitor.svg';
 import BookIcon from '@assets/svg/book.svg';
 import type { Project } from '@schemas/ProjectSchema';
-import { section_projects, common } from '@content/common.json';
+import { section_projects, common, header } from '@content/common.json';
 
 const projects = await getCollection('projects');
 ---
 
-<div class="bg-primary/5 py-10" id={common.main_sections[0].anchorId}>
+<div class="bg-primary/5 py-10" id={header.main_sections[0].anchorId}>
     <br />
     <Section headingTitle={section_projects.title} subtitle={section_projects.subtitle} class="container mx-auto">
         <Logo slot="beforeHeading" width={96} height={96} />
-        <HorizontalSpacer />
+        <br />
         <div class="mx-auto px-5 md:px-14">
             {projects.map(({ data: project }: { data: Project }, index) => (
                 <div class="collapse collapse-arrow" tabindex={index + 1}>

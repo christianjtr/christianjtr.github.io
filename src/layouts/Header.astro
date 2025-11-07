@@ -2,7 +2,7 @@
 import LanguageIcon from "@assets/svg/language.svg";
 import SunIcon from "@assets/svg/sun.svg";
 import MoonIcon from "@assets/svg/moon.svg";
-import { common } from "@content/common.json";
+import { header } from "@content/common.json";
 
 ---
 
@@ -15,7 +15,7 @@ import { common } from "@content/common.json";
                 </a>
             </div>
             <div class="navbar-center gap-20">
-                {common.main_sections.map(section => (
+                {header.main_sections.map(section => (
                     <a 
                         role="button"
                         class="navbar-link hover:text-primary" 
@@ -36,7 +36,7 @@ import { common } from "@content/common.json";
                         <LanguageIcon class="h-6 w-6" />
                     </div>
                     <ul tabindex="0" class="menu dropdown-content bg-base-300 rounded-box dropdown-menu-content">
-                        {common.languages.map(languange => (
+                        {header.languages.map(languange => (
                             <li><a>{languange}</a></li>
                         ))}
                     </ul>
@@ -61,7 +61,7 @@ import { common } from "@content/common.json";
     }
 
     .navbar-container {
-        @apply w-full flex items-center justify-between bg-white/10 backdrop-blur-sm shadow-sm h-20 px-24;
+        @apply w-full flex items-center justify-between bg-white/10 backdrop-blur-sm shadow-xs h-20 px-24;
     }
 
     .navbar-link {

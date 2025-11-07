@@ -1,10 +1,10 @@
 ---
 import { getCollection } from 'astro:content';
-import { BadgeList, LinkButton, Section, HorizontalSpacer, Badge } from "../";
+import { BadgeList, LinkButton, Section, VerticalSpacer, Badge } from "../";
 import type { ExperimentRole } from '@schemas/ExperimentSchema';
 import Logo from '@assets/svg/case_of_studies.svg';
 import { section_experiments } from '@content/common.json';
-import { common, section_experiences } from '@content/common.json';
+import { common, section_experiences, header } from '@content/common.json';
 
 const roleIcons: Record<ExperimentRole, string> = {
     'Author': '🧑🏻‍💻',
@@ -14,11 +14,11 @@ const roleIcons: Record<ExperimentRole, string> = {
 const experiments = await getCollection('experiments');
 ---
 
-<div class="bg-base-100 py-10" id={common.main_sections[1].anchorId}>
+<div class="bg-base-100 py-10" id={header.main_sections[1].anchorId}>
     <br />
     <Section headingTitle={section_experiments.title} subtitle={section_experiments.subtitle} class="container mx-auto">
         <Logo slot="beforeHeading" width={96} height={96} />
-        <HorizontalSpacer />
+        <br />
         <div class="grid md:grid-cols-2 gap-8 px-5 md:px-14">
             {experiments.map(({ data: experiment }) => (
                 <div class="card">
