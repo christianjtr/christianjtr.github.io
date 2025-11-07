@@ -17,22 +17,22 @@ const pageTitle = "Christian José Torrealba Rondón";
     <body>
         <Header />
         <MainWrapper />
-        <!-- <Footer /> -->
         <div class="vertical-icon-menu-wrapper">
             <VerticalIconMenu />
         </div>
         <button 
             id="scroll-top-button" 
-            class="btn btn-xl btn-circle scroll-top-button" 
+            class="scroll-top-button" 
             aria-label="Scroll to top button"
         >
-            <span class="text-5xl">☝🏼</span>
+            ☝🏼
         </button>
+        <Footer />
     </body>
 </html>
 
 <style>
-    @reference "tailwindcss";
+    @reference "@styles/global.css";
     
     html {
         scroll-behavior: smooth;
@@ -43,34 +43,34 @@ const pageTitle = "Christian José Torrealba Rondón";
     }
 
     .scroll-top-button {
-        @apply hidden fixed justify-center items-center w-20 h-20 bottom-10 right-12 z-1 focus:outline-none;
+        @apply btn btn-xl btn-circle text-5xl border-0 hidden fixed justify-center items-center w-20 h-20 bottom-24 right-5 z-1 focus:outline-none;
         background: var(--color-vibrant-pink);
     }
 </style>
 
 <script>
-      window.onscroll = function() { scroll(); };
+    window.onscroll = function() { scroll(); };
       
-      const scrollDownUntil = 1000;
+    const scrollDownUntil = 1000;
       
-      const scrollToTopButton = document.getElementById("scroll-top-button");
-      scrollToTopButton?.addEventListener("click", () => {
+    const scrollToTopButton = document.getElementById("scroll-top-button");
+    scrollToTopButton?.addEventListener("click", () => {
         goTotop();
-      });
+    });
       
-      function removeAnchors() {
+    function removeAnchors() {
         window.history.replaceState({}, "", window.location.href.split("#")[0]);
-      }
+    }
 
-      function scroll() {
+    function scroll() {
         const validation = document.body.scrollTop > scrollDownUntil || document.documentElement.scrollTop > scrollDownUntil;
         scrollToTopButton!.style.display = validation ? "flex" : "none";
-      }
+    }
 
-      function goTotop() {
+    function goTotop() {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
         removeAnchors();
-      }
+    }
 </script>
  
