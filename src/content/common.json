@@ -12,7 +12,9 @@
         "key_areas": "Key areas",
         "key_contribuitions": "Key contribuitions",
         "ongoing": "Ongoing",
-        "cannot_load_content": "Content could not be loaded",
+        "cannot_load_content": "Content could not be loaded"
+    },
+    "header": {
         "languages_title": "Languages",
         "languages": ["English", "French", "Spanish"],
         "main_sections": [
@@ -22,7 +24,7 @@
             },
             {
                 "anchorId": "case_of_studies",
-                "label": "Case of Studies"
+                "label": "Case of Studies and Works"
             },
             {
                 "anchorId": "background",
@@ -30,9 +32,14 @@
             }
         ]
     },
+    "footer": {
+        "powered_and_themed_by": "Powered and themed by",
+        "assets": "Assets"
+    },
     "section_about": {
         "greeting": "Hi there folks, I am",
-        "my_name": "Christian José <br>Torrealba Rondón<span class='text-accent'>.</span>",
+        "my_name": "Christian José Torrealba Rondón<span class='text-accent text-3xl'>.</span>",
+        "my_name_template": "Christian José <br>Torrealba Rondón<span class='text-accent'>.</span>",
         "about_me": "I define myself as a generalist professional interested in different disciplines that accelerate product delivery.",
         "summary": "Driving impact through user-centric solutions, built on a foundation of Systems Engineering and Design Thinking.",
         "hobbies_title": "Hobbies",
@@ -165,16 +172,23 @@
         "subtitle": "Presented project work at multiple international conferences"
     },
     "section_experiments": {
-        "title": "Case of Studies and Projects",
+        "title": "Case of Studies and Works",
         "subtitle": "A curated collection of some of my projects and works"
     },
     "section_experiences": {
         "title": "Background",
         "subtitle": "A comprehensive look at my professional growth and key accomplishments across different countries",
-        "collaborated_with": "Collaborated with peers from",
+        "collaborated_with": "Collaborated with peers from several regions and countries",
         "companies_across_regions": "Worked across different markets",
-        "regions": ["EMEA", "NAMER", "LATAM"],
-        "countries": ["Venezuela", "Argentina", "Spain", "France", "UK", "USA"],
+        "countries": ["Venezuela", "Argentina", "Spain"],
+        "full_countries": [
+            "Venezuela",
+            "Argentina",
+            "Spain",
+            "France",
+            "United Kingdom",
+            "United States of America"
+        ],
         "key_areas": [
             "Product Engineering",
             "Software Development",
