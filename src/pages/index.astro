@@ -2,6 +2,7 @@
 import "@styles/global.css";
 import { Header, Footer, MainWrapper } from "@layouts";
 import { VerticalIconMenu } from "@components";
+import { OpenGraph } from "@components/sections";
 
 const pageTitle = "Christian José Torrealba Rondón";
 ---
@@ -12,6 +13,7 @@ const pageTitle = "Christian José Torrealba Rondón";
         <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
+        <OpenGraph />
         <title>{pageTitle}</title>
     </head>
     <body>
