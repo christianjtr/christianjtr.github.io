@@ -1,15 +1,26 @@
 ---
-import { getCollection } from 'astro:content';
-import { LinkButton, Section, VerticalSpacer, BadgeList, Badge } from "../";
+import { getCollection, getEntry } from 'astro:content';
+
+import type { ContentDataEntryType } from '@app-types/Content';
+import type { Project } from '@schemas/ProjectSchema';
+import type { AboutMeData } from '@schemas/AboutMeSchema';
+import { CONTENT } from '@app-types/Content';
+import { LinkButton, Section, BadgeList, Badge } from "../";
 import Logo from '@assets/svg/projects.svg';
 import PinIcon from '@assets/svg/pin.svg';
 import PenIcon from '@assets/svg/pen.svg';
 import MonitorIcon from '@assets/svg/monitor.svg';
 import BookIcon from '@assets/svg/book.svg';
-import type { Project } from '@schemas/ProjectSchema';
-import { section_projects, common, header } from '@content/common.json';
 
-const projects = await getCollection('projects');
+const { lang } = Astro.params;
+
+const [commonData, [ projectData ]] = await Promise.all([
+    await getEntry(lang as ContentDataEntryType, `${lang}/${CONTENT.COMMON}`),
+    await getCollection(lang as ContentDataEntryType, (collection) => collection.id === `${lang}/${CONTENT.PROJECTS}`)
+]);
+
+const { section_projects, common, header } = (commonData?.data as AboutMeData) || {};
+const { data: projects } = projectData;
 ---
 
 <div class="bg-primary/5 py-10" id={header.main_sections[0].anchorId}>
@@ -18,7 +29,7 @@ const projects = await getCollection('projects');
         <Logo slot="beforeHeading" width={96} height={96} />
         <br />
         <div class="mx-auto px-5 md:px-14">
-            {projects.map(({ data: project }: { data: Project }, index) => (
+            {projects.map((project: Project, index: number) => (
                 <div class="collapse collapse-arrow" tabindex={index + 1}>
                     <input type="radio" name="project" aria-hidden="true" />
                     <div class="collapse-title">
@@ -90,7 +101,9 @@ const projects = await getCollection('projects');
                             </div>
                         </div>
                         <div class="flex justify-start md:justify-end mt-5">
-                            <LinkButton href={project.url} target="_blank" rel="noopener noreferrer" displayDefaultIcon>View more</LinkButton>
+                            <LinkButton href={project.url} target="_blank" rel="noopener noreferrer" displayDefaultIcon>
+                                {common.view_more}
+                            </LinkButton>
                         </div>
                     </div>
                 </div>    
@@ -100,10 +113,10 @@ const projects = await getCollection('projects');
 </div>
 
 <style>
-    @reference "tailwindcss";
+    @reference "@styles/global.css";
 
     .collapse {
-        @apply mb-8 border border-neutral-300 p-3 bg-white;
+        @apply mb-8 border border-neutral-300 p-3 bg-primary/5;
     }
     .collapse:hover {
         @apply shadow-xl shadow-indigo-200 border-indigo-500;

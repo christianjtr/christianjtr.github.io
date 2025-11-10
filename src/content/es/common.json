@@ -1,11 +1,11 @@
 {
     "common": {
-        "overview": "Overview",
+        "overview": "Resúmen",
         "role": "Rol",
         "contribuition": "Contribución",
         "technologies": "Tecnologías",
         "subjects": "Materias",
-        "showcased_at": "Showcased at",
+        "showcased_at": "Presentado en",
         "view_more": "Ver más",
         "countries_worked_in": "Países en lo que he trabajado",
         "companies_worked_for": "Empresas en las que trabajé",
@@ -173,7 +173,7 @@
     },
     "section_projects": {
         "title": "Proyectos Destacados",
-        "subtitle": "Presented project work at multiple international conferences"
+        "subtitle": "Trabajos y proyectos presentados en múltiples conferencias internacionales."
     },
     "section_experiments": {
         "title": "Casos de Estudio y Trabajos",

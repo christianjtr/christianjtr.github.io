@@ -2,16 +2,16 @@
     {
         "id": "project-augmented-intelligence",
         "section": "projects",
-        "title": "Augmented Intelligence for Data Visualization Analytics",
-        "showcased_at": "Qlik Qonnections Global Conference",
+        "title": "Análisis Inteligente y Visualización de Datos con y Realidad Aumentada",
+        "showcased_at": "Conferencia Global Qlik Qonnections",
         "location": "Dallas TX, USA",
         "flag": "🇺🇲",
         "flag_asset": "/src/assets/svg/flag_usa.svg",
         "project_asset": "/src/assets/images/ar_project.png",
         "owner": "© SDG Group",
         "url": "https://cdn2.hubspot.net/hubfs/4041825/SDG_Group_Augmented_Intelligence.pdf",
-        "period": "May 2019",
-        "contribute_as": "Frontend Software Engineer",
+        "period": "Mayo 2019",
+        "contribute_as": "Ingeniero de Software Frontend",
         "technologies": [
             "VueJS / NodeJS",
             "Qlik Sense Hub",
@@ -19,23 +19,23 @@
             "Dialog Flow",
             "AR.js"
         ],
-        "contributions": "Collaborated with engineers to create an AR/MR user experience, through an app to visualize sales trends and a chatbot for data visualization.",
-        "overview": "Democratize data to make it more accessible to everyone, not just data experts. We are using mixed reality, augmented reality, and virtual assistants to support people in finding insights in large datasets in a more intuitive, user-friendly way.",
-        "summary": "Using mixed reality and virtual assistants to broaden data access to everyone"
+        "contributions": "Colaboré con ingenieros para crear una experiencia de usuario de RA/RM, a través de una aplicación para visualizar tendencias de ventas y un chatbot para la visualización de datos.",
+        "overview": "Democratizar los datos para hacerlos más accesibles para todos, no solo para los expertos en datos. Utilizamos realidad mixta, realidad aumentada y asistentes virtuales para ayudar a las personas a encontrar información en grandes conjuntos de datos de una manera más intuitiva y fácil de usar.",
+        "summary": "Uso de la realidad mixta y de asistentes virtuales para ampliar el acceso a los datos para todos"
     },
     {
         "id": "project-kml-visualization",
         "section": "projects",
-        "title": "Representation of geographical data related to the Venezuelan Petroleum Industry",
-        "showcased_at": "6th Congress of Cartographic Science",
+        "title": "Representación de datos geográficos relacionados con la Industria Petrolera Venezolana",
+        "showcased_at": "6to Congreso de Ciencia Cartográfica",
         "location": "Buenos Aires, Argentina",
         "flag": "🇦🇷",
         "flag_asset": "/src/assets/svg/flag_argentina.svg",
         "project_asset": "/src/assets/images/kml_project.png",
-        "owner": "© Petroleum of Venezuela (PDVSA)",
+        "owner": "© Petróleos de Venezuela (PDVSA)",
         "url": "https://www.ign.gob.ar/Novedades/FinalizoElSextoCongresoDeLaCienciaCartogr%C3%A1fica.",
-        "period": "June 2012",
-        "contribute_as": "Product Engineer (I+D+i)",
+        "period": "Junio 2012",
+        "contribute_as": "Ingeniero de Producto (I+D+i)",
         "technologies": [
             "Google Earth / Maps",
             "CESIUM 3D Geospatial",
@@ -43,23 +43,23 @@
             "ArcGIS",
             "Global Mapper"
         ],
-        "contributions": "Worked alongside geologists and geographers to improve the accessibility and usability of geographical data by automatically creating and editing KML/KMZ files.",
-        "overview": "Ease the access to complex geographical data from the Venezuelan petroleum industry (oil fields, geological formations, and infrastructure). The main challenge was processing data often stored in specialized formats; which is usually available with the usage of specific software such as ArcGIS.",
-        "summary": "Simplifying access to geographical and hydrocarbon data for the Venezuelan petroleum industry"
+        "contributions": "Trabajé junto a geólogos y geógrafos para mejorar la accesibilidad y usabilidad de los datos geográficos mediante la creación y edición automática de archivos KML/KMZ.",
+        "overview": "Facilitar el acceso a datos geográficos complejos de la industria petrolera venezolana (campos petroleros, formaciones geológicas e infraestructura). El principal desafío fue procesar datos almacenados a menudo en formatos especializados; que suelen estar disponibles con el uso de software específico como ArcGIS.",
+        "summary": "Simplificando el acceso a datos geográficos y de hidrocarburos para la industria petrolera venezolana"
     },
     {
         "id": "project-opportunity-portfolios-sipo",
         "section": "projects",
-        "title": "Integrated System of Opportunity Portfolios (SIPO)",
-        "showcased_at": "American Association of Petroleum Geologistsm (AAPG)",
+        "title": "Sistema Integrado de Portafolios de Oportunidades (SIPO)",
+        "showcased_at": "Asociación Americana de Geólogos del Petróleo (AAPG)",
         "location": "Houston TX, USA",
         "flag": "🇺🇲",
         "flag_asset": "/src/assets/svg/flag_usa.svg",
         "project_asset": "/src/assets/images/sipo_project.png",
-        "owner": "© Petroleum of Venezuela (PDVSA)",
+        "owner": "© Petróleos de Venezuela (PDVSA)",
         "url": "https://www.searchanddiscovery.com/pdfz/documents/2011/40798garcia/ndx_garcia.pdf.html",
-        "period": "August 2011",
-        "contribute_as": "Software Developer · Data Engineering",
+        "period": "Agosto 2011",
+        "contribute_as": "Desarrollador de Software · Ingeniería de Datos",
         "technologies": [
             "HTML5 / jQuery / CSS",
             "PHP",
@@ -70,8 +70,8 @@
             "Pentaho BI",
             "ArcGIS"
         ],
-        "contributions": "Partnered with a team of engineers, economists, geologists, and geographers in creating and launching a real-time web application to facilitate economic scenario analysis and effectively visualize both geoscience and financial data.",
-        "overview": "SIPO is a web-based system that provides real-time information for the oil industry. It's designed to support the decision-making by eliminating redundant data. The application uses data visualization for economic analysis and the Google Earth API for geographical / geological data.",
-        "summary": "Web-based system for the oil industry that uses real-time data to aid decision-making"
+        "contributions": "Me asocié con un equipo de ingenieros, economistas, geólogos y geógrafos para crear y lanzar una aplicación web en tiempo real para facilitar el análisis de escenarios económicos y visualizar de manera efectiva datos geocientíficos y financieros.",
+        "overview": "SIPO es un sistema basado en web que proporciona información en tiempo real para la industria petrolera. Está diseñado para apoyar la toma de decisiones eliminando datos redundantes. La aplicación utiliza visualización de datos para el análisis económico y la API de Google Earth para datos geográficos / geológicos.",
+        "summary": "Sistema basado en web para la industria petrolera que utiliza datos en tiempo real para ayudar en la toma de decisiones"
     }
 ]

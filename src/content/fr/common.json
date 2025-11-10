@@ -1,12 +1,12 @@
 {
     "common": {
-        "overview": "Overview",
+        "overview": "Aperçu",
         "role": "Role",
         "contribuition": "Contribuition",
         "technologies": "Technologies",
         "subjects": "Subjects",
-        "showcased_at": "Showcased at",
-        "view_more": "View more",
+        "showcased_at": "Présenté à",
+        "view_more": "Savoir plus",
         "countries_worked_in": "Countries worked in",
         "companies_worked_for": "Companies worked for",
         "key_areas": "Key areas",
