@@ -18,7 +18,9 @@
             "@layouts/*": ["src/layouts/*"],
             "@styles/*": ["src/styles/*"],
             "@schemas": ["src/schemas/*"],
-            "@schemas/*": ["src/schemas/*"]
+            "@schemas/*": ["src/schemas/*"],
+            "@utils": ["src/utils/*"],
+            "@utils/*": ["src/utils/*"]
         },
         "plugins": [
             {
