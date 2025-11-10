@@ -2,150 +2,150 @@
     {
         "id": "experiment-healthy-culture-engineering-teams",
         "section": "experiments",
-        "title": "Case of Study: Promoting a healthy culture within engineering teams",
-        "description": "Examine the critical role of leadership in fostering a healthy culture within engineering teams. We argue that a technology leader's role extends beyond strategy and implementation to actively promoting a positive work environment.",
+        "title": "Étude de Cas : Promouvoir une culture saine au sein des équipes d'ingénierie",
+        "description": "Examiner le rôle critique du leadership dans le développement d'une culture saine au sein des équipes d'ingénierie. Nous soutenons que le rôle d'un leader technologique s'étend au-delà de la stratégie et de la mise en œuvre pour promouvoir activement un environnement de travail positif.",
         "image": "/src/assets/images/engineer_management.jpg",
         "tags": [
-            "Engineering Management",
-            "Leadership Development",
-            "Team Dynamics"
+            "Gestion d'Ingénierie",
+            "Développement du Leadership",
+            "Dynamique d'Équipe"
         ],
         "role": "Author",
-        "type": "Leadership Essay",
-        "category": "Case of Study",
+        "type": "Essai sur le Leadership",
+        "category": "Étude de Cas",
         "url": null
     },
     {
         "id": "experiment-bi-adventure-works",
         "section": "experiments",
-        "title": "Business Intelligence Enterprise Project: Adventure Works Cycles",
-        "description": "Enhance knowledge creation by streamlining data management through the creation of ETL pipelines and data refinement processes. This enables smarter, data-driven decisions supported by a custom web application and dashboards.",
+        "title": "Projet d'Entreprise en Informatique Décisionnelle : Adventure Works Cycles",
+        "description": "Améliorer la création de connaissances en rationalisant la gestion des données grâce à la création de pipelines ETL et de processus d'affinage des données. Cela permet des décisions plus intelligentes, basées sur les données, prises en charge par une application web et des tableaux de bord personnalisés.",
         "image": "/src/assets/images/bi_project.jpg",
         "tags": [
-            "Data Analysis / Visualization",
+            "Analyse / Visualisation de Données",
             "ETL / DWH",
-            "Data-driven applications"
+            "Applications basées sur les données"
         ],
         "role": "Author",
-        "type": "Data Engineering",
-        "category": "Project",
+        "type": "Ingénierie de Données",
+        "category": "Projet",
         "url": null
     },
     {
         "id": "experiment-circuitos",
         "section": "experiments",
-        "title": "Circuitos: Discover Your Artistic Hub",
-        "description": "Discover and share your artistic and cultural interests with a like-minded community. Our platform is a go-to for anyone who wants to explore new experiences and connect with others who love art as much as they do.",
+        "title": "Circuitos : Découvrez Votre Pôle Artistique",
+        "description": "Découvrez et partagez vos intérêts artistiques et culturels avec une communauté partageant les mêmes idées. Notre plateforme est un lieu incontournable pour quiconque souhaite explorer de nouvelles expériences et se connecter avec d'autres personnes qui aiment l'art autant qu'eux.",
         "image": "/src/assets/images/circuitos.jpg",
         "tags": [
-            "Product Design and Prototyping",
-            "User Experience and Research",
-            "Design Thinking"
+            "Conception et Prototypage de Produit",
+            "Expérience Utilisateur et Recherche",
+            "Pensée Design"
         ],
         "role": "Contributor",
-        "type": "UX Design and Research Concept",
-        "category": "Project",
+        "type": "Concept UX Design et Recherche",
+        "category": "Projet",
         "url": null
     },
     {
         "id": "experiment-idea-cultural-activities-app",
         "section": "experiments",
-        "title": "Idea: Application for promoting cultural activities",
-        "description": "Platform that helps you find and participate in cultural events by creating a network tailored to your specific preferences. We make it simple to discover and connect with a community of people who share your artistic and cultural interests.",
+        "title": "Idée : Application pour la promotion d'activités culturelles",
+        "description": "Plateforme qui vous aide à trouver et participer à des événements culturels en créant un réseau adapté à vos préférences spécifiques. Nous simplifions la découverte et la connexion avec une communauté de personnes qui partagent vos intérêts artistiques et culturels.",
         "image": "/src/assets/images/design_process.jpg",
         "tags": [
             "e-Business",
-            "Business Model Canvas",
+            "Canevas de Modèle Économique",
             "Lean Startup",
-            "Digital Marketing (SEO/SEA)"
+            "Marketing Numérique (SEO/SEA)"
         ],
         "role": "Author",
-        "type": "e-Business Concept and Market Niche Analysis",
-        "category": "Project",
+        "type": "Concept e-Business et Analyse de Niche de Marché",
+        "category": "Projet",
         "url": null
     },
     {
         "id": "experiment-tv-movie-streaming-like-webapp",
         "section": "experiments",
-        "title": "The Movie and TV series database (TMDB)",
-        "description": "Full-stack web application designed for anyone who loves movies and TV shows. It provides a seamless, fast way to browse a comprehensive catalog of titles, giving you all the details you need in one place. You can explore a wide variety of content through a user-friendly interface.",
+        "title": "La base de données de films et séries TV (TMDB)",
+        "description": "Application web full-stack conçue pour tous ceux qui aiment les films et les séries TV. Elle offre un moyen rapide et fluide de parcourir un catalogue complet de titres, vous donnant tous les détails dont vous avez besoin en un seul endroit. Vous pouvez explorer une grande variété de contenu via une interface conviviale.",
         "image": "/src/assets/images/tv_app.jpg",
         "tags": [
-            "FullStack Development",
+            "Développement FullStack",
             "ReactJS / NodeJS / TypeScript",
-            "Unit / E2E Testing",
-            "CI/CD processes"
+            "Tests Unitaires / E2E",
+            "Processus CI/CD"
         ],
         "role": "Author",
-        "category": "Proof of Concept (PoC)",
-        "type": "Web app (Movie/TV Series Catalog)",
+        "category": "Preuve de Concept (PoC)",
+        "type": "Application Web (Catalogue Films/Séries TV)",
         "url": "https://christianjtr.github.io/tv_app/"
     },
     {
         "id": "experiment-erp-management-dashboard",
         "section": "experiments",
-        "title": "Management Dashboard",
-        "description": "Management dashboard designed to streamline employee data handling. It's a simple web application that provides you with complete control over your team's information. With straightforward CRUD (Create, Read, Update, Delete) functionality.",
+        "title": "Tableau de Bord de Gestion",
+        "description": "Tableau de bord de gestion conçu pour rationaliser le traitement des données des employés. C'est une application web simple qui vous donne un contrôle complet sur les informations de votre équipe. Avec une fonctionnalité CRUD (Créer, Lire, Mettre à jour, Supprimer) simple.",
         "image": "/src/assets/images/erp_management.jpg",
         "tags": [
-            "Front-end development",
+            "Développement Front-end",
             "VueJS / Vuetify / Vuex",
-            "Material Design"
+            "Conception Matérielle (Material Design)"
         ],
         "role": "Author",
-        "category": "Proof of Concept (PoC)",
-        "type": "Web app (Employee Management Dashboard)",
+        "category": "Preuve de Concept (PoC)",
+        "type": "Application Web (Tableau de Bord de Gestion des Employés)",
         "url": "https://christianjtr.github.io/manage-employees-dashboard/#/"
     },
     {
         "id": "experiment-data-visualization-error-reporting-chart",
         "section": "experiments",
-        "title": "Visualization Dashboard for Monitoring",
-        "description": "Web application designed to help you easily understand complex data. Using the powerful D3.js library, it creates interactive and visually engaging charts for a business intelligence dashboard. You can effortlessly switch between different timeframes—by day, week, month, or year—to analyze error reports and other data.",
+        "title": "Tableau de Bord de Visualisation pour la Surveillance",
+        "description": "Application web conçue pour vous aider à comprendre facilement des données complexes. Utilisant la puissante bibliothèque D3.js, elle crée des graphiques interactifs et visuellement attrayants pour un tableau de bord d'intelligence d'affaires. Vous pouvez basculer sans effort entre différentes périodes — par jour, semaine, mois ou année — pour analyser les rapports d'erreurs et autres données.",
         "image": "/src/assets/images/chart.jpg",
         "tags": [
-            "Front-end development",
+            "Développement Front-end",
             "VueJS / Vuetify / Vuex",
             "NodeJS / Express",
             "D3.js"
         ],
         "role": "Author",
-        "category": "Proof of Concept (PoC)",
-        "type": "Web app (Error Monitoring Dashboard)",
+        "category": "Preuve de Concept (PoC)",
+        "type": "Application Web (Tableau de Bord de Surveillance des Erreurs)",
         "url": null
     },
     {
         "id": "experiment-restaurant-browser-app",
         "section": "experiments",
-        "title": "Restaurant's browser",
-        "description": "Conceptual application designed to help users discover and connect with local restaurants. Built as a Progressive Web app (PWA), it gives you the convenience of a native app without requiring a download from an app store. Using your device's Geolocation API, the app instantly finds the restaurants closest to you.",
+        "title": "Navigateur de Restaurants",
+        "description": "Application conceptuelle conçue pour aider les utilisateurs à découvrir et se connecter avec des restaurants locaux. Construite comme une application Web Progressive (PWA), elle vous offre la commodité d'une application native sans nécessiter de téléchargement depuis un magasin d'applications. Utilisant l'API de géolocalisation de votre appareil, l'application trouve instantanément les restaurants les plus proches de vous.",
         "image": "/src/assets/images/restaurant_browser.jpg",
         "tags": [
-            "Front-end development",
+            "Développement Front-end",
             "ReactJS / TypeScript / Vite",
             "Daisy UI / Tailwind CCS",
-            "Geolocation API"
+            "API de Géolocalisation"
         ],
         "role": "Author",
-        "category": "Proof of Concept (PoC)",
-        "type": "Web app (Restaurants application)",
+        "category": "Preuve de Concept (PoC)",
+        "type": "Application Web (Application de Restaurants)",
         "url": "https://christianjtr.github.io/restaurant-browser-app/"
     },
     {
         "id": "experiment-pokedex-pwa-application",
         "section": "experiments",
-        "title": "Pokédex: Gotta Catch 'Em All",
-        "description": "Progressive web application (PWA) built under Svelte, a modern JavaScript framework. It leverages the Pokémon API to provide a comprehensive and engaging Pokédex experience, data persistence with LocalStorage, the SpeechSynthesis, and Plotly charts.",
+        "title": "Pokédex : Attrapez-les Tous",
+        "description": "Application web progressive (PWA) construite avec Svelte, un framework JavaScript moderne. Elle utilise l'API Pokémon pour offrir une expérience Pokédex complète et engageante, la persistance des données avec LocalStorage, la SpeechSynthesis et les graphiques Plotly.",
         "image": "/src/assets/images/pokedex.jpg",
         "tags": [
-            "Front-end development",
+            "Développement Front-end",
             "Svelte / Vite+PWA",
-            "SpeechSynthesis API",
-            "Plotly Graphing Library"
+            "API SpeechSynthesis",
+            "Bibliothèque Graphique Plotly"
         ],
         "role": "Author",
-        "category": "Proof of Concept (PoC)",
-        "type": "Web app (Pokémon Catalog)",
+        "category": "Preuve de Concept (PoC)",
+        "type": "Application Web (Catalogue Pokémon)",
         "url": "https://christianjtr.github.io/svelte-pokedex-pwa/"
     }
 ]

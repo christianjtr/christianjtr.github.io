@@ -12,7 +12,9 @@
         "key_areas": "Key areas",
         "key_contribuitions": "Key contribuitions",
         "ongoing": "Ongoing",
-        "cannot_load_content": "Content could not be loaded"
+        "cannot_load_content": "Content could not be loaded",
+        "author": "Author",
+        "contributor": "Contributor"
     },
     "header": {
         "languages_title": "Languages",

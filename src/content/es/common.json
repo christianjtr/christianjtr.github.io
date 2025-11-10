@@ -12,7 +12,9 @@
         "key_areas": "Key areas",
         "key_contribuitions": "Key contribuitions",
         "ongoing": "Presente",
-        "cannot_load_content": "Contenido no puede ser cargado"
+        "cannot_load_content": "Contenido no puede ser cargado",
+        "author": "Autor",
+        "contributor": "Colaborador"
     },
     "header": {
         "languages_title": "Idiomas",
@@ -177,7 +179,7 @@
     },
     "section_experiments": {
         "title": "Casos de Estudio y Trabajos",
-        "subtitle": "A curated collection of some of my projects and works"
+        "subtitle": "Una cuidada selección de algunos de mis proyectos y pruebas de concepto"
     },
     "section_experiences": {
         "title": "Background",

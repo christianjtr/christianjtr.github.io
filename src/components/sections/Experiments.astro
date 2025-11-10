@@ -1,17 +1,27 @@
 ---
-import { getCollection } from 'astro:content';
-import { BadgeList, LinkButton, Section, VerticalSpacer, Badge } from "../";
-import type { ExperimentRole } from '@schemas/ExperimentSchema';
+import { getCollection, getEntry } from 'astro:content';
+
+import type { ContentDataEntryType } from '@app-types/Content';
+import type { AboutMeData } from '@schemas/AboutMeSchema';
+import type { Experiment, ExperimentRole } from '@schemas/ExperimentSchema';
+import { CONTENT } from '@app-types/Content';
+import { BadgeList, LinkButton, Section, Badge } from "../";
 import Logo from '@assets/svg/case_of_studies.svg';
-import { section_experiments } from '@content/common.json';
-import { common, section_experiences, header } from '@content/common.json';
 
 const roleIcons: Record<ExperimentRole, string> = {
     'Author': '🧑🏻‍💻',
     'Contributor': '🤝🏼'
 };
 
-const experiments = await getCollection('experiments');
+const { lang } = Astro.params;
+
+const [commonData, [ experimentsData ]] = await Promise.all([
+    await getEntry(lang as ContentDataEntryType, `${lang}/${CONTENT.COMMON}`),
+    await getCollection(lang as ContentDataEntryType, (collection) => collection.id === `${lang}/${CONTENT.EXPERIMENTS}`)
+]);
+
+const { section_experiments, common, header } = (commonData?.data as AboutMeData) || {};
+const { data: experiments } = experimentsData;
 ---
 
 <div class="bg-base-100 py-10" id={header.main_sections[1].anchorId}>
@@ -20,7 +30,7 @@ const experiments = await getCollection('experiments');
         <Logo slot="beforeHeading" width={96} height={96} />
         <br />
         <div class="grid md:grid-cols-2 gap-8 px-5 md:px-14">
-            {experiments.map(({ data: experiment }) => (
+            {experiments.map((experiment: Experiment) => (
                 <div class="card">
                     <figure>
                         <img src={experiment.image} alt={experiment.title} aria-label={experiment.title} />
@@ -33,7 +43,12 @@ const experiments = await getCollection('experiments');
                         <h2 class="card-title">{experiment.title}</h2>
                         <p class="card-pre-content-wrapper"> 
                             <span class="card-text-info">
-                                <font class="text-2xl">{roleIcons[experiment.role as ExperimentRole]}</font> {experiment.type} · {experiment.role}
+                                <font class="text-2xl">{roleIcons[experiment.role as ExperimentRole]}</font>
+                                {experiment.type} · 
+                                <font>
+                                    {experiment.role === "Author" && `${common.author}`}
+                                    {experiment.role === "Contributor" && `${common.contributor}`}   
+                                </font>
                             </span>
                         </p>
                         <p class="card-text-content">{experiment.description}</p>

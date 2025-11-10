@@ -20,7 +20,9 @@ const CommonTextSchema = z.object({
     key_areas: z.string(),
     key_contribuitions: z.string(),
     ongoing: z.string(),
-    cannot_load_content: z.string()
+    cannot_load_content: z.string(),
+    author: z.string(),
+    contributor: z.string(),
 });
 
 const HeaderSchema = z.object({
