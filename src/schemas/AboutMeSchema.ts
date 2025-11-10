@@ -12,6 +12,7 @@ const CommonTextSchema = z.object({
     role: z.string(),
     contribuition: z.string(),
     technologies: z.string(),
+    subjects: z.string(),
     showcased_at: z.string(),
     view_more: z.string(),
     countries_worked_in: z.string(),
@@ -22,24 +23,48 @@ const CommonTextSchema = z.object({
     cannot_load_content: z.string()
 });
 
-const SectionExperiencesSchema = z.object({
-    ...BaseSectionSchema.shape,
+const HeaderSchema = z.object({
+    languages_title: z.string(),
+    languages: z.array(z.string()),
+    main_sections: z.array(z.object({
+        anchorId: z.string(),
+        label: z.string()
+    }))
+});
+
+const FooterSchema = z.object({
+    powered_and_themed_by: z.string(),
+    assets: z.string(),
+});
+
+const SectionCredentialSchema = BaseSectionSchema.extend({});
+const SectionProjectsSchema = BaseSectionSchema.extend({});
+const SectionExperimentsSchema = BaseSectionSchema.extend({});
+
+const SectionExperiencesSchema = BaseSectionSchema.extend({
     collaborated_with: z.string(),
     companies_across_regions: z.string(),
-    regions: z.array(z.string()),
-    key_areas: z.array(z.string())
+    countries: z.array(z.string()),
+    key_areas: z.array(z.string()),
+    full_countries: z.array(z.string()),
+    key_studies: z.array(z.string()),
 });
 
-const SectionCredentialSchema = z.object({
-    ...BaseSectionSchema.shape,
+const SectionStudiesSchema = BaseSectionSchema.extend({
+    key_subjects: z.array(z.string()),
 });
 
-const SectionProjectsSchema = z.object({
-    ...BaseSectionSchema.shape,
-});
-
-const SectionExperimentsSchema = z.object({
-    ...BaseSectionSchema.shape,
+const MembershipSchema = z.object({
+    id: z.string(),
+    type: z.string(),
+    organization: z.string(),
+    imageURL: z.string(),
+    degree: z.string().nullable(),
+    showMembershipId: z.boolean(),
+    member_no: z.string(),
+    showURL: z.boolean(),
+    url: z.string().url().nullable(),
+    display: z.boolean(),
 });
 
 const SectionAboutSchema = z.object({
@@ -53,21 +78,27 @@ const SectionAboutSchema = z.object({
     v_shaped_profile: z.string(),
     v_shaped_explanation: z.string(),
     language_tip: z.string(),
+    linkedInURL: z.string().url(),
+    githubURL: z.string().url(),
+    avatar_messages: z.array(z.string()),
     languages: z.array(LanguageSchema),
     expertise: z.object({
         title: z.string(),
         subjects: z.array(SubjectSchema)
     }),
-    linkedInURL: z.string(),
-    githubURL: z.string(),
-    avatar_messages: z.array(z.string()),
+    memberships: z.array(MembershipSchema),
+}).extend(BaseSectionSchema.shape);
+
+export const AboutMeSchema = z.object({
+    common: CommonTextSchema,
+    header: HeaderSchema,
+    footer: FooterSchema,
+    section_about: SectionAboutSchema,
+    section_credentials: SectionCredentialSchema,
+    section_projects: SectionProjectsSchema,
+    section_experiments: SectionExperimentsSchema,
+    section_experiences: SectionExperiencesSchema,
+    section_studies: SectionStudiesSchema,
 });
 
-export {
-    CommonTextSchema,
-    SectionExperiencesSchema,
-    SectionCredentialSchema,
-    SectionProjectsSchema,
-    SectionExperimentsSchema,
-    SectionAboutSchema
-};
+export type AboutMeData = z.infer<typeof AboutMeSchema>;

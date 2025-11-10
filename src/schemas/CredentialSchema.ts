@@ -22,10 +22,10 @@ const CertificationSchema = z.object({
     display: z.boolean(),
 });
 
-export const CrendentialSchema = z.object({
+export const CredentialSchema = z.object({
     credly_credentials: z.array(CredlyCredentialSchema),
     certifications: z.array(CertificationSchema),
 });
 
 export type Category = typeof category[number];
-export type Credentials = z.infer<typeof CrendentialSchema>;
+export type Credentials = z.infer<typeof CredentialSchema>;

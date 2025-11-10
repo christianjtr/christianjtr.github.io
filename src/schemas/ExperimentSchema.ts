@@ -18,3 +18,5 @@ export const ExperimentSchema = z.object({
     type: z.string(),
     url: z.string().url().nullable(),
 });
+
+export type Experiment = z.infer<typeof ExperimentSchema>;

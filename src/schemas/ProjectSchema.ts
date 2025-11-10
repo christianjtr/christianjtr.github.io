@@ -8,7 +8,7 @@ export const ProjectSchema = z.object({
     flag_asset: z.string(),
     project_asset: z.string(),
     owner: z.string(),
-    url: z.string().url(),
+    url: z.string().url().nullable().optional(),
     period: z.string(),
     location: z.string(),
     contribute_as: z.string(),

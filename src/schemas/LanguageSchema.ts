@@ -1,6 +1,6 @@
 import { z } from 'astro:content';
 
-const LanguageSchema = z.object({
+export const LanguageSchema = z.object({
     id: z.string(),
     emoji: z.string(),
     name: z.string(),
@@ -8,4 +8,4 @@ const LanguageSchema = z.object({
     value: z.number().min(0)
 });
 
-export { LanguageSchema };
+export type Language = z.infer<typeof LanguageSchema>;
