@@ -1,9 +1,17 @@
 ---
-import LanguageIcon from "@assets/svg/language.svg";
-import SunIcon from "@assets/svg/sun.svg";
-import MoonIcon from "@assets/svg/moon.svg";
-import { header } from "@content/common.json";
+import { getEntry } from 'astro:content';
 
+import type { ContentDataEntryType } from '@app-types/Content';
+import type { AboutMeData } from '@schemas/AboutMeSchema';
+import { CONTENT } from '@app-types/Content';
+import LanguageIcon from '@assets/svg/language.svg';
+import SunIcon from '@assets/svg/sun.svg';
+import MoonIcon from '@assets/svg/moon.svg';
+
+const { lang } = Astro.params;
+
+const entry = await getEntry(lang as ContentDataEntryType, `${lang}/${CONTENT.COMMON}`);
+const { header } = (entry?.data as AboutMeData) || {};
 ---
 
 <header>
@@ -11,11 +19,11 @@ import { header } from "@content/common.json";
         <div class="navbar">
             <div class="navbar-start">
                 <a class="btn btn-link" href="/">
-                    <img src="/src/assets/brand_logo.png" width="50px" height="50px" alt="Brand logo" aria-label="Brand logo" />
+                    <img src="/src/assets/brand_logo.png" width="50" height="50" alt="Brand logo" aria-label="Brand logo" />
                 </a>
             </div>
             <div class="navbar-center gap-20">
-                {header.main_sections.map(section => (
+                {header.main_sections.map((section: any) => (
                     <a 
                         role="button"
                         class="navbar-link hover:text-primary" 
@@ -35,8 +43,8 @@ import { header } from "@content/common.json";
                     >
                         <LanguageIcon class="h-6 w-6" />
                     </div>
-                    <ul tabindex="0" class="menu dropdown-content bg-base-300 rounded-box dropdown-menu-content">
-                        {header.languages.map(languange => (
+                    <ul tabindex="0" class="dropdown-content menu dropdown-menu-content">
+                        {header.languages.map((languange: any) => (
                             <li><a>{languange}</a></li>
                         ))}
                     </ul>
@@ -54,7 +62,7 @@ import { header } from "@content/common.json";
 </header>
 
 <style>
-    @reference "tailwindcss";
+   @reference "@styles/global.css";
 
     header {
         @apply sticky top-0 z-50 transition-all duration-300;
@@ -67,7 +75,8 @@ import { header } from "@content/common.json";
     .navbar-link {
         @apply text-xl no-underline font-semibold;
     }
+
     .dropdown-menu-content {
-        @apply z-1 mt-1 p-2 shadow-sm;
+        @apply bg-base-300 rounded-box z-1 mt-1 p-2 shadow-sm;
     }
 </style>

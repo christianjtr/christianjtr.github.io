@@ -1,10 +1,18 @@
 ---
-import AstroIcon from "@assets/svg/astro.svg";
-import DaisyUIIcon from "@assets/svg/daisyui.svg";
-import { section_about, footer } from "@content/common.json";
+import { getEntry } from 'astro:content';
 
-const copyrights = `Copyright © ${new Date().getFullYear()}`;
+import type { ContentDataEntryType } from '@app-types/Content';
+import type { AboutMeData } from '@schemas/AboutMeSchema';
+import { CONTENT } from '@app-types/Content';
+import AstroIcon from '@assets/svg/astro.svg';
+import DaisyUIIcon from '@assets/svg/daisyui.svg';
 
+const { lang } = Astro.params;
+
+const entry = await getEntry(lang as ContentDataEntryType, `${lang}/${CONTENT.COMMON}`);
+const { section_about, footer } = (entry?.data as AboutMeData) || {};
+
+const copyrights = `Copyrights © ${new Date().getFullYear()}`;
 ---
 
 <footer>

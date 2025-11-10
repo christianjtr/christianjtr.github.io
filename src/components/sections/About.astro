@@ -1,10 +1,19 @@
 ---
+import { getEntry } from 'astro:content';
+
+import type { ContentDataEntryType } from '@app-types/Content';
+import type { AboutMeData } from '@schemas/AboutMeSchema';
+import { CONTENT } from '@app-types/Content';
 import { Credentials } from '.';
-import { section_about } from '@content/common.json';
 import { VerticalSpacer, BadgeList } from "../";
 import RocketIcon from '@assets/svg/rocket.svg';
 import MagicStickIcon from '@assets/svg/magic_stick.svg';
 import CodeFileIcon from '@assets/svg/code_file.svg';
+
+const { lang } = Astro.params;
+
+const entry = await getEntry(lang as ContentDataEntryType, `${lang}/${CONTENT.COMMON}`);
+const { section_about } = (entry?.data as AboutMeData) || {};
 ---
 
 <div class="container mx-auto px-5 mt-10">
@@ -26,7 +35,7 @@ import CodeFileIcon from '@assets/svg/code_file.svg';
                     <div class="chat-bubble">
                         <div class="text-slider-mask">
                             <div class="text-slider">
-                                {section_about.avatar_messages.map(message => (
+                                {section_about.avatar_messages.map((message: string) => (
                                     <p class="no-select">{message}</p>
                                 ))}
                                 <p>{section_about.avatar_messages[0]}</p>
@@ -45,7 +54,7 @@ import CodeFileIcon from '@assets/svg/code_file.svg';
         </div>
         <div class="col-span-6 flex items-center">
             <div class="stats stats-vertical md:stats-horizontal w-full">
-                {section_about.languages.map(language => (
+                {section_about.languages.map((language: any) => (
                     <div class="stat space-y-1">
                         <div class="stat-figure text-4xl">{language.emoji}</div>
                         <div class="stat-value font-semibold text-xl">{language.name}</div>
@@ -82,8 +91,8 @@ import CodeFileIcon from '@assets/svg/code_file.svg';
         {section_about.expertise.subjects.map((subject) => (
             <div class="col-span-1 md:col-span-2">
                 <div class="group flex h-full w-full">
-                    <div class="card-informative border-neutral-300 transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                        <div class="[backface-visibility:hidden]">
+                    <div class="card-informative border-neutral-300 transition-all duration-500 transform-3d group-hover:transform-[rotateY(180deg)]">
+                        <div class="backface-hidden">
                             <div class="bg-primary/5 w-fit rounded-full p-3">
                                 {subject.category === "product" && <RocketIcon width={42} height={42} />}
                                 {subject.category === "coding" && <CodeFileIcon width={42} height={42} />}
@@ -96,7 +105,7 @@ import CodeFileIcon from '@assets/svg/code_file.svg';
                                 ))}
                             </ul>
                         </div>
-                        <div class="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] p-5 flex items-center">
+                        <div class="absolute inset-0 transform-[rotateY(180deg)] backface-hidden p-5 flex items-center">
                             <BadgeList items={subject.tools} badgeClass="badge-sm badge-secondary" />
                         </div>
                     </div>
@@ -110,10 +119,10 @@ import CodeFileIcon from '@assets/svg/code_file.svg';
 </div>
 
 <style>
-    @reference "tailwindcss";
+    @reference "@styles/global.css";
     
     .card-informative {
-        @apply border-1 p-5 rounded-lg;
+        @apply border p-5 rounded-lg flex w-full;
     }
 
     .card-informative:hover {
