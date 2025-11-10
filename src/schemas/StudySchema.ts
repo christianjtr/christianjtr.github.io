@@ -14,7 +14,8 @@ export const StudySchema = z.object({
     location: z.string(),
     flag_asset: z.string(),
     topics: z.array(z.string()),
-    subject: z.string()
+    subject: z.string(),
+    section: z.literal('studies')
 });
 
 export type Study = z.infer<typeof StudySchema> & {

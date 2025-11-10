@@ -16,6 +16,7 @@ export const ProjectSchema = z.object({
     overview: z.string(),
     summary: z.string(),
     technologies: z.array(z.string()),
+    section: z.literal('projects')
 });
 
 export type Project = z.infer<typeof ProjectSchema>;

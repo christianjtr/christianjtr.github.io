@@ -17,6 +17,7 @@ export const ExperimentSchema = z.object({
     category: z.string(),
     type: z.string(),
     url: z.string().url().nullable(),
+    section: z.literal('experiments')
 });
 
 export type Experiment = z.infer<typeof ExperimentSchema>;

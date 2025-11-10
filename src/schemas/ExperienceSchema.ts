@@ -14,7 +14,8 @@ export const ExperienceSchema = z.object({
     isOngoing: z.boolean(),
     description: z.string(),
     contribuitions: z.array(z.string()),
-    technologies: z.array(z.string())
+    technologies: z.array(z.string()),
+    section: z.literal('experiences')
 });
 
 export type Experience = z.infer<typeof ExperienceSchema> & {
