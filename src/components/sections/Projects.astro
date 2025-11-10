@@ -49,7 +49,7 @@ const { data: projects } = projectData;
                     <div class="collapse-content">
                         <br />
                         <div class="grid md:grid-cols-5 gap-8">
-                            <div class="md:col-span-3 col-span-full">
+                            <div class="md:col-span-2 col-span-full">
                                 <ul class="list">
                                     <li class="list-row hover:bg-primary/5">
                                         <BookIcon width={32} height={32} />
@@ -67,17 +67,9 @@ const { data: projects } = projectData;
                                             <p>{project.contributions}</p>
                                         </div>
                                     </li>
-                                    <li class="list-row hover:bg-primary/5">
-                                        <MonitorIcon width={32} height={32} />
-                                        <div class="list-col-grow">
-                                            <span class="pre-content-title">{common.technologies}</span>
-                                            <br />
-                                            <BadgeList items={project.technologies} />
-                                        </div>
-                                    </li>
                                 </ul>
                             </div>
-                            <div class="md:col-span-2 col-span-full">
+                            <div class="md:col-span-3 col-span-full">
                                 <figure>
                                     <img src={project.project_asset} alt={project.title} />
                                 </figure>
@@ -95,6 +87,14 @@ const { data: projects } = projectData;
                                                     <Badge class="badge-warning badge-sm uppercase">{project.period}</Badge>
                                                 </p>
                                             </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-row hover:bg-primary/5">
+                                        <MonitorIcon width={32} height={32} />
+                                        <div class="list-col-grow">
+                                            <span class="pre-content-title">{common.technologies}</span>
+                                            <br />
+                                            <BadgeList items={project.technologies} />
                                         </div>
                                     </li>
                                 </ul>

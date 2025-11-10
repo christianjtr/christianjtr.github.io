@@ -56,8 +56,16 @@ const pageTitle = "Christian José Torrealba Rondón";
     }
 
     .scroll-top-button {
-        @apply btn btn-xl btn-circle text-5xl border-0 hidden fixed justify-center items-center w-20 h-20 bottom-24 right-5 z-1 focus:outline-none;
+        @apply btn btn-xl btn-circle text-5xl border-0 hidden fixed justify-center items-center w-20 h-20 bottom-24 right-5 z-1 rounded-full;
         background: var(--color-vibrant-pink);
+    }
+
+    .scroll-top-button:hover {
+        filter: contrast(150%);
+    }
+
+    .scroll-top-button:focus {
+        @apply outline-none;
     }
 </style>
 
