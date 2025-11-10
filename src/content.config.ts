@@ -1,66 +1,36 @@
-import { defineCollection } from 'astro:content';
-import { file } from 'astro/loaders';
+import { defineCollection, z, type BaseSchema } from 'astro:content';
+import { glob } from 'astro/loaders';
+import type { CollectionConfig } from 'astro/content/config';
+
+import { i18nLocalesConfig } from 'astro.config.mjs';
+
+import { AboutMeSchema } from './schemas/AboutMeSchema';
+import { CredentialSchema } from './schemas/CredentialSchema';
 import { ProjectSchema } from './schemas/ProjectSchema';
 import { ExperienceSchema } from './schemas/ExperienceSchema';
 import { StudySchema } from './schemas/StudySchema';
 import { ExperimentSchema } from './schemas/ExperimentSchema';
 
-// const about = defineCollection({
-//     loader: file("./src/content/about.json"),
-//     schema: z.object({
-//         fullName: z.string(),
-//         profession: z.string(),
-//         linkedInURL: z.string().url(),
-//         githubURL: z.string().url(),
-//         hobbies: z.string(),
-//         introduction: z.object({
-//             greetings: z.string(),
-//             presentation: z.string(),
-//             about: z.string(),
-//         }),
-//         languages: z.array(z.object({
-//             id: z.string(),
-//             emoji: z.string(),
-//             language: z.string(),
-//             proficiency: z.string(),
-//             proficiencyValue: z.number().int().min(0).max(100),
-//         })),
-//         knowledge: z.array(z.string()),
-//         aptitudes: z.array(z.string()),
-//         tech_knowledge: z.array(z.string()),
-//         memberships: z.array(z.object({
-//             id: z.string(),
-//             type: z.string(),
-//             organization: z.string(),
-//             imageURL: z.string().optional(),
-//             degree: z.string().optional(),
-//             showMembershipId: z.boolean(),
-//             member_no: z.string().optional(),
-//             showURL: z.boolean(),
-//             url: z.string().url().optional(),
-//             display: z.boolean(),
-//         })),
-//     }),
-// });
+import type { ContentDataEntryType } from './types/Content';
 
-const projects = defineCollection({
-    loader: file("./src/content/projects.json"),
-    schema: ProjectSchema,
-});
+const { locales } = i18nLocalesConfig;
 
-const experiences = defineCollection({
-    loader: file("./src/content/experiences.json"),
-    schema: ExperienceSchema,
-});
+const schema = z.union([
+    AboutMeSchema,
+    CredentialSchema,
+    z.array(ProjectSchema),
+    z.array(ExperienceSchema),
+    z.array(StudySchema),
+    z.array(ExperimentSchema),
+]);
 
-const studies = defineCollection({
-    loader: file("./src/content/studies.json"),
-    schema: StudySchema,
-});
-
-const experiments = defineCollection({
-    loader: file("./src/content/experiments.json"),
-    schema: ExperimentSchema,
-});
-
-export const collections = { experiences, studies, projects, experiments };
+export const collections = locales.reduce((acc, locale) => {
+    acc[locale as ContentDataEntryType] = defineCollection({
+        loader: glob({
+            base: './src/content',
+            pattern: `${locale}/*.json`
+        }),
+        schema
+    });
+    return acc;
+}, {} as Record<ContentDataEntryType, CollectionConfig<BaseSchema>>);
