@@ -1,0 +1,77 @@
+[
+    {
+        "id": "project-augmented-intelligence",
+        "section": "projects",
+        "title": "Augmented Intelligence for Data Visualization Analytics",
+        "showcased_at": "Qlik Qonnections Global Conference",
+        "location": "Dallas TX, USA",
+        "flag": "🇺🇲",
+        "flag_asset": "/src/assets/svg/flag_usa.svg",
+        "project_asset": "/src/assets/images/ar_project.png",
+        "owner": "© SDG Group",
+        "url": "https://cdn2.hubspot.net/hubfs/4041825/SDG_Group_Augmented_Intelligence.pdf",
+        "period": "May 2019",
+        "contribute_as": "Frontend Software Engineer",
+        "technologies": [
+            "VueJS / NodeJS",
+            "Qlik Sense Hub",
+            "SignalR Client",
+            "Dialog Flow",
+            "AR.js"
+        ],
+        "contributions": "Collaborated with engineers to create an AR/MR user experience, through an app to visualize sales trends and a chatbot for data visualization.",
+        "overview": "Democratize data to make it more accessible to everyone, not just data experts. We are using mixed reality, augmented reality, and virtual assistants to support people in finding insights in large datasets in a more intuitive, user-friendly way.",
+        "summary": "Using mixed reality and virtual assistants to broaden data access to everyone"
+    },
+    {
+        "id": "project-kml-visualization",
+        "section": "projects",
+        "title": "Representation of geographical data related to the Venezuelan Petroleum Industry",
+        "showcased_at": "6th Congress of Cartographic Science",
+        "location": "Buenos Aires, Argentina",
+        "flag": "🇦🇷",
+        "flag_asset": "/src/assets/svg/flag_argentina.svg",
+        "project_asset": "/src/assets/images/kml_project.png",
+        "owner": "© Petroleum of Venezuela (PDVSA)",
+        "url": "https://www.ign.gob.ar/Novedades/FinalizoElSextoCongresoDeLaCienciaCartogr%C3%A1fica.",
+        "period": "June 2012",
+        "contribute_as": "Product Engineer (I+D+i)",
+        "technologies": [
+            "Google Earth / Maps",
+            "CESIUM 3D Geospatial",
+            "KML / KMZ",
+            "ArcGIS",
+            "Global Mapper"
+        ],
+        "contributions": "Worked alongside geologists and geographers to improve the accessibility and usability of geographical data by automatically creating and editing KML/KMZ files.",
+        "overview": "Ease the access to complex geographical data from the Venezuelan petroleum industry (oil fields, geological formations, and infrastructure). The main challenge was processing data often stored in specialized formats; which is usually available with the usage of specific software such as ArcGIS.",
+        "summary": "Simplifying access to geographical and hydrocarbon data for the Venezuelan petroleum industry"
+    },
+    {
+        "id": "project-opportunity-portfolios-sipo",
+        "section": "projects",
+        "title": "Integrated System of Opportunity Portfolios (SIPO)",
+        "showcased_at": "American Association of Petroleum Geologistsm (AAPG)",
+        "location": "Houston TX, USA",
+        "flag": "🇺🇲",
+        "flag_asset": "/src/assets/svg/flag_usa.svg",
+        "project_asset": "/src/assets/images/sipo_project.png",
+        "owner": "© Petroleum of Venezuela (PDVSA)",
+        "url": "https://www.searchanddiscovery.com/pdfz/documents/2011/40798garcia/ndx_garcia.pdf.html",
+        "period": "August 2011",
+        "contribute_as": "Software Developer · Data Engineering",
+        "technologies": [
+            "HTML5 / jQuery / CSS",
+            "PHP",
+            "MySQL / PostgreSQL",
+            "HighCharts",
+            "R Statistics",
+            "ETL / DWH",
+            "Pentaho BI",
+            "ArcGIS"
+        ],
+        "contributions": "Partnered with a team of engineers, economists, geologists, and geographers in creating and launching a real-time web application to facilitate economic scenario analysis and effectively visualize both geoscience and financial data.",
+        "overview": "SIPO is a web-based system that provides real-time information for the oil industry. It's designed to support the decision-making by eliminating redundant data. The application uses data visualization for economic analysis and the Google Earth API for geographical / geological data.",
+        "summary": "Web-based system for the oil industry that uses real-time data to aid decision-making"
+    }
+]

@@ -1,0 +1,218 @@
+{
+    "common": {
+        "overview": "Overview",
+        "role": "Role",
+        "contribuition": "Contribuition",
+        "technologies": "Technologies",
+        "subjects": "Subjects",
+        "showcased_at": "Showcased at",
+        "view_more": "View more",
+        "countries_worked_in": "Countries worked in",
+        "companies_worked_for": "Companies worked for",
+        "key_areas": "Key areas",
+        "key_contribuitions": "Key contribuitions",
+        "ongoing": "Ongoing",
+        "cannot_load_content": "Content could not be loaded"
+    },
+    "header": {
+        "languages_title": "Languages",
+        "languages": ["English", "French", "Spanish"],
+        "main_sections": [
+            {
+                "anchorId": "featured_projects",
+                "label": "Featured Projects"
+            },
+            {
+                "anchorId": "case_of_studies",
+                "label": "Case of Studies and Works"
+            },
+            {
+                "anchorId": "background",
+                "label": "Background"
+            }
+        ]
+    },
+    "footer": {
+        "powered_and_themed_by": "Powered and themed",
+        "assets": "Assets"
+    },
+    "section_about": {
+        "title": "About Me",
+        "subtitle": "My Professional Profile",
+        "greeting": "Hi there folks, I am",
+        "my_name": "Christian José Torrealba Rondón<span class='text-accent text-3xl'>.</span>",
+        "my_name_template": "Christian José <br>Torrealba Rondón<span class='text-accent'>.</span>",
+        "about_me": "I define myself as a generalist professional interested in different disciplines that accelerate product delivery.",
+        "summary": "Driving impact through user-centric solutions, built on a foundation of Systems Engineering and Design Thinking.",
+        "hobbies_title": "Hobbies",
+        "hobbies": "☀️ 🏖️ 🎡 🍦 🕹️ 🏃🏻 🐶 ✈️",
+        "v_shaped_profile": "V-Shaped Profile",
+        "v_shaped_explanation": "Combines specialization in one relevant area with broad, cross-functional knowledge",
+        "language_tip": "Refining fluency and proficiency in languages",
+        "linkedInURL": "https://www.linkedin.com/in/christianjtr/",
+        "githubURL": "https://github.com/christianjtr",
+        "avatar_messages": [
+            "Hi there! Let's connect",
+            "My portfolio is just below!",
+            "So glad you stopped by!"
+        ],
+        "languages": [
+            {
+                "id": "language-1",
+                "emoji": "💃🏻",
+                "name": "Spanish",
+                "proficiency": "Native speaker",
+                "value": 100
+            },
+            {
+                "id": "language-2",
+                "emoji": "💂🏻",
+                "name": "English",
+                "proficiency": "Professional Proficiency",
+                "value": 80
+            },
+            {
+                "id": "language-3",
+                "emoji": "🥐",
+                "name": "French",
+                "proficiency": "Everyday Situational",
+                "value": 40
+            }
+        ],
+        "expertise": {
+            "title": "Areas of <br />knowledge",
+            "subjects": [
+                {
+                    "name": "Product Engineering",
+                    "category": "product",
+                    "topics": [
+                        "Agile Leadership",
+                        "Product Ownership and Ideation",
+                        "Coaching and Mentorship",
+                        "Tech Research",
+                        "Digital Marketing"
+                    ],
+                    "tools": [
+                        "Segment, Amplitude",
+                        "Google Analytics Ads",
+                        "Goole Maps, CESIUM, Mapbox",
+                        "Atlassian Suite (Jira, Confluence)",
+                        "Sketch, Figma, Zeplin",
+                        "Notion, Slack, Microsoft Teams",
+                        "GitHub, BitBucket"
+                    ]
+                },
+                {
+                    "name": "Software Development",
+                    "category": "coding",
+                    "topics": [
+                        "Web apps and Design Systems",
+                        "APIs and integrating services",
+                        "Testing and automation"
+                    ],
+                    "tools": [
+                        "JavaScript, TypeScript",
+                        "React, Vue, Svelte, Astro",
+                        "Zod, ORMs (Sequelize)",
+                        "Jest, Cypress, Web bundlers",
+                        "NodeJS, GraphQL, REST APIs",
+                        "Python, R Statistics",
+                        "MySQL, PostgreSQL, MongoDB, Redis"
+                    ]
+                },
+                {
+                    "name": "Business Intelligence",
+                    "category": "data",
+                    "topics": [
+                        "Analytical Skills",
+                        "Data Engineering and Modeling",
+                        "ETL/DWH and Data Visualization"
+                    ],
+                    "tools": [
+                        "SQL Server Analysis Services",
+                        "SQL Server Integration Services",
+                        "Relational Databases",
+                        "NoSQL",
+                        "Pentaho BI",
+                        "Tableau",
+                        "PowerBI"
+                    ]
+                }
+            ]
+        },
+        "memberships": [
+            {
+                "id": "membership-1",
+                "type": "Membership",
+                "organization": "Venezuelan College of Engineers",
+                "imageURL": "/images/colegio_ingenieros_vzla.png",
+                "degree": null,
+                "showMembershipId": true,
+                "member_no": "209752",
+                "showURL": false,
+                "url": null,
+                "display": true
+            },
+            {
+                "id": "membership-2",
+                "type": "Membership",
+                "organization": "Society of Petroleum Engineers",
+                "imageURL": "/images/spe.png",
+                "degree": null,
+                "showMembershipId": true,
+                "member_no": "4403695",
+                "showURL": false,
+                "url": null,
+                "display": false
+            }
+        ]
+    },
+    "section_credentials": {
+        "title": "Credentials and Certifications",
+        "subtitle": "Explore some of my verified credentials and certifications I can bring to the table"
+    },
+    "section_projects": {
+        "title": "Featured Projects",
+        "subtitle": "Presented project work at multiple international conferences"
+    },
+    "section_experiments": {
+        "title": "Case of Studies and Works",
+        "subtitle": "A curated collection of some of my projects and works"
+    },
+    "section_experiences": {
+        "title": "Background",
+        "subtitle": "A comprehensive look at my professional growth and key accomplishments across different countries",
+        "collaborated_with": "Collaborated with peers from several regions and countries",
+        "companies_across_regions": "Worked across different markets",
+        "countries": ["Venezuela", "Argentina", "Spain"],
+        "full_countries": [
+            "Venezuela",
+            "Argentina",
+            "Spain",
+            "France",
+            "United Kingdom",
+            "United States of America"
+        ],
+        "key_areas": [
+            "Product Engineering",
+            "Software Development",
+            "Business Intelligence"
+        ],
+        "key_studies": [
+            "Information and Communication Technologies",
+            "Tech Leadership and Strategy",
+            "Business Intelligence and Data Engineering",
+            "User Experience and Research"
+        ]
+    },
+    "section_studies": {
+        "title": "Academic Background",
+        "subtitle": "Key Areas of Study",
+        "key_subjects": [
+            "Information and Communication Technologies",
+            "Tech Leadership and Strategy",
+            "Business Intelligence and Data Engineering",
+            "User Experience and Research"
+        ]
+    }
+}

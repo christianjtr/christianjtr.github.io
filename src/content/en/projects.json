@@ -1,6 +1,7 @@
 [
     {
         "id": "project-augmented-intelligence",
+        "section": "projects",
         "title": "Augmented Intelligence for Data Visualization Analytics",
         "showcased_at": "Qlik Qonnections Global Conference",
         "location": "Dallas TX, USA",
@@ -24,6 +25,7 @@
     },
     {
         "id": "project-kml-visualization",
+        "section": "projects",
         "title": "Representation of geographical data related to the Venezuelan Petroleum Industry",
         "showcased_at": "6th Congress of Cartographic Science",
         "location": "Buenos Aires, Argentina",
@@ -47,6 +49,7 @@
     },
     {
         "id": "project-opportunity-portfolios-sipo",
+        "section": "projects",
         "title": "Integrated System of Opportunity Portfolios (SIPO)",
         "showcased_at": "American Association of Petroleum Geologistsm (AAPG)",
         "location": "Houston TX, USA",

@@ -1,0 +1,218 @@
+{
+    "common": {
+        "overview": "Overview",
+        "role": "Role",
+        "contribuition": "Contribuition",
+        "technologies": "Technologies",
+        "subjects": "Subjects",
+        "showcased_at": "Showcased at",
+        "view_more": "View more",
+        "countries_worked_in": "Countries worked in",
+        "companies_worked_for": "Companies worked for",
+        "key_areas": "Key areas",
+        "key_contribuitions": "Key contribuitions",
+        "ongoing": "Ongoing",
+        "cannot_load_content": "Content could not be loaded"
+    },
+    "header": {
+        "languages_title": "Languages",
+        "languages": ["Anglais", "Français", "Espagnol"],
+        "main_sections": [
+            {
+                "anchorId": "featured_projects",
+                "label": "Projets Phares"
+            },
+            {
+                "anchorId": "case_of_studies",
+                "label": "Études de Cas et Travaux"
+            },
+            {
+                "anchorId": "background",
+                "label": "Parcours"
+            }
+        ]
+    },
+    "footer": {
+        "powered_and_themed_by": "Développé et thématisé",
+        "assets": "Graphismes"
+    },
+    "section_about": {
+        "title": "À Propos de Moi",
+        "subtitle": "Mon Profil Professionnel",
+        "greeting": "Bonjour à tous, je suis",
+        "my_name": "Christian José Torrealba Rondón<span class='text-accent text-3xl'>.</span>",
+        "my_name_template": "Christian José <br>Torrealba Rondón<span class='text-accent'>.</span>",
+        "about_me": "Je me définis comme un professionnel généraliste intéressé par différentes disciplines qui accélèrent la livraison de produits.",
+        "summary": "Créer de l'impact grâce à des solutions centrées sur l'utilisateur, basées sur l'Ingénierie des Systèmes et le Design Thinking.",
+        "hobbies_title": "Loisirs",
+        "hobbies": "☀️ 🏖️ 🎡 🍦 🕹️ 🏃🏻 🐶 ✈️",
+        "v_shaped_profile": "Profil en V",
+        "v_shaped_explanation": "Combine la spécialisation dans un domaine pertinent avec de vastes connaissances transversales",
+        "language_tip": "Amélioration de la fluidité et de la maîtrise linguistique",
+        "linkedInURL": "https://www.linkedin.com/in/christianjtr/",
+        "githubURL": "https://github.com/christianjtr",
+        "avatar_messages": [
+            "Bonjour ! Connectons-nous",
+            "Mon portfolio est juste en dessous !",
+            "Tellement content que vous soyez passé !"
+        ],
+        "languages": [
+            {
+                "id": "language-1",
+                "emoji": "💃🏻",
+                "name": "Espagnol",
+                "proficiency": "Langue maternelle",
+                "value": 100
+            },
+            {
+                "id": "language-2",
+                "emoji": "💂🏻",
+                "name": "Anglais",
+                "proficiency": "Maîtrise professionnelle",
+                "value": 80
+            },
+            {
+                "id": "language-3",
+                "emoji": "🥐",
+                "name": "Français",
+                "proficiency": "Niveau situationnel quotidien",
+                "value": 40
+            }
+        ],
+        "expertise": {
+            "title": "Domaines de <br />Connaissance",
+            "subjects": [
+                {
+                    "name": "Ingénierie Produit",
+                    "category": "product",
+                    "topics": [
+                        "Leadership Agile",
+                        "Propriété et Idéation de Produit",
+                        "Coaching et Mentorat",
+                        "Recherche Technologique",
+                        "Marketing Numérique"
+                    ],
+                    "tools": [
+                        "Segment, Amplitude",
+                        "Google Analytics Ads",
+                        "Goole Maps, CESIUM, Mapbox",
+                        "Atlassian Suite (Jira, Confluence)",
+                        "Sketch, Figma, Zeplin",
+                        "Notion, Slack, Microsoft Teams",
+                        "GitHub, BitBucket"
+                    ]
+                },
+                {
+                    "name": "Développement Logiciel",
+                    "category": "coding",
+                    "topics": [
+                        "Applications Web et Systèmes de Conception",
+                        "APIs et intégration de services",
+                        "Tests et automatisation"
+                    ],
+                    "tools": [
+                        "JavaScript, TypeScript",
+                        "React, Vue, Svelte, Astro",
+                        "Zod, ORMs (Sequelize)",
+                        "Jest, Cypress, Web bundlers",
+                        "NodeJS, GraphQL, APIs REST",
+                        "Python, R Statistiques",
+                        "MySQL, PostgreSQL, MongoDB, Redis"
+                    ]
+                },
+                {
+                    "name": "Informatique Décisionnelle",
+                    "category": "data",
+                    "topics": [
+                        "Compétences Analytiques",
+                        "Ingénierie et Modélisation de Données",
+                        "ETL/DWH et Visualisation de Données"
+                    ],
+                    "tools": [
+                        "SQL Server Analysis Services",
+                        "SQL Server Integration Services",
+                        "Bases de Données Relationnelles",
+                        "NoSQL",
+                        "Pentaho BI",
+                        "Tableau",
+                        "PowerBI"
+                    ]
+                }
+            ]
+        },
+        "memberships": [
+            {
+                "id": "membership-1",
+                "type": "Adhésion",
+                "organization": "Collège Vénézuélien des Ingénieurs",
+                "imageURL": "/images/colegio_ingenieros_vzla.png",
+                "degree": null,
+                "showMembershipId": true,
+                "member_no": "209752",
+                "showURL": false,
+                "url": null,
+                "display": true
+            },
+            {
+                "id": "membership-2",
+                "type": "Adhésion",
+                "organization": "Société des Ingénieurs du Pétrole",
+                "imageURL": "/images/spe.png",
+                "degree": null,
+                "showMembershipId": true,
+                "member_no": "4403695",
+                "showURL": false,
+                "url": null,
+                "display": false
+            }
+        ]
+    },
+    "section_credentials": {
+        "title": "Références et Certifications",
+        "subtitle": "Découvrez quelques-unes de mes références vérifiées et certifications que je peux apporter"
+    },
+    "section_projects": {
+        "title": "Featured Projects",
+        "subtitle": "Presented project work at multiple international conferences"
+    },
+    "section_experiments": {
+        "title": "Case of Studies and Works",
+        "subtitle": "A curated collection of some of my projects and works"
+    },
+    "section_experiences": {
+        "title": "Background",
+        "subtitle": "A comprehensive look at my professional growth and key accomplishments across different countries",
+        "collaborated_with": "Collaborated with peers from several regions and countries",
+        "companies_across_regions": "Worked across different markets",
+        "countries": ["Venezuela", "Argentina", "Spain"],
+        "full_countries": [
+            "Venezuela",
+            "Argentina",
+            "Spain",
+            "France",
+            "United Kingdom",
+            "United States of America"
+        ],
+        "key_areas": [
+            "Product Engineering",
+            "Software Development",
+            "Business Intelligence"
+        ],
+        "key_studies": [
+            "Information and Communication Technologies",
+            "Tech Leadership and Strategy",
+            "Business Intelligence and Data Engineering",
+            "User Experience and Research"
+        ]
+    },
+    "section_studies": {
+        "title": "Academic Background",
+        "subtitle": "Key Areas of Study",
+        "key_subjects": [
+            "Information and Communication Technologies",
+            "Tech Leadership and Strategy",
+            "Business Intelligence and Data Engineering",
+            "User Experience and Research"
+        ]
+    }
+}

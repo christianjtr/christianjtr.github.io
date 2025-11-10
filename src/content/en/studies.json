@@ -1,6 +1,7 @@
 [
     {
         "id": "study-ctomanagement",
+        "section": "studies",
         "start_year": 2023,
         "end_year": 2024,
         "school": "Polytechnic University of Valencia",
@@ -24,6 +25,7 @@
     },
     {
         "id": "study-ub-masters",
+        "section": "studies",
         "start_year": 2019,
         "end_year": 2020,
         "school": "University of Barcelona",
@@ -46,6 +48,7 @@
     },
     {
         "id": "study-uab-bi",
+        "section": "studies",
         "start_year": 2017,
         "end_year": 2018,
         "school": "Escoles Gimbernat i Tomàs Cerdà · Autonomous University of Barcelona",
@@ -69,6 +72,7 @@
     },
     {
         "id": "study-digital-house",
+        "section": "studies",
         "start_year": 2017,
         "end_year": 2017,
         "school": "Digital House Coding School",
@@ -92,6 +96,7 @@
     },
     {
         "id": "study-unimet",
+        "section": "studies",
         "start_year": 2014,
         "end_year": 2015,
         "school": "Metropolitan University (UNIMET)",
@@ -115,6 +120,7 @@
     },
     {
         "id": "study-ucv-bi",
+        "section": "studies",
         "start_year": 2013,
         "end_year": 2014,
         "school": "Central University of Venezuela",
@@ -131,6 +137,7 @@
     },
     {
         "id": "study-unefa",
+        "section": "studies",
         "start_year": 2004,
         "end_year": 2009,
         "school": "Experimental and Polytechnic University of the Armed Forces (UNEFA)",

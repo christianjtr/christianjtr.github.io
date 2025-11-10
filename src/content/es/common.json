@@ -1,93 +1,96 @@
 {
     "common": {
         "overview": "Overview",
-        "role": "Role",
-        "contribuition": "Contribuition",
-        "technologies": "Technologies",
-        "subjects": "Subjects",
+        "role": "Rol",
+        "contribuition": "Contribución",
+        "technologies": "Tecnologías",
+        "subjects": "Materias",
         "showcased_at": "Showcased at",
-        "view_more": "View more",
-        "countries_worked_in": "Countries worked in",
-        "companies_worked_for": "Companies worked for",
+        "view_more": "Ver más",
+        "countries_worked_in": "Países en lo que he trabajado",
+        "companies_worked_for": "Empresas en las que trabajé",
         "key_areas": "Key areas",
         "key_contribuitions": "Key contribuitions",
-        "ongoing": "Ongoing",
-        "cannot_load_content": "Content could not be loaded"
+        "ongoing": "Presente",
+        "cannot_load_content": "Contenido no puede ser cargado"
     },
     "header": {
-        "languages_title": "Languages",
-        "languages": ["English", "French", "Spanish"],
+        "languages_title": "Idiomas",
+        "languages": ["Inglés", "Francés", "Castellano"],
         "main_sections": [
             {
                 "anchorId": "featured_projects",
-                "label": "Featured Projects"
+                "label": "Proyectos Destacados"
             },
             {
                 "anchorId": "case_of_studies",
-                "label": "Case of Studies and Works"
+                "label": "Casos de Estudio y Trabajos"
             },
             {
                 "anchorId": "background",
-                "label": "Background"
+                "label": "Trayectoria"
             }
         ]
     },
     "footer": {
-        "powered_and_themed_by": "Powered and themed by",
-        "assets": "Assets"
+        "powered_and_themed_by": "Desarrollado y tematizado",
+        "assets": "Recursos"
     },
     "section_about": {
-        "greeting": "Hi there folks, I am",
+        "title": "Acerca de mí",
+        "subtitle": "Mi perfil profesional",
+        "greeting": "Hola a tod@s, soy",
         "my_name": "Christian José Torrealba Rondón<span class='text-accent text-3xl'>.</span>",
         "my_name_template": "Christian José <br>Torrealba Rondón<span class='text-accent'>.</span>",
-        "about_me": "I define myself as a generalist professional interested in different disciplines that accelerate product delivery.",
-        "summary": "Driving impact through user-centric solutions, built on a foundation of Systems Engineering and Design Thinking.",
-        "hobbies_title": "Hobbies",
+        "about_me": "Me defino como un profesional generalista interesado en diferentes disciplinas que aceleran la entrega de productos.",
+        "summary": "Generando valor mediante soluciones enfocadas en el usuario, cimentadas en la Ingeniería de Sistemas y el Design Thinking.",
+        "hobbies_title": "Aficiones",
         "hobbies": "☀️ 🏖️ 🎡 🍦 🕹️ 🏃🏻 🐶 ✈️",
-        "v_shaped_profile": "V-Shaped Profile",
-        "v_shaped_explanation": "Combines specialization in one relevant area with broad, cross-functional knowledge",
-        "language_tip": "Refining fluency and proficiency in languages",
+        "v_shaped_profile": "Perfil V-Shaped",
+        "v_shaped_explanation": "Combina la especialización en un área relevante con un conocimiento amplio y multifuncional",
+        "language_tip": "Refinando la fluidez y la competencia en idiomas",
         "linkedInURL": "https://www.linkedin.com/in/christianjtr/",
         "githubURL": "https://github.com/christianjtr",
         "avatar_messages": [
-            "Hi there! Let's connect",
-            "My portfolio is just below!",
-            "So glad you stopped by!"
+            "¡Hola! Conectemos",
+            "¡Mi portafolio está debajo!",
+            "¡Me alegra que estés aquí!"
         ],
         "languages": [
             {
                 "id": "language-1",
                 "emoji": "💃🏻",
-                "name": "Spanish",
-                "proficiency": "Native speaker",
+                "name": "Castellano",
+                "proficiency": "Hablante nativo",
                 "value": 100
             },
             {
                 "id": "language-2",
                 "emoji": "💂🏻",
-                "name": "English",
-                "proficiency": "Professional Proficiency",
+                "name": "Inglés",
+                "proficiency": "Competencia profesional",
                 "value": 80
             },
             {
                 "id": "language-3",
                 "emoji": "🥐",
-                "name": "French",
-                "proficiency": "Everyday Situational",
+                "name": "Francés",
+                "proficiency": "Situacional y cotidiano",
                 "value": 40
             }
         ],
         "expertise": {
-            "title": "Areas of <br />knowledge",
+            "title": "Áreas de <br />conocimiento",
             "subjects": [
                 {
-                    "name": "Product Engineering",
+                    "name": "Ingeniería de Producto",
                     "category": "product",
                     "topics": [
-                        "Agile Leadership",
-                        "Product Ownership and Ideation",
-                        "Coaching and Mentorship",
-                        "Tech Research and Digital Marketing"
+                        "Liderazgo Ágil",
+                        "Product Ownership e Ideación",
+                        "Coaching y Mentoría",
+                        "Investigación Tecnológica",
+                        "Marketing Digital"
                     ],
                     "tools": [
                         "Segment, Amplitude",
@@ -100,12 +103,12 @@
                     ]
                 },
                 {
-                    "name": "Software Development",
+                    "name": "Desarrollo de Software",
                     "category": "coding",
                     "topics": [
-                        "Web apps and Design Systems",
-                        "APIs and integrating services",
-                        "Testing and automation"
+                        "Web apps y Diseño de Sistemas",
+                        "APIs e integración de servicios",
+                        "Pruebas y automatización"
                     ],
                     "tools": [
                         "JavaScript, TypeScript",
@@ -118,17 +121,18 @@
                     ]
                 },
                 {
-                    "name": "Business Intelligence",
+                    "name": "Inteligencia de Negocio",
                     "category": "data",
                     "topics": [
-                        "Analytical Skills",
-                        "Data Engineering and Modeling",
-                        "ETL/DWH and Data Visualization"
+                        "Habilidades analíticas",
+                        "Ingeniería y Modelado de Datos",
+                        "ETL/DWH y Visualización de Datos"
                     ],
                     "tools": [
                         "SQL Server Analysis Services",
                         "SQL Server Integration Services",
-                        "Relational Databases, NoSQL",
+                        "Bases de Datos Relacionales",
+                        "NoSQL",
                         "Pentaho BI",
                         "Tableau",
                         "PowerBI"
@@ -139,8 +143,8 @@
         "memberships": [
             {
                 "id": "membership-1",
-                "type": "Membership",
-                "organization": "Venezuelan College of Engineers",
+                "type": "Membresía",
+                "organization": "Colegio de Ingenieros de Venezuela",
                 "imageURL": "/images/colegio_ingenieros_vzla.png",
                 "degree": null,
                 "showMembershipId": true,
@@ -151,8 +155,8 @@
             },
             {
                 "id": "membership-2",
-                "type": "Membership",
-                "organization": "Society of Petroleum Engineers",
+                "type": "Membresía",
+                "organization": "Sociedad de Ingenieros Petroleros",
                 "imageURL": "/images/spe.png",
                 "degree": null,
                 "showMembershipId": true,
@@ -164,15 +168,15 @@
         ]
     },
     "section_credentials": {
-        "title": "Credentials and Certifications",
-        "subtitle": "Explore some of my verified credentials and certifications I can bring to the table"
+        "title": "Credenciales y Certificaciones",
+        "subtitle": "Explora algunas de mis credenciales y certificaciones verificadas que puedo aportar."
     },
     "section_projects": {
-        "title": "Featured Projects",
+        "title": "Proyectos Destacados",
         "subtitle": "Presented project work at multiple international conferences"
     },
     "section_experiments": {
-        "title": "Case of Studies and Works",
+        "title": "Casos de Estudio y Trabajos",
         "subtitle": "A curated collection of some of my projects and works"
     },
     "section_experiences": {
@@ -202,6 +206,8 @@
         ]
     },
     "section_studies": {
+        "title": "Academic Background",
+        "subtitle": "Key Areas of Study",
         "key_subjects": [
             "Information and Communication Technologies",
             "Tech Leadership and Strategy",
