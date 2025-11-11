@@ -30,6 +30,11 @@ const CommonTextSchema = z.object({
     timeline: z.string()
 });
 
+const OpenGraphSchema = z.object({
+    title: z.string(),
+    description: z.string()
+});
+
 const HeaderSchema = z.object({
     languages_title: z.string(),
     languages: z.array(z.object({
@@ -104,6 +109,7 @@ const SectionAboutSchema = z.object({
 export const AboutMeSchema = z.object({
     common: CommonTextSchema,
     header: HeaderSchema,
+    open_graph: OpenGraphSchema,
     footer: FooterSchema,
     section_about: SectionAboutSchema,
     section_credentials: SectionCredentialSchema,

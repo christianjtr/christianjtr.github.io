@@ -21,6 +21,10 @@
         "list": "📋 List",
         "timeline": "⏳ Timeline"
     },
+    "open_graph": {
+        "title": "Christian José Torrealba Rondón",
+        "description": "A personal website to share my background and professional experiences"
+    },
     "header": {
         "languages_title": "Languages",
         "languages": [
