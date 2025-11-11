@@ -34,7 +34,7 @@ const { header } = (entry?.data as AboutMeData) || {};
                     </a>
                 ))}
             </div>
-            <div class="navbar-end gap-1">
+            <div class="navbar-end gap-3">
                 <div class="dropdown dropdown-end">
                     <div
                         tabindex="0"
@@ -51,13 +51,11 @@ const { header } = (entry?.data as AboutMeData) || {};
                         ))}
                     </ul>
                 </div>
-                <button class="btn btn-ghost btn-circle">
-                    <label class="swap swap-rotate">
-                        <input type="checkbox" class="theme-controller" value="synthwave" />
-                        <SunIcon />
-                        <MoonIcon />
-                    </label>
-                </button>
+                <label class="swap swap-rotate">
+                    <input id="theme-controller" type="checkbox" class="theme-controller" value="synthwave" />
+                    <SunIcon />
+                    <MoonIcon />
+                </label>
             </div>
         </div>
     </div>
@@ -72,6 +70,7 @@ const { header } = (entry?.data as AboutMeData) || {};
 
     .navbar-container {
         @apply w-full flex items-center justify-between bg-white/70 backdrop-blur-sm shadow-xs h-20 px-24;
+        /* dark:bg-slate-700/70 */
     }
 
     .navbar-link {
@@ -82,3 +81,23 @@ const { header } = (entry?.data as AboutMeData) || {};
         @apply bg-base-300 rounded-box z-1 mt-1 p-2 shadow-sm;
     }
 </style>
+
+<script>
+    // import { getSystemThemePreference } from '@utils/userPreferences';
+
+    // const themeControllerSwitch = document.getElementById("theme-controller") as HTMLInputElement;
+    
+    // const preferredTheme = getSystemThemePreference();
+    // document.documentElement.setAttribute('data-theme', preferredTheme);
+    
+    // if(preferredTheme === "dark" && themeControllerSwitch.checked === false) {
+    //     themeControllerSwitch.checked = true;
+    // }
+
+    // themeControllerSwitch?.addEventListener("change", (event: Event) => {
+    //     if (event.target instanceof HTMLInputElement) {
+    //         const selectedTheme = event.target.checked ? "dark" : "light";
+    //         document.documentElement.setAttribute('data-theme', selectedTheme);
+    //     }
+    // });
+</script>

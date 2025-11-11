@@ -151,6 +151,10 @@ const { section_about } = (entry?.data as AboutMeData) || {};
         @apply leading-[1.3rem];
     }
 
+    html[data-theme="dark"] .chat-bubble {
+        @apply bg-slate-600;
+    }
+
     @keyframes slideText {
         0%, 25% { transform: translateY(0%); }
         30%, 45% { transform: translateY(-25%); }
