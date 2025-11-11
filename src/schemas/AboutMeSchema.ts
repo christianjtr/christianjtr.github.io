@@ -23,11 +23,19 @@ const CommonTextSchema = z.object({
     cannot_load_content: z.string(),
     author: z.string(),
     contributor: z.string(),
+    educational_level: z.string(),
+    formal_studies_taken: z.string(),
+    experiences: z.string(),
+    list: z.string(),
+    timeline: z.string()
 });
 
 const HeaderSchema = z.object({
     languages_title: z.string(),
-    languages: z.array(z.string()),
+    languages: z.array(z.object({
+        locale: z.string(),
+        name: z.string()
+    })),
     main_sections: z.array(z.object({
         anchorId: z.string(),
         label: z.string()
@@ -46,6 +54,7 @@ const SectionExperimentsSchema = BaseSectionSchema.extend({});
 const SectionExperiencesSchema = BaseSectionSchema.extend({
     collaborated_with: z.string(),
     companies_across_regions: z.string(),
+    companies_and_countries_lived_in: z.string(),
     countries: z.array(z.string()),
     key_areas: z.array(z.string()),
     full_countries: z.array(z.string()),
@@ -54,6 +63,7 @@ const SectionExperiencesSchema = BaseSectionSchema.extend({
 
 const SectionStudiesSchema = BaseSectionSchema.extend({
     key_subjects: z.array(z.string()),
+    educational_level: z.string()
 });
 
 const MembershipSchema = z.object({
