@@ -35,22 +35,20 @@ const { data: experiments } = experimentsData;
                     <figure>
                         <img src={experiment.image} alt={experiment.title} aria-label={experiment.title} />
                     </figure>
-                    <div class="card-body">
+                    <div class="card-body p-8">
                         <div class="card-pre-content-wrapper">
-                            <Badge class="badge-sm badge-primary">{experiment.category}</Badge>
-                            {experiment.url && <LinkButton href={experiment.url} target="_blank" rel="noreferrer" class='btn-circle' displayDefaultIcon />}
+                            <Badge class="badge-sm badge-primary uppercase">{experiment.category}</Badge>
+                            {experiment.url && <LinkButton href={experiment.url} target="_blank" rel="noopener noreferrer" class='btn-circle' displayDefaultIcon />}
                         </div>
+                        <span class="card-pre-title-text">
+                            {experiment.role === "Author" && `${common.author}`}
+                            {experiment.role === "Contributor" && `${common.contributor}`}   
+                        </span>
                         <h2 class="card-title">{experiment.title}</h2>
-                        <p class="card-pre-content-wrapper"> 
-                            <span class="card-text-info">
-                                <font class="text-2xl">{roleIcons[experiment.role as ExperimentRole]}</font>
-                                {experiment.type} · 
-                                <font>
-                                    {experiment.role === "Author" && `${common.author}`}
-                                    {experiment.role === "Contributor" && `${common.contributor}`}   
-                                </font>
-                            </span>
-                        </p>
+                        <span class="card-text-info">
+                            <font class="text-2xl">{roleIcons[experiment.role as ExperimentRole]}</font>
+                            {experiment.type}
+                        </span>
                         <p class="card-text-content">{experiment.description}</p>
                         <div class="card-actions"> 
                             <BadgeList items={experiment.tags} badgeClass="font-semibold badge-soft" />
@@ -63,35 +61,31 @@ const { data: experiments } = experimentsData;
 </div>
 
 <style>
-    @reference "tailwindcss";
+    @reference "@styles/global.css";
     
     .card {
         @apply overflow-hidden rounded-lg border border-neutral-200;
         color: var(--color-neutral-dark);
     }
-
-    .card-body {
-        @apply p-8;
-    }
-
     .card:hover {
         @apply border-indigo-400 shadow-lg shadow-indigo-200;
     }
 
     .card-pre-content-wrapper {
-        @apply flex justify-between items-center mb-2;
+        @apply flex justify-between items-center;
+    }
+
+    .card-pre-title-text {
+        @apply text-xs uppercase text-neutral-500 mt-3;
     }
 
     .card-title {
-        @apply text-2xl my-3 font-medium;
+        @apply text-2xl mb-3 font-medium;
     }
     .card-text-info {
-        @apply text-gray-400 text-sm uppercase;
+        @apply text-neutral-500 text-sm uppercase;
     }
     .card-text-content {
         @apply text-neutral-800 text-lg leading-9 mb-5;
-    }
-    .badge {
-        @apply uppercase font-semibold text-white; 
     }
 </style>

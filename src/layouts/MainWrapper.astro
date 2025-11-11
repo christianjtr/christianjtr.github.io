@@ -2,9 +2,17 @@
 import { About, Projects, ProfessionalExperiences, Experiments } from "@components/sections";
 ---
 
-<main class="flex w-full flex-col">
+<main>
     <About />
     <Projects />
     <Experiments />
     <ProfessionalExperiences /> 
 </main>
+
+<style>
+    @reference "tailwindcss";
+    
+    main {
+        @apply flex w-full flex-col;
+    }
+</style>
