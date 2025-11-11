@@ -4,15 +4,15 @@
         "section": "studies",
         "start_year": 2023,
         "end_year": 2024,
-        "school": "Polytechnic University of Valencia",
-        "degree": "Expert Diploma in Tech Management",
+        "school": "Universidad Politécnica de Valencia",
+        "degree": "Diploma de Experto en Gestión Tecnológica",
         "isOngoing": false,
-        "level": "Specialization",
-        "period": "Sep 2023 - Jun 2024",
-        "country": "Spain",
-        "location": "Valencia, Spain",
+        "level": "Especialización",
+        "period": "Sep. 2023 - Jun. 2024",
+        "country": "España",
+        "location": "Valencia, España",
         "flag_asset": "/src/assets/svg/flag_spain.svg",
-        "description": "Strategic formation focused on equipping future CTOs with the skills to successfully lead technological projects and drive innovation.",
+        "description": "Formación estratégica enfocada en equipar a futuros CTOs con las habilidades para liderar con éxito proyectos tecnológicos e impulsar la innovación.",
         "topics": [
             "Tech Leadership",
             "Agile Project Management",
@@ -21,22 +21,22 @@
             "QA and Testing",
             "DevOps"
         ],
-        "subject": "Technical Leadership"
+        "subject": "Liderazgo Técnico"
     },
     {
         "id": "study-ub-masters",
         "section": "studies",
         "start_year": 2019,
         "end_year": 2020,
-        "school": "University of Barcelona",
-        "degree": "Master in e-Business Management",
+        "school": "Universidad de Barcelona",
+        "degree": "Máster en Gestión de Negocios Electrónicos (e-Business)",
         "isOngoing": false,
-        "level": "Master Diploma",
-        "period": "Oct 2019 - Jun 2020",
-        "country": "Spain",
-        "location": "Barcelona, Spain",
+        "level": "Título de Máster",
+        "period": "Oct. 2019 - Jun. 2020",
+        "country": "España",
+        "location": "Barcelona, España",
         "flag_asset": "/src/assets/svg/flag_spain.svg",
-        "description": "Expertise in the strategic management of Internet-based businesses, with a focus on implementing robust marketing plans, enhancing customer experience, developing digital products, and optimizing e-commerce performance.",
+        "description": "Experiencia en la gestión estratégica de negocios basados en Internet, con enfoque en la implementación de planes de marketing robustos, la mejora de la experiencia del cliente, el desarrollo de productos digitales y la optimización del rendimiento del comercio electrónico.",
         "topics": [
             "Lean Startup",
             "Digital Marketing",
@@ -44,22 +44,22 @@
             "SEO · SEA · ASO",
             "StartUps"
         ],
-        "subject": "Digital Business Management and Startups"
+        "subject": "Gestión de Negocios Digitales y Startups"
     },
     {
         "id": "study-uab-bi",
         "section": "studies",
         "start_year": 2017,
         "end_year": 2018,
-        "school": "Escoles Gimbernat i Tomàs Cerdà · Autonomous University of Barcelona",
-        "degree": "Postgraduate in Business Intelligence",
+        "school": "Escoles Gimbernat i Tomàs Cerdà · Universidad Autónoma de Barcelona",
+        "degree": "Posgrado en Inteligencia de Negocios (Business Intelligence)",
         "isOngoing": false,
-        "level": "Postgraduate Diploma",
-        "period": "Nov 2017 - Jul 2018",
-        "country": "Spain",
-        "location": "Barcelona, Spain",
+        "level": "Diploma de Posgrado",
+        "period": "Nov. 2017 - Jul. 2018",
+        "country": "España",
+        "location": "Barcelona, España",
         "flag_asset": "/src/assets/svg/flag_spain.svg",
-        "description": "Focused on developing and managing business intelligence projects to drive data-informed decision-making. Proficient in a range of analytical techniques, including data mining, data visualization, machine learning, and big data analysis.",
+        "description": "Enfocado en el desarrollo y la gestión de proyectos de inteligencia de negocios para impulsar la toma de decisiones informada por datos. Competente en una variedad de técnicas analíticas, incluyendo minería de datos, visualización de datos, aprendizaje automático y análisis de Big Data.",
         "topics": [
             "Data Modeler",
             "Big Data",
@@ -68,7 +68,7 @@
             "DWH",
             "ETL"
         ],
-        "subject": "Data Engineering"
+        "subject": "Ingeniería de Datos"
     },
     {
         "id": "study-digital-house",
@@ -76,14 +76,14 @@
         "start_year": 2017,
         "end_year": 2017,
         "school": "Digital House Coding School",
-        "degree": "Diploma in UX Design and Research",
+        "degree": "Diploma en Diseño e Investigación UX",
         "isOngoing": false,
         "level": "Bootcamp",
-        "period": "Mar 2017 - Jul 2017",
+        "period": "Mar. 2017 - Jul. 2017",
         "country": "Argentina",
         "location": "Buenos Aires, Argentina",
         "flag_asset": "/src/assets/svg/flag_argentina.svg",
-        "description": "Comprehensive training in digital product development with an emphasis on user experience (UX) design.",
+        "description": "Formación integral en desarrollo de productos digitales con énfasis en el diseño de experiencia del usuario (UX).",
         "topics": [
             "Design Thinking",
             "Usability",
@@ -92,22 +92,22 @@
             "Product Design",
             "User Research"
         ],
-        "subject": "Digital Product Development and User Research"
+        "subject": "Desarrollo de Producto Digital e Investigación de Usuario"
     },
     {
         "id": "study-unimet",
         "section": "studies",
         "start_year": 2014,
         "end_year": 2015,
-        "school": "Metropolitan University (UNIMET)",
-        "degree": "Diploma in Business Management",
+        "school": "Universidad Metropolitana (UNIMET)",
+        "degree": "Diploma en Gestión Empresarial",
         "isOngoing": false,
-        "level": "Postgraduate Diploma",
-        "period": "Sep 2014 - Jul 2015",
+        "level": "Diploma de Posgrado",
+        "period": "Sep. 2014 - Jul. 2015",
         "country": "Venezuela",
         "location": "Caracas, Venezuela",
         "flag_asset": "/src/assets/svg/flag_venezuela.svg",
-        "description": "Developed a robust skillset in enterprise management, encompassing strategic planning, financial analysis, and cross-functional leadership to drive organizational growth.",
+        "description": "Desarrollo de un conjunto de habilidades robustas en gestión empresarial, abarcando la planificación estratégica, el análisis financiero y el liderazgo multifuncional para impulsar el crecimiento organizacional.",
         "topics": [
             "Leadership",
             "Coaching and Teamwork",
@@ -116,40 +116,40 @@
             "Financial Analysis",
             "Enterprise Management"
         ],
-        "subject": "Leadership, Management, and Negotiation"
+        "subject": "Liderazgo, Gestión y Negociación"
     },
     {
         "id": "study-ucv-bi",
         "section": "studies",
         "start_year": 2013,
         "end_year": 2014,
-        "school": "Central University of Venezuela",
-        "degree": "Diploma in Business Intelligence",
+        "school": "Universidad Central de Venezuela",
+        "degree": "Diploma en Inteligencia de Negocios (Business Intelligence)",
         "isOngoing": false,
-        "level": "Specialization",
-        "period": "Sep 2013 - Apr 2014",
+        "level": "Especialización",
+        "period": "Sep. 2013 - Abr. 2014",
         "country": "Venezuela",
         "location": "Caracas, Venezuela",
         "flag_asset": "/src/assets/svg/flag_venezuela.svg",
-        "description": "Applied knowledge of open-source business intelligence tools to analyze large datasets and create interactive dashboards that drove data-informed decisions.",
+        "description": "Aplicación del conocimiento de herramientas de inteligencia de negocios de código abierto para analizar grandes conjuntos de datos y crear paneles interactivos que impulsaron decisiones informadas por datos.",
         "topics": ["Data Cleansing", "ETL Design", "DWH", "Open Data Projects"],
-        "subject": "Business Intelligence"
+        "subject": "Inteligencia de Negocios (Business Intelligence)"
     },
     {
         "id": "study-unefa",
         "section": "studies",
         "start_year": 2004,
         "end_year": 2009,
-        "school": "Experimental and Polytechnic University of the Armed Forces (UNEFA)",
-        "degree": "Degree in Systems Engineering",
+        "school": "Universidad Nacional Experimental Politécnica de la Fuerza Armada (UNEFA)",
+        "degree": "Título de Ingeniería de Sistemas",
         "isOngoing": false,
-        "level": "Bachelor of Systems Engineering",
-        "period": "Sep 2004 - Sep 2009",
+        "level": "Licenciatura en Ingeniería de Sistemas",
+        "period": "Sep. 2004 - Sep. 2009",
         "country": "Venezuela",
         "location": "Caracas, Venezuela",
         "flag_asset": "/src/assets/svg/flag_venezuela.svg",
-        "description": "Bachelor Degree in Systems Engineering. Knowledge related to engineering, information technologies, and architecture.",
+        "description": "Licenciatura en Ingeniería de Sistemas. Conocimientos relacionados con ingeniería, tecnologías de la información y arquitectura.",
         "topics": ["Information and Communication Technologies (ICT)"],
-        "subject": "Information and Communication Technologies (ICT)"
+        "subject": "Tecnologías de la Información y Comunicación (TIC)"
     }
 ]

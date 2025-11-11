@@ -14,11 +14,20 @@
         "ongoing": "Ongoing",
         "cannot_load_content": "Content could not be loaded",
         "author": "Auteur",
-        "contributor": "Contributeur"
+        "contributor": "Contributeur",
+        "educational_level": "Niveau d'études",
+        "formal_studies_taken": "Études formelles réalisées",
+        "experiences": "Expériences",
+        "list": "📋 Liste",
+        "timeline": "⏳ Chronologie"
     },
     "header": {
         "languages_title": "Languages",
-        "languages": ["Anglais", "Français", "Espagnol"],
+        "languages": [
+            { "locale": "en", "name": "Anglais" },
+            { "locale": "fr", "name": "Français" },
+            { "locale": "es", "name": "Espagnol" }
+        ],
         "main_sections": [
             {
                 "anchorId": "featured_projects",
@@ -45,7 +54,7 @@
         "my_name": "Christian José Torrealba Rondón<span class='text-accent text-3xl'>.</span>",
         "my_name_template": "Christian José <br>Torrealba Rondón<span class='text-accent'>.</span>",
         "about_me": "Je me définis comme un professionnel généraliste intéressé par différentes disciplines qui accélèrent la livraison de produits.",
-        "summary": "Créer de l'impact grâce à des solutions centrées sur l'utilisateur, basées sur l'Ingénierie des Systèmes et le Design Thinking.",
+        "summary": "Création d'expériences et de solutions orientées utilisateur, appliquant les principes de l'Ingénierie des Systèmes, de l'Ingénierie des Données et du Design Thinking.",
         "hobbies_title": "Loisirs",
         "hobbies": "☀️ 🏖️ 🎡 🍦 🕹️ 🏃🏻 🐶 ✈️",
         "v_shaped_profile": "Profil en forme de V",
@@ -182,18 +191,19 @@
         "subtitle": "Une sélection de certains de mes projets et œuvres"
     },
     "section_experiences": {
-        "title": "Background",
-        "subtitle": "A comprehensive look at my professional growth and key accomplishments across different countries",
-        "collaborated_with": "Collaborated with peers from several regions and countries",
-        "companies_across_regions": "Worked across different markets",
+        "title": "Parcours",
+        "subtitle": "Un aperçu complet de mon évolution professionnelle et de mes réalisations clés dans différents pays",
+        "collaborated_with": "Collaboration avec des collègues de plusieurs régions et pays",
+        "companies_across_regions": "Expérience sur différents marchés",
+        "companies_and_countries_lived_in": "Pays où j'ai vécu, travaillé et étudié",
         "countries": ["Venezuela", "Argentina", "Spain"],
         "full_countries": [
             "Venezuela",
-            "Argentina",
-            "Spain",
+            "Argentine",
+            "Espagne",
             "France",
-            "United Kingdom",
-            "United States of America"
+            "Royaume-Uni",
+            "États-Unis d'Amérique"
         ],
         "key_areas": [
             "Product Engineering",
@@ -210,6 +220,7 @@
     "section_studies": {
         "title": "Academic Background",
         "subtitle": "Key Areas of Study",
+        "educational_level": "Diplôme de Master",
         "key_subjects": [
             "Information and Communication Technologies",
             "Tech Leadership and Strategy",
