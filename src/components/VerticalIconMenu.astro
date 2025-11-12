@@ -37,3 +37,11 @@ const { iconSize = 32, extraClasses = "menu-lg bg-indigo-200 rounded-box" } = As
         </li>
     ))}
 </ul>
+
+<style>
+     @reference "@styles/global.css";
+
+    html[data-theme="dark"] .menu {
+        @apply bg-primary/30;
+    }
+</style>

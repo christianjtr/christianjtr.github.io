@@ -70,7 +70,10 @@ const { header } = (entry?.data as AboutMeData) || {};
 
     .navbar-container {
         @apply w-full flex items-center justify-between bg-white/70 backdrop-blur-sm shadow-xs h-20 px-24;
-        /* dark:bg-slate-700/70 */
+    }
+
+    html[data-theme="dark"] .navbar-container {
+        @apply bg-neutral-800/70;
     }
 
     .navbar-link {
@@ -85,7 +88,7 @@ const { header } = (entry?.data as AboutMeData) || {};
 <script>
     // import { getSystemThemePreference } from '@utils/userPreferences';
 
-    // const themeControllerSwitch = document.getElementById("theme-controller") as HTMLInputElement;
+    const themeControllerSwitch = document.getElementById("theme-controller") as HTMLInputElement;
     
     // const preferredTheme = getSystemThemePreference();
     // document.documentElement.setAttribute('data-theme', preferredTheme);
@@ -94,10 +97,10 @@ const { header } = (entry?.data as AboutMeData) || {};
     //     themeControllerSwitch.checked = true;
     // }
 
-    // themeControllerSwitch?.addEventListener("change", (event: Event) => {
-    //     if (event.target instanceof HTMLInputElement) {
-    //         const selectedTheme = event.target.checked ? "dark" : "light";
-    //         document.documentElement.setAttribute('data-theme', selectedTheme);
-    //     }
-    // });
+    themeControllerSwitch?.addEventListener("change", (event: Event) => {
+        if (event.target instanceof HTMLInputElement) {
+            const selectedTheme = event.target.checked ? "dark" : "light";
+            document.documentElement.setAttribute('data-theme', selectedTheme);
+        }
+    });
 </script>

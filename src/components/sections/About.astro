@@ -46,11 +46,11 @@ const { section_about } = (entry?.data as AboutMeData) || {};
             </div>
         </div>
     </div>
-    <div class="grid md:grid-cols-8 gap-8 shadow-lg rounded-lg px-5 py-4 border border-neutral-100">
+    <div class="grid md:grid-cols-8 about-me-wrapper">
         <div class="col-span-2 w-full rounded-lg">
             <span class="block font-semibold text-xl my-2">{section_about.hobbies_title}</span>
             <span class="block text-xl">{section_about.hobbies}</span>
-            <span class="block text-xs my-3 text-neutral-600">{section_about.language_tip}</span>
+            <span class="block text-xs my-3 text-neutral-600 dark:text-base-content">{section_about.language_tip}</span>
         </div>
         <div class="col-span-6 flex items-center">
             <div class="stats stats-vertical md:stats-horizontal w-full">
@@ -58,7 +58,7 @@ const { section_about } = (entry?.data as AboutMeData) || {};
                     <div class="stat space-y-1">
                         <div class="stat-figure text-4xl">{language.emoji}</div>
                         <div class="stat-value font-semibold text-xl">{language.name}</div>
-                        <div class="stat-desc">{language.proficiency}</div>
+                        <div class="stat-desc dark:text-base-content">{language.proficiency}</div>
                         <progress class="progress progress-primary w-40" value={language.value} max="100" />
                     </div>
                 ))}
@@ -72,8 +72,8 @@ const { section_about } = (entry?.data as AboutMeData) || {};
         </div>
         <div class="col-span-5">
             <div class="divider divider-end flex items-center">
-                <p class="tooltip tooltip-primary" data-tip={section_about.v_shaped_explanation}>
-                    <span class="uppercase font-semibold text-primary cursor-pointer">{section_about.v_shaped_profile}</span>
+                <p class="tooltip tooltip-primary dark:tooltip-secondary" data-tip={section_about.v_shaped_explanation}>
+                    <span class="uppercase font-semibold text-primary dark:text-secondary cursor-pointer">{section_about.v_shaped_profile}</span>
                 </p>
                 <img src="/src/assets/gifs/crystal_ball.gif" width="48" height="40" alt="Crystal ball" aria-label="Crystal ball"/>
             </div>
@@ -93,7 +93,7 @@ const { section_about } = (entry?.data as AboutMeData) || {};
                 <div class="group flex h-full w-full">
                     <div class="card-informative border-neutral-300 transition-all duration-500 transform-3d group-hover:transform-[rotateY(180deg)]">
                         <div class="backface-hidden">
-                            <div class="bg-primary/5 w-fit rounded-full p-3">
+                            <div class="card-informative-icon-wrapper">
                                 {subject.category === "product" && <RocketIcon width={42} height={42} />}
                                 {subject.category === "coding" && <CodeFileIcon width={42} height={42} />}
                                 {subject.category === "data" && <MagicStickIcon width={42} height={42} />}
@@ -101,7 +101,7 @@ const { section_about } = (entry?.data as AboutMeData) || {};
                             <span class="block my-5 text-2xl font-medium">{subject.name}<font class="text-accent text-3xl">.</font></span>
                             <ul class="space-y-2">
                                 {subject.topics.map((topic) => (
-                                    <li class="md:text-sm text-lg text-neutral-600">{topic}</li>
+                                    <li class="md:text-sm text-lg text-neutral-600 dark:text-base-content">{topic}</li>
                                 ))}
                             </ul>
                         </div>
@@ -128,6 +128,26 @@ const { section_about } = (entry?.data as AboutMeData) || {};
     .card-informative:hover {
         @apply border-indigo-400 shadow-lg shadow-indigo-200;
     }
+
+    .card-informative-icon-wrapper {
+        @apply bg-primary/5 w-fit rounded-full p-3;
+    }
+
+    html[data-theme="dark"] .card-informative {
+        @apply bg-slate-800 border border-transparent shadow-xs shadow-primary/65;
+    }
+
+    html[data-theme="dark"] .card-informative:hover {
+        @apply border-indigo-400 shadow-lg shadow-primary/65;
+    }
+
+    html[data-theme="dark"] .card-informative-icon-wrapper  {
+        @apply bg-primary/30;
+    }
+
+    html[data-theme="dark"] .card-informative-icon-wrapper svg  {
+        @apply stroke-accent;
+    }
     .avatar-image {
         border-radius: 50%;
         background: linear-gradient(135deg, var(--color-cobalt-blue) 0%, var(--color-electric-teal) 100%);
@@ -149,6 +169,14 @@ const { section_about } = (entry?.data as AboutMeData) || {};
 
     .text-slider-item {
         @apply leading-[1.3rem];
+    }
+
+    .about-me-wrapper {
+        @apply gap-8 shadow-lg rounded-lg px-5 py-4 border border-neutral-100;
+    }
+
+    html[data-theme="dark"] .about-me-wrapper {
+        @apply bg-slate-800 border-0 shadow-lg shadow-primary/65;
     }
 
     html[data-theme="dark"] .chat-bubble {
