@@ -89,7 +89,7 @@ const backgroundItems: Background[] = [
         <Logo slot="beforeHeading" width={96} height={96} />
         <br />
         <div class="px-5 md:px-14">
-            <div class="stats md:stats-horizontal stats-vertical bg-base-100 w-full shadow-lg rounded-lg border border-neutral-100">
+            <div class="stats md:stats-horizontal stats-vertical stats-content-wrapper">
                 <div class="stat w-full">
                     <img src="/src/assets/gifs/world.gif" width="50" height="50" alt="World" aria-label="World" class="stat-figure"/>
                     <span class="stat-title uppercase">{section_experiences.companies_and_countries_lived_in}</span>
@@ -104,7 +104,7 @@ const backgroundItems: Background[] = [
                     <span class="stat-title uppercase">{common.formal_studies_taken}</span>
                     <span class="stat-value">0{studies.length}</span>
                     <span class="stat-desc">{common.educational_level}</span>
-                    <span class="stat-actions font-semibold text-lg">{section_studies.educational_level}</span>
+                    <span class="stat-actions font-semibold text-xl">{section_studies.educational_level}</span>
                 </div>
             </div>
             <VerticalSpacer />
@@ -120,13 +120,13 @@ const backgroundItems: Background[] = [
             <VerticalSpacer />
             <div class="list-wrapper px-7" data-layout="list">
                 {backgroundItems.map((item: Background) => (
-                    <div class="card bg-base-100 flex md:flex-row flex-col p-5 list-card-item">
+                    <div class="card list-card-item">
                         <div class="md:w-1/5 w-full p-3 space-y-3">
-                            <div class="bg-base-100 w-fit rounded-full p-3 border-3 border-secondary">
-                                {item.type === "study" && <AcademicCapIcon width={24} height={24} />}
-                                {item.type === "work" && <BuildingIcon width={24} height={24} />}
+                            <div class="bg-base-100 w-fit rounded-full p-3 border-3 border-secondary icon-wrapper">
+                                {item.type === "study" && <AcademicCapIcon width={24} height={24} class="dark:stroke-accent" />}
+                                {item.type === "work" && <BuildingIcon width={24} height={24} class="dark:stroke-accent" />}
                             </div>
-                            <span class="text-sm text-gray-600 block mb-2">{item.category}</span>
+                            <span class="text-sm text-info-content-color block mb-2">{item.category}</span>
                             <span class="badge badge-sm badge-primary font-semibold uppercase text-white">{item.period}</span>
                             <p class="flex gap-2 items-center text-lg">
                                 <img src={item.flag_asset} alt={item.country} />
@@ -134,8 +134,8 @@ const backgroundItems: Background[] = [
                             </p>
                         </div>
                         <div class="md:w-4/5 w-full p-3">
-                            <span class="text-neutral-500 block mb-1">{item.organization}</span>
-                            <h2 class="text-2xl font-medium mb-3">
+                            <span class="pre-title-text block mb-1">{item.organization}</span>
+                            <h2 class="text-2xl font-medium mb-5">
                                 {item.title} {item.isOngoing && <span class="badge badge-sm badge-accent uppercase">{common.ongoing}</span>}
                             </h2>
                             <p class="card-content leading-8">{item.description}</p>
@@ -146,29 +146,29 @@ const backgroundItems: Background[] = [
             <ul class="timeline timeline-vertical hidden px-7" data-layout="timeline">
                 {backgroundItems.map((item: Background , index) => (
                     <li>
-                        {index !== 0 && <hr class="bg-secondary" />}
+                        {index !== 0 && <hr class="bg-primary" />}
                         <div class:list={["timeline-box shadow-none border-0 w-full p-4 mb-5", { "timeline-start": item.type  === "work" }, { "timeline-end": item.type  === "study" }]}>
                             <div class="card card-lg p-4">
                                 <p class="flex justify-between mb-2">
-                                    <span class="text-gray-600 text-sm">{item.organization}</span>
+                                    <span class="pre-title-text text-sm">{item.organization}</span>
                                     {item.isOngoing && <Badge class="badge-sm badge-accent uppercase mx-0.5">{common.ongoing}</Badge>}
                                 </p>
                                 <span class="card-title w-full mb-2">{item.title}</span>
                                 <Badge class="badge-sm badge-primary uppercase">{item.period}</Badge>
-                                <div class="flex flex-col gap-1 text-gray-600 my-3">
-                                    <p class="flex gap-3 items-center">
+                                <div class="flex flex-col gap-1 my-3">
+                                    <p class="flex gap-3 items-center text-info-content-color">
                                         <font class="text-2xl">{backgroundTypeIcons[item.type]}</font>
                                         <span class="text-sm">{item.category}</span>
                                     </p>
-                                    <p class="flex gap-3 items-center">
+                                    <p class="flex gap-3 items-center text-info-content-color">
                                         <img src={item.flag_asset} alt={item.country} width={28} height={28} alt={item.country} aria-label={item.country} />
                                         <span class="text-sm">{item.country}</span>
                                     </p>
                                 </div>
                                 <div class="card-body p-0">
                                     <p class="leading-8 mb-2">{item.description}</p>
-                                    <div tabindex="0" class="collapse collapse-arrow bg-primary/5 px-3">
-                                        <div class="collapse-title p-3 font-semibold text-sm flex items-center mb-2">
+                                    <div tabindex="0" class="collapse collapse-arrow dark:bg-primary/5 px-3">
+                                        <div class="collapse-title p-3 font-semibold text-sm flex items-center">
                                             {item.type === "work" && <>{common.technologies}</>}
                                             {item.type === "study" && <>{common.subjects}</>}
                                         </div>
@@ -180,12 +180,12 @@ const backgroundItems: Background[] = [
                             </div>
                         </div>
                         <div class="timeline-middle mx-3">
-                            <div class="bg-base-100 w-fit rounded-full p-3 border-4 border-secondary">
+                            <div class="icon-wrapper">
                                 {item.type === "study" && <AcademicCapIcon width={42} height={42} />}
                                 {item.type === "work" && <BuildingIcon width={42} height={42} />}
                             </div>
                         </div>
-                        {index < backgroundItems.length - 1 && <hr class="bg-secondary" />}
+                        {index < backgroundItems.length - 1 && <hr class="bg-primary" />}
                     </li>
                 ))}
             </ul>
@@ -227,12 +227,61 @@ const backgroundItems: Background[] = [
         @apply sticky top-20 z-2 py-3;
         background: var(--color-pale-lavender);
     }
-    .timeline-box:hover, .list-card-item:hover {
+
+    html[data-theme="dark"] .sticky-section {
+        background: var(--color-deep-charcoal);
+    }
+
+    .card, .timeline-box {
+        @apply bg-base-100;
+    }
+
+    .list-card-item {
+        @apply bg-base-100 flex md:flex-row flex-col p-5;
+    }
+
+    .list-card-item:hover {
+        @apply border-indigo-400 shadow-lg shadow-indigo-200;
+    }
+
+    html[data-theme="dark"] .card {
+        @apply bg-slate-900;
+    }
+
+    html[data-theme="dark"] .timeline-box {
+        @apply bg-slate-900;
+    }
+
+    .timeline-box:hover {
         @apply shadow-xl shadow-indigo-200;
+    }
+    
+    html[data-theme="dark"] .timeline-box:hover, html[data-theme="dark"] .list-card-item:hover {
+       @apply border-indigo-400 shadow-lg shadow-primary/65;
+    }
+
+    .stats-content-wrapper {
+        @apply bg-base-100 w-full shadow-lg rounded-lg border border-neutral-100;
+    }
+
+    html[data-theme="dark"] .stats-content-wrapper {
+        @apply bg-slate-900 border-0 shadow-lg shadow-primary/65;
     }
 
     .list-wrapper {
         @apply space-y-11 z-1 relative;
+    }
+
+    .icon-wrapper {
+        @apply bg-base-100 w-fit rounded-full p-3 border-3 border-secondary;
+    }
+
+    .icon-wrapper * {
+        @apply stroke-accent;
+    }
+
+    html[data-theme="dark"] .icon-wrapper {
+        @apply bg-primary/30 border-primary; 
     }
 
     .list-wrapper::before {
@@ -240,8 +289,20 @@ const backgroundItems: Background[] = [
         content: '';
     }
 
+    .pre-title-text, .text-info-content-color {
+         @apply text-neutral-500;
+    }
+
+    html[data-theme="dark"] .pre-title-text {
+         @apply text-secondary;
+    }
+
+    html[data-theme="dark"] .text-info-content-color {
+        @apply text-base-content;
+    }
+
     .stat-value {
-        @apply font-semibold text-secondary text-5xl mt-2;
+        @apply font-semibold text-primary text-5xl;
     }
 
     .stat-desc {
@@ -251,4 +312,9 @@ const backgroundItems: Background[] = [
     .input-radio {
         @apply rounded-2xl min-w-24;
     }
+
+    html[data-theme="dark"] .stat *:not(.stat-value) {
+        @apply text-primary-content;
+    }
+    
 </style>

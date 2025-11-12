@@ -13,7 +13,7 @@ import CodeFileIcon from '@assets/svg/code_file.svg';
 const { lang } = Astro.params;
 
 const entry = await getEntry(lang as ContentDataEntryType, `${lang}/${CONTENT.COMMON}`);
-const { section_about } = (entry?.data as AboutMeData) || {};
+const { section_about, common } = (entry?.data as AboutMeData) || {};
 ---
 
 <div class="container mx-auto px-5 mt-10">
@@ -50,7 +50,7 @@ const { section_about } = (entry?.data as AboutMeData) || {};
         <div class="col-span-2 w-full rounded-lg">
             <span class="block font-semibold text-xl my-2">{section_about.hobbies_title}</span>
             <span class="block text-xl">{section_about.hobbies}</span>
-            <span class="block text-xs my-3 text-neutral-600 dark:text-base-content">{section_about.language_tip}</span>
+            <span class="block text-xs my-3 text-info-content-color">{section_about.language_tip}</span>
         </div>
         <div class="col-span-6 flex items-center">
             <div class="stats stats-vertical md:stats-horizontal w-full">
@@ -58,7 +58,7 @@ const { section_about } = (entry?.data as AboutMeData) || {};
                     <div class="stat space-y-1">
                         <div class="stat-figure text-4xl">{language.emoji}</div>
                         <div class="stat-value font-semibold text-xl">{language.name}</div>
-                        <div class="stat-desc dark:text-base-content">{language.proficiency}</div>
+                        <div class="stat-desc text-info-content-color">{language.proficiency}</div>
                         <progress class="progress progress-primary w-40" value={language.value} max="100" />
                     </div>
                 ))}
@@ -101,11 +101,12 @@ const { section_about } = (entry?.data as AboutMeData) || {};
                             <span class="block my-5 text-2xl font-medium">{subject.name}<font class="text-accent text-3xl">.</font></span>
                             <ul class="space-y-2">
                                 {subject.topics.map((topic) => (
-                                    <li class="md:text-sm text-lg text-neutral-600 dark:text-base-content">{topic}</li>
+                                    <li class="md:text-sm text-lg text-info-content-color">{topic}</li>
                                 ))}
                             </ul>
                         </div>
-                        <div class="absolute inset-0 transform-[rotateY(180deg)] backface-hidden p-5 flex items-center">
+                        <div class="absolute inset-0 transform-[rotateY(180deg)] backface-hidden p-6 flex flex-col">
+                            <span class="block font-semibold mb-4 text-info-content-color-backface">🕹️ {common.technologies}</span>
                             <BadgeList items={subject.tools} badgeClass="badge-sm badge-secondary" />
                         </div>
                     </div>
@@ -122,7 +123,7 @@ const { section_about } = (entry?.data as AboutMeData) || {};
     @reference "@styles/global.css";
     
     .card-informative {
-        @apply border p-5 rounded-lg flex w-full;
+        @apply border p-6 rounded-lg flex w-full;
     }
 
     .card-informative:hover {
@@ -134,7 +135,7 @@ const { section_about } = (entry?.data as AboutMeData) || {};
     }
 
     html[data-theme="dark"] .card-informative {
-        @apply bg-slate-800 border border-transparent shadow-xs shadow-primary/65;
+        @apply bg-slate-800 border border-transparent;
     }
 
     html[data-theme="dark"] .card-informative:hover {
@@ -173,6 +174,22 @@ const { section_about } = (entry?.data as AboutMeData) || {};
 
     .about-me-wrapper {
         @apply gap-8 shadow-lg rounded-lg px-5 py-4 border border-neutral-100;
+    }
+
+    .text-info-content-color {
+        @apply text-neutral-500;
+    }
+
+    html[data-theme="dark"] .text-info-content-color {
+        @apply text-base-content;
+    }
+
+    .text-info-content-color-backface {
+        @apply text-neutral;
+    }
+
+    html[data-theme="dark"] .text-info-content-color-backface {
+        @apply text-primary-content;
     }
 
     html[data-theme="dark"] .about-me-wrapper {

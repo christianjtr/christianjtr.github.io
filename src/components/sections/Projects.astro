@@ -40,7 +40,7 @@ const { data: projects } = projectData;
                         </div>
                         <div class="flex flex-col space-y-2">
                             <h2 class="title">{project.title}</h2>
-                            <span class="text-neutral-600">
+                            <span class="text-neutral-600 dark:text-base-content">
                                 <font class="text-2xl">🎯</font> {project.summary}
                             </span>
                             <span class="text-secondary font-medium">{project.owner}</span>
@@ -122,6 +122,14 @@ const { data: projects } = projectData;
         @apply shadow-xl shadow-indigo-200;
     }
 
+    html[data-theme="dark"] .collapse {
+        @apply bg-slate-900;
+    }
+
+    html[data-theme="dark"] .collapse:hover {
+        @apply border-indigo-400 shadow-lg shadow-primary/65;
+    }
+
     .collapse-title {
         @apply flex flex-col md:flex-row gap-8;
     }
@@ -132,6 +140,10 @@ const { data: projects } = projectData;
 
     .pre-content-title {
         @apply text-neutral-600 block;
+    }
+
+    html[data-theme="dark"] .pre-content-title {
+        @apply text-base-content;
     }
     
     .title {
