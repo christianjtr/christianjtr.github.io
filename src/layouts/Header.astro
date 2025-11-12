@@ -85,22 +85,34 @@ const { header } = (entry?.data as AboutMeData) || {};
     }
 </style>
 
-<script>
-    // import { getSystemThemePreference } from '@utils/userPreferences';
+<script is:inline>
+    const STORAGE_KEY = 'user-theme-preference';
+    const themeControllerSwitch = document.getElementById("theme-controller");
 
-    const themeControllerSwitch = document.getElementById("theme-controller") as HTMLInputElement;
-    
-    // const preferredTheme = getSystemThemePreference();
-    // document.documentElement.setAttribute('data-theme', preferredTheme);
-    
-    // if(preferredTheme === "dark" && themeControllerSwitch.checked === false) {
-    //     themeControllerSwitch.checked = true;
-    // }
+    (function() {
+        const getSystemPreference = () => 
+            (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+        
+        const root = document.documentElement;
+        const storedTheme = localStorage.getItem(STORAGE_KEY);
+        
+        const initialTheme = (storedTheme === 'dark' || storedTheme === 'light') 
+            ? storedTheme
+            : getSystemPreference();
 
-    themeControllerSwitch?.addEventListener("change", (event: Event) => {
-        if (event.target instanceof HTMLInputElement) {
-            const selectedTheme = event.target.checked ? "dark" : "light";
-            document.documentElement.setAttribute('data-theme', selectedTheme);
+        root.setAttribute('data-theme', initialTheme);
+        themeControllerSwitch.checked = (initialTheme === "dark");
+    })();
+    
+    document.addEventListener("DOMContentLoaded", () => {
+        const rootElement = document.documentElement;
+        
+        if (themeControllerSwitch) {
+            themeControllerSwitch.addEventListener("change", () => {
+                const selectedTheme = themeControllerSwitch.checked ? "dark" : "light";
+                rootElement.setAttribute('data-theme', selectedTheme);
+                localStorage.setItem(STORAGE_KEY, selectedTheme);
+            });
         }
     });
 </script>
