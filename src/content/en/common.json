@@ -60,7 +60,7 @@
         "about_me": "I define myself as a generalist professional interested in different disciplines that accelerate product delivery.",
         "summary": "Creating user-oriented experiences and solutions, applying principles of Systems Engineering, Data Engineering, and Design Thinking.",
         "hobbies_title": "Hobbies",
-        "hobbies": "☀️ 🏖️ 🎡 🍦 🕹️ 🏃🏻 🐶 ✈️",
+        "hobbies": "☀️ 🏖️ 🎡 🍦 🎮 🏃🏻 🐶 ✈️",
         "v_shaped_profile": "V-Shaped Profile",
         "v_shaped_explanation": "Combines specialization in one relevant area with broad, cross-functional knowledge",
         "language_tip": "Refining fluency and proficiency in languages",
@@ -131,8 +131,11 @@
                         "Zod, ORMs (Sequelize)",
                         "Jest, Cypress, Web bundlers",
                         "NodeJS, GraphQL, REST APIs",
-                        "Python, R Statistics",
-                        "MySQL, PostgreSQL, MongoDB, Redis"
+                        "Python",
+                        "R Statistics",
+                        "MySQL, PostgreSQL",
+                        "MongoDB",
+                        "Redis"
                     ]
                 },
                 {

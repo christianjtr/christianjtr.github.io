@@ -117,7 +117,7 @@
     {
         "id": "experiment-restaurant-browser-app",
         "section": "experiments",
-        "title": "Navegador de Restaurantes",
+        "title": "Buscador de restaurantes y sus menús",
         "description": "Aplicación conceptual diseñada para ayudar a los usuarios a descubrir y conectarse con restaurantes locales. Construida como una aplicación web progresiva (PWA), te brinda la comodidad de una aplicación nativa sin necesidad de descargarla de una tienda de aplicaciones. Utilizando la API de geolocalización de tu dispositivo, la aplicación encuentra instantáneamente los restaurantes más cercanos a ti.",
         "image": "/src/assets/images/restaurant_browser.jpg",
         "tags": [

@@ -117,7 +117,7 @@
     {
         "id": "experiment-restaurant-browser-app",
         "section": "experiments",
-        "title": "Restaurant's browser",
+        "title": "Restaurant's finder and their menus",
         "description": "Conceptual application designed to help users discover and connect with local restaurants. Built as a Progressive Web app (PWA), it gives you the convenience of a native app without requiring a download from an app store. Using your device's Geolocation API, the app instantly finds the restaurants closest to you.",
         "image": "/src/assets/images/restaurant_browser.jpg",
         "tags": [
