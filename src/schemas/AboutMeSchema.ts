@@ -27,7 +27,8 @@ const CommonTextSchema = z.object({
     formal_studies_taken: z.string(),
     experiences: z.string(),
     list: z.string(),
-    timeline: z.string()
+    timeline: z.string(),
+    flip_to_check_stack: z.string(),
 });
 
 const OpenGraphSchema = z.object({

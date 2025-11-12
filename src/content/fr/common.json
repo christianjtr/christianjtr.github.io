@@ -19,7 +19,8 @@
         "formal_studies_taken": "Études formelles réalisées",
         "experiences": "Expériences",
         "list": "📋 Liste",
-        "timeline": "⏳ Chronologie"
+        "timeline": "⏳ Chronologie",
+        "flip_to_check_stack": "Voir le Stack →"
     },
     "open_graph": {
         "title": "Christian José Torrealba Rondón",

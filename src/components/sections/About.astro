@@ -93,10 +93,15 @@ const { section_about, common } = (entry?.data as AboutMeData) || {};
                 <div class="group flex h-full w-full">
                     <div class="card-informative border-neutral-300 transition-all duration-500 transform-3d group-hover:transform-[rotateY(180deg)]">
                         <div class="backface-hidden">
-                            <div class="card-informative-icon-wrapper">
-                                {subject.category === "product" && <RocketIcon width={42} height={42} />}
-                                {subject.category === "coding" && <CodeFileIcon width={42} height={42} />}
-                                {subject.category === "data" && <MagicStickIcon width={42} height={42} />}
+                            <div class="flex justify-between items-center align-middle">
+                                <div class="card-informative-icon-wrapper">
+                                    {subject.category === "product" && <RocketIcon width={42} height={42} />}
+                                    {subject.category === "coding" && <CodeFileIcon width={42} height={42} />}
+                                    {subject.category === "data" && <MagicStickIcon width={42} height={42} />}
+                                </div>
+                                <span class="text-sm font-semibold block w-full text-right text-secondary dark:text-warning">
+                                    {common.flip_to_check_stack}
+                                </span>
                             </div>
                             <span class="block my-5 text-2xl font-medium">{subject.name}<font class="text-accent text-3xl">.</font></span>
                             <ul class="space-y-2">
@@ -105,7 +110,7 @@ const { section_about, common } = (entry?.data as AboutMeData) || {};
                                 ))}
                             </ul>
                         </div>
-                        <div class="absolute inset-0 transform-[rotateY(180deg)] backface-hidden p-6 flex flex-col">
+                        <div class="absolute inset-0 transform-[rotateY(180deg)] backface-hidden p-6 flex flex-col shadow-sm shadow-primary/50 rounded-lg">
                             <span class="block font-semibold mb-4 text-info-content-color-backface">🕹️ {common.technologies}</span>
                             <BadgeList items={subject.tools} badgeClass="badge-sm badge-secondary" />
                         </div>
@@ -123,18 +128,22 @@ const { section_about, common } = (entry?.data as AboutMeData) || {};
     @reference "@styles/global.css";
     
     .card-informative {
-        @apply border p-6 rounded-lg flex w-full;
+        @apply p-6 rounded-lg flex w-full shadow-sm shadow-primary/50;
     }
-
-    .card-informative:hover {
-        @apply border-indigo-400 shadow-lg shadow-indigo-200;
+    
+    .card-informative.is-flipped {
+        transform: rotateY(180deg);
+    }
+    
+    .card-informative, .backface-hidden {
+        backface-visibility: hidden;
     }
 
     .card-informative-icon-wrapper {
         @apply bg-primary/5 w-fit rounded-full p-3;
     }
 
-    html[data-theme="dark"] .card-informative {
+    html[data-theme="dark"] .card-informative, html[data-theme="dark"] .backface-hidden {
         @apply bg-slate-800 border border-transparent;
     }
 
@@ -208,3 +217,21 @@ const { section_about, common } = (entry?.data as AboutMeData) || {};
         95%, 100% { transform: translateY(0%); } 
     }
 </style>
+
+<script>
+    const FLIP_CLASS = 'is-flipped';
+    const flipCards = document.querySelectorAll('.card-informative') as NodeListOf<HTMLDivElement>;
+
+    if (flipCards.length > 0) {
+        flipCards.forEach(card => {
+            card.addEventListener('touchstart', () => {
+                const wasFlipped = card.classList.contains(FLIP_CLASS);
+                flipCards.forEach(otherCard => otherCard.classList.remove(FLIP_CLASS));
+                
+                if (!wasFlipped) {
+                    card.classList.add(FLIP_CLASS);
+                }
+            });
+        });
+    }
+</script>
