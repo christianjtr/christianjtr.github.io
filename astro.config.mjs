@@ -16,5 +16,8 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  i18n: i18nLocalesConfig, 
+  i18n: i18nLocalesConfig,
+  base: '/christianjtr.github.io/',
+  site: 'https://christianjtr.github.io',
+  outDir: './dist',
 });
