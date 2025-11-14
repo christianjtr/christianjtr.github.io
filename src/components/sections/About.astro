@@ -46,8 +46,8 @@ const { section_about, common } = (entry?.data as AboutMeData) || {};
             </div>
         </div>
     </div>
-    <div class="grid md:grid-cols-8 about-me-wrapper">
-        <div class="col-span-2 w-full rounded-lg">
+    <div class="md:grid md:grid-cols-8 about-me-wrapper">
+        <div class="col-span-full lg:col-span-2 w-full rounded-lg">
             <span class="block font-semibold text-xl my-2">{section_about.hobbies_title}</span>
             <span class="block text-xl">{section_about.hobbies}</span>
             <span class="block text-xs my-3 text-info-content-color">{section_about.language_tip}</span>
