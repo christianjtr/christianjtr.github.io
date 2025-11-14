@@ -1,4 +1,5 @@
 ---
+import { rrssLinks } from '@utils/rrss';
 import LinkedInIcon from '@assets/svg/linkedin.svg';
 import GitHubIcon from '@assets/svg/github.svg';
 import LLMSIcon from '@assets/svg/llms.svg';
@@ -8,19 +9,11 @@ interface Props {
     extraClasses?: string;
 }
 
-type LinkIcon = "linkedin" | "github" | "llms";
-
-const links: Array<{id: LinkIcon, text: string; url: string}> = [
-    { id: "linkedin", text: "LinkedIn", url: "https://www.linkedin.com/in/christianjtr/" },
-    { id: "github", text: "GitHub", url: "https://github.com/christianjtr" },
-    { id: "llms", text: "LLMS.txt", url: "/src/assets/llms.txt"}
-];
-
 const { iconSize = 32, extraClasses = "menu-lg bg-indigo-200 rounded-box" } = Astro.props;
 ---
 
 <ul class:list={["menu", extraClasses]}>
-    {links.map((eachLink) => (
+    {rrssLinks.map((eachLink) => (
         <li class="my-1">
             <a 
                 href={eachLink.url}

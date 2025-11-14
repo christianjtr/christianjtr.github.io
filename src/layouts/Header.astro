@@ -2,6 +2,7 @@
 import { getEntry } from 'astro:content';
 
 import type { ContentDataEntryType } from '@app-types/Content';
+import { HeadingContextMenu } from '@components';
 import type { AboutMeData } from '@schemas/AboutMeSchema';
 import { CONTENT } from '@app-types/Content';
 import LanguageIcon from '@assets/svg/language.svg';
@@ -22,7 +23,7 @@ const { header } = (entry?.data as AboutMeData) || {};
                     <img src="/src/assets/brand_logo.png" width="50" height="50" alt="Brand logo" aria-label="Brand logo" />
                 </a>
             </div>
-            <div class="navbar-center gap-20">
+            <div class="navbar-center hidden lg:flex lg:gap-20">
                 {header.main_sections.map((section) => (
                     <a 
                         role="button"
@@ -45,17 +46,18 @@ const { header } = (entry?.data as AboutMeData) || {};
                     </div>
                     <ul tabindex="0" class="dropdown-content menu dropdown-menu-content">
                         {header.languages.map(({ name, locale}) => (
-                            <li class:list={["text-lg", { "text-primary font-semibold": Astro.currentLocale === locale }]}>
+                            <li class:list={["lg:text-lg", { "text-primary font-semibold": Astro.currentLocale === locale }]}>
                                 <a href={`/${locale}/`}>{name}</a>
                             </li>
                         ))}
                     </ul>
                 </div>
-                <label class="swap swap-rotate">
+                <label class="btn btn-circle btn-ghost swap swap-rotate">
                     <input id="theme-controller" type="checkbox" class="theme-controller" value="synthwave" />
                     <SunIcon />
                     <MoonIcon />
                 </label>
+                <HeadingContextMenu sections={header.main_sections} />
             </div>
         </div>
     </div>
@@ -65,14 +67,14 @@ const { header } = (entry?.data as AboutMeData) || {};
    @reference "@styles/global.css";
 
     header {
-        @apply sticky top-0 z-50 transition-all duration-300;
+        @apply sticky top-0 z-50 transition-all duration-300 bg-white/70 backdrop-blur-sm shadow-xs;
     }
 
     .navbar-container {
-        @apply w-full flex items-center justify-between bg-white/70 backdrop-blur-sm shadow-xs h-20 px-24;
+        @apply container mx-auto w-full flex items-center justify-between h-20 px-7;
     }
 
-    html[data-theme="dark"] .navbar-container {
+    html[data-theme="dark"] header {
         @apply bg-neutral-800/70;
     }
 

@@ -1,0 +1,56 @@
+---
+import { rrssLinks } from '@utils/rrss';
+import type { AboutMeData } from '@schemas/AboutMeSchema';
+import DropdownIcon from '@assets/svg/dropdown.svg';
+import LinkedInIcon from '@assets/svg/linkedin.svg';
+import GitHubIcon from '@assets/svg/github.svg';
+import LLMSIcon from '@assets/svg/llms.svg';
+
+interface Props {
+    sections: AboutMeData["header"]["main_sections"];
+}
+
+const { sections } = Astro.props;
+---
+
+
+<div class="dropdown dropdown-end lg:hidden">
+    <div tabindex="0" role="button" class="btn btn-ghost btn-circle scale-x-[-1]">
+        <DropdownIcon width={24} height={24} />
+    </div>
+    <div class="card card-sm dropdown-content bg-base-100 rounded-box z-1 w-64 shadow-sm">
+        <div class="card-body dropdown-menu-content">
+            <ul class="menu">
+                {sections.map((section) => (
+                    <li>
+                        <a 
+                            role="button"
+                            class="hover:text-primary" 
+                            href={`#${section.anchorId}`}
+                            aria-label={`Go to ${section.label}`}
+                        >
+                            {section.label}
+                        </a>
+                    </li>
+                ))}
+            </ul>
+            <div class="divider p-0 m-0 divider-start" />
+            <p class="px-5 py-2 flex justify-center gap-7">
+                {rrssLinks.map((eachLink) => (
+                    <a 
+                        href={eachLink.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={eachLink.text}
+                        class="text-center flex flex-col gap-1 items-center hover:text-primary"
+                    >
+                        {eachLink.id === "github" && <GitHubIcon width={24} height={24} />}
+                        {eachLink.id === "linkedin" && <LinkedInIcon width={24} height={24} />}
+                        {eachLink.id === "llms" && <LLMSIcon width={24} height={24} />}
+                        {eachLink.text}
+                    </a>
+                ))}
+            </p>
+        </div>
+    </div>
+</div>
