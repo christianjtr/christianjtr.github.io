@@ -26,20 +26,18 @@ const { section_about, common } = (entry?.data as AboutMeData) || {};
             <h1 class="font-semibold text-5xl lg:text-6xl leading-16" set:html={section_about.my_name_template} />
             <p class="text-lg lg:text-xl leading-8 p-2 m-0">{section_about.summary}</p>
         </div>
-        <div class="col-span-3">
-            <div class="p-12 relative">
-                <figure class="avatar-image">
-                    <img src="/src/assets/images/me.png" alt="My image" aria-label="My image"/>
-                </figure>
-                <div class="chat chat-end absolute top-60 left-[-130px] w-1/2 hidden lg:block">
-                    <div class="chat-bubble">
-                        <div class="text-slider-mask">
-                            <div class="text-slider">
-                                {section_about.avatar_messages.map((message: string) => (
-                                    <p class="no-select">{message}</p>
-                                ))}
-                                <p>{section_about.avatar_messages[0]}</p>
-                            </div>
+        <div class="col-span-3 p-12 relative">
+            <figure class="avatar-image">
+                <img src="/src/assets/images/me.png" alt="My image" aria-label="My image"/>
+            </figure>
+            <div class="chat absolute top-64 left-[-30px] w-1/2 hidden lg:block">
+                <div class="chat-bubble">
+                    <div class="text-slider-mask">
+                        <div class="text-slider">
+                            {section_about.avatar_messages.map((message: string) => (
+                                <p class="no-select">{message}</p>
+                            ))}
+                            <p>{section_about.avatar_messages[0]}</p>
                         </div>
                     </div>
                 </div>
