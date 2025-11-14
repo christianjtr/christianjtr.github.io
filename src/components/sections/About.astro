@@ -17,21 +17,21 @@ const { section_about, common } = (entry?.data as AboutMeData) || {};
 ---
 
 <div class="container mx-auto px-5 mt-10">
-    <div class="grid md:grid-cols-6">
-        <div class="col-span-3 space-y-4 m-12 content-center">
+    <div class="grid lg:grid-cols-6">
+        <div class="col-span-3 space-y-4 m-3 lg:m-12 content-center">
             <p class="flex items-center gap-2 font-medium">
                 <img src="/src/assets/gifs/wave.gif" width="64" height="64" alt="Waving" aria-label="Waving"/>
                 <span class="text-3xl font-semibold text-accent">{section_about.greeting}</span>
             </p>
-            <h1 class="font-semibold text-6xl leading-16" set:html={section_about.my_name_template} />
-            <p class="text-xl leading-8 p-2 m-0">{section_about.summary}</p>
+            <h1 class="font-semibold text-5xl lg:text-6xl leading-16" set:html={section_about.my_name_template} />
+            <p class="text-lg lg:text-xl leading-8 p-2 m-0">{section_about.summary}</p>
         </div>
         <div class="col-span-3">
-            <div class="m-12 relative">
+            <div class="p-12 relative">
                 <figure class="avatar-image">
                     <img src="/src/assets/images/me.png" alt="My image" aria-label="My image"/>
                 </figure>
-                <div class="chat chat-end absolute top-50 left-[-110px] w-1/2">
+                <div class="chat chat-end absolute top-60 left-[-130px] w-1/2 hidden lg:block">
                     <div class="chat-bubble">
                         <div class="text-slider-mask">
                             <div class="text-slider">
@@ -66,7 +66,7 @@ const { section_about, common } = (entry?.data as AboutMeData) || {};
         </div>
     </div>
     <VerticalSpacer />
-    <div class="grid md:grid-cols-6 gap-8 mt-5">
+    <div class="grid lg:grid-cols-6 gap-8 mt-5">
         <div class="col-span-1">
             <h3 class="text-3xl font-semibold" set:html={section_about.expertise.title}></h3>
         </div>
@@ -80,26 +80,26 @@ const { section_about, common } = (entry?.data as AboutMeData) || {};
         </div>
     </div>
     <br />
-    <div class="grid md:grid-cols-8 gap-8">
-        <div class="col-span-2">
-            <p class="flex text-lg leading-8">
+    <div class="grid sm:grid-cols-8 gap-8">
+        <div class="col-span-full sm:col-span-2">
+            <p class="flex text-xl lg:text-lg leading-8">
                 <font class="text-7xl text-primary mr-3">“</font>
                 <br />
                 {section_about.about_me}
             </p>
         </div>
         {section_about.expertise.subjects.map((subject) => (
-            <div class="col-span-1 md:col-span-2">
+            <div class="col-span-full sm:col-span-2">
                 <div class="group flex h-full w-full">
-                    <div class="card-informative border-neutral-300 transition-all duration-500 transform-3d group-hover:transform-[rotateY(180deg)]">
-                        <div class="backface-hidden">
+                    <div class="card-informative border border-neutral-300 transition-all duration-500 transform-3d group-hover:transform-[rotateY(180deg)]">
+                        <div class="backface-hidden w-full">
                             <div class="flex justify-between items-center align-middle">
                                 <div class="card-informative-icon-wrapper">
                                     {subject.category === "product" && <RocketIcon width={42} height={42} />}
                                     {subject.category === "coding" && <CodeFileIcon width={42} height={42} />}
                                     {subject.category === "data" && <MagicStickIcon width={42} height={42} />}
                                 </div>
-                                <span class="text-sm font-semibold block w-full text-right text-secondary dark:text-warning">
+                                <span class="text-sm font-semibold block lg:w-full text-right text-secondary dark:text-warning">
                                     {common.flip_to_check_stack}
                                 </span>
                             </div>
@@ -110,25 +110,25 @@ const { section_about, common } = (entry?.data as AboutMeData) || {};
                                 ))}
                             </ul>
                         </div>
-                        <div class="absolute inset-0 transform-[rotateY(180deg)] backface-hidden p-6 flex flex-col shadow-sm shadow-primary/50 rounded-lg">
+                        <div class="absolute inset-0 transform-[rotateY(180deg)] backface-hidden p-6 flex flex-col border border-neutral-300 rounded-lg">
                             <span class="block font-semibold mb-4 text-info-content-color-backface">🕹️ {common.technologies}</span>
-                            <BadgeList items={subject.tools} badgeClass="badge-sm badge-secondary" />
+                            <BadgeList items={subject.tools} badgeClass="lg:badge-sm badge-secondary" />
                         </div>
                     </div>
                 </div>
             </div>
         ))}
     </div>
-    <br />
-    <Credentials />
-    <VerticalSpacer />
 </div>
+<br />
+<Credentials />
+<VerticalSpacer />
 
 <style>
     @reference "@styles/global.css";
     
     .card-informative {
-        @apply p-6 rounded-lg flex w-full shadow-sm shadow-primary/50;
+        @apply p-6 rounded-lg flex w-full;
     }
     
     .card-informative.is-flipped {

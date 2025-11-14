@@ -25,7 +25,7 @@ const { headingTitle, headingClass, subtitle, ...attributes } = Astro.props;
     @reference "@styles/global.css";
     
     .title-wrapper {
-        @apply flex items-center gap-3 my-6;
+        @apply flex lg:items-center gap-3 my-6 flex-col items-start lg:flex-row px-5 lg:px-0;
     }
 
     .subtitle {
@@ -33,7 +33,7 @@ const { headingTitle, headingClass, subtitle, ...attributes } = Astro.props;
     }
 
     h1 {
-        @apply text-4xl font-semibold md:text-4xl mb-1;
+        @apply text-4xl font-semibold mb-1;
         color: var(--color-neutral-dark);
     }
 

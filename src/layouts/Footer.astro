@@ -16,12 +16,12 @@ const copyrights = `Copyrights © ${new Date().getFullYear()}`;
 ---
 
 <footer>
-  <aside>
+  <nav>
     <p class="space-y-0.5">
       <span class="block text-lg font-semibold" set:html={section_about.my_name}></span>
       <span class="uppercase text-xs">{copyrights}</span>
     </p>
-  </aside>
+  </nav>
   <nav>
     <h6 class="footer-title">{footer.powered_and_themed_by}</h6>
     <div class="links-container">
@@ -45,10 +45,10 @@ const copyrights = `Copyrights © ${new Date().getFullYear()}`;
 <style>
     @reference "@styles/global.css";
     footer {
-        @apply footer sm:footer-horizontal bg-neutral-800 text-neutral-content py-5 px-52;
+        @apply footer sm:footer-horizontal bg-neutral-800 text-neutral-content p-5 lg:py-5 lg:px-52;
     }
 
     .links-container {
-        @apply grid grid-flow-col gap-4;
+        @apply grid grid-flow-col lg:gap-4;
     }
 </style>

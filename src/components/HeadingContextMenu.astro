@@ -18,7 +18,7 @@ const { sections } = Astro.props;
     <div tabindex="0" role="button" class="btn btn-ghost btn-circle scale-x-[-1]">
         <DropdownIcon width={24} height={24} />
     </div>
-    <div class="card card-sm dropdown-content bg-base-100 rounded-box z-1 w-64 shadow-sm">
+    <div class="card card-sm dropdown-content">
         <div class="card-body dropdown-menu-content">
             <ul class="menu">
                 {sections.map((section) => (
@@ -54,3 +54,11 @@ const { sections } = Astro.props;
         </div>
     </div>
 </div>
+
+<style>
+    @reference "@styles/global.css";
+    
+    .dropdown-menu-content {
+        @apply bg-base-300 rounded-box z-1 mt-1 p-2 shadow-sm;
+    }
+</style>

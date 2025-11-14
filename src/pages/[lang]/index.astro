@@ -56,7 +56,8 @@ const pageTitle = "Christian José Torrealba Rondón";
     }
 
     .scroll-top-button {
-        @apply btn btn-xl btn-circle text-5xl border-0 hidden fixed justify-center items-center w-20 h-20 bottom-24 right-5 z-1 rounded-full;
+        @apply btn btn-xl btn-circle text-4xl border-0 hidden fixed justify-center items-center w-16 h-16 bottom-16 right-5 z-1 rounded-full;
+        opacity: 0.8;
         background: var(--color-vibrant-pink);
     }
 
@@ -72,7 +73,7 @@ const pageTitle = "Christian José Torrealba Rondón";
 <script>
     window.onscroll = function() { scroll(); };
       
-    const scrollDownUntil = 1000;
+    const scrollDownUntil = 2500;
       
     const scrollToTopButton = document.getElementById("scroll-top-button");
     scrollToTopButton?.addEventListener("click", () => {

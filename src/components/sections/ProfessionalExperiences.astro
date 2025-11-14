@@ -91,7 +91,7 @@ const backgroundItems: Background[] = [
         <div class="px-5 md:px-14">
             <div class="stats md:stats-horizontal stats-vertical stats-content-wrapper">
                 <div class="stat w-full">
-                    <img src="/src/assets/gifs/world.gif" width="50" height="50" alt="World" aria-label="World" class="stat-figure"/>
+                    <img src="/src/assets/gifs/world.gif" alt="World" width="40" height="40" aria-label="World" class="stat-figure hidden lg:block" />
                     <span class="stat-title uppercase">{section_experiences.companies_and_countries_lived_in}</span>
                     <span class="stat-value">0{uniqueCountries.length}</span>
                     <span class="stat-desc">{section_experiences.collaborated_with}</span>
@@ -100,43 +100,45 @@ const backgroundItems: Background[] = [
                     </div>
                 </div>
                 <div class="stat w-full">
-                    <img src="/src/assets/gifs/academic_cap.gif" width="60" height="60" alt="World" aria-label="World" class="stat-figure"/>
+                    <img src="/src/assets/gifs/academic_cap.gif" width="55" height="55" alt="Academic Cap" aria-label="Academic Cap" class="stat-figure hidden lg:block" />
                     <span class="stat-title uppercase">{common.formal_studies_taken}</span>
                     <span class="stat-value">0{studies.length}</span>
                     <span class="stat-desc">{common.educational_level}</span>
                     <span class="stat-actions font-semibold text-xl">{section_studies.educational_level}</span>
                 </div>
             </div>
-            <VerticalSpacer />
-            <div class="grid md:grid-cols-6 gap-8 px-7 sticky-section">
-                <h3 class="text-3xl font-semibold col-span-1">{common.experiences}</h3>
-                <div class="col-span-5">
-                    <div class="divider divider-end flex items-center">
-                        <input class="btn input-radio" type="radio" name="layout" value="list" aria-label={common.list} checked="checked" />
-                        <input class="btn input-radio" type="radio" name="layout" value="timeline" aria-label={common.timeline} />
+            <div class="hidden lg:block">
+                <VerticalSpacer />
+                <div class="grid grid-cols-6 gap-8 px-0 lg:px-7 sticky-section">
+                    <h3 class="text-3xl font-semibold col-span-1">{common.experiences}</h3>
+                    <div class="col-span-5">
+                        <div class="divider divider-end flex items-center">
+                            <input class="btn input-radio" type="radio" name="layout" value="list" aria-label={common.list} checked="checked" />
+                            <input class="btn input-radio" type="radio" name="layout" value="timeline" aria-label={common.timeline} />
+                        </div>
                     </div>
                 </div>
             </div>
             <VerticalSpacer />
-            <div class="list-wrapper px-7" data-layout="list">
+            <div class="list-wrapper lg:px-7" data-layout="list">
                 {backgroundItems.map((item: Background) => (
-                    <div class="card list-card-item">
-                        <div class="md:w-1/5 w-full p-3 space-y-3">
+                    <div class="card list-card-item gap-5">
+                        <div class="sm:w-1/5 lg:w-1/5 w-full p-3 space-y-3">
                             <div class="bg-base-100 w-fit rounded-full p-3 border-3 border-secondary icon-wrapper">
                                 {item.type === "study" && <AcademicCapIcon width={24} height={24} class="dark:stroke-accent" />}
                                 {item.type === "work" && <BuildingIcon width={24} height={24} class="dark:stroke-accent" />}
                             </div>
                             <span class="text-sm text-info-content-color block mb-2">{item.category}</span>
-                            <span class="badge badge-sm badge-primary font-semibold uppercase text-white">{item.period}</span>
-                            <p class="flex gap-2 items-center text-lg">
+                            <Badge class="badge-sm badge-primary font-semibold uppercase text-white h-fit">{item.period}</Badge>
+                            <p class="flex gap-2 items-center md:text-lg">
                                 <img src={item.flag_asset} alt={item.country} />
-                                <span>{item.country}</span>
+                                <span class="block">{item.country}</span>
                             </p>
                         </div>
-                        <div class="md:w-4/5 w-full p-3">
+                        <div class="sm:w-4/5 lg:w-4/5 w-full p-3">
                             <span class="pre-title-text block mb-1">{item.organization}</span>
                             <h2 class="text-2xl font-medium mb-5">
-                                {item.title} {item.isOngoing && <span class="badge badge-sm badge-accent uppercase">{common.ongoing}</span>}
+                                {item.title} {item.isOngoing && <Badge class="badge-sm badge-accent uppercase">{common.ongoing}</Badge>}
                             </h2>
                             <p class="card-content leading-8">{item.description}</p>
                         </div>

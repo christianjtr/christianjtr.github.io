@@ -28,7 +28,7 @@ const { data: projects } = projectData;
     <Section headingTitle={section_projects.title} subtitle={section_projects.subtitle} class="container mx-auto">
         <Logo slot="beforeHeading" width={96} height={96} />
         <br />
-        <div class="mx-auto px-5 md:px-14">
+        <div class="px-5 md:px-14">
             {projects.map((project: Project, index: number) => (
                 <div class="collapse collapse-arrow" tabindex={index + 1}>
                     <input type="radio" name="project" aria-hidden="true" />
@@ -49,7 +49,7 @@ const { data: projects } = projectData;
                     <div class="collapse-content">
                         <br />
                         <div class="grid md:grid-cols-5 gap-8">
-                            <div class="md:col-span-2 col-span-full">
+                            <div class="lg:col-span-2 col-span-full">
                                 <ul class="list">
                                     <li class="list-row hover:bg-primary/5">
                                         <BookIcon width={32} height={32} />
@@ -63,13 +63,13 @@ const { data: projects } = projectData;
                                         <div class="list-col-grow">
                                             <span class="pre-content-title">{common.contribuition}</span>
                                             <br />
-                                            <Badge class="badge-accent badge-sm uppercase">{project.contribute_as}</Badge>
+                                            <Badge class="badge-accent badge-sm uppercase h-fit">{project.contribute_as}</Badge>
                                             <p>{project.contributions}</p>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
-                            <div class="md:col-span-3 col-span-full">
+                            <div class="lg:col-span-3 col-span-full">
                                 <figure>
                                     <img src={project.project_asset} alt={project.title} />
                                 </figure>
@@ -81,7 +81,7 @@ const { data: projects } = projectData;
                                             <div class="pre-content-title">{common.showcased_at}</div>
                                             <div>
                                                 <span class="block font-medium text-lg my-1">{project.showcased_at}</span>
-                                                <p class="flex items-center gap-3">
+                                                <p class="flex md:flex-row flex-col md:items-center items-start gap-3">
                                                     <img src={project.flag_asset} alt={project.title} aria-label={project.title} />
                                                     <span class="text-sm">{project.location}</span>
                                                     <Badge class="badge-warning badge-sm uppercase">{project.period}</Badge>
@@ -100,7 +100,7 @@ const { data: projects } = projectData;
                                 </ul>
                             </div>
                         </div>
-                        <div class="flex justify-start md:justify-end mt-5">
+                        <div class="flex justify-end mt-5">
                             <LinkButton href={project.url} target="_blank" rel="noopener noreferrer" displayDefaultIcon>
                                 {common.view_more}
                             </LinkButton>
