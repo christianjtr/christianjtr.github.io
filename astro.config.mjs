@@ -9,4 +9,6 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   i18n: i18nLocalesConfig,
+  site: 'https://christianjtr.github.io',
+  base: '/christianjtr.github.io',
 });
