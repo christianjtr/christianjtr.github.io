@@ -55,7 +55,7 @@
         "location": "Houston TX, USA",
         "flag": "🇺🇲",
         "flag_asset": "/src/assets/svg/flag_usa.svg",
-        "project_asset": "@assets/images/sipo_project.png",
+        "project_asset": "/src/assets/images/sipo_project.png",
         "owner": "© Petroleum of Venezuela (PDVSA)",
         "url": "https://www.searchanddiscovery.com/pdfz/documents/2011/40798garcia/ndx_garcia.pdf.html",
         "period": "August 2011",
