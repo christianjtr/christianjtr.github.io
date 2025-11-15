@@ -54,14 +54,14 @@ const { section_about, common } = (entry?.data as AboutMeData) || {};
             <span class="block text-xl">{section_about.hobbies}</span>
             <span class="block text-xs my-3 text-info-content-color">{section_about.language_tip}</span>
         </div>
-        <div class="col-span-6 flex items-center">
+        <div class="col-span-full lg:col-span-6 flex items-center">
             <div class="stats stats-vertical md:stats-horizontal w-full">
                 {section_about.languages.map((language: any) => (
                     <div class="stat space-y-1">
                         <div class="stat-figure text-4xl">{language.emoji}</div>
                         <div class="stat-value font-semibold text-xl">{language.name}</div>
                         <div class="stat-desc text-info-content-color">{language.proficiency}</div>
-                        <progress class="progress progress-primary w-40" value={language.value} max="100" />
+                        <progress class="progress progress-primary w-20 lg:w-40" value={language.value} max="100" />
                     </div>
                 ))}
             </div>
@@ -74,7 +74,7 @@ const { section_about, common } = (entry?.data as AboutMeData) || {};
         </div>
         <div class="col-span-5">
             <div class="divider divider-end flex items-center">
-                <p class="tooltip tooltip-primary tooltip-left lg:tooltip-top dark:tooltip-secondary" data-tip={section_about.v_shaped_explanation}>
+                <p class="tooltip tooltip-primary tooltip-left lg:tooltip-top before:max-w-48 dark:tooltip-secondary" data-tip={section_about.v_shaped_explanation}>
                     <span class="uppercase font-semibold text-primary dark:text-secondary cursor-pointer">{section_about.v_shaped_profile}</span>
                 </p>
                 <Image src={CrystalBallAnimation} width="48" height="40" alt="Crystal ball" aria-label="Crystal ball"/>
@@ -221,6 +221,8 @@ const { section_about, common } = (entry?.data as AboutMeData) || {};
 </style>
 
 <script>
+    const body = document.body;
+    
     const FLIP_CLASS = 'is-flipped';
     const flipCards = document.querySelectorAll('.card-informative');
 
@@ -241,4 +243,22 @@ const { section_about, common } = (entry?.data as AboutMeData) || {};
             });
         });
     }
+
+    body.addEventListener('touchstart', unflipAllCards);
+    
+    function unflipAllCards(event: TouchEvent) {
+        let isCard = false;
+        let target = event.target as HTMLElement | null;
+        
+        while (target && target !== body) {
+            if (target.classList.contains('card-informative')) {
+                isCard = true;
+                break;
+            }
+            target = target.parentElement;
+        }
+        if (!isCard) {
+            flipCards.forEach(card => card.classList.remove(FLIP_CLASS));
+    }
+}
 </script>
