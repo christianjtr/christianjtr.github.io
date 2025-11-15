@@ -7,7 +7,7 @@ import type { Experience } from '@schemas/ExperienceSchema';
 import type { Study } from '@schemas/StudySchema';
 import type { AboutMeData } from '@schemas/AboutMeSchema';
 import { CONTENT } from '@app-types/Content';
-import { Badge, BadgeList, Section, VerticalSpacer } from "../";
+import { Badge, BadgeList, Section, VerticalSpacer, AsyncImage } from "../";
 import Logo from '@assets/svg/background.svg';
 import BuildingIcon from '@assets/svg/building.svg';
 import AcademicCapIcon from '@assets/svg/academic_cap.svg';
@@ -136,7 +136,7 @@ const backgroundItems: Background[] = [
                             <span class="text-sm text-info-content-color block mb-2">{item.category}</span>
                             <Badge class="badge-sm badge-primary font-semibold uppercase text-white h-fit">{item.period}</Badge>
                             <p class="flex gap-2 items-center md:text-lg">
-                                <img src={item.flag_asset} alt={item.country} />
+                                <AsyncImage imagePath={item.flag_asset} title={item.country} />
                                 <span class="block">{item.country}</span>
                             </p>
                         </div>
