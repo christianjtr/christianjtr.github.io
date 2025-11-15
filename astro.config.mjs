@@ -1,15 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-import tailwindcss from "@tailwindcss/vite";
-
-export const i18nLocalesConfig = {
-  locales: ["es", "en", "fr"],
-  defaultLocale: "en",
-  routing: {
-    prefixDefaultLocale: true,
-    redirectToDefaultLocale: true
-  }
-}
+import tailwindcss from '@tailwindcss/vite';
+import { i18nLocalesConfig } from './i18n.config.mjs';
 
 // https://astro.build/config
 export default defineConfig({
@@ -17,7 +9,4 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   i18n: i18nLocalesConfig,
-  base: '/christianjtr.github.io/',
-  site: 'https://christianjtr.github.io',
-  outDir: './dist',
 });
