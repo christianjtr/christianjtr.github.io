@@ -5,7 +5,7 @@ import type { ContentDataEntryType } from '@app-types/Content';
 import type { Project } from '@schemas/ProjectSchema';
 import type { AboutMeData } from '@schemas/AboutMeSchema';
 import { CONTENT } from '@app-types/Content';
-import { LinkButton, Section, BadgeList, Badge } from "../";
+import { LinkButton, Section, BadgeList, Badge, AsyncImage } from "../";
 import Logo from '@assets/svg/projects.svg';
 import PinIcon from '@assets/svg/pin.svg';
 import PenIcon from '@assets/svg/pen.svg';
@@ -31,7 +31,7 @@ const { data: projects } = projectData;
         <div class="px-5 md:px-14">
             {projects.map((project: Project, index: number) => (
                 <div class="collapse collapse-arrow" tabindex={index + 1}>
-                    <input type="radio" name="project" aria-hidden="true" />
+                    <input type="radio" name="project" aria-hidden="true" checked={index === 0} />
                     <div class="collapse-title">
                         <div class="block avatar avatar-placeholder grow-0">
                             <div class="bg-primary text-neutral w-14 rounded-full">
@@ -71,7 +71,7 @@ const { data: projects } = projectData;
                             </div>
                             <div class="lg:col-span-3 col-span-full">
                                 <figure>
-                                    <img src={project.project_asset} alt={project.title} />
+                                    <AsyncImage imagePath={project.project_asset} title={project.title} />
                                 </figure>
                                 <br />
                                 <ul class="list">
@@ -82,7 +82,7 @@ const { data: projects } = projectData;
                                             <div>
                                                 <span class="block font-medium text-lg my-1">{project.showcased_at}</span>
                                                 <p class="flex md:flex-row flex-col md:items-center items-start gap-3">
-                                                    <img src={project.flag_asset} alt={project.title} aria-label={project.title} />
+                                                    <AsyncImage imagePath={project.flag_asset} title={project.location} />
                                                     <span class="text-sm">{project.location}</span>
                                                     <Badge class="badge-warning badge-sm uppercase">{project.period}</Badge>
                                                 </p>

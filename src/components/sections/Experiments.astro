@@ -5,7 +5,7 @@ import type { ContentDataEntryType } from '@app-types/Content';
 import type { AboutMeData } from '@schemas/AboutMeSchema';
 import type { Experiment, ExperimentRole } from '@schemas/ExperimentSchema';
 import { CONTENT } from '@app-types/Content';
-import { BadgeList, LinkButton, Section, Badge } from "../";
+import { BadgeList, LinkButton, Section, Badge, AsyncImage } from "../";
 import Logo from '@assets/svg/case_of_studies.svg';
 
 const roleIcons: Record<ExperimentRole, string> = {
@@ -33,7 +33,7 @@ const { data: experiments } = experimentsData;
             {experiments.map((experiment: Experiment) => (
                 <div class="card">
                     <figure>
-                        <img src={experiment.image} alt={experiment.title} aria-label={experiment.title} />
+                        <AsyncImage imagePath={experiment.image} title={experiment.title} />
                     </figure>
                     <div class="card-body p-8">
                         <div class="card-pre-content-wrapper">

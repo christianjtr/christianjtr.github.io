@@ -6,3 +6,4 @@ export { default as Section } from './Section.astro';
 export { default as ExternalLinkIcon } from './ExternalLinkIcon.astro';
 export { default as VerticalIconMenu } from './VerticalIconMenu.astro';
 export { default as HeadingContextMenu } from './HeadingContextMenu.astro';
+export { default as AsyncImage } from './AsyncImage.astro';

@@ -28,6 +28,7 @@ interface Background {
     country: string;
     topics: string[];
     category: string;
+    contribuitions?: string[];
     type: BackgroundType;
 };
 
@@ -63,6 +64,7 @@ const backgroundItems: Background[] = [
         country: eachExperience.country,
         topics: eachExperience.technologies,
         category: eachExperience.sector,
+        contribuitions: eachExperience.contribuitions,
         type: "work" as BackgroundType
     })),
     ...studies.map((eachStudy: Study) => ({
@@ -143,7 +145,16 @@ const backgroundItems: Background[] = [
                             <h2 class="text-2xl font-medium mb-5">
                                 {item.title} {item.isOngoing && <Badge class="badge-sm badge-accent uppercase">{common.ongoing}</Badge>}
                             </h2>
-                            <p class="card-content leading-8">{item.description}</p>
+                            <p class="card-content leading-8 mb-3">{item.description}</p>
+                            <div tabindex="0" class="collapse collapse-arrow dark:bg-primary/5 px-3">
+                                <div class="collapse-title p-3 font-semibold text-sm flex items-center">
+                                    {item.type === "work" && <>{common.technologies}</>}
+                                    {item.type === "study" && <>{common.subjects}</>}
+                                </div>
+                                <div class="collapse-content text-sm">
+                                    <BadgeList items={item.topics} badgeClass="badge-sm badge-soft" />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 ))}

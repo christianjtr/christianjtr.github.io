@@ -1,0 +1,28 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
+const { imagePath, title } = Astro.props;
+
+const matches = import.meta.glob<{ default: ImageMetadata }>("/src/assets/**/*.{jpeg,jpg,png,gif,svg,webp}");
+const imageLoader = matches[imagePath];
+
+let imageModule = null;
+if (imageLoader) {
+    imageModule = (await imageLoader()).default;
+} else {
+    console.warn(`[AsyncImage] Could not find asset for path: ${imagePath}`);
+}
+---
+
+{imageModule ? (
+    <Image 
+        src={imageModule} 
+        alt={`Image for ${title}`} 
+        aria-label={title}
+        loading="lazy"
+        inferSize
+    />
+) : (
+    <span>Image Missing: {imagePath}</span>
+)}
