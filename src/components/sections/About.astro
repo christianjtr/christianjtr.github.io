@@ -222,13 +222,18 @@ const { section_about, common } = (entry?.data as AboutMeData) || {};
 
 <script>
     const FLIP_CLASS = 'is-flipped';
-    const flipCards = document.querySelectorAll('.card-informative') as NodeListOf<HTMLDivElement>;
+    const flipCards = document.querySelectorAll('.card-informative');
 
     if (flipCards.length > 0) {
         flipCards.forEach(card => {
-            card.addEventListener('touchstart', () => {
+            card.addEventListener('touchstart', (event) => {
+                event.preventDefault(); 
+                
                 const wasFlipped = card.classList.contains(FLIP_CLASS);
-                flipCards.forEach(otherCard => otherCard.classList.remove(FLIP_CLASS));
+                
+                flipCards.forEach(otherCard => {
+                    otherCard.classList.remove(FLIP_CLASS);
+                });
                 
                 if (!wasFlipped) {
                     card.classList.add(FLIP_CLASS);
