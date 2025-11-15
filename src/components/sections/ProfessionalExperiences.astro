@@ -177,7 +177,7 @@ const backgroundItems: Background[] = [
                                         <span class="text-sm">{item.category}</span>
                                     </p>
                                     <p class="flex gap-3 items-center text-info-content-color">
-                                        <img src={item.flag_asset} alt={item.country} width={28} height={28} alt={item.country} aria-label={item.country} />
+                                        <AsyncImage imagePath={item.flag_asset} title={item.country} width={28} height={28} />
                                         <span class="text-sm">{item.country}</span>
                                     </p>
                                 </div>
