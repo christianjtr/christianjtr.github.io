@@ -16,36 +16,42 @@ const copyrights = `Copyrights © ${new Date().getFullYear()}`;
 ---
 
 <footer>
-  <nav>
-    <p class="space-y-0.5">
-      <span class="block text-lg font-semibold" set:html={section_about.my_name}></span>
-      <span class="uppercase text-xs">{copyrights}</span>
-    </p>
-  </nav>
-  <nav>
-    <h6 class="footer-title">{footer.powered_and_themed_by}</h6>
-    <div class="links-container">
-      <a href="https://astro.build" target="_blank" rel="noopener noreferrer">
-        <AstroIcon class="w-24" />
-      </a>
-      <a href="https://daisyui.com" target="_blank" rel="noopener noreferrer">
-        <DaisyUIIcon class="w-24" />
-      </a>
-    </div>
-  </nav>
-  <nav>
-    <h6 class="footer-title">{footer.assets}</h6>
-    <div class="links-container">
-        <a href="https://www.svgrepo.com" target="_blank" rel="noopener noreferrer" class="link link-hover">SVG Repo</a>
-        <a href="https://googlefonts.github.io/noto-emoji-animation" target="_blank" rel="noopener noreferrer" class="link link-hover">Animated Emoji</a>
-    </div>
-  </nav>
+  <div>
+    <nav>
+      <p class="space-y-0.5">
+        <span class="block text-lg font-semibold" set:html={section_about.my_name}></span>
+        <span class="uppercase text-xs">{copyrights}</span>
+      </p>
+    </nav>
+    <nav>
+      <h6 class="footer-title">{footer.powered_and_themed_by}</h6>
+      <div class="links-container">
+        <a href="https://astro.build" target="_blank" rel="noopener noreferrer">
+          <AstroIcon class="w-24" />
+        </a>
+        <a href="https://daisyui.com" target="_blank" rel="noopener noreferrer">
+          <DaisyUIIcon class="w-24" />
+        </a>
+      </div>
+    </nav>
+    <nav>
+      <h6 class="footer-title">{footer.assets}</h6>
+      <div class="links-container">
+          <a href="https://www.svgrepo.com" target="_blank" rel="noopener noreferrer" class="link link-hover">SVG Repo</a>
+          <a href="https://googlefonts.github.io/noto-emoji-animation" target="_blank" rel="noopener noreferrer" class="link link-hover">Animated Emoji</a>
+      </div>
+    </nav>
+  </div>
 </footer>
 
 <style>
     @reference "@styles/global.css";
     footer {
         @apply footer sm:footer-horizontal bg-neutral-800 text-neutral-content p-5 lg:py-5 lg:px-52;
+    }
+
+    footer div {
+      @apply container mx-auto flex justify-between;
     }
 
     .links-container {
