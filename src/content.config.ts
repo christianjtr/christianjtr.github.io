@@ -2,7 +2,7 @@ import { defineCollection, z, type BaseSchema } from 'astro:content';
 import { glob } from 'astro/loaders';
 import type { CollectionConfig } from 'astro/content/config';
 
-import { i18nLocalesConfig } from 'astro.config.mjs';
+import { i18nLocalesConfig } from '../i18n.config.mjs';
 
 import { AboutMeSchema } from './schemas/AboutMeSchema';
 import { CredentialSchema } from './schemas/CredentialSchema';

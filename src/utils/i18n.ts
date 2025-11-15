@@ -1,4 +1,4 @@
-import { i18nLocalesConfig } from 'astro.config.mjs';
+import { i18nLocalesConfig } from '../../i18n.config.mjs';
 
 const { defaultLocale, locales } = i18nLocalesConfig;
 
