@@ -1,5 +1,6 @@
 ---
 import { getEntry } from 'astro:content';
+import { Image } from 'astro:assets';
 
 import type { ContentDataEntryType } from '@app-types/Content';
 import { HeadingContextMenu } from '@components';
@@ -8,6 +9,7 @@ import { CONTENT } from '@app-types/Content';
 import LanguageIcon from '@assets/svg/language.svg';
 import SunIcon from '@assets/svg/sun.svg';
 import MoonIcon from '@assets/svg/moon.svg';
+import BrandIcon from '@assets/brand_logo.png';
 
 const { lang } = Astro.params;
 
@@ -20,7 +22,7 @@ const { header } = (entry?.data as AboutMeData) || {};
         <div class="navbar">
             <div class="navbar-start">
                 <a class="btn btn-link" href="/">
-                    <img src="/src/assets/brand_logo.png" width="50" height="50" alt="Brand logo" aria-label="Brand logo" />
+                    <Image src={BrandIcon} width="50" height="50" alt="Brand logo" aria-label="Brand logo" />
                 </a>
             </div>
             <div class="navbar-center hidden lg:flex lg:gap-20">
