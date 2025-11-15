@@ -10,7 +10,7 @@ const { lang } = Astro.params;
 const commonData = await getEntry(lang as ContentDataEntryType, `${lang}/${CONTENT.COMMON}`);
 const { open_graph } = (commonData?.data as AboutMeData) || {};
 
-const defaultImage = '/web_cover.png';
+const defaultImage = 'https://raw.githubusercontent.com/christianjtr/christianjtr.github.io/main/assets/web_cover.png';
 const domain = "https://github.com/";
 const siteName = 'https://christianjtr.github.io/';
 ---
