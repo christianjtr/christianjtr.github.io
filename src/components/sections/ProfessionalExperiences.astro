@@ -113,8 +113,7 @@ const backgroundItems: Background[] = [
                 </div>
             </div>
             <div class="hidden lg:block sticky-section">
-                <VerticalSpacer />
-                <div class="grid grid-cols-6 gap-8 px-0 lg:px-7">
+                <div class="grid grid-cols-6 gap-8 mt-5 px-1">
                     <h3 class="text-3xl font-semibold col-span-1">{common.experiences}</h3>
                     <div class="col-span-5">
                         <div class="divider divider-end flex items-center">
@@ -125,7 +124,7 @@ const backgroundItems: Background[] = [
                 </div>
             </div>
             <VerticalSpacer />
-            <div class="list-wrapper lg:px-7" data-layout="list">
+            <div class="list-wrapper" data-layout="list">
                 {backgroundItems.map((item: Background) => (
                     <div class="card list-card-item gap-5">
                         <div class="sm:w-1/5 lg:w-1/5 w-full p-3 space-y-3">
@@ -277,7 +276,7 @@ const backgroundItems: Background[] = [
     }
 
     .stats-content-wrapper {
-        @apply bg-base-100 w-full shadow-lg rounded-lg border border-neutral-100;
+        @apply bg-base-100 w-full shadow-lg rounded-lg border border-neutral-100 mb-4;
     }
 
     html[data-theme="dark"] .stats-content-wrapper {
