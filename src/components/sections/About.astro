@@ -30,9 +30,9 @@ const { section_about, common } = (entry?.data as AboutMeData) || {};
             <h1 class="font-semibold text-5xl lg:text-6xl leading-16" set:html={section_about.my_name_template} />
             <p class="text-lg lg:text-xl leading-8 p-2 m-0">{section_about.summary}</p>
         </div>
-        <div class="col-span-3 p-12 relative">
-            <figure class="avatar-image">
-                <Image src={MeImg} alt="My image" aria-label="My image" />
+        <div class="col-span-3 p-12 relative flex justify-center">
+            <figure class="avatar-image w-5/6 md:w-full">
+                <Image src={MeImg} alt="My image" aria-label="My image" class="md:w-full" />
             </figure>
             <div class="chat absolute top-64 left-[-30px] w-1/2 hidden lg:block">
                 <div class="chat-bubble">
@@ -48,7 +48,7 @@ const { section_about, common } = (entry?.data as AboutMeData) || {};
             </div>
         </div>
     </div>
-    <div class="md:grid md:grid-cols-8 about-me-wrapper">
+    <div class="grid md:grid-cols-8 about-me-wrapper">
         <div class="col-span-full lg:col-span-2 w-full rounded-lg">
             <span class="block font-semibold text-xl my-2">{section_about.hobbies_title}</span>
             <span class="block text-xl">{section_about.hobbies}</span>
@@ -82,8 +82,8 @@ const { section_about, common } = (entry?.data as AboutMeData) || {};
         </div>
     </div>
     <br />
-    <div class="grid sm:grid-cols-8 gap-8">
-        <div class="col-span-full sm:col-span-2">
+    <div class="grid sm:grid-cols-12 lg:grid-cols-8 gap-8">
+        <div class="col-span-full lg:col-span-2">
             <p class="flex text-xl lg:text-lg leading-8">
                 <font class="text-7xl text-primary mr-3">“</font>
                 <br />
@@ -91,7 +91,7 @@ const { section_about, common } = (entry?.data as AboutMeData) || {};
             </p>
         </div>
         {section_about.expertise.subjects.map((subject) => (
-            <div class="col-span-full sm:col-span-2">
+            <div class="col-span-full sm:col-span-4 lg:col-span-2">
                 <div class="group flex h-full w-full">
                     <div class="card-informative border border-neutral-300 transition-all duration-500 transform-3d group-hover:transform-[rotateY(180deg)]">
                         <div class="backface-hidden w-full">
@@ -105,16 +105,16 @@ const { section_about, common } = (entry?.data as AboutMeData) || {};
                                     {common.flip_to_check_stack}
                                 </span>
                             </div>
-                            <span class="block my-5 text-2xl font-medium">{subject.name}<font class="text-accent text-3xl">.</font></span>
+                            <span class="block my-5 text-xl lg:text-2xl font-medium">{subject.name}<font class="text-accent text-3xl">.</font></span>
                             <ul class="space-y-2">
                                 {subject.topics.map((topic) => (
-                                    <li class="md:text-sm text-lg text-info-content-color">{topic}</li>
+                                    <li class="text-sm md:text-lg text-info-content-color">{topic}</li>
                                 ))}
                             </ul>
                         </div>
-                        <div class="absolute inset-0 transform-[rotateY(180deg)] backface-hidden p-6 flex flex-col border border-neutral-300 rounded-lg">
+                        <div class="absolute inset-0 transform-[rotateY(180deg)] backface-hidden p-6 flex flex-col border border-neutral-300 rounded-lg overflow-y-scroll">
                             <span class="block font-semibold mb-4 text-info-content-color-backface">🕹️ {common.technologies}</span>
-                            <BadgeList items={subject.tools} badgeClass="lg:badge-sm badge-secondary" />
+                            <BadgeList items={subject.tools} badgeClass="badge-sm badge-secondary h-fit" />
                         </div>
                     </div>
                 </div>

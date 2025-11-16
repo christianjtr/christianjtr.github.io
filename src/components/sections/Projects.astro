@@ -31,7 +31,7 @@ const { data: projects } = projectData;
         <div class="px-5 md:px-14">
             {projects.map((project: Project, index: number) => (
                 <div class="collapse collapse-arrow" tabindex={index + 1}>
-                    <input type="radio" name="project" aria-hidden="true" checked={index === 0} />
+                    <input type="radio" name="project" checked={index === 0} />
                     <div class="collapse-title">
                         <div class="block avatar avatar-placeholder grow-0">
                             <div class="bg-primary text-neutral w-14 rounded-full">
