@@ -148,7 +148,8 @@
                         "Analytical Skills",
                         "Data Engineering and Modeling",
                         "ETL/DWH design",
-                        "Data Visualization"
+                        "Data Visualization",
+                        "Data Cleansing"
                     ],
                     "tools": [
                         "SQL Server Analysis Services",
@@ -157,7 +158,8 @@
                         "NoSQL",
                         "Pentaho BI",
                         "Tableau",
-                        "PowerBI"
+                        "PowerBI",
+                        "BigQuery"
                     ]
                 }
             ]

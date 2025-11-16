@@ -148,7 +148,8 @@
                         "Compétences Analytiques",
                         "Ingénierie et Modélisation de Données",
                         "ETL/DWH modélisation",
-                        "Visualisation de Données"
+                        "Visualisation de Données",
+                        "Nettoyage des données"
                     ],
                     "tools": [
                         "SQL Server Analysis Services",
@@ -157,7 +158,8 @@
                         "NoSQL",
                         "Pentaho BI",
                         "Tableau",
-                        "PowerBI"
+                        "PowerBI",
+                        "BigQuery"
                     ]
                 }
             ]
