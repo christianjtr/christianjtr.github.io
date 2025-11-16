@@ -1,6 +1,9 @@
 @import "tailwindcss";
 @import "@styles/variables/colors.css";
 @plugin "@tailwindcss/typography";
+@theme {
+    --font-sans: "Lato", sans-serif;
+}
 @plugin "daisyui" {
     themes: light --default, dark --prefersdark;
 }
