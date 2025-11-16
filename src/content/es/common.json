@@ -115,7 +115,8 @@
                         "Atlassian Suite (Jira, Confluence)",
                         "Sketch, Figma, Zeplin",
                         "Notion, Slack, Microsoft Teams",
-                        "GitHub, BitBucket"
+                        "GitHub, BitBucket",
+                        "Amazon Web Services"
                     ]
                 },
                 {
@@ -124,7 +125,8 @@
                     "topics": [
                         "Web apps y Diseño de Sistemas",
                         "APIs e integración de servicios",
-                        "Pruebas y automatización"
+                        "Pruebas y automatización",
+                        "Entornos cloud (AWS)"
                     ],
                     "tools": [
                         "JavaScript, TypeScript",
@@ -145,7 +147,9 @@
                     "topics": [
                         "Habilidades analíticas",
                         "Ingeniería y Modelado de Datos",
-                        "ETL/DWH y Visualización de Datos"
+                        "Diseño de ETL/DWH",
+                        "ETL/DWH design",
+                        "Visualización de Datos"
                     ],
                     "tools": [
                         "SQL Server Analysis Services",
