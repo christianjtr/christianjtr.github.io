@@ -12,6 +12,7 @@ const { lang } = Astro.params;
 const entry = await getEntry(lang as ContentDataEntryType, `${lang}/${CONTENT.COMMON}`);
 const { section_about, footer } = (entry?.data as AboutMeData) || {};
 
+const appVersion = __APP_VERSION__;
 const copyrights = `Copyrights © ${new Date().getFullYear()}`;
 ---
 
@@ -20,7 +21,8 @@ const copyrights = `Copyrights © ${new Date().getFullYear()}`;
     <nav>
       <p class="space-y-0.5">
         <span class="block text-lg font-semibold" set:html={section_about.my_name}></span>
-        <span class="uppercase text-xs">{copyrights}</span>
+        <span class="uppercase block text-xs">{copyrights}</span>
+        <span class="block text-xs">v{appVersion}</span>
       </p>
     </nav>
     <nav>
