@@ -93,7 +93,7 @@ const { section_about, common } = (entry?.data as AboutMeData) || {};
         {section_about.expertise.subjects.map((subject) => (
             <div class="col-span-full sm:col-span-4 lg:col-span-2">
                 <div class="group flex h-full w-full">
-                    <div class="card-informative border border-neutral-300 transition-all duration-500 transform-3d group-hover:transform-[rotateY(180deg)]">
+                    <div class="card-informative border border-neutral-300 transition-all duration-800 transform-3d group-hover:transform-[rotateY(180deg)]">
                         <div class="backface-hidden w-full">
                             <div class="flex justify-between items-center align-middle">
                                 <div class="card-informative-icon-wrapper">
@@ -132,7 +132,7 @@ const { section_about, common } = (entry?.data as AboutMeData) || {};
     .card-informative {
         @apply p-6 rounded-lg flex w-full;
     }
-    
+
     .card-informative.is-flipped {
         transform: rotateY(180deg);
     }

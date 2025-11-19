@@ -26,7 +26,7 @@ const { data: projects } = projectData;
 <div class="bg-primary/5 py-10" id={header.main_sections[0].anchorId}>
     <br />
     <Section headingTitle={section_projects.title} subtitle={section_projects.subtitle} class="container mx-auto">
-        <Logo slot="beforeHeading" width={96} height={96} />
+        <Logo slot="beforeHeading" width={128} height={128} />
         <br />
         <div class="px-5 md:px-14">
             {projects.map((project: Project, index: number) => (
@@ -52,14 +52,14 @@ const { data: projects } = projectData;
                             <div class="lg:col-span-2 col-span-full">
                                 <ul class="list">
                                     <li class="list-row hover:bg-primary/5">
-                                        <BookIcon width={32} height={32} />
+                                        <BookIcon width={24} height={24} />
                                         <div class="list-col-grow">
                                             <span class="pre-content-title">{common.overview}</span>
                                             <p>{project.overview}</p>
                                         </div>
                                     </li>
                                     <li class="list-row hover:bg-primary/5">
-                                        <PenIcon width={32} height={32} />
+                                        <PenIcon width={24} height={24} />
                                         <div class="list-col-grow">
                                             <span class="pre-content-title">{common.contribuition}</span>
                                             <br />
@@ -76,7 +76,7 @@ const { data: projects } = projectData;
                                 <br />
                                 <ul class="list">
                                     <li class="list-row hover:bg-primary/5">
-                                        <PinIcon width={32} height={32} />
+                                        <PinIcon width={24} height={24} />
                                         <div class="list-col-grow">
                                             <div class="pre-content-title">{common.showcased_at}</div>
                                             <div>
@@ -90,7 +90,7 @@ const { data: projects } = projectData;
                                         </div>
                                     </li>
                                     <li class="list-row hover:bg-primary/5">
-                                        <MonitorIcon width={32} height={32} />
+                                        <MonitorIcon width={24} height={24} />
                                         <div class="list-col-grow">
                                             <span class="pre-content-title">{common.technologies}</span>
                                             <br />
