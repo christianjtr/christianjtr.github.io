@@ -48,6 +48,23 @@
         "url": null
     },
     {
+        "id": "project-agent-orchestrator",
+        "section": "experiments",
+        "title": "Orquestador de Agentes: Telemetría de IA en Tiempo Real",
+        "description": "Un panel de monitoreo que proporciona estado y telemetría en tiempo real para agentes de IA simulados. La arquitectura aprovecha Vue 3, TypeScript y Docker multi-etapa optimizadas, centrándose en alto rendimiento y mantenibilidad a través de capas de servicio y composables desacopladas.",
+        "image": "/src/assets/images/agent-orchestrator.png",
+        "tags": [
+            "Vue 3 / TypeScript",
+            "Real-Time / WebSockets",
+            "Docker / NGINX",
+            "Tailwind CSS / Responsiveness"
+        ],
+        "role": "Author",
+        "type": "Dashboard / Monitoreo",
+        "category": "Prueba de Concepto (PoC)",
+        "url": null
+    },
+    {
         "id": "experiment-idea-cultural-activities-app",
         "section": "experiments",
         "title": "Idea: Aplicación para la promoción de actividades culturales",

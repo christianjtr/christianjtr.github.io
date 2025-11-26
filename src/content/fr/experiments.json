@@ -48,6 +48,23 @@
         "url": null
     },
     {
+        "id": "project-agent-orchestrator",
+        "section": "experiments",
+        "title": "Tableau de Bord de l'Orchestrateur d'Agents : Télémétrie IA en Temps Réel",
+        "description": "Un tableau de bord de surveillance fournissant l'état et la télémétrie en temps réel pour des agents IA simulés. L'architecture utilise Vue 3, TypeScript et des constructions Docker multi-étapes optimisées, se concentrant sur les hautes performances et la maintenabilité grâce à des couches de service et des 'composables' découplées.",
+        "image": "/src/assets/images/agent-orchestrator.png",
+        "tags": [
+            "Vue 3 / TypeScript",
+            "Real-Time / WebSockets",
+            "Docker / NGINX",
+            "Tailwind CSS / Responsiveness"
+        ],
+        "role": "Author",
+        "type": "Tableau de Bord / Surveillance",
+        "category": "Preuve de Concept (PoC)",
+        "url": null
+    },
+    {
         "id": "experiment-idea-cultural-activities-app",
         "section": "experiments",
         "title": "Idée : Application pour la promotion d'activités culturelles",
