@@ -91,7 +91,7 @@ const backgroundItems: Background[] = [
 <div class="bg-primary/5 py-10" id={header.main_sections[2].anchorId}>
     <br />
     <Section headingTitle={section_experiences.title} subtitle={section_experiences.subtitle} class="container mx-auto">
-        <Logo slot="beforeHeading" width={128} height={128} />
+        <Logo slot="beforeHeading" width={96} height={96} />
         <br />
         <div class="px-5 md:px-14">
             <div class="stats md:stats-horizontal stats-vertical stats-content-wrapper">
@@ -99,16 +99,16 @@ const backgroundItems: Background[] = [
                     <Image src={WorldAnimation} alt="World" width="40" height="40" aria-label="World" class="stat-figure hidden lg:block" />
                     <span class="stat-title uppercase">{section_experiences.companies_and_countries_lived_in}</span>
                     <span class="stat-value">0{uniqueCountries.length}</span>
-                    <span class="stat-desc whitespace-normal lg:whitespace-nowrap">{section_experiences.collaborated_with}</span>
+                    <span class="stat-desc whitespace-normal text-sm lg:whitespace-nowrap">{section_experiences.collaborated_with}</span>
                     <div class="stat-actions">
-                        <BadgeList badgeClass='badge-secondary' items={section_experiences.full_countries} />
+                        <BadgeList badgeClass='badge-secondary badge-lg' items={section_experiences.full_countries} />
                     </div>
                 </div>
                 <div class="stat w-full">
                     <Image src={AcademicCapAnimation} width="55" height="55" alt="Academic Cap" aria-label="Academic Cap" class="stat-figure hidden lg:block" />
                     <span class="stat-title uppercase">{common.formal_studies_taken}</span>
                     <span class="stat-value">0{studies.length}</span>
-                    <span class="stat-desc">{common.educational_level}</span>
+                    <span class="stat-desc text-sm">{common.educational_level}</span>
                     <span class="stat-actions font-semibold text-xl">{section_studies.educational_level}</span>
                 </div>
             </div>
@@ -317,7 +317,7 @@ const backgroundItems: Background[] = [
     }
 
     .stat-value {
-        @apply font-semibold text-primary text-5xl;
+        @apply text-primary text-6xl;
     }
 
     .stat-desc {
