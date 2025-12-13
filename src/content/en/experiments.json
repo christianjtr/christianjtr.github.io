@@ -52,7 +52,7 @@
         "section": "experiments",
         "title": "Agent Orchestrator Dashboard: Real-Time AI Telemetry",
         "description": "A monitoring dashboard providing real-time status and telemetry for simulated AI agents. The architecture leverages Vue 3, TypeScript, and optimized Docker multi-stage builds, focusing on high performance and maintainability through decoupled service and composable layers.",
-        "image": "/src/assets/images/agent-orchestrator.png",
+        "image": "/src/assets/images/agent-orchestrator.jpg",
         "tags": [
             "Vue 3 / TypeScript",
             "Real-Time / WebSockets",
