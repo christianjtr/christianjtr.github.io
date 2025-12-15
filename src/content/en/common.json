@@ -18,8 +18,8 @@
         "educational_level": "Eductational level",
         "formal_studies_taken": "Formal Studies Taken",
         "experiences": "Experiences",
-        "list": "📋 List",
-        "timeline": "⏳ Timeline",
+        "list": "☰ List",
+        "timeline": "⇢ Timeline",
         "flip_to_check_stack": "Check Stack →"
     },
     "open_graph": {
