@@ -102,21 +102,19 @@
                     "name": "Ingeniería de Producto",
                     "category": "product",
                     "topics": [
-                        "Liderazgo Ágil",
+                        "Liderazgo Ágil y Mentoría",
                         "Product Ownership e Ideación",
-                        "Coaching y Mentoría",
                         "Investigación Tecnológica",
                         "Marketing Digital"
                     ],
                     "tools": [
                         "Segment, Amplitude",
-                        "Google Analytics Ads",
-                        "Goole Maps, CESIUM, Mapbox",
+                        "Google Ads, Maps",
+                        "CESIUM, Mapbox",
                         "Atlassian Suite (Jira, Confluence)",
                         "Sketch, Figma, Zeplin",
-                        "Notion, Slack, Microsoft Teams",
-                        "GitHub, BitBucket",
-                        "Amazon Web Services"
+                        "Notion, Slack, MS Teams",
+                        "GitHub, BitBucket"
                     ]
                 },
                 {
@@ -126,19 +124,21 @@
                         "Web apps y Diseño de Sistemas",
                         "APIs e integración de servicios",
                         "Pruebas y automatización",
-                        "Entornos cloud (AWS)"
+                        "Entornos en la nube (AWS)"
                     ],
                     "tools": [
                         "JavaScript, TypeScript",
                         "React, Vue, Svelte, Astro",
-                        "Zod, ORMs (Sequelize)",
-                        "Jest, Cypress, Web bundlers",
-                        "NodeJS, GraphQL, REST APIs",
+                        "Zod, ORMs",
+                        "Test Suites (Jest, Cypress)",
+                        "Web bundlers (Webpack, Vite)",
+                        "GraphQL",
+                        "RESTFull APIs",
+                        "NodeJS",
                         "Python",
                         "R Statistics",
-                        "MySQL, PostgreSQL",
-                        "MongoDB",
-                        "Redis"
+                        "AWS",
+                        "Sentry"
                     ]
                 },
                 {
@@ -146,21 +146,23 @@
                     "category": "data",
                     "topics": [
                         "Habilidades analíticas",
-                        "Ingeniería y Modelado de Datos",
                         "Diseño de ETL/DWH",
-                        "ETL/DWH design",
-                        "Visualización de Datos",
-                        "Limpieza de Datos"
+                        "Visualización y Limpieza de Datos",
+                        "Reportes"
                     ],
                     "tools": [
                         "SQL Server Analysis Services",
                         "SQL Server Integration Services",
-                        "Bases de Datos Relacionales",
+                        "Relational Databases",
                         "NoSQL",
                         "Pentaho BI",
                         "Tableau",
                         "PowerBI",
-                        "BigQuery"
+                        "BigQuery",
+                        "MySQL",
+                        "PostgreSQL",
+                        "MongoDB",
+                        "Redis"
                     ]
                 }
             ]

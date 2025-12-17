@@ -102,21 +102,19 @@
                     "name": "Ingénierie Produit",
                     "category": "product",
                     "topics": [
-                        "Leadership Agile",
+                        "Leadership Agile et Mentorat",
                         "Propriété et Idéation de Produit",
-                        "Coaching et Mentorat",
                         "Recherche Technologique",
                         "Marketing Numérique"
                     ],
                     "tools": [
                         "Segment, Amplitude",
-                        "Google Analytics Ads",
-                        "Goole Maps, CESIUM, Mapbox",
+                        "Google Ads, Maps",
+                        "CESIUM, Mapbox",
                         "Atlassian Suite (Jira, Confluence)",
                         "Sketch, Figma, Zeplin",
-                        "Notion, Slack, Microsoft Teams",
-                        "GitHub, BitBucket",
-                        "Amazon Web Services"
+                        "Notion, Slack, MS Teams",
+                        "GitHub, BitBucket"
                     ]
                 },
                 {
@@ -131,14 +129,16 @@
                     "tools": [
                         "JavaScript, TypeScript",
                         "React, Vue, Svelte, Astro",
-                        "Zod, ORMs (Sequelize)",
-                        "Jest, Cypress, Web bundlers",
-                        "NodeJS, GraphQL, APIs REST",
+                        "Zod, ORMs",
+                        "Test Suites (Jest, Cypress)",
+                        "Web bundlers (Webpack, Vite)",
+                        "GraphQL",
+                        "RESTFull APIs",
+                        "NodeJS",
                         "Python",
                         "R Statistics",
-                        "MySQL, PostgreSQL",
-                        "MongoDB",
-                        "Redis"
+                        "AWS",
+                        "Sentry"
                     ]
                 },
                 {
@@ -146,20 +146,23 @@
                     "category": "data",
                     "topics": [
                         "Compétences Analytiques",
-                        "Ingénierie et Modélisation de Données",
                         "ETL/DWH modélisation",
-                        "Visualisation de Données",
-                        "Nettoyage des données"
+                        "Visualisation et Nettoyage de Données",
+                        "Reporting"
                     ],
                     "tools": [
                         "SQL Server Analysis Services",
                         "SQL Server Integration Services",
-                        "Bases de Données Relationnelles",
+                        "Relational Databases",
                         "NoSQL",
                         "Pentaho BI",
                         "Tableau",
                         "PowerBI",
-                        "BigQuery"
+                        "BigQuery",
+                        "MySQL",
+                        "PostgreSQL",
+                        "MongoDB",
+                        "Redis"
                     ]
                 }
             ]

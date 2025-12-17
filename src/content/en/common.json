@@ -102,21 +102,19 @@
                     "name": "Product Engineering",
                     "category": "product",
                     "topics": [
-                        "Agile Leadership",
+                        "Agile Leadership and Mentorship",
                         "Product Ownership and Ideation",
-                        "Coaching and Mentorship",
                         "Tech Research",
                         "Digital Marketing"
                     ],
                     "tools": [
                         "Segment, Amplitude",
-                        "Google Analytics Ads",
-                        "Goole Maps, CESIUM, Mapbox",
+                        "Google Ads, Maps",
+                        "CESIUM, Mapbox",
                         "Atlassian Suite (Jira, Confluence)",
                         "Sketch, Figma, Zeplin",
-                        "Notion, Slack, Microsoft Teams",
-                        "GitHub, BitBucket",
-                        "Amazon Web Services"
+                        "Notion, Slack, MS Teams",
+                        "GitHub, BitBucket"
                     ]
                 },
                 {
@@ -124,21 +122,23 @@
                     "category": "coding",
                     "topics": [
                         "Web apps and Design Systems",
-                        "APIs and integrating services",
+                        "APIs and service integration",
                         "Testing and automation",
                         "Cloud environments (AWS)"
                     ],
                     "tools": [
                         "JavaScript, TypeScript",
                         "React, Vue, Svelte, Astro",
-                        "Zod, ORMs (Sequelize)",
-                        "Jest, Cypress, Web bundlers",
-                        "NodeJS, GraphQL, REST APIs",
+                        "Zod, ORMs",
+                        "Test Suites (Jest, Cypress)",
+                        "Web bundlers (Webpack, Vite)",
+                        "GraphQL",
+                        "RESTFull APIs",
+                        "NodeJS",
                         "Python",
                         "R Statistics",
-                        "MySQL, PostgreSQL",
-                        "MongoDB",
-                        "Redis"
+                        "AWS",
+                        "Sentry"
                     ]
                 },
                 {
@@ -146,10 +146,9 @@
                     "category": "data",
                     "topics": [
                         "Analytical Skills",
-                        "Data Engineering and Modeling",
-                        "ETL/DWH design",
-                        "Data Visualization",
-                        "Data Cleansing"
+                        "ETL/DWH Modeling",
+                        "Data Cleansing and Visualization",
+                        "Reporting"
                     ],
                     "tools": [
                         "SQL Server Analysis Services",
@@ -159,7 +158,11 @@
                         "Pentaho BI",
                         "Tableau",
                         "PowerBI",
-                        "BigQuery"
+                        "BigQuery",
+                        "MySQL",
+                        "PostgreSQL",
+                        "MongoDB",
+                        "Redis"
                     ]
                 }
             ]
