@@ -14,4 +14,5 @@ export default defineConfig({
   },
   i18n: i18nLocalesConfig,
   site: 'https://christianjtr.github.io',
+  output: "server"
 });
