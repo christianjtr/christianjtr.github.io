@@ -101,7 +101,7 @@ const { section_about, common } = (entry?.data as AboutMeData) || {};
                                     {subject.category === "coding" && <CodeFileIcon width={42} height={42} />}
                                     {subject.category === "data" && <MagicStickIcon width={42} height={42} />}
                                 </div>
-                                <span class="text-sm font-semibold block lg:w-full text-right text-secondary dark:text-warning">
+                                <span class="font-semibold block lg:w-full text-right text-secondary dark:text-warning">
                                     {common.flip_to_check_stack}
                                 </span>
                             </div>
@@ -113,7 +113,6 @@ const { section_about, common } = (entry?.data as AboutMeData) || {};
                             </ul>
                         </div>
                         <div class="absolute inset-0 transform-[rotateY(180deg)] backface-hidden p-6 flex flex-col border border-neutral-300 rounded-lg overflow-y-scroll">
-                            <span class="block font-semibold mb-4 text-info-content-color-backface">🕹️ {common.technologies}</span>
                             <BadgeList items={subject.tools} badgeClass="badge-sm badge-secondary h-fit" />
                         </div>
                     </div>
@@ -122,7 +121,7 @@ const { section_about, common } = (entry?.data as AboutMeData) || {};
         ))}
     </div>
 </div>
-<br />
+<VerticalSpacer />
 <Credentials />
 <VerticalSpacer />
 
