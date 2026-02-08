@@ -93,8 +93,8 @@ const backgroundItems: Background[] = [
         type: "study" as BackgroundType,
     })),
 ].sort((a, b) => {
-    const yearA = a.end_year;
-    const yearB = b.end_year;
+    const yearA = a.end_year ?? Infinity;
+    const yearB = b.end_year ?? Infinity;
     return yearB - yearA;
 });
 ---
