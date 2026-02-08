@@ -30,6 +30,7 @@ interface Background {
     category: string;
     contributions?: string[];
     type: BackgroundType;
+    location: string;
 }
 
 const backgroundTypeIcons: Record<BackgroundType, string> = {
@@ -76,6 +77,7 @@ const backgroundItems: Background[] = [
         topics: eachExperience.technologies,
         category: eachExperience.sector,
         contributions: eachExperience.contributions,
+        location: eachExperience.location,
         type: "work" as BackgroundType,
     })),
     ...studies.map((eachStudy: Study) => ({
@@ -90,6 +92,7 @@ const backgroundItems: Background[] = [
         country: eachStudy.country,
         topics: eachStudy.topics,
         category: eachStudy.subject,
+        location: eachStudy.location,
         type: "study" as BackgroundType,
     })),
 ].sort((a, b) => {
@@ -225,7 +228,7 @@ const backgroundItems: Background[] = [
                                 <span class="pre-title-text block mb-1">
                                     {item.organization}
                                 </span>
-                                <h2 class="text-2xl font-medium mb-5">
+                                <h2 class="text-2xl font-medium">
                                     {item.title}{" "}
                                     {item.isOngoing && (
                                         <Badge class="badge-sm badge-accent uppercase">
@@ -233,6 +236,9 @@ const backgroundItems: Background[] = [
                                         </Badge>
                                     )}
                                 </h2>
+                                <p class="leading-8 mb-5 text-sm text-info-content-color">
+                                    {item.location}
+                                </p>
                                 <p class="card-content leading-8 mb-3">
                                     {item.description}
                                 </p>
