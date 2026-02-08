@@ -10,7 +10,7 @@
         "countries_worked_in": "Countries worked in",
         "companies_worked_for": "Companies worked for",
         "key_areas": "Key areas",
-        "key_contribuitions": "Key contribuitions",
+        "key_contribuitions": "Key contributions",
         "ongoing": "Ongoing",
         "cannot_load_content": "Content could not be loaded",
         "author": "Auteur",
@@ -29,9 +29,18 @@
     "header": {
         "languages_title": "Languages",
         "languages": [
-            { "locale": "en", "name": "Anglais" },
-            { "locale": "fr", "name": "Français" },
-            { "locale": "es", "name": "Espagnol" }
+            {
+                "locale": "en",
+                "name": "Anglais"
+            },
+            {
+                "locale": "fr",
+                "name": "Français"
+            },
+            {
+                "locale": "es",
+                "name": "Espagnol"
+            }
         ],
         "main_sections": [
             {
@@ -212,7 +221,11 @@
         "collaborated_with": "Collaboration avec des collègues de plusieurs régions et pays",
         "companies_across_regions": "Expérience sur différents marchés",
         "companies_and_countries_lived_in": "Pays où j'ai vécu, travaillé et étudié",
-        "countries": ["Venezuela", "Argentina", "Spain"],
+        "countries": [
+            "Venezuela",
+            "Argentina",
+            "Spain"
+        ],
         "full_countries": [
             "Venezuela",
             "Argentine",

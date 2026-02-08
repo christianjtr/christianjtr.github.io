@@ -10,7 +10,7 @@
         "countries_worked_in": "Países en lo que he trabajado",
         "companies_worked_for": "Empresas en las que trabajé",
         "key_areas": "Key areas",
-        "key_contribuitions": "Key contribuitions",
+        "key_contribuitions": "Key contributions",
         "ongoing": "Presente",
         "cannot_load_content": "Contenido no puede ser cargado",
         "author": "Autor",
@@ -29,9 +29,18 @@
     "header": {
         "languages_title": "Idiomas",
         "languages": [
-            { "locale": "en", "name": "Inglés" },
-            { "locale": "fr", "name": "Francés" },
-            { "locale": "es", "name": "Castellano" }
+            {
+                "locale": "en",
+                "name": "Inglés"
+            },
+            {
+                "locale": "fr",
+                "name": "Francés"
+            },
+            {
+                "locale": "es",
+                "name": "Castellano"
+            }
         ],
         "main_sections": [
             {
@@ -212,7 +221,11 @@
         "collaborated_with": "Colaboración con colegas de varias regiones y países",
         "companies_across_regions": "Trabajé en diferentes mercados",
         "companies_and_countries_lived_in": "Países donde viví, trabajé y estudié",
-        "countries": ["Venezuela", "Argentina", "Spain"],
+        "countries": [
+            "Venezuela",
+            "Argentina",
+            "Spain"
+        ],
         "full_countries": [
             "Venezuela",
             "Argentina",
