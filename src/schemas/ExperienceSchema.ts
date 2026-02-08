@@ -3,7 +3,7 @@ import { z } from 'astro:content';
 export const ExperienceSchema = z.object({
     id: z.string(),
     start_year: z.number(),
-    end_year: z.number(),
+    end_year: z.number().nullable(),
     company: z.string(),
     country: z.string(),
     sector: z.string(),
@@ -13,7 +13,7 @@ export const ExperienceSchema = z.object({
     period: z.string(),
     isOngoing: z.boolean(),
     description: z.string(),
-    contribuitions: z.array(z.string()),
+    contributions: z.array(z.string()),
     technologies: z.array(z.string()),
     section: z.literal('experiences')
 });
