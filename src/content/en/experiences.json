@@ -1,5 +1,30 @@
 [
     {
+        "id": "experience-optimus-shanghai",
+        "section": "experiences",
+        "start_year": 2025,
+        "end_year": null,
+        "company": "Optimus Shanghai",
+        "country": "Remote",
+        "sector": "Digital Consulting",
+        "location": "Shanghai, China (Remote from Spain)",
+        "flag_asset": "/src/assets/svg/flag_spain.svg",
+        "position": "Digital Consultant",
+        "period": "Sep 2025 - Present",
+        "isOngoing": true,
+        "description": "As a Digital Consultant for OptimusTC, I lead the optimization and maintenance of their digital ecosystem, enhancing their online presence through active website management and validation of the application’s core features — ensuring seamless performance and technical reliability.",
+        "contributions": [
+            "Lead the optimization and maintenance of their digital ecosystem.",
+            "Enhance online presence through engagement in active website management.",
+            "Validation of the application’s core features ensuring seamless performance and technical reliability."
+        ],
+        "technologies": [
+            "Web performance optimization",
+            "Wordpress",
+            "Technical Solution Design"
+        ]
+    },
+    {
         "id": "experience-zeelo",
         "section": "experiences",
         "start_year": 2024,
@@ -13,7 +38,7 @@
         "period": "May 2024 - Jul 2025",
         "isOngoing": false,
         "description": "Collaboratively driving the evolution of the web application platform by anticipating opportunities, ensuring robust application quality, and contributing to innovative feature development that aligns with industry trends in the mobility sector.",
-        "contribuitions": [
+        "contributions": [
             "Collaborate to drive the evolution of the web application platform (Marketplace to sell trips, platform to manage routes).",
             "Anticipate opportunities and ensure robust application quality (E2E and Regression testing).",
             "Contribute to innovative feature development that aligns with mobility sector trends."
@@ -45,7 +70,7 @@
         "period": "Oct 2020 - Jun 2023",
         "isOngoing": false,
         "description": "Contributor to crafting technological solutions that optimized customer experiences in last-mile logistics. (Backoffices for streamlining external API integrations, monitoring tools, and product design development).",
-        "contribuitions": [
+        "contributions": [
             "Contributed to crafting technological solutions that optimized customer experiences in last-mile logistics.",
             "Developed back-offices for streamlining external API integrations.",
             "Involved in product design development and created monitoring tools (Driver deliveries, Operational activities)."
@@ -78,7 +103,7 @@
         "period": "Nov 2019 - Oct 2020",
         "isOngoing": false,
         "description": "Led the front-end architecture of a fintech web app, driving compliance, user experience, and functionality through integrations (payment gateway, e-mailing/SMS systems, loggers) and improvements following product requirements.",
-        "contribuitions": [
+        "contributions": [
             "Led the front-end architecture of a fintech web app (Marketplace to offer and managing loans).",
             "Drive compliance and enhance user experience according to product specs.",
             "Implemented integrations based on product requirements (Payment gateways, E-mailing/SMS systems, Loggers)."
@@ -107,7 +132,7 @@
         "period": "Nov 2018 - Oct 2019",
         "isOngoing": false,
         "description": "Automated front-end workflows and crafted a data-driven chatbot UI with interactive visualizations and an augmented reality mashup app to visualize sales trends, leveraging modern web technologies and chatbot frameworks.",
-        "contribuitions": [
+        "contributions": [
             "Automated front-end workflows using modern web technologies and chabot frameworks.",
             "Crafted a data-driven chatbot UI with interactive visualizations.",
             "Developed an augmented reality (AR) mashup app to visualize sales trends."
@@ -136,7 +161,7 @@
         "period": "Jun 2016 - Oct 2017",
         "isOngoing": false,
         "description": "Developed a web-based back-office platform for a vehicle free-flow tolling system, streamlining toll collection management across various aspects: Customer management, Payment processing, Tag device management, Vehicle monitoring, and others.",
-        "contribuitions": [
+        "contributions": [
             "Developed a web-based back-office platform for a vehicle free-flow tolling system.",
             "Streamlined toll collection management across various aspects (Customers, Payments, Vehicle monitoring).",
             "Contributed in developing API mocks to enhance developer experience (DevExp)."
@@ -164,7 +189,7 @@
         "period": "May 2011 - Jan 2016",
         "isOngoing": false,
         "description": "Collaborated with cross-functional teams to conceive, design, develop, and deliver a real-time web app for economic scenario analysis, leveraging GIS and data intelligence tools to visualize, analyze, and model geoscience, financial, and hydrocarbon production data, empowering data-driven decision-making.",
-        "contribuitions": [
+        "contributions": [
             "Collaborated with cross-functional teams to conceive, develop, and deliver real-time web applications.",
             "Leveraged GIS and data intelligence tools to visualize, analyze, and model data (Geoscience, Financial, Hydrocarbon).",
             "Empowered data-driven decision-making (Oil production and financial models)."
@@ -195,7 +220,7 @@
         "period": "Nov 2009 - May 2011",
         "isOngoing": false,
         "description": "Spearheaded the design and development of a web-based CRM, integrating departments to enhance customer service management and crafting a self-service kiosk for automated queue management and balance inquiries.",
-        "contribuitions": [
+        "contributions": [
             "Spearheaded the design and development of a web-based CRM (Client support, monitor employee performance, etc.).",
             "Integrated various department's systems to enhance customer service management.",
             "Crafted a self-service kiosk for: automated queue management, balance inquires."

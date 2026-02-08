@@ -1,5 +1,30 @@
 [
     {
+        "id": "experience-optimus-shanghai",
+        "section": "experiences",
+        "start_year": 2025,
+        "end_year": null,
+        "company": "Optimus Shanghai",
+        "country": "À distance",
+        "sector": "Conseil Digital",
+        "location": "Shanghai, Chine (À distance depuis l'Espagne)",
+        "flag_asset": "/src/assets/svg/flag_spain.svg",
+        "position": "Consultant Digital",
+        "period": "Sep 2025 - Présent",
+        "isOngoing": true,
+        "description": "En tant que Consultant Digital pour OptimusTC, je dirige l'optimisation et la maintenance de leur écosystème numérique, renforçant leur présence en ligne grâce à une gestion active du site web et à la validation des fonctionnalités de base de l'application — assurant ainsi une performance fluide et une fiabilité technique.",
+        "contributions": [
+            "Diriger l'optimisation et la maintenance de leur écosystème numérique.",
+            "Renforcer la présence en ligne grâce à une gestion active du site web.",
+            "Valider les fonctionnalités de base de l'application assurant une performance fluide et une fiabilité technique."
+        ],
+        "technologies": [
+            "Optimisation de la performance web",
+            "WordPress",
+            "Conception de Solutions Techniques"
+        ]
+    },
+    {
         "id": "experience-zeelo",
         "section": "experiences",
         "start_year": 2024,
@@ -13,7 +38,7 @@
         "period": "Mai 2024 - Juil. 2025",
         "isOngoing": false,
         "description": "Conduite collaborative de l'évolution de la plateforme d'application web en anticipant les opportunités, en assurant une qualité d'application robuste et en contribuant au développement de fonctionnalités innovantes alignées sur les tendances du secteur de la mobilité.",
-        "contribuitions": [
+        "contributions": [
             "Collaboration pour l'évolution de la plateforme d'application web (Place de marché pour vendre des voyages, plateforme de gestion des itinéraires).",
             "Anticiper les opportunités et assurer une qualité d'application robuste (Tests E2E et de Régression).",
             "Contribuer au développement de fonctionnalités innovantes alignées sur les tendances du secteur de la mobilité."
@@ -45,7 +70,7 @@
         "period": "Oct. 2020 - Juin 2023",
         "isOngoing": false,
         "description": "Contributeur à l'élaboration de solutions technologiques qui ont optimisé l'expérience client dans la logistique du dernier kilomètre. (Back-offices pour simplifier les intégrations d'API externes, outils de surveillance et développement de la conception de produits).",
-        "contribuitions": [
+        "contributions": [
             "Contribution à l'élaboration de solutions technologiques qui ont optimisé l'expérience client dans la logistique du dernier kilomètre.",
             "Développement de back-offices pour simplifier les intégrations d'API externes.",
             "Implication dans le développement de la conception de produits et création d'outils de surveillance (Livraisons de chauffeurs, Activités opérationnelles)."
@@ -78,7 +103,7 @@
         "period": "Nov. 2019 - Oct. 2020",
         "isOngoing": false,
         "description": "Direction de l'architecture front-end d'une application web fintech, favorisant la conformité, l'expérience utilisateur et la fonctionnalité grâce à des intégrations (passerelle de paiement, systèmes d'e-mailing/SMS, loggers) et des améliorations suivant les exigences du produit.",
-        "contribuitions": [
+        "contributions": [
             "Direction de l'architecture front-end d'une application web fintech (Place de marché pour offrir et gérer des prêts).",
             "Promouvoir la conformité et améliorer l'expérience utilisateur selon les spécifications du produit.",
             "Mise en œuvre d'intégrations basées sur les exigences du produit (Passerelles de paiement, Systèmes d'e-mailing/SMS, Loggers)."
@@ -107,7 +132,7 @@
         "period": "Nov. 2018 - Oct. 2019",
         "isOngoing": false,
         "description": "Automatisation des workflows front-end et conception d'une interface utilisateur de chatbot axée sur les données avec des visualisations interactives et une application mashup de réalité augmentée pour visualiser les tendances des ventes, en exploitant les technologies web modernes et les frameworks de chatbot.",
-        "contribuitions": [
+        "contributions": [
             "Automatisation des workflows front-end à l'aide de technologies web modernes et de frameworks de chatbot.",
             "Conception d'une interface utilisateur de chatbot axée sur les données avec des visualisations interactives.",
             "Développement d'une application mashup de réalité augmentée (RA) pour visualiser les tendances des ventes."
@@ -136,7 +161,7 @@
         "period": "Juin 2016 - Oct. 2017",
         "isOngoing": false,
         "description": "Développement d'une plateforme de back-office web pour un système de péage à flux libre de véhicules, simplifiant la gestion de la perception des péages à travers divers aspects : Gestion des clients, Traitement des paiements, Gestion des dispositifs Tag, Surveillance des véhicules, et autres.",
-        "contribuitions": [
+        "contributions": [
             "Développement d'une plateforme de back-office web pour un système de péage à flux libre de véhicules.",
             "Simplification de la gestion de la perception des péages à travers divers aspects (Clients, Paiements, Surveillance des véhicules).",
             "Contribution au développement de maquettes d'API pour améliorer l'expérience développeur (DevExp)."
@@ -164,7 +189,7 @@
         "period": "Mai 2011 - Janv. 2016",
         "isOngoing": false,
         "description": "Collaboration avec des équipes interfonctionnelles pour concevoir, développer et livrer une application web en temps réel pour l'analyse de scénarios économiques, en exploitant des outils SIG et d'intelligence des données pour visualiser, analyser et modéliser des données de géoscience, financières et de production d'hydrocarbures, favorisant la prise de décision basée sur les données.",
-        "contribuitions": [
+        "contributions": [
             "Collaboration avec des équipes interfonctionnelles pour concevoir, développer et livrer des applications web en temps réel.",
             "Exploitation des outils SIG et d'intelligence des données pour visualiser, analyser et modéliser des données (Géoscience, Financières, Hydrocarbures).",
             "Favorisé la prise de décision basée sur les données (Production pétrolière et modèles financiers)."
@@ -195,7 +220,7 @@
         "period": "Nov. 2009 - Mai 2011",
         "isOngoing": false,
         "description": "Direction de la conception et du développement d'un CRM web, intégrant les départements pour améliorer la gestion du service client et conception d'un kiosque libre-service pour la gestion automatisée des files d'attente et la consultation des soldes.",
-        "contribuitions": [
+        "contributions": [
             "Direction de la conception et du développement d'un CRM web (Support client, surveillance des performances des employés, etc.).",
             "Intégration de divers systèmes de départements pour améliorer la gestion du service client.",
             "Conception d'un kiosque libre-service pour : gestion automatisée des files d'attente, consultation des soldes."

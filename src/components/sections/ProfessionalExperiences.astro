@@ -1,18 +1,18 @@
 ---
-import { getCollection, getEntry } from 'astro:content';
-import { Image } from 'astro:assets';
+import { getCollection, getEntry } from "astro:content";
+import { Image } from "astro:assets";
 
-import type { ContentDataEntryType } from '@app-types/Content';
-import type { Experience } from '@schemas/ExperienceSchema';
-import type { Study } from '@schemas/StudySchema';
-import type { AboutMeData } from '@schemas/AboutMeSchema';
-import { CONTENT } from '@app-types/Content';
+import type { ContentDataEntryType } from "@app-types/Content";
+import type { Experience } from "@schemas/ExperienceSchema";
+import type { Study } from "@schemas/StudySchema";
+import type { AboutMeData } from "@schemas/AboutMeSchema";
+import { CONTENT } from "@app-types/Content";
 import { Badge, BadgeList, Section, VerticalSpacer, AsyncImage } from "../";
-import Logo from '@assets/svg/background.svg';
-import BuildingIcon from '@assets/svg/building.svg';
-import AcademicCapIcon from '@assets/svg/academic_cap.svg';
-import WorldAnimation from '@assets/gifs/world.gif';
-import AcademicCapAnimation from '@assets/gifs/academic_cap.gif';
+import Logo from "@assets/svg/background.svg";
+import BuildingIcon from "@assets/svg/building.svg";
+import AcademicCapIcon from "@assets/svg/academic_cap.svg";
+import WorldAnimation from "@assets/gifs/world.gif";
+import AcademicCapAnimation from "@assets/gifs/academic_cap.gif";
 
 type BackgroundType = "work" | "study";
 
@@ -28,28 +28,39 @@ interface Background {
     country: string;
     topics: string[];
     category: string;
-    contribuitions?: string[];
+    contributions?: string[];
     type: BackgroundType;
-};
+}
 
 const backgroundTypeIcons: Record<BackgroundType, string> = {
-    'work': '💼',
-    'study': '📚'
+    work: "💼",
+    study: "📚",
 };
 
 const { lang } = Astro.params;
 
-const [commonData, [ experiencesData ], [ studiesData ]] = await Promise.all([
+const [commonData, [experiencesData], [studiesData]] = await Promise.all([
     await getEntry(lang as ContentDataEntryType, `${lang}/${CONTENT.COMMON}`),
-    await getCollection(lang as ContentDataEntryType, (collection) => collection.id === `${lang}/${CONTENT.EXPERIENCES}`),
-    await getCollection(lang as ContentDataEntryType, (collection) => collection.id === `${lang}/${CONTENT.STUDIES}`)
+    await getCollection(
+        lang as ContentDataEntryType,
+        (collection) => collection.id === `${lang}/${CONTENT.EXPERIENCES}`
+    ),
+    await getCollection(
+        lang as ContentDataEntryType,
+        (collection) => collection.id === `${lang}/${CONTENT.STUDIES}`
+    ),
 ]);
 
-const { section_studies, section_experiences, common, header } = (commonData?.data as AboutMeData) || {};
+const { section_studies, section_experiences, common, header } =
+    (commonData?.data as AboutMeData) || {};
 const { data: experiences } = experiencesData;
 const { data: studies } = studiesData;
 
-const uniqueCountries = Array.from(new Set(experiences.map((eachExperience: Experience) => eachExperience.country )));
+const uniqueCountries = Array.from(
+    new Set(
+        experiences.map((eachExperience: Experience) => eachExperience.country)
+    )
+);
 
 const backgroundItems: Background[] = [
     ...experiences.map((eachExperience: Experience) => ({
@@ -64,8 +75,8 @@ const backgroundItems: Background[] = [
         country: eachExperience.country,
         topics: eachExperience.technologies,
         category: eachExperience.sector,
-        contribuitions: eachExperience.contribuitions,
-        type: "work" as BackgroundType
+        contributions: eachExperience.contributions,
+        type: "work" as BackgroundType,
     })),
     ...studies.map((eachStudy: Study) => ({
         start_year: eachStudy.start_year,
@@ -79,7 +90,7 @@ const backgroundItems: Background[] = [
         country: eachStudy.country,
         topics: eachStudy.topics,
         category: eachStudy.subject,
-        type: "study" as BackgroundType
+        type: "study" as BackgroundType,
     })),
 ].sort((a, b) => {
     const yearA = a.end_year;
@@ -90,119 +101,263 @@ const backgroundItems: Background[] = [
 
 <div class="bg-primary/5 py-10" id={header.main_sections[2].anchorId}>
     <br />
-    <Section headingTitle={section_experiences.title} subtitle={section_experiences.subtitle} class="container mx-auto">
+    <Section
+        headingTitle={section_experiences.title}
+        subtitle={section_experiences.subtitle}
+        class="container mx-auto"
+    >
         <Logo slot="beforeHeading" width={96} height={96} />
         <br />
         <div class="px-5 md:px-14">
-            <div class="stats md:stats-horizontal stats-vertical stats-content-wrapper">
+            <div
+                class="stats md:stats-horizontal stats-vertical stats-content-wrapper"
+            >
                 <div class="stat w-full">
-                    <Image src={WorldAnimation} alt="World" width="40" height="40" aria-label="World" class="stat-figure hidden lg:block" />
-                    <span class="stat-title uppercase">{section_experiences.companies_and_countries_lived_in}</span>
+                    <Image
+                        src={WorldAnimation}
+                        alt="World"
+                        width="40"
+                        height="40"
+                        aria-label="World"
+                        class="stat-figure hidden lg:block"
+                    />
+                    <span class="stat-title uppercase"
+                        >{
+                            section_experiences.companies_and_countries_lived_in
+                        }</span
+                    >
                     <span class="stat-value">0{uniqueCountries.length}</span>
-                    <span class="stat-desc whitespace-normal text-sm lg:whitespace-nowrap">{section_experiences.collaborated_with}</span>
+                    <span
+                        class="stat-desc whitespace-normal text-sm lg:whitespace-nowrap"
+                        >{section_experiences.collaborated_with}</span
+                    >
                     <div class="stat-actions">
-                        <BadgeList badgeClass='badge-secondary badge-lg' items={section_experiences.full_countries} />
+                        <BadgeList
+                            badgeClass="badge-secondary badge-lg"
+                            items={section_experiences.full_countries}
+                        />
                     </div>
                 </div>
                 <div class="stat w-full">
-                    <Image src={AcademicCapAnimation} width="55" height="55" alt="Academic Cap" aria-label="Academic Cap" class="stat-figure hidden lg:block" />
-                    <span class="stat-title uppercase">{common.formal_studies_taken}</span>
+                    <Image
+                        src={AcademicCapAnimation}
+                        width="55"
+                        height="55"
+                        alt="Academic Cap"
+                        aria-label="Academic Cap"
+                        class="stat-figure hidden lg:block"
+                    />
+                    <span class="stat-title uppercase"
+                        >{common.formal_studies_taken}</span
+                    >
                     <span class="stat-value">0{studies.length}</span>
-                    <span class="stat-desc text-sm">{common.educational_level}</span>
-                    <span class="stat-actions font-semibold text-xl">{section_studies.educational_level}</span>
+                    <span class="stat-desc text-sm"
+                        >{common.educational_level}</span
+                    >
+                    <span class="stat-actions font-semibold text-xl"
+                        >{section_studies.educational_level}</span
+                    >
                 </div>
             </div>
             <div class="hidden lg:block sticky-section">
                 <div class="grid grid-cols-6 gap-8 mt-5 px-1">
-                    <h3 class="text-3xl font-semibold col-span-1">{common.experiences}</h3>
+                    <h3 class="text-3xl font-semibold col-span-1">
+                        {common.experiences}
+                    </h3>
                     <div class="col-span-5">
                         <div class="divider divider-end flex items-center">
-                            <input class="btn input-radio" type="radio" name="layout" value="list" aria-label={common.list} checked="checked" />
-                            <input class="btn input-radio" type="radio" name="layout" value="timeline" aria-label={common.timeline} />
+                            <input
+                                class="btn input-radio"
+                                type="radio"
+                                name="layout"
+                                value="list"
+                                aria-label={common.list}
+                                checked="checked"
+                            />
+                            <input
+                                class="btn input-radio"
+                                type="radio"
+                                name="layout"
+                                value="timeline"
+                                aria-label={common.timeline}
+                            />
                         </div>
                     </div>
                 </div>
             </div>
             <VerticalSpacer />
             <div class="list-wrapper" data-layout="list">
-                {backgroundItems.map((item: Background) => (
-                    <div class="card list-card-item gap-5">
-                        <div class="sm:w-1/5 lg:w-1/5 w-full p-3 space-y-3">
-                            <div class="bg-base-100 w-fit rounded-full p-3 border-3 border-secondary icon-wrapper">
-                                {item.type === "study" && <AcademicCapIcon width={24} height={24} class="dark:stroke-accent" />}
-                                {item.type === "work" && <BuildingIcon width={24} height={24} class="dark:stroke-accent" />}
-                            </div>
-                            <span class="text-sm text-info-content-color block mb-2">{item.category}</span>
-                            <Badge class="badge-sm badge-primary font-semibold uppercase text-white h-fit">{item.period}</Badge>
-                            <p class="flex gap-2 items-center md:text-lg">
-                                <AsyncImage imagePath={item.flag_asset} title={item.country} />
-                                <span class="block">{item.country}</span>
-                            </p>
-                        </div>
-                        <div class="sm:w-4/5 lg:w-4/5 w-full p-3">
-                            <span class="pre-title-text block mb-1">{item.organization}</span>
-                            <h2 class="text-2xl font-medium mb-5">
-                                {item.title} {item.isOngoing && <Badge class="badge-sm badge-accent uppercase">{common.ongoing}</Badge>}
-                            </h2>
-                            <p class="card-content leading-8 mb-3">{item.description}</p>
-                            <div tabindex="0" class="collapse collapse-arrow dark:bg-primary/5 px-3">
-                                <div class="collapse-title p-3 font-semibold text-sm flex items-center">
-                                    {item.type === "work" && <>{common.technologies}</>}
-                                    {item.type === "study" && <>{common.subjects}</>}
+                {
+                    backgroundItems.map((item: Background) => (
+                        <div class="card list-card-item gap-5">
+                            <div class="sm:w-1/5 lg:w-1/5 w-full p-3 space-y-3">
+                                <div class="bg-base-100 w-fit rounded-full p-3 border-3 border-secondary icon-wrapper">
+                                    {item.type === "study" && (
+                                        <AcademicCapIcon
+                                            width={24}
+                                            height={24}
+                                            class="dark:stroke-accent"
+                                        />
+                                    )}
+                                    {item.type === "work" && (
+                                        <BuildingIcon
+                                            width={24}
+                                            height={24}
+                                            class="dark:stroke-accent"
+                                        />
+                                    )}
                                 </div>
-                                <div class="collapse-content text-sm">
-                                    <BadgeList items={item.topics} badgeClass="badge-sm badge-soft" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                ))}
-            </div>
-            <ul class="timeline timeline-vertical hidden px-7" data-layout="timeline">
-                {backgroundItems.map((item: Background , index) => (
-                    <li>
-                        {index !== 0 && <hr class="bg-primary" />}
-                        <div class:list={["timeline-box shadow-none border-0 w-full p-4 mb-5", { "timeline-start": item.type  === "work" }, { "timeline-end": item.type  === "study" }]}>
-                            <div class="card card-lg p-4">
-                                <p class="flex justify-between mb-2">
-                                    <span class="pre-title-text text-sm">{item.organization}</span>
-                                    {item.isOngoing && <Badge class="badge-sm badge-accent uppercase mx-0.5">{common.ongoing}</Badge>}
+                                <span class="text-sm text-info-content-color block mb-2">
+                                    {item.category}
+                                </span>
+                                <Badge class="badge-sm badge-primary font-semibold uppercase text-white h-fit">
+                                    {item.period}
+                                </Badge>
+                                <p class="flex gap-2 items-center md:text-lg">
+                                    <AsyncImage
+                                        imagePath={item.flag_asset}
+                                        title={item.country}
+                                    />
+                                    <span class="block">{item.country}</span>
                                 </p>
-                                <span class="card-title w-full mb-2">{item.title}</span>
-                                <Badge class="badge-sm badge-primary uppercase">{item.period}</Badge>
-                                <div class="flex flex-col gap-1 my-3">
-                                    <p class="flex gap-3 items-center text-info-content-color">
-                                        <font class="text-2xl">{backgroundTypeIcons[item.type]}</font>
-                                        <span class="text-sm">{item.category}</span>
-                                    </p>
-                                    <p class="flex gap-3 items-center text-info-content-color">
-                                        <AsyncImage imagePath={item.flag_asset} title={item.country} width={28} height={28} />
-                                        <span class="text-sm">{item.country}</span>
-                                    </p>
-                                </div>
-                                <div class="card-body p-0">
-                                    <p class="leading-8 mb-2">{item.description}</p>
-                                    <div tabindex="0" class="collapse collapse-arrow dark:bg-primary/5 px-3">
-                                        <div class="collapse-title p-3 font-semibold text-sm flex items-center">
-                                            {item.type === "work" && <>{common.technologies}</>}
-                                            {item.type === "study" && <>{common.subjects}</>}
-                                        </div>
-                                        <div class="collapse-content text-sm">
-                                            <BadgeList items={item.topics} badgeClass="badge-sm badge-soft" />
-                                        </div>
+                            </div>
+                            <div class="sm:w-4/5 lg:w-4/5 w-full p-3">
+                                <span class="pre-title-text block mb-1">
+                                    {item.organization}
+                                </span>
+                                <h2 class="text-2xl font-medium mb-5">
+                                    {item.title}{" "}
+                                    {item.isOngoing && (
+                                        <Badge class="badge-sm badge-accent uppercase">
+                                            {common.ongoing}
+                                        </Badge>
+                                    )}
+                                </h2>
+                                <p class="card-content leading-8 mb-3">
+                                    {item.description}
+                                </p>
+                                <div
+                                    tabindex="0"
+                                    class="collapse collapse-arrow dark:bg-primary/5 px-3"
+                                >
+                                    <div class="collapse-title p-3 font-semibold text-sm flex items-center">
+                                        {item.type === "work" && (
+                                            <>{common.technologies}</>
+                                        )}
+                                        {item.type === "study" && (
+                                            <>{common.subjects}</>
+                                        )}
+                                    </div>
+                                    <div class="collapse-content text-sm">
+                                        <BadgeList
+                                            items={item.topics}
+                                            badgeClass="badge-sm badge-soft"
+                                        />
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="timeline-middle mx-3">
-                            <div class="icon-wrapper">
-                                {item.type === "study" && <AcademicCapIcon width={42} height={42} />}
-                                {item.type === "work" && <BuildingIcon width={42} height={42} />}
+                    ))
+                }
+            </div>
+            <ul
+                class="timeline timeline-vertical hidden px-7"
+                data-layout="timeline"
+            >
+                {
+                    backgroundItems.map((item: Background, index) => (
+                        <li>
+                            {index !== 0 && <hr class="bg-primary" />}
+                            <div
+                                class:list={[
+                                    "timeline-box shadow-none border-0 w-full p-4 mb-5",
+                                    { "timeline-start": item.type === "work" },
+                                    { "timeline-end": item.type === "study" },
+                                ]}
+                            >
+                                <div class="card card-lg p-4">
+                                    <p class="flex justify-between mb-2">
+                                        <span class="pre-title-text text-sm">
+                                            {item.organization}
+                                        </span>
+                                        {item.isOngoing && (
+                                            <Badge class="badge-sm badge-accent uppercase mx-0.5">
+                                                {common.ongoing}
+                                            </Badge>
+                                        )}
+                                    </p>
+                                    <span class="card-title w-full mb-2">
+                                        {item.title}
+                                    </span>
+                                    <Badge class="badge-sm badge-primary uppercase">
+                                        {item.period}
+                                    </Badge>
+                                    <div class="flex flex-col gap-1 my-3">
+                                        <p class="flex gap-3 items-center text-info-content-color">
+                                            <font class="text-2xl">
+                                                {backgroundTypeIcons[item.type]}
+                                            </font>
+                                            <span class="text-sm">
+                                                {item.category}
+                                            </span>
+                                        </p>
+                                        <p class="flex gap-3 items-center text-info-content-color">
+                                            <AsyncImage
+                                                imagePath={item.flag_asset}
+                                                title={item.country}
+                                                width={28}
+                                                height={28}
+                                            />
+                                            <span class="text-sm">
+                                                {item.country}
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <p class="leading-8 mb-2">
+                                            {item.description}
+                                        </p>
+                                        <div
+                                            tabindex="0"
+                                            class="collapse collapse-arrow dark:bg-primary/5 px-3"
+                                        >
+                                            <div class="collapse-title p-3 font-semibold text-sm flex items-center">
+                                                {item.type === "work" && (
+                                                    <>{common.technologies}</>
+                                                )}
+                                                {item.type === "study" && (
+                                                    <>{common.subjects}</>
+                                                )}
+                                            </div>
+                                            <div class="collapse-content text-sm">
+                                                <BadgeList
+                                                    items={item.topics}
+                                                    badgeClass="badge-sm badge-soft"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        {index < backgroundItems.length - 1 && <hr class="bg-primary" />}
-                    </li>
-                ))}
+                            <div class="timeline-middle mx-3">
+                                <div class="icon-wrapper">
+                                    {item.type === "study" && (
+                                        <AcademicCapIcon
+                                            width={42}
+                                            height={42}
+                                        />
+                                    )}
+                                    {item.type === "work" && (
+                                        <BuildingIcon width={42} height={42} />
+                                    )}
+                                </div>
+                            </div>
+                            {index < backgroundItems.length - 1 && (
+                                <hr class="bg-primary" />
+                            )}
+                        </li>
+                    ))
+                }
             </ul>
         </div>
     </Section>
@@ -210,18 +365,24 @@ const backgroundItems: Background[] = [
 
 <script>
     type LayoutElementType = "list" | "timeline";
-    
-    const listElement = document.querySelector('[data-layout="list"]') as HTMLElement;
-    const timelineElement = document.querySelector('[data-layout="timeline"]') as HTMLElement;
-    const layoutModeBtns = document.querySelectorAll('input[name="layout"]') as NodeListOf<HTMLInputElement>;
+
+    const listElement = document.querySelector(
+        '[data-layout="list"]'
+    ) as HTMLElement;
+    const timelineElement = document.querySelector(
+        '[data-layout="timeline"]'
+    ) as HTMLElement;
+    const layoutModeBtns = document.querySelectorAll(
+        'input[name="layout"]'
+    ) as NodeListOf<HTMLInputElement>;
 
     const layoutMap: Record<LayoutElementType, HTMLElement> = {
-        "list": listElement,
-        "timeline": timelineElement
+        list: listElement,
+        timeline: timelineElement,
     };
 
     layoutModeBtns.forEach((eachElement) => {
-        eachElement.addEventListener('click', (event) => {
+        eachElement.addEventListener("click", (event) => {
             const targetElement = event.currentTarget as HTMLInputElement;
             for (const mode in layoutMap) {
                 const element = layoutMap[mode as LayoutElementType];
@@ -247,7 +408,8 @@ const backgroundItems: Background[] = [
         background: var(--color-deep-charcoal);
     }
 
-    .card, .timeline-box {
+    .card,
+    .timeline-box {
         @apply bg-base-100;
     }
 
@@ -270,9 +432,10 @@ const backgroundItems: Background[] = [
     .timeline-box:hover {
         @apply shadow-xl shadow-indigo-200;
     }
-    
-    html[data-theme="dark"] .timeline-box:hover, html[data-theme="dark"] .list-card-item:hover {
-       @apply border-indigo-400 shadow-lg shadow-primary/65;
+
+    html[data-theme="dark"] .timeline-box:hover,
+    html[data-theme="dark"] .list-card-item:hover {
+        @apply border-indigo-400 shadow-lg shadow-primary/65;
     }
 
     .stats-content-wrapper {
@@ -296,20 +459,21 @@ const backgroundItems: Background[] = [
     }
 
     html[data-theme="dark"] .icon-wrapper {
-        @apply bg-primary/30 border-primary; 
+        @apply bg-primary/30 border-primary;
     }
 
     .list-wrapper::before {
         @apply border-indigo-500 border border-dashed absolute bottom-0 top-0 left-24 z-0 w-0;
-        content: '';
+        content: "";
     }
 
-    .pre-title-text, .text-info-content-color {
-         @apply text-neutral-500;
+    .pre-title-text,
+    .text-info-content-color {
+        @apply text-neutral-500;
     }
 
     html[data-theme="dark"] .pre-title-text {
-         @apply text-secondary;
+        @apply text-secondary;
     }
 
     html[data-theme="dark"] .text-info-content-color {
@@ -331,5 +495,4 @@ const backgroundItems: Background[] = [
     html[data-theme="dark"] .stat *:not(.stat-value) {
         @apply text-primary-content;
     }
-    
 </style>

@@ -1,5 +1,30 @@
 [
     {
+        "id": "experience-optimus-shanghai",
+        "section": "experiences",
+        "start_year": 2025,
+        "end_year": null,
+        "company": "Optimus Shanghai",
+        "country": "España",
+        "sector": "Consultoría Digital",
+        "location": "Shanghái, China (Remoto desde España)",
+        "flag_asset": "/src/assets/svg/flag_spain.svg",
+        "position": "Consultor Digital",
+        "period": "Sep 2025 - Presente",
+        "isOngoing": true,
+        "description": "Como Consultor Digital para OptimusTC, lidero la optimización y el mantenimiento de su ecosistema digital, mejorando su presencia en línea mediante la gestión activa del sitio web y la validación de las funciones principales de la aplicación, garantizando un rendimiento fluido y fiabilidad técnica.",
+        "contributions": [
+            "Liderar la optimización y el mantenimiento de su ecosistema digital.",
+            "Mejorar la presencia en línea mediante la gestión activa del sitio web.",
+            "Validar las funciones principales de la aplicación garantizando un rendimiento fluido y fiabilidad técnica."
+        ],
+        "technologies": [
+            "Optimización del rendimiento web",
+            "WordPress",
+            "Diseño de Soluciones Técnicas"
+        ]
+    },
+    {
         "id": "experience-zeelo",
         "section": "experiences",
         "start_year": 2024,
@@ -13,7 +38,7 @@
         "period": "May. 2024 - Jul. 2025",
         "isOngoing": false,
         "description": "Impulso colaborativo de la evolución de la plataforma de aplicaciones web, anticipando oportunidades, garantizando una calidad de aplicación robusta y contribuyendo al desarrollo de funcionalidades innovadoras alineadas con las tendencias del sector de la movilidad.",
-        "contribuitions": [
+        "contributions": [
             "Colaboración para impulsar la evolución de la plataforma de aplicaciones web (Marketplace para vender viajes, plataforma para gestionar rutas).",
             "Anticipar oportunidades y garantizar una calidad de aplicación robusta (Pruebas E2E y de Regresión).",
             "Contribuir al desarrollo de funcionalidades innovadoras que se alineen con las tendencias del sector de la movilidad."
@@ -45,7 +70,7 @@
         "period": "Oct. 2020 - Jun. 2023",
         "isOngoing": false,
         "description": "Contribución a la creación de soluciones tecnológicas que optimizaron las experiencias del cliente en la logística de última milla. (Backoffices para agilizar las integraciones de API externas, herramientas de monitoreo y desarrollo de diseño de producto).",
-        "contribuitions": [
+        "contributions": [
             "Contribuyó a la creación de soluciones tecnológicas que optimizaron las experiencias del cliente en la logística de última milla.",
             "Desarrolló back-offices para agilizar las integraciones de API externas.",
             "Participó en el desarrollo del diseño de producto y creó herramientas de monitoreo (Entregas de conductores, Actividades operacionales)."
@@ -78,7 +103,7 @@
         "period": "Nov. 2019 - Oct. 2020",
         "isOngoing": false,
         "description": "Lideró la arquitectura front-end de una aplicación web fintech, impulsando el cumplimiento, la experiencia del usuario y la funcionalidad a través de integraciones (pasarela de pago, sistemas de correo electrónico/SMS, registradores) y mejoras siguiendo los requisitos del producto.",
-        "contribuitions": [
+        "contributions": [
             "Lideró la arquitectura front-end de una aplicación web fintech (Marketplace para ofrecer y gestionar préstamos).",
             "Impulsó el cumplimiento y mejoró la experiencia del usuario de acuerdo con las especificaciones del producto.",
             "Implementó integraciones basadas en requisitos del producto (Pasarelas de pago, Sistemas de correo electrónico/SMS, Registradores)."
@@ -107,7 +132,7 @@
         "period": "Nov. 2018 - Oct. 2019",
         "isOngoing": false,
         "description": "Automatizó flujos de trabajo front-end y creó una interfaz de usuario de chatbot impulsada por datos con visualizaciones interactivas y una aplicación mashup de realidad aumentada para visualizar tendencias de ventas, aprovechando tecnologías web modernas y frameworks de chatbot.",
-        "contribuitions": [
+        "contributions": [
             "Automatizó flujos de trabajo front-end utilizando tecnologías web modernas y frameworks de chatbot.",
             "Creó una interfaz de usuario de chatbot impulsada por datos con visualizaciones interactivas.",
             "Desarrolló una aplicación mashup de realidad aumentada (RA) para visualizar tendencias de ventas."
@@ -136,7 +161,7 @@
         "period": "Jun. 2016 - Oct. 2017",
         "isOngoing": false,
         "description": "Desarrolló una plataforma de back-office basada en web para un sistema de peaje de flujo libre de vehículos, agilizando la gestión de la recaudación de peajes en varios aspectos: Gestión de clientes, Procesamiento de pagos, Gestión de dispositivos Tag, Monitoreo de vehículos, y otros.",
-        "contribuitions": [
+        "contributions": [
             "Desarrolló una plataforma de back-office basada en web para un sistema de peaje de flujo libre de vehículos.",
             "Agilizó la gestión de la recaudación de peajes en varios aspectos (Clientes, Pagos, Monitoreo de vehículos).",
             "Contribuyó al desarrollo de mocks de API para mejorar la experiencia del desarrollador (DevExp)."
@@ -164,7 +189,7 @@
         "period": "May. 2011 - Ene. 2016",
         "isOngoing": false,
         "description": "Colaborar con equipos multifuncionales para concebir, diseñar, desarrollar y entregar una aplicación web en tiempo real para el análisis de escenarios económicos, aprovechando herramientas GIS y de inteligencia de datos para visualizar, analizar y modelar datos de geociencia, financieros y de producción de hidrocarburos, empoderando la toma de decisiones basada en datos.",
-        "contribuitions": [
+        "contributions": [
             "Colaboró con equipos multifuncionales para concebir, desarrollar y entregar aplicaciones web en tiempo real.",
             "Aprovechó herramientas GIS y de inteligencia de datos para visualizar, analizar y modelar datos (Geociencia, Financieros, Hidrocarburos).",
             "Empoderó la toma de decisiones basada en datos (Producción de petróleo y modelos financieros)."
@@ -195,7 +220,7 @@
         "period": "Nov. 2009 - May. 2011",
         "isOngoing": false,
         "description": "Liderar el diseño y desarrollo de un CRM basado en web, integrando departamentos para mejorar la gestión del servicio al cliente y la creación de un quiosco de autoservicio para la gestión automatizada de colas y consultas de saldo.",
-        "contribuitions": [
+        "contributions": [
             "Liderar el diseño y desarrollo de un CRM basado en web (Soporte al cliente, monitoreo del rendimiento de empleados, etc.).",
             "Integró varios sistemas departamentales para mejorar la gestión del servicio al cliente.",
             "Creó un quiosco de autoservicio para: gestión automatizada de colas, consultas de saldo."
