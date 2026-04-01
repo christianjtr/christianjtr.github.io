@@ -20,7 +20,8 @@
         "experiences": "Experiencias",
         "list": "☰ Listado",
         "timeline": "⇢ Línea de tiempo",
-        "flip_to_check_stack": "Ver Stack →"
+        "flip_to_check_stack": "Ver Stack →",
+        "languages": "Idiomas"
     },
     "open_graph": {
         "title": "Christian José Torrealba Rondón",
@@ -67,10 +68,10 @@
         "greeting": "Hola a tod@s, soy",
         "my_name": "Christian José Torrealba Rondón<span class='text-accent text-3xl'>.</span>",
         "my_name_template": "Christian José <br>Torrealba Rondón<span class='text-accent'>.</span>",
-        "about_me": "Me defino como un profesional generalista interesado en diferentes disciplinas que aceleran la entrega de productos.",
+        "about_me": "Me considero un <strong>profesional V-Shaped</strong>, con amplia experiencia en ingeniería de producto, complementada con conocimientos en desarrollo de software e inteligencia de negocio, lo que me permite integrar la estrategia, la ejecución y los datos para ofrecer soluciones excepcionales.",
         "summary": "Creando experiencies y soluciones orientadas al usuario, aplicando principios de Ingeniería de Sistemas, de Datos y Design Thinking.",
-        "hobbies_title": "Aficiones",
-        "hobbies": "☀️ 🏖️ 🎡 🍦 🎮 🏃🏻 🐶 ✈️",
+        "hobbies_title": "Aficiones e Idiomas",
+        "hobbies": "☀️ 🏖️ 🎡 🍦 🎮 🏃🏻 🐶 ✈️ 🗣️",
         "v_shaped_profile": "Perfil V-Shaped",
         "v_shaped_explanation": "Combina la especialización en un área relevante con un conocimiento amplio y multifuncional",
         "language_tip": "Refinando la fluidez y la competencia en idiomas",
@@ -221,11 +222,7 @@
         "collaborated_with": "Colaboración con colegas de varias regiones y países",
         "companies_across_regions": "Trabajé en diferentes mercados",
         "companies_and_countries_lived_in": "Países donde viví, trabajé y estudié",
-        "countries": [
-            "Venezuela",
-            "Argentina",
-            "Spain"
-        ],
+        "countries": ["Venezuela", "Argentina", "Spain"],
         "full_countries": [
             "Venezuela",
             "Argentina",

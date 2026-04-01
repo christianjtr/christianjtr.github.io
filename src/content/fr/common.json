@@ -2,7 +2,7 @@
     "common": {
         "overview": "Aperçu",
         "role": "Role",
-        "contribuition": "Contribuition",
+        "contribuition": "Contribution",
         "technologies": "Technologies",
         "subjects": "Subjects",
         "showcased_at": "Présenté à",
@@ -20,7 +20,8 @@
         "experiences": "Expériences",
         "list": "☰ Liste",
         "timeline": "⇢ Chronologie",
-        "flip_to_check_stack": "Voir le Stack →"
+        "flip_to_check_stack": "Voir le Stack →",
+        "languages": "Langues"
     },
     "open_graph": {
         "title": "Christian José Torrealba Rondón",
@@ -67,10 +68,10 @@
         "greeting": "Bonjour à tous, je suis",
         "my_name": "Christian José Torrealba Rondón<span class='text-accent text-3xl'>.</span>",
         "my_name_template": "Christian José <br>Torrealba Rondón<span class='text-accent'>.</span>",
-        "about_me": "Je me définis comme un professionnel généraliste intéressé par différentes disciplines qui accélèrent la livraison de produits.",
+        "about_me": "Je me considère comme un <strong>professionnel V-Shaped</strong>, doté d'une solide expérience en ingénierie produit, complétée par des compétences en développement logiciel et en intelligence d'affaires, ce qui me permet d'intégrer stratégie, exécution et données pour proposer des solutions exceptionnelles.",
         "summary": "Création d'expériences et de solutions orientées utilisateur, appliquant les principes de l'Ingénierie des Systèmes, de l'Ingénierie des Données et du Design Thinking.",
-        "hobbies_title": "Loisirs",
-        "hobbies": "☀️ 🏖️ 🎡 🍦 🎮 🏃🏻 🐶 ✈️",
+        "hobbies_title": "Loisirs et Langues",
+        "hobbies": "☀️ 🏖️ 🎡 🍦 🎮 🏃🏻 🐶 ✈️ 🗣️",
         "v_shaped_profile": "Profil en forme de V",
         "v_shaped_explanation": "Combine la spécialisation dans un domaine pertinent avec de vastes connaissances transversales",
         "language_tip": "Amélioration de la fluidité et de la maîtrise linguistique",
@@ -221,11 +222,7 @@
         "collaborated_with": "Collaboration avec des collègues de plusieurs régions et pays",
         "companies_across_regions": "Expérience sur différents marchés",
         "companies_and_countries_lived_in": "Pays où j'ai vécu, travaillé et étudié",
-        "countries": [
-            "Venezuela",
-            "Argentina",
-            "Spain"
-        ],
+        "countries": ["Venezuela", "Argentina", "Spain"],
         "full_countries": [
             "Venezuela",
             "Argentine",
