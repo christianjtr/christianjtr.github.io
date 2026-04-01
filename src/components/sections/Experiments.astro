@@ -21,7 +21,7 @@ const [commonData, [ experimentsData ]] = await Promise.all([
 ]);
 
 const { section_experiments, common, header } = (commonData?.data as AboutMeData) || {};
-const { data: experiments } = experimentsData;
+const { data: experiments } = experimentsData as { data: Experiment[]};
 ---
 
 <div class="bg-base-100 py-10" id={header.main_sections[1].anchorId}>
