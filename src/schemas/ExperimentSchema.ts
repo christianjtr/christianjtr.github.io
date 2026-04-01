@@ -13,10 +13,10 @@ export const ExperimentSchema = z.object({
     description: z.string(),
     image: z.string(),
     tags: z.array(z.string()),
-    role: z.nativeEnum(EXPERIMENT_ROLE),
+    role: z.enum(EXPERIMENT_ROLE),
     category: z.string(),
     type: z.string(),
-    url: z.string().url().nullable(),
+    url: z.url().nullable(),
     section: z.literal('experiments')
 });
 

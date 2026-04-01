@@ -5,9 +5,9 @@ const category = ["theoretical", "coding"] as const;
 const CredlyCredentialSchema = z.object({
     id: z.string(),
     name: z.string(),
-    image_url: z.string().url(),
+    image_url: z.url(),
     organization: z.string(),
-    badge_url: z.string().url(),
+    badge_url: z.url(),
     date: z.string(),
 });
 
@@ -16,7 +16,7 @@ const CertificationSchema = z.object({
     title: z.string(),
     date: z.string(),
     organization: z.string(),
-    url: z.string().url(),
+    url: z.url(),
     category: z.enum(category),
     code: z.string().nullable(),
     display: z.boolean(),

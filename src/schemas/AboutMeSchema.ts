@@ -81,7 +81,7 @@ const MembershipSchema = z.object({
     showMembershipId: z.boolean(),
     member_no: z.string(),
     showURL: z.boolean(),
-    url: z.string().url().nullable(),
+    url: z.url().nullable(),
     display: z.boolean(),
 });
 
@@ -96,8 +96,8 @@ const SectionAboutSchema = z.object({
     v_shaped_profile: z.string(),
     v_shaped_explanation: z.string(),
     language_tip: z.string(),
-    linkedInURL: z.string().url(),
-    githubURL: z.string().url(),
+    linkedInURL: z.url(),
+    githubURL: z.url(),
     avatar_messages: z.array(z.string()),
     languages: z.array(LanguageSchema),
     expertise: z.object({
