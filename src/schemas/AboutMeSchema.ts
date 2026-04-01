@@ -29,6 +29,7 @@ const CommonTextSchema = z.object({
     list: z.string(),
     timeline: z.string(),
     flip_to_check_stack: z.string(),
+    languages: z.string()
 });
 
 const OpenGraphSchema = z.object({
