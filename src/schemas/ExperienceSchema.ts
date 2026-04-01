@@ -1,4 +1,4 @@
-import { z } from 'astro:content';
+import { z } from 'astro/zod';
 
 export const ExperienceSchema = z.object({
     id: z.string(),
