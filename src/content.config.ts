@@ -1,4 +1,5 @@
-import { defineCollection, z, type BaseSchema } from 'astro:content';
+import { z } from 'astro/zod'
+import { defineCollection, type BaseSchema } from 'astro:content';
 import { glob } from 'astro/loaders';
 import type { CollectionConfig } from 'astro/content/config';
 
