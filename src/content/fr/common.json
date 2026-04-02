@@ -21,7 +21,9 @@
         "list": "☰ Liste",
         "timeline": "⇢ Chronologie",
         "flip_to_check_stack": "Voir le Stack →",
-        "languages": "Langues"
+        "languages": "Langues",
+        "countries": "Pays",
+        "degrees": "Diplômes"
     },
     "open_graph": {
         "title": "Christian José Torrealba Rondón",

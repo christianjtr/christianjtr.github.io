@@ -126,14 +126,14 @@ const backgroundItems: Background[] = [
                     <span class="stat-title uppercase">{section_experiences.companies_and_countries_lived_in}</span>
                     <div class="stat-value text-primary flex items-baseline gap-1">
                         0{uniqueCountries.length}
-                        <span class="text-sm font-normal opacity-50 uppercase tracking-tighter">Países</span>
+                        <span class="text-sm font-normal opacity-50 uppercase tracking-tighter">{common.countries}</span>
                     </div>
                     <div class="stat-desc whitespace-normal mt-1 leading-tight max-w-[200px]">
                         {section_experiences.collaborated_with}
                     </div>
                     <div class="stat-actions mt-4 flex flex-wrap gap-1">
                         <BadgeList
-                            badgeClass="badge-accent badge-outline badge-md"
+                            badgeClass="country-badges"
                             items={section_experiences.full_countries}
                         />
                     </div>
@@ -150,7 +150,7 @@ const backgroundItems: Background[] = [
                     <span class="stat-title uppercase">{common.formal_studies_taken}</span>
                     <div class="stat-value text-secondary flex items-baseline gap-1">
                         0{studies.length}
-                        <span class="text-sm font-normal opacity-50 uppercase tracking-tighter">Títulos</span>
+                        <span class="text-sm font-normal opacity-50 uppercase tracking-tighter">{common.degrees}</span>
                     </div>
                     <div class="stat-desc opacity-100 mt-1">
                         <span class="badge badge-ghost badge-sm">{common.educational_level}</span>
@@ -401,6 +401,14 @@ const backgroundItems: Background[] = [
 <style>
     @reference "@styles/global.css";
 
+    .country-badges {
+        @apply badge-primary;
+    }
+
+    html[data-theme="dark"] .country-badges {
+        @apply badge-accent;
+    }
+    
     .sticky-section {
         @apply sticky top-20 z-2 py-3 bg-base-100;
     }
