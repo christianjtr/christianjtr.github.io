@@ -6,6 +6,7 @@ import type { Experiment, ExperimentRole } from '@schemas/ExperimentSchema';
 import { CONTENT } from '@app-types/Content';
 import { BadgeList, LinkButton, Section, Badge, AsyncImage } from "../";
 import Logo from '@assets/svg/case_of_studies.svg';
+import TrashIcon from '@assets/svg/trash.svg';
 
 const roleIcons: Record<ExperimentRole, string> = {
     'Author': '🧑🏻‍💻',
@@ -21,6 +22,7 @@ const [commonData, [ experimentsData ]] = await Promise.all([
 
 const { section_experiments, common, header } = (commonData?.data as AboutMeData) || {};
 const { data: experiments } = experimentsData as { data: Experiment[]};
+const uniqueCategories = Array.from(new Set([...experiments.map(({ category }) => category)]));
 ---
 
 <div class="bg-primary/5 py-10" id={header.main_sections[2].anchorId}>
@@ -28,9 +30,28 @@ const { data: experiments } = experimentsData as { data: Experiment[]};
     <Section headingTitle={section_experiments.title} subtitle={section_experiments.subtitle} class="container mx-auto">
         <Logo slot="beforeHeading" width={96} height={96} />
         <br />
+        <form class="flex flex-col lg:flex-row flex-wrap lg:items-center gap-7 px-5 md:px-14 mb-10 justify-start lg:justify-end">
+            {uniqueCategories.map((category) => (
+                <div class="flex items-center gap-2">
+                    <input 
+                        class="checkbox checkbox-secondary category-filter"
+                        type="checkbox" 
+                        id={category}
+                        value={category}
+                        name="experiments_type" 
+                    />
+                    <label for={category} class="cursor-pointer font-semibold text-lg" data-category={category}>
+                        {category}
+                    </label>
+                </div>
+            ))}
+            <button type="reset" class="btn btn-lg btn-circle btn-error ml-2" aria-label="Reset">
+                <TrashIcon />
+            </button>
+        </form>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 px-5 md:px-14">
             {experiments.map((experiment: Experiment) => (
-                <div class="card">
+                <div class="card experiment-card" data-category={experiment.category}>
                     <figure>
                         <AsyncImage imagePath={experiment.image} title={experiment.title} />
                     </figure>
@@ -107,3 +128,40 @@ const { data: experiments } = experimentsData as { data: Experiment[]};
         @apply text-base-content;
     }
 </style>
+
+<script>
+    const setupFilters = () => {
+        const checkboxes = document.querySelectorAll<HTMLInputElement>('.category-filter');
+        const cards = document.querySelectorAll<HTMLElement>('.experiment-card');
+        const resetBtn = document.querySelector('button[type="reset"]');
+
+        const filter = () => {
+            const activeCategories = Array.from(checkboxes)
+                .filter(element => element.checked)
+                .map(element => element.value);
+
+            console.log(cards);
+
+            cards.forEach(card => {
+                const cardCategory = card.dataset.category;
+                if (activeCategories.length === 0 || activeCategories.includes(cardCategory!)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        };
+
+        checkboxes.forEach(cb => cb.addEventListener('change', filter));
+        
+        resetBtn?.addEventListener('click', () => {
+            console.log("Reset...");
+            
+            setTimeout(filter, 10);
+        });
+    };
+
+    setupFilters();
+    // Para transiciones de página de Astro:
+    // document.addEventListener('astro:after-swap', setupFilters);
+</script>

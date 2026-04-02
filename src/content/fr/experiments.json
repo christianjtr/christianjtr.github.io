@@ -99,37 +99,21 @@
         "url": "https://christianjtr.github.io/tv-app/"
     },
     {
-        "id": "experiment-erp-management-dashboard",
+        "id": "experiment-pokedex-pwa-application",
         "section": "experiments",
-        "title": "Tableau de Bord de Gestion",
-        "description": "Tableau de bord de gestion conçu pour rationaliser le traitement des données des employés. C'est une application web simple qui vous donne un contrôle complet sur les informations de votre équipe. Avec une fonctionnalité CRUD (Créer, Lire, Mettre à jour, Supprimer) simple.",
-        "image": "/src/assets/images/erp_management.jpg",
+        "title": "Pokédex : Attrapez-les Tous",
+        "description": "Application web progressive (PWA) construite avec Svelte, un framework JavaScript moderne. Elle utilise l'API Pokémon pour offrir une expérience Pokédex complète et engageante, la persistance des données avec LocalStorage, la SpeechSynthesis et les graphiques Plotly.",
+        "image": "/src/assets/images/pokedex.jpg",
         "tags": [
             "Développement Front-end",
-            "VueJS / Vuetify / Vuex",
-            "Conception Matérielle (Material Design)"
+            "Svelte / Vite+PWA",
+            "API SpeechSynthesis",
+            "Bibliothèque Graphique Plotly"
         ],
         "role": "Author",
         "category": "Preuve de Concept (PoC)",
-        "type": "Application Web (Tableau de Bord de Gestion des Employés)",
-        "url": "https://christianjtr.github.io/manage-employees-dashboard/#/"
-    },
-    {
-        "id": "experiment-data-visualization-error-reporting-chart",
-        "section": "experiments",
-        "title": "Tableau de Bord de Visualisation pour la Surveillance",
-        "description": "Application web conçue pour vous aider à comprendre facilement des données complexes. Utilisant la puissante bibliothèque D3.js, elle crée des graphiques interactifs et visuellement attrayants pour un tableau de bord d'intelligence d'affaires. Vous pouvez basculer sans effort entre différentes périodes — par jour, semaine, mois ou année — pour analyser les rapports d'erreurs et autres données.",
-        "image": "/src/assets/images/chart.jpg",
-        "tags": [
-            "Développement Front-end",
-            "VueJS / Vuetify / Vuex",
-            "NodeJS / Express",
-            "D3.js"
-        ],
-        "role": "Author",
-        "category": "Preuve de Concept (PoC)",
-        "type": "Application Web (Tableau de Bord de Surveillance des Erreurs)",
-        "url": null
+        "type": "Application Web (Catalogue Pokémon)",
+        "url": "https://christianjtr.github.io/svelte-pokedex-pwa/"
     },
     {
         "id": "experiment-restaurant-browser-app",
@@ -149,20 +133,36 @@
         "url": "https://christianjtr.github.io/restaurant-browser-app/"
     },
     {
-        "id": "experiment-pokedex-pwa-application",
+        "id": "experiment-data-visualization-error-reporting-chart",
         "section": "experiments",
-        "title": "Pokédex : Attrapez-les Tous",
-        "description": "Application web progressive (PWA) construite avec Svelte, un framework JavaScript moderne. Elle utilise l'API Pokémon pour offrir une expérience Pokédex complète et engageante, la persistance des données avec LocalStorage, la SpeechSynthesis et les graphiques Plotly.",
-        "image": "/src/assets/images/pokedex.jpg",
+        "title": "Tableau de Bord de Visualisation pour la Surveillance",
+        "description": "Application web conçue pour vous aider à comprendre facilement des données complexes. Utilisant la puissante bibliothèque D3.js, elle crée des graphiques interactifs et visuellement attrayants pour un tableau de bord d'intelligence d'affaires. Vous pouvez basculer sans effort entre différentes périodes — par jour, semaine, mois ou année — pour analyser les rapports d'erreurs et autres données.",
+        "image": "/src/assets/images/chart.jpg",
         "tags": [
             "Développement Front-end",
-            "Svelte / Vite+PWA",
-            "API SpeechSynthesis",
-            "Bibliothèque Graphique Plotly"
+            "VueJS / Vuetify / Vuex",
+            "NodeJS / Express",
+            "D3.js"
         ],
         "role": "Author",
         "category": "Preuve de Concept (PoC)",
-        "type": "Application Web (Catalogue Pokémon)",
-        "url": "https://christianjtr.github.io/svelte-pokedex-pwa/"
+        "type": "Application Web (Tableau de Bord de Surveillance des Erreurs)",
+        "url": null
+    },
+    {
+        "id": "experiment-erp-management-dashboard",
+        "section": "experiments",
+        "title": "Tableau de Bord de Gestion",
+        "description": "Tableau de bord de gestion conçu pour rationaliser le traitement des données des employés. C'est une application web simple qui vous donne un contrôle complet sur les informations de votre équipe. Avec une fonctionnalité CRUD (Créer, Lire, Mettre à jour, Supprimer) simple.",
+        "image": "/src/assets/images/erp_management.jpg",
+        "tags": [
+            "Développement Front-end",
+            "VueJS / Vuetify / Vuex",
+            "Conception Matérielle (Material Design)"
+        ],
+        "role": "Author",
+        "category": "Preuve de Concept (PoC)",
+        "type": "Application Web (Tableau de Bord de Gestion des Employés)",
+        "url": "https://christianjtr.github.io/manage-employees-dashboard/#/"
     }
 ]

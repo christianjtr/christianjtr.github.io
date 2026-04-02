@@ -5,7 +5,9 @@
     --font-sans: "Lato", sans-serif;
 }
 @plugin "daisyui" {
-    themes: light --default, dark --prefersdark;
+    themes:
+        light --default,
+        dark --prefersdark;
 }
 @plugin "daisyui/theme" {
     name: "light";
@@ -16,4 +18,8 @@
     --color-accent: var(--color-electric-teal);
     --color-neutral-dark: var(--color-charcoal);
     --color-neutral-light: var(--color-light-gray);
+}
+
+html {
+    font-family: "Lato", sans-serif;
 }
