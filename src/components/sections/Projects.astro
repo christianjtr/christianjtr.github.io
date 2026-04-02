@@ -43,7 +43,7 @@ const { data: projects } = projectData as { data: Project[] };
                             <span class="text-neutral-600 dark:text-gray-400">
                                 {project.summary}
                             </span>
-                            <span class="text-secondary font-medium">{project.owner}</span>
+                            <span class="primary-text font-semibold">{project.owner}</span>
                         </div>
                     </div>
                     <div class="collapse-content">
@@ -100,8 +100,8 @@ const { data: projects } = projectData as { data: Project[] };
                                 </ul>
                             </div>
                         </div>
-                        <div class="flex justify-end mt-5">
-                            <LinkButton href={project.url} target="_blank" rel="noopener noreferrer" displayDefaultIcon>
+                        <div class="flex justify-end mt-7 px-5">
+                            <LinkButton href={project.url} class="btn-md" target="_blank" rel="noopener noreferrer" displayDefaultIcon>
                                 {common.view_more}
                             </LinkButton>
                         </div>
@@ -115,11 +115,19 @@ const { data: projects } = projectData as { data: Project[] };
 <style>
     @reference "@styles/global.css";
 
+    .primary-text {
+        @apply text-primary;
+    }
+
+    html[data-theme="dark"] .primary-text {
+        @apply text-accent;
+    }
+
     .collapse {
         @apply mb-8 p-3 bg-base-100 border-0;
     }
     .collapse:hover {
-        @apply shadow-xl shadow-indigo-200;
+        @apply border border-indigo-400 shadow-xl shadow-indigo-200;
     }
 
     html[data-theme="dark"] .collapse {

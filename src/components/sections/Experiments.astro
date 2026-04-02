@@ -1,6 +1,5 @@
 ---
 import { getCollection, getEntry } from 'astro:content';
-
 import type { ContentDataEntryType } from '@app-types/Content';
 import type { AboutMeData } from '@schemas/AboutMeSchema';
 import type { Experiment, ExperimentRole } from '@schemas/ExperimentSchema';
@@ -24,7 +23,7 @@ const { section_experiments, common, header } = (commonData?.data as AboutMeData
 const { data: experiments } = experimentsData as { data: Experiment[]};
 ---
 
-<div class="bg-base-100 py-10" id={header.main_sections[1].anchorId}>
+<div class="bg-primary/5 py-10" id={header.main_sections[2].anchorId}>
     <br />
     <Section headingTitle={section_experiments.title} subtitle={section_experiments.subtitle} class="container mx-auto">
         <Logo slot="beforeHeading" width={96} height={96} />
@@ -64,11 +63,11 @@ const { data: experiments } = experimentsData as { data: Experiment[]};
     @reference "@styles/global.css";
     
     .card {
-        @apply overflow-hidden rounded-lg border border-neutral-200;
+        @apply overflow-hidden rounded-lg bg-base-100;
         color: var(--color-neutral-dark);
     }
     .card:hover {
-        @apply border-indigo-400 shadow-lg shadow-indigo-200;
+        @apply border border-indigo-400 shadow-lg shadow-indigo-200;
     }
 
     html[data-theme="dark"] .card {

@@ -102,7 +102,7 @@ const backgroundItems: Background[] = [
 });
 ---
 
-<div class="bg-primary/5 py-10" id={header.main_sections[2].anchorId}>
+<div class="bg-base-100 py-10" id={header.main_sections[3].anchorId}>
     <br />
     <Section
         headingTitle={section_experiences.title}
@@ -406,8 +406,7 @@ const backgroundItems: Background[] = [
     @reference "@styles/global.css";
 
     .sticky-section {
-        @apply sticky top-20 z-2 py-3;
-        background: var(--color-pale-lavender);
+        @apply sticky top-20 z-2 py-3 bg-base-100;
     }
 
     html[data-theme="dark"] .sticky-section {
@@ -419,8 +418,16 @@ const backgroundItems: Background[] = [
         @apply bg-base-100;
     }
 
+    .timeline-box {
+        @apply border border-neutral-200;
+    }
+
     .list-card-item {
-        @apply bg-base-100 flex md:flex-row flex-col p-5;
+        @apply bg-base-100 flex md:flex-row flex-col p-5 border border-neutral-200;
+    }
+
+    html[data-theme="dark"] .list-card-item {
+        @apply border-0;
     }
 
     .list-card-item:hover {
@@ -436,12 +443,12 @@ const backgroundItems: Background[] = [
     }
 
     .timeline-box:hover {
-        @apply shadow-xl shadow-indigo-200;
+        @apply border-indigo-400 shadow-xl shadow-indigo-200;
     }
 
     html[data-theme="dark"] .timeline-box:hover,
     html[data-theme="dark"] .list-card-item:hover {
-        @apply border-indigo-400 shadow-lg shadow-primary/65;
+        @apply border border-indigo-400 shadow-lg shadow-primary/65;
     }
 
     .stats-content-wrapper {

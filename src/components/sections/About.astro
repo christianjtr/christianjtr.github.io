@@ -5,7 +5,6 @@ import { Image } from 'astro:assets';
 import type { ContentDataEntryType } from '@app-types/Content';
 import type { AboutMeData } from '@schemas/AboutMeSchema';
 import { CONTENT } from '@app-types/Content';
-import { Credentials } from '.';
 import { VerticalSpacer, BadgeList } from "../";
 import RocketIcon from '@assets/svg/rocket.svg';
 import MagicStickIcon from '@assets/svg/magic_stick.svg';
@@ -50,18 +49,19 @@ const { section_about, common } = (entry?.data as AboutMeData) || {};
     </div>
     <div class="grid md:grid-cols-8 about-me-wrapper">
         <div class="col-span-full lg:col-span-2 w-full rounded-lg">
-            <span class="block font-semibold text-xl my-2">{section_about.hobbies_title}</span>
+            <span class="block font-semibold text-xl my-3">{section_about.hobbies_title}</span>
             <span class="block text-2xl">{section_about.hobbies}</span>
             <span class="block text-xs my-3 text-info-content-color">{section_about.language_tip}</span>
         </div>
         <div class="col-span-full lg:col-span-6 flex items-center">
             <div class="stats stats-vertical md:stats-horizontal w-full">
-                {section_about.languages.map((language: any) => (
+                {section_about.languages.map((language) => (
                     <div class="stat space-y-1">
                         <div class="stat-figure text-4xl">{language.emoji}</div>
                         <div class="stat-value font-semibold text-xl">{language.name}</div>
-                        <div class="stat-desc text-info-content-color">{language.proficiency}</div>
-                        <progress class="progress progress-primary w-20 lg:w-40" value={language.value} max="100" />
+                        <div class="stat-desc text-info-content-color mb-3">{language.proficiency}</div>
+                        <progress class="progress progress-primary w-3/4 lg:w-40 h-3.5" value={language.value} max="100" />
+                        
                     </div>
                 ))}
             </div>
@@ -69,85 +69,80 @@ const { section_about, common } = (entry?.data as AboutMeData) || {};
     </div>
     <VerticalSpacer />
     <div class="grid lg:grid-cols-6 gap-8 mt-5">
-        <div class="col-span-1">
-            <h3 class="text-3xl font-semibold" set:html={section_about.expertise.title}></h3>
-        </div>
-        <div class="col-span-5">
+        <h3 class="col-span-1 lg:col-span-2 text-3xl font-semibold">{section_about.expertise.title}</h3>
+        <div class="col-span-5 lg:col-span-4">
             <div class="divider divider-end flex items-center">
-                <p class="tooltip tooltip-primary lg:tooltip-top before:max-w-48 dark:tooltip-secondary" data-tip={section_about.v_shaped_explanation}>
-                    <span class="uppercase font-semibold text-primary dark:text-secondary cursor-pointer">{section_about.v_shaped_profile}</span>
+                <p class="tooltip-wrapper lg:tooltip-top">
+                    <span class="tooltip-content p-2 max-w-48">{section_about.v_shaped_explanation}</span>
+                    <span class="primary-text uppercase font-semibold cursor-pointer">
+                        {section_about.v_shaped_profile}
+                    </span>
                 </p>
-                <Image src={CrystalBallAnimation} width="48" height="40" alt="Crystal ball" aria-label="Crystal ball"/>
+                <Image src={CrystalBallAnimation} width="60" height="60" alt="Crystal ball" aria-label="Crystal ball"/>
             </div>
         </div>
     </div>
-    <br />
-    <div class="grid sm:grid-cols-12 lg:grid-cols-8 gap-8">
-        <div class="col-span-full lg:col-span-2">
-            <p class="flex text-xl lg:text-lg leading-8">
-                <font class="text-7xl text-primary mr-3">“</font>
-                <br />
-                {section_about.about_me}
-            </p>
-        </div>
-        {section_about.expertise.subjects.map((subject) => (
-            <div class="col-span-full sm:col-span-4 lg:col-span-2">
-                <div class="group flex h-full w-full">
-                    <div class="card-informative border border-neutral-300 transition-all duration-800 transform-3d group-hover:transform-[rotateY(180deg)]">
-                        <div class="backface-hidden w-full">
-                            <div class="flex justify-between items-center align-middle">
-                                <div class="card-informative-icon-wrapper">
-                                    {subject.category === "product" && <RocketIcon width={42} height={42} />}
-                                    {subject.category === "coding" && <CodeFileIcon width={42} height={42} />}
-                                    {subject.category === "data" && <MagicStickIcon width={42} height={42} />}
-                                </div>
-                                <span class="font-semibold block lg:w-full text-right text-secondary dark:text-warning">
-                                    {common.flip_to_check_stack}
-                                </span>
-                            </div>
-                            <span class="block my-5 text-xl lg:text-2xl font-medium">{subject.name}<font class="text-accent text-3xl">.</font></span>
-                            <ul class="space-y-2">
-                                {subject.topics.map((topic) => (
-                                    <li class="text-sm lg:text-md text-info-content-color">{topic}</li>
-                                ))}
-                            </ul>
-                        </div>
-                        <div class="absolute inset-0 transform-[rotateY(180deg)] backface-hidden p-6 flex flex-col border border-neutral-300 rounded-lg overflow-y-scroll">
-                            <BadgeList items={subject.tools} badgeClass="badge-sm badge-secondary h-fit" />
-                        </div>
-                    </div>
+    <div class="col-span-full my-16 px-5">
+        <p class="flex text-xl leading-8">
+            <font class="text-7xl text-primary mr-3">“</font>
+            <br />
+            <span set:html={section_about.about_me}></span>
+        </p>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-6 gap-8 mx-auto px-5">
+        {section_about.expertise.subjects.map((subject, index) => (
+            <div class="col-span-full lg:col-span-2 flex flex-col items-center text-center">
+                <div class="card-informative-icon-wrapper">
+                    {subject.category === "product" && <RocketIcon width={70} height={70} />}
+                    {subject.category === "coding" && <CodeFileIcon width={70} height={70} />}
+                    {subject.category === "data" && <MagicStickIcon width={70} height={70} />}
                 </div>
+                <h4 class="font-semibold uppercase text-lg my-3">{subject.name}<font class="text-accent text-4xl">.</font></h4>
+                <p class="text-neutral-600 dark:text-gray-400 text-sm px-5">
+                    {subject.description}
+                </p>
+                <button class="btn btn-ghost my-3 text-secondary" onclick={`my_modal_${index}.showModal()`}>{common.flip_to_check_stack}</button>
+                <dialog id={`my_modal_${index}`} class="modal">
+                    <div class="modal-box">
+                        <form method="dialog">
+                            <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                        </form>
+                        <h3 class="text-primary text-left text-lg font-semibold mb-7">{common.technologies}</h3>
+                        <BadgeList items={subject.tools} badgeClass="badge-sm badge-ghost" />
+                    </div>
+                </dialog>
             </div>
         ))}
     </div>
 </div>
 <VerticalSpacer />
-<Credentials />
-<VerticalSpacer />
 
 <style>
     @reference "@styles/global.css";
+
+    .primary-text {
+        @apply text-primary;
+    }
+
+    .tooltip-wrapper {
+        @apply tooltip tooltip-primary;
+    }
     
     .card-informative {
         @apply p-6 rounded-lg flex w-full;
-    }
-
-    .card-informative.is-flipped {
-        transform: rotateY(180deg);
-    }
-    
-    .card-informative, .backface-hidden {
-        backface-visibility: hidden;
     }
 
     .card-informative-icon-wrapper {
         @apply bg-primary/5 w-fit rounded-full p-3;
     }
 
-    html[data-theme="dark"] .card-informative, html[data-theme="dark"] .backface-hidden {
-        @apply bg-slate-800 border border-transparent;
+    html[data-theme="dark"] .primary-text {
+        @apply text-accent;
     }
 
+    html[data-theme="dark"] .tooltip-wrapper {
+        @apply tooltip-accent;
+    }
     html[data-theme="dark"] .card-informative:hover {
         @apply border-indigo-400 shadow-lg shadow-primary/65;
     }
@@ -183,7 +178,7 @@ const { section_about, common } = (entry?.data as AboutMeData) || {};
     }
 
     .about-me-wrapper {
-        @apply gap-8 shadow-lg rounded-lg px-5 py-4 border border-neutral-100;
+        @apply gap-8 shadow rounded-lg px-5 py-4 border border-neutral-100;
     }
 
     .text-info-content-color {
@@ -194,16 +189,8 @@ const { section_about, common } = (entry?.data as AboutMeData) || {};
         @apply text-base-content;
     }
 
-    .text-info-content-color-backface {
-        @apply text-neutral;
-    }
-
-    html[data-theme="dark"] .text-info-content-color-backface {
-        @apply text-primary-content;
-    }
-
     html[data-theme="dark"] .about-me-wrapper {
-        @apply bg-slate-800 border-0 shadow-lg shadow-primary/65;
+        @apply bg-slate-800 border-0;
     }
 
     html[data-theme="dark"] .chat-bubble {
@@ -218,46 +205,3 @@ const { section_about, common } = (entry?.data as AboutMeData) || {};
         95%, 100% { transform: translateY(0%); } 
     }
 </style>
-
-<script>
-    const body = document.body;
-    
-    const FLIP_CLASS = 'is-flipped';
-    const flipCards = document.querySelectorAll('.card-informative');
-
-    if (flipCards.length > 0) {
-        flipCards.forEach(card => {
-            card.addEventListener('touchstart', (event) => {
-                event.preventDefault(); 
-                
-                const wasFlipped = card.classList.contains(FLIP_CLASS);
-                
-                flipCards.forEach(otherCard => {
-                    otherCard.classList.remove(FLIP_CLASS);
-                });
-                
-                if (!wasFlipped) {
-                    card.classList.add(FLIP_CLASS);
-                }
-            });
-        });
-    }
-
-    body.addEventListener('touchstart', unflipAllCards);
-    
-    function unflipAllCards(event: TouchEvent) {
-        let isCard = false;
-        let target = event.target as HTMLElement | null;
-        
-        while (target && target !== body) {
-            if (target.classList.contains('card-informative')) {
-                isCard = true;
-                break;
-            }
-            target = target.parentElement;
-        }
-        if (!isCard) {
-            flipCards.forEach(card => card.classList.remove(FLIP_CLASS));
-    }
-}
-</script>
