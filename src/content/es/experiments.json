@@ -13,7 +13,7 @@
         "role": "Author",
         "type": "Ensayo de Liderazgo",
         "category": "Caso de Estudio",
-        "url": null
+        "url": "https://drive.google.com/file/d/1yprBUaMhTifIBizEOwrhScjqB7WsA7-K/view?usp=sharing"
     },
     {
         "id": "experiment-bi-adventure-works",
@@ -29,7 +29,7 @@
         "role": "Author",
         "type": "Ingeniería de Datos",
         "category": "Proyecto",
-        "url": null
+        "url": "https://drive.google.com/file/d/1UN8-YdFhR7UuhvARsf61kCxITTgot3Cf/view?usp=sharing"
     },
     {
         "id": "experiment-circuitos",
@@ -45,7 +45,7 @@
         "role": "Contributor",
         "type": "Concepto de Diseño UX e Investigación",
         "category": "Proyecto",
-        "url": null
+        "url": "https://drive.google.com/file/d/1eIRVupKq6ct5eN00Z6vhNl4uG5JnA6G8/view?usp=sharing"
     },
     {
         "id": "project-agent-orchestrator",
@@ -78,8 +78,8 @@
         ],
         "role": "Author",
         "type": "Concepto de e-Business y Análisis de Nicho de Mercado",
-        "category": "Proyecto",
-        "url": null
+        "category": "Caso de Estudio",
+        "url": "https://drive.google.com/file/d/1nVCuBsmsfOd7009AsGPlxSOo00pIHaCo/view?usp=sharing"
     },
     {
         "id": "experiment-tv-movie-streaming-like-webapp",
