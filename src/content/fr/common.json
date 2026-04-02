@@ -49,6 +49,10 @@
                 "label": "Projets Phares"
             },
             {
+                "anchorId": "credentials",
+                "label": "Certifications"
+            },
+            {
                 "anchorId": "case_of_studies",
                 "label": "Études de Cas et Travaux"
             },
@@ -68,7 +72,7 @@
         "greeting": "Bonjour à tous, je suis",
         "my_name": "Christian José Torrealba Rondón<span class='text-accent text-3xl'>.</span>",
         "my_name_template": "Christian José <br>Torrealba Rondón<span class='text-accent'>.</span>",
-        "about_me": "Je me considère comme un <strong>professionnel V-Shaped</strong>, doté d'une solide expérience en ingénierie produit, complétée par des compétences en développement logiciel et en intelligence d'affaires, ce qui me permet d'intégrer stratégie, exécution et données pour proposer des solutions exceptionnelles.",
+        "about_me": "Je me considère comme un <strong>professionnel V-Shaped</strong>, doté d'une expérience en ingénierie produit, complétée par des compétences en développement logiciel et en intelligence d'affaires, ce qui me permet d'intégrer stratégie, exécution et données pour proposer des solutions exceptionnelles.",
         "summary": "Création d'expériences et de solutions orientées utilisateur, appliquant les principes de l'Ingénierie des Systèmes, de l'Ingénierie des Données et du Design Thinking.",
         "hobbies_title": "Loisirs et Langues",
         "hobbies": "☀️ 🏖️ 🎡 🍦 🎮 🏃🏻 🐶 ✈️ 🗣️",
@@ -106,11 +110,12 @@
             }
         ],
         "expertise": {
-            "title": "Domaines de <br />Connaissance",
+            "title": "Comment je valorise l'écosystème produit et tech",
             "subjects": [
                 {
                     "name": "Ingénierie Produit",
                     "category": "product",
+                    "description": "Pilotage du product discovery, stratégie digitale et mentorat d'équipe",
                     "topics": [
                         "Leadership Agile et Mentorat",
                         "Propriété et Idéation de Produit",
@@ -118,18 +123,27 @@
                         "Marketing Numérique"
                     ],
                     "tools": [
-                        "Segment, Amplitude",
-                        "Google Ads, Maps",
-                        "CESIUM, Mapbox",
                         "Atlassian Suite (Jira, Confluence)",
-                        "Sketch, Figma, Zeplin",
-                        "Notion, Slack, MS Teams",
-                        "GitHub, BitBucket"
+                        "Notion",
+                        "Figma",
+                        "GitHub",
+                        "Segment",
+                        "Google Ads",
+                        "Amplitude",
+                        "Google Maps",
+                        "CESIUM",
+                        "Mapbox",
+                        "Sketch",
+                        "Zeplin",
+                        "Slack",
+                        "MS Teams",
+                        "BitBucket"
                     ]
                 },
                 {
                     "name": "Développement Logiciel",
                     "category": "coding",
+                    "description": "Expert en architecture web et design systems, de l’intégration d’API au cloud et aux tests",
                     "topics": [
                         "Applications Web et Systèmes de Conception",
                         "APIs et intégration de services",
@@ -137,10 +151,15 @@
                         "Environnements cloud (AWS)"
                     ],
                     "tools": [
-                        "JavaScript, TypeScript",
-                        "React, Vue, Svelte, Astro",
-                        "Zod, ORMs",
-                        "Test Suites (Jest, Cypress)",
+                        "JavaScript",
+                        "TypeScript",
+                        "React",
+                        "Vue",
+                        "Svelte",
+                        "Astro",
+                        "Zod",
+                        "ORMs (Sequelize, Drizzle, etc.)",
+                        "Test Suites (Jest, Cypress, Playwright)",
                         "Web bundlers (Webpack, Vite)",
                         "GraphQL",
                         "RESTFull APIs",
@@ -154,6 +173,7 @@
                 {
                     "name": "Informatique Décisionnelle",
                     "category": "data",
+                    "description": "Transformation de données en insights stratégiques via l’ETL, le nettoyage et la visualisation",
                     "topics": [
                         "Compétences Analytiques",
                         "ETL/DWH modélisation",
@@ -161,8 +181,7 @@
                         "Dashboards et Reporting"
                     ],
                     "tools": [
-                        "SQL Server Analysis Services",
-                        "SQL Server Integration Services",
+                        "SQL Server SSAS / SSIS",
                         "Relational Databases",
                         "NoSQL",
                         "Pentaho BI",
@@ -210,7 +229,7 @@
     },
     "section_projects": {
         "title": "Projets Phares",
-        "subtitle": "J'ai présenté mes travaux de projet lors de plusieurs conférences internationales"
+        "subtitle": "J'ai présenté mes travaux de projet lors de conférences internationales"
     },
     "section_experiments": {
         "title": "Études de Cas et Travaux",

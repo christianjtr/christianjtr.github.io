@@ -49,6 +49,10 @@
                 "label": "Featured Projects"
             },
             {
+                "anchorId": "credentials",
+                "label": "Certifications"
+            },
+            {
                 "anchorId": "case_of_studies",
                 "label": "Case of Studies and Works"
             },
@@ -68,7 +72,7 @@
         "greeting": "Hi there friends, I am",
         "my_name": "Christian José Torrealba Rondón<span class='text-accent text-3xl'>.</span>",
         "my_name_template": "Christian José <br>Torrealba Rondón<span class='text-accent'>.</span>",
-        "about_me": "I see myself as a <strong>V-Shaped professional</strong> with deep expertise in product engineering, with complementary skills in software development and business intelligence, allowing me to connect strategy, execution, and data to deliver exceptional solutions.",
+        "about_me": "I see myself as a <strong>V-Shaped professional</strong> with expertise in product engineering, with complementary skills in software development and business intelligence, allowing me to connect strategy, execution, and data to deliver exceptional solutions.",
         "summary": "Creating user-oriented experiences and solutions by applying principles of Systems Engineering, Data Engineering, and Design Thinking.",
         "hobbies_title": "Hobbies and Languages",
         "hobbies": "☀️ 🏖️ 🎡 🍦 🎮 🏃🏻 🐶 ✈️ 🗣️",
@@ -106,11 +110,12 @@
             }
         ],
         "expertise": {
-            "title": "Areas of <br />knowledge",
+            "title": "How I Impact Product & Tech Domains",
             "subjects": [
                 {
                     "name": "Product Engineering",
                     "category": "product",
+                    "description": "Driving product discovery, digital strategy, and team mentorship",
                     "topics": [
                         "Agile Leadership and Mentorship",
                         "Product Ownership and Ideation",
@@ -118,18 +123,27 @@
                         "Digital Marketing"
                     ],
                     "tools": [
-                        "Segment, Amplitude",
-                        "Google Ads, Maps",
-                        "CESIUM, Mapbox",
                         "Atlassian Suite (Jira, Confluence)",
-                        "Sketch, Figma, Zeplin",
-                        "Notion, Slack, MS Teams",
-                        "GitHub, BitBucket"
+                        "Notion",
+                        "Figma",
+                        "GitHub",
+                        "Segment",
+                        "Google Ads",
+                        "Amplitude",
+                        "Google Maps",
+                        "CESIUM",
+                        "Mapbox",
+                        "Sketch",
+                        "Zeplin",
+                        "Slack",
+                        "MS Teams",
+                        "BitBucket"
                     ]
                 },
                 {
                     "name": "Software Development",
                     "category": "coding",
+                    "description": "Specializing in web architecture and design systems, from API integration to automated testing and cloud monitoring",
                     "topics": [
                         "Web apps and Design Systems",
                         "APIs and service integration",
@@ -137,10 +151,15 @@
                         "Cloud environments (AWS)"
                     ],
                     "tools": [
-                        "JavaScript, TypeScript",
-                        "React, Vue, Svelte, Astro",
-                        "Zod, ORMs",
-                        "Test Suites (Jest, Cypress)",
+                        "JavaScript",
+                        "TypeScript",
+                        "React",
+                        "Vue",
+                        "Svelte",
+                        "Astro",
+                        "Zod",
+                        "ORMs (Sequelize, Drizzle, etc.)",
+                        "Test Suites (Jest, Cypress, Playwright)",
                         "Web bundlers (Webpack, Vite)",
                         "GraphQL",
                         "RESTFull APIs",
@@ -154,6 +173,7 @@
                 {
                     "name": "Business Intelligence",
                     "category": "data",
+                    "description": "Transforming data into actionable insights through ETL modeling, rigorous cleansing, and advanced visualization",
                     "topics": [
                         "Analytical Skills",
                         "ETL/DWH Modeling",
@@ -161,8 +181,7 @@
                         "Dashboards and Reporting"
                     ],
                     "tools": [
-                        "SQL Server Analysis Services",
-                        "SQL Server Integration Services",
+                        "SQL Server SSAS / SSIS",
                         "Relational Databases",
                         "NoSQL",
                         "Pentaho BI",
@@ -210,7 +229,7 @@
     },
     "section_projects": {
         "title": "Featured Projects",
-        "subtitle": "Presented project work at multiple international conferences"
+        "subtitle": "Presented project work at international conferences"
     },
     "section_experiments": {
         "title": "Case of Studies and Works",
