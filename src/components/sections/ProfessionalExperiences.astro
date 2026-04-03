@@ -439,7 +439,7 @@ const backgroundItems: Background[] = [
     }
 
     .list-card-item:hover {
-        @apply border-indigo-400 shadow-lg shadow-indigo-200;
+        @apply border-primary/70 shadow-lg shadow-primary/20;
     }
 
     html[data-theme="dark"] .card {
@@ -451,12 +451,12 @@ const backgroundItems: Background[] = [
     }
 
     .timeline-box:hover {
-        @apply border-indigo-400 shadow-xl shadow-indigo-200;
+        @apply border-indigo-400 shadow-xl shadow-primary/20;
     }
 
     html[data-theme="dark"] .timeline-box:hover,
     html[data-theme="dark"] .list-card-item:hover {
-        @apply border border-indigo-400 shadow-lg shadow-primary/65;
+        @apply border border-indigo-400 shadow-lg shadow-primary/25;
     }
 
     .stats-content-wrapper {
@@ -464,7 +464,7 @@ const backgroundItems: Background[] = [
     }
 
     html[data-theme="dark"] .stats-content-wrapper {
-        @apply bg-slate-900 border-0 shadow-lg shadow-primary/65;
+        @apply bg-base-200 border-0 shadow-lg shadow-primary/25;
     }
 
     .list-wrapper {
@@ -484,7 +484,7 @@ const backgroundItems: Background[] = [
     }
 
     .list-wrapper::before {
-        @apply border-indigo-500 border border-dashed absolute bottom-0 top-0 left-24 z-0 w-0;
+        @apply border-primary/50 border border-dashed absolute bottom-0 top-0 left-24 z-0 w-0;
         content: "";
     }
 

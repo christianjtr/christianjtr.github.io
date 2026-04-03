@@ -29,20 +29,22 @@ const pageTitle = "Christian José Torrealba Rondón";
         <title>{pageTitle}</title>
     </head>
     <body>
-        <Header />
+        <Header transition:persist />
          
-        <MainWrapper />
-        <div class="vertical-icon-menu-wrapper hidden lg:flex">
+        <MainWrapper transition:animate="fade" />
+        <div class="vertical-icon-menu-wrapper hidden lg:flex" transition:persist>
             <VerticalIconMenu />
         </div>
         <button 
             id="scroll-top-button" 
             class="scroll-top-button" 
             aria-label="Scroll to top button"
+            transition:name="scroll-top"
         >
             ☝🏼
         </button>
-        <Footer />
+        <Footer transition:persist />
+
     </body>
 </html>
 

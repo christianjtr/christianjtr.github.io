@@ -88,11 +88,11 @@ const uniqueCategories = Array.from(new Set([...experiments.map(({ category }) =
         color: var(--color-neutral-dark);
     }
     .card:hover {
-        @apply border border-indigo-400 shadow-lg shadow-indigo-200;
+        @apply border border-indigo-400 shadow-lg shadow-primary/20;
     }
 
     html[data-theme="dark"] .card {
-        @apply bg-slate-900 border border-transparent;
+        @apply bg-base-200 border border-transparent;
     }
 
     html[data-theme="dark"] .card:hover {
