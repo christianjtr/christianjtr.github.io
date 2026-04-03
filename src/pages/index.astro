@@ -1,5 +1,5 @@
 ---
 import { defaultLocale } from '@utils/i18n';
----
 
-<meta http-equiv="refresh" content={`0;url=/${defaultLocale}/`} />
+return Astro.rewrite(`/${defaultLocale}`);
+---
