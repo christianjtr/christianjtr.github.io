@@ -62,7 +62,7 @@
         "role": "Author",
         "type": "Tableau de Bord / Surveillance",
         "category": "Preuve de Concept (PoC)",
-        "url": null
+        "url": "https://christianjtr.github.io/agent-orchestrator/"
     },
     {
         "id": "experiment-idea-cultural-activities-app",
