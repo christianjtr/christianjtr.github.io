@@ -3,6 +3,6 @@ export const i18nLocalesConfig = {
   defaultLocale: "en",
   routing: {
     prefixDefaultLocale: true,
-    redirectToDefaultLocale: true
+    redirectToDefaultLocale: false
   }
 };

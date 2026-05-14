@@ -1,5 +1,35 @@
 ---
-import { defaultLocale } from '@utils/i18n';
-
-return Astro.rewrite(`/${defaultLocale}`);
+// Client-side browser locale detection for the root URL
 ---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting...</title>
+    <meta http-equiv="refresh" content="0;url=/en/" />
+  </head>
+  <body>
+    <script>
+      function getCurrentBrowserLocale({ baseLanguageCode = false } = {}) {
+        const fullLocale = navigator.language || 'en';
+        if (baseLanguageCode) {
+          const baseCode = fullLocale.split(/[-_]/)[0]?.toLowerCase();
+          return ['es', 'en', 'fr'].includes(baseCode) ? baseCode : 'en';
+        }
+        return fullLocale;
+      }
+
+      const supportedLocales = ['es', 'en', 'fr'];
+      const defaultLocale = 'en';
+      const browserLocale = getCurrentBrowserLocale({ baseLanguageCode: true });
+      const targetLocale = supportedLocales.includes(browserLocale) ? browserLocale : defaultLocale;
+
+      window.location.replace(`/${targetLocale}/`);
+    </script>
+    <noscript>
+      JavaScript is required to redirect automatically. Please go to <a href="/en/">/en/</a>.
+    </noscript>
+  </body>
+</html>
