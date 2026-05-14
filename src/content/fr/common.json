@@ -62,7 +62,11 @@
                 "anchorId": "background",
                 "label": "Parcours"
             }
-        ]
+        ],
+        "locale_banner": {
+            "message": "Cette page est également disponible en",
+            "action": "Changer"
+        }
     },
     "footer": {
         "powered_and_themed_by": "Développé et thématisé",

@@ -1,0 +1,156 @@
+---
+interface LocaleBannerText {
+    message: string;
+    action: string;
+}
+
+interface Language {
+    locale: string;
+    name: string;
+}
+
+interface Props {
+    currentLocale: string;
+    languages: Language[];
+    bannerText: LocaleBannerText;
+}
+
+const { currentLocale, languages, bannerText } = Astro.props;
+
+const languageMap = Object.fromEntries(
+    languages.map(({ locale, name }) => [locale, name])
+);
+---
+
+<div
+    id="locale-banner"
+    class="locale-banner"
+    role="alert"
+    aria-live="polite"
+    hidden
+>
+    <div class="locale-banner-content">
+        <p class="locale-banner-message">
+            <span>{bannerText?.message}</span>
+            <strong id="locale-banner-lang-name"></strong>
+        </p>
+        <div class="locale-banner-actions">
+            <a id="locale-banner-switch" class="btn btn-sm btn-primary" href="#">
+                {bannerText?.action}
+            </a>
+            <button
+                id="locale-banner-dismiss"
+                class="btn btn-sm btn-ghost btn-circle"
+                aria-label="Dismiss"
+            >
+                ✕
+            </button>
+        </div>
+    </div>
+</div>
+
+<style>
+    @reference "@styles/global.css";
+
+    .locale-banner {
+        @apply w-full bg-info/10 border-b border-info/20 overflow-hidden;
+        transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+        max-height: 0;
+        opacity: 0;
+        padding: 0;
+    }
+
+    .locale-banner[data-visible="true"] {
+        @apply py-2;
+        max-height: 80px;
+        opacity: 1;
+    }
+
+    .locale-banner-content {
+        @apply container mx-auto flex items-center justify-between px-4 gap-3;
+    }
+
+    .locale-banner-message {
+        @apply text-sm;
+    }
+
+    .locale-banner-actions {
+        @apply flex items-center gap-2;
+    }
+
+    html[data-theme="dark"] .locale-banner {
+        @apply bg-info/5 border-info/10;
+    }
+</style>
+
+<script is:inline define:vars={{ currentLocale, languageMap }}>
+    (function () {
+        var LOCALE_STORAGE_KEY = 'user-locale-preference';
+        var BANNER_DISMISSED_KEY = 'locale-banner-dismissed';
+
+        var banner = document.getElementById('locale-banner');
+        var langNameEl = document.getElementById('locale-banner-lang-name');
+        var switchBtn = document.getElementById('locale-banner-switch');
+        var dismissBtn = document.getElementById('locale-banner-dismiss');
+
+        if (!banner || !langNameEl || !switchBtn || !dismissBtn) return;
+
+        // 1. Don't show if user has a stored preference (they already chose intentionally)
+        try {
+            var storedPref = localStorage.getItem(LOCALE_STORAGE_KEY);
+            if (storedPref) return;
+        } catch (_) {}
+
+        // 2. Don't show if previously dismissed
+        try {
+            if (localStorage.getItem(BANNER_DISMISSED_KEY) === 'true') return;
+        } catch (_) {}
+
+        // 3. Detect browser locale
+        var browserLangs = (navigator.languages && navigator.languages.length)
+            ? navigator.languages
+            : [navigator.language || ''];
+
+        var detectedLocale = null;
+        for (var i = 0; i < browserLangs.length; i++) {
+            var lang = browserLangs[i];
+            if (!lang) continue;
+            var baseCode = lang.split(/[-_]/)[0].toLowerCase();
+            if (baseCode && languageMap[baseCode]) {
+                detectedLocale = baseCode;
+                break;
+            }
+        }
+
+        // 4. Don't show if detected locale matches current page or no match found
+        if (!detectedLocale || detectedLocale === currentLocale) return;
+
+        // 5. Show the banner
+        var suggestedName = languageMap[detectedLocale];
+        langNameEl.textContent = ' ' + suggestedName;
+        switchBtn.setAttribute('href', '/' + detectedLocale + '/');
+
+        banner.removeAttribute('hidden');
+        // Trigger reflow before adding visible state for animation
+        banner.offsetHeight;
+        banner.setAttribute('data-visible', 'true');
+
+        // Handle "Switch" click — save preference
+        switchBtn.addEventListener('click', function () {
+            try {
+                localStorage.setItem(LOCALE_STORAGE_KEY, detectedLocale);
+            } catch (_) {}
+        });
+
+        // Handle dismiss
+        dismissBtn.addEventListener('click', function () {
+            banner.setAttribute('data-visible', 'false');
+            try {
+                localStorage.setItem(BANNER_DISMISSED_KEY, 'true');
+            } catch (_) {}
+            setTimeout(function () {
+                banner.setAttribute('hidden', '');
+            }, 300);
+        });
+    })();
+</script>

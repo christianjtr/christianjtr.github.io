@@ -62,7 +62,11 @@
                 "anchorId": "background",
                 "label": "Background"
             }
-        ]
+        ],
+        "locale_banner": {
+            "message": "This page is also available in",
+            "action": "Switch"
+        }
     },
     "footer": {
         "powered_and_themed_by": "Powered and themed",

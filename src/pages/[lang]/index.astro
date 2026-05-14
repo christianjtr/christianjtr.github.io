@@ -1,9 +1,12 @@
 ---
 import '@fontsource/lato';
+import { getEntry } from 'astro:content';
 
-import { contentDataEntries } from '@app-types/Content';
+import { contentDataEntries, CONTENT } from '@app-types/Content';
+import type { ContentDataEntryType } from '@app-types/Content';
+import type { AboutMeData } from '@schemas/AboutMeSchema';
 import { Header, Footer, MainWrapper } from '@layouts';
-import { VerticalIconMenu } from '@components';
+import { VerticalIconMenu, LocaleBanner } from '@components';
 import { OpenGraph } from '@components/sections';
 import '@styles/global.css';
 
@@ -17,6 +20,9 @@ export function getStaticPaths() {
 
 const { lang } = Astro.params;
 const pageTitle = "Christian José Torrealba Rondón";
+
+const entry = await getEntry(lang as ContentDataEntryType, `${lang}/${CONTENT.COMMON}`);
+const { header } = (entry?.data as AboutMeData) || {};
 ---
 
 <html lang={lang} data-theme="light">
@@ -30,7 +36,11 @@ const pageTitle = "Christian José Torrealba Rondón";
     </head>
     <body>
         <Header transition:persist />
-         
+        <LocaleBanner
+            currentLocale={lang!}
+            languages={header.languages}
+            bannerText={header.locale_banner}
+        />
         <MainWrapper transition:animate="fade" />
         <div class="vertical-icon-menu-wrapper hidden lg:flex" transition:persist>
             <VerticalIconMenu />

@@ -1,5 +1,8 @@
 ---
-// Client-side browser locale detection for the root URL
+import { i18nLocalesConfig } from '../../i18n.config.mjs';
+
+const { locales, defaultLocale } = i18nLocalesConfig;
+const LOCALE_STORAGE_KEY = 'user-locale-preference';
 ---
 
 <!DOCTYPE html>
@@ -7,29 +10,86 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
     <title>Redirecting...</title>
     <meta http-equiv="refresh" content="0;url=/en/" />
+    <style>
+      body {
+        font-family: system-ui, -apple-system, sans-serif;
+        margin: 2rem;
+        line-height: 1.6;
+        color: #333;
+      }
+      nav ul {
+        list-style: none;
+        padding: 0;
+      }
+      nav li {
+        margin: 0.5rem 0;
+      }
+      nav a {
+        text-decoration: none;
+        color: #007acc;
+        padding: 0.5rem;
+        border-radius: 4px;
+        transition: background-color 0.2s;
+      }
+      nav a:hover {
+        background-color: #f0f8ff;
+      }
+    </style>
   </head>
   <body>
-    <script>
-      function getCurrentBrowserLocale({ baseLanguageCode = false } = {}) {
-        const fullLocale = navigator.language || 'en';
-        if (baseLanguageCode) {
-          const baseCode = fullLocale.split(/[-_]/)[0]?.toLowerCase();
-          return ['es', 'en', 'fr'].includes(baseCode) ? baseCode : 'en';
+    <script is:inline define:vars={{ locales, defaultLocale, LOCALE_STORAGE_KEY }}>
+      (() => {
+        // 1. Check localStorage for a manually saved preference
+        const getStoredLocale = () => {
+          try {
+            const stored = localStorage.getItem(LOCALE_STORAGE_KEY);
+            return stored && locales.includes(stored) ? stored : null;
+          } catch {
+            // localStorage may be unavailable (private browsing, etc.)
+            return null;
+          }
+        };
+
+        const storedLocale = getStoredLocale();
+        if (storedLocale) {
+          window.location.replace(`/${storedLocale}/`);
+          return;
         }
-        return fullLocale;
-      }
 
-      const supportedLocales = ['es', 'en', 'fr'];
-      const defaultLocale = 'en';
-      const browserLocale = getCurrentBrowserLocale({ baseLanguageCode: true });
-      const targetLocale = supportedLocales.includes(browserLocale) ? browserLocale : defaultLocale;
+        // 2. Detect from navigator.languages (preferred) or navigator.language (fallback)
+        const browserLangs = navigator.languages?.length
+          ? [...navigator.languages]
+          : [navigator.language || 'en'];
 
-      window.location.replace(`/${targetLocale}/`);
+        // 3. Find the first supported locale from browser preferences
+        const targetLocale = browserLangs
+          .map(lang => lang?.split(/[-_]/)?.[0]?.toLowerCase())
+          .find(baseCode => baseCode && locales.includes(baseCode))
+          ?? defaultLocale;
+
+        // 4. Save detected locale for future visits
+        try {
+          localStorage.setItem(LOCALE_STORAGE_KEY, targetLocale);
+        } catch {
+          // localStorage may be unavailable
+        }
+
+        // 5. Redirect to the resolved locale
+        window.location.replace(`/${targetLocale}/`);
+      })();
     </script>
     <noscript>
-      JavaScript is required to redirect automatically. Please go to <a href="/en/">/en/</a>.
+      <p>JavaScript is required to detect your preferred language. Please choose:</p>
+      <nav aria-label="Language selection">
+        <ul>
+          <li><a href="/en/">English</a></li>
+          <li><a href="/es/">Español</a></li>
+          <li><a href="/fr/">Français</a></li>
+        </ul>
+      </nav>
     </noscript>
   </body>
 </html>

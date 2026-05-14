@@ -62,7 +62,11 @@
                 "anchorId": "background",
                 "label": "Trayectoria"
             }
-        ]
+        ],
+        "locale_banner": {
+            "message": "Esta página también está disponible en",
+            "action": "Cambiar"
+        }
     },
     "footer": {
         "powered_and_themed_by": "Desarrollado y tematizado",

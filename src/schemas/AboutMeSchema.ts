@@ -39,6 +39,11 @@ const OpenGraphSchema = z.object({
     description: z.string()
 });
 
+const LocaleBannerSchema = z.object({
+    message: z.string(),
+    action: z.string()
+});
+
 const HeaderSchema = z.object({
     languages_title: z.string(),
     languages: z.array(z.object({
@@ -48,7 +53,8 @@ const HeaderSchema = z.object({
     main_sections: z.array(z.object({
         anchorId: z.string(),
         label: z.string()
-    }))
+    })),
+    locale_banner: LocaleBannerSchema
 });
 
 const FooterSchema = z.object({

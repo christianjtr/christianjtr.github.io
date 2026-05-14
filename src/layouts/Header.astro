@@ -118,5 +118,22 @@ const { header } = (entry?.data as AboutMeData) || {};
                 localStorage.setItem(STORAGE_KEY, selectedTheme);
             });
         }
+
+        // Persist locale preference when user manually selects a language
+        const LOCALE_STORAGE_KEY = 'user-locale-preference';
+        const BANNER_DISMISSED_KEY = 'locale-banner-dismissed';
+        const localeLinks = document.querySelectorAll('.dropdown-content a[href^="/"]');
+        
+        localeLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+                const href = link.getAttribute('href') || '';
+                const match = href.match(/^\/([a-z]{2})\//);
+                if (match && match[1]) {
+                    localStorage.setItem(LOCALE_STORAGE_KEY, match[1]);
+                    // Reset banner dismissed state when user explicitly changes language
+                    localStorage.removeItem(BANNER_DISMISSED_KEY);
+                }
+            });
+        });
     });
 </script>
