@@ -1,6 +1,6 @@
 import { z } from 'astro/zod';
 
-const subjectCategory = ["product", "coding", "data"] as const;
+const subjectCategory = ["product", "coding", "data", "ai"] as const;
 
 export const SubjectSchema = z.object({
     name: z.string(),
