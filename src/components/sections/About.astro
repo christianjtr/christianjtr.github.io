@@ -5,10 +5,8 @@ import { Image } from 'astro:assets';
 import type { ContentDataEntryType } from '@app-types/Content';
 import type { AboutMeData } from '@schemas/AboutMeSchema';
 import { CONTENT } from '@app-types/Content';
-import { VerticalSpacer, BadgeList } from "../";
-import RocketIcon from '@assets/svg/rocket.svg';
-import MagicStickIcon from '@assets/svg/magic_stick.svg';
-import CodeFileIcon from '@assets/svg/code_file.svg';
+import { VerticalSpacer } from "../";
+import ExpertiseFeatureGrid from './ExpertiseFeatureGrid.astro';
 import WaveAnimation from "@assets/gifs/wave.gif";
 import CrystalBallAnimation from "@assets/gifs/crystal_ball.gif";
 import MeImg from "@assets/images/me.png";
@@ -16,7 +14,7 @@ import MeImg from "@assets/images/me.png";
 const { lang } = Astro.params;
 
 const entry = await getEntry(lang as ContentDataEntryType, `${lang}/${CONTENT.COMMON}`);
-const { section_about, common } = (entry?.data as AboutMeData) || {};
+const { section_about } = (entry?.data as AboutMeData) || {};
 ---
 
 <div class="container mx-auto px-5 mt-10 lg:px-10 xl:px-10">
@@ -82,44 +80,28 @@ const { section_about, common } = (entry?.data as AboutMeData) || {};
             </div>
         </div>
     </div>
-    <div class="col-span-full my-16 px-5">
-        <p class="flex text-xl leading-8">
-            <font class="text-7xl text-primary mr-3">“</font>
-            <br />
-            <span set:html={section_about.about_me}></span>
-        </p>
-    </div>
-    <div class="grid grid-cols-1 lg:grid-cols-6 gap-8 mx-auto px-5">
-        {section_about.expertise.subjects.map((subject, index) => (
-            <div class="col-span-full lg:col-span-2 flex flex-col items-center text-center">
-                <div class="card-informative-icon-wrapper">
-                    {subject.category === "product" && <RocketIcon width={70} height={70} />}
-                    {subject.category === "coding" && <CodeFileIcon width={70} height={70} />}
-                    {subject.category === "data" && <MagicStickIcon width={70} height={70} />}
-                </div>
-                <h4 class="font-semibold uppercase text-lg my-3">{subject.name}<font class="text-accent text-4xl">.</font></h4>
-                <p class="text-neutral-600 dark:text-gray-400 text-sm px-5">
-                    {subject.description}
-                </p>
-                <button class="btn btn-ghost my-3 text-secondary" onclick={`my_modal_${index}.showModal()`}>{common.flip_to_check_stack}</button>
-                <dialog id={`my_modal_${index}`} class="modal">
-                    <div class="modal-box">
-                        <form method="dialog">
-                            <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-                        </form>
-                        <h3 class="text-primary text-left text-lg font-semibold mb-7">{common.technologies}</h3>
-                        <BadgeList items={subject.tools} badgeClass="badge-sm badge-ghost" />
-                    </div>
-                </dialog>
+    <VerticalSpacer />
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mx-auto px-5 items-stretch mt-10">
+        <div class="lg:col-span-4 flex flex-col justify-center text-left lg:pr-6 space-y-6">
+            <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-primary dark:bg-accent animate-pulse"></span>
+                <span class="text-xs font-mono font-bold tracking-widest uppercase text-neutral-600 dark:text-primary">
+                    {section_about.systems_thinking_mindset}
+                </span>
             </div>
-        ))}
+            <div class="relative">
+                <p class="manifesto-title">{section_about.about_me_title}</p>
+                <p class="manifesto-body">{section_about.about_me}</p>
+            </div>
+        </div>
+        <ExpertiseFeatureGrid subjects={section_about.expertise.subjects} />
     </div>
 </div>
+
 <VerticalSpacer />
 
-<style>
+<style is:global>
     @reference "@styles/global.css";
-
     .primary-text {
         @apply text-primary;
     }
@@ -128,12 +110,20 @@ const { section_about, common } = (entry?.data as AboutMeData) || {};
         @apply tooltip tooltip-primary;
     }
     
-    .card-informative {
-        @apply p-6 rounded-lg flex w-full;
+    .manifesto-title {
+        @apply text-xl lg:text-2xl font-black tracking-tight leading-snug text-neutral-900;
     }
 
-    .card-informative-icon-wrapper {
-        @apply bg-primary/5 w-fit rounded-full p-3;
+    .manifesto-body {
+        @apply text-base leading-relaxed text-neutral-900 mt-4 border-l-2 border-neutral-200 pl-6 font-medium;
+    }
+
+    html[data-theme="dark"] .manifesto-title {
+        @apply text-white;
+    }
+
+    html[data-theme="dark"] .manifesto-body {
+        @apply text-base-content border-primary;
     }
 
     html[data-theme="dark"] .primary-text {
@@ -143,17 +133,23 @@ const { section_about, common } = (entry?.data as AboutMeData) || {};
     html[data-theme="dark"] .tooltip-wrapper {
         @apply tooltip-accent;
     }
-    html[data-theme="dark"] .card-informative:hover {
-        @apply border-indigo-400 shadow-lg shadow-primary/65;
+    
+    .about-me-wrapper {
+        @apply gap-8 shadow rounded-lg px-5 py-4 border border-neutral-100;
     }
 
-    html[data-theme="dark"] .card-informative-icon-wrapper  {
-        @apply bg-primary/30;
+    html[data-theme="dark"] .about-me-wrapper {
+        @apply bg-neutral-900 border-neutral-800 text-white;
     }
 
-    html[data-theme="dark"] .card-informative-icon-wrapper svg  {
-        @apply stroke-accent;
+    .text-info-content-color {
+        @apply text-neutral-500;
     }
+
+    html[data-theme="dark"] .text-info-content-color {
+        @apply text-base-content;
+    }
+    
     .avatar-image {
         border-radius: 50%;
         background: linear-gradient(135deg, var(--color-cobalt-blue) 0%, var(--color-electric-teal) 100%);
@@ -173,26 +169,6 @@ const { section_about, common } = (entry?.data as AboutMeData) || {};
         -webkit-user-select: none;
     }
 
-    .text-slider-item {
-        @apply leading-[1.3rem];
-    }
-
-    .about-me-wrapper {
-        @apply gap-8 shadow rounded-lg px-5 py-4 border border-neutral-100;
-    }
-
-    .text-info-content-color {
-        @apply text-neutral-500;
-    }
-
-    html[data-theme="dark"] .text-info-content-color {
-        @apply text-base-content;
-    }
-
-    html[data-theme="dark"] .about-me-wrapper {
-        @apply bg-slate-800 border-0;
-    }
-
     html[data-theme="dark"] .chat-bubble {
         @apply bg-slate-600;
     }
@@ -201,7 +177,7 @@ const { section_about, common } = (entry?.data as AboutMeData) || {};
         0%, 25% { transform: translateY(0%); }
         30%, 45% { transform: translateY(-25%); }
         50%, 70% { transform: translateY(-50%); }
-        75%, 94.99% { transform: translateY(-75%); } 
-        95%, 100% { transform: translateY(0%); } 
+        75%, 94.99% { transform: translateY(-75%); }
+        95%, 100% { transform: translateY(0%); }
     }
 </style>

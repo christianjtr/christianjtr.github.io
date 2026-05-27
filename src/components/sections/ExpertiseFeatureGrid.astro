@@ -1,0 +1,163 @@
+---
+import ExpertiseModal from './ExpertiseModal.astro';
+import RocketIcon from '@assets/svg/rocket.svg';
+import MagicStickIcon from '@assets/svg/magic_stick.svg';
+import CodeFileIcon from '@assets/svg/code_file.svg';
+import AiIcon from '@assets/svg/ai.svg';
+import ChevronIcon from '@assets/svg/chevron.svg';
+
+interface ExpertiseSubject {
+    category: string;
+    name: string;
+    description: string;
+    tools: string[];
+}
+
+interface Props {
+    subjects: ExpertiseSubject[];
+}
+
+const { subjects } = Astro.props;
+---
+
+<div class="expertise-feature-grid">
+    {subjects.map((subject, index) => {
+        return (
+            <div
+                class="expertise-feature-card group"
+                onclick={`document.getElementById('expertise_modal_${index}').showModal()`}
+            >
+                <div class="expertise-feature-card__content">
+                    <div class="expertise-feature-card__header">
+                        <div class="expertise-feature-card__icon">
+                            {subject.category === 'product' && <RocketIcon width={32} height={32} />}
+                            {subject.category === 'coding' && <CodeFileIcon width={32} height={32} />}
+                            {subject.category === 'data' && <MagicStickIcon width={32} height={32} />}
+                            {subject.category === 'ai' && <AiIcon width={32} height={32} />}
+                        </div>
+                        <div class="expertise-feature-card__chevron">
+                            <ChevronIcon />
+                        </div>
+                    </div>
+
+                    <h4 class="expertise-feature-card__title">{subject.name}</h4>
+                    <p class="expertise-feature-card__description">
+                        {subject.description}
+                    </p>
+                </div>
+
+                <div class="expertise-feature-card__footer">
+                    <div class="expertise-feature-card__tools">
+                        {subject.tools.slice(0, 4).map((tool, tIdx) => (
+                            <Fragment>
+                                <span class="expertise-feature-card__tool-pill">{tool}</span>
+                                {tIdx < Math.min(subject.tools.length, 4) - 1 && (
+                                    <span class="expertise-feature-card__tool-separator">•</span>
+                                )}
+                            </Fragment>
+                        ))}
+
+                        {subject.tools.length > 4 && (
+                            <span class="expertise-feature-card__more-badge">+{subject.tools.length - 4}</span>
+                        )}
+                    </div>
+                </div>
+
+                <ExpertiseModal subject={subject} modalId={`expertise_modal_${index}`} />
+            </div>
+        );
+    })}
+</div>
+
+<style>
+    @reference "@styles/global.css";
+
+    .expertise-feature-grid {
+        @apply lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6;
+    }
+
+    .expertise-feature-card {
+        @apply bg-base-100 border-neutral-200 relative flex flex-col justify-between p-6 sm:p-8 rounded-lg border transition-all duration-300 cursor-pointer h-full text-neutral-900;
+    }
+    html[data-theme="dark"] .expertise-feature-card {
+        @apply bg-neutral-900 border-neutral-800 text-white;
+    }
+
+    .expertise-feature-card:hover {
+        @apply border-primary/70 shadow-lg shadow-primary/10 -translate-y-1;
+    }
+    html[data-theme="dark"] .expertise-feature-card:hover {
+        @apply border-accent/70 shadow-accent/5;
+    }
+
+    .expertise-feature-card__content {
+        @apply flex flex-col grow;
+    }
+
+    .expertise-feature-card__header {
+        @apply flex items-center justify-between mb-6;
+    }
+
+    .expertise-feature-card__icon {
+        @apply p-2 rounded-2xl bg-neutral-100 text-primary transition-colors duration-300;
+    }
+    html[data-theme="dark"] .expertise-feature-card__icon {
+        @apply bg-neutral-950 text-accent;
+    }
+
+    /* CHEVRON: Sigue la paleta del tema activo (Primary / Accent) */
+    .group:hover .expertise-feature-card__chevron {
+        @apply translate-x-1 -translate-y-1;
+    }
+    .expertise-feature-card__chevron {
+        @apply transition-transform duration-300 text-primary;
+    }
+    html[data-theme="dark"] .expertise-feature-card__chevron {
+        @apply text-accent;
+    }
+
+    .expertise-feature-card__title {
+        @apply text-xl font-bold tracking-tight mb-2;
+    }
+
+    .expertise-feature-card__description {
+        @apply text-xs leading-relaxed mb-6 grow text-neutral-500;
+    }
+    html[data-theme="dark"] .expertise-feature-card__description {
+        @apply text-neutral-400;
+    }
+
+    /* FOOTER Y SEPARADORES: Mitigan el exceso de contraste nocturno */
+    .expertise-feature-card__footer {
+        @apply pt-4 border-t mt-auto border-neutral-100;
+    }
+    html[data-theme="dark"] .expertise-feature-card__footer {
+        @apply border-neutral-800;
+    }
+
+    .expertise-feature-grid .expertise-feature-card__tools {
+        @apply flex flex-wrap gap-1.5 items-center text-[11px] opacity-90;
+    }
+
+    .expertise-feature-card__tool-pill {
+        @apply font-medium tracking-wide text-neutral-600;
+    }
+    html[data-theme="dark"] .expertise-feature-card__tool-pill {
+        @apply text-neutral-400;
+    }
+
+    .expertise-feature-card__tool-separator {
+        @apply text-neutral-300;
+    }
+    html[data-theme="dark"] .expertise-feature-card__tool-separator {
+        @apply text-neutral-700;
+    }
+
+    /* BADGE DE "+X": Se adapta al color primario del tema seleccionado */
+    .expertise-feature-card__more-badge {
+        @apply text-[9px] uppercase font-bold px-1.5 py-0.5 rounded bg-primary text-white font-mono;
+    }
+    html[data-theme="dark"] .expertise-feature-card__more-badge {
+        @apply bg-accent text-neutral-950;
+    }
+</style>
