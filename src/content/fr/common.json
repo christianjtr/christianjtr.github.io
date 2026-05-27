@@ -78,7 +78,9 @@
         "greeting": "Bonjour à tous, je suis",
         "my_name": "Christian José Torrealba Rondón<span class='text-accent text-3xl'>.</span>",
         "my_name_template": "Christian José <br>Torrealba Rondón<span class='text-accent'>.</span>",
-        "about_me": "Je suis un <strong>professionnel V-Shaped</strong> qui intègre la stratégie produit, l'exécution technique et l'analyse de données. Ma valeur réside dans une approche d'ingénierie des systèmes : je fais le lien entre le business et la technologie, en transformant les exigences complexes en solutions fonctionnelles et centrées sur l'utilisateur.",
+        "about_me_title": "Je suis un Ingénieur qui intègre la stratégie produit, l'exécution technique et l'analyse de données.",
+        "about_me": "Ma valeur réside dans ma capacité à faire le pont entre le business et l'ingénierie, en transformant des exigences complexes en solutions fonctionnelles et centrées sur l'utilisateur.",
+        "systems_thinking_mindset": "Approche de Pensée Systémique",
         "summary": "Création d'expériences utilisateur et de solutions digitales en appliquant les principes de l'Ingénierie des Systèmes, de l'Ingénierie des Données et du Design Thinking pour livrer des produits web évolutifs.",
         "hobbies_title": "Loisirs et Langues",
         "hobbies": "☀️ 🏖️ 🎡 🍦 🎮 🏃🏻 🐶 ✈️ 🗣️",
@@ -119,14 +121,14 @@
             "title": "Comment je valorise l'écosystème produit et tech",
             "subjects": [
                 {
-                    "name": "Ingénierie Produit",
+                    "name": "Direction Produit et Stratégie",
                     "category": "product",
-                    "description": "Pilotage du product discovery, stratégie digitale et mentorat d'équipe",
+                    "description": "Alignement des objectifs business avec l'exécution technique pour optimiser la livraison, mentorat d'équipes agiles et accélération du time-to-market.",
                     "topics": [
-                        "Leadership Agile et Mentorat",
-                        "Propriété et Idéation de Produit",
-                        "Recherche Technologique",
-                        "Marketing Numérique"
+                        "Agile Leadership and Mentorship",
+                        "Product Ownership and Ideation",
+                        "Tech Research",
+                        "Digital Marketing"
                     ],
                     "tools": [
                         "Atlassian Suite (Jira, Confluence)",
@@ -147,57 +149,75 @@
                     ]
                 },
                 {
-                    "name": "Développement Logiciel",
+                    "name": "Design de Solutions et Applications Web",
                     "category": "coding",
-                    "description": "Expert en architecture web et design systems, de l’intégration d’API au cloud et aux tests",
+                    "description": "Livraison d'applications web accompagnées de design systems et supervision d'infrastructures cloud.",
                     "topics": [
-                        "Applications Web et Systèmes de Conception",
-                        "APIs et intégration de services",
-                        "Tests et automatisation",
-                        "Environnements cloud (AWS)"
+                        "Web apps and Design Systems",
+                        "APIs and service integration",
+                        "Testing and automation",
+                        "Cloud environments (AWS)"
                     ],
                     "tools": [
-                        "JavaScript",
                         "TypeScript",
+                        "JavaScript (ES6+)",
                         "React",
-                        "Vue",
-                        "Svelte",
+                        "Next.js",
                         "Astro",
-                        "Zod",
+                        "TailwindCSS",
+                        "Svelte Kit",
+                        "Vue.js",
+                        "Node.js",
+                        "Express",
+                        "Nest.js",
                         "ORMs (Sequelize, Drizzle, etc.)",
-                        "Test Suites (Jest, Cypress, Playwright)",
-                        "Web bundlers (Webpack, Vite)",
                         "GraphQL",
-                        "RESTFull APIs",
-                        "NodeJS",
-                        "Python",
-                        "R Statistics",
-                        "AWS",
-                        "Sentry"
+                        "Vitest",
+                        "Playwright",
+                        "Docker",
+                        "AWS (S3, CloudFront, EC2, X-Ray, CloudWatch)",
+                        "Grafana",
+                        "Vercel"
                     ]
                 },
                 {
-                    "name": "Informatique Décisionnelle",
+                    "name": "Stratégie Basée sur les Données & Insights",
                     "category": "data",
-                    "description": "Transformation de données en insights stratégiques via l’ETL, le nettoyage et la visualisation",
+                    "description": "Conception de pipelines de données, de modèles ETL/DWH et de dashboards analytiques pour fournir des métriques précises d'aide à la décision.",
                     "topics": [
-                        "Compétences Analytiques",
-                        "ETL/DWH modélisation",
-                        "Visualisation et Nettoyage de Données",
-                        "Dashboards et Reporting"
+                        "Analytical Skills",
+                        "ETL/DWH Modeling",
+                        "Data Cleansing and Visualization",
+                        "Dashboards and Reporting"
                     ],
                     "tools": [
-                        "SQL Server SSAS / SSIS",
-                        "Relational Databases",
-                        "NoSQL",
-                        "Pentaho BI",
-                        "Tableau",
-                        "PowerBI",
-                        "BigQuery",
-                        "MySQL",
+                        "SQL Server",
                         "PostgreSQL",
-                        "MongoDB",
-                        "Redis"
+                        "MySQL",
+                        "Python",
+                        "PowerBI",
+                        "Tableau",
+                        "Google Analytics",
+                        "Microsoft SSAS/SSIS"
+                    ]
+                },
+                {
+                    "name": "Ingenierie de l'IA et Automatisation",
+                    "category": "ai",
+                    "description": "Accélération de la livraison de logiciels via des flux de travail automatisés, l'intégration de LLM et des pratiques de développement assistées par l'IA.",
+                    "topics": [
+                        "Agentic Systems",
+                        "LLM Integration",
+                        "AI Workflows",
+                        "Process Automation"
+                    ],
+                    "tools": [
+                        "Python",
+                        "Opencode",
+                        "Grok / xAI",
+                        "GitHub Copilot",
+                        "Google Gemini AI",
+                        "Claude / Anthropic API"
                     ]
                 }
             ]

@@ -78,7 +78,9 @@
         "greeting": "Hi there friends, I am",
         "my_name": "Christian José Torrealba Rondón<span class='text-accent text-3xl'>.</span>",
         "my_name_template": "Christian José <br>Torrealba Rondón<span class='text-accent'>.</span>",
-        "about_me": "I am a <strong>V-Shaped professional</strong> who integrates product strategy, technical execution, and data analytics. My value lies in a systems-thinking approach: I bridge the gap between business and engineering, transforming complex requirements into functional, user-centric solutions.",
+        "about_me_title": "I am a Engineer who integrates product strategy, technical execution, and data analytics.",
+        "about_me": "My value lies in bridging the gap between business and engineering, transforming complex requirements into functional, user-centric solutions.",
+        "systems_thinking_mindset": "Systems Thinking Mindset",
         "summary": "Creating user-oriented experiences and digital capabilities by applying principles of Systems Engineering, Data Engineering, and Design Thinking to deliver scalable web products.",
         "hobbies_title": "Hobbies and Languages",
         "hobbies": "☀️ 🏖️ 🎡 🍦 🎮 🏃🏻 🐶 ✈️ 🗣️",
@@ -119,9 +121,9 @@
             "title": "How I Impact Product & Tech Domains",
             "subjects": [
                 {
-                    "name": "Product Engineering",
+                    "name": "Product Direction & Strategy",
                     "category": "product",
-                    "description": "Driving product discovery, digital strategy, and team mentorship",
+                    "description": "Alignment of business goals with technical execution to optimize delivery, mentoring agile teams, and accelerate time-to-market.",
                     "topics": [
                         "Agile Leadership and Mentorship",
                         "Product Ownership and Ideation",
@@ -147,9 +149,9 @@
                     ]
                 },
                 {
-                    "name": "Software Development",
+                    "name": "Solution Design & Web Development",
                     "category": "coding",
-                    "description": "Specializing in web architecture and design systems, from API integration to automated testing and cloud monitoring",
+                    "description": "Delivery of web applications along with design systems, and monitoring cloud infrastructures.",
                     "topics": [
                         "Web apps and Design Systems",
                         "APIs and service integration",
@@ -157,29 +159,31 @@
                         "Cloud environments (AWS)"
                     ],
                     "tools": [
-                        "JavaScript",
                         "TypeScript",
+                        "JavaScript (ES6+)",
                         "React",
-                        "Vue",
-                        "Svelte",
+                        "Next.js",
                         "Astro",
-                        "Zod",
+                        "TailwindCSS",
+                        "Svelte Kit",
+                        "Vue.js",
+                        "Node.js",
+                        "Express",
+                        "Nest.js",
                         "ORMs (Sequelize, Drizzle, etc.)",
-                        "Test Suites (Jest, Cypress, Playwright)",
-                        "Web bundlers (Webpack, Vite)",
                         "GraphQL",
-                        "RESTFull APIs",
-                        "NodeJS",
-                        "Python",
-                        "R Statistics",
-                        "AWS",
-                        "Sentry"
+                        "Vitest",
+                        "Playwright",
+                        "Docker",
+                        "AWS (S3, CloudFront, EC2, X-Ray, CloudWatch)",
+                        "Grafana",
+                        "Vercel"
                     ]
                 },
                 {
-                    "name": "Business Intelligence",
+                    "name": "Data-Informed Strategy & Insights",
                     "category": "data",
-                    "description": "Transforming data into actionable insights through ETL modeling, rigorous cleansing, and advanced visualization",
+                    "description": "Design of data pipelines, ETL/DWH models, and analytical dashboards to provide accurate metrics for business decisions.",
                     "topics": [
                         "Analytical Skills",
                         "ETL/DWH Modeling",
@@ -187,17 +191,33 @@
                         "Dashboards and Reporting"
                     ],
                     "tools": [
-                        "SQL Server SSAS / SSIS",
-                        "Relational Databases",
-                        "NoSQL",
-                        "Pentaho BI",
-                        "Tableau",
-                        "PowerBI",
-                        "BigQuery",
-                        "MySQL",
+                        "SQL Server",
                         "PostgreSQL",
-                        "MongoDB",
-                        "Redis"
+                        "MySQL",
+                        "Python",
+                        "PowerBI",
+                        "Tableau",
+                        "Google Analytics",
+                        "Microsoft SSAS/SSIS"
+                    ]
+                },
+                {
+                    "name": "AI Engineering & Automation",
+                    "category": "ai",
+                    "description": "Acceleration of software delivery through automated workflows, integration of LLMs, and AI-driven development practices.",
+                    "topics": [
+                        "Agentic Systems",
+                        "LLM Integration",
+                        "AI Workflows",
+                        "Process Automation"
+                    ],
+                    "tools": [
+                        "Python",
+                        "Opencode",
+                        "Grok / xAI",
+                        "GitHub Copilot",
+                        "Google Gemini AI",
+                        "Claude / Anthropic API"
                     ]
                 }
             ]
