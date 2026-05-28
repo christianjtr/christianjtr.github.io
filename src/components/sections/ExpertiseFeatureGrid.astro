@@ -105,7 +105,6 @@ const { subjects } = Astro.props;
         @apply bg-neutral-950 text-accent;
     }
 
-    /* CHEVRON: Sigue la paleta del tema activo (Primary / Accent) */
     .group:hover .expertise-feature-card__chevron {
         @apply translate-x-1 -translate-y-1;
     }
@@ -121,13 +120,12 @@ const { subjects } = Astro.props;
     }
 
     .expertise-feature-card__description {
-        @apply text-xs leading-relaxed mb-6 grow text-neutral-500;
+        @apply text-xs leading-relaxed mb-6 grow text-neutral-700;
     }
     html[data-theme="dark"] .expertise-feature-card__description {
         @apply text-neutral-400;
     }
 
-    /* FOOTER Y SEPARADORES: Mitigan el exceso de contraste nocturno */
     .expertise-feature-card__footer {
         @apply pt-4 border-t mt-auto border-neutral-100;
     }
@@ -153,7 +151,6 @@ const { subjects } = Astro.props;
         @apply text-neutral-700;
     }
 
-    /* BADGE DE "+X": Se adapta al color primario del tema seleccionado */
     .expertise-feature-card__more-badge {
         @apply text-[9px] uppercase font-bold px-1.5 py-0.5 rounded bg-primary text-white font-mono;
     }
