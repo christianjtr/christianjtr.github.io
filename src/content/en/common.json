@@ -81,7 +81,7 @@
         "about_me_title": "I am a Engineer who integrates product strategy, technical execution, and data analytics.",
         "about_me": "My value lies in bridging the gap between business and engineering, transforming complex requirements into functional, user-centric solutions.",
         "systems_thinking_mindset": "Systems Thinking Mindset",
-        "summary": "Creating user-oriented experiences and digital capabilities by applying principles of Systems Engineering, Data Engineering, and Design Thinking to deliver scalable web products.",
+        "summary": "Building digital products and solutions through data-driven engineering and user-centered design.",
         "hobbies_title": "Hobbies and Languages",
         "hobbies": "☀️ 🏖️ 🎡 🍦 🎮 🏃🏻 🐶 ✈️ 🗣️",
         "v_shaped_profile": "V-Shaped Profile",
@@ -123,7 +123,7 @@
                 {
                     "name": "Product Direction & Strategy",
                     "category": "product",
-                    "description": "Alignment of business goals with technical execution to optimize delivery, mentoring agile teams, and accelerate time-to-market.",
+                    "description": "Aligning business goals with technical execution to accelerate delivery.",
                     "topics": [
                         "Agile Leadership and Mentorship",
                         "Product Ownership and Ideation",
@@ -183,7 +183,7 @@
                 {
                     "name": "Data-Informed Strategy & Insights",
                     "category": "data",
-                    "description": "Design of data pipelines, ETL/DWH models, and analytical dashboards to provide accurate metrics for business decisions.",
+                    "description": "Data architecture and analytics design for business decision-making.",
                     "topics": [
                         "Analytical Skills",
                         "ETL/DWH Modeling",
@@ -191,6 +191,7 @@
                         "Dashboards and Reporting"
                     ],
                     "tools": [
+                        "ETL/DWH",
                         "SQL Server",
                         "PostgreSQL",
                         "MySQL",
@@ -204,7 +205,7 @@
                 {
                     "name": "AI Engineering & Automation",
                     "category": "ai",
-                    "description": "Acceleration of software delivery through automated workflows, integration of LLMs, and AI-driven development practices.",
+                    "description": "Optimizing software delivery through automated workflows and AI integration.",
                     "topics": [
                         "Agentic Systems",
                         "LLM Integration",

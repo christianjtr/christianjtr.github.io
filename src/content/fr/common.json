@@ -81,7 +81,7 @@
         "about_me_title": "Je suis un Ingénieur qui intègre la stratégie produit, l'exécution technique et l'analyse de données.",
         "about_me": "Ma valeur réside dans ma capacité à faire le pont entre le business et l'ingénierie, en transformant des exigences complexes en solutions fonctionnelles et centrées sur l'utilisateur.",
         "systems_thinking_mindset": "Approche de Pensée Systémique",
-        "summary": "Création d'expériences utilisateur et de solutions digitales en appliquant les principes de l'Ingénierie des Systèmes, de l'Ingénierie des Données et du Design Thinking pour livrer des produits web évolutifs.",
+        "summary": "Création de produits et de solutions digitales grâce à l'ingénierie des données et au design centré utilisateur.",
         "hobbies_title": "Loisirs et Langues",
         "hobbies": "☀️ 🏖️ 🎡 🍦 🎮 🏃🏻 🐶 ✈️ 🗣️",
         "v_shaped_profile": "Profil en forme de V",
@@ -123,7 +123,7 @@
                 {
                     "name": "Direction Produit et Stratégie",
                     "category": "product",
-                    "description": "Alignement des objectifs business avec l'exécution technique pour optimiser la livraison, mentorat d'équipes agiles et accélération du time-to-market.",
+                    "description": "Alignement des objectifs business avec l'exécution technique pour accélérer la livraison.",
                     "topics": [
                         "Agile Leadership and Mentorship",
                         "Product Ownership and Ideation",
@@ -183,7 +183,7 @@
                 {
                     "name": "Stratégie Basée sur les Données & Insights",
                     "category": "data",
-                    "description": "Conception de pipelines de données, de modèles ETL/DWH et de dashboards analytiques pour fournir des métriques précises d'aide à la décision.",
+                    "description": "Conception d'architecture de données et d'analytique pour la prise de décision.",
                     "topics": [
                         "Analytical Skills",
                         "ETL/DWH Modeling",
@@ -191,6 +191,7 @@
                         "Dashboards and Reporting"
                     ],
                     "tools": [
+                        "ETL/DWH",
                         "SQL Server",
                         "PostgreSQL",
                         "MySQL",
@@ -204,7 +205,7 @@
                 {
                     "name": "Ingenierie de l'IA et Automatisation",
                     "category": "ai",
-                    "description": "Accélération de la livraison de logiciels via des flux de travail automatisés, l'intégration de LLM et des pratiques de développement assistées par l'IA.",
+                    "description": "Optimisation de la livraison de logiciels via des flux automatisés et l'intégration de l'IA.",
                     "topics": [
                         "Agentic Systems",
                         "LLM Integration",
