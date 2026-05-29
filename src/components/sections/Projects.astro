@@ -5,12 +5,10 @@ import type { ContentDataEntryType } from '@app-types/Content';
 import type { Project } from '@schemas/ProjectSchema';
 import type { AboutMeData } from '@schemas/AboutMeSchema';
 import { CONTENT } from '@app-types/Content';
-import { LinkButton, Section, BadgeList, Badge, AsyncImage } from "../";
+import { LinkButton, Section, BadgeList, Badge, AsyncImage, VerticalSpacer } from "../";
 import Logo from '@assets/svg/projects.svg';
 import PinIcon from '@assets/svg/pin.svg';
-import PenIcon from '@assets/svg/pen.svg';
 import MonitorIcon from '@assets/svg/monitor.svg';
-import BookIcon from '@assets/svg/book.svg';
 
 const { lang } = Astro.params;
 
@@ -24,87 +22,84 @@ const { data: projects } = projectData as { data: Project[] };
 ---
 
 <div class="bg-primary/5 py-10" id={header.main_sections[0].anchorId}>
-    <br />
     <Section headingTitle={section_projects.title} subtitle={section_projects.subtitle} class="container mx-auto px-3 lg:px-10 xl:px-10">
         <Logo slot="beforeHeading" width={96} height={96} />
-        <br />
+        <VerticalSpacer />
         <div class="px-5 md:px-14">
             {projects.map((project: Project, index: number) => (
-                <div class="collapse collapse-arrow" tabindex={index + 1}>
+                <div class="collapse collapse-arrow project-card" tabindex={index + 1}>
                     <input type="radio" name="project" checked={index === 0} />
-                    <div class="collapse-title">
-                        <div class="block avatar avatar-placeholder grow-0">
-                            <div class="bg-primary text-neutral w-14 rounded-full">
-                                <span class="text-3xl text-white">{`0${index+1}`}</span>
+                    <div class="collapse-title card-header">
+                        <div class="tech-timeline-indicator">
+                            <div class="timeline-dot-outer">
+                                <div class="timeline-dot-inner"></div>
+                            </div>
+                            <div class="timeline-line-track">
+                                <div class="timeline-line-active"></div>
                             </div>
                         </div>
-                        <div class="flex flex-col space-y-2">
+                        <div class="header-text-container">
                             <h2 class="title">{project.title}</h2>
-                            <span class="text-neutral-600 dark:text-gray-400">
-                                {project.summary}
-                            </span>
-                            <span class="primary-text font-semibold">{project.owner}</span>
+                            <p class="summary">{project.summary}</p>
+                            <span class="primary-text owner-text">{project.owner}</span>
                         </div>
                     </div>
-                    <div class="collapse-content">
-                        <br />
-                        <div class="grid md:grid-cols-5 gap-8">
-                            <div class="lg:col-span-2 col-span-full">
-                                <ul class="list">
-                                    <li class="list-row hover:bg-primary/5">
-                                        <BookIcon width={24} height={24} />
-                                        <div class="list-col-grow">
-                                            <span class="pre-content-title">{common.overview}</span>
-                                            <p>{project.overview}</p>
-                                        </div>
-                                    </li>
-                                    <li class="list-row hover:bg-primary/5">
-                                        <PenIcon width={24} height={24} />
-                                        <div class="list-col-grow">
-                                            <span class="pre-content-title">{common.contribuition}</span>
-                                            <br />
-                                            <Badge class="badge-accent badge-sm uppercase h-fit">{project.contribute_as}</Badge>
-                                            <p>{project.contributions}</p>
-                                        </div>
-                                    </li>
-                                </ul>
+                    <div class="collapse-content card-body">
+                        <div class="body-grid">
+                            
+                            <div class="text-column">
+                                <div class="info-section">
+                                    <h4 class="section-title text-muted-label">{common.overview}</h4>
+                                    <p class="project-paragraph text-body-content mt-7">{project.overview}</p>
+                                </div>
+                                <div class="info-section">
+                                    <h4 class="section-title text-muted-label">{common.contribuition}</h4>
+                                    <p class="project-paragraph text-body-content mt-7">{project.contributions}</p>
+                                </div>
                             </div>
-                            <div class="lg:col-span-3 col-span-full">
-                                <figure>
-                                    <AsyncImage imagePath={project.project_asset} title={project.title} />
+
+                            <div class="media-column">
+                                <figure class="image-wrapper visual-studio-mesh">
+                                    <div class="project-image-frame industrial-matte-sheet">
+                                        <div class="glass-reflection-overlay"></div>
+                                        <AsyncImage 
+                                            imagePath={project.project_asset} 
+                                            title={project.title} 
+                                            class="inner-asset" 
+                                        />
+                                    </div>
                                 </figure>
-                                <br />
-                                <ul class="list">
-                                    <li class="list-row hover:bg-primary/5">
-                                        <PinIcon width={24} height={24} />
-                                        <div class="list-col-grow">
-                                            <div class="pre-content-title">{common.showcased_at}</div>
-                                            <div>
-                                                <span class="block font-medium text-lg my-1">{project.showcased_at}</span>
-                                                <p class="flex md:flex-row flex-col md:items-center items-start gap-3">
-                                                    <AsyncImage imagePath={project.flag_asset} title={project.location} />
-                                                    <span class="text-sm">{project.location}</span>
-                                                    <Badge class="badge-warning badge-sm uppercase">{project.period}</Badge>
-                                                </p>
-                                            </div>
+                                
+                                <div class="tech-container">
+                                    <MonitorIcon width={14} height={14} class="text-neutral-400 shrink-0 mt-0.5" />
+                                    <div class="flex-1 space-y-1">
+                                        <h4 class="section-title text-muted-label block mb-5">{common.technologies}</h4>
+                                        <div class="pt-0.5 text-xs font-medium tracking-wide">
+                                            <BadgeList items={project.technologies} badgeClass='badge-sm' />
                                         </div>
-                                    </li>
-                                    <li class="list-row hover:bg-primary/5">
-                                        <MonitorIcon width={24} height={24} />
-                                        <div class="list-col-grow">
-                                            <span class="pre-content-title">{common.technologies}</span>
-                                            <br />
-                                            <BadgeList items={project.technologies} />
-                                        </div>
-                                    </li>
-                                </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="card-footer">
+                            <div class="footer-meta">
+                                <PinIcon width={14} height={14} class="shrink-0 text-neutral-400" />
+                                <div class="meta-inline-flow">
+                                    <span class="font-medium text-showcase">{project.showcased_at}</span>
+                                    <span class="text-location">({project.location})</span>
+                                    <span class="hidden md:inline text-bullet-separator">•</span>
+                                    <Badge class="badge-warning font-semibold badge-sm">{project.period}</Badge>
+                                </div>
+                            </div>
+                            <div class="footer-action-wrapper">
+                                <LinkButton href={project.url} class="btn-md w-full md:w-auto flex justify-center" target="_blank" rel="noopener noreferrer" displayDefaultIcon>
+                                    {common.view_more}
+                                </LinkButton>
                             </div>
                         </div>
-                        <div class="flex justify-end mt-7 px-5">
-                            <LinkButton href={project.url} class="btn-md" target="_blank" rel="noopener noreferrer" displayDefaultIcon>
-                                {common.view_more}
-                            </LinkButton>
-                        </div>
+
                     </div>
                 </div>    
             ))}
@@ -112,64 +107,141 @@ const { data: projects } = projectData as { data: Project[] };
     </Section>
 </div>
 
+
 <style>
     @reference "@styles/global.css";
 
-    .primary-text {
-        @apply text-primary;
-    }
+    .primary-text { @apply text-primary; }
+    :global(html[data-theme="dark"]) .primary-text { @apply text-accent; }
 
-    html[data-theme="dark"] .primary-text {
-        @apply text-accent;
+    .project-card { 
+        @apply border mb-6 p-3 rounded-xl transition-all duration-300 relative overflow-hidden; 
+        @apply bg-base-100 border-neutral-200/80 text-neutral-800 shadow-xs;
     }
-
-    .collapse {
-        @apply mb-8 p-3 bg-base-100 border-0;
-    }
-    .collapse:hover {
-        @apply shadow-xl shadow-primary/20;
-    }
-
-    html[data-theme="dark"] .collapse {
-        @apply bg-base-200;
-    }
-
-    html[data-theme="dark"] .collapse:hover {
-        @apply shadow-lg shadow-primary/65;
-    }
-
-    .collapse-title {
-        @apply flex flex-col md:flex-row gap-8;
-    }
-
-    .collapse-content {
-        /* @apply text-2xl leading-10 font-medium; */
-    }
-
-    .pre-content-title {
-        @apply text-neutral-600 block;
-    }
-
-    html[data-theme="dark"] .pre-content-title {
-        @apply text-base-content;
+    .project-card:hover { 
+        @apply border-primary/70 shadow-lg shadow-primary/5 -translate-y-1; 
     }
     
-    .title {
-        @apply text-2xl leading-10 font-medium;
+    :global(html[data-theme="dark"]) .project-card {
+        @apply bg-neutral-900 border-neutral-800 text-white shadow-none;
+    }
+    :global(html[data-theme="dark"]) .project-card:hover {
+        @apply border-accent/70 shadow-lg shadow-accent/5;
     }
 
-    .list-row {
-        @apply py-5;
+    .tech-timeline-indicator {
+        @apply flex flex-col items-center shrink-0 w-6 h-full relative select-none md:mt-1;
     }
-    .list-row p {
-        @apply leading-9 text-lg;
+    .timeline-dot-outer {
+        @apply w-3 h-3 rounded-full flex items-center justify-center border bg-neutral-50 z-10 transition-colors duration-300;
+        @apply border-neutral-300;
+    }
+    .timeline-dot-inner {
+        @apply w-1.5 h-1.5 rounded-full bg-neutral-400 transition-colors duration-300;
+    }
+    .timeline-line-track {
+        @apply w-px absolute top-3 bottom-0 bg-neutral-200 transition-colors duration-300;
+    }
+    .timeline-line-active {
+        @apply w-full h-0 bg-primary transition-all duration-500 ease-out;
     }
 
-    .list-col-grow {
-        @apply space-y-2;
+    :global(html[data-theme="dark"]) .timeline-dot-outer { @apply border-neutral-700 bg-neutral-800; }
+    :global(html[data-theme="dark"]) .timeline-line-track { @apply bg-neutral-800; }
+    :global(html[data-theme="dark"]) .timeline-line-active { @apply bg-accent; }
+
+    .project-card:hover .timeline-dot-outer,
+    .project-card:has(input:checked) .timeline-dot-outer {
+        @apply border-primary bg-primary/5;
+    }
+    :global(html[data-theme="dark"]) .project-card:hover .timeline-dot-outer,
+    :global(html[data-theme="dark"]) .project-card:has(input:checked) .timeline-dot-outer {
+        @apply border-accent bg-accent/5;
+    }
+    .project-card:hover .timeline-dot-inner,
+    .project-card:has(input:checked) .timeline-dot-inner {
+        @apply bg-primary;
+    }
+    :global(html[data-theme="dark"]) .project-card:hover .timeline-dot-inner,
+    :global(html[data-theme="dark"]) .project-card:has(input:checked) .timeline-dot-inner {
+        @apply bg-accent;
+    }
+    .project-card:has(input:checked) .timeline-line-active {
+        @apply h-full;
     }
 
-    figure {
-        @apply w-full rounded-lg border-3 border-neutral-600;
+    .card-header { @apply flex flex-row items-start gap-5 p-6 md:p-8 select-none; }
+    .header-text-container { @apply flex flex-col space-y-2 grow pr-6; }
+    .title { @apply text-xl md:text-xl font-extrabold tracking-tight leading-snug text-neutral-800; }
+    :global(html[data-theme="dark"]) .title { @apply text-white; }
+    .summary { @apply text-sm md:text-sm leading-relaxed font-normal text-neutral-500 max-w-3xl; }
+    :global(html[data-theme="dark"]) .summary { @apply text-gray-400; }
+    .owner-text { @apply font-bold text-xs tracking-wider uppercase pt-1 block; }
+
+    .card-body { @apply pb-4 pl-14 pt-0 md:pl-20; }
+    .body-grid { @apply grid grid-cols-1 lg:grid-cols-12 gap-10 pt-6; }
+
+    .text-column { @apply space-y-6 col-span-full lg:col-span-4; }
+    .info-section { @apply space-y-1.5; }
+    .section-title { @apply text-xs font-bold uppercase tracking-wider block text-neutral-400; }
+    :global(html[data-theme="dark"]) .section-title { @apply text-gray-500; }
+    
+    .project-paragraph { @apply text-base leading-relaxed font-normal text-neutral-600; }
+    :global(html[data-theme="dark"]) .project-paragraph { @apply text-gray-300; }
+
+    .media-column { @apply flex flex-col gap-5 col-span-full lg:col-span-8; }
+
+    .visual-studio-mesh {
+        @apply w-full rounded-2xl flex items-center justify-center p-8 overflow-hidden relative border border-neutral-100;
+        background-color: #fafafa;
+        background-image: linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
+        background-size: 24px 24px;
     }
+    :global(html[data-theme="dark"]) .visual-studio-mesh {
+        @apply border-neutral-800/80;
+        background-color: #0c101b;
+        background-image: linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+    }
+
+    .industrial-matte-sheet {
+        @apply relative w-full h-auto rounded-xl overflow-hidden border border-neutral-200/60 bg-white flex items-center justify-center p-1 z-0;
+        box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.02), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    }
+    :global(html[data-theme="dark"]) .industrial-matte-sheet {
+        @apply border-neutral-800/80 bg-neutral-950;
+        box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.03), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    }
+
+    .glass-reflection-overlay {
+        @apply absolute inset-0 pointer-events-none z-10 opacity-40;
+        background: linear-gradient(135deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0) 40%, rgba(0,0,0,0.03) 60%, rgba(0,0,0,0) 100%);
+    }
+    :global(html[data-theme="dark"]) .glass-reflection-overlay {
+        @apply opacity-20;
+        background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0.2) 100%);
+    }
+
+    .inner-asset { @apply w-full h-auto object-contain max-h-[380px] rounded-lg relative z-0; }
+    .tech-container { @apply flex items-start gap-2.5 pt-1; }
+
+    .card-footer { 
+        @apply flex flex-col md:flex-row items-start md:items-center justify-between gap-5 mt-8 pt-4 border-t border-neutral-200; 
+    }
+    :global(html[data-theme="dark"]) .card-footer { @apply border-t border-neutral-800/60; }
+    
+    .footer-meta { @apply flex items-center gap-2 text-xs text-neutral-500 w-full md:w-auto; }
+    :global(html[data-theme="dark"]) .footer-meta { @apply text-gray-400; }
+    .meta-inline-flow { @apply flex flex-wrap items-center gap-x-2 gap-y-1 grow; }
+    
+    .footer-action-wrapper {
+        @apply w-full md:w-auto flex justify-end;
+    }
+
+    .text-showcase { @apply text-neutral-700; }
+    :global(html[data-theme="dark"]) .text-showcase { @apply text-gray-300; }
+    .text-location { @apply text-neutral-400; }
+    :global(html[data-theme="dark"]) .text-location { @apply text-neutral-500; }
+    .text-bullet-separator { @apply text-neutral-300; }
+    :global(html[data-theme="dark"]) .text-bullet-separator { @apply text-neutral-700; }
+    figure { @apply w-full; }
 </style>
