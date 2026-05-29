@@ -23,7 +23,9 @@
         "flip_to_check_stack": "Ver Stack →",
         "languages": "Idiomas",
         "countries": "Países",
-        "degrees": "Títulos"
+        "degrees": "Títulos",
+        "filter_experience": "Filtrar Experiencia",
+        "laboratory": "Laboratorio"
     },
     "open_graph": {
         "title": "Christian José Torrealba Rondón",
