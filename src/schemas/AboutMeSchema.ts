@@ -31,7 +31,9 @@ const CommonTextSchema = z.object({
     flip_to_check_stack: z.string(),
     languages: z.string(),
     countries: z.string(),
-    degrees: z.string()
+    degrees: z.string(),
+    filter_experience: z.string(),
+    laboratory: z.string()
 });
 
 const OpenGraphSchema = z.object({

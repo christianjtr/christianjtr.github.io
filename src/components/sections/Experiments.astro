@@ -7,6 +7,7 @@ import { CONTENT } from '@app-types/Content';
 import { BadgeList, LinkButton, Section, Badge, AsyncImage } from "../";
 import Logo from '@assets/svg/case_of_studies.svg';
 import TrashIcon from '@assets/svg/trash.svg';
+import ChevronIcon from '@assets/svg/chevron.svg';
 
 const roleIcons: Record<ExperimentRole, string> = {
     'Author': '🧑🏻‍💻',
@@ -22,112 +23,200 @@ const [commonData, [ experimentsData ]] = await Promise.all([
 
 const { section_experiments, common, header } = (commonData?.data as AboutMeData) || {};
 const { data: experiments } = experimentsData as { data: Experiment[]};
-const uniqueCategories = Array.from(new Set([...experiments.map(({ category }) => category)]));
+
+const experimentsToDisplay = experiments.filter(exp => exp.display);
+const uniqueCategories = Array.from(new Set([...experimentsToDisplay.map(({ category }) => category)]));
+const featuredExperiments = experimentsToDisplay.filter(exp => !exp.isSandbox);
+const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
 ---
 
 <div class="bg-primary/5 py-10" id={header.main_sections[2].anchorId}>
     <br />
-    <Section headingTitle={section_experiments.title} subtitle={section_experiments.subtitle} class="container mx-auto px-3 lg:px-10 xl:px-10">
+    <Section headingTitle={section_experiments.title} subtitle={section_experiments.subtitle} class="container mx-auto px-3 lg:px-8 xl:px-8">
         <Logo slot="beforeHeading" width={96} height={96} />
         <br />
-        <form class="flex flex-col lg:flex-row flex-wrap lg:items-center gap-7 px-5 md:px-14 mb-10 justify-start lg:justify-end">
-            {uniqueCategories.map((category) => (
-                <div class="flex items-center gap-2">
-                    <input 
-                        class="checkbox checkbox-secondary category-filter"
-                        type="checkbox" 
-                        id={category}
-                        value={category}
-                        name="experiments_type" 
-                    />
-                    <label for={category} class="cursor-pointer font-semibold text-lg" data-category={category}>
-                        {category}
-                    </label>
-                </div>
-            ))}
-            <button type="reset" class="btn btn-lg btn-circle btn-error ml-2" aria-label="Reset">
-                <TrashIcon />
-            </button>
-        </form>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 px-5 md:px-14">
-            {experiments.map((experiment: Experiment) => (
-                <div class="card experiment-card" data-category={experiment.category}>
-                    <figure>
-                        <AsyncImage imagePath={experiment.image} title={experiment.title} />
-                    </figure>
-                    <div class="card-body p-8">
-                        <div class="card-pre-content-wrapper">
-                            <Badge class="badge-sm badge-primary uppercase">{experiment.category}</Badge>
-                            {experiment.url && <LinkButton href={experiment.url} target="_blank" rel="noopener noreferrer" class='btn-circle' displayDefaultIcon />}
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 px-5 md:px-14 mt-6 items-start">
+            <aside class="lg:col-span-1 lg:sticky lg:top-24 space-y-6 self-start">
+                <div class="p-6 rounded-lg filter-panel">
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-neutral-400 mb-6">
+                        {common.filter_experience}
+                    </h3>
+                    <form class="flex flex-col gap-4">
+                        {uniqueCategories.map((category) => (
+                            <div class="flex items-center gap-3">
+                                <input 
+                                    class="checkbox checkbox-primary checkbox-sm category-filter"
+                                    type="checkbox" 
+                                    id={category}
+                                    value={category}
+                                    name="experiments_type" 
+                                />
+                                <label for={category} class="cursor-pointer font-medium text-sm filter-label" data-category={category}>
+                                    {category}
+                                </label>
+                            </div>
+                        ))}
+                        <div class="pt-4 mt-3 flex justify-end border-t border-neutral-200">
+                            <button type="reset" class="btn btn-sm btn-circle btn-primary" aria-label="Reset Filters">
+                                <TrashIcon class="w-4 h-4" />
+                            </button>
                         </div>
-                        <span class="card-pre-title-text flex items-center gap-2">
-                            <font class="text-2xl">{roleIcons[experiment.role as ExperimentRole]}</font>
-                            {experiment.role === "Author" && `${common.author}`}
-                            {experiment.role === "Contributor" && `${common.contributor}`}   
-                        </span>
-                        <h2 class="card-title">{experiment.title}</h2>
-                        <span class="card-text-info mb-3">
-                            {experiment.type}
-                        </span>
-                        <p class="card-text-content">{experiment.description}</p>
-                        <div class="card-actions"> 
-                            <BadgeList items={experiment.tags} badgeClass="font-semibold badge-soft" />
+                    </form>
+                </div>
+
+                {sandboxExperiments.length > 0 && (
+                    <div class="lg:block p-5 rounded-lg sandbox-panel">
+                        <h3 class="text-xs font-bold uppercase tracking-wider text-neutral-400">{common.laboratory}</h3>
+                        <div class="flex flex-col gap-2 pt-6">
+                            {sandboxExperiments.map((exp) => (
+                                <a 
+                                    href={exp.url} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    class="group flex items-center gap-3 p-2 rounded-lg hover:bg-neutral-100/30 transition-all duration-200 sandbox-link"
+                                >
+                                    <h4 class="flex-1 font-medium text-xs text-neutral-700 group-hover:text-primary transition-colors sandbox-link-title leading-5">
+                                        {exp.title}
+                                    </h4>
+                                    <span class="chevron-icon">
+                                        <ChevronIcon />
+                                    </span>
+                                </a>
+                            ))}
                         </div>
                     </div>
-            </div>
-            ))}
+                )}
+
+            </aside>
+            <main class="lg:col-span-3 space-y-8">
+                {featuredExperiments.map((experiment: Experiment) => (
+                    <div class="card experiment-card flex flex-col w-full bg-base-100" data-category={experiment.category}>
+                        <div class="border-b border-neutral-200 overflow-hidden rounded-t-lg">
+                            <figure class="w-full visual-studio-mesh">
+                                <div class="industrial-matte-sheet">
+                                    <div class="glass-reflection-overlay"></div>
+                                    <AsyncImage 
+                                        imagePath={experiment.image} 
+                                        title={experiment.title} 
+                                        class="inner-asset" 
+                                        loading="lazy"
+                                    />
+                                </div>
+                            </figure>
+                        </div>
+                        <div class="p-8 flex flex-col justify-between flex-1">
+                                <div class="flex justify-between items-center mb-2">
+                                    <Badge class="badge-sm badge-primary uppercase">{experiment.category}</Badge>
+                                    {experiment.url && <LinkButton href={experiment.url} target="_blank" rel="noopener noreferrer" class='btn-circle btn-sm' displayDefaultIcon />}
+                                </div>
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="text-xl">{roleIcons[experiment.role]}</span>
+                                    <span class="text-xs text-neutral-500 font-medium uppercase">
+                                        {experiment.role === "Author" ? `${common.author}` : `${common.contributor}`}
+                                    </span>
+                                </div>
+                                <h2 class="text-xl font-semibold mb-1">{experiment.title}</h2>
+                                <div class="mb-3 text-sm font-semibold primary-text">{experiment.type}</div>
+                                <p class="text-neutral-800 text-md leading-7 mb-5 card-description">
+                                    {experiment.description}
+                                </p>
+                            <div class="mt-auto pt-4 border-t border-base-300"> 
+                                <BadgeList items={experiment.tags} badgeClass="font-semibold badge-soft text-[11px]" />
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </main>
         </div>
     </Section>
 </div>
 
+
 <style>
     @reference "@styles/global.css";
     
+    .primary-text { @apply text-primary; }
+    html[data-theme="dark"] .primary-text { @apply text-accent; }
+    
     .card {
-        @apply overflow-hidden rounded-lg bg-base-100;
-        color: var(--color-neutral-dark);
+        @apply border border-neutral-200/80 overflow-hidden rounded-lg transition-all duration-300 text-neutral-900;
     }
     .card:hover {
-        @apply shadow-lg shadow-primary/20;
+        @apply border border-primary/70 shadow-lg shadow-primary/10 -translate-y-1;
     }
 
     html[data-theme="dark"] .card {
-        @apply bg-base-200 border border-transparent;
+        @apply bg-neutral-900 border-neutral-800 text-white;
     }
 
     html[data-theme="dark"] .card:hover {
-        @apply shadow-lg shadow-primary/65;
+        @apply border-accent/70 shadow-accent/5;
     }
 
-    .card-pre-content-wrapper {
-        @apply flex justify-between items-center;
+    .filter-panel, .sandbox-panel {
+        @apply bg-base-100 border-neutral-200 shadow-sm;
     }
 
-    .card-pre-title-text {
-        @apply text-xs uppercase text-neutral-500 mt-3;
+    .filter-label {
+        @apply text-neutral-700 dark:text-base-content;
     }
 
-
-    .card-title {
-        @apply text-2xl mb-3 font-medium;
+    html[data-theme="dark"] .sandbox-link-title {
+        @apply text-white;
     }
 
-    .card-text-info {
-        @apply text-secondary text-sm uppercase font-semibold;
+    html[data-theme="dark"] .filter-panel, html[data-theme="dark"] .sandbox-panel {
+        @apply bg-neutral-900 border-neutral-800 text-white;
+    }
+    
+    .chevron-icon {
+        @apply text-xs text-primary group-hover:opacity-100 group-hover:translate-x-0.5 transition-all duration-200 shrink-0 pr-1;
     }
 
-    html[data-theme="dark"] .card-text-info  {
-        @apply text-secondary;
+    html[data-theme="dark"] .chevron-icon {
+        @apply text-accent;
     }
 
-    .card-text-content {
-        @apply text-neutral-800 text-lg leading-9 mb-5;
+    .visual-studio-mesh {
+        @apply w-full rounded-t-lg flex items-center justify-center p-8 overflow-hidden relative border border-neutral-100;
+        background-color: #fafafa;
+        background-image: linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
+        background-size: 24px 24px;
+    }
+    html[data-theme="dark"] .visual-studio-mesh {
+        @apply border-neutral-800/80;
+        background-color: #0c101b;
+        background-image: linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
     }
 
-    html[data-theme="dark"] .card-title, html[data-theme="dark"] .card-pre-title-text, html[data-theme="dark"] .card-text-content  {
-        @apply text-base-content;
+    .industrial-matte-sheet {
+        @apply relative w-full h-auto overflow-hidden border border-neutral-200/60 bg-white flex items-center justify-center p-1 z-0;
+        box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.02), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    }
+    html[data-theme="dark"] .industrial-matte-sheet {
+        @apply border-neutral-800/80 bg-neutral-950;
+        box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.03), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    }
+
+    .glass-reflection-overlay {
+        @apply absolute inset-0 pointer-events-none z-10 opacity-40;
+        background: linear-gradient(135deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0) 40%, rgba(0,0,0,0.03) 60%, rgba(0,0,0,0) 100%);
+    }
+    html[data-theme="dark"] .glass-reflection-overlay {
+        @apply opacity-20;
+        background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0.2) 100%);
+    }
+
+    .inner-asset {
+        @apply w-full h-auto object-contain max-h-[340px] relative z-0 select-none;
+    }
+
+    .card-description {
+        @apply dark:text-base-content;
     }
 </style>
+
+
 
 <script>
     const setupFilters = () => {
@@ -140,12 +229,10 @@ const uniqueCategories = Array.from(new Set([...experiments.map(({ category }) =
                 .filter(element => element.checked)
                 .map(element => element.value);
 
-            console.log(cards);
-
             cards.forEach(card => {
                 const cardCategory = card.dataset.category;
                 if (activeCategories.length === 0 || activeCategories.includes(cardCategory!)) {
-                    card.style.display = 'flex';
+                    card.style.display = '';
                 } else {
                     card.style.display = 'none';
                 }
@@ -155,13 +242,10 @@ const uniqueCategories = Array.from(new Set([...experiments.map(({ category }) =
         checkboxes.forEach(cb => cb.addEventListener('change', filter));
         
         resetBtn?.addEventListener('click', () => {
-            console.log("Reset...");
-            
             setTimeout(filter, 10);
         });
     };
 
     setupFilters();
-    // Para transiciones de página de Astro:
-    // document.addEventListener('astro:after-swap', setupFilters);
+    document.addEventListener('astro:after-swap', setupFilters);
 </script>
