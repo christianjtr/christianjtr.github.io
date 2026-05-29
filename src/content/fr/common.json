@@ -79,7 +79,7 @@
         "subtitle": "Mon Profil Professionnel",
         "greeting": "Bonjour à tous, je suis",
         "my_name": "Christian José Torrealba Rondón<span class='text-accent text-3xl'>.</span>",
-        "my_name_template": "Christian José <br>Torrealba Rondón<span class='text-accent'>.</span>",
+        "my_name_template": "Christian José <br><span class='text-[0.85em] font-medium tracking-wide inline-block mt-1'>Torrealba Rondón<span class='text-accent'>.</span></span>",
         "about_me_title": "Je suis un Ingénieur qui intègre la stratégie produit, l'exécution technique et l'analyse de données.",
         "about_me": "Ma valeur réside dans ma capacité à faire le pont entre le business et l'ingénierie, en transformant des exigences complexes en solutions fonctionnelles et centrées sur l'utilisateur.",
         "systems_thinking_mindset": "Approche de Pensée Systémique",

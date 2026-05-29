@@ -79,7 +79,7 @@
         "subtitle": "My Professional Profile",
         "greeting": "Hi there friends, I am",
         "my_name": "Christian José Torrealba Rondón<span class='text-accent text-3xl'>.</span>",
-        "my_name_template": "Christian José <br>Torrealba Rondón<span class='text-accent'>.</span>",
+        "my_name_template": "Christian José <br><span class='text-[0.85em] font-medium tracking-wide inline-block mt-1'>Torrealba Rondón<span class='text-accent'>.</span></span>",
         "about_me_title": "I am a Engineer who integrates product strategy, technical execution, and data analytics.",
         "about_me": "My value lies in bridging the gap between business and engineering, transforming complex requirements into functional, user-centric solutions.",
         "systems_thinking_mindset": "Systems Thinking Mindset",
