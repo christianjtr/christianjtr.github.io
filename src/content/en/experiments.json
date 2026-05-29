@@ -13,7 +13,9 @@
         "role": "Author",
         "type": "Leadership Essay",
         "category": "Case of Study",
-        "url": "https://drive.google.com/file/d/1yprBUaMhTifIBizEOwrhScjqB7WsA7-K/view?usp=sharing"
+        "url": "https://drive.google.com/file/d/1yprBUaMhTifIBizEOwrhScjqB7WsA7-K/view?usp=sharing",
+        "isSandbox": false,
+        "display": true
     },
     {
         "id": "experiment-bi-adventure-works",
@@ -29,7 +31,9 @@
         "role": "Author",
         "type": "Data Engineering",
         "category": "Project",
-        "url": "https://drive.google.com/file/d/1UN8-YdFhR7UuhvARsf61kCxITTgot3Cf/view?usp=sharing"
+        "url": "https://drive.google.com/file/d/1UN8-YdFhR7UuhvARsf61kCxITTgot3Cf/view?usp=sharing",
+        "isSandbox": false,
+        "display": true
     },
     {
         "id": "experiment-circuitos",
@@ -45,7 +49,9 @@
         "role": "Contributor",
         "type": "UX Design and Research Concept",
         "category": "Project",
-        "url": "https://drive.google.com/file/d/1eIRVupKq6ct5eN00Z6vhNl4uG5JnA6G8/view?usp=sharing"
+        "url": "https://drive.google.com/file/d/1eIRVupKq6ct5eN00Z6vhNl4uG5JnA6G8/view?usp=sharing",
+        "isSandbox": false,
+        "display": true
     },
     {
         "id": "project-agent-orchestrator",
@@ -62,7 +68,9 @@
         "role": "Author",
         "type": "Dashboard / Monitoring",
         "category": "Proof of Concept (PoC)",
-        "url": "https://christianjtr.github.io/agent-orchestrator/"
+        "url": "https://christianjtr.github.io/agent-orchestrator/",
+        "isSandbox": true,
+        "display": true
     },
     {
         "id": "experiment-idea-cultural-activities-app",
@@ -79,7 +87,9 @@
         "role": "Author",
         "type": "e-Business Concept and Market Niche Analysis",
         "category": "Case of Study",
-        "url": "https://drive.google.com/file/d/1nVCuBsmsfOd7009AsGPlxSOo00pIHaCo/view?usp=sharing"
+        "url": "https://drive.google.com/file/d/1nVCuBsmsfOd7009AsGPlxSOo00pIHaCo/view?usp=sharing",
+        "isSandbox": false,
+        "display": true
     },
     {
         "id": "experiment-tv-movie-streaming-like-webapp",
@@ -96,7 +106,9 @@
         "role": "Author",
         "category": "Proof of Concept (PoC)",
         "type": "Web app (Movie/TV Series Catalog)",
-        "url": "https://christianjtr.github.io/tv-app/"
+        "url": "https://christianjtr.github.io/tv-app/",
+        "isSandbox": true,
+        "display": true
     },
     {
         "id": "experiment-pokedex-pwa-application",
@@ -113,7 +125,9 @@
         "role": "Author",
         "category": "Proof of Concept (PoC)",
         "type": "Web app (Pokémon Catalog)",
-        "url": "https://christianjtr.github.io/svelte-pokedex-pwa/"
+        "url": "https://christianjtr.github.io/svelte-pokedex-pwa/",
+        "isSandbox": true,
+        "display": true
     },
     {
         "id": "experiment-restaurant-browser-app",
@@ -130,7 +144,9 @@
         "role": "Author",
         "category": "Proof of Concept (PoC)",
         "type": "Web app (Restaurants application)",
-        "url": "https://christianjtr.github.io/restaurant-browser-app/"
+        "url": "https://christianjtr.github.io/restaurant-browser-app/",
+        "isSandbox": true,
+        "display": true
     },
     {
         "id": "experiment-data-visualization-error-reporting-chart",
@@ -147,7 +163,9 @@
         "role": "Author",
         "category": "Proof of Concept (PoC)",
         "type": "Web app (Error Monitoring Dashboard)",
-        "url": null
+        "url": null,
+        "isSandbox": false,
+        "display": true
     },
     {
         "id": "experiment-erp-management-dashboard",
@@ -163,6 +181,8 @@
         "role": "Author",
         "category": "Proof of Concept (PoC)",
         "type": "Web app (Employee Management Dashboard)",
-        "url": "https://christianjtr.github.io/manage-employees-dashboard/#/"
+        "url": "https://christianjtr.github.io/manage-employees-dashboard/#/",
+        "isSandbox": true,
+        "display": false
     }
 ]
