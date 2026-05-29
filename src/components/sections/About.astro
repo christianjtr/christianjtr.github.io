@@ -9,9 +9,19 @@ import { VerticalSpacer } from "../";
 import ExpertiseFeatureGrid from './ExpertiseFeatureGrid.astro';
 import WaveAnimation from "@assets/gifs/wave.gif";
 import CrystalBallAnimation from "@assets/gifs/crystal_ball.gif";
-import MeImg from "@assets/images/me.png";
+import MeENImg from "@assets/images/me.png";
+import MeFRImg from "@assets/images/me-fr.png";
+import MeESImg from "@assets/images/me-es.png";
 
 const { lang } = Astro.params;
+
+const avatarMap: Record<string, ImageMetadata> = {  
+    en: MeENImg,
+    fr: MeFRImg,
+    es: MeESImg,
+};
+
+const activeAvatar = avatarMap[lang as string] || MeENImg;
 
 const entry = await getEntry(lang as ContentDataEntryType, `${lang}/${CONTENT.COMMON}`);
 const { section_about } = (entry?.data as AboutMeData) || {};
@@ -28,8 +38,8 @@ const { section_about } = (entry?.data as AboutMeData) || {};
             <p class="text-lg lg:text-xl leading-8 p-2 m-0">{section_about.summary}</p>
         </div>
         <div class="col-span-3 p-12 relative flex justify-center">
-            <figure class="avatar-image w-5/6 md:w-full">
-                <Image src={MeImg} alt="My image" aria-label="My image" class="md:w-full" />
+            <figure class="avatar-image w-5/6 md:w-full" transition:name="avatar">
+                <Image src={activeAvatar} alt="My image" aria-label="My image" class="md:w-full clip-path-[circle(48.5%)] object-cover"  />
             </figure>
             <div class="chat absolute top-64 left-[-30px] w-1/2 hidden lg:block">
                 <div class="chat-bubble">

@@ -1,4 +1,5 @@
 ---
+import { ClientRouter } from 'astro:transitions';
 import { i18nLocalesConfig } from '../../i18n.config.mjs';
 
 const { locales, defaultLocale } = i18nLocalesConfig;
@@ -8,6 +9,7 @@ const LOCALE_STORAGE_KEY = 'user-locale-preference';
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <ClientRouter />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex, nofollow" />
