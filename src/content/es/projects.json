@@ -1,27 +1,30 @@
 [
     {
-        "id": "project-augmented-intelligence",
+        "id": "project-opportunity-portfolios-sipo",
         "section": "projects",
-        "title": "Análisis Inteligente y Visualización de Datos con y Realidad Aumentada",
-        "showcased_at": "Conferencia Global Qlik Qonnections",
-        "location": "Dallas TX, USA",
+        "title": "Sistema Integrado de Portafolios de Oportunidades (SIPO)",
+        "showcased_at": "Asociación Americana de Geólogos del Petróleo (AAPG)",
+        "location": "Houston TX, USA",
         "flag": "🇺🇲",
         "flag_asset": "/src/assets/svg/flag_usa.svg",
-        "project_asset": "/src/assets/images/ar_project.png",
-        "owner": "© SDG Group",
-        "url": "https://cdn2.hubspot.net/hubfs/4041825/SDG_Group_Augmented_Intelligence.pdf",
-        "period": "Mayo 2019",
-        "contribute_as": "Ingeniero de Software Frontend",
+        "project_asset": "/src/assets/images/sipo_project.png",
+        "owner": "© Petróleos de Venezuela (PDVSA)",
+        "url": "https://www.searchanddiscovery.com/pdfz/documents/2011/40798garcia/ndx_garcia.pdf.html",
+        "period": "Agosto 2011",
+        "contribute_as": "Desarrollador de Software · Ingeniería de Datos",
         "technologies": [
-            "VueJS / NodeJS",
-            "Qlik Sense Hub",
-            "SignalR Client",
-            "Dialog Flow",
-            "AR.js"
+            "HTML5 / jQuery / CSS",
+            "PHP",
+            "MySQL / PostgreSQL",
+            "HighCharts",
+            "R Statistics",
+            "ETL / DWH",
+            "Pentaho BI",
+            "ArcGIS"
         ],
-        "contributions": "Colaboré con ingenieros para crear una experiencia de usuario de RA/RM, a través de una aplicación para visualizar tendencias de ventas y un chatbot para la visualización de datos.",
-        "overview": "Democratizar los datos para hacerlos más accesibles para todos, no solo para los expertos en datos. Utilizamos realidad mixta, realidad aumentada y asistentes virtuales para ayudar a las personas a encontrar información en grandes conjuntos de datos de una manera más intuitiva y fácil de usar.",
-        "summary": "Uso de la realidad mixta y de asistentes virtuales para ampliar el acceso a los datos para todos"
+        "contributions": "Me asocié con un equipo de ingenieros, economistas, geólogos y geógrafos para crear y lanzar una aplicación web en tiempo real para facilitar el análisis de escenarios económicos y visualizar de manera efectiva datos geocientíficos y financieros.",
+        "overview": "SIPO es un sistema basado en web que proporciona información en tiempo real para la industria petrolera. Está diseñado para apoyar la toma de decisiones eliminando datos redundantes. La aplicación utiliza visualización de datos para el análisis económico y la API de Google Earth para datos geográficos / geológicos.",
+        "summary": "Sistema basado en web para la industria petrolera que utiliza datos en tiempo real para ayudar en la toma de decisiones"
     },
     {
         "id": "project-kml-visualization",
@@ -48,30 +51,27 @@
         "summary": "Simplificando el acceso a datos geográficos y de hidrocarburos para la industria petrolera venezolana"
     },
     {
-        "id": "project-opportunity-portfolios-sipo",
+        "id": "project-augmented-intelligence",
         "section": "projects",
-        "title": "Sistema Integrado de Portafolios de Oportunidades (SIPO)",
-        "showcased_at": "Asociación Americana de Geólogos del Petróleo (AAPG)",
-        "location": "Houston TX, USA",
+        "title": "Análisis Inteligente y Visualización de Datos con y Realidad Aumentada",
+        "showcased_at": "Conferencia Global Qlik Qonnections",
+        "location": "Dallas TX, USA",
         "flag": "🇺🇲",
         "flag_asset": "/src/assets/svg/flag_usa.svg",
-        "project_asset": "/src/assets/images/sipo_project.png",
-        "owner": "© Petróleos de Venezuela (PDVSA)",
-        "url": "https://www.searchanddiscovery.com/pdfz/documents/2011/40798garcia/ndx_garcia.pdf.html",
-        "period": "Agosto 2011",
-        "contribute_as": "Desarrollador de Software · Ingeniería de Datos",
+        "project_asset": "/src/assets/images/ar_project.png",
+        "owner": "© SDG Group",
+        "url": "https://cdn2.hubspot.net/hubfs/4041825/SDG_Group_Augmented_Intelligence.pdf",
+        "period": "Mayo 2019",
+        "contribute_as": "Ingeniero de Software Frontend",
         "technologies": [
-            "HTML5 / jQuery / CSS",
-            "PHP",
-            "MySQL / PostgreSQL",
-            "HighCharts",
-            "R Statistics",
-            "ETL / DWH",
-            "Pentaho BI",
-            "ArcGIS"
+            "VueJS / NodeJS",
+            "Qlik Sense Hub",
+            "SignalR Client",
+            "Dialog Flow",
+            "AR.js"
         ],
-        "contributions": "Me asocié con un equipo de ingenieros, economistas, geólogos y geógrafos para crear y lanzar una aplicación web en tiempo real para facilitar el análisis de escenarios económicos y visualizar de manera efectiva datos geocientíficos y financieros.",
-        "overview": "SIPO es un sistema basado en web que proporciona información en tiempo real para la industria petrolera. Está diseñado para apoyar la toma de decisiones eliminando datos redundantes. La aplicación utiliza visualización de datos para el análisis económico y la API de Google Earth para datos geográficos / geológicos.",
-        "summary": "Sistema basado en web para la industria petrolera que utiliza datos en tiempo real para ayudar en la toma de decisiones"
+        "contributions": "Colaboré con ingenieros para crear una experiencia de usuario de RA/RM, a través de una aplicación para visualizar tendencias de ventas y un chatbot para la visualización de datos.",
+        "overview": "Democratizar los datos para hacerlos más accesibles para todos, no solo para los expertos en datos. Utilizamos realidad mixta, realidad aumentada y asistentes virtuales para ayudar a las personas a encontrar información en grandes conjuntos de datos de una manera más intuitiva y fácil de usar.",
+        "summary": "Uso de la realidad mixta y de asistentes virtuales para ampliar el acceso a los datos para todos"
     }
 ]
