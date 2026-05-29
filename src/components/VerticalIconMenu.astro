@@ -9,19 +9,18 @@ interface Props {
     extraClasses?: string;
 }
 
-const { iconSize = 32, extraClasses = "menu-lg bg-primary/20 rounded-box" } = Astro.props;
+const { iconSize = 32, extraClasses = "menu-lg rounded-box" } = Astro.props;
 ---
 
-<ul class:list={["menu", extraClasses]}>
+<ul class:list={["menu sticky-social-menu", extraClasses]}>
     {rrssLinks.map((eachLink) => (
-        <li class="my-1">
+        <li class="my-1.5 tooltip tooltip-left tooltip-primary" data-tip={eachLink.text}>
             <a 
                 href={eachLink.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                data-tip={eachLink.text} 
                 aria-label={eachLink.text}
-                class="tooltip tooltip-left tooltip-primary"
+                class="social-link-btn flex items-center justify-center p-2.5 rounded-xl transition-all duration-300"
             >
                 {eachLink.id === "github" && <GitHubIcon width={iconSize} height={iconSize} />}
                 {eachLink.id === "linkedin" && <LinkedInIcon width={iconSize} height={iconSize} />}
@@ -34,7 +33,37 @@ const { iconSize = 32, extraClasses = "menu-lg bg-primary/20 rounded-box" } = As
 <style>
      @reference "@styles/global.css";
 
-    html[data-theme="dark"] .menu {
-        @apply bg-primary/30;
+     .sticky-social-menu {
+        @apply border border-neutral-200/50 shadow-md backdrop-blur-md p-2;
+        background-color: rgba(255, 255, 255, 0.4);
+        box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    }
+
+    html[data-theme="dark"] .sticky-social-menu {
+        @apply border-neutral-800/80 shadow-2xl;
+        background-color: rgba(15, 23, 42, 0.4);
+        box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    }
+
+    .social-link-btn {
+        @apply text-neutral-600 bg-transparent;
+    }
+    
+    .social-link-btn:hover {
+        @apply bg-primary/10 text-primary -translate-x-0.5 shadow-xs;
+    }
+
+    html[data-theme="dark"] .social-link-btn {
+        @apply text-neutral-400;
+    }
+
+    html[data-theme="dark"] .social-link-btn:hover {
+        @apply -translate-x-0.5;
+        background-color: rgba(255, 255, 255, 0.08);
+        color: #ffffff;
+    }
+
+    .tooltip:before {
+        @apply font-semibold text-xs tracking-wide rounded-md shadow-md;
     }
 </style>
