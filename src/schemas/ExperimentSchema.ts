@@ -17,7 +17,9 @@ export const ExperimentSchema = z.object({
     category: z.string(),
     type: z.string(),
     url: z.url().nullable(),
-    section: z.literal('experiments')
+    section: z.literal('experiments'),
+    display: z.boolean(),
+    isSandbox: z.boolean()
 });
 
 export type Experiment = z.infer<typeof ExperimentSchema>;
