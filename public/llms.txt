@@ -1,46 +1,49 @@
 # Christian José Torrealba Rondón - llms.txt
-# Updated: April 2026
+# Updated: May 2026
 
 # Profile
 Name: Christian José Torrealba Rondón
-Title: Product-Focused Engineer | Bridging Product Strategy, Web Technologies, Data Strategy and Agile Leadership
-Specialization: Product Engineering • Full-Stack Development • Business Intelligence
-Professional Summary: Highly accomplished Product Engineer with deep expertise in product discovery, digital strategy, agile leadership and data-driven solutions. Combines strong technical skills in modern web technologies with business intelligence and product ownership to deliver exceptional user-centric digital products.
+Title: Product Engineer | Systems Engineering Background | Web Development & Data Strategy
+Specialization: Product Engineering • Full-Stack Development • Applied AI • Business Intelligence
+
+# Professional Summary
+Product Engineer with experience in bridging technical execution and business strategy. Combines strong full-stack development skills with product ownership and data-driven decision making. Currently focused on modern web technologies and Applied AI to build scalable, user-centric digital solutions.
 
 # Core Expertise
-- Product Engineering & Product Ownership
-- Full-Stack Software Development (Frontend & Backend)
-- Business Intelligence, Data Analytics & ETL processes
-- Agile Leadership & Team Mentorship (PSM-I, PSPO-I, PAL-I)
-- Digital Strategy & Experimentation
-- API Design & System Architecture
+- Product Engineering & End-to-End Ownership
+- Full-Stack Development (Frontend & Backend)
+- Technical Architecture & Modernization
+- Business Intelligence, Data Analytics & ETL
+- Agile Leadership & Team Mentorship
+- API Design & System Integrations
+- Applied AI & LLM workflows
 
 # Key Technologies
-Frontend: React, TypeScript, Vue, Svelte, Astro, Tailwind, Vite, Webpack
-Backend & APIs: Node.js, Python, GraphQL, RESTful APIs, Drizzle, Sequelize
-Data & BI: Power BI, Tableau, SQL Server (SSAS/SSIS), BigQuery, Pentaho BI, R Statistics
+Frontend: React, TypeScript, Redux Toolkit, React Query, Tailwind, Vite, Webpack
+Backend & APIs: Node.js, Python (in progress), GraphQL, RESTful APIs
+Data & BI: SQL, Power BI, Tableau, BigQuery, Pentaho
 Testing: Jest, Cypress, Playwright
-Cloud & DevOps: AWS, Sentry, Grafana, Docker
-Design & Tools: Figma, Notion, Jira, Confluence, Segment, Amplitude, Google Analytics
+Cloud & Observability: AWS, Sentry, Grafana
+Tools: Figma, Jira, Notion, Confluence, Git
 
 # Professional Experience Highlights
-• Senior Product Software Engineer – Zeelo (Mobility) | 2024–2025
-• Solutions Engineer (Full-Stack) – Stuart Delivery (Logistics) | 2020–2023
+• Senior Product Software Engineer (Frontend focus) – Zeelo (Mobility) | 2024–2025
+• Solutions Engineer – Full Stack Software Engineer – Stuart Delivery (Logistics) | 2020–2023
 • Frontend Developer Architect – Zank Financial (Fintech) | 2019–2020
-• Frontend Software Engineer – SDG Group (Data & BI) | 2018–2019
-• Product Software Engineer – PDVSA (Energy & Data Intelligence) | 2011–2016
+• Frontend Software Engineer (Data focus) – SDG Group | 2018–2019
+• Product Software Engineer (Data Intelligence & R&D) – PDVSA (Energy) | 2011–2016
 
 # Education
 • Expert Diploma in Tech Management & Technical Leadership – Polytechnic University of Valencia
 • Master in e-Business Management – University of Barcelona
 • Postgraduate in Business Intelligence – Autonomous University of Barcelona
-• Degree in Systems Engineering – UNEFA (Venezuela)
+• Degree in Systems Engineering – UNEFA, Venezuela
 
 # Certifications
 • Professional Scrum Product Owner I (PSPO-I)
 • Professional Scrum Master I (PSM-I)
 • Professional Agile Leadership (PAL-I)
-• Generative AI for Product Managers – PMI
+• Generative AI Overview for Product Managers – PMI
 • Enterprise Design Thinking Practitioner – IBM
 • System Thinking for Project Management – MIT
 
@@ -48,4 +51,4 @@ Design & Tools: Figma, Notion, Jira, Confluence, Segment, Amplitude, Google Anal
 Spanish (Native) • English (Professional) • French (Pre-Intermediate)
 
 # Philosophy
-V-Shaped professional who connects strategy, execution, and data to deliver high-impact digital solutions.
+V-shaped professional who connects strategy, technology execution, and data to deliver high-impact digital products. Strong believer in ownership, continuous learning, and building systems that truly solve business problems.
