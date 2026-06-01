@@ -72,6 +72,7 @@ const SectionExperiencesSchema = BaseSectionSchema.extend({
     collaborated_with: z.string(),
     companies_across_regions: z.string(),
     companies_and_countries_lived_in: z.string(),
+    academic_foundation: z.string(),
     countries: z.array(z.string()),
     key_areas: z.array(z.string()),
     full_countries: z.array(z.string()),
