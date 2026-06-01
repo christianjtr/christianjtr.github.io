@@ -64,7 +64,7 @@ const { section_about } = (entry?.data as AboutMeData) || {};
             <figure class="avatar-image w-5/6 md:w-full" transition:name="avatar">
                 <Image src={activeAvatar} alt="My image" aria-label="My image" class="md:w-full"  />
             </figure>
-            <div class="chat chat-end absolute top-64 left-[-45px] w-3/5 hidden lg:block z-20 filter drop-shadow-xl">
+            <div class="chat chat-end absolute top-64 w-3/5 hidden lg:flex z-1 filter drop-shadow-xl left-0">
                 <div class="chat-bubble p-4 rounded-2xl rounded-tr-none shadow-2xl min-w-[200px] relative before:left-auto before:-right-1.5 before:rotate-45">
                     <div class="text-slider-mask overflow-hidden">
                         <div class="text-slider font-sans text-sm font-medium leading-relaxed tracking-wide">
@@ -218,8 +218,6 @@ const { section_about } = (entry?.data as AboutMeData) || {};
     
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-/* Estado Hover: Un destello extra cuando interactúan con el elemento */
 .avatar-image:hover {
     border-color: color-mix(in srgb, var(--color-electric-teal) 75%, transparent);
     box-shadow: 
