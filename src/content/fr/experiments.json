@@ -223,6 +223,6 @@
         "type": "Application web (Tableau de notes)",
         "url": "https://christianjtr.github.io/sticky-notes/",
         "isSandbox": true,
-        "display": true
+        "display": false
     }
 ]

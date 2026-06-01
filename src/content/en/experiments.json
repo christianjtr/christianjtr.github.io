@@ -223,6 +223,6 @@
         "type": "Web app (Sticky Notes Board)",
         "url": "https://christianjtr.github.io/sticky-notes/",
         "isSandbox": true,
-        "display": true
+        "display": false
     }
 ]
