@@ -13,52 +13,73 @@ interface Props {
 const { sections } = Astro.props;
 ---
 
-
-<div class="dropdown dropdown-end lg:hidden">
-    <div tabindex="0" role="button" class="btn btn-ghost btn-circle scale-x-[-1]">
+{/* Cambiado a details para mejor control táctil y accesibilidad */}
+<details class="dropdown dropdown-end lg:hidden mobile-menu-details">
+    <summary class="btn btn-ghost btn-circle scale-x-[-1] list-none cursor-pointer">
         <DropdownIcon width={24} height={24} />
-    </div>
-    <div class="card card-sm dropdown-content">
-        <div class="card-body dropdown-menu-content">
-            <ul class="menu">
-                {sections.map((section) => (
-                    <li>
-                        <a 
-                            role="button"
-                            class="hover:text-primary" 
-                            href={`#${section.anchorId}`}
-                            aria-label={`Go to ${section.label}`}
-                        >
-                            {section.label}
-                        </a>
-                    </li>
-                ))}
-            </ul>
-            <div class="divider p-0 m-0 divider-start" />
-            <p class="px-5 py-2 flex justify-center gap-7">
+    </summary>
+    
+    <div class="card card-sm dropdown-content z-[50] mt-2 min-w-[200px]">
+        <div class="card-body dropdown-menu-content p-3">
+            <nav aria-label="Mobile navigation">
+                <ul class="menu menu-md p-0 gap-1">
+                    {sections.map((section) => (
+                        <li>
+                            <a 
+                                class="hover:text-primary active:bg-primary/10 py-3 px-4 rounded-lg" 
+                                href={`#${section.anchorId}`}
+                                aria-label={`Go to ${section.label}`}
+                            >
+                                {section.label}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            </nav>
+            
+            <div class="divider my-2 opacity-50" />
+            
+            {/* Zona táctil expandida para los iconos sociales */}
+            <div class="flex justify-around items-center pt-2 pb-1">
                 {rrssLinks.map((eachLink) => (
                     <a 
                         href={eachLink.url}
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={eachLink.text}
-                        class="text-center flex flex-col gap-1 items-center hover:text-primary"
+                        class="flex flex-col gap-1 items-center hover:text-primary min-w-[44px] min-h-[44px] justify-center text-xs"
                     >
-                        {eachLink.id === "github" && <GitHubIcon width={24} height={24} />}
-                        {eachLink.id === "linkedin" && <LinkedInIcon width={24} height={24} />}
-                        {eachLink.id === "llms" && <LLMSIcon width={24} height={24} />}
-                        {eachLink.text}
+                        {eachLink.id === "github" && <GitHubIcon width={22} height={22} />}
+                        {eachLink.id === "linkedin" && <LinkedInIcon width={22} height={22} />}
+                        {eachLink.id === "llms" && <LLMSIcon width={22} height={22} />}
+                        <span class="text-[10px] opacity-80">{eachLink.text}</span>
                     </a>
                 ))}
-            </p>
+            </div>
         </div>
     </div>
-</div>
+</details>
+
+{/* Script ultra-ligero para cerrar el menú al pulsar un enlace */}
+<script>
+    const mobileMenu = document.querySelector('.mobile-menu-details');
+    if (mobileMenu) {
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.removeAttribute('open');
+            });
+        });
+    }
+</script>
 
 <style>
     @reference "@styles/global.css";
     
     .dropdown-menu-content {
-        @apply bg-base-300 rounded-box z-1 mt-1 p-2 shadow-sm;
+        @apply bg-base-300 rounded-box shadow-xl border border-base-content/5;
+    }
+    /* Elimina la flecha nativa de details en Safari/Chrome */
+    summary::-webkit-details-marker {
+        display: none;
     }
 </style>
