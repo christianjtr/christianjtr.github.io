@@ -33,7 +33,9 @@ const CommonTextSchema = z.object({
     countries: z.string(),
     degrees: z.string(),
     filter_experience: z.string(),
-    laboratory: z.string()
+    laboratory: z.string(),
+    project_result_title: z.string()
+
 });
 
 const OpenGraphSchema = z.object({

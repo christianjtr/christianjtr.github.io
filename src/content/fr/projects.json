@@ -24,7 +24,8 @@
         ],
         "contributions": "Je me suis associé à une équipe d'ingénieurs, d'économistes, de géologues et de géographes pour créer et lancer une application Web en temps réel afin de faciliter l'analyse de scénarios économiques et de visualiser efficacement les données géoscientifiques et financières.",
         "overview": "SIPO est un système Web qui fournit des informations en temps réel pour l'industrie pétrolière. Il est conçu pour soutenir la prise de décision en éliminant les données redondantes. L'application utilise la visualisation de données pour l'analyse économique et l'API Google Earth pour les données géographiques/géologiques.",
-        "summary": "Système Web pour l'industrie pétrolière utilisant des données en temps réel pour faciliter la prise de décision"
+        "summary": "Système Web pour l'industrie pétrolière utilisant des données en temps réel pour faciliter la prise de décision",
+        "outcome": "Élimination de la redondance des données en centralisant les flux techniques et géoscientifiques en temps réel. La plateforme a optimisé les décisions stratégiques grâce à des simulations économiques instantanées."
     },
     {
         "id": "project-kml-visualization",
@@ -48,7 +49,8 @@
         ],
         "contributions": "J'ai travaillé avec des géologues et des géographes pour améliorer l'accessibilité et l'utilisabilité des données géographiques en créant et en éditant automatiquement des fichiers KML/KMZ.",
         "overview": "Faciliter l'accès aux données géographiques complexes de l'industrie pétrolière vénézuélienne (champs pétrolifères, formations géologiques et infrastructure). Le principal défi était de traiter des données souvent stockées dans des formats spécialisés, généralement accessibles uniquement avec l'utilisation de logiciels spécifiques tels qu'ArcGIS.",
-        "summary": "Simplification de l'accès aux données géographiques et d'hydrocarbures pour l'industrie pétrolière vénézuélienne"
+        "summary": "Simplification de l'accès aux données géographiques et d'hydrocarbures pour l'industrie pétrolière vénézuélienne",
+        "outcome": "Démocratisation de l'accès aux données pétrolières en automatisant la génération de fichiers KML/KMZ avec des géologues. Cela a éliminé la dépendance à ArcGIS, rendant les structures géologiques accessibles à tous."
     },
     {
         "id": "project-augmented-intelligence",
@@ -72,6 +74,7 @@
         ],
         "contributions": "J'ai collaboré avec des ingénieurs pour créer une expérience utilisateur RA/RM, via une application de visualisation des tendances de vente et un chatbot pour la visualisation de données.",
         "overview": "Démocratiser les données pour les rendre plus accessibles à tous, et non pas seulement aux experts. Nous utilisons la réalité mixte, la réalité augmentée et des assistants virtuels pour aider les gens à trouver des informations dans de grands ensembles de données de manière plus intuitive et conviviale.",
-        "summary": "Utilisation de réalité mixte et d'assistants virtuels pour élargir l'accès aux données pour tous"
+        "summary": "Utilisation de réalité mixte et d'assistants virtuels pour élargir l'accès aux données pour tous",
+        "outcome": "Accélération de la démocratisation des données via l'Intelligence Augmentée. Développement d'un Analytics Showroom avec Réalité Mixte et Assistants Virtuels pour simplifier la recherche d'insights métiers."
     }
 ]

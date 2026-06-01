@@ -56,6 +56,19 @@ const { data: projects } = projectData as { data: Project[] };
                                     <h4 class="section-title text-muted-label">{common.contribuition}</h4>
                                     <p class="project-paragraph text-body-content mt-7">{project.contributions}</p>
                                 </div>
+                                {/* <div class="info-section">
+                                    <h4 class="section-title text-muted-label">{common.project_result_title}</h4>
+                                    <p class="project-paragraph text-body-content mt-7">{project.outcome}</p>
+                                </div> */}
+                                <div class="tech-container">
+                                    <MonitorIcon width={14} height={14} class="text-neutral-400 shrink-0 mt-0.5" />
+                                    <div class="flex-1 space-y-1">
+                                        <h4 class="section-title text-muted-label block mb-5">{common.technologies}</h4>
+                                        <div class="pt-0.5 text-xs font-medium tracking-wide">
+                                            <BadgeList items={project.technologies} badgeClass='badge-sm' />
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="media-column">
@@ -70,7 +83,7 @@ const { data: projects } = projectData as { data: Project[] };
                                     </div>
                                 </figure>
                                 
-                                <div class="tech-container">
+                                {/* <div class="tech-container">
                                     <MonitorIcon width={14} height={14} class="text-neutral-400 shrink-0 mt-0.5" />
                                     <div class="flex-1 space-y-1">
                                         <h4 class="section-title text-muted-label block mb-5">{common.technologies}</h4>
@@ -78,6 +91,10 @@ const { data: projects } = projectData as { data: Project[] };
                                             <BadgeList items={project.technologies} badgeClass='badge-sm' />
                                         </div>
                                     </div>
+                                </div> */}
+                                <div class="info-section">
+                                    <h4 class="section-title text-muted-label">{common.project_result_title}</h4>
+                                    <p class="project-paragraph text-body-content mt-7">{project.outcome}</p>
                                 </div>
                             </div>
                             
