@@ -7,6 +7,11 @@ const BaseSectionSchema = z.object({
     subtitle: z.string(),
 });
 
+const HoobySchema = z.object({
+    name: z.string(),
+    emoji: z.string()
+});
+
 const CommonTextSchema = z.object({
     overview: z.string(),
     role: z.string(),
@@ -108,7 +113,7 @@ const SectionAboutSchema = z.object({
     systems_thinking_mindset: z.string(),
     summary: z.string(),
     hobbies_title: z.string(),
-    hobbies: z.string(),
+    hobbies: z.array(HoobySchema),
     v_shaped_profile: z.string(),
     v_shaped_explanation: z.string(),
     language_tip: z.string(),
