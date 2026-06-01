@@ -184,5 +184,45 @@
         "url": "https://christianjtr.github.io/manage-employees-dashboard/#/",
         "isSandbox": true,
         "display": false
+    },
+    {
+        "id": "experiment-express-api-boilerplate",
+        "section": "experiments",
+        "title": "Express API Boilerplate",
+        "description": "Una plantilla base de API REST lista para producción desarrollada con Node.js, Express y MongoDB. Cuenta con contenedorización mediante Docker y una sólida suite de pruebas automatizadas con Jest y Supertest para pruebas unitarias y de integración.",
+        "image": "/src/assets/images/express_api_boilerplate.jpg",
+        "tags": [
+            "Desarrollo Back-end",
+            "Node.js / Express",
+            "MongoDB / Mongoose",
+            "Docker / Contenedores",
+            "Jest / Supertest"
+        ],
+        "role": "Author",
+        "category": "Plantilla / Arquitectura",
+        "type": "API REST (Plantilla Backend)",
+        "url": "https://github.com/christianjtr/express-api-mongodb-docker-jest-supertest",
+        "isSandbox": true,
+        "display": true
+    },
+    {
+        "id": "experiment-sticky-notes",
+        "section": "experiments",
+        "title": "Basic Sticky Notes",
+        "description": "Una aplicación de tablero interactivo y limpio para gestionar notas virtuales autoadhesivas. Cuenta con interacciones fluidas de arrastrar y soltar, cambio de tamaño, guardado automático de edición y navegación completa por teclado con persistencia de datos en el cliente.",
+        "image": "/src/assets/images/sticky_notes.jpg",
+        "tags": [
+            "Desarrollo Front-end",
+            "React 19 / TypeScript",
+            "Vite / CSS Modules",
+            "API Drag and Drop de HTML5",
+            "Accesibilidad Web (ARIA)"
+        ],
+        "role": "Author",
+        "category": "Prueba de Concepto (PoC)",
+        "type": "Aplicación web (Tablero de notas)",
+        "url": "https://christianjtr.github.io/sticky-notes/",
+        "isSandbox": true,
+        "display": true
     }
 ]

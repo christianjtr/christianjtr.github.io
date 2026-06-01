@@ -267,9 +267,10 @@
     "section_experiences": {
         "title": "Trayectoria",
         "subtitle": "Un vistazo completo a mi crecimiento profesional y logros clave en diferentes países",
-        "collaborated_with": "Colaboración con colegas de varias regiones y países",
+        "collaborated_with": "Experiencia colaborando con equipos y personas de diferentes países.",
         "companies_across_regions": "Trabajé en diferentes mercados",
         "companies_and_countries_lived_in": "Países donde viví, trabajé y estudié",
+        "academic_foundation": "Educación formal y credenciales verificadas que respaldan la ejecución técnica.",
         "countries": ["Venezuela", "Argentina", "Spain"],
         "full_countries": [
             "Venezuela",
@@ -292,14 +293,14 @@
         ]
     },
     "section_studies": {
-        "title": "Academic Background",
-        "subtitle": "Key Areas of Study",
+        "title": "Formación Académica",
+        "subtitle": "Áreas Clave de Estudio",
         "educational_level": "Título de Máster",
         "key_subjects": [
-            "Information and Communication Technologies",
-            "Tech Leadership and Strategy",
-            "Business Intelligence and Data Engineering",
-            "User Experience and Research"
+            "Tecnologías de la Información y Comunicación",
+            "Estrategia y Liderazgo Tecnológico",
+            "Business Intelligence e Ingeniería de Datos",
+            "Experiencia de Usuario e Investigación"
         ]
     }
 }

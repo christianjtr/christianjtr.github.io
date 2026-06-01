@@ -184,5 +184,45 @@
         "url": "https://christianjtr.github.io/manage-employees-dashboard/#/",
         "isSandbox": true,
         "display": false
+    },
+    {
+        "id": "experiment-express-api-boilerplate",
+        "section": "experiments",
+        "title": "Express API Boilerplate",
+        "description": "A production-ready REST API boilerplate built with Node.js, Express, and MongoDB. It features containerization with Docker and a robust automated testing suite using Jest and Supertest for integration and unit testing.",
+        "image": "/src/assets/images/express_api_boilerplate.jpg",
+        "tags": [
+            "Back-end development",
+            "Node.js / Express",
+            "MongoDB / Mongoose",
+            "Docker / Containerization",
+            "Jest / Supertest"
+        ],
+        "role": "Author",
+        "category": "Boilerplate / Architecture",
+        "type": "REST API (Backend Boilerplate)",
+        "url": "https://github.com/christianjtr/express-api-mongodb-docker-jest-supertest",
+        "isSandbox": true,
+        "display": true
+    },
+    {
+        "id": "experiment-sticky-notes",
+        "section": "experiments",
+        "title": "Basic Sticky Notes",
+        "description": "A clean, interactive digital board application for managing virtual sticky notes. Features smooth drag-and-drop interactions, resizing, auto-save editing, and full keyboard navigation with client-side persistence.",
+        "image": "/src/assets/images/sticky_notes.jpg",
+        "tags": [
+            "Front-end development",
+            "React 19 / TypeScript",
+            "Vite / CSS Modules",
+            "HTML5 Drag and Drop API",
+            "Web Accessibility (ARIA)"
+        ],
+        "role": "Author",
+        "category": "Proof of Concept (PoC)",
+        "type": "Web app (Sticky Notes Board)",
+        "url": "https://christianjtr.github.io/sticky-notes/",
+        "isSandbox": true,
+        "display": true
     }
 ]

@@ -267,9 +267,10 @@
     "section_experiences": {
         "title": "Background",
         "subtitle": "A comprehensive look at my professional growth and key accomplishments across different countries",
-        "collaborated_with": "Collaborated with colleagues from several regions and countries",
+        "collaborated_with": "Experience collaborating with teams and people across different countries.",
         "companies_across_regions": "Worked across different markets",
         "companies_and_countries_lived_in": "Countries Lived, Worked, and Studied in",
+        "academic_foundation": "Formal education and verified credentials supporting technical execution.",
         "countries": ["Venezuela", "Argentina", "Spain"],
         "full_countries": [
             "Venezuela",

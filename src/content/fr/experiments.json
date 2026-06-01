@@ -184,5 +184,45 @@
         "url": "https://christianjtr.github.io/manage-employees-dashboard/#/",
         "isSandbox": true,
         "display": false
+    },
+    {
+        "id": "experiment-express-api-boilerplate",
+        "section": "experiments",
+        "title": "Express API Boilerplate",
+        "description": "Un modèle d'API REST prêt pour la production, développé avec Node.js, Express et MongoDB. Il intègre une conteneurisation avec Docker ainsi qu'une suite robuste de tests automatisés utilisant Jest et Supertest pour les tests unitaires et d'intégration.",
+        "image": "/src/assets/images/express_api_boilerplate.jpg",
+        "tags": [
+            "Développement Back-end",
+            "Node.js / Express",
+            "MongoDB / Mongoose",
+            "Docker / Conteneurisation",
+            "Jest / Supertest"
+        ],
+        "role": "Author",
+        "category": "Modèle / Architecture",
+        "type": "API REST (Modèle Backend)",
+        "url": "https://github.com/christianjtr/express-api-mongodb-docker-jest-supertest",
+        "isSandbox": true,
+        "display": true
+    },
+    {
+        "id": "experiment-sticky-notes",
+        "section": "experiments",
+        "title": "Basic Sticky Notes",
+        "description": "Une application de tableau numérique épurée et interactive pour gérer des notes virtuelles. Propose des interactions fluides de glisser-déposer, le redimensionnement, la sauvegarde automatique des modifications et une navigation complète au clavier avec persistance des données côté client.",
+        "image": "/src/assets/images/sticky_notes.jpg",
+        "tags": [
+            "Développement Front-end",
+            "React 19 / TypeScript",
+            "Vite / CSS Modules",
+            "API Drag and Drop HTML5",
+            "Accessibilité Web (ARIA)"
+        ],
+        "role": "Author",
+        "category": "Preuve de Concept (PoC)",
+        "type": "Application web (Tableau de notes)",
+        "url": "https://christianjtr.github.io/sticky-notes/",
+        "isSandbox": true,
+        "display": true
     }
 ]
