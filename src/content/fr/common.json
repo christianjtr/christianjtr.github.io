@@ -81,15 +81,25 @@
         "greeting": "Bienvenue, je suis",
         "my_name": "Christian José Torrealba Rondón<span class='text-accent text-3xl'>.</span>",
         "my_name_template": "Christian José <br><span class='text-[0.85em] font-medium tracking-wide inline-block mt-1'>Torrealba Rondón<span class='text-accent'>.</span></span>",
-        "about_me_title": "Je suis un Ingénieur qui intègre la stratégie produit, l'exécution technique et l'analyse de données.",
-        "about_me": "Ma valeur réside dans ma capacité à faire le pont entre le business et l'ingénierie, en transformant des exigences complexes en solutions fonctionnelles et centrées sur l'utilisateur.",
+        "about_me_title": "Ingénieur qui intègre la stratégie produit, l'exécution technique et l'analyse de données.",
+        "about_me": "J'aide les équipes à connecter les besoins business aux solutions techniques, en traduisant des exigences complexes en produits fluides qui apportent une vraie valeur.",
         "systems_thinking_mindset": "Approche de Pensée Systémique",
         "summary": "Création de produits et de solutions digitales grâce à l'ingénierie des données et au design centré utilisateur.",
-        "hobbies_title": "Loisirs et Langues",
-        "hobbies": "☀️ 🏖️ 🎡 🍦 🎮 🏃🏻 🐶 ✈️ 🗣️",
+        "hobbies_title": "Loisirs",
+        "hobbies": [
+            { "name": "Plein air", "emoji": "☀️" },
+            { "name": "Plage", "emoji": "🏖️" },
+            { "name": "Parcs", "emoji": "🎡" },
+            { "name": "Glace", "emoji": "🍦" },
+            { "name": "Jeux vidéo", "emoji": "🎮" },
+            { "name": "Running", "emoji": "🏃🏻" },
+            { "name": "Animaux", "emoji": "🐶" },
+            { "name": "Voyages", "emoji": "✈️" },
+            { "name": "Langues", "emoji": "🗣️" }
+        ],
         "v_shaped_profile": "Profil en forme de V",
         "v_shaped_explanation": "Combine la spécialisation dans un domaine pertinent avec de vastes connaissances transversales",
-        "language_tip": "Amélioration de la fluidité et de la maîtrise linguistique",
+        "language_tip": "Piloter un apprentissage continu",
         "linkedInURL": "https://www.linkedin.com/in/christianjtr/",
         "githubURL": "https://github.com/christianjtr",
         "avatar_messages": [
@@ -116,8 +126,8 @@
                 "id": "language-3",
                 "emoji": "🥐",
                 "name": "Français",
-                "proficiency": "Niveau situationnel quotidien",
-                "value": 40
+                "proficiency": "Quotidien",
+                "value": 35
             }
         ],
         "expertise": {

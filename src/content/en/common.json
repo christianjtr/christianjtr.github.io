@@ -81,15 +81,25 @@
         "greeting": "Welcome, I am",
         "my_name": "Christian José Torrealba Rondón<span class='text-accent text-3xl'>.</span>",
         "my_name_template": "Christian José <br><span class='text-[0.85em] font-medium tracking-wide inline-block mt-1'>Torrealba Rondón<span class='text-accent'>.</span></span>",
-        "about_me_title": "I am a Engineer who integrates product strategy, technical execution, and data analytics.",
-        "about_me": "My value lies in bridging the gap between business and engineering, transforming complex requirements into functional, user-centric solutions.",
+        "about_me_title": "Engineer who integrates product strategy, technical execution, and data analytics.",
+        "about_me": "I help teams connect business needs with technical solutions, translating complex requirements into products that work seamlessly and deliver real value.",
         "systems_thinking_mindset": "Systems Thinking Mindset",
         "summary": "Building digital products and solutions through data-driven engineering and user-centered design.",
-        "hobbies_title": "Hobbies and Languages",
-        "hobbies": "☀️ 🏖️ 🎡 🍦 🎮 🏃🏻 🐶 ✈️ 🗣️",
+        "hobbies_title": "Hobbies",
+        "hobbies": [
+            { "name": "Outdoor", "emoji": "☀️" },
+            { "name": "Beach", "emoji": "🏖️" },
+            { "name": "Parks", "emoji": "🎡" },
+            { "name": "Gelato", "emoji": "🍦" },
+            { "name": "Gaming", "emoji": "🎮" },
+            { "name": "Running", "emoji": "🏃🏻" },
+            { "name": "Pets", "emoji": "🐶" },
+            { "name": "Travel", "emoji": "✈️" },
+            { "name": "Languages", "emoji": "🗣️" }
+        ],
         "v_shaped_profile": "V-Shaped Profile",
         "v_shaped_explanation": "Combines specialization in one relevant area with broad, cross-functional knowledge",
-        "language_tip": "Refining fluency and proficiency in languages",
+        "language_tip": "Driving continuous learning",
         "linkedInURL": "https://www.linkedin.com/in/christianjtr/",
         "githubURL": "https://github.com/christianjtr",
         "avatar_messages": [
@@ -116,8 +126,8 @@
                 "id": "language-3",
                 "emoji": "🥐",
                 "name": "French",
-                "proficiency": "Everyday Situational",
-                "value": 40
+                "proficiency": "Daily Contexts",
+                "value": 35
             }
         ],
         "expertise": {
