@@ -39,7 +39,7 @@ const { section_about } = (entry?.data as AboutMeData) || {};
         </div>
         <div class="col-span-3 p-12 relative flex justify-center">
             <figure class="avatar-image w-5/6 md:w-full" transition:name="avatar">
-                <Image src={activeAvatar} alt="My image" aria-label="My image" class="md:w-full clip-path-[circle(48.5%)] object-cover"  />
+                <Image src={activeAvatar} alt="My image" aria-label="My image" class="md:w-full"  />
             </figure>
             <div class="chat absolute top-64 left-[-30px] w-1/2 hidden lg:block">
                 <div class="chat-bubble">
@@ -161,8 +161,10 @@ const { section_about } = (entry?.data as AboutMeData) || {};
     }
     
     .avatar-image {
-        border-radius: 50%;
         background: linear-gradient(135deg, var(--color-cobalt-blue) 0%, var(--color-electric-teal) 100%);
+        border-radius: 50%;
+        outline: 7px solid color-mix(in srgb, var(--color-cobalt-blue) 75%, transparent);
+        outline-offset: -3px;
     }
 
     .text-slider-mask {
