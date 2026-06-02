@@ -56,7 +56,7 @@
     {
         "id": "project-agent-orchestrator",
         "section": "experiments",
-        "title": "Tableau de Bord de l'Orchestrateur d'Agents : Télémétrie IA en Temps Réel",
+        "title": "Agent Orchestrator Web App : Tableau de bord de télémétrie IA en temps réel",
         "description": "Un tableau de bord de surveillance fournissant l'état et la télémétrie en temps réel pour des agents IA simulés. L'architecture utilise Vue 3, TypeScript et des constructions Docker multi-étapes optimisées, se concentrant sur les hautes performances et la maintenabilité grâce à des couches de service et des 'composables' découplées.",
         "image": "/src/assets/images/agent-orchestrator.jpg",
         "tags": [
@@ -94,7 +94,7 @@
     {
         "id": "experiment-tv-movie-streaming-like-webapp",
         "section": "experiments",
-        "title": "La base de données de films et séries TV (TMDB)",
+        "title": "Application Web de Films & Séries (Propulsée par TMDB)",
         "description": "Application web full-stack conçue pour tous ceux qui aiment les films et les séries TV. Elle offre un moyen rapide et fluide de parcourir un catalogue complet de titres, vous donnant tous les détails dont vous avez besoin en un seul endroit. Vous pouvez explorer une grande variété de contenu via une interface conviviale.",
         "image": "/src/assets/images/tv_app.jpg",
         "tags": [
@@ -132,7 +132,7 @@
     {
         "id": "experiment-restaurant-browser-app",
         "section": "experiments",
-        "title": "Répertoire de restaurants et leurs menus",
+        "title": "Plateforme Web de Livraison de Repas et Commandes",
         "description": "Application conceptuelle conçue pour aider les utilisateurs à découvrir et se connecter avec des restaurants locaux. Construite comme une application Web Progressive (PWA), elle vous offre la commodité d'une application native sans nécessiter de téléchargement depuis un magasin d'applications. Utilisant l'API de géolocalisation de votre appareil, l'application trouve instantanément les restaurants les plus proches de vous.",
         "image": "/src/assets/images/restaurant_browser.jpg",
         "tags": [
@@ -188,7 +188,7 @@
     {
         "id": "experiment-express-api-boilerplate",
         "section": "experiments",
-        "title": "Express API Boilerplate",
+        "title": "Express API Backend Architecture",
         "description": "Un modèle d'API REST prêt pour la production, développé avec Node.js, Express et MongoDB. Il intègre une conteneurisation avec Docker ainsi qu'une suite robuste de tests automatisés utilisant Jest et Supertest pour les tests unitaires et d'intégration.",
         "image": "/src/assets/images/express_api_boilerplate.jpg",
         "tags": [

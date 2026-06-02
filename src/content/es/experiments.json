@@ -56,7 +56,7 @@
     {
         "id": "project-agent-orchestrator",
         "section": "experiments",
-        "title": "Orquestador de Agentes: Telemetría de IA en Tiempo Real",
+        "title": "Agent Orchestrator Web App: Panel de Telemetría de IA en Tiempo Real",
         "description": "Un panel de monitoreo que proporciona estado y telemetría en tiempo real para agentes de IA simulados. La arquitectura aprovecha Vue 3, TypeScript y Docker multi-etapa optimizadas, centrándose en alto rendimiento y mantenibilidad a través de capas de servicio y composables desacopladas.",
         "image": "/src/assets/images/agent-orchestrator.jpg",
         "tags": [
@@ -94,7 +94,7 @@
     {
         "id": "experiment-tv-movie-streaming-like-webapp",
         "section": "experiments",
-        "title": "La base de datos de películas y series de TV (TMDB)",
+        "title": "Aplicación Web de Películas y Series (Powered by TMDB)",
         "description": "Aplicación web full-stack diseñada para cualquiera que ame las películas y las series de TV. Proporciona una forma fluida y rápida de explorar un catálogo completo de títulos, brindándote todos los detalles que necesitas en un solo lugar. Puedes explorar una amplia variedad de contenido a través de una interfaz fácil de usar.",
         "image": "/src/assets/images/tv_app.jpg",
         "tags": [
@@ -132,7 +132,7 @@
     {
         "id": "experiment-restaurant-browser-app",
         "section": "experiments",
-        "title": "Buscador de restaurantes y sus menús",
+        "title": "Web de Delivery y Pedidos de Comida",
         "description": "Aplicación conceptual diseñada para ayudar a los usuarios a descubrir y conectarse con restaurantes locales. Construida como una aplicación web progresiva (PWA), te brinda la comodidad de una aplicación nativa sin necesidad de descargarla de una tienda de aplicaciones. Utilizando la API de geolocalización de tu dispositivo, la aplicación encuentra instantáneamente los restaurantes más cercanos a ti.",
         "image": "/src/assets/images/restaurant_browser.jpg",
         "tags": [
@@ -188,7 +188,7 @@
     {
         "id": "experiment-express-api-boilerplate",
         "section": "experiments",
-        "title": "Express API Boilerplate",
+        "title": "Express API Backend Architecture",
         "description": "Una plantilla base de API REST lista para producción desarrollada con Node.js, Express y MongoDB. Cuenta con contenedorización mediante Docker y una sólida suite de pruebas automatizadas con Jest y Supertest para pruebas unitarias y de integración.",
         "image": "/src/assets/images/express_api_boilerplate.jpg",
         "tags": [
