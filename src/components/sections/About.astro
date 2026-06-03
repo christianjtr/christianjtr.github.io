@@ -47,8 +47,8 @@ const { section_about } = (entry?.data as AboutMeData) || {};
             </div>
             <p class="text-lg lg:text-xl leading-8 p-2 m-0">{section_about.summary}</p>
         </div>
-        <div class="col-span-3 p-12 relative flex justify-center z-10">
-            <details class="absolute top-4 right-4 z-30 flex flex-col items-end text-right group/hobbies dropdown dropdown-end mobile-hobbies">
+        <div class="col-span-3 p-14 relative flex justify-center z-1">
+            <details class="absolute top-0.5 right-5 md:top-4 md:right-4 z-1 flex flex-col items-end text-right group/hobbies dropdown dropdown-end mobile-hobbies">
                 <summary class="btn btn-sm font-mono uppercase tracking-wider bg-base-200/80 hover:bg-primary/20 hover:border-primary hover:text-primary hover:font-bold backdrop-blur-sm border text-sm border-neutral-300 text-base-content/70 px-3.5 py-5 rounded-full cursor-pointer select-none transition-all duration-200 flex items-center gap-2 shadow-md list-none">
                     <span class="text-sm">🧩</span>
                     <span>{section_about.hobbies_title}</span>
@@ -64,7 +64,7 @@ const { section_about } = (entry?.data as AboutMeData) || {};
             <figure class="avatar-image w-5/6 md:w-full" transition:name="avatar">
                 <Image src={activeAvatar} alt="My image" aria-label="My image" class="md:w-full"  />
             </figure>
-            <div class="absolute top-72 left-4 lg:flex z-20 filter drop-shadow-lg w-max max-w-[280px]">
+            <div class="absolute top-50 md:top-72 left-4 lg:flex z-1 filter drop-shadow-lg w-max max-w-[280px]">
                 <div class="bg-base-100/90 border border-primary/30 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-xl flex items-center gap-2 w-full overflow-hidden">
                     <span class="relative flex h-2 w-2 shrink-0">
                         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
