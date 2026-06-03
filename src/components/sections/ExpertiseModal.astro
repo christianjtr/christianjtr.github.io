@@ -1,4 +1,9 @@
 ---
+import { getEntry } from 'astro:content';
+import type { ContentDataEntryType } from '@app-types/Content';
+import type { AboutMeData } from '@schemas/AboutMeSchema';
+import { CONTENT } from '@app-types/Content';
+
 interface ExpertiseSubject {
     name: string;
     tools: string[];
@@ -9,7 +14,11 @@ interface Props {
     modalId: string;
 }
 
+const { lang } = Astro.params;
 const { subject, modalId } = Astro.props;
+
+const commonData = await getEntry(lang as ContentDataEntryType, `${lang}/${CONTENT.COMMON}`);
+const { common } = (commonData?.data as AboutMeData) || {};
 ---
 
 <dialog id={modalId} class="modal modal-middle px-5 md:px-0" onclick="event.stopPropagation()">
@@ -17,7 +26,7 @@ const { subject, modalId } = Astro.props;
         
         <div class="expertise-modal-header">
             <div>
-                <span class="expertise-modal-label">Integrated Stack</span>
+                <span class="expertise-modal-label">{common.stack}</span>
                 <h3 class="expertise-modal-title">{subject.name}</h3>
             </div>
             <form method="dialog">

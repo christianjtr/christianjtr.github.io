@@ -39,7 +39,8 @@ const CommonTextSchema = z.object({
     degrees: z.string(),
     filter_experience: z.string(),
     laboratory: z.string(),
-    project_result_title: z.string()
+    project_result_title: z.string(),
+    stack: z.string()
 
 });
 

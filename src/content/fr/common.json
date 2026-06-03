@@ -26,7 +26,8 @@
         "degrees": "Diplômes",
         "filter_experience": "Filtrar l'Expérience",
         "laboratory": "Laboratoire",
-        "project_result_title": "Résultats Clés"
+        "project_result_title": "Résultats Clés",
+        "stack": "Stack technique"
     },
     "open_graph": {
         "title": "Christian José Torrealba Rondón",

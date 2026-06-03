@@ -26,7 +26,8 @@
         "degrees": "Degrees",
         "filter_experience": "Filter Experience",
         "laboratory": "Laboratory",
-        "project_result_title": "Key Outcomes"
+        "project_result_title": "Key Outcomes",
+        "stack": "Tech Stack"
     },
     "open_graph": {
         "title": "Christian José Torrealba Rondón",
