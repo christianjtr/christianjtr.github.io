@@ -264,6 +264,10 @@
             }
         ]
     },
+    "section_skills": {
+        "title": "Work Ecosystem",
+        "subtitle": "How I integrate my skills and tools into real-world projects."
+    },
     "section_credentials": {
         "title": "Credentials and Certifications",
         "subtitle": "Explore some of my verified credentials and certifications I can bring to the table"

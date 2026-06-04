@@ -72,6 +72,7 @@ const FooterSchema = z.object({
     assets: z.string(),
 });
 
+const SectionSkillsSchema = BaseSectionSchema.extend({});
 const SectionCredentialSchema = BaseSectionSchema.extend({});
 const SectionProjectsSchema = BaseSectionSchema.extend({});
 const SectionExperimentsSchema = BaseSectionSchema.extend({});
@@ -136,6 +137,7 @@ export const AboutMeSchema = z.object({
     footer: FooterSchema,
     section_about: SectionAboutSchema,
     section_credentials: SectionCredentialSchema,
+    section_skills: SectionSkillsSchema,
     section_projects: SectionProjectsSchema,
     section_experiments: SectionExperimentsSchema,
     section_experiences: SectionExperiencesSchema,
