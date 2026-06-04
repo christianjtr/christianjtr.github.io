@@ -20,12 +20,13 @@ export function getStaticPaths() {
 
 const { lang } = Astro.params;
 const pageTitle = "Christian José Torrealba Rondón";
+const rootTheme = { theme: 'light' };
 
 const entry = await getEntry(lang as ContentDataEntryType, `${lang}/${CONTENT.COMMON}`);
 const { header } = (entry?.data as AboutMeData) || {};
 ---
 
-<html lang={lang} data-theme="light">
+<html lang={lang} data-theme="light" {...rootTheme}>
     <head>
         <meta charset="utf-8" />
         <link rel="icon" type="image/svg+xml" href="/favicon.ico" />

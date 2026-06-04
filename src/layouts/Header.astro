@@ -76,7 +76,7 @@ const { header } = (entry?.data as AboutMeData) || {};
         @apply container mx-auto w-full flex items-center justify-between h-20 px-3 md:px-14;
     }
 
-    html[data-theme="dark"] header {
+    html[theme="dark"] header {
         @apply bg-neutral-800/70;
     }
 
@@ -105,6 +105,7 @@ const { header } = (entry?.data as AboutMeData) || {};
             : getSystemPreference();
 
         root.setAttribute('data-theme', initialTheme);
+        root.setAttribute('theme', initialTheme);
         themeControllerSwitch.checked = (initialTheme === "dark");
     })();
     
@@ -115,6 +116,7 @@ const { header } = (entry?.data as AboutMeData) || {};
             themeControllerSwitch.addEventListener("change", () => {
                 const selectedTheme = themeControllerSwitch.checked ? "dark" : "light";
                 rootElement.setAttribute('data-theme', selectedTheme);
+                rootElement.setAttribute('theme', selectedTheme);
                 localStorage.setItem(STORAGE_KEY, selectedTheme);
             });
         }
