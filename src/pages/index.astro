@@ -44,13 +44,11 @@ const LOCALE_STORAGE_KEY = 'user-locale-preference';
   <body>
     <script is:inline define:vars={{ locales, defaultLocale, LOCALE_STORAGE_KEY }}>
       (() => {
-        // 1. Check localStorage for a manually saved preference
         const getStoredLocale = () => {
           try {
             const stored = localStorage.getItem(LOCALE_STORAGE_KEY);
             return stored && locales.includes(stored) ? stored : null;
           } catch {
-            // localStorage may be unavailable (private browsing, etc.)
             return null;
           }
         };
@@ -60,26 +58,20 @@ const LOCALE_STORAGE_KEY = 'user-locale-preference';
           window.location.replace(`/${storedLocale}/`);
           return;
         }
-
-        // 2. Detect from navigator.languages (preferred) or navigator.language (fallback)
+        
         const browserLangs = navigator.languages?.length
           ? [...navigator.languages]
           : [navigator.language || 'en'];
 
-        // 3. Find the first supported locale from browser preferences
         const targetLocale = browserLangs
           .map(lang => lang?.split(/[-_]/)?.[0]?.toLowerCase())
           .find(baseCode => baseCode && locales.includes(baseCode))
           ?? defaultLocale;
 
-        // 4. Save detected locale for future visits
-        try {
+          try {
           localStorage.setItem(LOCALE_STORAGE_KEY, targetLocale);
         } catch {
-          // localStorage may be unavailable
         }
-
-        // 5. Redirect to the resolved locale
         window.location.replace(`/${targetLocale}/`);
       })();
     </script>

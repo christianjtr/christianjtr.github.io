@@ -5,7 +5,7 @@ import type { Experience } from "@schemas/ExperienceSchema";
 import type { Study } from "@schemas/StudySchema";
 import type { AboutMeData } from "@schemas/AboutMeSchema";
 import { CONTENT } from "@app-types/Content";
-import { Section, AsyncImage, BadgeList } from "../";
+import { Section, AsyncImage, BadgeList, VerticalSpacer } from "../";
 import Logo from "@assets/svg/background.svg";
 import BuildingIcon from "@assets/svg/building.svg";
 import AcademicCapIcon from "@assets/svg/academic_cap.svg";
@@ -174,7 +174,7 @@ const backgroundItems: Background[] = [
                                                     <div class="flex items-start justify-between gap-4 w-full">
                                                         <div class="space-y-0.5">
                                                             <span class="font-extrabold text-md block text-primary">{item.organization}</span>
-                                                            <span class="text-xs font-semibold block leading-tight">{item.title}</span>
+                                                            <span class="text-sm font-semibold block leading-tight">{item.title}</span>
                                                         </div>
                                                         <span class="badge badge-ghost badge-sm font-sans font-bold uppercase text-[10px] tracking-wider px-2 py-1 h-auto animate-pulse shrink-0 select-none">
                                                             {common.ongoing}
@@ -188,7 +188,7 @@ const backgroundItems: Background[] = [
                                             ) : (
                                                 <div class="flex flex-col gap-1 background-item pl-3 py-0.5 transition-colors duration-200 w-full relative">
                                                     <span class="font-extrabold">{item.organization}</span>
-                                                    <span class="text-xs font-medium block leading-tight">{item.title}</span>
+                                                    <span class="text-sm font-medium block leading-tight">{item.title}</span>
                                                     
                                                     <div class="flex items-center justify-between text-xs font-sans pt-0.5 w-full select-none">
                                                         <span class="text-neutral-400">{item.category}</span>
@@ -225,6 +225,7 @@ const backgroundItems: Background[] = [
         </div>
     </div>
     </Section>
+    <VerticalSpacer />
 </div>
 
 <style>

@@ -1,5 +1,5 @@
 ---
-import '@fontsource/lato';
+import '@fontsource/lato/index.css';
 import { getEntry } from 'astro:content';
 
 import { contentDataEntries, CONTENT } from '@app-types/Content';
@@ -71,7 +71,7 @@ const { header } = (entry?.data as AboutMeData) || {};
     }
 
     .scroll-top-button {
-        @apply btn btn-xl btn-circle text-4xl border-0 hidden fixed justify-center items-center w-16 h-16 bottom-16 right-5 z-1 rounded-full;
+        @apply btn btn-xl btn-circle text-4xl border-0 hidden fixed justify-center items-center w-16 h-16 bottom-16 right-5 z-10 rounded-full;
         opacity: 0.8;
         background: var(--color-vibrant-pink);
     }
