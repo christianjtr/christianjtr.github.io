@@ -1,0 +1,207 @@
+---
+import { getEntry } from 'astro:content';
+import type { ContentDataEntryType } from '@app-types/Content';
+import type { AboutMeData } from '@schemas/AboutMeSchema';
+import { CONTENT } from '@app-types/Content';
+import Logo from '@assets/svg/people.svg';
+import { Section, VerticalSpacer } from "../";
+
+const { lang } = Astro.params;
+const commonData = await getEntry(lang as ContentDataEntryType, `${lang}/${CONTENT.COMMON}`);
+const { section_skills, section_about, common } = (commonData?.data as AboutMeData) || {};
+
+type StyleItem = { text: string; bg: string; };
+
+const stylesMap: Record<string, StyleItem> = {
+  product: { text: 'text-cyan-400', bg: 'bg-cyan-500/40' },
+  coding: { text: 'text-fuchsia-400', bg: 'bg-fuchsia-500/40' },
+  data: { text: 'text-emerald-400', bg: 'bg-emerald-500/40' },
+  ai: { text: 'text-violet-400', bg: 'bg-violet-500/40' }
+};
+
+const skills = section_about.expertise.subjects.map((subject) => {
+  const key = subject.category.toLowerCase();
+  const config = stylesMap[key] || stylesMap.coding;
+  return {
+    id: key,
+    name: subject.name,
+    category: subject.category.toUpperCase(),
+    topics: subject.topics,
+    ...config
+  };
+});
+---
+
+<div class="bg-base-300 py-10">
+  <Section headingTitle={section_skills.title} subtitle={section_skills.subtitle} class="container mx-auto px-3 lg:px-10">
+    <Logo slot="beforeHeading" width={90} height={90} />
+    <VerticalSpacer />
+    
+    <div class="group-main w-full mx-auto flex flex-col md:flex-row gap-6 md:gap-4 items-center md:items-stretch relative">
+      <div class="w-full md:w-1/5 flex items-center justify-center md:justify-start z-10">
+        <div class="vshape-box w-full p-4 rounded-2xl text-center max-w-[150px]">
+          <h5 class="text-sm font-mono uppercase leading-normal tracking-widest font-bold text-balance">
+            {section_about.v_shaped_profile}
+          </h5>
+        </div>
+      </div>
+      <svg class="absolute inset-0 w-full h-full pointer-events-none z-0 hidden md:block" viewBox="0 0 896 320" preserveAspectRatio="none">
+        <g fill="none" class="graph-lines stroke-[2px] transition-all duration-300">
+          <path d="M 120,160 L 140,160 C 165,160 165,45 225,45" class="line-product"></path>
+          <path d="M 120,160 L 140,160 C 165,160 165,120 225,120" class="line-coding"></path>
+          <path d="M 120,160 L 140,160 C 165,160 165,195 225,195" class="line-data"></path>
+          <path d="M 120,160 L 140,160 C 165,160 165,275 225,275" class="line-ai"></path>
+        </g>
+      </svg>
+      <div class="w-full md:w-4/5 flex flex-col md:flex-row gap-6 items-stretch relative">
+        <div class="w-full md:w-2/4 flex flex-col gap-6 justify-center z-10">
+          {skills.map((skill) => (
+            <div class={`pillar-card pilar-${skill.id} px-5 py-4 rounded-2xl cursor-pointer transition-all duration-300 hover:scale-[1.01] flex flex-col gap-3 relative`}>
+              <div class="flex items-center justify-between w-full">
+                <div class="flex flex-col text-left">
+                  <span class="text-xs font-bold uppercase tracking-widest text-slate-400">{skill.category}</span>
+                  <span class="pillar-name text-sm sm:text-base font-extrabold transition-colors">{skill.name}</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div class="ghost-container w-full md:w-[44%] z-10 relative">
+          <div class="placeholder-text transition-opacity duration-200 absolute inset-0 m-auto p-4 flex flex-col justify-center items-center">
+            <div class="w-8 h-8 rounded-full flex items-center justify-center mb-3 placeholder-icon">
+              <span class="text-lg font-mono">⇄</span>
+            </div>
+            <span class="text-xs font-mono uppercase tracking-widest block mb-2">{common.key_areas}</span>
+            <p class="text-sm leading-relaxed font-medium">
+              {common.interact_with}
+            </p>
+          </div>
+          {skills.map((skill) => (
+            <div class={`topics-list topics-${skill.id}`}>
+              {skill.topics.map((topic) => (
+                <div class={`topic-pill topic-pill--${skill.id}`}>
+                  <span>{topic}</span>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+    <VerticalSpacer />
+  </Section>
+</div>
+
+<style>
+  @reference "@styles/global.css";
+
+  .vshape-box, .pillar-card { @apply bg-base-100 border border-slate-400 text-slate-700; }
+  .graph-lines { @apply stroke-slate-500; }
+  .pillar-name { @apply text-slate-800; }
+  
+  .ghost-container {
+    @apply border border-dashed border-slate-400 rounded-2xl p-5 flex flex-col justify-center items-center text-center 
+           min-h-[260px] md:min-h-auto overflow-hidden mt-4 md:mt-0 bg-slate-100/30;
+  }
+
+  .placeholder-icon { @apply bg-slate-700 text-white; }
+  .placeholder-text { @apply text-slate-400; }
+
+  .topics-list {
+    @apply hidden flex-col gap-2.5 w-full h-full justify-center absolute inset-0 p-5 bg-slate-700 z-1 
+           transition-all duration-300 opacity-0;
+  }
+
+  .topic-pill {
+    @apply px-4 py-3 rounded-xl border text-left shadow-sm scale-95 
+           animate-[fadeIn_0.2s_ease-out_forwards] tracking-wide;
+    border-color: rgba(148, 163, 184, 0.35);
+    background: rgba(15, 23, 42, 0.85);
+  }
+
+  :global(html[theme="dark"]) .vshape-box { @apply text-white bg-slate-950; }
+  :global(html[theme="dark"]) .graph-lines { @apply stroke-slate-400; }
+  :global(html[theme="dark"]) .pillar-card { @apply bg-neutral-900 border-neutral-600 text-slate-200; }
+  :global(html[theme="dark"]) .pillar-name { @apply text-slate-200; }
+  :global(html[theme="dark"]) .ghost-container { @apply border-neutral-500 bg-neutral-900; }
+  :global(html[theme="dark"]) .placeholder-text { @apply text-slate-500; }
+  :global(html[theme="dark"]) .topics-list { @apply bg-slate-950; }
+  :global(html[theme="dark"]) .topic-pill {
+    border-color: rgba(148, 163, 184, 0.35);
+    background: rgba(15, 23, 42, 0.85);
+  }
+
+  .group-main:has(.pilar-product:hover) .topics-product,
+  .group-main:has(.pilar-coding:hover) .topics-coding,
+  .group-main:has(.pilar-data:hover) .topics-data,
+  .group-main:has(.pilar-ai:hover) .topics-ai {
+    display: flex !important;
+    opacity: 1 !important;
+  }
+
+  .group-main:has(.pillar-card:hover) .placeholder-text {
+    opacity: 0 !important;
+    pointer-events: none;
+  }
+
+  .group-main:has(.pillar-card:hover) .graph-lines path {
+    stroke-width: 2px !important;
+    transition: all 0.3s ease;
+  }
+
+  .group-main:has(.pilar-product:hover) .line-product,
+  .group-main:has(.pilar-coding:hover) .line-coding,
+  .group-main:has(.pilar-data:hover) .line-data,
+  .group-main:has(.pilar-ai:hover) .line-ai {
+    opacity: 1 !important;
+    stroke-width: 4px !important;
+    stroke-dasharray: 12 6 !important;
+    animation: laserStream 1s linear infinite !important;
+    filter: drop-shadow(0 0 4px currentColor) 
+            drop-shadow(0 0 8px currentColor) 
+            drop-shadow(0 0 12px currentColor) !important;
+  }
+
+  .group-main:has(.pilar-product:hover) .line-product { stroke: #22d3ee !important; }
+  .group-main:has(.pilar-coding:hover) .line-coding { stroke: #f472b6 !important; }
+  .group-main:has(.pilar-data:hover) .line-data { stroke: #34d399 !important; }
+  .group-main:has(.pilar-ai:hover) .line-ai { stroke: #a78bfa !important; }
+
+  .pilar-product:hover, .pilar-coding:hover, .pilar-data:hover, .pilar-ai:hover {
+    @apply bg-slate-700;
+  }
+
+  html[theme="dark"] .pilar-product:hover, html[theme="dark"] .pilar-coding:hover, html[theme="dark"] .pilar-data:hover, html[theme="dark"] .pilar-ai:hover {
+    @apply bg-slate-950;
+  }
+
+  .pilar-product:hover { border-color: #22d3ee !important; box-shadow: 0 0 20px rgba(34, 211, 238, 0.4) !important; }
+  .pilar-coding:hover { border-color: #f472b6 !important; box-shadow: 0 0 20px rgba(244, 114, 182, 0.4) !important; }
+  .pilar-data:hover { border-color: #34d399 !important; box-shadow: 0 0 20px rgba(52, 211, 153, 0.4) !important; }
+  .pilar-ai:hover { border-color: #a78bfa !important; box-shadow: 0 0 20px rgba(167, 139, 250, 0.4) !important; }
+
+  .pilar-product:hover .pillar-name { color: #22d3ee !important; }
+  .pilar-coding:hover .pillar-name { color: #f472b6 !important; }
+  .pilar-data:hover .pillar-name { color: #34d399 !important; }
+  .pilar-ai:hover .pillar-name { color: #a78bfa !important; }
+
+  .topic-pill--product { color: white; border-color: rgba(6, 182, 212, 1); background: rgba(6, 182, 212, 0.2); }
+  .topic-pill--coding { color: white; border-color: rgba(219, 39, 119, 1); background: rgba(219, 39, 119, 0.2); }
+  .topic-pill--data { color: white; border-color: rgba(5, 150, 105, 1); background: rgba(5, 150, 105, 0.2); }
+  .topic-pill--ai { color: white; border-color: rgba(124, 58, 237, 1); background: rgba(124, 58, 237, 0.2); }
+
+  :global(html[theme="dark"]) .topic-pill--product { color: #22d3ee; border-color: rgba(34, 211, 238, 0.5); background: rgba(34, 211, 238, 0.15); }
+  :global(html[theme="dark"]) .topic-pill--coding { color: #f472b6; border-color: rgba(244, 114, 182, 0.5); background: rgba(244, 114, 182, 0.15); }
+  :global(html[theme="dark"]) .topic-pill--data { color: #34d399; border-color: rgba(52, 211, 153, 0.5); background: rgba(52, 211, 153, 0.15); }
+  :global(html[theme="dark"]) .topic-pill--ai { color: #a78bfa; border-color: rgba(167, 139, 250, 0.5); background: rgba(167, 139, 250, 0.15); }
+
+  /* ==================== ANIMATIONS ==================== */
+  @keyframes fadeIn {
+    from { transform: translateY(4px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  @keyframes laserStream {
+    to { stroke-dashoffset: -36; }
+  }
+</style>

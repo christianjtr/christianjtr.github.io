@@ -23,6 +23,7 @@ const CommonTextSchema = z.object({
     countries_worked_in: z.string(),
     companies_worked_for: z.string(),
     key_areas: z.string(),
+    interact_with: z.string(),
     key_contribuitions: z.string(),
     ongoing: z.string(),
     cannot_load_content: z.string(),

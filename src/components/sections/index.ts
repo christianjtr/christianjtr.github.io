@@ -4,3 +4,4 @@ export { default as Experiments } from './Experiments.astro';
 export { default as Projects } from './Projects.astro';
 export { default as ProfessionalExperiences } from './ProfessionalExperiences.astro';
 export { default as OpenGraph } from './OpenGraph.astro';
+export { default as SkillSet } from './SkillSet.astro';

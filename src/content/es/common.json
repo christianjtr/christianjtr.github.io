@@ -9,8 +9,9 @@
         "view_more": "Ver más",
         "countries_worked_in": "Países en lo que he trabajado",
         "companies_worked_for": "Empresas en las que trabajé",
-        "key_areas": "Key areas",
-        "key_contribuitions": "Key contributions",
+        "key_areas": "Áreas clave",
+        "interact_with": "Interactúa con los nodos para proyectar las áreas clave",
+        "key_contribuitions": "Contribuciones clave",
         "ongoing": "Presente",
         "cannot_load_content": "Contenido no puede ser cargado",
         "author": "Autor",
@@ -139,10 +140,10 @@
                     "category": "product",
                     "description": "Alineación de objetivos de negocio con la ejecución técnica para acelerar la entrega.",
                     "topics": [
-                        "Agile Leadership and Mentorship",
-                        "Product Ownership and Ideation",
-                        "Tech Research",
-                        "Digital Marketing"
+                        "Liderazgo ágil y mentoría",
+                        "Product Ownership e ideación",
+                        "Investigación tecnológica",
+                        "Marketing digital"
                     ],
                     "tools": [
                         "Atlassian Suite (Jira, Confluence)",
@@ -167,10 +168,10 @@
                     "category": "coding",
                     "description": "Entrega de aplicaciones web junto con sistemas de diseño y monitoreo de infraestructuras cloud.",
                     "topics": [
-                        "Web apps and Design Systems",
-                        "APIs and service integration",
-                        "Testing and automation",
-                        "Cloud environments (AWS)"
+                        "Aplicaciones web y sistemas de diseño",
+                        "APIs e integración de servicios",
+                        "Pruebas y automatización",
+                        "Entornos Cloud (AWS)"
                     ],
                     "tools": [
                         "TypeScript",
@@ -199,10 +200,10 @@
                     "category": "data",
                     "description": "Diseño de arquitectura de datos y analítica para la toma de decisiones.",
                     "topics": [
-                        "Analytical Skills",
-                        "ETL/DWH Modeling",
-                        "Data Cleansing and Visualization",
-                        "Dashboards and Reporting"
+                        "Habilidades analíticas",
+                        "Modelado de ETL/DWH",
+                        "Limpieza y visualización de datos",
+                        "Cuadros de mando y reportes"
                     ],
                     "tools": [
                         "ETL/DWH",
@@ -221,10 +222,10 @@
                     "category": "ai",
                     "description": "Optimización de la entrega de software mediante flujos automatizados e integración de IA.",
                     "topics": [
-                        "Agentic Systems",
-                        "LLM Integration",
-                        "AI Workflows",
-                        "Process Automation"
+                        "Sistemas agénticos",
+                        "Integración de LLMs",
+                        "Flujos de trabajo de IA",
+                        "Automatización de procesos"
                     ],
                     "tools": [
                         "Python",
