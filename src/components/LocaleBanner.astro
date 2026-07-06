@@ -84,73 +84,57 @@ const languageMap = Object.fromEntries(
 </style>
 
 <script is:inline define:vars={{ currentLocale, languageMap }}>
-    (function () {
-        var LOCALE_STORAGE_KEY = 'user-locale-preference';
-        var BANNER_DISMISSED_KEY = 'locale-banner-dismissed';
+    (() => {
+        const LOCALE_STORAGE_KEY = 'user-locale-preference';
+        const BANNER_DISMISSED_KEY = 'locale-banner-dismissed';
 
-        var banner = document.getElementById('locale-banner');
-        var langNameEl = document.getElementById('locale-banner-lang-name');
-        var switchBtn = document.getElementById('locale-banner-switch');
-        var dismissBtn = document.getElementById('locale-banner-dismiss');
+        const banner = document.getElementById('locale-banner');
+        const langNameEl = document.getElementById('locale-banner-lang-name');
+        const switchBtn = document.getElementById('locale-banner-switch');
+        const dismissBtn = document.getElementById('locale-banner-dismiss');
 
         if (!banner || !langNameEl || !switchBtn || !dismissBtn) return;
 
-        // 1. Don't show if user has a stored preference (they already chose intentionally)
-        try {
-            var storedPref = localStorage.getItem(LOCALE_STORAGE_KEY);
-            if (storedPref) return;
-        } catch (_) {}
+        const safeGet = (k) => {
+            try { return localStorage.getItem(k); } catch { return null; }
+        };
+        const safeSet = (k, v) => {
+            try { localStorage.setItem(k, v); } catch { /* ignore */ }
+        };
 
-        // 2. Don't show if previously dismissed
-        try {
-            if (localStorage.getItem(BANNER_DISMISSED_KEY) === 'true') return;
-        } catch (_) {}
+        if (safeGet(LOCALE_STORAGE_KEY)) return;
+        if (safeGet(BANNER_DISMISSED_KEY) === 'true') return;
 
-        // 3. Detect browser locale
-        var browserLangs = (navigator.languages && navigator.languages.length)
+        const browserLangs = (Array.isArray(navigator.languages) && navigator.languages.length)
             ? navigator.languages
             : [navigator.language || ''];
 
-        var detectedLocale = null;
-        for (var i = 0; i < browserLangs.length; i++) {
-            var lang = browserLangs[i];
-            if (!lang) continue;
-            var baseCode = lang.split(/[-_]/)[0].toLowerCase();
-            if (baseCode && languageMap[baseCode]) {
+        let detectedLocale = null;
+        for (const l of browserLangs) {
+            if (!l) continue;
+            const baseCode = l.split(/[-_]/)[0].toLowerCase();
+            if (baseCode && languageMap?.[baseCode]) {
                 detectedLocale = baseCode;
                 break;
             }
         }
 
-        // 4. Don't show if detected locale matches current page or no match found
         if (!detectedLocale || detectedLocale === currentLocale) return;
 
-        // 5. Show the banner
-        var suggestedName = languageMap[detectedLocale];
-        langNameEl.textContent = ' ' + suggestedName;
-        switchBtn.setAttribute('href', '/' + detectedLocale + '/');
+        const suggestedName = languageMap[detectedLocale];
+        langNameEl.textContent = ` ${suggestedName}`;
+        switchBtn.setAttribute('href', `/${detectedLocale}/`);
 
         banner.removeAttribute('hidden');
-        // Trigger reflow before adding visible state for animation
         banner.offsetHeight;
         banner.setAttribute('data-visible', 'true');
 
-        // Handle "Switch" click — save preference
-        switchBtn.addEventListener('click', function () {
-            try {
-                localStorage.setItem(LOCALE_STORAGE_KEY, detectedLocale);
-            } catch (_) {}
-        });
+        switchBtn.addEventListener('click', () => safeSet(LOCALE_STORAGE_KEY, detectedLocale));
 
-        // Handle dismiss
-        dismissBtn.addEventListener('click', function () {
+        dismissBtn.addEventListener('click', () => {
             banner.setAttribute('data-visible', 'false');
-            try {
-                localStorage.setItem(BANNER_DISMISSED_KEY, 'true');
-            } catch (_) {}
-            setTimeout(function () {
-                banner.setAttribute('hidden', '');
-            }, 300);
+            safeSet(BANNER_DISMISSED_KEY, 'true');
+            setTimeout(() => banner.setAttribute('hidden', ''), 300);
         });
     })();
 </script>
