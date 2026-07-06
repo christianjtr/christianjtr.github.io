@@ -6,6 +6,7 @@ import type { ContentDataEntryType } from '@app-types/Content';
 import type { AboutMeData } from '@schemas/AboutMeSchema';
 import { CONTENT } from '@app-types/Content';
 import { VerticalSpacer } from "../";
+import AIContextButton from '@components/AIContextButton.astro';
 import ExpertiseFeatureGrid from './ExpertiseFeatureGrid.astro';
 import WaveAnimation from "@assets/gifs/wave.gif";
 import CrystalBallAnimation from "@assets/gifs/crystal_ball.gif";
@@ -45,7 +46,8 @@ const { section_about } = (entry?.data as AboutMeData) || {};
             <div class="w-2/3 h-px bg-linear-to-r from-accent via-base-content/20 to-transparent my-4 relative">
                 <span class="absolute -top-1 left-1/3 w-2 h-2 rounded-full bg-accent animate-pulse"></span>
             </div>
-            <p class="text-lg lg:text-xl leading-8 p-2 m-0">{section_about.summary}</p>
+            <p class="text-lg lg:text-xl leading-8 p-2 mb-5">{section_about.summary}</p>
+            <AIContextButton />
         </div>
         <div class="col-span-3 p-14 relative flex justify-center z-1">
             <details class="absolute top-0.5 right-5 md:top-4 md:right-4 z-1 flex flex-col items-end text-right group/hobbies dropdown dropdown-end mobile-hobbies">

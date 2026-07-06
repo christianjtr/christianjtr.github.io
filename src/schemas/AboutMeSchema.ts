@@ -41,8 +41,10 @@ const CommonTextSchema = z.object({
     filter_experience: z.string(),
     laboratory: z.string(),
     project_result_title: z.string(),
-    stack: z.string()
-
+    stack: z.string(),
+    ai_button_text: z.string(),
+    ai_copied_text: z.string(),
+    ai_instruction: z.string(),
 });
 
 const OpenGraphSchema = z.object({

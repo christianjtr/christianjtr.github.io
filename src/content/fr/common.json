@@ -28,7 +28,10 @@
         "filter_experience": "Filtrar l'Expérience",
         "laboratory": "Laboratoire",
         "project_result_title": "Résultats Clés",
-        "stack": "Stack technique"
+        "stack": "Stack technique",
+        "ai_button_text": "Envoyer à l'IA",
+        "ai_copied_text": "Prêt à coller",
+        "ai_instruction": "Traite et réponds en français."
     },
     "open_graph": {
         "title": "Christian José Torrealba Rondón",
