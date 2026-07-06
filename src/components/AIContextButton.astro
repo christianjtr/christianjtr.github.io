@@ -26,13 +26,13 @@ const promptInstruction = getProfilePrompt(llmsTextRaw, common.ai_instruction);
 <button
   id="ai-context-button"
   type="button"
-  class="inline-flex items-center justify-between px-5 py-3 rounded-2xl text-left border bg-base-200 border-base-300 text-base-content hover:bg-base-200 hover:border-base-300 cursor-pointer transition-all duration-200 min-w-56 h-auto group"
+  class="inline-flex items-center justify-between p-3 rounded-2xl text-left border bg-base-200 border-base-300 text-base-content hover:bg-base-200 hover:border-base-300 cursor-pointer transition-all duration-200 min-w-56 h-auto group"
   data-lang={lang}
   data-copied-text={copiedText}
   aria-label={buttonText}
 >
-  <span class="flex flex-col items-start gap-0.5">
-    <span class="text-[10px] font-bold uppercase tracking-[0.35em] text-info group-hover:text-primary transition-colors duration-200">
+  <span class="flex flex-col items-start">
+    <span class="text-[11px] font-bold uppercase tracking-[0.35em] text-primary group-hover:text-primary transition-colors duration-200">
       AI Summary
     </span>
     <span class="text-sm font-semibold" id="ai-button-text">
@@ -40,7 +40,7 @@ const promptInstruction = getProfilePrompt(llmsTextRaw, common.ai_instruction);
     </span>
   </span>
 
-  <span class="relative flex items-center justify-center shrink-0 w-8 h-8" aria-hidden="true">
+  <span class="relative flex items-center justify-center shrink-0 w-5 h-5" aria-hidden="true">
     <span class="ai-voice-bars absolute inset-0 flex items-center justify-center gap-1 transition-opacity duration-200"></span>
     <svg xmlns="http://w3.org" viewBox="0 0 24 24" class="ai-check-icon hidden absolute w-5 h-5 text-current">
       <path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
@@ -58,47 +58,70 @@ const promptInstruction = getProfilePrompt(llmsTextRaw, common.ai_instruction);
     let timeoutId = null;
 
     button.addEventListener('click', async () => {
+      if (!promptInstruction) return;
+      
       try {
-        if (!promptInstruction) return;
-        
         await navigator.clipboard.writeText(promptInstruction);
-        
-        if (timeoutId) clearTimeout(timeoutId);
-        
-        button.classList.add('copied');
-        
-        button.setAttribute('aria-label', copiedText);
-        labelSpan.textContent = copiedText;
-
-        timeoutId = window.setTimeout(() => {
-          button.classList.remove('copied');
-          
-          button.setAttribute('aria-label', originalLabel);
-          labelSpan.textContent = originalLabel;
-        }, 2200);
       } catch (error) {
-        console.error('Error copying AI prompt:', error);
+        const input = document.createElement("textarea");
+        input.value = promptInstruction;
+        input.style.position = "fixed";
+        input.style.opacity = "0";
+        document.body.appendChild(input);
+        input.select();
+        document.execCommand('copy');
+        document.body.removeChild(input);
       }
+      
+      if (timeoutId) clearTimeout(timeoutId);
+      
+      button.classList.add('copied');
+      button.setAttribute('aria-label', copiedText);
+      labelSpan.textContent = copiedText;
+
+      timeoutId = window.setTimeout(() => {
+        button.classList.remove('copied');
+        button.setAttribute('aria-label', originalLabel);
+        labelSpan.textContent = originalLabel;
+      }, 2200);
     });
   }
 </script>
 
-<style is:global>
+<style>
   @reference "@styles/global.css";
-
-  .ai-voice-bars::before,
-  .ai-voice-bars::after {
+  .ai-voice-bars::before, .ai-voice-bars::after {
     content: '';
-    @apply inline-block w-1 bg-current rounded-full animate-[ai-wave_1s_ease-in-out_infinite];
+    display: inline-block;
+    width: 3px;
+    background-color: currentColor;
+    border-radius: 9999px;
+    animation: ai-wave 1s ease-in-out infinite;
   }
-  .ai-voice-bars::before { @apply h-2.5 [animation-delay:0.05s]; }
-  .ai-voice-bars::after { @apply h-3.5 [animation-delay:0.2s]; }
+  
+  .ai-voice-bars::before { 
+    height: 10px; 
+    animation-delay: 0.05s; 
+  }
+  
+  .ai-voice-bars::after { 
+    height: 15px; 
+    animation-delay: 0.2s; 
+  }
+
+  button:hover {
+    @apply border-primary;
+  }
+  
+  html[data-theme="dark"] button:hover {
+    @apply border-accent;
+  }
 
   #ai-context-button.copied .ai-voice-bars { @apply opacity-0 pointer-events-none; }
   #ai-context-button.copied .ai-check-icon { @apply block; }
-
+  
   @keyframes ai-wave {
     0%, 100% { transform: scaleY(0.6); opacity: 0.7; }
-    50% { transform: scaleY(1); opacity: 1; }
+    50% { transform: scaleY(1.1); opacity: 1; }
   }
 </style>
