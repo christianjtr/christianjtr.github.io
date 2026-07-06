@@ -13,13 +13,12 @@ interface Props {
 const { sections } = Astro.props;
 ---
 
-{/* Cambiado a details para mejor control táctil y accesibilidad */}
 <details class="dropdown dropdown-end lg:hidden mobile-menu-details">
     <summary class="btn btn-ghost btn-circle scale-x-[-1] list-none cursor-pointer">
         <DropdownIcon width={24} height={24} />
     </summary>
     
-    <div class="card card-sm dropdown-content z-[50] mt-2 min-w-[200px]">
+    <div class="card card-sm dropdown-content z-50 mt-2 min-w-[200px]">
         <div class="card-body dropdown-menu-content p-3">
             <nav aria-label="Mobile navigation">
                 <ul class="menu menu-md p-0 gap-1">
@@ -39,7 +38,6 @@ const { sections } = Astro.props;
             
             <div class="divider my-2 opacity-50" />
             
-            {/* Zona táctil expandida para los iconos sociales */}
             <div class="flex justify-around items-center pt-2 pb-1">
                 {rrssLinks.map((eachLink) => (
                     <a 
@@ -47,7 +45,7 @@ const { sections } = Astro.props;
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={eachLink.text}
-                        class="flex flex-col gap-1 items-center hover:text-primary min-w-[44px] min-h-[44px] justify-center text-xs"
+                        class="flex flex-col gap-1 items-center hover:text-primary min-w-11 min-h-11 justify-center text-xs"
                     >
                         {eachLink.id === "github" && <GitHubIcon width={22} height={22} />}
                         {eachLink.id === "linkedin" && <LinkedInIcon width={22} height={22} />}
@@ -60,7 +58,6 @@ const { sections } = Astro.props;
     </div>
 </details>
 
-{/* Script ultra-ligero para cerrar el menú al pulsar un enlace */}
 <script>
     const mobileMenu = document.querySelector('.mobile-menu-details');
     if (mobileMenu) {
@@ -78,7 +75,6 @@ const { sections } = Astro.props;
     .dropdown-menu-content {
         @apply bg-base-300 rounded-box shadow-xl border border-base-content/5;
     }
-    /* Elimina la flecha nativa de details en Safari/Chrome */
     summary::-webkit-details-marker {
         display: none;
     }
