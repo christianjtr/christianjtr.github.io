@@ -154,7 +154,7 @@ const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
     }
 
     .filter-panel, .sandbox-panel {
-        @apply bg-base-100 border-neutral-200 shadow-sm;
+        @apply glass-surface border-neutral-200/60 shadow-sm;
     }
 
     .filter-label {
@@ -166,7 +166,7 @@ const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
     }
 
     html[data-theme="dark"] .filter-panel, html[data-theme="dark"] .sandbox-panel {
-        @apply bg-neutral-900 border-neutral-800 text-white;
+        @apply border-neutral-800/60;
     }
     
     .chevron-icon {

@@ -7,4 +7,22 @@
     --color-pale-lavender: #f6f6fd;
     --color-vibrant-pink: #f65bcc;
     --color-deep-charcoal: #202635;
+    --glass-bg: rgba(248, 250, 252, 0.8);
+    --glass-border: rgba(226, 232, 240, 0.6);
+    --glass-blur: 20px;
+    --surface-base: #f8fafc;
+    --surface-elevated: #f1f5f9;
+    --text-primary: #1e293b;
+    --text-secondary: #475569;
+    --accent-glow: rgba(41, 242, 185, 0.3);
+}
+
+html[data-theme="dark"] {
+    --glass-bg: rgba(30, 41, 59, 0.85);
+    --glass-border: rgba(51, 65, 85, 0.5);
+    --surface-base: #0f172a;
+    --surface-elevated: #1e293b;
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --accent-glow: rgba(41, 242, 185, 0.2);
 }
