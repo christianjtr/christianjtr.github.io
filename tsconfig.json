@@ -7,6 +7,7 @@
         "jsxImportSource": "astro",
         "strictNullChecks": true,
         "baseUrl": ".",
+        "ignoreDeprecations": "6.0",
         "paths": {
             "@assets": ["src/assets"],
             "@assets/*": ["src/assets/*"],
