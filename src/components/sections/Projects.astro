@@ -115,7 +115,18 @@ const { data: projects } = projectData as { data: Project[] };
     :global(html[data-theme="dark"]) .primary-text { @apply text-accent; }
 
     .project-card { 
-        @apply glass-card mb-6 p-3 rounded-3xl transition-all duration-300 relative overflow-hidden; 
+        background: rgba(248, 250, 252, 0.8);
+        border: 1px solid rgba(226, 232, 240, 0.6);
+        backdrop-filter: blur(20px);
+        box-shadow: 0 8px 32px -8px rgb(0 0 0 / 0.1), 
+                    inset 0 1px 0 rgb(255 255 255 / 0.4);
+        @apply mb-6 p-3 rounded-3xl transition-all duration-300 relative overflow-hidden; 
+    }
+    html[data-theme="dark"] .project-card {
+        background: rgba(30, 41, 59, 0.85);
+        border-color: rgba(51, 65, 85, 0.5);
+        box-shadow: 0 8px 32px -8px rgb(0 0 0 / 0.5), 
+                    inset 0 1px 0 rgb(255 255 255 / 0.08);
     }
     .project-card:hover { 
         @apply border-primary/70 shadow-lg shadow-primary/5; 

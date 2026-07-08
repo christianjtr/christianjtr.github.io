@@ -34,10 +34,19 @@ const { iconSize = 32, extraClasses = "menu-lg rounded-box" } = Astro.props;
      @reference "@styles/global.css";
 
      .sticky-social-menu {
-        @apply glass-card p-2 border-neutral-200/50;
+        background: rgba(248, 250, 252, 0.8);
+        border: 1px solid rgba(226, 232, 240, 0.6);
+        backdrop-filter: blur(20px);
+        box-shadow: 0 8px 32px -8px rgb(0 0 0 / 0.1), 
+                    inset 0 1px 0 rgb(255 255 255 / 0.4);
+        @apply p-2 border-neutral-200/50;
     }
 
     html[data-theme="dark"] .sticky-social-menu {
+        background: rgba(30, 41, 59, 0.85);
+        border-color: rgba(51, 65, 85, 0.5);
+        box-shadow: 0 8px 32px -8px rgb(0 0 0 / 0.5), 
+                    inset 0 1px 0 rgb(255 255 255 / 0.08);
         @apply border-neutral-800/60;
     }
 

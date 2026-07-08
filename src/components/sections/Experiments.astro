@@ -154,7 +154,15 @@ const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
     }
 
     .filter-panel, .sandbox-panel {
-        @apply glass-surface border-neutral-200/60 shadow-sm;
+        background: rgba(248, 250, 252, 0.8);
+        border: 1px solid rgba(226, 232, 240, 0.6);
+        backdrop-filter: blur(20px);
+        @apply border-neutral-200/60 shadow-sm;
+    }
+    html[data-theme="dark"] .filter-panel,
+    html[data-theme="dark"] .sandbox-panel {
+        background: rgba(30, 41, 59, 0.85);
+        border-color: rgba(51, 65, 85, 0.5);
     }
 
     .filter-label {
