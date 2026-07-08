@@ -115,25 +115,15 @@ const { data: projects } = projectData as { data: Project[] };
     :global(html[data-theme="dark"]) .primary-text { @apply text-accent; }
 
     .project-card { 
-        background: rgba(248, 250, 252, 0.8);
-        border: 1px solid rgba(226, 232, 240, 0.6);
-        backdrop-filter: blur(20px);
-        box-shadow: 0 8px 32px -8px rgb(0 0 0 / 0.1), 
-                    inset 0 1px 0 rgb(255 255 255 / 0.4);
-        @apply mb-6 p-3 rounded-3xl transition-all duration-300 relative overflow-hidden; 
-    }
-    html[data-theme="dark"] .project-card {
-        background: rgba(30, 41, 59, 0.85);
-        border-color: rgba(51, 65, 85, 0.5);
-        box-shadow: 0 8px 32px -8px rgb(0 0 0 / 0.5), 
-                    inset 0 1px 0 rgb(255 255 255 / 0.08);
+        @apply border mb-6 p-3 rounded-xl transition-all duration-300 relative overflow-hidden; 
+        @apply bg-base-100 border-neutral-200/80 text-neutral-800 shadow-xs;
     }
     .project-card:hover { 
-        @apply border-primary/70 shadow-lg shadow-primary/5; 
+        @apply border-primary/70 shadow-lg shadow-primary/5 -translate-y-1; 
     }
     
     :global(html[data-theme="dark"]) .project-card {
-        @apply border-neutral-800/60;
+        @apply bg-neutral-900 border-neutral-800 text-white shadow-none;
     }
     :global(html[data-theme="dark"]) .project-card:hover {
         @apply border-accent/70 shadow-lg shadow-accent/5;
@@ -202,7 +192,7 @@ const { data: projects } = projectData as { data: Project[] };
     .media-column { @apply flex flex-col gap-5 col-span-full lg:col-span-8; }
 
     .visual-studio-mesh {
-        @apply w-full rounded-2xl flex items-center justify-center p-8 overflow-hidden relative border border-neutral-100;
+        @apply w-full rounded-2xl flex items-center justify-center p-2 md:p-8 overflow-hidden relative border border-neutral-100;
         background-color: #fafafa;
         background-image: linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
         background-size: 24px 24px;

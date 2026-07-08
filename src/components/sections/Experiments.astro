@@ -32,10 +32,10 @@ const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
 
 <div class="bg-primary/5 py-10" id={header.main_sections[2].anchorId}>
     <br />
-    <Section headingTitle={section_experiments.title} subtitle={section_experiments.subtitle} class="container mx-auto px-1 lg:px-8">
+    <Section headingTitle={section_experiments.title} subtitle={section_experiments.subtitle} class="container mx-auto px-1 lg:px-10">
         <Logo slot="beforeHeading" width={96} height={96} />
         <br />
-        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 px-3 md:px-14 mt-6 items-start">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 px-2 md:px-14 mt-6 items-start">
             <aside class="lg:col-span-1 lg:sticky lg:top-24 space-y-6 self-start">
                 <div class="p-6 rounded-lg filter-panel">
                     <h3 class="text-xs font-bold uppercase tracking-wider text-neutral-400 mb-6">
@@ -154,15 +154,7 @@ const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
     }
 
     .filter-panel, .sandbox-panel {
-        background: rgba(248, 250, 252, 0.8);
-        border: 1px solid rgba(226, 232, 240, 0.6);
-        backdrop-filter: blur(20px);
-        @apply border-neutral-200/60 shadow-sm;
-    }
-    html[data-theme="dark"] .filter-panel,
-    html[data-theme="dark"] .sandbox-panel {
-        background: rgba(30, 41, 59, 0.85);
-        border-color: rgba(51, 65, 85, 0.5);
+        @apply bg-base-100 border-neutral-200 shadow-sm;
     }
 
     .filter-label {
@@ -174,7 +166,7 @@ const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
     }
 
     html[data-theme="dark"] .filter-panel, html[data-theme="dark"] .sandbox-panel {
-        @apply border-neutral-800/60;
+        @apply bg-neutral-900 border-neutral-800 text-white;
     }
     
     .chevron-icon {
@@ -186,7 +178,7 @@ const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
     }
 
     .visual-studio-mesh {
-        @apply w-full rounded-t-lg flex items-center justify-center p-8 overflow-hidden relative border border-neutral-100;
+        @apply w-full rounded-t-lg flex items-center justify-center p-2 md:p-8 overflow-hidden relative border border-neutral-100;
         background-color: #fafafa;
         background-image: linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
         background-size: 24px 24px;

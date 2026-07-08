@@ -113,6 +113,10 @@ const promptInstruction = getProfilePrompt(llmsTextRaw, common.ai_instruction);
     @apply border-primary;
   }
   
+  html[data-theme="dark"] button {
+    @apply text-white bg-slate-950;
+  }
+  
   html[data-theme="dark"] button:hover {
     @apply border-accent;
   }
