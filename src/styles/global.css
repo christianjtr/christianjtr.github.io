@@ -23,3 +23,33 @@
 html {
     font-family: "Lato", sans-serif;
 }
+
+/* Skip link for accessibility */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    z-index: 999;
+}
+
+.skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+}
+
+/* Enhanced focus styles for WCAG 2.2 AA */
+:focus-visible {
+    outline: 3px solid var(--color-electric-teal);
+    outline-offset: 2px;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

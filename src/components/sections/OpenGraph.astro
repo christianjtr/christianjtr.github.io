@@ -4,8 +4,10 @@ import { getEntry } from 'astro:content';
 import type { ContentDataEntryType } from '@app-types/Content';
 import type { AboutMeData } from '@schemas/AboutMeSchema';
 import { CONTENT } from '@app-types/Content';
+import { i18nLocalesConfig } from '../../../i18n.config.mjs';
 
 const { lang } = Astro.params;
+const { locales, defaultLocale } = i18nLocalesConfig;
 
 const commonData = await getEntry(lang as ContentDataEntryType, `${lang}/${CONTENT.COMMON}`);
 const { open_graph } = (commonData?.data as AboutMeData) || {};
@@ -13,10 +15,20 @@ const { open_graph } = (commonData?.data as AboutMeData) || {};
 const defaultImage = 'https://raw.githubusercontent.com/christianjtr/christianjtr.github.io/refs/heads/main/src/assets/web_cover_post.png';
 const siteName = 'https://christianjtr.github.io/';
 const canonical = `${siteName}${Astro.url.pathname}`;
+const basePath = Astro.url.pathname.replace(`/${lang}`, '');
 ---
 
 <meta name="author" content={open_graph?.title} />
 <link rel="canonical" href={canonical} />
+
+{locales.map((locale) => (
+  <link
+    rel="alternate"
+    hreflang={locale}
+    href={`${siteName}${locale}${basePath}`}
+  />
+))}
+<link rel="alternate" hreflang="x-default" href={`${siteName}${defaultLocale}${basePath}`} />
 
 <meta property="og:type" content="website" />
 <meta property="og:url" content={canonical} />
@@ -36,3 +48,20 @@ const canonical = `${siteName}${Astro.url.pathname}`;
 <meta name="twitter:description" content={open_graph?.description} />
 <meta name="twitter:image" content={defaultImage} />
 <meta name="twitter:image:alt" content={open_graph?.title} />
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": open_graph?.title,
+  "url": canonical,
+  "image": defaultImage,
+  "sameAs": [
+    "https://github.com/christianjtr",
+    "https://linkedin.com/in/christianjtr"
+  ],
+  "jobTitle": "Senior Product Software Engineer",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Freelance / Independent"
+  }
+})} />

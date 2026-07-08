@@ -36,13 +36,16 @@ const { header } = (entry?.data as AboutMeData) || {};
         <title>{pageTitle}</title>
     </head>
     <body>
+        <a href="#main-content" class="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-white focus:rounded">Skip to main content</a>
         <Header transition:persist />
         <LocaleBanner
             currentLocale={lang!}
             languages={header.languages}
             bannerText={header.locale_banner}
         />
-        <MainWrapper transition:animate="fade" />
+        <main id="main-content">
+            <MainWrapper transition:animate="fade" />
+        </main>
         <div class="vertical-icon-menu-wrapper hidden lg:flex" transition:persist>
             <VerticalIconMenu />
         </div>
