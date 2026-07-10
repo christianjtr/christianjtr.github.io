@@ -43,10 +43,12 @@ const { header } = (entry?.data as AboutMeData) || {};
                         tabindex="0"
                         role="button"
                         class="btn btn-ghost btn-circle"
+                        aria-label="Open language selector"
+                        aria-haspopup="listbox"
                     >
                         <LanguageIcon width={24} height={24} />
                     </div>
-                    <ul tabindex="0" class="dropdown-content menu dropdown-menu-content">
+                    <ul tabindex="0" class="dropdown-content menu dropdown-menu-content" role="menu" aria-label="Language selector">
                         {header.languages.map(({ name, locale}) => (
                             <li class:list={["lg:text-lg p-1.5", { "text-primary font-semibold": Astro.currentLocale === locale }]}>
                                 <a href={`/${locale}/`}>{name}</a>

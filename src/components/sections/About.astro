@@ -131,7 +131,7 @@ const { section_about } = (entry?.data as AboutMeData) || {};
                             <span class="text-base-content/25 dark:text-neutral-700 hidden sm:inline">—</span>
                             <span class="text-base-content/60 truncate">{language.proficiency}</span>
                         </div>
-                        <div class="flex gap-0.5 h-2 items-center shrink-0" aria-label={`Progress: ${language.value}`}>
+                        <div class="flex gap-0.5 h-2 items-center shrink-0" role="progressbar" aria-label={`${language.name} proficiency`} aria-valuemin="0" aria-valuemax="100" aria-valuenow={language.value}>
                             <div class="w-2 h-2 rounded-xs bg-primary"></div>
                             <div class={`w-2 h-2 rounded-xs ${language.value >= 60 ? 'bg-primary' : 'bg-base-300 dark:bg-neutral-800'}`}></div>
                             <div class={`w-2 h-2 rounded-xs 

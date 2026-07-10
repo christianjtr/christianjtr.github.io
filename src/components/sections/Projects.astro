@@ -27,7 +27,7 @@ const { data: projects } = projectData as { data: Project[] };
         <VerticalSpacer />
         <div class="px-2 md:px-14">
             {projects.map((project: Project, index: number) => (
-                <div class="collapse collapse-arrow project-card" tabindex={index + 1}>
+                <div class="collapse collapse-arrow project-card" tabindex="0">
                     <input type="radio" name="project" checked={index === 0} aria-label={
                         `Select project ${project.title}`
                     } />
