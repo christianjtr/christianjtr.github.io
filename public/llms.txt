@@ -5,19 +5,18 @@
 Bridging business and technology to deliver data-driven, user-centric products. Proficient in leveraging web technologies and product strategy to transform complex requirements into high-impact digital solutions.
 
 ## Strategic Skills
-- Agile Leadership, Coaching, Product ownership
-- Strategic Thinking and Data Analytical Skills
-- Business Intelligence and API Design
-- Product Development and Digital Marketing
-- Experimentation, PoCs, and Tech Research
-- Artificial Intelligence enthusiast
+- Agile Leadership, Coaching, Product Ownership
+- Strategic Thinking & Data Analytical Skills
+- Business Intelligence & API Design
+- Product Development & Digital Marketing
+- Experimentation, PoCs, & Tech Research
+- Artificial Intelligence
 
 ## Technical Ecosystem & Tools
-- **Web & JavaScript:** Vue, Astro, Tailwind, SASS (CSS)
-- **Data Visualization & Charts:** D3, HighCharts, ChartJS, etc.
-- **Server-side & DBMS:** API integrations (proxies), MongoDB, Redis, SQL, NoSQL, ORMs (Sequelize, Drizzle, etc.)
-- **Data Visualization, ETLs:** PowerBI, Tableau, Microsoft SSAS/SSIS
-- **Design & Prototyping:** Zeplin, Adobe, Adobe XD, Segment, Amplitude, Google Analytics, Facebook Ads, Google Maps / Earth, Mapbox, CESIUM
+- **Web & JavaScript:** Vue, ReactJS, Angular, Astro, TypeScript, Tailwind, SASS
+- **Server-side & DBMS:** NodeJS, Ruby on Rails, Python, RESTful API, GraphQL, MongoDB, Redis, SQL (MySQL, SQL Server, PostgreSQL), NoSQL, ORMs (Sequelize, Drizzle)
+- **Data Visualization & ETL:** D3.js, HighCharts, ChartJS, SigmaJS, PowerBI, Tableau, Microsoft SSAS/SSIS, Pentaho BI
+- **Design, Product Analytics & Maps:** Figma, Zeplin, Adobe XD, Segment, Amplitude, Google Analytics, Facebook Ads, Google Maps/Earth, Mapbox, Cesium, ArcGIS
 
 ---
 
@@ -32,82 +31,78 @@ Bridging business and technology to deliver data-driven, user-centric products. 
 ### Senior Product Software Engineer (Front-end focus)
 **Zeelo** | Spain | Intelligent Mobility Solutions
 *May 2024 - Jul 2025*
-- Collaborated with colleagues in the proactive identification and definition of solutions for the web platform, optimizing service for a growing user base (RFCs, documenting specs, adoption of best practices).
-- Ensured application quality and reliability through peer reviews, addressing tech debt, and comprehensive testing strategies, minimizing production incidents and enhancing the end-user experience.
-- Contributed to the development and implementation of key features to adapt products to industry trends within the mobility space (Web app for optimizing and managing rides, purchasing travel passes, etc.).
+- Collaborated in proactive identification and definition of platform solutions, optimizing service for a growing user base via RFCs, documenting specs, and best practices adoption.
+- Ensured application quality and reliability through peer reviews, tech debt reduction, and comprehensive testing strategies (Jest, Cypress, Storybook).
+- Developed key features to adapt products to mobility trends (web app for ride optimization, managing rides, and purchasing travel passes).
 - **Tech Stack:** ReactJS, NodeJS, React-Query, Redux, Webpack, Vite, TypeScript, Jest, Jest-Dom, Enzyme, Cypress, Storybook, Figma, MySQL, Python, GoogleMaps, Notion, Jira, Bitbucket.
 
 ### Solutions Engineer - Full Stack Software Engineer
 **Stuart Delivery** | Spain | Logistic Services
 *Oct 2020 - Jun 2023*
-- Collaborated with international engineering and business teams to develop solutions that elevated customer experiences and operational efficiency across last-mile logistics platforms, optimizing key processes and enabling seamless integrations with multiple strategic partners.
-- Gathered requirements from stakeholders, delivering solutions through agile project management (Scrum / Kanban), documenting specs, feature prototyping, and monitoring (AWS, Sentry, Grafana, etc.).
-- Built and architecture solutions along with other engineers, such as live monitoring tools, fleet tracking systems, API integrations, etc., significantly improving operational visibility and response capabilities in delivery operations.
-- **Tech Stack:** ReactJS, NodeJS, RubyOnRails, Query, TypeScript, Jest, Enzyme, Cypress, GraphQL, RESTful API, Sequelize (ORM), Grafana, Jira, MySQL, Tableau, Git, Figma, CloudWatch, Webpack, UI, X-Ray, Jenkins, GitHub.
+- Developed solutions elevating customer experiences and operational efficiency across last-mile logistics platforms, integrating multiple strategic partners.
+- Gathered stakeholder requirements and delivered solutions through Scrum/Kanban, spec documentation, prototyping, and active monitoring.
+- Co-architected live monitoring tools, fleet tracking systems, and API integrations, improving operational visibility.
+- **Tech Stack:** ReactJS, NodeJS, RubyOnRails, TypeScript, Jest, Enzyme, Cypress, GraphQL, RESTful API, Sequelize, Grafana, Jira, MySQL, Tableau, Git, Figma, CloudWatch, Webpack, Jenkins, GitHub.
 
 ### Frontend Developer Architect (Product and Fintech)
 **Zank Financial PFP** | Spain | Financial Services
 *Nov 2019 - Oct 2020*
-- Led the development, maintenance, and improvement of the front-end architecture for a fintech web app according to product/operational specs, ensuring an exceptional user experience and strict regulatory compliance, which strengthened platform reliability and trust.
-- Implemented critical third-party integrations (payment gateway, e-mailing/SMS systems, loggers) to expand functionalities and ensure robust web application reliability, minimizing service interruptions.
-- **Tech Stack:** VueJS, NodeJS, HTML5, CSS, SASS, MySQL, Git, Slack, Elastic, Postman, Trello.
+- Led development, maintenance, and improvement of front-end architecture for a fintech web app, ensuring user experience and strict regulatory compliance.
+- Implemented critical third-party integrations (payment gateways, transactional e-mailing/SMS systems, loggers) minimizing service interruptions.
+- **Tech Stack:** VueJS, NodeJS, HTML5, CSS, SASS, MySQL, Git, Postman, Trello.
 
 ### Frontend Software Engineer (Data focus)
 **SDG Group** | Spain | Data Consulting Firm
 *Nov 2018 - Oct 2019*
-- Responsible for automating front-end environments for existing data analytics-oriented web applications, significantly reducing setup and deployment times and improving development team efficiency.
-- Led the development of the user interface for a KPI-displaying chatbot with appealing charts, which simplified the understanding of complex data and business analytics. 
-- Developed of web prototype mashup for augmented reality visualizations (Sales trends). **Showcased at the Qlik Connections Global Conference in 2019.**
+- Automated front-end environments for analytics web applications, reducing deployment times and improving dev team efficiency.
+- Led UI development for a KPI-displaying chatbot with custom charts to simplify complex data and business analytics.
+- Developed web prototype mashup for augmented reality visualizations of sales trends, showcased at the Qlik Connections Global Conference (2019).
 - **Tech Stack:** VueJS, Angular, NodeJS, Webpack, SigmaJS (D3.js), RESTful API, Qlik Sense Hub, Git, Jira, Dialogflow.
 
 ### Frontend User Interface Developer (Enterprise Solutions)
 **Kapsch TrafficCom AG** | Argentina | Intelligent Transportation Systems
 *Jul 2016 - Oct 2017*
-- Development of a web-based or commercial hack office for a vehicle free-flow tolling system to handle toll collections, centralizing the management of millions of transactions (Modules: customer, payments, tag device management, vehicle monitoring, and reporting with JasperReports).
-- Developed a mocked-up RESTful API according to back-end specs, which significantly accelerated the delivery of new features and increased reliability on early-stage service-side implementations, by ensuring testing.
+- Developed a web-based back-office system for a vehicle free-flow tolling system handling millions of transactions (customer modules, payments, tag management, vehicle reporting).
+- Created mocked RESTful APIs according to back-end specs, accelerating frontend delivery and testing of early-stage service-side implementations.
 - **Tech Stack:** Angular, NodeJS, HTML5, CSS, SASS, Swagger, JasperReports, SQL Server, Microsoft TFS.
 
 ### Product Software Engineer (Data Intelligence and R&D)
 **Petroleum of Venezuela (PDVSA)** | Venezuela | Energy and Hydrocarbons
 *May 2011 - Jan 2016*
-- Led the conception, design, development, and delivery of a real-time web app; alongside other engineers; for performing economic scenario analysis, leveraging GIS technologies (Google Earth, KML/KMZ) to transform the visualization of geoscience/economic data and enhancing strategic analysis capabilities for the company. **Showcased at the American Association of Petroleum Geologists in 2011.**
-- Created data models and utilized business intelligence tools to summarize large volumes of data related to hydrocarbon production, facilities, and similar; based on the company's business portfolios (ETL / DWH design, data visualization); in order to improve the accessibility and analysis of key information.
-- Develop economic and financial simulations using R to assess the financial viability and risks of new business ventures, enabling and supporting data-driven decision-making.
-- **Tech Stack:** jQuery, HTML5, PHP, MySQL, PostgreSQL, R Statistics, Pentaho BI, HighCharts, ArcGIS, Adobe Creative Suite.
+- Co-designed and delivered a real-time web application for economic scenario analysis, leveraging GIS technologies (Google Earth, KML/KMZ) to transform geoscience data visualization. Showcased at the AAPG (2011).
+- Created data models and utilized BI tools (ETL/DWH design) to summarize large hydrocarbon production volumes, improving information accessibility.
+- Developed economic and financial simulations using R to assess viability and risks of new business ventures.
+- **Tech Stack:** jQuery, HTML5, PHP, MySQL, PostgreSQL, R Statistics, Pentaho BI, HighCharts, ArcGIS.
 
 ### IT Systems Responsible (Customer Enablement)
 **Miranda's Public Employees S&L (CAPEM)** | Venezuela | Non-profit Finances
 *Nov 2009 - May 2011*
-- Led the design and development of a web-based CRM, for improving customer service management (client support, procedure monitoring, employee performance, etc.), by involving all the business areas within the company, which centralized and significantly improved customer experience and client support efficiency.
-- Responsible for the development of a web queuing system, which includes a self-service interactive kiosk (touchscreen), to automate how the customers check their balances; aimed at reducing wait times.
+- Designed and developed a web-based CRM, centralizing business areas to improve customer service management and client support efficiency.
+- Developed a web queuing system including a self-service touchscreen interactive kiosk to automate balance checks and reduce wait times.
 - **Tech Stack:** jQuery, HTML5, Flash, AS3, PHP, MySQL.
 
 ---
 
 ## Education
 
-### Spain
-- **Expert Diploma in Tech Management (Technical Leadership)** | Polytechnic University of Valencia *(Sep 2023 - Jun 2024)*
-- **Master in E-business Management (Digital Businesses and Startups)** | University of Barcelona *(Oct 2019 - Jun 2020)*
-- **Postgraduate in Business Intelligence (Data Engineering)** | Escoles Universitàries Gimbernat - Autonomous University of Barcelona *(Nov 2017 - Jul 2018)*
-
-### Argentina
-- **Diploma in UX Design & Research (Product and User Research)** | Digital House Coding School *(Mar 2017 - Jul 2017)*
-
-### Venezuela
-- **Diploma in Business Management (Leadership and Management)** | Metropolitan University (UNIMET) *(Nov 2014 - Jul 2015)*
-- **Diploma in Business Intelligence (Data Engineering)** | Central University of Venezuela *(Nov 2013 - Apr 2014)*
-- **Degree in Systems Engineering (Bachelor of Engineering)** | Experimental and Polytechnic University of the Armed Forces (UNEFA) *(Sep 2004 - Sep 2009)*
+### Technical & Product Leadership
+- **Expert Diploma in Tech Management (Technical Leadership)** | Polytechnic University of Valencia *(2024)*
+- **Master in E-business Management (Digital Businesses & Startups)** | University of Barcelona *(2020)*
+- **Postgraduate in Business Intelligence (Data Engineering)** | Autonomous University of Barcelona *(2018)*
+- **Diploma in UX Design & Research (Product and User Research)** | Digital House Coding School *(2017)*
+- **Diploma in Business Management (Leadership & Management)** | Metropolitan University (UNIMET) *(2015)*
+- **Diploma in Business Intelligence (Data Engineering)** | Central University of Venezuela *(2014)*
+- **Degree in Systems Engineering (Bachelor of Engineering)** | UNEFA *(2009)*
 
 ---
 
-## Certifications
-- Professional Scrum Product Owner (PSPO-I) — *Scrum.org (Aug 2025)*
-- Software Engineer / ReactJS Developer — *HackerRank (Apr 2024)*
-- Generative AI Overview for Product Managers — *PMI (Apr 2024)*
-- Professional Agile Leadership (PAL-I) — *Scrum.org (Oct 2023)*
-- Professional Scrum Master (PSM-I) — *Scrum.org (Oct 2023)*
-- Management 3.0 Foundation — *Management 3.0 (Sep 2022)*
-- Enterprise Design Thinking Practitioner — *IBM (Apr 2022)*
-- System Thinking for Project Management — *Massachusetts Institute of Technology - MIT (Mar 2022)*
-- Fundamentals of Digital Marketing — *Google Digital Garage (Jun 2021)*
+## Certifications & Credentials
+- **PSPO-I:** Professional Scrum Product Owner — *Scrum.org (2025)*
+- **ReactJS Developer:** Software Engineer — *HackerRank (2024)*
+- **GenAI for Product Managers:** Overview — *PMI (2024)*
+- **PAL-I:** Professional Agile Leadership — *Scrum.org (2023)*
+- **PSM-I:** Professional Scrum Master — *Scrum.org (2023)*
+- **Management 3.0:** Foundation — *Management 3.0 (2022)*
+- **Design Thinking:** Enterprise Practitioner — *IBM (2022)*
+- **Systems Thinking:** Project Management — *MIT (2022)*
+- **Digital Marketing:** Fundamentals — *Google Digital Garage (2021)*
