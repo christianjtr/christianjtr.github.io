@@ -1,6 +1,9 @@
 # Christian José Torrealba Rondón
 > Systems Engineer & Agile Product Builder | Specialized in Data-Driven Web Products
 
+## Overview
+This document summarizes the professional profile, experience, and portfolio of Christian José Torrealba Rondón for machine-readable consumption. For the full website, see [Portfolio](https://christianjtr.github.io/), [English version](https://christianjtr.github.io/en/), [Español](https://christianjtr.github.io/es/), and [Français](https://christianjtr.github.io/fr/). Additional professional profiles are available on [LinkedIn](https://www.linkedin.com/in/christianjtr/) and [GitHub](https://github.com/christianjtr).
+
 ## Executive Summary
 Bridging business and technology to deliver data-driven, user-centric products. Proficient in leveraging web technologies and product strategy to transform complex requirements into high-impact digital solutions.
 
