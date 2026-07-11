@@ -107,7 +107,19 @@ const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
                         <div class="p-8 flex flex-col justify-between flex-1">
                                 <div class="flex justify-between items-center mb-2">
                                     <Badge class="badge-sm badge-primary uppercase">{experiment.category}</Badge>
-                                    {experiment.url && <LinkButton href={experiment.url} target="_blank" rel="noopener noreferrer" class='btn-circle btn-sm' displayDefaultIcon />}
+                                    {experiment.url && (
+                                        <LinkButton
+                                            href={experiment.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class='btn-circle btn-sm'
+                                            displayDefaultIcon
+                                            aria-label={`Open experiment: ${experiment.title}`}
+                                            title={`Open experiment: ${experiment.title}`}
+                                        >
+                                            <span class="sr-only">Open experiment: {experiment.title}</span>
+                                        </LinkButton>
+                                    )}
                                 </div>
                                 <div class="flex items-center gap-2 mb-2">
                                     <span class="text-xl">{roleIcons[experiment.role]}</span>
