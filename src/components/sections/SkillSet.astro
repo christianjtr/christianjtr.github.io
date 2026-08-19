@@ -4,11 +4,13 @@ import type { ContentDataEntryType } from '@app-types/Content';
 import type { AboutMeData } from '@schemas/AboutMeSchema';
 import { CONTENT } from '@app-types/Content';
 import Logo from '@assets/svg/people.svg';
-import { Section, VerticalSpacer } from "../";
+import { Section, VerticalSpacer, BadgeList } from "../";
+import BuildingIcon from "@assets/svg/building.svg";
+import AcademicCapIcon from "@assets/svg/academic_cap.svg";
 
 const { lang } = Astro.params;
 const commonData = await getEntry(lang as ContentDataEntryType, `${lang}/${CONTENT.COMMON}`);
-const { section_skills, section_about, common } = (commonData?.data as AboutMeData) || {};
+const { section_skills, section_about, section_experiences, section_studies, common } = (commonData?.data as AboutMeData) || {};
 
 type StyleItem = { text: string; bg: string; };
 
@@ -36,7 +38,34 @@ const skills = section_about.expertise.subjects.map((subject) => {
   <Section headingTitle={section_skills.title} subtitle={section_skills.subtitle} class="container mx-auto px-1 lg:px-10">
     <Logo slot="beforeHeading" width={90} height={90} />
     <VerticalSpacer />
-    
+    <div class="apple-editorial-grid flex flex-col md:flex-row px-2 gap-6 md:gap-4">
+        <div class="editorial-card card-synergy vshape-box">
+            <div class="card-body-wrapper">
+                <div class="card-meta-header">
+                    <BuildingIcon width={14} height={14} class="stroke-2 shrink-0" />
+                    <span class="card-meta-title">{section_experiences.companies_across_regions}</span>
+                </div>
+                <h3 class="editorial-heading">
+                    {section_experiences.collaborated_with}
+                </h3>
+            </div>
+            <div class="chip-container">
+                <BadgeList items={section_experiences.full_countries} badgeClass="font-semibold badge-soft text-[11px]" />
+            </div>
+        </div>
+        <div class="editorial-card card-academy vshape-box">
+            <div class="card-body-wrapper">
+                <div class="card-meta-header">
+                    <AcademicCapIcon width={14} height={14} class="stroke-2 shrink-0" />
+                    <span class="card-meta-title">{section_studies.title}</span>
+                </div>
+                <h3 class="editorial-heading">{section_experiences.academic_foundation}</h3>
+            </div>
+            <div class="academy-footer">
+                <span class="truncate pr-2">{section_studies.educational_level}</span>
+            </div>
+        </div>
+    </div>
     <div class="group-main w-full mx-auto flex flex-col md:flex-row px-2 gap-6 md:gap-4 items-center md:items-stretch relative">
       <div class="w-full md:w-1/5 flex items-center justify-center md:justify-start z-10">
         <div class="vshape-box w-full p-4 rounded-lg text-center max-w-[150px]">
@@ -94,6 +123,109 @@ const skills = section_about.expertise.subjects.map((subject) => {
 
 <style>
   @reference "@styles/global.css";
+
+  .apple-editorial-grid {
+        @apply w-full grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch mb-12 select-none font-sans;
+    }
+
+    .editorial-card {
+        @apply border rounded-lg p-6 md:p-8 flex flex-col justify-between transition-all duration-300 min-h-[180px] w-full;
+        background-color: var(--fallback-b1, hsl(var(--b1)));
+        border-color: #e5e5e5;
+    }
+
+    .editorial-card:hover {
+        @apply border border-primary/70 shadow-lg shadow-primary/10 -translate-y-1;
+    }
+
+    .background-item {
+        @apply border-l-2 border-transparent;
+    }
+
+    .background-item:hover {
+        @apply border-primary/75;
+    }
+
+    html[data-theme="dark"] .background-item:hover {
+        @apply border-accent;
+    }
+
+    .card-synergy {
+        @apply md:col-span-7;
+    }
+    .card-academy {
+        @apply md:col-span-5;
+    }
+    .card-body-wrapper {
+        @apply space-y-4 w-full;
+    }
+
+    /* Cabeceras y Etiquetas de Metadatos */
+    .card-meta-header {
+        @apply flex items-center gap-2 text-neutral-400;
+    }
+    .card-meta-title {
+        @apply text-[10px] font-bold uppercase tracking-widest font-mono;
+    }
+    .editorial-heading {
+        @apply text-lg md:text-xl font-semibold text-neutral-800 tracking-tight leading-snug whitespace-normal max-w-lg;
+    }
+
+    /* Contenedores de Tags e Inyecciones de Sinergia */
+    .chip-container {
+        @apply flex flex-wrap gap-2 mt-3 pt-5 border-t w-full;
+        border-color: rgba(229, 229, 229, 0.5);
+    }
+    .editorial-chip {
+        @apply text-[10px] font-mono font-semibold px-2.5 py-1 rounded-md bg-white border border-neutral-200/50 text-neutral-500;
+    }
+
+    /* Resaltados de Texto Enlazados al Tema */
+    .highlight-primary {
+        @apply font-extrabold text-primary font-mono;
+    }
+    .highlight-secondary {
+        @apply font-extrabold text-accent tabular-nums;
+    }
+
+    /* Componentes del Pie de la Tarjeta Académica */
+    .academy-footer {
+        @apply pt-4 border-t flex items-center justify-between text-[10px] font-bold text-secondary uppercase tracking-wider w-full;
+        border-color: rgba(229, 229, 229, 0.5);
+    }
+    .footer-divider {
+        @apply text-neutral-300 select-none font-normal;
+    }
+    .footer-status {
+        @apply text-neutral-400 font-mono text-[9px] font-normal lowercase shrink-0;
+    }
+
+    html[data-theme="dark"] .editorial-card, html[data-theme="dark"] .editorial-card  {
+        @apply bg-neutral-900 border-neutral-800 text-white;
+    }
+    html[data-theme="dark"] .editorial-card:hover {
+        @apply border-accent/70 shadow-accent/5;
+    }
+    html[data-theme="dark"] .card-meta-header {
+        @apply text-neutral-500;
+    }
+    html[data-theme="dark"] .editorial-heading {
+        @apply text-white;
+    }
+    html[data-theme="dark"] .chip-container,
+    html[data-theme="dark"] .academy-footer {
+        border-color: rgba(38, 38, 38, 0.5);
+    }
+    html[data-theme="dark"] .editorial-chip {
+        @apply bg-neutral-900 border-neutral-800 text-neutral-400;
+    }
+    html[data-theme="dark"] .highlight-primary {
+        @apply text-accent;
+    }
+    html[data-theme="dark"] .footer-divider {
+        @apply text-neutral-700;
+    }
+
 
   .vshape-box, .pillar-card { @apply bg-base-100 border border-slate-400 text-slate-700; }
   .graph-lines { @apply stroke-slate-500; }
