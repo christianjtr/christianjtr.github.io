@@ -106,14 +106,23 @@ const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
                             </figure>
                         </div>
                         <div class="p-8 flex flex-col justify-between flex-1">
-                                <div class="flex justify-between items-center mb-2">
-                                    <div class="flex gap-2">
+                                <div class="flex flex-col gap-2 sm:flex-row sm:justify-between sm:items-center mb-2">
+                                    <div class="flex flex-wrap gap-2">
                                         <Badge class="badge-sm badge-primary uppercase">{experiment.category}</Badge>
                                         {experiment.year && <Badge class="badge-warning font-semibold badge-sm">{experiment.year}</Badge>}
                                     </div>
                                     {experiment.url && (
-                                        <div class="flex gap-3 items-center">
-                                            {experiment.abstract && <button class="btn btn-outline btn-xs text-secondary" onclick={`document.getElementById('experiment_modal_${index}')?.showModal()`} aria-haspopup="dialog" aria-label={common.abstract}>{common.abstract}</button>}
+                                        <div class="flex gap-3 items-center justify-between sm:justify-end w-full sm:w-auto mt-1 sm:mt-0">
+                                            {experiment.abstract && (
+                                                <button 
+                                                    class="btn btn-outline btn-xs text-secondary" 
+                                                    onclick={`document.getElementById('experiment_modal_${index}')?.showModal()`} 
+                                                    aria-haspopup="dialog" 
+                                                    aria-label={common.abstract}
+                                                >
+                                                    {common.abstract}
+                                                </button>
+                                            )}
                                             <LinkButton
                                                 href={experiment.url}
                                                 target="_blank"
