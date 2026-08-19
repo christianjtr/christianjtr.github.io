@@ -29,6 +29,7 @@
         "laboratory": "Laboratory",
         "project_result_title": "Key Outcomes",
         "stack": "Tech Stack",
+        "abstract": "Project Abstract",
         "ai_button_text": "Feed to AI",
         "ai_copied_text": "Ready to paste",
         "ai_instruction": "Please process and answer in English."

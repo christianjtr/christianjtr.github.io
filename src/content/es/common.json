@@ -29,6 +29,7 @@
         "laboratory": "Laboratorio",
         "project_result_title": "Resultados Clave",
         "stack": "Stack tecnológico",
+        "abstract": "Resumen del Proyecto",
         "ai_button_text": "Enviar a IA",
         "ai_copied_text": "Listo para pegar",
         "ai_instruction": "Procesa y responde en español."

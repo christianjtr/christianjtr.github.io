@@ -45,6 +45,7 @@ const CommonTextSchema = z.object({
     ai_button_text: z.string(),
     ai_copied_text: z.string(),
     ai_instruction: z.string(),
+    abstract: z.string()
 });
 
 const OpenGraphSchema = z.object({

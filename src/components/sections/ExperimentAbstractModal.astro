@@ -1,0 +1,68 @@
+---
+import { getEntry } from 'astro:content';
+import type { ContentDataEntryType } from '@app-types/Content';
+import type { AboutMeData } from '@schemas/AboutMeSchema';
+import { CONTENT } from '@app-types/Content';
+
+interface Props {
+    text: string;
+    modalId: string;
+}
+
+const { lang } = Astro.params;
+const { text, modalId } = Astro.props;
+
+const commonData = await getEntry(lang as ContentDataEntryType, `${lang}/${CONTENT.COMMON}`);
+const { common } = (commonData?.data as AboutMeData) || {};
+---
+
+<dialog id={modalId} class="modal modal-middle px-5 md:px-0" onclick="event.stopPropagation()">
+    <div class="modal-box experiment-modal-box">
+        
+        <div class="experiment-modal-header">
+            <h4 class="experiment-modal-label">{common.abstract}</h4>
+            <form method="dialog">
+                <button class="btn btn-sm btn-circle btn-ghost text-neutral-400 dark:text-neutral-500 hover:bg-neutral-100 dark:hover:bg-neutral-800">✕</button>
+            </form>
+        </div>
+        <p class="space-y-4 text-base">{text}</p>
+    </div>
+</dialog>
+
+<style>
+    @reference "@styles/global.css";
+
+    .experiment-modal-box {
+        @apply bg-base-100 border-neutral-200 text-neutral-900 border rounded-2xl w-full transition-all duration-300 shadow-2xl;
+    }
+
+    .experiment-modal-header {
+        @apply flex items-center justify-between pb-3 mb-5 border-b border-neutral-100;
+    }
+
+    .experiment-modal-label {
+        @apply text-sm font-bold tracking-widest text-primary uppercase font-mono;
+    }
+
+    .experiment-modal-title {
+        @apply text-xl font-bold text-neutral-900;
+    }
+
+    html[data-theme="dark"] {
+        & .experiment-modal-box {
+            @apply bg-neutral-900 border-neutral-800 text-white;
+        }
+
+        & .experiment-modal-header {
+            @apply border-neutral-800;
+        }
+
+        & .experiment-modal-label {
+            @apply text-accent;
+        }
+
+        & .experiment-modal-title {
+            @apply text-white;
+        }
+    }
+</style>

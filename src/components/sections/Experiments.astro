@@ -8,6 +8,7 @@ import { BadgeList, LinkButton, Section, Badge, AsyncImage } from "../";
 import Logo from '@assets/svg/case_of_studies.svg';
 import TrashIcon from '@assets/svg/trash.svg';
 import ChevronIcon from '@assets/svg/chevron.svg';
+import ExperimentAbstractModal from './ExperimentAbstractModal.astro'
 
 const roleIcons: Record<ExperimentRole, string> = {
     'Author': '🧑🏻‍💻',
@@ -89,7 +90,7 @@ const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
 
             </aside>
             <main class="lg:col-span-3 space-y-8">
-                {featuredExperiments.map((experiment: Experiment) => (
+                {featuredExperiments.map((experiment: Experiment, index) => (
                     <div class="card experiment-card flex flex-col w-full bg-base-100" data-category={experiment.category}>
                         <div class="border-b border-neutral-200 overflow-hidden rounded-t-lg">
                             <figure class="w-full visual-studio-mesh">
@@ -106,19 +107,25 @@ const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
                         </div>
                         <div class="p-8 flex flex-col justify-between flex-1">
                                 <div class="flex justify-between items-center mb-2">
-                                    <Badge class="badge-sm badge-primary uppercase">{experiment.category}</Badge>
+                                    <div class="flex gap-2">
+                                        <Badge class="badge-sm badge-primary uppercase">{experiment.category}</Badge>
+                                        {experiment.year && <Badge class="badge-warning font-semibold badge-sm">{experiment.year}</Badge>}
+                                    </div>
                                     {experiment.url && (
-                                        <LinkButton
-                                            href={experiment.url}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            class='btn-circle btn-sm'
-                                            displayDefaultIcon
-                                            aria-label={`Open experiment: ${experiment.title}`}
-                                            title={`Open experiment: ${experiment.title}`}
-                                        >
-                                            <span class="sr-only">Open experiment: {experiment.title}</span>
-                                        </LinkButton>
+                                        <div class="flex gap-3 items-center">
+                                            {experiment.abstract && <button class="btn btn-outline btn-xs text-secondary" onclick={`document.getElementById('experiment_modal_${index}')?.showModal()`} aria-haspopup="dialog" aria-label={common.abstract}>{common.abstract}</button>}
+                                            <LinkButton
+                                                href={experiment.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                class='btn-circle btn-sm'
+                                                displayDefaultIcon
+                                                aria-label={`Open experiment: ${experiment.title}`}
+                                                title={`Open experiment: ${experiment.title}`}
+                                            >
+                                                <span class="sr-only">Open experiment: {experiment.title}</span>
+                                            </LinkButton>
+                                        </div>
                                     )}
                                 </div>
                                 <div class="flex items-center gap-2 mb-2">
@@ -136,6 +143,7 @@ const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
                                 <BadgeList items={experiment.tags} badgeClass="font-semibold badge-soft text-[11px]" />
                             </div>
                         </div>
+                        {experiment.abstract && <ExperimentAbstractModal text={experiment.abstract} modalId={`experiment_modal_${index}`} /> }
                     </div>
                 ))}
             </main>

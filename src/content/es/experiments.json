@@ -15,7 +15,9 @@
         "category": "Trabajo académico",
         "url": "https://drive.google.com/file/d/1yprBUaMhTifIBizEOwrhScjqB7WsA7-K/view?usp=sharing",
         "isSandbox": false,
-        "display": true
+        "display": true,
+        "abstract": "Este caso de estudio explora cómo fomentar una cultura de ingeniería saludable en equipos tecnológicos enfrentados a prácticas de gestión que erosionan el bienestar, el crecimiento profesional y el compromiso de los empleados. El análisis se basa en una empresa de servicios de IA anonimizada (B2B2C) que experimentó un rápido hipercrecimiento tras ser adquirida. La organización, con más de 600 empleados en varios países, sufrió cambios significativos de liderazgo y reestructuraciones departamentales que derivaron en favoritismos, dominio técnico centralizado, falta de apoyo al desarrollo de carrera, reducción de la seguridad psicológica y una progresiva fuga de talento. El propósito del trabajo es proponer un enfoque práctico para co-crear una cultura de ingeniería más sana, enfocada en la madurez del liderazgo tecnológico, las dinámicas de equipo y entornos enriquecedores. La estrategia propuesta combina herramientas de diagnóstico (DAFO, mapas de empatía, RASCI) con un enfoque estructurado de gestión del cambio basado en el modelo ADKAR para mitigar la resistencia y revertir patrones tóxicos.",
+        "year": 2023
     },
     {
         "id": "experiment-bi-adventure-works",
@@ -33,7 +35,9 @@
         "category": "Proyecto",
         "url": "https://drive.google.com/file/d/1UN8-YdFhR7UuhvARsf61kCxITTgot3Cf/view?usp=sharing",
         "isSandbox": false,
-        "display": true
+        "display": true,
+        "abstract": "Este caso de estudio demuestra la arquitectura e implementación de una solución integral de Inteligencia de Negocios (BI) diseñada para resolver desafíos complejos de accesibilidad de datos en una empresa multinacional de fabricación y distribución. Basado en el ecosistema de Adventure Works Cycles, el proyecto aborda la fricción crítica entre la complejidad de las bases de datos transaccionales y las necesidades de toma de decisiones ejecutivas ante fluctuaciones en la demanda del mercado. El núcleo de la solución consiste en un pipeline de datos desacoplado. Este abarca desde un riguroso análisis de fuentes y extracción estructural hasta la consolidación de datos y el modelado lógico dimensional (Esquema en Estrella). La arquitectura objetivo integra dimensiones aisladas como el perfil detallado del cliente (demografía, preferencias de compra), territorios de venta localizados y catálogos de productos; alrededor de tablas de hechos transaccionales centrales para establecer una Fuente Única de Verdad absoluta. El sistema resultante ofrece capacidades de explotación de datos de alto rendimiento y cuadros de mando analíticos ejecutivos construidos sobre Power BI, Qlik Sense y modelado avanzado. Esta habilitación facilita pronósticos regionales descriptivos, segmentación de audiencias y análisis de mercado preventivos. En última instancia, el estudio muestra cómo alinear las infraestructuras de datos en bruto de la empresa con la metodología de BI mitiga los fallos operativos silenciosos y desbloquea canales predecibles de crecimiento de ingresos.",
+        "year": 2018
     },
     {
         "id": "experiment-circuitos",
@@ -51,7 +55,9 @@
         "category": "Proyecto",
         "url": "https://drive.google.com/file/d/1eIRVupKq6ct5eN00Z6vhNl4uG5JnA6G8/view?usp=sharing",
         "isSandbox": false,
-        "display": true
+        "display": true,
+        "abstract": "Este caso de estudio detalla el concepto, la arquitectura de producto y la ingeniería de experiencia de usuario (UX) de Circuitos, una plataforma móvil diseñada para conectar el patrimonio cultural urbano con los ciudadanos. El proyecto aborda la problemática de agendas de eventos fragmentadas y puntos de interés histórico o artístico ocultos dentro de entornos urbanos densos (como centros de diseño, museos locales y murales de arte urbano). El núcleo del sistema se centra en una arquitectura de datos modular que soporta múltiples submódulos altamente interactivos: un agregador dinámico de eventos locales con programación personalizada, un sistema de enrutamiento geolocalizado (Circuitos) para guiar a los usuarios a través de rutas culturales curadas, y un mecanismo de almacenamiento local aislado para guardar notas personales y favoritos. El diseño técnico prioriza estados de vista de alta fidelidad, lógicas de transición fluidas y mapeo de activos geográficos para garantizar una experiencia móvil responsiva y de bajo consumo de datos. El estudio demuestra sólidas competencias en el descubrimiento de productos móviles de extremo a extremo, jerarquías de frontend estructurales y planificación de características multifuncionales. Al alinear el descubrimiento geoespacial con la gestión de eventos, el proyecto resalta cómo la ingeniería interactiva puede transformar datos urbanos brutos en una experiencia de usuario atractiva, cohesiva y moderna.",
+        "year": 2017
     },
     {
         "id": "project-agent-orchestrator",
@@ -89,7 +95,9 @@
         "category": "Trabajo académico",
         "url": "https://drive.google.com/file/d/1nVCuBsmsfOd7009AsGPlxSOo00pIHaCo/view?usp=sharing",
         "isSandbox": false,
-        "display": true
+        "display": true,
+        "abstract": "Este caso de negocio integral detalla la planificación estratégica, las proyecciones financieras y el marco técnico para una startup digital orientada a impulsar la participación ciudadana en los sectores artístico y cultural de Barcelona. El proyecto aborda la brecha histórica entre las plataformas de descubrimiento de eventos locales y los comportamientos de audiencias altamente segmentadas en un entorno urbano posdigital. El núcleo del estudio consiste en una hoja de ruta de producto digital estructurada. Esta abarca desde un riguroso análisis de entrada al mercado (perfilado de público objetivo, auditoría del panorama competitivo) hasta un modelo de monetización sostenible y un marco de marketing online basado en datos, detallando embudos de adquisición multicanal e indicadores clave de rendimiento (KPIs) operativos. El alcance de la entrega integra marcos de trabajo ágiles con tecnologías de software seleccionadas para alinear los cronogramas de ejecución con las restricciones presupuestarias.La tesis demuestra sólidas competencias en la gestión de productos digitales, escalado comercial y asignación ejecutiva de recursos. Al conectar la arquitectura de soluciones técnicas con la viabilidad financiera del emprendimiento, el estudio resalta cómo se pueden aprovechar los principios de la ingeniería analítica para transformar un concepto cultural en un modelo de negocio digital estructurado, altamente predecible y escalable.",
+        "year": 2020
     },
     {
         "id": "experiment-tv-movie-streaming-like-webapp",

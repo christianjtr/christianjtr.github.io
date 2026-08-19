@@ -15,7 +15,9 @@
         "category": "Travail Académique",
         "url": "https://drive.google.com/file/d/1yprBUaMhTifIBizEOwrhScjqB7WsA7-K/view?usp=sharing",
         "isSandbox": false,
-        "display": true
+        "display": true,
+        "abstract": "Cette étude de cas explore comment favoriser una culture de l'ingénierie saine au sein des équipes technologiques confrontées à des pratiques de gestion qui nuisent au bien-être, à la croissance professionnelle et à l'engagement des employés.L'analyse s'appuie sur une entreprise anonymisée de services d'IA (B2B2C) ayant connu un hyper-croissance rapide après son acquisition. L'organisation de plus de 600 employés répartis dans plusieurs pays a subi d'importants changements de leadership y des restructurations. Ces transitions ont entraîné du favoritisme, une centralisation de l'expertise technique, un manque de soutien au développement de carrière, une baisse de la sécurité psychologique et une fuite progressive des talents.L'objectif de ce travail est de proposer une approche pratique pour co-créer une culture d'ingénierie plus saine, axée sur la maturité du leadership technologique, la dynamique d'équipe et des environnements enrichissants. La stratégie combine des outils de diagnostic (SWOT, cartes d'empathie, RASCI) avec une démarche structurée de gestion du changement basée sur le modèle ADKAR pour surmonter les résistances et inverser les schémas toxiques.",
+        "year": 2023
     },
     {
         "id": "experiment-bi-adventure-works",
@@ -33,7 +35,9 @@
         "category": "Projet",
         "url": "https://drive.google.com/file/d/1UN8-YdFhR7UuhvARsf61kCxITTgot3Cf/view?usp=sharing",
         "isSandbox": false,
-        "display": true
+        "display": true,
+        "abstract": "Cette étude de cas démontre l'architecture et la mise en œuvre d'une solution complète d'Informatique Décisionnelle (BI) conçue pour résoudre des défis complexes d'accessibilité aux données au sein d'une entreprise multinationale de fabrication et de distribution. Basé sur l'écosystème d'Adventure Works Cycles, le projet aborde la friction critique entre la complexité des bases de données transactionnelles et les besoins de prise de décision de la direction face aux fluctuations du marché.Le cœur de la solution repose sur un pipeline de données découplé. Il comprend une analyse rigoureuse des sources, l'extraction structurelle, la consolidation des données et la modélisation logique dimensionnelle (Schéma en Étoile). L'architecture cible intègre des dimensions isolées; telles que le profilage détaillé des clients (démographie, préférences d'achat), les territoires de vente localisés et les catalogues de produits; autour de tables de faits transactionnelles centrales afin d'établir une Source Unique de Vérité absolue. Le système qui en résulte offre des capacités d'exploration de données à haute performance et des tableaux de bord analytiques exécutifs construits sur Power BI, Qlik Sense et la modélisation avancée. Cette approche facilite les prévisions régionales descriptives, la segmentation d'audience et l'analyse préventive du marché. En fin de compte, l'étude montre comment l'alignement des infrastructures de données brutes de l'entreprise avec la méthodologie BI atténue les défaillances opérationnelles silencieuses et libère des canaux de croissance des revenus prévisibles.",
+        "year": 2018
     },
     {
         "id": "experiment-circuitos",
@@ -51,7 +55,9 @@
         "category": "Projet",
         "url": "https://drive.google.com/file/d/1eIRVupKq6ct5eN00Z6vhNl4uG5JnA6G8/view?usp=sharing",
         "isSandbox": false,
-        "display": true
+        "display": true,
+        "abstract": "Cette étude de cas détaille le concept, l'architecture de produit et l'ingénierie de l'expérience utilisateur (UX) de Circuitos, une plateforme mobile conçue pour relier le patrimoine culturel urbain aux citoyens. Le projet répond à la problématique de la fragmentation des agendas d'événements et des points d'intérêt historiques ou artistiques cachés au sein d'environnements urbains denses (tels que les centres de design, les musées locaux et les fresques d'art urbain).Le cœur du système repose sur une architecture de données modulaire prenant en charge plusieurs sous-modules hautement interactifs : un agrégateur dynamique d'événements locaux avec planification personnalisée, un système de routage géolocalisé (Circuitos) pour guider les utilisateurs à travers des parcours culturels organisés, et un mécanisme de stockage local isolé permettant d'enregistrer des notes personnelles et des favoris. La conception technique privilégie des états de vue haute fidélité, des logiques de transition fluides et une cartographie des données géographiques afin de garantir une expérience mobile réactive et économe en bande passante.L'étude démontre de solides compétences dans la découverte de produits mobiles de bout en bout, les hiérarchies structurelles frontend et la planification de fonctionnalités multi-fonctionnelles. En alignant la découverte géospatiale avec la gestion d'événements, le projet montre comment l'ingénierie interactive peut transformer des données urbaines brutes en une expérience utilisateur engageante, cohérente et moderne.",
+        "year": 2017
     },
     {
         "id": "project-agent-orchestrator",
@@ -89,7 +95,9 @@
         "category": "Travail Académique",
         "url": "https://drive.google.com/file/d/1nVCuBsmsfOd7009AsGPlxSOo00pIHaCo/view?usp=sharing",
         "isSandbox": false,
-        "display": true
+        "display": true,
+        "abstract": "Ce cas d'affaires complet détaille la planification stratégique, les prévisions financières et le cadre technique d'une startup numérique visant à stimuler l'engagement du public dans les secteurs artistiques et culturels de Barcelone. Le projet répond au fossé historique entre las plateformes de découverte d'événements locaux et les comportements de publics hautement segmentés dans un paysage urbain post-numérique.Le cœur de l'étude repose sur une feuille de route de produit numérique structurée. Elle comprend une analyse rigoureuse d'entrée sur le marché (profilage de l'audience cible, audit de la concurrence), un modèle de monétisation durable et une stratégie de marketing en ligne axée sur les données, détaillant les entonnoirs d'acquisition multicanaux et les indicateurs clés de performance (KPI) opérationnels. Le périmètre de livraison intègre des cadres de gestion de projet Agiles avec des technologies logicielles sélectionnées afin d'aligner les calendriers d'exécution avec les limites budgétaires.Le mémoire démontre de solides compétences en gestion de produits numériques, en mise à l'échelle commerciale et en allocation exécutive des ressources. En reliant l'architecture des solutions techniques à la viabilité financière de l'entreprise, l'étude montre comment les principes de l'ingénierie analytique peuvent être exploités pour transformer un concept culturel en un modèle d'affaires numérique structuré, hautement prévisible et évolutif.",
+        "year": 2020
     },
     {
         "id": "experiment-tv-movie-streaming-like-webapp",

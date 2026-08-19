@@ -15,7 +15,9 @@
         "category": "Academic Works",
         "url": "https://drive.google.com/file/d/1yprBUaMhTifIBizEOwrhScjqB7WsA7-K/view?usp=sharing",
         "isSandbox": false,
-        "display": true
+        "display": true,
+        "abstract": "This case study explores how to foster a healthy engineering culture in technology teams facing management practices that undermine wellbeing, professional growth, and employee engagement.The analysis is based on an anonymized AI services company (B2B2C) that experienced rapid hypergrowth after being acquired. The organization, with over 600 employees across multiple countries, underwent significant leadership changes and departmental restructurings. These shifts led to favoritism in promotions, technical dominance by a few individuals, limited career development support, reduced psychological safety, decreased innovation, and progressive talent attrition.The purpose of the work is to propose a practical approach to co-create a healthier engineering culture. The scope focuses on three main areas: maturity of technological leadership, team dynamics, and the creation of psychologically safe and enriching work environments.Key objectives include strengthening talent management skills, defining shared mission and collaboration agreements between teams, and promoting continuous development, innovation, and soft skills. The proposed strategy combines situation assessment tools (SWOT, empathy maps, RASCI, system diagrams), concrete actions to rebuild trust and career clarity, soft-skills and leadership training programs, and a structured change management approach based on the ADKAR model to address resistance.The study provides a structured framework that technology leaders can adapt to reverse toxic patterns and build more sustainable, engaging, and high-performing engineering organizations.",
+        "year": 2023
     },
     {
         "id": "experiment-bi-adventure-works",
@@ -33,7 +35,9 @@
         "category": "Project",
         "url": "https://drive.google.com/file/d/1UN8-YdFhR7UuhvARsf61kCxITTgot3Cf/view?usp=sharing",
         "isSandbox": false,
-        "display": true
+        "display": true,
+        "abstract": "This case study demonstrates the architecture and implementation of a comprehensive Business Intelligence (BI) solution designed to solve complex data accessibility challenges within a multinational manufacturing and distribution enterprise. Based on the Adventure Works Cycles ecosystem, the project addresses the critical friction between transactional database complexity and executive decision-making needs during fluctuating market demands.The core of the solution is a decoupled data pipeline. It covers rigorous source analysis, structural extraction, data consolidation, and dimensional logic modeling (Star Schema). The target architecture integrates isolated dimensions—such as detailed customer profiling (demographics, purchasing preferences), localized sales territories, and product catalogs—around core transaction fact tables to establish an absolute Single Source of Truth.The resulting system delivers high-performing data exploration capabilities and executive analytical dashboards built on Power BI, Qlik Sense, and advanced modeling. This enablement facilitates descriptive regional forecasting, audience segmentation, and preventive market analysis. Ultimately, the study showcases how aligning raw enterprise data infrastructures with business intelligence methodology mitigates silent operational failures and unlocks predictable revenue growth channels.",
+        "year": 2018
     },
     {
         "id": "experiment-circuitos",
@@ -51,7 +55,9 @@
         "category": "Project",
         "url": "https://drive.google.com/file/d/1eIRVupKq6ct5eN00Z6vhNl4uG5JnA6G8/view?usp=sharing",
         "isSandbox": false,
-        "display": true
+        "display": true,
+        "abstract": "This case study details the concept, product architecture, and user experience (UX) engineering of Circuitos, a mobile platform designed to bridge the gap between urban cultural assets and local citizens. The project addresses the problem of fragmented event schedules and hidden historical or artistic points of interest within dense urban environments (such as design centers, local museums, and street art murals).The core of the system focuses on a modular data architecture supporting multiple highly interactive sub-modules: a dynamic local event aggregator with custom scheduling, a geolocalized routing system (Circuitos) to guide users through curated cultural paths, and an isolated local storage mechanism allowing users to log personal notes and bookmark favorites. The technical layout prioritizes high-fidelity view states, fluid transition logics, and geographic asset mapping to ensure a responsive, data-light mobile experience.The study demonstrates strong competencies in end-to-end mobile product discovery, structural frontend hierarchies, and cross-functional feature planning. By aligning geospatial discovery with event management, the project highlights how interactive engineering can transform raw urban data into an engaging, cohesive, and modern user experience.",
+        "year": 2017
     },
     {
         "id": "project-agent-orchestrator",
@@ -89,7 +95,9 @@
         "category": "Academic Works",
         "url": "https://drive.google.com/file/d/1nVCuBsmsfOd7009AsGPlxSOo00pIHaCo/view?usp=sharing",
         "isSandbox": false,
-        "display": true
+        "display": true,
+        "abstract": "This comprehensive business case details the strategic planning, financial forecasting, and technical framework for a digital startup aimed at driving public engagement within Barcelona's diverse artistic and cultural sectors. The project addresses the historical gap between local event discovery platforms and highly segmented audience behaviors in a post-digital urban landscape.The core of the study is a structured digital product roadmap. It covers a rigorous market entry analysis (target audience profiling, competitive landscape auditing), a sustainable monetization model, and a data-driven online marketing framework detailing multi-channel acquisition funnels and operational key performance indicators (KPIs). The delivery scope integrates Agile project frameworks with chosen software technologies to align execution timelines with budgetary boundaries.The thesis showcases deep competencies in digital product management, commercial scaling, and executive resource allocation. By bridging technical solution architecture with entrepreneurial unit economics, the study highlights how analytical engineering principles can be leveraged to transform a cultural concept into a structured, highly predictable, and scalable digital business model.",
+        "year": 2020
     },
     {
         "id": "experiment-tv-movie-streaming-like-webapp",
