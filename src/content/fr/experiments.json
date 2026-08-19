@@ -12,7 +12,7 @@
         ],
         "role": "Author",
         "type": "Essai sur le Leadership",
-        "category": "Étude de Cas",
+        "category": "Travail Académique",
         "url": "https://drive.google.com/file/d/1yprBUaMhTifIBizEOwrhScjqB7WsA7-K/view?usp=sharing",
         "isSandbox": false,
         "display": true
@@ -86,7 +86,7 @@
         ],
         "role": "Author",
         "type": "Concept e-Business et Analyse de Niche de Marché",
-        "category": "Étude de Cas",
+        "category": "Travail Académique",
         "url": "https://drive.google.com/file/d/1nVCuBsmsfOd7009AsGPlxSOo00pIHaCo/view?usp=sharing",
         "isSandbox": false,
         "display": true
@@ -107,7 +107,7 @@
         "category": "Preuve de Concept (PoC)",
         "type": "Application Web (Catalogue Films/Séries TV)",
         "url": "https://christianjtr.github.io/tv-app/",
-        "isSandbox": true,
+        "isSandbox": false,
         "display": true
     },
     {
@@ -224,5 +224,23 @@
         "url": "https://christianjtr.github.io/sticky-notes/",
         "isSandbox": true,
         "display": false
+    },
+    {
+        "id": "experiment-dynamic-pricing-calendar-webapp",
+        "section": "experiments",
+        "title": "Simulation de calendrier de tarification pour système de gestion avec React, TypeScript et TanStack Query.",
+        "description": "Simulateur interactif de gestion des revenus (Revenue Management) dédié à la visualisation de tarifs dynamiques en temps réel. S'appuie sur une architecture full-stack découplée et un flux de données réactif.",
+        "image": "/src/assets/images/dynamic_pricing_calendar.png",
+        "tags": [
+            "FullStack Development",
+            "ReactJS / NodeJS / TypeScript",
+            "TanStack Query"
+        ],
+        "role": "Author",
+        "category": "Preuve de Concept (PoC)",
+        "type": "Application web (Calendrier de tarification dynamique)",
+        "url": "https://github.com/christianjtr/dynamic-pricing-calendar",
+        "isSandbox": false,
+        "display": true
     }
 ]

@@ -2,7 +2,7 @@
     {
         "id": "experiment-healthy-culture-engineering-teams",
         "section": "experiments",
-        "title": "Caso de Estudio: Promoción de una cultura saludable en equipos de ingeniería",
+        "title": "Promoviendo una cultura saludable en equipos de ingeniería",
         "description": "Examine el papel crucial del liderazgo en el fomento de una cultura saludable dentro de los equipos de ingeniería. Argumentamos que el rol de un líder tecnológico se extiende más allá de la estrategia y la implementación, promoviendo activamente un ambiente de trabajo positivo.",
         "image": "/src/assets/images/engineer_management.png",
         "tags": [
@@ -12,7 +12,7 @@
         ],
         "role": "Author",
         "type": "Ensayo de Liderazgo",
-        "category": "Caso de Estudio",
+        "category": "Trabajo académico",
         "url": "https://drive.google.com/file/d/1yprBUaMhTifIBizEOwrhScjqB7WsA7-K/view?usp=sharing",
         "isSandbox": false,
         "display": true
@@ -86,7 +86,7 @@
         ],
         "role": "Author",
         "type": "Concepto de e-Business y Análisis de Nicho de Mercado",
-        "category": "Caso de Estudio",
+        "category": "Trabajo académico",
         "url": "https://drive.google.com/file/d/1nVCuBsmsfOd7009AsGPlxSOo00pIHaCo/view?usp=sharing",
         "isSandbox": false,
         "display": true
@@ -107,7 +107,7 @@
         "category": "Prueba de Concepto (PoC)",
         "type": "Aplicación Web (Catálogo de Películas/Series de TV)",
         "url": "https://christianjtr.github.io/tv-app/",
-        "isSandbox": true,
+        "isSandbox": false,
         "display": true
     },
     {
@@ -224,5 +224,23 @@
         "url": "https://christianjtr.github.io/sticky-notes/",
         "isSandbox": true,
         "display": false
+    },
+    {
+        "id": "experiment-dynamic-pricing-calendar-webapp",
+        "section": "experiments",
+        "title": "Simulación de calendario de precios para sistema de gestión con React, TypeScript y TanStack Query.",
+        "description": "Simulador interactivo de gestión de ingresos (Revenue Management) para la visualización de tarifas en tiempo real. Implementa un flujo de datos unidireccional y reactivo alimentado por un servidor API full-stack desacoplado.",
+        "image": "/src/assets/images/dynamic_pricing_calendar.png",
+        "tags": [
+            "FullStack Development",
+            "ReactJS / NodeJS / TypeScript",
+            "TanStack Query"
+        ],
+        "role": "Author",
+        "category": "Prueba de Concepto (PoC)",
+        "type": "Aplicación web (Calendario de precios dinámicos)",
+        "url": "https://github.com/christianjtr/dynamic-pricing-calendar",
+        "isSandbox": false,
+        "display": true
     }
 ]

@@ -2,7 +2,7 @@
     {
         "id": "experiment-healthy-culture-engineering-teams",
         "section": "experiments",
-        "title": "Case of Study: Promoting a healthy culture within engineering teams",
+        "title": "Promoting a healthy culture within engineering teams",
         "description": "Examine the critical role of leadership in fostering a healthy culture within engineering teams. We argue that a technology leader's role extends beyond strategy and implementation to actively promoting a positive work environment.",
         "image": "/src/assets/images/engineer_management.png",
         "tags": [
@@ -12,7 +12,7 @@
         ],
         "role": "Author",
         "type": "Leadership Essay",
-        "category": "Case of Study",
+        "category": "Academic Works",
         "url": "https://drive.google.com/file/d/1yprBUaMhTifIBizEOwrhScjqB7WsA7-K/view?usp=sharing",
         "isSandbox": false,
         "display": true
@@ -86,7 +86,7 @@
         ],
         "role": "Author",
         "type": "e-Business Concept and Market Niche Analysis",
-        "category": "Case of Study",
+        "category": "Academic Works",
         "url": "https://drive.google.com/file/d/1nVCuBsmsfOd7009AsGPlxSOo00pIHaCo/view?usp=sharing",
         "isSandbox": false,
         "display": true
@@ -107,7 +107,7 @@
         "category": "Proof of Concept (PoC)",
         "type": "Web app (Movie/TV Series Catalog)",
         "url": "https://christianjtr.github.io/tv-app/",
-        "isSandbox": true,
+        "isSandbox": false,
         "display": true
     },
     {
@@ -224,5 +224,23 @@
         "url": "https://christianjtr.github.io/sticky-notes/",
         "isSandbox": true,
         "display": false
+    },
+    {
+        "id": "experiment-dynamic-pricing-calendar-webapp",
+        "section": "experiments",
+        "title": "Management System Pricing Calendar simulation with React, TypeScript, and TanStack Query",
+        "description": "An interactive Revenue Management simulation featuring real-time dynamic rates visualization. Built on a decoupled full-stack architecture powered by a high-performance API server and reactive data flows.",
+        "image": "/src/assets/images/dynamic_pricing_calendar.png",
+        "tags": [
+            "FullStack Development",
+            "ReactJS / NodeJS / TypeScript",
+            "TanStack Query"
+        ],
+        "role": "Author",
+        "category": "Proof of Concept (PoC)",
+        "type": "Web app (Dynamic Pricing Calendar)",
+        "url": "https://github.com/christianjtr/dynamic-pricing-calendar",
+        "isSandbox": false,
+        "display": true
     }
 ]
