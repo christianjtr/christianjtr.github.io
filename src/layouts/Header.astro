@@ -26,7 +26,7 @@ const { header } = (entry?.data as AboutMeData) || {};
                 </a>
             </div>
             <div class="navbar-center hidden lg:flex lg:gap-10 xl:gap-16">
-                {header.main_sections.map((section) => (
+                {header.main_sections.filter((section) => section.active).map((section) => (
                     <a 
                         role="button"
                         class="navbar-link hover:text-primary" 

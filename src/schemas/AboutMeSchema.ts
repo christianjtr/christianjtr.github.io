@@ -65,7 +65,8 @@ const HeaderSchema = z.object({
     })),
     main_sections: z.array(z.object({
         anchorId: z.string(),
-        label: z.string()
+        label: z.string(),
+        active: z.boolean()
     })),
     locale_banner: LocaleBannerSchema
 });

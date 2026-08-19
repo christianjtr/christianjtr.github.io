@@ -22,7 +22,7 @@ const { sections } = Astro.props;
         <div class="card-body dropdown-menu-content p-3">
             <nav aria-label="Mobile navigation">
                 <ul class="menu menu-md p-0 gap-1">
-                    {sections.map((section) => (
+                    {sections.filter((section) => section.active).map((section) => (
                         <li>
                             <a 
                                 class="hover:text-primary active:bg-primary/10 py-3 px-4 rounded-lg" 
