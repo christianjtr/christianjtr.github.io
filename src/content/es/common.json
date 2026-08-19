@@ -56,19 +56,23 @@
         "main_sections": [
             {
                 "anchorId": "featured_projects",
-                "label": "Proyectos Destacados"
+                "label": "Proyectos Destacados",
+                "active": true
             },
             {
                 "anchorId": "credentials",
-                "label": "Certificaciones"
+                "label": "Certificaciones",
+                "active": true
             },
             {
-                "anchorId": "case_of_studies",
-                "label": "Casos de Estudio y Trabajos"
+                "anchorId": "selected_works",
+                "label": "Selección de Trabajos",
+                "active": true
             },
             {
                 "anchorId": "background",
-                "label": "Trayectoria"
+                "label": "Trayectoria",
+                "active": false
             }
         ],
         "locale_banner": {
@@ -281,13 +285,13 @@
         "subtitle": "Trabajos y proyectos presentados en conferencias internacionales"
     },
     "section_experiments": {
-        "title": "Casos de Estudio y Trabajos",
+        "title": "Selección de Trabajos",
         "subtitle": "Una selección de algunos de mis proyectos y pruebas de concepto"
     },
     "section_experiences": {
         "title": "Trayectoria",
-        "subtitle": "Un vistazo completo a mi crecimiento profesional y logros clave en diferentes países",
-        "collaborated_with": "Experiencia colaborando con equipos y personas de diferentes países.",
+        "subtitle": "Un vistazo completo a mi crecimiento profesional y logros clave en diferentes países en Europa y USA",
+        "collaborated_with": "Experiencia colaborando con equipos y personas de diferentes países en Europa y USA.",
         "companies_across_regions": "Trabajé en diferentes mercados",
         "companies_and_countries_lived_in": "Países donde viví, trabajé y estudié",
         "academic_foundation": "Educación formal y credenciales verificadas que respaldan la ejecución técnica.",

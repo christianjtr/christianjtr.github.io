@@ -56,19 +56,23 @@
         "main_sections": [
             {
                 "anchorId": "featured_projects",
-                "label": "Projets Phares"
+                "label": "Projets Phares",
+                "active": true
             },
             {
                 "anchorId": "credentials",
-                "label": "Certifications"
+                "label": "Certifications",
+                "active": true
             },
             {
-                "anchorId": "case_of_studies",
-                "label": "Études de Cas et Travaux"
+                "anchorId": "selected_works",
+                "label": "Sélection de travaux",
+                "active": true
             },
             {
                 "anchorId": "background",
-                "label": "Parcours"
+                "label": "Parcours",
+                "active": false
             }
         ],
         "locale_banner": {
@@ -281,13 +285,13 @@
         "subtitle": "J'ai présenté mes travaux de projet lors de conférences internationales"
     },
     "section_experiments": {
-        "title": "Études de Cas et Travaux",
+        "title": "Sélection de travaux",
         "subtitle": "Une sélection de certains de mes projets et œuvres"
     },
     "section_experiences": {
         "title": "Parcours",
-        "subtitle": "Un aperçu complet de mon évolution professionnelle et de mes réalisations clés dans différents pays",
-        "collaborated_with": "Expérience de collaboration avec des équipes et des personnes de différents pays.",
+        "subtitle": "Un aperçu complet de mon évolution professionnelle et de mes réalisations clés dans différents pays d'Europe et des États-Unis",
+        "collaborated_with": "Expérience de collaboration avec des équipes et des personnes de différents pays d'Europe et des États-Unis.",
         "companies_across_regions": "Expérience sur différents marchés",
         "companies_and_countries_lived_in": "Pays où j'ai vécu, travaillé et étudié",
         "academic_foundation": "Éducation formelle et diplômes vérifiés soutenant l'exécution technique.",

@@ -56,19 +56,23 @@
         "main_sections": [
             {
                 "anchorId": "featured_projects",
-                "label": "Featured Projects"
+                "label": "Featured Projects",
+                "active": true
             },
             {
                 "anchorId": "credentials",
-                "label": "Certifications"
+                "label": "Certifications",
+                "active": true
             },
             {
-                "anchorId": "case_of_studies",
-                "label": "Case of Studies and Works"
+                "anchorId": "selected_works",
+                "label": "Selected Works",
+                "active": true
             },
             {
                 "anchorId": "background",
-                "label": "Background"
+                "label": "Background",
+                "active": false
             }
         ],
         "locale_banner": {
@@ -281,13 +285,13 @@
         "subtitle": "Presented project work at international conferences"
     },
     "section_experiments": {
-        "title": "Case of Studies and Works",
+        "title": "Selected Works",
         "subtitle": "A curated collection of some of my projects and works"
     },
     "section_experiences": {
         "title": "Background",
-        "subtitle": "A comprehensive look at my professional growth and key accomplishments across different countries",
-        "collaborated_with": "Experience collaborating with teams and people across different countries.",
+        "subtitle": "A comprehensive look at my professional growth and key accomplishments across different countries n Europe and the US",
+        "collaborated_with": "Experience collaborating with teams and people across different countries within Europe and the US.",
         "companies_across_regions": "Worked across different markets",
         "companies_and_countries_lived_in": "Countries Lived, Worked, and Studied in",
         "academic_foundation": "Formal education and verified credentials supporting technical execution.",
