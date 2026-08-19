@@ -250,5 +250,68 @@
         "url": "https://github.com/christianjtr/dynamic-pricing-calendar",
         "isSandbox": false,
         "display": true
+    },
+    {
+        "id": "experiment-semantic-graph-mcp",
+        "section": "experiments",
+        "title": "Semantic Knowledge Graph MCP Server",
+        "description": "Independent MCP server that builds deterministic semantic knowledge graphs for projects. Designed as a lightweight plugin that integrates with multiple AI agents without modifying core systems. Focused on structured project understanding, timelines and graph outputs for visualization.",
+        "image": "/src/assets/images/semantic_graph_mcp.jpeg",
+        "tags": [
+            "MCP",
+            "Agentic Systems",
+            "Knowledge Graphs",
+            "TypeScript",
+            "AI Tooling"
+        ],
+        "role": "Author",
+        "category": "Work in progress (WIP)",
+        "type": "MCP Server / AI Tooling",
+        "url": null,
+        "isSandbox": false,
+        "display": true,
+        "year": 2026
+    },
+    {
+        "id": "experiment-type-safe-graphql-api",
+        "section": "experiments",
+        "title": "Type-safe GraphQL API (Domain-driven)",
+        "description": "Production-oriented GraphQL API built with TypeScript, Apollo Server and a modern ORM. Features strong end-to-end type safety, custom scalars, optimized data loading patterns, automated documentation and an experimental natural-language query layer.",
+        "image": "/src/assets/images/graphql_api_architecture.jpeg",
+        "tags": [
+            "GraphQL",
+            "TypeScript",
+            "Apollo Server",
+            "Clean Architecture",
+            "Developer Experience"
+        ],
+        "role": "Author",
+        "category": "Work in progress (WIP)",
+        "type": "API / Backend Architecture",
+        "url": null,
+        "isSandbox": false,
+        "display": true,
+        "year": 2026
+    },
+    {
+        "id": "experiment-cognitive-usability-tool",
+        "section": "experiments",
+        "title": "Cognitive Usability Analysis Tool",
+        "description": "Experimental command-line tool inspired by cognitive usability principles. Analyzes web interfaces from a human-centered perspective to help identify friction points and improve clarity. Currently in early development.",
+        "image": "/src/assets/images/cognitive_usability_tool.jpeg",
+        "tags": [
+            "Usability",
+            "Developer Tools",
+            "Cognitive Design",
+            "CLI",
+            "Human-Centered"
+        ],
+        "role": "Author",
+        "category": "Work in progress (WIP)",
+        "type": "CLI / Analysis Tool",
+        "url": null,
+        "isSandbox": false,
+        "display": true,
+        "year": 2026
     }
 ]

@@ -250,5 +250,68 @@
         "url": "https://github.com/christianjtr/dynamic-pricing-calendar",
         "isSandbox": false,
         "display": true
+    },
+    {
+        "id": "experiment-semantic-graph-mcp",
+        "section": "experiments",
+        "title": "Serveur MCP de Graphes de Connaissances Sémantiques",
+        "description": "Serveur MCP indépendant qui génère de manière déterministe des graphes de connaissances sémantiques pour les projets. Conçu comme un plugin léger, il s'intègre à plusieurs agents d'IA sans modifier les systèmes centraux. Axé sur la compréhension structurée des projets, les chronologies et la génération de graphes pour la visualisation.",
+        "image": "/src/assets/images/semantic_graph_mcp.jpeg",
+        "tags": [
+            "MCP",
+            "Systèmes Agentiels",
+            "Graphes de Connaissances",
+            "TypeScript",
+            "Outils IA"
+        ],
+        "role": "Author",
+        "category": "En cours (WIP)",
+        "type": "Serveur MCP / Outils IA",
+        "url": null,
+        "isSandbox": false,
+        "display": true,
+        "year": 2026
+    },
+    {
+        "id": "experiment-type-safe-graphql-api",
+        "section": "experiments",
+        "title": "API GraphQL Type-Safe (Domain-Driven)",
+        "description": "API GraphQL orientée production conçue avec TypeScript, Apollo Server et un ORM moderne. Intègre un typage strict de bout en bout, des scalaires personnalisés, des modèles de chargement de données optimisés, une documentation automatisée et une couche de requête expérimentale en langage naturel.",
+        "image": "/src/assets/images/graphql_api_architecture.jpeg",
+        "tags": [
+            "GraphQL",
+            "TypeScript",
+            "Apollo Server",
+            "Architecture Propre",
+            "Expérience Développeur"
+        ],
+        "role": "Author",
+        "category": "En cours (WIP)",
+        "type": "API / Architecture Backend",
+        "url": null,
+        "isSandbox": false,
+        "display": true,
+        "year": 2026
+    },
+    {
+        "id": "experiment-cognitive-usability-tool",
+        "section": "experiments",
+        "title": "Outil d'Analyse d'Ergonomie Cognitive",
+        "description": "Outil expérimental en ligne de commande inspiré des principes d'ergonomie cognitive. Analyse les interfaces web selon une approche centrée sur l'humain afin d'identifier les points de friction et d'améliorer la clarté. Actuellement en phase initiale de développement.",
+        "image": "/src/assets/images/cognitive_usability_tool.jpeg",
+        "tags": [
+            "Ergonomie",
+            "Outils Développeur",
+            "Design Cognitif",
+            "CLI",
+            "Centré sur l'Humain"
+        ],
+        "role": "Author",
+        "category": "En cours (WIP)",
+        "type": "CLI / Outil d'Analyse",
+        "url": null,
+        "isSandbox": false,
+        "display": true,
+        "year": 2026
     }
 ]
