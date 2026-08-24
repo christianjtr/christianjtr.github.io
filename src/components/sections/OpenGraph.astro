@@ -12,7 +12,7 @@ const { locales, defaultLocale } = i18nLocalesConfig;
 const commonData = await getEntry(lang as ContentDataEntryType, `${lang}/${CONTENT.COMMON}`);
 const { open_graph } = (commonData?.data as AboutMeData) || {};
 
-const defaultImage = 'https://raw.githubusercontent.com/christianjtr/christianjtr.github.io/refs/heads/main/src/assets/web_cover_post.png';
+const defaultImage = 'https://raw.githubusercontent.com/christianjtr/christianjtr.github.io/refs/heads/main/public/web_cover.png';
 const siteName = 'https://christianjtr.github.io/';
 const canonical = `${siteName}${Astro.url.pathname}`;
 const basePath = Astro.url.pathname.replace(`/${lang}`, '');
