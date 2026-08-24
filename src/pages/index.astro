@@ -1,9 +1,18 @@
 ---
 import { ClientRouter } from 'astro:transitions';
-import { i18nLocalesConfig } from '../../i18n.config.mjs';
+import { getEntry } from 'astro:content';
+import { i18nLocalesConfig } from '../../i18n.config.mjs'
+import MyOpenGraphComponent from '@components/sections/OpenGraph.astro';
+import type { AboutMeData } from '@schemas/AboutMeSchema';
+import { CONTENT } from '@app-types/Content';
+import type { ContentDataEntryType } from '@app-types/Content';
+
 
 const { locales, defaultLocale } = i18nLocalesConfig;
 const LOCALE_STORAGE_KEY = 'user-locale-preference';
+
+const commonData = await getEntry(defaultLocale as ContentDataEntryType, `${defaultLocale}/${CONTENT.COMMON}`);
+const { open_graph } = (commonData?.data as AboutMeData) || {};
 ---
 
 <!DOCTYPE html>
@@ -12,9 +21,8 @@ const LOCALE_STORAGE_KEY = 'user-locale-preference';
     <ClientRouter />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="noindex, nofollow" />
-    <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="0;url=/en/" />
+    <MyOpenGraphComponent lang={defaultLocale} /> 
+    <title>{open_graph?.title || 'Redirecting...'}</title>
     <style>
       body {
         font-family: system-ui, -apple-system, sans-serif;
