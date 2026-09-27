@@ -4,13 +4,11 @@ import type { ContentDataEntryType } from '@app-types/Content';
 import type { AboutMeData } from '@schemas/AboutMeSchema';
 import { CONTENT } from '@app-types/Content';
 import Logo from '@assets/svg/people.svg';
-import { Section, VerticalSpacer, BadgeList } from "../";
-import BuildingIcon from "@assets/svg/building.svg";
-import AcademicCapIcon from "@assets/svg/academic_cap.svg";
+import { Section, VerticalSpacer } from "../";
 
 const { lang } = Astro.params;
 const commonData = await getEntry(lang as ContentDataEntryType, `${lang}/${CONTENT.COMMON}`);
-const { section_skills, section_about, section_experiences, section_studies, common } = (commonData?.data as AboutMeData) || {};
+const { section_skills, section_about, common } = (commonData?.data as AboutMeData) || {};
 
 type StyleItem = { text: string; bg: string; };
 
@@ -28,7 +26,7 @@ const skills = section_about.expertise.subjects.map((subject) => {
     id: key,
     name: subject.name,
     category: subject.category.toUpperCase(),
-    topics: subject.topics,
+    tools: subject.tools,
     ...config
   };
 });
@@ -38,48 +36,20 @@ const skills = section_about.expertise.subjects.map((subject) => {
   <Section headingTitle={section_skills.title} subtitle={section_skills.subtitle} class="container mx-auto px-1 lg:px-10">
     <Logo slot="beforeHeading" width={90} height={90} />
     <VerticalSpacer />
-    <div class="apple-editorial-grid flex flex-col md:flex-row px-2 gap-6 md:gap-4">
-        <div class="editorial-card card-synergy vshape-box">
-            <div class="card-body-wrapper">
-                <div class="card-meta-header">
-                    <BuildingIcon width={14} height={14} class="stroke-2 shrink-0" />
-                    <span class="card-meta-title">{section_experiences.companies_across_regions}</span>
-                </div>
-                <h3 class="editorial-heading">
-                    {section_experiences.collaborated_with}
-                </h3>
-            </div>
-            <div class="chip-container">
-                <BadgeList items={section_experiences.full_countries} badgeClass="font-semibold badge-soft text-[11px]" />
-            </div>
-        </div>
-        <div class="editorial-card card-academy vshape-box">
-            <div class="card-body-wrapper">
-                <div class="card-meta-header">
-                    <AcademicCapIcon width={14} height={14} class="stroke-2 shrink-0" />
-                    <span class="card-meta-title">{section_studies.title}</span>
-                </div>
-                <h3 class="editorial-heading">{section_experiences.academic_foundation}</h3>
-            </div>
-            <div class="academy-footer">
-                <span class="truncate pr-2">{section_studies.educational_level}</span>
-            </div>
-        </div>
-    </div>
     <div class="group-main w-full mx-auto flex flex-col md:flex-row px-2 gap-6 md:gap-4 items-center md:items-stretch relative">
       <div class="w-full md:w-1/5 flex items-center justify-center md:justify-start z-10">
-        <div class="vshape-box w-full p-4 rounded-lg text-center max-w-[150px]">
-          <h5 class="text-sm font-mono uppercase leading-normal tracking-widest font-bold text-balance">
+        <div class="vshape-box vshape-target w-full p-4 rounded-lg text-center max-w-[150px] transition-all duration-300">
+          <h5 class="vshape-text text-sm font-mono uppercase leading-normal tracking-widest font-bold text-balance transition-colors">
             {section_about.v_shaped_profile}
           </h5>
         </div>
       </div>
       <svg class="absolute inset-0 w-full h-full pointer-events-none z-0 hidden md:block" viewBox="0 0 896 320" preserveAspectRatio="none">
-        <g fill="none" class="graph-lines stroke-[2px] transition-all duration-300">
-          <path d="M 120,160 L 140,160 C 165,160 165,45 225,45" class="line-product"></path>
-          <path d="M 120,160 L 140,160 C 165,160 165,120 225,120" class="line-coding"></path>
-          <path d="M 120,160 L 140,160 C 165,160 165,195 225,195" class="line-data"></path>
-          <path d="M 120,160 L 140,160 C 165,160 165,275 225,275" class="line-ai"></path>
+        <g fill="none" class="graph-lines">
+          <path d="M 120,160 L 140,160 C 165,160 165,45 225,45" class="laser-path line-product"></path>
+          <path d="M 120,160 L 140,160 C 165,160 165,120 225,120" class="laser-path line-coding"></path>
+          <path d="M 120,160 L 140,160 C 165,160 165,195 225,195" class="laser-path line-data"></path>
+          <path d="M 120,160 L 140,160 C 165,160 165,275 225,275" class="laser-path line-ai"></path>
         </g>
       </svg>
       <div class="w-full md:w-4/5 flex flex-col md:flex-row gap-6 items-stretch relative">
@@ -95,23 +65,33 @@ const skills = section_about.expertise.subjects.map((subject) => {
             </div>
           ))}
         </div>
-        <div class="ghost-container w-full md:w-[44%] z-10 relative">
+        <div class="ghost-container w-full md:w-[44%] z-10 relative min-h-[280px]">
           <div class="placeholder-text transition-opacity duration-200 absolute inset-0 m-auto p-4 flex flex-col justify-center items-center">
             <div class="w-8 h-8 rounded-full flex items-center justify-center mb-3 placeholder-icon">
               <span class="text-lg font-mono">⇄</span>
             </div>
-            <span class="text-xs font-mono uppercase tracking-widest block mb-2">{common.key_areas}</span>
+            <span class="text-xs font-mono uppercase tracking-widest block mb-2">{common.stack}</span>
             <p class="text-sm leading-relaxed font-medium">
               {common.interact_with}
             </p>
           </div>
           {skills.map((skill) => (
-            <div class={`topics-list topics-${skill.id}`}>
-              {skill.topics.map((topic) => (
-                <div class={`topic-pill topic-pill--${skill.id}`}>
-                  <span>{topic}</span>
-                </div>
-              ))}
+            <div class={`topics-list topics-${skill.id} p-5 flex flex-col justify-between h-full absolute inset-0`}>
+              <div class="mb-3 pb-2 border-b border-slate-600/50 flex items-center justify-between shrink-0">
+                <span class="text-[10px] font-mono uppercase font-bold tracking-wider text-slate-300">
+                  {skill.name} • {common.stack}
+                </span>
+                <span class="text-[10px] font-mono text-slate-400">
+                  {skill.tools.length} items
+                </span>
+              </div>
+              <div class="flex flex-wrap gap-2 overflow-y-auto pr-1 scrollbar-thin">
+                {skill.tools.map((tool) => (
+                  <div class={`topic-pill topic-pill--${skill.id} px-2.5! py-1! text-center`}>
+                    <span class="text-[11px] font-semibold">{tool}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           ))}
         </div>
@@ -124,135 +104,156 @@ const skills = section_about.expertise.subjects.map((subject) => {
 <style>
   @reference "@styles/global.css";
 
+  /* ==================== EDITORIAL CARDS ==================== */
   .apple-editorial-grid {
-        @apply w-full grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch mb-12 select-none font-sans;
-    }
+    @apply w-full grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch mb-12 select-none font-sans;
+  }
 
-    .editorial-card {
-        @apply border rounded-lg p-6 md:p-8 flex flex-col justify-between transition-all duration-300 min-h-[180px] w-full;
-        background-color: var(--fallback-b1, hsl(var(--b1)));
-        border-color: #e5e5e5;
-    }
+  .editorial-card {
+    @apply border rounded-lg p-6 md:p-8 flex flex-col justify-between transition-all duration-300 min-h-[180px] w-full;
+    background-color: var(--fallback-b1, hsl(var(--b1)));
+    border-color: #e5e5e5;
+  }
 
-    .editorial-card:hover {
-        @apply border border-primary/70 shadow-lg shadow-primary/10 -translate-y-1;
-    }
+  .editorial-card:hover {
+    @apply border border-primary/70 shadow-lg shadow-primary/10 -translate-y-1;
+  }
 
-    .background-item {
-        @apply border-l-2 border-transparent;
-    }
+  .background-item {
+    @apply border-l-2 border-transparent;
+  }
 
-    .background-item:hover {
-        @apply border-primary/75;
-    }
+  .background-item:hover {
+    @apply border-primary/75;
+  }
 
-    html[data-theme="dark"] .background-item:hover {
-        @apply border-accent;
-    }
+  html[data-theme="dark"] .background-item:hover {
+    @apply border-accent;
+  }
 
-    .card-synergy {
-        @apply md:col-span-7;
-    }
-    .card-academy {
-        @apply md:col-span-5;
-    }
-    .card-body-wrapper {
-        @apply space-y-4 w-full;
-    }
+  .card-synergy {
+    @apply md:col-span-7;
+  }
 
-    /* Cabeceras y Etiquetas de Metadatos */
-    .card-meta-header {
-        @apply flex items-center gap-2 text-neutral-400;
-    }
-    .card-meta-title {
-        @apply text-[10px] font-bold uppercase tracking-widest font-mono;
-    }
-    .editorial-heading {
-        @apply text-lg md:text-xl font-semibold text-neutral-800 tracking-tight leading-snug whitespace-normal max-w-lg;
-    }
+  .card-academy {
+    @apply md:col-span-5;
+  }
 
-    /* Contenedores de Tags e Inyecciones de Sinergia */
-    .chip-container {
-        @apply flex flex-wrap gap-2 mt-3 pt-5 border-t w-full;
-        border-color: rgba(229, 229, 229, 0.5);
-    }
-    .editorial-chip {
-        @apply text-[10px] font-mono font-semibold px-2.5 py-1 rounded-md bg-white border border-neutral-200/50 text-neutral-500;
-    }
+  .card-body-wrapper {
+    @apply space-y-4 w-full;
+  }
 
-    /* Resaltados de Texto Enlazados al Tema */
-    .highlight-primary {
-        @apply font-extrabold text-primary font-mono;
-    }
-    .highlight-secondary {
-        @apply font-extrabold text-accent tabular-nums;
-    }
+  .card-meta-header {
+    @apply flex items-center gap-2 text-neutral-400;
+  }
 
-    /* Componentes del Pie de la Tarjeta Académica */
-    .academy-footer {
-        @apply pt-4 border-t flex items-center justify-between text-[10px] font-bold text-secondary uppercase tracking-wider w-full;
-        border-color: rgba(229, 229, 229, 0.5);
-    }
-    .footer-divider {
-        @apply text-neutral-300 select-none font-normal;
-    }
-    .footer-status {
-        @apply text-neutral-400 font-mono text-[9px] font-normal lowercase shrink-0;
-    }
+  .card-meta-title {
+    @apply text-[10px] font-bold uppercase tracking-widest font-mono;
+  }
 
-    html[data-theme="dark"] .editorial-card, html[data-theme="dark"] .editorial-card  {
-        @apply bg-neutral-900 border-neutral-800 text-white;
-    }
-    html[data-theme="dark"] .editorial-card:hover {
-        @apply border-accent/70 shadow-accent/5;
-    }
-    html[data-theme="dark"] .card-meta-header {
-        @apply text-neutral-500;
-    }
-    html[data-theme="dark"] .editorial-heading {
-        @apply text-white;
-    }
-    html[data-theme="dark"] .chip-container,
-    html[data-theme="dark"] .academy-footer {
-        border-color: rgba(38, 38, 38, 0.5);
-    }
-    html[data-theme="dark"] .editorial-chip {
-        @apply bg-neutral-900 border-neutral-800 text-neutral-400;
-    }
-    html[data-theme="dark"] .highlight-primary {
-        @apply text-accent;
-    }
-    html[data-theme="dark"] .footer-divider {
-        @apply text-neutral-700;
-    }
+  .editorial-heading {
+    @apply text-lg md:text-xl font-semibold text-neutral-800 tracking-tight leading-snug whitespace-normal max-w-lg;
+  }
 
+  .chip-container {
+    @apply flex flex-wrap gap-2 mt-3 pt-5 border-t w-full;
+    border-color: rgba(229, 229, 229, 0.5);
+  }
 
-  .vshape-box, .pillar-card { @apply bg-base-100 border border-slate-400 text-slate-700; }
-  .graph-lines { @apply stroke-slate-500; }
-  .pillar-name { @apply text-slate-800; }
+  .editorial-chip {
+    @apply text-[10px] font-mono font-semibold px-2.5 py-1 rounded-md bg-white border border-neutral-200/50 text-neutral-500;
+  }
+
+  .highlight-primary {
+    @apply font-extrabold text-primary font-mono;
+  }
+
+  .highlight-secondary {
+    @apply font-extrabold text-accent tabular-nums;
+  }
+
+  .academy-footer {
+    @apply pt-4 border-t flex items-center justify-between text-[10px] font-bold text-secondary uppercase tracking-wider w-full;
+    border-color: rgba(229, 229, 229, 0.5);
+  }
+
+  .footer-divider {
+    @apply text-neutral-300 select-none font-normal;
+  }
+
+  .footer-status {
+    @apply text-neutral-400 font-mono text-[9px] font-normal lowercase shrink-0;
+  }
+
+  html[data-theme="dark"] .editorial-card {
+    @apply bg-neutral-900 border-neutral-800 text-white;
+  }
+
+  html[data-theme="dark"] .editorial-card:hover {
+    @apply border-accent/70 shadow-accent/5;
+  }
+
+  html[data-theme="dark"] .card-meta-header {
+    @apply text-neutral-500;
+  }
+
+  html[data-theme="dark"] .editorial-heading {
+    @apply text-white;
+  }
+
+  html[data-theme="dark"] .chip-container,
+  html[data-theme="dark"] .academy-footer {
+    border-color: rgba(38, 38, 38, 0.5);
+  }
+
+  html[data-theme="dark"] .editorial-chip {
+    @apply bg-neutral-900 border-neutral-800 text-neutral-400;
+  }
+
+  html[data-theme="dark"] .highlight-primary {
+    @apply text-accent;
+  }
+
+  html[data-theme="dark"] .footer-divider {
+    @apply text-neutral-700;
+  }
+
+  /* ==================== V-SHAPE & PILLAR CARDS ==================== */
+  .vshape-box, .pillar-card { 
+    @apply bg-base-100 border border-slate-400 text-slate-700; 
+  }
+
+  .pillar-name { 
+    @apply text-slate-800; 
+  }
   
   .ghost-container {
     @apply border border-dashed border-slate-400 rounded-lg p-5 flex flex-col justify-center items-center text-center 
-           min-h-[260px] md:min-h-auto overflow-hidden mt-4 md:mt-0 bg-slate-100/30;
+           min-h-[280px] md:min-h-auto overflow-hidden mt-4 md:mt-0 bg-slate-100/30;
   }
 
-  .placeholder-icon { @apply bg-slate-700 text-white; }
-  .placeholder-text { @apply text-slate-400; }
+  .placeholder-icon { 
+    @apply bg-slate-700 text-white; 
+  }
+
+  .placeholder-text { 
+    @apply text-slate-400; 
+  }
 
   .topics-list {
-    @apply hidden flex-col gap-2.5 w-full h-full justify-center absolute inset-0 p-5 bg-slate-700 z-1 
+    @apply hidden flex-col w-full h-full justify-start absolute inset-0 p-5 bg-slate-700 z-1 
            transition-all duration-300 opacity-0;
   }
 
   .topic-pill {
-    @apply px-4 py-3 rounded-lg border text-left shadow-sm scale-95 
+    @apply px-3 py-1.5 rounded-lg border text-left shadow-sm scale-95 
            animate-[fadeIn_0.2s_ease-out_forwards] tracking-wide;
     border-color: rgba(148, 163, 184, 0.35);
     background: rgba(15, 23, 42, 0.85);
   }
 
+  /* Dark Theme Elements */
   :global(html[theme="dark"]) .vshape-box { @apply text-white bg-slate-950; }
-  :global(html[theme="dark"]) .graph-lines { @apply stroke-slate-400; }
   :global(html[theme="dark"]) .pillar-card { @apply bg-neutral-900 border-neutral-600 text-slate-200; }
   :global(html[theme="dark"]) .pillar-name { @apply text-slate-200; }
   :global(html[theme="dark"]) .ghost-container { @apply border-neutral-500 bg-neutral-900; }
@@ -263,6 +264,76 @@ const skills = section_about.expertise.subjects.map((subject) => {
     background: rgba(15, 23, 42, 0.85);
   }
 
+  /* ==================== SVG GRAPH CONNECTORS ==================== */
+  svg .laser-path { 
+    stroke: #64748b !important;
+    stroke-width: 2px !important;
+    opacity: 0.35 !important;
+    transition: all 0.3s ease !important; 
+  }
+
+  /* Atenúa las líneas inactivas en hover */
+  .group-main:has(.pillar-card:hover) svg .laser-path {
+    opacity: 0.08 !important;
+    stroke-width: 1px !important;
+  }
+
+  /* LÍNEA ACTIVA HOVERED: Colores intensos + Drop Shadow en Tema Claro */
+  .group-main:has(.pilar-product:hover) svg .line-product { 
+    stroke: #0284c7 !important;
+    filter: drop-shadow(0 0 3px rgba(2, 132, 199, 0.8)) !important;
+    opacity: 1 !important;
+    stroke-width: 5px !important;
+    stroke-dasharray: 12 6 !important;
+    animation: laserStream 0.8s linear infinite !important;
+  }
+
+  .group-main:has(.pilar-coding:hover) svg .line-coding { 
+    stroke: #c026d3 !important;
+    filter: drop-shadow(0 0 3px rgba(192, 38, 211, 0.8)) !important;
+    opacity: 1 !important;
+    stroke-width: 5px !important;
+    stroke-dasharray: 12 6 !important;
+    animation: laserStream 0.8s linear infinite !important;
+  }
+
+  .group-main:has(.pilar-data:hover) svg .line-data { 
+    stroke: #059669 !important;
+    filter: drop-shadow(0 0 3px rgba(5, 150, 105, 0.8)) !important;
+    opacity: 1 !important;
+    stroke-width: 5px !important;
+    stroke-dasharray: 12 6 !important;
+    animation: laserStream 0.8s linear infinite !important;
+  }
+
+  .group-main:has(.pilar-ai:hover) svg .line-ai { 
+    stroke: #7c3aed !important;
+    filter: drop-shadow(0 0 3px rgba(124, 58, 237, 0.8)) !important;
+    opacity: 1 !important;
+    stroke-width: 5px !important;
+    stroke-dasharray: 12 6 !important;
+    animation: laserStream 0.8s linear infinite !important;
+  }
+
+  /* LÍNEA ACTIVA HOVERED: Colores brillantes en Tema Oscuro */
+  html[data-theme="dark"] .group-main:has(.pilar-product:hover) svg .line-product { 
+    stroke: #38bdf8 !important; 
+    filter: drop-shadow(0 0 6px #38bdf8) !important;
+  }
+  html[data-theme="dark"] .group-main:has(.pilar-coding:hover) svg .line-coding { 
+    stroke: #f472b6 !important; 
+    filter: drop-shadow(0 0 6px #f472b6) !important;
+  }
+  html[data-theme="dark"] .group-main:has(.pilar-data:hover) svg .line-data { 
+    stroke: #34d399 !important; 
+    filter: drop-shadow(0 0 6px #34d399) !important;
+  }
+  html[data-theme="dark"] .group-main:has(.pilar-ai:hover) svg .line-ai { 
+    stroke: #c084fc !important; 
+    filter: drop-shadow(0 0 6px #c084fc) !important;
+  }
+
+  /* ==================== HOVER STATES ==================== */
   .group-main:has(.pilar-product:hover) .topics-product,
   .group-main:has(.pilar-coding:hover) .topics-coding,
   .group-main:has(.pilar-data:hover) .topics-data,
@@ -276,44 +347,73 @@ const skills = section_about.expertise.subjects.map((subject) => {
     pointer-events: none;
   }
 
-  .group-main:has(.pillar-card:hover) .graph-lines path {
-    stroke-width: 2px !important;
-    transition: all 0.3s ease;
+  /* V-shaped profile container hover que coincide con el fondo de las cards */
+  .group-main:has(.pilar-product:hover) .vshape-target,
+  .group-main:has(.pilar-coding:hover) .vshape-target,
+  .group-main:has(.pilar-data:hover) .vshape-target,
+  .group-main:has(.pilar-ai:hover) .vshape-target { 
+    @apply bg-slate-700;
   }
 
-  .group-main:has(.pilar-product:hover) .line-product,
-  .group-main:has(.pilar-coding:hover) .line-coding,
-  .group-main:has(.pilar-data:hover) .line-data,
-  .group-main:has(.pilar-ai:hover) .line-ai {
-    opacity: 1 !important;
-    stroke-width: 4px !important;
-    stroke-dasharray: 12 6 !important;
-    animation: laserStream 1s linear infinite !important;
+  html[data-theme="dark"] .group-main:has(.pilar-product:hover) .vshape-target,
+  html[data-theme="dark"] .group-main:has(.pilar-coding:hover) .vshape-target,
+  html[data-theme="dark"] .group-main:has(.pilar-data:hover) .vshape-target,
+  html[data-theme="dark"] .group-main:has(.pilar-ai:hover) .vshape-target { 
+    @apply bg-slate-950;
   }
 
-  .group-main:has(.pilar-product:hover) .line-product { stroke: #22d3ee !important; }
-  .group-main:has(.pilar-coding:hover) .line-coding { stroke: #f472b6 !important; }
-  .group-main:has(.pilar-data:hover) .line-data { stroke: #34d399 !important; }
-  .group-main:has(.pilar-ai:hover) .line-ai { stroke: #a78bfa !important; }
+  .group-main:has(.pilar-product:hover) .vshape-target { border-color: #0284c7 !important; box-shadow: 0 0 20px rgba(2, 132, 199, 0.4) !important; }
+  .group-main:has(.pilar-coding:hover) .vshape-target { border-color: #c026d3 !important; box-shadow: 0 0 20px rgba(192, 38, 211, 0.4) !important; }
+  .group-main:has(.pilar-data:hover) .vshape-target { border-color: #059669 !important; box-shadow: 0 0 20px rgba(5, 150, 105, 0.4) !important; }
+  .group-main:has(.pilar-ai:hover) .vshape-target { border-color: #7c3aed !important; box-shadow: 0 0 20px rgba(124, 58, 237, 0.4) !important; }
+
+  html[data-theme="dark"] .group-main:has(.pilar-product:hover) .vshape-target { border-color: #38bdf8 !important; box-shadow: 0 0 20px rgba(56, 189, 248, 0.4) !important; }
+  html[data-theme="dark"] .group-main:has(.pilar-coding:hover) .vshape-target { border-color: #f472b6 !important; box-shadow: 0 0 20px rgba(244, 114, 182, 0.4) !important; }
+  html[data-theme="dark"] .group-main:has(.pilar-data:hover) .vshape-target { border-color: #34d399 !important; box-shadow: 0 0 20px rgba(52, 211, 153, 0.4) !important; }
+  html[data-theme="dark"] .group-main:has(.pilar-ai:hover) .vshape-target { border-color: #c084fc !important; box-shadow: 0 0 20px rgba(192, 132, 252, 0.4) !important; }
+
+  .group-main:has(.pilar-product:hover) .vshape-text { color: #0284c7 !important; }
+  .group-main:has(.pilar-coding:hover) .vshape-text { color: #c026d3 !important; }
+  .group-main:has(.pilar-data:hover) .vshape-text { color: #059669 !important; }
+  .group-main:has(.pilar-ai:hover) .vshape-text { color: #7c3aed !important; }
+
+  html[data-theme="dark"] .group-main:has(.pilar-product:hover) .vshape-text { color: #38bdf8 !important; }
+  html[data-theme="dark"] .group-main:has(.pilar-coding:hover) .vshape-text { color: #f472b6 !important; }
+  html[data-theme="dark"] .group-main:has(.pilar-data:hover) .vshape-text { color: #34d399 !important; }
+  html[data-theme="dark"] .group-main:has(.pilar-ai:hover) .vshape-text { color: #c084fc !important; }
 
   .pilar-product:hover, .pilar-coding:hover, .pilar-data:hover, .pilar-ai:hover {
     @apply bg-slate-700;
   }
 
-  html[theme="dark"] .pilar-product:hover, html[theme="dark"] .pilar-coding:hover, html[theme="dark"] .pilar-data:hover, html[theme="dark"] .pilar-ai:hover {
+  html[data-theme="dark"] .pilar-product:hover, 
+  html[data-theme="dark"] .pilar-coding:hover, 
+  html[data-theme="dark"] .pilar-data:hover, 
+  html[data-theme="dark"] .pilar-ai:hover {
     @apply bg-slate-950;
   }
 
-  .pilar-product:hover { border-color: #22d3ee !important; box-shadow: 0 0 20px rgba(34, 211, 238, 0.4) !important; }
-  .pilar-coding:hover { border-color: #f472b6 !important; box-shadow: 0 0 20px rgba(244, 114, 182, 0.4) !important; }
-  .pilar-data:hover { border-color: #34d399 !important; box-shadow: 0 0 20px rgba(52, 211, 153, 0.4) !important; }
-  .pilar-ai:hover { border-color: #a78bfa !important; box-shadow: 0 0 20px rgba(167, 139, 250, 0.4) !important; }
+  .pilar-product:hover { border-color: #0284c7 !important; box-shadow: 0 0 20px rgba(2, 132, 199, 0.4) !important; }
+  .pilar-coding:hover { border-color: #c026d3 !important; box-shadow: 0 0 20px rgba(192, 38, 211, 0.4) !important; }
+  .pilar-data:hover { border-color: #059669 !important; box-shadow: 0 0 20px rgba(5, 150, 105, 0.4) !important; }
+  .pilar-ai:hover { border-color: #7c3aed !important; box-shadow: 0 0 20px rgba(124, 58, 237, 0.4) !important; }
 
-  .pilar-product:hover .pillar-name { color: #22d3ee !important; }
-  .pilar-coding:hover .pillar-name { color: #f472b6 !important; }
-  .pilar-data:hover .pillar-name { color: #34d399 !important; }
-  .pilar-ai:hover .pillar-name { color: #a78bfa !important; }
+  html[data-theme="dark"] .pilar-product:hover { border-color: #38bdf8 !important; box-shadow: 0 0 20px rgba(56, 189, 248, 0.4) !important; }
+  html[data-theme="dark"] .pilar-coding:hover { border-color: #f472b6 !important; box-shadow: 0 0 20px rgba(244, 114, 182, 0.4) !important; }
+  html[data-theme="dark"] .pilar-data:hover { border-color: #34d399 !important; box-shadow: 0 0 20px rgba(52, 211, 153, 0.4) !important; }
+  html[data-theme="dark"] .pilar-ai:hover { border-color: #c084fc !important; box-shadow: 0 0 20px rgba(192, 132, 252, 0.4) !important; }
 
+  .pilar-product:hover .pillar-name { color: #0284c7 !important; }
+  .pilar-coding:hover .pillar-name { color: #c026d3 !important; }
+  .pilar-data:hover .pillar-name { color: #059669 !important; }
+  .pilar-ai:hover .pillar-name { color: #7c3aed !important; }
+
+  html[data-theme="dark"] .pilar-product:hover .pillar-name { color: #38bdf8 !important; }
+  html[data-theme="dark"] .pilar-coding:hover .pillar-name { color: #f472b6 !important; }
+  html[data-theme="dark"] .pilar-data:hover .pillar-name { color: #34d399 !important; }
+  html[data-theme="dark"] .pilar-ai:hover .pillar-name { color: #c084fc !important; }
+
+  /* Topic Pills Styling */
   .topic-pill--product { color: white; border-color: rgba(6, 182, 212, 1); background: rgba(6, 182, 212, 0.2); }
   .topic-pill--coding { color: white; border-color: rgba(219, 39, 119, 1); background: rgba(219, 39, 119, 0.2); }
   .topic-pill--data { color: white; border-color: rgba(5, 150, 105, 1); background: rgba(5, 150, 105, 0.2); }
@@ -323,6 +423,21 @@ const skills = section_about.expertise.subjects.map((subject) => {
   :global(html[theme="dark"]) .topic-pill--coding { color: #f472b6; border-color: rgba(244, 114, 182, 0.5); background: rgba(244, 114, 182, 0.15); }
   :global(html[theme="dark"]) .topic-pill--data { color: #34d399; border-color: rgba(52, 211, 153, 0.5); background: rgba(52, 211, 153, 0.15); }
   :global(html[theme="dark"]) .topic-pill--ai { color: #a78bfa; border-color: rgba(167, 139, 250, 0.5); background: rgba(167, 139, 250, 0.15); }
+
+  /* ==================== SCROLLBAR STYLES ==================== */
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 4px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.3);
+    border-radius: 4px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: rgba(148, 163, 184, 0.5);
+  }
 
   /* ==================== ANIMATIONS ==================== */
   @keyframes fadeIn {
