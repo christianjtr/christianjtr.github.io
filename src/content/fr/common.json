@@ -32,7 +32,8 @@
         "abstract": "Résumé du Projet",
         "ai_button_text": "Envoyer à l'IA",
         "ai_copied_text": "Prêt à coller",
-        "ai_instruction": "Traite et réponds en français."
+        "ai_instruction": "Traite et réponds en français.",
+        "details_on_linkedin": "Profil académique disponible sur LinkedIn"
     },
     "open_graph": {
         "title": "Christian José Torrealba Rondón",

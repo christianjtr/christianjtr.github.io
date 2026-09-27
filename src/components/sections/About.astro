@@ -26,7 +26,7 @@ const avatarMap: Record<string, ImageMetadata> = {
 
 const activeAvatar = avatarMap[lang as string] || MeENImg;
 const entry = await getEntry(lang as ContentDataEntryType, `${lang}/${CONTENT.COMMON}`);
-const { section_about, section_experiences, section_studies } = (entry?.data as AboutMeData) || {};
+const { common, section_about, section_experiences, section_studies } = (entry?.data as AboutMeData) || {};
 ---
 
 <div class="container mx-auto px-1 md:px-5 mt-10">
@@ -164,10 +164,15 @@ const { section_about, section_experiences, section_studies } = (entry?.data as 
                         <span class="text-xs text-base-content/60 leading-relaxed block font-medium">
                             {section_experiences.academic_foundation}
                         </span>
-                        <div class="border-l-2 border-primary dark:border-accent pl-3 py-0.5">
-                            <span class="text-base font-black tracking-tight text-base-content block">
+                        <div class="border-l-2 border-primary dark:border-accent pl-3 py-0.5 flex items-center gap-2">
+                            <span class="text-base font-black tracking-tight text-base-content">
                                 {section_studies.educational_level}
                             </span>
+                            <div class="tooltip tooltip-top md:tooltip-right tooltip-primary dark:tooltip-accent cursor-help" data-tip={common.details_on_linkedin}>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 text-base-content/40 hover:text-primary dark:hover:text-accent transition-colors">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>

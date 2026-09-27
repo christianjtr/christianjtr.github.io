@@ -32,7 +32,8 @@
         "abstract": "Project Abstract",
         "ai_button_text": "Feed to AI",
         "ai_copied_text": "Ready to paste",
-        "ai_instruction": "Please process and answer in English."
+        "ai_instruction": "Please process and answer in English.",
+        "details_on_linkedin": "Education details available on LinkedIn"
     },
     "open_graph": {
         "title": "Christian José Torrealba Rondón",
