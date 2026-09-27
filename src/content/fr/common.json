@@ -10,7 +10,7 @@
         "countries_worked_in": "Countries worked in",
         "companies_worked_for": "Companies worked for",
         "key_areas": "Domaines clés",
-        "interact_with": "Interagissez avec les nœuds pour projeter les domaines clés",
+        "interact_with": "Interagissez avec les nœuds pour voir le stack technologique",
         "key_contribuitions": "Contributions majeures",
         "ongoing": "En cours",
         "cannot_load_content": "Content could not be loaded",
@@ -137,7 +137,7 @@
                 "emoji": "🥐",
                 "name": "Français",
                 "proficiency": "Quotidien",
-                "value": 35
+                "value": 40
             }
         ],
         "expertise": {
@@ -156,6 +156,7 @@
                     "tools": [
                         "Atlassian Suite (Jira, Confluence)",
                         "Notion",
+                        "Linear",
                         "Figma",
                         "GitHub",
                         "Segment",
@@ -241,7 +242,10 @@
                         "Grok / xAI",
                         "GitHub Copilot",
                         "Google Gemini AI",
-                        "Claude / Anthropic API"
+                        "Claude / Anthropic API",
+                        "GPT models / OpenAI",
+                        "MCPs",
+                        "Orchestration of agents"
                     ]
                 }
             ]
@@ -275,7 +279,7 @@
     },
     "section_skills": {
         "title": "Écosystème de Travail",
-        "subtitle": "Comment j'intègre mes compétences et mes outils dans des projets réels."
+        "subtitle": "Stack technique utilisé et appliqué à des projets concrets."
     },
     "section_credentials": {
         "title": "Certifications",
@@ -295,7 +299,7 @@
         "collaborated_with": "Expérience de collaboration avec des équipes et des personnes de différents pays d'Europe et des États-Unis.",
         "companies_across_regions": "Expérience sur différents marchés",
         "companies_and_countries_lived_in": "Pays où j'ai vécu, travaillé et étudié",
-        "academic_foundation": "Éducation formelle et diplômes vérifiés soutenant l'exécution technique.",
+        "academic_foundation": "Niveau d'études et certifications vérifiées appuyant l'exécution technique.",
         "countries": ["Venezuela", "Argentina", "Spain"],
         "full_countries": [
             "Venezuela",

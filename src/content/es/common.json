@@ -10,7 +10,7 @@
         "countries_worked_in": "Países en lo que he trabajado",
         "companies_worked_for": "Empresas en las que trabajé",
         "key_areas": "Áreas clave",
-        "interact_with": "Interactúa con los nodos para proyectar las áreas clave",
+        "interact_with": "Interactúa con los nodos para mostrar el stack tecnológico",
         "key_contribuitions": "Contribuciones clave",
         "ongoing": "Presente",
         "cannot_load_content": "Contenido no puede ser cargado",
@@ -156,6 +156,7 @@
                     "tools": [
                         "Atlassian Suite (Jira, Confluence)",
                         "Notion",
+                        "Linear",
                         "Figma",
                         "GitHub",
                         "Segment",
@@ -241,7 +242,10 @@
                         "Grok / xAI",
                         "GitHub Copilot",
                         "Google Gemini AI",
-                        "Claude / Anthropic API"
+                        "Claude / Anthropic API",
+                        "GPT models / OpenAI",
+                        "MCPs",
+                        "Orchestration of agents"
                     ]
                 }
             ]
@@ -275,7 +279,7 @@
     },
     "section_skills": {
         "title": "Ecosistema de Trabajo",
-        "subtitle": "Cómo integro mis habilidades y herramientas en proyectos reales."
+        "subtitle": "Stack tecnológico utilizado y aplicado en proyectos reales."
     },
     "section_credentials": {
         "title": "Certificaciones",
@@ -293,9 +297,9 @@
         "title": "Trayectoria",
         "subtitle": "Un vistazo completo a mi crecimiento profesional y logros clave en diferentes países en Europa y USA",
         "collaborated_with": "Experiencia colaborando con equipos y personas de diferentes países en Europa y USA.",
-        "companies_across_regions": "Trabajé en diferentes mercados",
+        "companies_across_regions": "He trabajado en diferentes mercados",
         "companies_and_countries_lived_in": "Países donde viví, trabajé y estudié",
-        "academic_foundation": "Educación formal y credenciales verificadas que respaldan la ejecución técnica.",
+        "academic_foundation": "Nivel educativo y credenciales verificadas que respaldan la ejecución técnica.",
         "countries": ["Venezuela", "Argentina", "Spain"],
         "full_countries": [
             "Venezuela",

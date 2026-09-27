@@ -10,7 +10,7 @@
         "countries_worked_in": "Countries worked in",
         "companies_worked_for": "Companies worked for",
         "key_areas": "Key areas",
-        "interact_with": "Interact with the nodes to map out key areas",
+        "interact_with": "Interact with the nodes to map the tech stack",
         "key_contribuitions": "Key contributions",
         "ongoing": "Ongoing",
         "cannot_load_content": "Content could not be loaded",
@@ -137,7 +137,7 @@
                 "emoji": "🥐",
                 "name": "French",
                 "proficiency": "Daily Contexts",
-                "value": 35
+                "value": 40
             }
         ],
         "expertise": {
@@ -156,6 +156,7 @@
                     "tools": [
                         "Atlassian Suite (Jira, Confluence)",
                         "Notion",
+                        "Linear",
                         "Figma",
                         "GitHub",
                         "Segment",
@@ -241,7 +242,10 @@
                         "Grok / xAI",
                         "GitHub Copilot",
                         "Google Gemini AI",
-                        "Claude / Anthropic API"
+                        "Claude / Anthropic API",
+                        "GPT models / OpenAI",
+                        "MCPs",
+                        "Orchestration of agents"
                     ]
                 }
             ]
@@ -275,7 +279,7 @@
     },
     "section_skills": {
         "title": "Work Ecosystem",
-        "subtitle": "How I integrate my skills and tools into real-world projects."
+        "subtitle": "Tech stack used and applied to real-world projects."
     },
     "section_credentials": {
         "title": "Certifications",
@@ -295,7 +299,7 @@
         "collaborated_with": "Experience collaborating with teams and people across different countries within Europe and the US.",
         "companies_across_regions": "Worked across different markets",
         "companies_and_countries_lived_in": "Countries Lived, Worked, and Studied in",
-        "academic_foundation": "Formal education and verified credentials supporting technical execution.",
+        "academic_foundation": "Level of formal education and verified credentials supporting technical execution.",
         "countries": ["Venezuela", "Argentina", "Spain"],
         "full_countries": [
             "Venezuela",
