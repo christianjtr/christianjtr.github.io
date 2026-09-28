@@ -1,8 +1,10 @@
 ---
 import { getCollection, getEntry } from 'astro:content';
 
+import { toSlug } from '@utils/userPreferences';
 import type { ContentDataEntryType } from '@app-types/Content';
 import type { Project } from '@schemas/ProjectSchema';
+import type { Experiment } from '@schemas/ExperimentSchema';
 import type { AboutMeData } from '@schemas/AboutMeSchema';
 import { CONTENT } from '@app-types/Content';
 import { LinkButton, Section, BadgeList, Badge, AsyncImage, VerticalSpacer } from "../";
@@ -12,13 +14,19 @@ import MonitorIcon from '@assets/svg/monitor.svg';
 
 const { lang } = Astro.params;
 
-const [commonData, [ projectData ]] = await Promise.all([
+const [commonData, [ projectData ], [ experimentsData ]] = await Promise.all([
     await getEntry(lang as ContentDataEntryType, `${lang}/${CONTENT.COMMON}`),
-    await getCollection(lang as ContentDataEntryType, (collection) => collection.id === `${lang}/${CONTENT.PROJECTS}`)
+    await getCollection(lang as ContentDataEntryType, (collection) => collection.id === `${lang}/${CONTENT.PROJECTS}`),
+    await getCollection(lang as ContentDataEntryType, (collection) => collection.id === `${lang}/${CONTENT.EXPERIMENTS}`)
 ]);
 
 const { section_projects, common, header } = (commonData?.data as AboutMeData) || {};
 const { data: projects } = projectData as { data: Project[] };
+const { data: experiments } = experimentsData as { data: Experiment[] };
+
+const wipExperiment = experiments.find((experiment) => experiment.isWIP && experiment.display && !experiment.isSandbox);
+const hasInProgressExperiments = Boolean(wipExperiment);
+const wipCategorySlug = wipExperiment ? toSlug(wipExperiment.category) : '';
 ---
 
 <div class="bg-primary/5 py-10" id={header.main_sections[0].anchorId}>
@@ -26,6 +34,18 @@ const { data: projects } = projectData as { data: Project[] };
         <Logo slot="beforeHeading" width={96} height={96} />
         <VerticalSpacer />
         <div class="px-2 md:px-14">
+            {hasInProgressExperiments && (
+                <div class="flex justify-end mb-7">
+                    <a href={`?category=${wipCategorySlug}#selected_works`} class="btn-wip-indicator">
+                        <span class="wip-pulse-container">
+                            <span class="wip-pulse-ping"></span>
+                            <span class="wip-pulse-dot"></span>
+                        </span>
+                        <span>{wipExperiment?.category}</span>
+                        <span class="text-sm font-bold">↓</span>
+                    </a>
+                </div>
+            )}
             {projects.map((project: Project, index: number) => (
                 <div class="collapse collapse-arrow project-card" tabindex="0">
                     <input type="radio" name="project" checked={index === 0} aria-label={
@@ -246,4 +266,32 @@ const { data: projects } = projectData as { data: Project[] };
     .text-bullet-separator { @apply text-neutral-300; }
     :global(html[data-theme="dark"]) .text-bullet-separator { @apply text-neutral-700; }
     figure { @apply w-full; }
+
+    .btn-wip-indicator {
+        @apply inline-flex items-center gap-2.5 px-4 py-2 rounded-full 
+            text-xs font-mono font-bold uppercase tracking-wider 
+            transition-all duration-200 shadow-xs hover:shadow-md cursor-pointer
+            bg-primary/10 hover:bg-primary/20 border border-primary/30 text-primary;
+    }
+
+    .wip-pulse-container {
+        @apply relative flex h-2.5 w-2.5 shrink-0;
+    }
+
+    .wip-pulse-ping {
+        @apply animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 bg-primary;
+    }
+
+    .wip-pulse-dot {
+        @apply relative inline-flex rounded-full h-2.5 w-2.5 bg-primary;
+    }
+
+    :global(html[data-theme="dark"]) .btn-wip-indicator {
+        @apply bg-accent/10 hover:bg-accent/20 border-accent/30 text-accent;
+    }
+
+    :global(html[data-theme="dark"]) .wip-pulse-ping,
+    :global(html[data-theme="dark"]) .wip-pulse-dot {
+        @apply bg-accent;
+    }
 </style>

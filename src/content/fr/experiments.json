@@ -270,7 +270,8 @@
         "url": null,
         "isSandbox": false,
         "display": true,
-        "year": 2026
+        "year": 2026,
+        "isWIP": true
     },
     {
         "id": "experiment-type-safe-graphql-api",
@@ -291,7 +292,8 @@
         "url": null,
         "isSandbox": false,
         "display": true,
-        "year": 2026
+        "year": 2026,
+        "isWIP": true
     },
     {
         "id": "experiment-cognitive-usability-tool",
@@ -312,6 +314,7 @@
         "url": null,
         "isSandbox": false,
         "display": true,
-        "year": 2026
+        "year": 2026,
+        "isWIP": true
     }
 ]

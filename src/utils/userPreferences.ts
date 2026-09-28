@@ -4,3 +4,5 @@ export function getSystemThemePreference() {
     }
     return 'light';
 }
+
+export const toSlug = (text: string) => text.toLowerCase().trim().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '');

@@ -21,7 +21,8 @@ export const ExperimentSchema = z.object({
     display: z.boolean(),
     isSandbox: z.boolean(),
     abstract: z.string().optional(),
-    year: z.number().optional()
+    year: z.number().optional(),
+    isWIP: z.boolean().optional()
 });
 
 export type Experiment = z.infer<typeof ExperimentSchema>;

@@ -1,5 +1,7 @@
 ---
 import { getCollection, getEntry } from 'astro:content';
+
+import { toSlug } from '@utils/userPreferences';
 import type { ContentDataEntryType } from '@app-types/Content';
 import type { AboutMeData } from '@schemas/AboutMeSchema';
 import type { Experiment, ExperimentRole } from '@schemas/ExperimentSchema';
@@ -26,7 +28,7 @@ const { section_experiments, common, header } = (commonData?.data as AboutMeData
 const { data: experiments } = experimentsData as { data: Experiment[]};
 
 const experimentsToDisplay = experiments.filter(exp => exp.display);
-const uniqueCategories = Array.from(new Set([...experimentsToDisplay.map(({ category }) => category)]));
+const uniqueCategories = Array.from(new Set([...experimentsToDisplay.map(({ category }) => category)])).map((category) => ({ category, slug: toSlug(category) }));
 const featuredExperiments = experimentsToDisplay.filter(exp => !exp.isSandbox);
 const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
 ---
@@ -43,12 +45,12 @@ const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
                         {common.filter_experience}
                     </h3>
                     <form class="flex flex-col gap-4">
-                        {uniqueCategories.map((category) => (
+                        {uniqueCategories.map(({category, slug}) => (
                             <div class="flex items-center gap-3">
                                 <input 
                                     class="checkbox checkbox-primary checkbox-sm category-filter"
                                     type="checkbox" 
-                                    id={category}
+                                    id={slug}
                                     value={category}
                                     name="experiments_type" 
                                 />
@@ -245,36 +247,60 @@ const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
     }
 </style>
 
-
-
 <script>
     const setupFilters = () => {
-        const checkboxes = document.querySelectorAll<HTMLInputElement>('.category-filter');
-        const cards = document.querySelectorAll<HTMLElement>('.experiment-card');
-        const resetBtn = document.querySelector('button[type="reset"]');
+    const checkboxes = document.querySelectorAll<HTMLInputElement>('.category-filter');
+    const cards = document.querySelectorAll<HTMLElement>('.experiment-card');
+    const resetBtn = document.querySelector('button[type="reset"]');
 
-        const filter = () => {
-            const activeCategories = Array.from(checkboxes)
-                .filter(element => element.checked)
-                .map(element => element.value);
+    const clearUrlParams = () => {
+        if (window.location.search) {
+            const cleanUrl = window.location.pathname + window.location.hash;
+            window.history.replaceState({}, document.title, cleanUrl);
+        }
+    };
 
-            cards.forEach(card => {
-                const cardCategory = card.dataset.category;
-                if (activeCategories.length === 0 || activeCategories.includes(cardCategory!)) {
-                    card.style.display = '';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        };
+    const filter = () => {
+        const activeCategories = Array.from(checkboxes)
+            .filter(element => element.checked)
+            .map(element => element.value);
 
-        checkboxes.forEach(cb => cb.addEventListener('change', filter));
-        
-        resetBtn?.addEventListener('click', () => {
-            setTimeout(filter, 10);
+        cards.forEach(card => {
+            const cardCategory = card.dataset.category;
+            if (activeCategories.length === 0 || activeCategories.includes(cardCategory!)) {
+                card.style.display = '';
+            } else {
+                card.style.display = 'none';
+            }
         });
     };
 
-    setupFilters();
-    document.addEventListener('astro:after-swap', setupFilters);
+    const urlParams = new URLSearchParams(window.location.search);
+    const filterParam = urlParams.get('category');
+
+    if (filterParam) {
+        const targetCheckbox = document.getElementById(filterParam) as HTMLInputElement | null;
+    
+        if (targetCheckbox) {
+            targetCheckbox.checked = true;
+            filter();
+            clearUrlParams();
+        }
+    }
+
+    checkboxes.forEach(cb => cb.addEventListener('change', () => {
+        filter();
+        clearUrlParams();
+    }));
+    
+    resetBtn?.addEventListener('click', () => {
+        setTimeout(() => {
+            filter();
+            clearUrlParams();
+        }, 10);
+    });
+};
+
+setupFilters();
+document.addEventListener('astro:after-swap', setupFilters);
 </script>
