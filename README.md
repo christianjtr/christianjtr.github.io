@@ -4,7 +4,7 @@
 [![Tailwind](https://img.shields.io/badge/Tailwind-4.x-blue?style=flat&logo=tailwind&logoColor=white)](https://tailwindcss.com)
 [![DaisyUI](https://img.shields.io/badge/DaisyUI-5.x-10B981?style=flat&logo=daisyui&logoColor=white)](https://daisyui.com)
 
-Personal portfolio website showcasing projects, experiments, professional experiences, credentials, and studies. Fully responsive, multilingual (EN/ES), dark mode, TypeScript-powered.
+Personal portfolio website showcasing projects, experiments, professional experiences, credentials, and studies. Fully responsive, multilingual (EN/ES/FR), dark mode, TypeScript-powered.
 
 [Live Demo](https://christianjtr.github.io)
 
