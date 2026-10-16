@@ -1,5 +1,5 @@
 # Christian José Torrealba Rondón
-> Product-minded Engineer (full-stack, frontend-leaning) | Systems Engineering background | Data-driven digital products, integrations, and applied AI
+> Product-minded Engineer (full-stack, frontend-leaning) | Systems Engineering background | Data-driven digital products, integrations, and agentic AI
 
 ## Overview
 Machine-readable profile of Christian José Torrealba Rondón. Full site: [Portfolio](https://christianjtr.github.io/), [English](https://christianjtr.github.io/en/), [Español](https://christianjtr.github.io/es/), [Français](https://christianjtr.github.io/fr/). Also [LinkedIn](https://www.linkedin.com/in/christianjtr/) and [GitHub](https://github.com/christianjtr). Based in Spain; open to relocation.
@@ -7,7 +7,7 @@ Machine-readable profile of Christian José Torrealba Rondón. Full site: [Portf
 ## Positioning
 Product engineer who turns business goals into scalable web products. Frontend-leaning full-stack: owns UI architecture, TypeScript/React/Vue, and the integration layer (REST, GraphQL, third-party APIs, payments, comms, maps). Comfortable gathering requirements, writing specs, shipping with QA, and operating what ships (testing, observability, tech debt). Currently deepening agentic AI, data engineering, and modern product practices while consulting on digital solutions.
 
-**Strong fit for:** Product Engineer, Frontend-leaning Full-Stack Engineer, Solutions Engineer, Product Software Engineer — roles that combine product sense, web delivery, integrations, and applied AI.
+**Strong fit for:** Product Engineer, Frontend-leaning Full-Stack Engineer, Solutions Engineer, Product Software Engineer — roles that combine product sense, web delivery, integrations, and agentic AI.
 
 ## Executive Summary
 Bridges business and technology to deliver data-driven, user-centric products. Uses web technologies, API integrations, and product strategy to turn complex requirements into high-impact digital solutions. Experience across mobility, last-mile logistics, fintech, data consulting, ITS, energy, and supply chain, in international agile teams.
@@ -16,7 +16,7 @@ Bridges business and technology to deliver data-driven, user-centric products. U
 - **Product engineering:** RFCs, specs, prototyping, agile delivery (Scrum/Kanban), stakeholder alignment, product ownership (PSPO-I, PSM-I, PAL-I)
 - **Frontend-leaning full-stack:** React, Vue, Angular, TypeScript, Node.js; UI architecture; design-system and testing culture (Jest, Cypress, Storybook)
 - **Integrations:** REST, GraphQL, payment gateways, SMS/email, Twilio, Intercom, route planning, Google Maps, partner APIs; contract validation with backend/QA
-- **Applied AI:** AI-assisted PoCs and product tooling; DialogFlow KPI chatbot; GenAI for Product Managers (PMI); actively building agentic AI and data-engineering practice
+- **agentic AI:** AI-assisted PoCs and product tooling; DialogFlow KPI chatbot; GenAI for Product Managers (PMI); actively building agentic AI and data-engineering practice
 - **Data & analytics:** BI/ETL literacy, dashboards, product analytics (Amplitude, GA), GIS/maps
 
 ## Technical ecosystem
@@ -106,8 +106,8 @@ Bridges business and technology to deliver data-driven, user-centric products. U
 
 ## Languages
 - Spanish: native
-- English: professional working
-- French: limited working
+- English: full professional working proficiency
+- French: limited proficiency (pre-intermediate)
 
 ## Publication
 Representation of geographical data related to the Venezuelan petroleum industry using Keyhole Markup Language (KML).
