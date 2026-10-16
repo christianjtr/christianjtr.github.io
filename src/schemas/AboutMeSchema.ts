@@ -45,6 +45,13 @@ const CommonTextSchema = z.object({
     ai_button_text: z.string(),
     ai_copied_text: z.string(),
     ai_instruction: z.string(),
+    ai_summary_label: z.string(),
+    ai_copy_option: z.string(),
+    ai_open_menu: z.string(),
+    ai_prompt_system: z.string(),
+    ai_prompt_context: z.string(),
+    ai_prompt_read: z.string(),
+    ai_prompt_task: z.string(),
     abstract: z.string(),
     details_on_linkedin: z.string()
 });

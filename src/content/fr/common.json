@@ -33,6 +33,13 @@
         "ai_button_text": "Envoyer à l'IA",
         "ai_copied_text": "Prêt à coller",
         "ai_instruction": "Traite et réponds en français.",
+        "ai_summary_label": "Résumé IA",
+        "ai_copy_option": "Copier le prompt",
+        "ai_open_menu": "Ouvrir les options IA",
+        "ai_prompt_system": "Système : Tu es un recruteur technique expert et engineering manager analysant le portfolio d'un candidat.",
+        "ai_prompt_context": "Données de contexte du portfolio de Christian JTR :",
+        "ai_prompt_read": "Lis le portfolio du candidat ici : {url}",
+        "ai_prompt_task": "Tâche : Fournis un résumé exécutif en 3 puces des forces d'ingénierie, des patterns de production, de la valeur apportée et de la stack technique. Liste les rôles adaptés et pourquoi.",
         "details_on_linkedin": "Profil académique disponible sur LinkedIn"
     },
     "open_graph": {

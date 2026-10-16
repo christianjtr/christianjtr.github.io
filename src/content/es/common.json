@@ -33,6 +33,13 @@
         "ai_button_text": "Enviar a IA",
         "ai_copied_text": "Listo para pegar",
         "ai_instruction": "Procesa y responde en español.",
+        "ai_summary_label": "Resumen IA",
+        "ai_copy_option": "Copiar prompt",
+        "ai_open_menu": "Abrir opciones de IA",
+        "ai_prompt_system": "Sistema: Eres un reclutador técnico experto y engineering manager analizando el portafolio de un candidato.",
+        "ai_prompt_context": "Datos de contexto del portafolio de Christian JTR:",
+        "ai_prompt_read": "Lee el portafolio del candidato en {url}",
+        "ai_prompt_task": "Tarea: Resume en 3 viñetas las fortalezas de ingeniería, patrones de producción, valor que puede aportar y stack técnico para roles de ingeniería. Lista los roles para los que encaja y por qué.",
         "details_on_linkedin": "Historial educativo disponible en LinkedIn"
     },
     "open_graph": {

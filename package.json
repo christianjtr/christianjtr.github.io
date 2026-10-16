@@ -14,7 +14,7 @@
         "@astrojs/check": "^0.9.10",
         "@fontsource/lato": "^5.2.7",
         "@tailwindcss/typography": "^0.5.16",
-        "astro": "7.3.5",
+        "astro": "7.4.0",
         "daisyui": "^5.0.4",
         "sharp": "^0.34.5"
     },

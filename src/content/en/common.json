@@ -33,6 +33,13 @@
         "ai_button_text": "Feed to AI",
         "ai_copied_text": "Ready to paste",
         "ai_instruction": "Please process and answer in English.",
+        "ai_summary_label": "AI Summary",
+        "ai_copy_option": "Copy prompt",
+        "ai_open_menu": "Open AI options",
+        "ai_prompt_system": "System: You are an expert technical recruiter and engineer manager analyzing a candidate portfolio.",
+        "ai_prompt_context": "Context Data from Christian JTR's Portfolio:",
+        "ai_prompt_read": "Read the candidate portfolio at {url}",
+        "ai_prompt_task": "Task: Provide a 3-bullet-point executive summary of this candidate's engineering strengths, production patterns, value the candidate can bring, and technical stack for engineering roles. List roles this candidate is suitable for and why.",
         "details_on_linkedin": "Education details available on LinkedIn"
     },
     "open_graph": {

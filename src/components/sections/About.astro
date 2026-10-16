@@ -30,13 +30,15 @@ const { common, section_about, section_experiences, section_studies } = (entry?.
 ---
 
 <div class="container mx-auto px-1 md:px-5 mt-10">
-    <div class="grid lg:grid-cols-6 relative overflow-hidden w-full">
-        <div class="absolute left-0 top-[20%] opacity-15 dark:opacity-5 select-none pointer-events-none z-0 hidden lg:block">
-            <svg width="400" height="200" fill="none" xmlns="http://w3.org">
-                <path d="M0 20h400M0 80h400M0 140h400M60 0v200M180 0v200M300 0v200" stroke="currentColor" stroke-width="1"/>
-                <circle cx="180" cy="80" r="4" class="fill-accent animate-ping" />
-                <circle cx="180" cy="80" r="3" class="fill-accent" />
-            </svg>
+    <div class="grid lg:grid-cols-6 relative w-full">
+        <div class="absolute inset-0 overflow-hidden select-none pointer-events-none z-0 hidden lg:block">
+            <div class="absolute left-0 top-[20%] opacity-15 dark:opacity-5">
+                <svg width="400" height="200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 20h400M0 80h400M0 140h400M60 0v200M180 0v200M300 0v200" stroke="currentColor" stroke-width="1"/>
+                    <circle cx="180" cy="80" r="4" class="fill-accent animate-ping" />
+                    <circle cx="180" cy="80" r="3" class="fill-accent" />
+                </svg>
+            </div>
         </div>
         <div class="col-span-3 space-y-4 m-3 mb-5 lg:mb-0 lg:m-12 content-center z-10">
             <p class="flex items-center gap-2 font-medium">

@@ -2,7 +2,7 @@
 import llmsTextRaw from '/public/llms.txt?raw';
 
 import { getEntry } from 'astro:content';
-import { getProfilePrompt } from '@utils/profilePromptGenerator';
+import { getProfilePrompt, getProfileUrlPrompt } from '@utils/profilePromptGenerator';
 import type { ContentDataEntryType } from '@app-types/Content';
 import { CONTENT } from '@app-types/Content';
 import type { AboutMeData } from '@schemas/AboutMeSchema';
@@ -20,48 +20,94 @@ try {
 const common = (entry?.data as AboutMeData)?.common ?? {};
 const buttonText = common.ai_button_text ?? 'Feed to AI';
 const copiedText = common.ai_copied_text ?? 'Ready to paste';
-const promptInstruction = getProfilePrompt(llmsTextRaw, common.ai_instruction);
+const summaryLabel = common.ai_summary_label ?? 'AI Summary';
+const copyOption = common.ai_copy_option ?? 'Copy prompt';
+const openMenuLabel = common.ai_open_menu ?? 'Open AI options';
+const promptStrings = {
+  system: common.ai_prompt_system,
+  context: common.ai_prompt_context,
+  read: common.ai_prompt_read,
+  task: common.ai_prompt_task,
+  instruction: common.ai_instruction,
+};
+const promptInstruction = getProfilePrompt(llmsTextRaw, promptStrings);
+const llmsUrl = new URL('llms.txt', Astro.site ?? 'https://christianjtr.github.io').href;
+const encodedUrlPrompt = encodeURIComponent(getProfileUrlPrompt(llmsUrl, promptStrings));
+const chatgptHref = `https://chatgpt.com/?q=${encodedUrlPrompt}`;
+const perplexityHref = `https://www.perplexity.ai/search?q=${encodedUrlPrompt}`;
+const grokHref = `https://grok.com/?q=${encodedUrlPrompt}`;
 ---
 
-<button
-  id="ai-context-button"
-  type="button"
-  class="inline-flex items-center justify-between p-3 rounded-2xl text-left border bg-base-200 border-base-300 text-base-content hover:bg-base-200 hover:border-base-300 cursor-pointer transition-all duration-200 min-w-56 h-auto group"
-  data-lang={lang}
-  data-copied-text={copiedText}
-  aria-label={buttonText}
->
-  <span class="flex flex-col items-start">
-    <span class="text-[11px] font-bold uppercase tracking-[0.35em] text-primary group-hover:text-primary transition-colors duration-200">
-      AI Summary
+<div class="ai-context inline-flex items-stretch rounded-2xl border bg-base-100 border-primary/30 shadow-md text-base-content transition-all duration-200 min-w-56 h-auto group">
+  <button
+    id="ai-context-button"
+    type="button"
+    class="inline-flex flex-1 items-center justify-between p-3 rounded-l-2xl text-left cursor-pointer min-w-0 tooltip tooltip-top tooltip-primary"
+    data-lang={lang}
+    data-copied-text={copiedText}
+    data-tip={copyOption}
+    aria-label={copyOption}
+  >
+    <span class="flex flex-col items-start">
+      <span class="text-[11px] font-bold uppercase tracking-[0.35em] text-primary transition-colors duration-200">
+        {summaryLabel}
+      </span>
+      <span class="text-sm font-semibold" id="ai-button-text">
+        {buttonText}
+      </span>
     </span>
-    <span class="text-sm font-semibold" id="ai-button-text">
-      {buttonText}
-    </span>
-  </span>
 
-  <span class="relative flex items-center justify-center shrink-0 w-5 h-5" aria-hidden="true">
-    <span class="ai-voice-bars absolute inset-0 flex items-center justify-center gap-1 transition-opacity duration-200"></span>
-    <svg xmlns="http://w3.org" viewBox="0 0 24 24" class="ai-check-icon hidden absolute w-5 h-5 text-current">
-      <path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-    </svg>
-  </span>
-</button>
+    <span class="relative flex items-center justify-center shrink-0 w-5 h-5" aria-hidden="true">
+      <span class="ai-voice-bars absolute inset-0 flex items-center justify-center gap-1 transition-opacity duration-200"></span>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="ai-check-icon hidden absolute w-5 h-5 text-current">
+        <path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </span>
+  </button>
+
+  <details class="dropdown dropdown-end ai-context-menu">
+    <summary
+      class="list-none cursor-pointer h-full px-2.5 flex items-center justify-center border-l border-base-300 rounded-r-2xl"
+      aria-label={openMenuLabel}
+      aria-haspopup="menu"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="ai-menu-chevron w-4 h-4" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </summary>
+    <ul class="dropdown-content menu dropdown-menu-content z-50 mt-2 min-w-44" role="menu" aria-label={openMenuLabel}>
+      <li>
+        <a href={chatgptHref} target="_blank" rel="noopener noreferrer" role="menuitem">GPT</a>
+      </li>
+      <li>
+        <a href="https://gemini.google.com/app" target="_blank" rel="noopener noreferrer" role="menuitem">Gemini</a>
+      </li>
+      <li>
+        <a href={perplexityHref} target="_blank" rel="noopener noreferrer" role="menuitem">Perplexity</a>
+      </li>
+      <li>
+        <a href={grokHref} target="_blank" rel="noopener noreferrer" role="menuitem">Grok</a>
+      </li>
+    </ul>
+  </details>
+</div>
 
 <script is:inline define:vars={{ promptInstruction }}>
   const button = document.getElementById('ai-context-button');
   const labelSpan = document.getElementById('ai-button-text');
-  
-  if (button && labelSpan) {
+  const menu = document.querySelector('.ai-context-menu');
+
+  if (button && labelSpan && menu) {
     const copiedText = button.dataset.copiedText || 'Copied';
-    const originalLabel = labelSpan.textContent || '';
+    const originalText = labelSpan.textContent || '';
+    const originalAria = button.getAttribute('aria-label') || originalText;
     let timeoutId = null;
 
-    button.addEventListener('click', async () => {
-      if (!promptInstruction) return;
-      
+    const executeCopyAction = async () => {
+      if (!promptInstruction) return false;
       try {
         await navigator.clipboard.writeText(promptInstruction);
+        return true;
       } catch (error) {
         const input = document.createElement("textarea");
         input.value = promptInstruction;
@@ -69,28 +115,65 @@ const promptInstruction = getProfilePrompt(llmsTextRaw, common.ai_instruction);
         input.style.opacity = "0";
         document.body.appendChild(input);
         input.select();
-        document.execCommand('copy');
+        const success = document.execCommand('copy');
         document.body.removeChild(input);
+        return success;
       }
-      
+    };
+
+    const triggerVisualState = () => {
       if (timeoutId) clearTimeout(timeoutId);
-      
+
       button.classList.add('copied');
       button.setAttribute('aria-label', copiedText);
+      button.setAttribute('data-tip', copiedText);
       labelSpan.textContent = copiedText;
 
       timeoutId = window.setTimeout(() => {
         button.classList.remove('copied');
-        button.setAttribute('aria-label', originalLabel);
-        labelSpan.textContent = originalLabel;
+        button.setAttribute('aria-label', originalAria);
+        button.setAttribute('data-tip', originalAria);
+        labelSpan.textContent = originalText;
       }, 2200);
+    };
+
+    const copyAndConfirm = async () => {
+      const copied = await executeCopyAction();
+      if (copied) triggerVisualState();
+      return copied;
+    };
+
+    const closeMenu = () => {
+      menu.removeAttribute('open');
+    };
+
+    button.addEventListener('click', async () => {
+      await copyAndConfirm();
+    });
+
+    menu.querySelectorAll('a[href]').forEach((link) => {
+      link.addEventListener('click', async (e) => {
+        e.preventDefault();
+        await copyAndConfirm();
+        window.open(link.href, '_blank', 'noopener,noreferrer');
+        closeMenu();
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!menu.hasAttribute('open')) return;
+      if (e.target instanceof Node && !menu.contains(e.target)) {
+        closeMenu();
+      }
     });
   }
 </script>
 
 <style>
   @reference "@styles/global.css";
-  .ai-voice-bars::before, .ai-voice-bars::after {
+
+  .ai-voice-bars::before,
+  .ai-voice-bars::after {
     content: '';
     display: inline-block;
     width: 3px;
@@ -98,32 +181,63 @@ const promptInstruction = getProfilePrompt(llmsTextRaw, common.ai_instruction);
     border-radius: 9999px;
     animation: ai-wave 1s ease-in-out infinite;
   }
-  
-  .ai-voice-bars::before { 
-    height: 10px; 
-    animation-delay: 0.05s; 
-  }
-  
-  .ai-voice-bars::after { 
-    height: 15px; 
-    animation-delay: 0.2s; 
+
+  .ai-voice-bars::before {
+    height: 10px;
+    animation-delay: 0.05s;
   }
 
-  button:hover {
-    @apply border-primary;
+  .ai-voice-bars::after {
+    height: 15px;
+    animation-delay: 0.2s;
   }
-  
-  html[data-theme="dark"] button {
-    @apply text-white bg-slate-950;
+
+  .ai-context:hover {
+    @apply border-primary shadow-lg;
   }
-  
-  html[data-theme="dark"] button:hover {
+
+  html[data-theme="dark"] .ai-context {
+    @apply bg-base-200 border-base-300 shadow-none;
+  }
+
+  html[data-theme="dark"] .ai-context:hover {
     @apply border-accent;
+  }
+
+  .ai-menu-chevron {
+    @apply transition-transform duration-200;
+  }
+
+  .ai-context-menu[open] .ai-menu-chevron {
+    transform: rotate(180deg);
+  }
+
+  html[data-theme="dark"] #ai-context-button {
+    @apply tooltip-accent;
+  }
+
+  .dropdown-menu-content {
+    @apply bg-base-300 rounded-box shadow-xl border border-base-content/5 p-1;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
   }
 
   #ai-context-button.copied .ai-voice-bars { @apply opacity-0 pointer-events-none; }
   #ai-context-button.copied .ai-check-icon { @apply block; }
-  
+
+  @media (prefers-reduced-motion: reduce) {
+    .ai-voice-bars::before,
+    .ai-voice-bars::after {
+      animation: none;
+    }
+
+    .ai-menu-chevron {
+      transition: none;
+    }
+  }
+
   @keyframes ai-wave {
     0%, 100% { transform: scaleY(0.6); opacity: 0.7; }
     50% { transform: scaleY(1.1); opacity: 1; }
