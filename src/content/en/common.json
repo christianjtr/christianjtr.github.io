@@ -36,10 +36,10 @@
         "ai_summary_label": "AI Summary",
         "ai_copy_option": "Copy prompt",
         "ai_open_menu": "Open AI options",
-        "ai_prompt_system": "System: You are an expert technical recruiter and engineer manager analyzing a candidate portfolio.",
-        "ai_prompt_context": "Context Data from Christian JTR's Portfolio:",
+        "ai_prompt_system": "You are an expert technical recruiter and engineer manager analyzing a candidate portfolio.",
+        "ai_prompt_context": "Here is context from Christian JTR's portfolio.",
         "ai_prompt_read": "Read the candidate portfolio at {url}",
-        "ai_prompt_task": "Task: Provide a 3-bullet-point executive summary of this candidate's engineering strengths, production patterns, value the candidate can bring, and technical stack for engineering roles. List roles this candidate is suitable for and why.",
+        "ai_prompt_task": "Provide a 3-bullet-point executive summary of this candidate's engineering strengths, production patterns, value the candidate can bring, and technical stack for engineering roles. List roles this candidate is suitable for and why.",
         "details_on_linkedin": "Education details available on LinkedIn"
     },
     "open_graph": {
@@ -99,8 +99,8 @@
         "greeting": "Welcome, I am",
         "my_name": "Christian José Torrealba Rondón<span class='text-accent text-3xl'>.</span>",
         "my_name_template": "Christian José <br><span class='text-[0.85em] font-medium tracking-wide inline-block mt-1'>Torrealba Rondón<span class='text-accent'>.</span></span>",
-        "about_me_title": "Engineer who integrates product strategy, technical execution, and data analytics.",
-        "about_me": "I help teams connect business needs with technical solutions, translating complex requirements into products that work seamlessly and deliver real value.",
+        "about_me_title": "Product-minded engineer who integrates strategy and technical execution to deliver data-driven solutions.",
+        "about_me": "I work with product and engineering teams to turn requirements into solutions, including web applications, UI interfaces, integrations, and the tests that keep them reliable.",
         "systems_thinking_mindset": "Systems Thinking Mindset",
         "summary": "Building digital products and solutions through data-driven engineering and user-centered design.",
         "hobbies_title": "Hobbies",
@@ -149,17 +149,17 @@
             }
         ],
         "expertise": {
-            "title": "How I Impact Product & Tech Domains",
+            "title": "Areas I work in",
             "subjects": [
                 {
                     "name": "Product Direction & Strategy",
                     "category": "product",
-                    "description": "Aligning business goals with technical execution to accelerate delivery.",
+                    "description": "Turning product requirements into implementation choices.",
                     "topics": [
-                        "Agile Leadership and Mentorship",
-                        "Product Ownership and Ideation",
-                        "Tech Research",
-                        "Digital Marketing"
+                        "Product discovery with the team",
+                        "Writing and splitting requirements",
+                        "Technical research",
+                        "Digital marketing (course work and a Google certificate)"
                     ],
                     "tools": [
                         "Atlassian Suite (Jira, Confluence)",
@@ -237,9 +237,9 @@
                 {
                     "name": "AI Engineering & Automation",
                     "category": "ai",
-                    "description": "Optimizing software delivery through automated workflows and AI integration.",
+                    "description": "Experimental work with LLMs, agents, and developer tools.",
                     "topics": [
-                        "Agentic Systems",
+                        "Developer tools",
                         "LLM Integration",
                         "AI Workflows",
                         "Process Automation"
@@ -299,11 +299,11 @@
     },
     "section_experiments": {
         "title": "Selected Works",
-        "subtitle": "A curated collection of some of my projects and works"
+        "subtitle": "Course work, prototypes, and projects in progress"
     },
     "section_experiences": {
         "title": "Background",
-        "subtitle": "A comprehensive look at my professional growth and key accomplishments across different countries n Europe and the US",
+        "subtitle": "Engineering work in Venezuela, Argentina, and Spain.",
         "collaborated_with": "Experience collaborating with teams and people across different countries within Europe and the US.",
         "companies_across_regions": "Worked across different markets",
         "companies_and_countries_lived_in": "Countries Lived, Worked, and Studied in",
@@ -332,7 +332,7 @@
     "section_studies": {
         "title": "Academic Background",
         "subtitle": "Key Areas of Study",
-        "educational_level": "Master Degree",
+        "educational_level": "Master's degree",
         "key_subjects": [
             "Information and Communication Technologies",
             "Tech Leadership and Strategy",

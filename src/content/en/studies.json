@@ -12,7 +12,7 @@
         "country": "Spain",
         "location": "Valencia, Spain",
         "flag_asset": "/src/assets/svg/flag_spain.svg",
-        "description": "Strategic formation focused on equipping future CTOs with the skills to successfully lead technological projects and drive innovation.",
+        "description": "Program on technology management, covering technical leadership, agile delivery, web development, security, QA, and DevOps.",
         "topics": [
             "Tech Leadership",
             "Agile Project Management",
@@ -36,7 +36,7 @@
         "country": "Spain",
         "location": "Barcelona, Spain",
         "flag_asset": "/src/assets/svg/flag_spain.svg",
-        "description": "Expertise in the strategic management of Internet-based businesses, with a focus on implementing robust marketing plans, enhancing customer experience, developing digital products, and optimizing e-commerce performance.",
+        "description": "Master’s program on internet businesses, covering marketing, customer experience, digital products, and e-commerce.",
         "topics": [
             "Lean Startup",
             "Digital Marketing",
@@ -59,7 +59,7 @@
         "country": "Spain",
         "location": "Barcelona, Spain",
         "flag_asset": "/src/assets/svg/flag_spain.svg",
-        "description": "Focused on developing and managing business intelligence projects to drive data-informed decision-making. Proficient in a range of analytical techniques, including data mining, data visualization, machine learning, and big data analysis.",
+        "description": "Postgraduate program on BI projects, covering data mining, visualization, machine learning, and big data.",
         "topics": [
             "Data Modeler",
             "Big Data",
@@ -107,7 +107,7 @@
         "country": "Venezuela",
         "location": "Caracas, Venezuela",
         "flag_asset": "/src/assets/svg/flag_venezuela.svg",
-        "description": "Developed a robust skillset in enterprise management, encompassing strategic planning, financial analysis, and cross-functional leadership to drive organizational growth.",
+        "description": "Program on enterprise management, covering strategy, finance, and working with other functions.",
         "topics": [
             "Leadership",
             "Coaching and Teamwork",
@@ -131,7 +131,7 @@
         "country": "Venezuela",
         "location": "Caracas, Venezuela",
         "flag_asset": "/src/assets/svg/flag_venezuela.svg",
-        "description": "Applied knowledge of open-source business intelligence tools to analyze large datasets and create interactive dashboards that drove data-informed decisions.",
+        "description": "Program on open-source BI tools, ETL, data warehouses, and dashboards.",
         "topics": ["Data Cleansing", "ETL Design", "DWH", "Open Data Projects"],
         "subject": "Business Intelligence"
     },
@@ -143,12 +143,12 @@
         "school": "Experimental and Polytechnic University of the Armed Forces (UNEFA)",
         "degree": "Degree in Systems Engineering",
         "isOngoing": false,
-        "level": "Bachelor of Systems Engineering",
+        "level": "Degree in Systems Engineering",
         "period": "Sep 2004 - Sep 2009",
         "country": "Venezuela",
         "location": "Caracas, Venezuela",
         "flag_asset": "/src/assets/svg/flag_venezuela.svg",
-        "description": "Bachelor Degree in Systems Engineering. Knowledge related to engineering, information technologies, and architecture.",
+        "description": "Degree in systems engineering, covering engineering, information technologies, and architecture.",
         "topics": ["Information and Communication Technologies (ICT)"],
         "subject": "Information and Communication Technologies (ICT)"
     }

@@ -1,13 +1,13 @@
 {
     "common": {
-        "overview": "Resúmen",
+        "overview": "Resumen",
         "role": "Rol",
         "contribuition": "Contribución",
         "technologies": "Tecnologías",
         "subjects": "Materias",
         "showcased_at": "Presentado en",
         "view_more": "Ver más",
-        "countries_worked_in": "Países en lo que he trabajado",
+        "countries_worked_in": "Países en los que he trabajado",
         "companies_worked_for": "Empresas en las que trabajé",
         "key_areas": "Áreas clave",
         "interact_with": "Interactúa con los nodos para mostrar el stack tecnológico",
@@ -36,10 +36,10 @@
         "ai_summary_label": "Resumen IA",
         "ai_copy_option": "Copiar prompt",
         "ai_open_menu": "Abrir opciones de IA",
-        "ai_prompt_system": "Sistema: Eres un reclutador técnico experto y engineering manager analizando el portafolio de un candidato.",
-        "ai_prompt_context": "Datos de contexto del portafolio de Christian JTR:",
+        "ai_prompt_system": "Eres un reclutador técnico experto y engineering manager que analiza el portafolio de un candidato.",
+        "ai_prompt_context": "Estos son los datos de contexto del portafolio de Christian JTR.",
         "ai_prompt_read": "Lee el portafolio del candidato en {url}",
-        "ai_prompt_task": "Tarea: Resume en 3 viñetas las fortalezas de ingeniería, patrones de producción, valor que puede aportar y stack técnico para roles de ingeniería. Lista los roles para los que encaja y por qué.",
+        "ai_prompt_task": "Resume en 3 viñetas las fortalezas de ingeniería, los patrones de producción, el valor que puede aportar y el stack técnico para roles de ingeniería. Lista los roles para los que encaja y por qué.",
         "details_on_linkedin": "Historial educativo disponible en LinkedIn"
     },
     "open_graph": {
@@ -99,10 +99,10 @@
         "greeting": "Te doy la bienvenida, soy",
         "my_name": "Christian José Torrealba Rondón<span class='text-accent text-3xl'>.</span>",
         "my_name_template": "Christian José <br><span class='text-[0.85em] font-medium tracking-wide inline-block mt-1'>Torrealba Rondón<span class='text-accent'>.</span></span>",
-        "about_me_title": "Ingeniero que integra estrategia de producto, ejecución técnica y analítica de datos.",
-        "about_me": "Ayudo a los equipos a conectar las necesidades de negocio con soluciones técnicas, transformando requisitos complejos en productos funcionales que aportan un valor real.",
+        "about_me_title": "Ingeniero con mentalidad orientada al producto, capaz de integrar y ejecutar técnicamente soluciones basadas en datos de manera estratégica.",
+        "about_me": "Trabajo con equipos de producto e ingeniería para convertir requisitos en aplicaciones web, con interfaces, integraciones y las pruebas que las mantienen fiables.",
         "systems_thinking_mindset": "Enfoque de Pensamiento Sistémico",
-        "summary": "Creando productos y soluciones digitales mediante ingeniería de datos y diseño centrado en el usuario.",
+        "summary": "Creación de productos y soluciones digitales mediante ingeniería basada en datos y diseño centrado en el usuario.",
         "hobbies_title": "Aficiones",
         "hobbies": [
             { "name": "Al aire libre", "emoji": "☀️" },
@@ -115,7 +115,7 @@
             { "name": "Viajes", "emoji": "✈️" },
             { "name": "Idiomas", "emoji": "🗣️" }
         ],
-        "v_shaped_profile": "Perfil V-Shaped",
+        "v_shaped_profile": "Perfil en V",
         "v_shaped_explanation": "Combina la especialización en un área relevante con un conocimiento amplio y multifuncional",
         "language_tip": "Impulsando el aprendizaje continuo",
         "linkedInURL": "https://www.linkedin.com/in/christianjtr/",
@@ -149,17 +149,17 @@
             }
         ],
         "expertise": {
-            "title": "Aportando valor en producto y tecnología",
+            "title": "Áreas en las que trabajo",
             "subjects": [
                 {
                     "name": "Dirección de Producto y Estrategia",
                     "category": "product",
-                    "description": "Alineación de objetivos de negocio con la ejecución técnica para acelerar la entrega.",
+                    "description": "Convertir los requisitos de producto en decisiones de implementación.",
                     "topics": [
-                        "Liderazgo ágil y mentoría",
-                        "Product Ownership e ideación",
+                        "Descubrimiento de producto con el equipo",
+                        "Redacción y división de requisitos",
                         "Investigación tecnológica",
-                        "Marketing digital"
+                        "Marketing digital (formación y un certificado de Google)"
                     ],
                     "tools": [
                         "Atlassian Suite (Jira, Confluence)",
@@ -237,9 +237,9 @@
                 {
                     "name": "Ingeniería de IA y Automatización",
                     "category": "ai",
-                    "description": "Optimización de la entrega de software mediante flujos automatizados e integración de IA.",
+                    "description": "Experimentación con LLMs, agentes y herramientas para desarrolladores.",
                     "topics": [
-                        "Sistemas agénticos",
+                        "Herramientas para desarrolladores",
                         "Integración de LLMs",
                         "Flujos de trabajo de IA",
                         "Automatización de procesos"
@@ -299,16 +299,16 @@
     },
     "section_experiments": {
         "title": "Selección de Trabajos",
-        "subtitle": "Una selección de algunos de mis proyectos y pruebas de concepto"
+        "subtitle": "Trabajos de curso, prototipos y proyectos en curso"
     },
     "section_experiences": {
         "title": "Trayectoria",
-        "subtitle": "Un vistazo completo a mi crecimiento profesional y logros clave en diferentes países en Europa y USA",
+        "subtitle": "Trabajo de ingeniería en Venezuela, Argentina y España.",
         "collaborated_with": "Experiencia colaborando con equipos y personas de diferentes países en Europa y USA.",
         "companies_across_regions": "He trabajado en diferentes mercados",
         "companies_and_countries_lived_in": "Países donde viví, trabajé y estudié",
         "academic_foundation": "Nivel educativo y credenciales verificadas que respaldan la ejecución técnica.",
-        "countries": ["Venezuela", "Argentina", "Spain"],
+        "countries": ["Venezuela", "Argentina", "España"],
         "full_countries": [
             "Venezuela",
             "Argentina",
@@ -318,21 +318,21 @@
             "Estados Unidos de América"
         ],
         "key_areas": [
-            "Product Engineering",
-            "Software Development",
-            "Business Intelligence"
+            "Ingeniería de producto",
+            "Desarrollo de software",
+            "Inteligencia de negocio"
         ],
         "key_studies": [
-            "Information and Communication Technologies",
-            "Tech Leadership and Strategy",
-            "Business Intelligence and Data Engineering",
-            "User Experience and Research"
+            "Tecnologías de la información y la comunicación",
+            "Estrategia y liderazgo tecnológico",
+            "Inteligencia de negocio e ingeniería de datos",
+            "Experiencia de usuario e investigación"
         ]
     },
     "section_studies": {
         "title": "Formación Académica",
         "subtitle": "Áreas Clave de Estudio",
-        "educational_level": "Título de Máster",
+        "educational_level": "Máster",
         "key_subjects": [
             "Tecnologías de la Información y Comunicación",
             "Estrategia y Liderazgo Tecnológico",

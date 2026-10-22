@@ -22,16 +22,16 @@
             "Pentaho BI",
             "ArcGIS"
         ],
-        "contributions": "Colaboré con un equipo multidisciplinar de ingenieros, economistas, geólogos y geógrafos para diseñar, desarrollar y lanzar la plataforma. Mi enfoque principal estuvo en traducir requisitos técnicos y de negocio complejos en una aplicación funcional en tiempo real para análisis de nivel ejecutivo.",
-        "overview": "SIPO es una plataforma web diseñada para respaldar la toma de decisiones estratégicas en la industria petrolera, centralizando datos técnicos, económicos y de geociencias en una única fuente de verdad. El sistema combina visualizaciones de datos interactivas con capacidades geoespaciales (Google Earth) para permitir el análisis de escenarios económicos en tiempo real.",
-        "summary": "Sistema de soporte a la toma de decisiones en tiempo real para la industria del petróleo y gas",
-        "outcome": "La plataforma eliminó la redundancia de datos al centralizar flujos de trabajo técnicos y de geociencias que antes estaban fragmentados en una única fuente de verdad en tiempo real. Esto permitió a la Junta Directiva realizar simulaciones económicas instantáneas, acelerando significativamente la toma de decisiones estratégicas y optimizando la colaboración entre los equipos técnicos y de negocio."
+        "contributions": "Colaboré con un equipo multidisciplinar de ingenieros, economistas, geólogos y geógrafos para diseñar, desarrollar y lanzar la plataforma. Me centré en traducir requisitos técnicos y de negocio complejos en una aplicación usable para análisis de nivel ejecutivo.",
+        "overview": "SIPO es una plataforma web para la toma de decisiones estratégicas en la industria petrolera. Centraliza datos técnicos, económicos y de geociencias en un solo lugar, y combina visualizaciones interactivas con Google Earth para analizar escenarios económicos en tiempo real.",
+        "summary": "Sistema de apoyo a la decisión en tiempo real para la industria del petróleo y el gas",
+        "outcome": "Aplicación web que reunía datos técnicos, económicos y de geociencias para el análisis de escenarios económicos, con gráficos interactivos y Google Earth. Trabajé en el software y en los datos con ingenieros, economistas, geólogos y geógrafos."
     },
     {
         "id": "project-kml-visualization",
         "section": "projects",
         "title": "Representación de datos geográficos relacionados con la Industria Petrolera Venezolana",
-        "showcased_at": "6to Congreso de Ciencia Cartográfica",
+        "showcased_at": "6.º Congreso de la Ciencia Cartográfica",
         "location": "Buenos Aires, Argentina",
         "flag": "🇦🇷",
         "flag_asset": "/src/assets/svg/flag_argentina.svg",
@@ -39,18 +39,17 @@
         "owner": "© Petróleos de Venezuela (PDVSA)",
         "url": "https://www.ign.gob.ar/Novedades/FinalizoElSextoCongresoDeLaCienciaCartogr%C3%A1fica.",
         "period": "Junio 2012",
-        "contribute_as": "Ingeniero de Producto (I+D+i)",
+        "contribute_as": "Ingeniero de Producto (I+D)",
         "technologies": [
             "Google Earth / Maps",
-            "CESIUM 3D Geospatial",
             "KML / KMZ",
             "ArcGIS",
             "Global Mapper"
         ],
-        "contributions": "Trabajé en estrecha colaboración con geólogos y geógrafos para diseñar e implementar un proceso automatizado de creación y edición de archivos KML/KMZ, eliminando la dependencia de herramientas GIS costosas y complejas para las operaciones del día a día.",
-        "overview": "Proyecto enfocado en simplificar el acceso a grandes volúmenes de datos geográficos y de hidrocarburos (campos petroleros, formaciones geológicas e infraestructura) que tradicionalmente estaban restringidos a software especializado como ArcGIS. La solución automatizó la generación y gestión de archivos KML/KMZ para poner esta información al alcance de equipos más amplios.",
-        "summary": "Democratización del acceso a datos complejos de hidrocarburos y sistemas geoespaciales",
-        "outcome": "La solución democratizó el acceso a datos geológicos y petroleros críticos mediante la automatización en la generación de archivos KML/KMZ. Esto eliminó la dependencia operativa de herramientas especializadas como ArcGIS para las tareas diarias de visualización, permitiendo a los equipos multidisciplinares trabajar de manera más eficiente con información geoespacial compleja."
+        "contributions": "Trabajé con geólogos y geógrafos para diseñar e implementar un proceso automatizado de creación y edición de archivos KML/KMZ, de modo que la visualización cotidiana no dependiera de abrir herramientas GIS especializadas.",
+        "overview": "El proyecto simplificaba el acceso a grandes volúmenes de datos geográficos y de hidrocarburos, como campos petroleros, formaciones geológicas e infraestructura, que solían quedar encerrados en software especializado como ArcGIS. Automatizó la creación y gestión de archivos KML y KMZ para que equipos más amplios pudieran usar esa información.",
+        "summary": "Acceso más amplio a datos geoespaciales y de hidrocarburos complejos",
+        "outcome": "Automatización de la creación y edición de KML/KMZ para consultar datos geológicos y de infraestructura en Google Earth sin abrir ArcGIS en cada visualización."
     },
     {
         "id": "project-augmented-intelligence",
@@ -69,12 +68,12 @@
             "VueJS / NodeJS",
             "Qlik Sense Hub",
             "SignalR Client",
-            "Dialog Flow",
+            "Dialogflow",
             "AR.js"
         ],
-        "contributions": "Colaboré con el equipo de ingeniería en el diseño y desarrollo de una aplicación de realidad aumentada y mixta (AR/MR) para la visualización de tendencias de ventas, así como de una interfaz de chatbot para la consulta y exploración de datos mediante interacción natural, integrada con el ecosistema de Qlik Sense.",
-        "overview": "Iniciativa orientada a democratizar el acceso a la información mediante la combinación de experiencias de realidad aumentada y mixta con asistentes virtuales. El objetivo principal era facilitar a usuarios sin perfil técnico la exploración de grandes volúmenes de datos y la obtención de valor de una manera más intuitiva y atractiva.",
-        "summary": "Acceso simplificado a datos complejos mediante realidad aumentada e interfaces conversacionales",
-        "outcome": "El proyecto aceleró la democratización de la información al poner analíticas complejas al alcance de usuarios no técnicos mediante realidad aumentada e interfaces conversacionales. Como resultado, se consolidó un Analytics Showroom que combinaba experiencias de realidad mixta con un asistente virtual, una solución que fue presentada en la conferencia global Qlik Qonnections como un enfoque innovador para la inteligencia de negocios."
+        "contributions": "Colaboré con el equipo de ingeniería en el diseño y desarrollo de una aplicación de realidad aumentada y mixta (AR/MR) para la visualización de tendencias de ventas, y de una interfaz de chatbot para consultar y explorar datos, integrada con Qlik Sense.",
+        "overview": "El proyecto combinaba realidad aumentada y mixta con un asistente virtual, para que personas sin perfil técnico pudieran explorar grandes volúmenes de datos y tendencias de ventas de una forma más intuitiva, dentro del ecosistema de Qlik Sense.",
+        "summary": "Datos complejos más fáciles de explorar con realidad aumentada y conversación",
+        "outcome": "Contribuí al front-end de una demo de realidad aumentada y de un chatbot para explorar datos de ventas en Qlik Sense."
     }
 ]

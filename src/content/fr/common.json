@@ -1,19 +1,19 @@
 {
     "common": {
         "overview": "Aperçu",
-        "role": "Role",
+        "role": "Rôle",
         "contribuition": "Contribution",
         "technologies": "Technologies",
-        "subjects": "Subjects",
+        "subjects": "Matières",
         "showcased_at": "Présenté à",
-        "view_more": "Savoir plus",
-        "countries_worked_in": "Countries worked in",
-        "companies_worked_for": "Companies worked for",
+        "view_more": "En savoir plus",
+        "countries_worked_in": "Pays où j'ai travaillé",
+        "companies_worked_for": "Entreprises pour lesquelles j'ai travaillé",
         "key_areas": "Domaines clés",
         "interact_with": "Interagissez avec les nœuds pour voir le stack technologique",
         "key_contribuitions": "Contributions majeures",
         "ongoing": "En cours",
-        "cannot_load_content": "Content could not be loaded",
+        "cannot_load_content": "Le contenu n'a pas pu être chargé",
         "author": "Auteur",
         "contributor": "Contributeur",
         "educational_level": "Cursus Académique",
@@ -25,7 +25,7 @@
         "languages": "Langues",
         "countries": "Pays",
         "degrees": "Diplômes",
-        "filter_experience": "Filtrar l'Expérience",
+        "filter_experience": "Filtrer l'expérience",
         "laboratory": "Laboratoire",
         "project_result_title": "Résultats Clés",
         "stack": "Stack technique",
@@ -36,10 +36,10 @@
         "ai_summary_label": "Résumé IA",
         "ai_copy_option": "Copier le prompt",
         "ai_open_menu": "Ouvrir les options IA",
-        "ai_prompt_system": "Système : Tu es un recruteur technique expert et engineering manager analysant le portfolio d'un candidat.",
-        "ai_prompt_context": "Données de contexte du portfolio de Christian JTR :",
-        "ai_prompt_read": "Lis le portfolio du candidat ici : {url}",
-        "ai_prompt_task": "Tâche : Fournis un résumé exécutif en 3 puces des forces d'ingénierie, des patterns de production, de la valeur apportée et de la stack technique. Liste les rôles adaptés et pourquoi.",
+        "ai_prompt_system": "Tu es un recruteur technique expert et engineering manager qui analyse le portfolio d'un candidat.",
+        "ai_prompt_context": "Voici les données de contexte du portfolio de Christian JTR.",
+        "ai_prompt_read": "Lis le portfolio du candidat à cette adresse, {url}",
+        "ai_prompt_task": "Fournis un résumé exécutif en 3 puces des forces d'ingénierie, des patterns de production, de la valeur apportée et de la stack technique. Liste les rôles adaptés et pourquoi.",
         "details_on_linkedin": "Profil académique disponible sur LinkedIn"
     },
     "open_graph": {
@@ -47,7 +47,7 @@
         "description": "Un site web personnel pour partager mon parcours et mes expériences professionnelles"
     },
     "header": {
-        "languages_title": "Languages",
+        "languages_title": "Langues",
         "languages": [
             {
                 "locale": "en",
@@ -91,7 +91,7 @@
     },
     "footer": {
         "powered_and_themed_by": "Développé et thématisé",
-        "assets": "Graphismes"
+        "assets": "Ressources"
     },
     "section_about": {
         "title": "À Propos de Moi",
@@ -99,10 +99,10 @@
         "greeting": "Bienvenue, je suis",
         "my_name": "Christian José Torrealba Rondón<span class='text-accent text-3xl'>.</span>",
         "my_name_template": "Christian José <br><span class='text-[0.85em] font-medium tracking-wide inline-block mt-1'>Torrealba Rondón<span class='text-accent'>.</span></span>",
-        "about_me_title": "Ingénieur qui intègre la stratégie produit, l'exécution technique et l'analyse de données.",
-        "about_me": "J'aide les équipes à connecter les besoins business aux solutions techniques, en traduisant des exigences complexes en produits fluides qui apportent une vraie valeur.",
+        "about_me_title": "Ingénieur qui conçoit des solutions en se basant sur des données, avec une stratégie et une exécution technique.",
+        "about_me": "Je travaille avec des équipes produit et ingénierie pour transformer des besoins en solutions comment des applications web, des interfaces utilisateur, des intégrations et les tests qui en garantissent la fiabilité.",
         "systems_thinking_mindset": "Approche de Pensée Systémique",
-        "summary": "Création de produits et de solutions digitales grâce à l'ingénierie des données et au design centré utilisateur.",
+        "summary": "Créer des produits et des solutions numériques en se basant sur des données et en pensant d'abord aux utilisateurs.",
         "hobbies_title": "Loisirs",
         "hobbies": [
             { "name": "Plein air", "emoji": "☀️" },
@@ -115,7 +115,7 @@
             { "name": "Voyages", "emoji": "✈️" },
             { "name": "Langues", "emoji": "🗣️" }
         ],
-        "v_shaped_profile": "Profil en forme de V",
+        "v_shaped_profile": "Profil en V",
         "v_shaped_explanation": "Combine la spécialisation dans un domaine pertinent avec de vastes connaissances transversales",
         "language_tip": "Piloter un apprentissage continu",
         "linkedInURL": "https://www.linkedin.com/in/christianjtr/",
@@ -149,17 +149,17 @@
             }
         ],
         "expertise": {
-            "title": "Comment je valorise l'écosystème produit et tech",
+            "title": "Domaines dans lesquels je travaille",
             "subjects": [
                 {
                     "name": "Direction Produit et Stratégie",
                     "category": "product",
-                    "description": "Alignement des objectifs business avec l'exécution technique pour accélérer la livraison.",
+                    "description": "Transformer les exigences produit en choix d'implémentation.",
                     "topics": [
-                        "Leadership agile et mentorat",
-                        "Product Ownership et idéation",
+                        "Découverte produit avec l'équipe",
+                        "Rédaction et découpage des exigences",
                         "Recherche technologique",
-                        "Marketing digital"
+                        "Marketing numérique (formation et un certificat Google)"
                     ],
                     "tools": [
                         "Atlassian Suite (Jira, Confluence)",
@@ -235,11 +235,11 @@
                     ]
                 },
                 {
-                    "name": "Ingenierie de l'IA et Automatisation",
+                    "name": "Ingénierie de l'IA et automatisation",
                     "category": "ai",
-                    "description": "Optimisation de la livraison de logiciels via des flux automatisés et l'intégration de l'IA.",
+                    "description": "Expériences avec des LLM, des agents et des outils pour développeurs.",
                     "topics": [
-                        "Systèmes agentiels",
+                        "Outils pour développeurs",
                         "Intégration de LLM",
                         "Workflows d'IA",
                         "Automatisation des processus"
@@ -299,16 +299,16 @@
     },
     "section_experiments": {
         "title": "Sélection de travaux",
-        "subtitle": "Une sélection de certains de mes projets et œuvres"
+        "subtitle": "Travaux de cours, prototypes et projets en cours"
     },
     "section_experiences": {
         "title": "Parcours",
-        "subtitle": "Un aperçu complet de mon évolution professionnelle et de mes réalisations clés dans différents pays d'Europe et des États-Unis",
+        "subtitle": "Travail d'ingénierie au Venezuela, en Argentine et en Espagne.",
         "collaborated_with": "Expérience de collaboration avec des équipes et des personnes de différents pays d'Europe et des États-Unis.",
         "companies_across_regions": "Expérience sur différents marchés",
         "companies_and_countries_lived_in": "Pays où j'ai vécu, travaillé et étudié",
         "academic_foundation": "Niveau d'études et certifications vérifiées appuyant l'exécution technique.",
-        "countries": ["Venezuela", "Argentina", "Spain"],
+        "countries": ["Venezuela", "Argentine", "Espagne"],
         "full_countries": [
             "Venezuela",
             "Argentine",
@@ -318,21 +318,21 @@
             "États-Unis d'Amérique"
         ],
         "key_areas": [
-            "Product Engineering",
-            "Software Development",
-            "Business Intelligence"
+            "Ingénierie produit",
+            "Développement logiciel",
+            "Informatique décisionnelle"
         ],
         "key_studies": [
-            "Information and Communication Technologies",
-            "Tech Leadership and Strategy",
-            "Business Intelligence and Data Engineering",
-            "User Experience and Research"
+            "Technologies de l'information et de la communication",
+            "Stratégie et leadership technologique",
+            "Informatique décisionnelle et ingénierie des données",
+            "Expérience utilisateur et recherche"
         ]
     },
     "section_studies": {
         "title": "Parcours Académique",
         "subtitle": "Principaux Domaines d'Étude",
-        "educational_level": "Diplôme de Master",
+        "educational_level": "Master",
         "key_subjects": [
             "Technologies de l'Information et de la Communication",
             "Stratégie et Leadership Technologique",

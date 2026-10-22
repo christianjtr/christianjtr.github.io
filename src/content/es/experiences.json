@@ -9,14 +9,14 @@
         "sector": "Consultoría Digital",
         "location": "Shanghái, China (Remoto desde España)",
         "flag_asset": "/src/assets/svg/flag_spain.svg",
-        "position": "Asesor de producto y consultor de crecimiento digital",
+        "position": "Asesor de producto y técnico",
         "period": "Sep 2025 - Presente",
         "isOngoing": true,
-        "description": "Como Consultor Digital para OptimusTC, lidero la optimización y el mantenimiento de su ecosistema digital, mejorando su presencia en línea mediante la gestión activa del sitio web y la validación de las funciones principales de la aplicación, garantizando un rendimiento fluido y fiabilidad técnica.",
+        "description": "Consultor digital para OptimusTC. Mantengo el sitio en WordPress, trabajo el rendimiento web y reviso el comportamiento principal de la aplicación.",
         "contributions": [
-            "Liderar la optimización y el mantenimiento de su ecosistema digital.",
-            "Mejorar la presencia en línea mediante la gestión activa del sitio web.",
-            "Validar las funciones principales de la aplicación garantizando un rendimiento fluido y fiabilidad técnica."
+            "Mantener el sitio en WordPress y su rendimiento.",
+            "Revisar el comportamiento principal de la aplicación y las incidencias técnicas.",
+            "Asesorar sobre los cambios técnicos del sitio."
         ],
         "technologies": [
             "Optimización del rendimiento web",
@@ -34,14 +34,14 @@
         "sector": "Soluciones de Movilidad Inteligente",
         "location": "Barcelona, España",
         "flag_asset": "/src/assets/svg/flag_spain.svg",
-        "position": "Ingeniero de Software de Producto Senior (Enfoque Front-end)",
+        "position": "Ingeniero de software sénior, con foco en front-end",
         "period": "May. 2024 - Jul. 2025",
         "isOngoing": false,
-        "description": "Impulso colaborativo de la evolución de la plataforma de aplicaciones web, anticipando oportunidades, garantizando una calidad de aplicación robusta y contribuyendo al desarrollo de funcionalidades innovadoras alineadas con las tendencias del sector de la movilidad.",
+        "description": "Ingeniero de software sénior, con foco en front-end, en la plataforma web de Zeelo, un marketplace para vender viajes y herramientas para gestionar rutas. Desarrollé funcionalidades en React y TypeScript y mantuve pruebas end-to-end y de regresión.",
         "contributions": [
-            "Colaboración para impulsar la evolución de la plataforma de aplicaciones web (Marketplace para vender viajes, plataforma para gestionar rutas).",
-            "Anticipar oportunidades y garantizar una calidad de aplicación robusta (Pruebas E2E y de Regresión).",
-            "Contribuir al desarrollo de funcionalidades innovadoras que se alineen con las tendencias del sector de la movilidad."
+            "Desarrollé funcionalidades del marketplace de viajes y de las herramientas de gestión de rutas.",
+            "Mantuve pruebas end-to-end y de regresión.",
+            "Trabajé en el front-end con React y TypeScript."
         ],
         "technologies": [
             "ReactJS / TypeScript / NodeJS / Zod",
@@ -69,11 +69,10 @@
         "position": "Ingeniero de Soluciones · Ingeniero de Software Full Stack",
         "period": "Oct. 2020 - Jun. 2023",
         "isOngoing": false,
-        "description": "Contribución a la creación de soluciones tecnológicas que optimizaron las experiencias del cliente en la logística de última milla. (Backoffices para agilizar las integraciones de API externas, herramientas de monitoreo y desarrollo de diseño de producto).",
+        "description": "Ingeniero full stack en herramientas internas de reparto de última milla. Desarrollé back-offices para integraciones con API externas y vistas de monitorización de entregas y de la operación.",
         "contributions": [
-            "Contribuyó a la creación de soluciones tecnológicas que optimizaron las experiencias del cliente en la logística de última milla.",
-            "Desarrolló back-offices para agilizar las integraciones de API externas.",
-            "Participó en el desarrollo del diseño de producto y creó herramientas de monitoreo (Entregas de conductores, Actividades operacionales)."
+            "Desarrollé back-offices para integraciones con API externas.",
+            "Desarrollé vistas de monitorización de entregas y de la operación."
         ],
         "technologies": [
             "ReactJS / TypeScript / NodeJS / Sequelize",
@@ -99,14 +98,14 @@
         "sector": "Servicios Financieros",
         "location": "Barcelona, España",
         "flag_asset": "/src/assets/svg/flag_spain.svg",
-        "position": "Arquitecto Desarrollador Front-end",
+        "position": "Ingeniero Front-end",
         "period": "Nov. 2019 - Oct. 2020",
         "isOngoing": false,
-        "description": "Lideró la arquitectura front-end de una aplicación web fintech, impulsando el cumplimiento, la experiencia del usuario y la funcionalidad a través de integraciones (pasarela de pago, sistemas de correo electrónico/SMS, registradores) y mejoras siguiendo los requisitos del producto.",
+        "description": "Ingeniero front-end en un marketplace de préstamos. Trabajé en la estructura front-end en Vue.js y en las integraciones de pago, correo/SMS y registro de logs, según los requisitos de producto.",
         "contributions": [
-            "Lideró la arquitectura front-end de una aplicación web fintech (Marketplace para ofrecer y gestionar préstamos).",
-            "Impulsó el cumplimiento y mejoró la experiencia del usuario de acuerdo con las especificaciones del producto.",
-            "Implementó integraciones basadas en requisitos del producto (Pasarelas de pago, Sistemas de correo electrónico/SMS, Registradores)."
+            "Trabajé en la estructura front-end en Vue.js de un marketplace de préstamos.",
+            "Implementé cambios de front-end según los requisitos de producto.",
+            "Integré servicios de pago, correo/SMS y registro de logs."
         ],
         "technologies": [
             "VueJS / NodeJS",
@@ -131,11 +130,11 @@
         "position": "Ingeniero de Software Front-end",
         "period": "Nov. 2018 - Oct. 2019",
         "isOngoing": false,
-        "description": "Automatizó flujos de trabajo front-end y creó una interfaz de usuario de chatbot impulsada por datos con visualizaciones interactivas y una aplicación mashup de realidad aumentada para visualizar tendencias de ventas, aprovechando tecnologías web modernas y frameworks de chatbot.",
+        "description": "Automaticé flujos de trabajo de front-end y construí una interfaz de chatbot y una demo de realidad aumentada para explorar datos de ventas en Qlik Sense.",
         "contributions": [
-            "Automatizó flujos de trabajo front-end utilizando tecnologías web modernas y frameworks de chatbot.",
-            "Creó una interfaz de usuario de chatbot impulsada por datos con visualizaciones interactivas.",
-            "Desarrolló una aplicación mashup de realidad aumentada (RA) para visualizar tendencias de ventas."
+            "Automaticé flujos de trabajo de front-end.",
+            "Construí una interfaz de chatbot para explorar datos de ventas en Qlik Sense.",
+            "Construí una demo de realidad aumentada para explorar datos de ventas."
         ],
         "technologies": [
             "VueJS / Angular / NodeJS",
@@ -160,11 +159,11 @@
         "position": "Desarrollador de Interfaz de Usuario Front-end",
         "period": "Jun. 2016 - Oct. 2017",
         "isOngoing": false,
-        "description": "Desarrolló una plataforma de back-office basada en web para un sistema de peaje de flujo libre de vehículos, agilizando la gestión de la recaudación de peajes en varios aspectos: Gestión de clientes, Procesamiento de pagos, Gestión de dispositivos Tag, Monitoreo de vehículos, y otros.",
+        "description": "Desarrollé una plataforma de back-office web para un sistema de peaje de flujo libre, con gestión de clientes, pagos, dispositivos tag y monitorización de vehículos.",
         "contributions": [
-            "Desarrolló una plataforma de back-office basada en web para un sistema de peaje de flujo libre de vehículos.",
-            "Agilizó la gestión de la recaudación de peajes en varios aspectos (Clientes, Pagos, Monitoreo de vehículos).",
-            "Contribuyó al desarrollo de mocks de API para mejorar la experiencia del desarrollador (DevExp)."
+            "Desarrollé una plataforma de back-office basada en web para un sistema de peaje de flujo libre de vehículos.",
+            "Agilicé la gestión de la recaudación de peajes en varios aspectos (Clientes, Pagos, Monitoreo de vehículos).",
+            "Contribuí al desarrollo de mocks de API para mejorar la experiencia de desarrollo."
         ],
         "technologies": [
             "Angular / NodeJS",
@@ -185,14 +184,14 @@
         "sector": "Energía e Hidrocarburos",
         "location": "Caracas, Venezuela",
         "flag_asset": "/src/assets/svg/flag_venezuela.svg",
-        "position": "Ingeniero de Software de Producto (Tecnologías Web, Ingeniería de Datos, e I+D+i)",
+        "position": "Ingeniero de Software de Producto (Tecnologías Web, Ingeniería de Datos e I+D)",
         "period": "May. 2011 - Ene. 2016",
         "isOngoing": false,
-        "description": "Colaborar con equipos multifuncionales para concebir, diseñar, desarrollar y entregar una aplicación web en tiempo real para el análisis de escenarios económicos, aprovechando herramientas GIS y de inteligencia de datos para visualizar, analizar y modelar datos de geociencia, financieros y de producción de hidrocarburos, empoderando la toma de decisiones basada en datos.",
+        "description": "Ingeniero de software en una aplicación web de análisis de escenarios económicos en petróleo y gas. Trabajé con geocientíficos y economistas en la visualización, el GIS y los modelos de producción y financieros.",
         "contributions": [
-            "Colaboró con equipos multifuncionales para concebir, desarrollar y entregar aplicaciones web en tiempo real.",
-            "Aprovechó herramientas GIS y de inteligencia de datos para visualizar, analizar y modelar datos (Geociencia, Financieros, Hidrocarburos).",
-            "Empoderó la toma de decisiones basada en datos (Producción de petróleo y modelos financieros)."
+            "Trabajé en una aplicación web de análisis de escenarios económicos en petróleo y gas.",
+            "Trabajé con geocientíficos y economistas en la visualización y el GIS.",
+            "Trabajé en modelos de producción y financieros."
         ],
         "technologies": [
             "jQuery",
@@ -219,11 +218,10 @@
         "position": "Responsable de Sistemas de TI",
         "period": "Nov. 2009 - May. 2011",
         "isOngoing": false,
-        "description": "Liderar el diseño y desarrollo de un CRM basado en web, integrando departamentos para mejorar la gestión del servicio al cliente y la creación de un quiosco de autoservicio para la gestión automatizada de colas y consultas de saldo.",
+        "description": "Diseñé y desarrollé un CRM web usado entre departamentos y un quiosco de autoservicio para la gestión de colas y las consultas de saldo.",
         "contributions": [
-            "Liderar el diseño y desarrollo de un CRM basado en web (Soporte al cliente, monitoreo del rendimiento de empleados, etc.).",
-            "Integró varios sistemas departamentales para mejorar la gestión del servicio al cliente.",
-            "Creó un quiosco de autoservicio para: gestión automatizada de colas, consultas de saldo."
+            "Diseñé y desarrollé un CRM web usado entre departamentos.",
+            "Desarrollé un quiosco de autoservicio para la gestión de colas y las consultas de saldo."
         ],
         "technologies": [
             "jQuery",

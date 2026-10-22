@@ -12,13 +12,13 @@
         "country": "Espagne",
         "location": "Valence, Espagne",
         "flag_asset": "/src/assets/svg/flag_spain.svg",
-        "description": "Formation stratégique visant à doter les futurs CTO des compétences nécessaires pour diriger avec succès des projets technologiques et stimuler l'innovation.",
+        "description": "Formation en gestion technologique, couvrant le leadership technique, la livraison agile, le développement web, la sécurité, la QA et le DevOps.",
         "topics": [
-            "Tech Leadership",
-            "Agile Project Management",
-            "Web Development",
-            "Cybersecurity",
-            "QA and Testing",
+            "Leadership technologique",
+            "Gestion de projet agile",
+            "Développement web",
+            "Cybersécurité",
+            "QA et tests",
             "DevOps"
         ],
         "subject": "Leadership Technique"
@@ -36,13 +36,13 @@
         "country": "Espagne",
         "location": "Barcelone, Espagne",
         "flag_asset": "/src/assets/svg/flag_spain.svg",
-        "description": "Expertise en gestion stratégique des entreprises basées sur Internet, axée sur la mise en œuvre de plans marketing solides, l'amélioration de l'expérience client, le développement de produits numériques et l'optimisation des performances du commerce électronique.",
+        "description": "Master sur les activités en ligne, couvrant le marketing, l’expérience client, les produits numériques et le commerce électronique.",
         "topics": [
             "Lean Startup",
-            "Digital Marketing",
-            "Social Media",
+            "Marketing numérique",
+            "Réseaux sociaux",
             "SEO · SEA · ASO",
-            "StartUps"
+            "Startups"
         ],
         "subject": "Gestion des Affaires Numériques et Startups"
     },
@@ -52,19 +52,19 @@
         "start_year": 2017,
         "end_year": 2018,
         "school": "Escoles Gimbernat i Tomàs Cerdà · Université Autonome de Barcelone",
-        "degree": "Post-diplôme en Intelligence d'Affaires (Business Intelligence)",
+        "degree": "Postgrado en business intelligence",
         "isOngoing": false,
-        "level": "Diplôme de Post-diplôme",
+        "level": "Postgrado (diplôme d'études supérieures)",
         "period": "Nov. 2017 - Juil. 2018",
         "country": "Espagne",
         "location": "Barcelone, Espagne",
         "flag_asset": "/src/assets/svg/flag_spain.svg",
-        "description": "Axé sur le développement et la gestion de projets d'intelligence d'affaires pour stimuler la prise de décision basée sur les données. Maîtrise d'une gamme de techniques analytiques, y compris l'exploration de données, la visualisation de données, l'apprentissage automatique et l'analyse de mégadonnées (Big Data).",
+        "description": "Postgrado en business intelligence, avec des projets de BI, de la fouille de données, de la visualisation, de l’apprentissage automatique et du big data.",
         "topics": [
-            "Data Modeler",
+            "Modélisation de données",
             "Big Data",
-            "Data Visualization",
-            "Machine Learning",
+            "Visualisation de données",
+            "Apprentissage automatique",
             "DWH",
             "ETL"
         ],
@@ -83,14 +83,14 @@
         "country": "Argentine",
         "location": "Buenos Aires, Argentine",
         "flag_asset": "/src/assets/svg/flag_argentina.svg",
-        "description": "Formation complète en développement de produits numériques avec un accent sur la conception d'expérience utilisateur (UX).",
+        "description": "Formation au développement de produits numériques, centrée sur la conception d'expérience utilisateur (UX).",
         "topics": [
             "Design Thinking",
-            "Usability",
-            "Prototyping",
-            "A/B Testing",
-            "Product Design",
-            "User Research"
+            "Utilisabilité",
+            "Prototypage",
+            "Tests A/B",
+            "Conception produit",
+            "Recherche utilisateur"
         ],
         "subject": "Développement de Produits Numériques et Recherche Utilisateur"
     },
@@ -102,19 +102,19 @@
         "school": "Université Métropolitaine (UNIMET)",
         "degree": "Diplôme en Gestion d'Entreprise",
         "isOngoing": false,
-        "level": "Diplôme de Post-diplôme",
+        "level": "Postgrado (diplôme d'études supérieures)",
         "period": "Sept. 2014 - Juil. 2015",
         "country": "Venezuela",
         "location": "Caracas, Venezuela",
         "flag_asset": "/src/assets/svg/flag_venezuela.svg",
-        "description": "Développement d'un ensemble de compétences solides en gestion d'entreprise, englobant la planification stratégique, l'analyse financière et le leadership interfonctionnel pour stimuler la croissance organisationnelle.",
+        "description": "Formation en gestion d'entreprise, couvrant la stratégie, la finance et le travail avec d'autres fonctions.",
         "topics": [
             "Leadership",
-            "Coaching and Teamwork",
-            "Strategic Planning",
-            "Negotiation",
-            "Financial Analysis",
-            "Enterprise Management"
+            "Coaching et travail d'équipe",
+            "Planification stratégique",
+            "Négociation",
+            "Analyse financière",
+            "Gestion d'entreprise"
         ],
         "subject": "Leadership, Gestion et Négociation"
     },
@@ -124,16 +124,16 @@
         "start_year": 2013,
         "end_year": 2014,
         "school": "Université Centrale du Venezuela",
-        "degree": "Diplôme en Intelligence d'Affaires (Business Intelligence)",
+        "degree": "Diplôme en informatique décisionnelle",
         "isOngoing": false,
         "level": "Spécialisation",
         "period": "Sept. 2013 - Avr. 2014",
         "country": "Venezuela",
         "location": "Caracas, Venezuela",
         "flag_asset": "/src/assets/svg/flag_venezuela.svg",
-        "description": "Application des connaissances des outils d'intelligence d'affaires open source pour analyser de grands ensembles de données et créer des tableaux de bord interactifs qui ont favorisé des décisions basées sur les données.",
-        "topics": ["Data Cleansing", "ETL Design", "DWH", "Open Data Projects"],
-        "subject": "Intelligence d'Affaires (Business Intelligence)"
+        "description": "Formation sur les outils de BI open source, l'ETL, les entrepôts de données et les tableaux de bord.",
+        "topics": ["Nettoyage des données", "Conception ETL", "DWH", "Projets open data"],
+        "subject": "Informatique décisionnelle"
     },
     {
         "id": "study-unefa",
@@ -143,13 +143,13 @@
         "school": "Université Expérimentale et Polytechnique des Forces Armées (UNEFA)",
         "degree": "Diplôme d'Ingénieur en Systèmes",
         "isOngoing": false,
-        "level": "Baccalauréat en Ingénierie des Systèmes",
+        "level": "Diplôme d'ingénieur en systèmes",
         "period": "Sept. 2004 - Sept. 2009",
         "country": "Venezuela",
         "location": "Caracas, Venezuela",
         "flag_asset": "/src/assets/svg/flag_venezuela.svg",
-        "description": "Diplôme de Baccalauréat en Ingénierie des Systèmes. Connaissances liées à l'ingénierie, aux technologies de l'information et à l'architecture.",
-        "topics": ["Information and Communication Technologies (ICT)"],
+        "description": "Formation d’ingénieur en systèmes, couvrant l’ingénierie, les technologies de l’information et l’architecture.",
+        "topics": ["Technologies de l'information et de la communication (TIC)"],
         "subject": "Technologies de l'Information et de la Communication (TIC)"
     }
 ]

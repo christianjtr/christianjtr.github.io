@@ -9,14 +9,14 @@
         "sector": "Conseil Digital",
         "location": "Shanghai, Chine (À distance depuis l'Espagne)",
         "flag_asset": "/src/assets/svg/flag_spain.svg",
-        "position": "Conseiller en produits et consultant en croissance numérique",
+        "position": "Conseiller produit et technique",
         "period": "Sep 2025 - Présent",
         "isOngoing": true,
-        "description": "En tant que Consultant Digital pour OptimusTC, je dirige l'optimisation et la maintenance de leur écosystème numérique, renforçant leur présence en ligne grâce à une gestion active du site web et à la validation des fonctionnalités de base de l'application — assurant ainsi une performance fluide et une fiabilité technique.",
+        "description": "Consultant numérique pour OptimusTC. J’assure la maintenance du site WordPress, le travail sur les performances web et la revue du comportement principal de l’application.",
         "contributions": [
-            "Diriger l'optimisation et la maintenance de leur écosystème numérique.",
-            "Renforcer la présence en ligne grâce à une gestion active du site web.",
-            "Valider les fonctionnalités de base de l'application assurant une performance fluide et une fiabilité technique."
+            "Maintenir le site WordPress et ses performances.",
+            "Revoir le comportement principal de l’application et les problèmes techniques.",
+            "Conseiller les changements techniques du site."
         ],
         "technologies": [
             "Optimisation de la performance web",
@@ -34,14 +34,14 @@
         "sector": "Solutions de Mobilité Intelligente",
         "location": "Barcelone, Espagne",
         "flag_asset": "/src/assets/svg/flag_spain.svg",
-        "position": "Ingénieur Logiciel Produit Senior (Axé Front-end)",
+        "position": "Ingénieur logiciel senior, orienté front-end",
         "period": "Mai 2024 - Juil. 2025",
         "isOngoing": false,
-        "description": "Conduite collaborative de l'évolution de la plateforme d'application web en anticipant les opportunités, en assurant une qualité d'application robuste et en contribuant au développement de fonctionnalités innovantes alignées sur les tendances du secteur de la mobilité.",
+        "description": "Ingénieur logiciel senior, orienté front-end, sur la plateforme web de Zeelo, une place de marché pour vendre des trajets et des outils de gestion d’itinéraires. J’ai développé des fonctionnalités en React et TypeScript et maintenu les tests de bout en bout et de régression.",
         "contributions": [
-            "Collaboration pour l'évolution de la plateforme d'application web (Place de marché pour vendre des voyages, plateforme de gestion des itinéraires).",
-            "Anticiper les opportunités et assurer une qualité d'application robuste (Tests E2E et de Régression).",
-            "Contribuer au développement de fonctionnalités innovantes alignées sur les tendances du secteur de la mobilité."
+            "J’ai développé des fonctionnalités pour la place de marché de trajets et les outils de gestion d’itinéraires.",
+            "J’ai maintenu les tests de bout en bout et de régression.",
+            "J’ai travaillé sur le front-end en React et TypeScript."
         ],
         "technologies": [
             "ReactJS / TypeScript / NodeJS / Zod",
@@ -69,11 +69,10 @@
         "position": "Ingénieur Solutions · Ingénieur Logiciel Full Stack",
         "period": "Oct. 2020 - Juin 2023",
         "isOngoing": false,
-        "description": "Contributeur à l'élaboration de solutions technologiques qui ont optimisé l'expérience client dans la logistique du dernier kilomètre. (Back-offices pour simplifier les intégrations d'API externes, outils de surveillance et développement de la conception de produits).",
+        "description": "Ingénieur full stack sur des outils internes de livraison du dernier kilomètre. J’ai développé des back-offices pour les intégrations d’API externes et des vues de suivi des livraisons et de l’exploitation.",
         "contributions": [
-            "Contribution à l'élaboration de solutions technologiques qui ont optimisé l'expérience client dans la logistique du dernier kilomètre.",
-            "Développement de back-offices pour simplifier les intégrations d'API externes.",
-            "Implication dans le développement de la conception de produits et création d'outils de surveillance (Livraisons de chauffeurs, Activités opérationnelles)."
+            "J’ai développé des back-offices pour les intégrations d’API externes.",
+            "J’ai développé des vues de suivi des livraisons et de l’exploitation."
         ],
         "technologies": [
             "ReactJS / TypeScript / NodeJS / Sequelize",
@@ -99,14 +98,14 @@
         "sector": "Services Financiers",
         "location": "Barcelone, Espagne",
         "flag_asset": "/src/assets/svg/flag_spain.svg",
-        "position": "Architecte Développeur Front-end",
+        "position": "Ingénieur Front-end",
         "period": "Nov. 2019 - Oct. 2020",
         "isOngoing": false,
-        "description": "Direction de l'architecture front-end d'une application web fintech, favorisant la conformité, l'expérience utilisateur et la fonctionnalité grâce à des intégrations (passerelle de paiement, systèmes d'e-mailing/SMS, loggers) et des améliorations suivant les exigences du produit.",
+        "description": "Ingénieur front-end sur une place de marché de prêts. J’ai travaillé sur la structure front-end en Vue.js et sur les intégrations de paiement, d’e-mail/SMS et de journalisation, selon les exigences produit.",
         "contributions": [
-            "Direction de l'architecture front-end d'une application web fintech (Place de marché pour offrir et gérer des prêts).",
-            "Promouvoir la conformité et améliorer l'expérience utilisateur selon les spécifications du produit.",
-            "Mise en œuvre d'intégrations basées sur les exigences du produit (Passerelles de paiement, Systèmes d'e-mailing/SMS, Loggers)."
+            "J’ai travaillé sur la structure front-end en Vue.js d’une place de marché de prêts.",
+            "J’ai implémenté des changements front-end selon les exigences produit.",
+            "J’ai intégré les services de paiement, d’e-mail/SMS et de journalisation."
         ],
         "technologies": [
             "VueJS / NodeJS",
@@ -125,17 +124,17 @@
         "end_year": 2019,
         "company": "SDG Group",
         "country": "Espagne",
-        "sector": "Intelligence d'Affaires et Analyse de Données",
+        "sector": "Informatique décisionnelle et analyse de données",
         "location": "Barcelone, Espagne",
         "flag_asset": "/src/assets/svg/flag_spain.svg",
         "position": "Ingénieur Logiciel Front-end",
         "period": "Nov. 2018 - Oct. 2019",
         "isOngoing": false,
-        "description": "Automatisation des workflows front-end et conception d'une interface utilisateur de chatbot axée sur les données avec des visualisations interactives et une application mashup de réalité augmentée pour visualiser les tendances des ventes, en exploitant les technologies web modernes et les frameworks de chatbot.",
+        "description": "J’ai automatisé des workflows front-end et construit une interface de chatbot ainsi qu’une démo de réalité augmentée pour explorer des données de ventes dans Qlik Sense.",
         "contributions": [
-            "Automatisation des workflows front-end à l'aide de technologies web modernes et de frameworks de chatbot.",
-            "Conception d'une interface utilisateur de chatbot axée sur les données avec des visualisations interactives.",
-            "Développement d'une application mashup de réalité augmentée (RA) pour visualiser les tendances des ventes."
+            "J’ai automatisé des workflows front-end.",
+            "J’ai construit une interface de chatbot pour explorer des données de ventes dans Qlik Sense.",
+            "J’ai construit une démo de réalité augmentée pour explorer des données de ventes."
         ],
         "technologies": [
             "VueJS / Angular / NodeJS",
@@ -160,11 +159,11 @@
         "position": "Développeur d'Interface Utilisateur Front-end",
         "period": "Juin 2016 - Oct. 2017",
         "isOngoing": false,
-        "description": "Développement d'une plateforme de back-office web pour un système de péage à flux libre de véhicules, simplifiant la gestion de la perception des péages à travers divers aspects : Gestion des clients, Traitement des paiements, Gestion des dispositifs Tag, Surveillance des véhicules, et autres.",
+        "description": "J’ai développé une plateforme de back-office web pour un système de péage à flux libre, avec la gestion des clients, des paiements, des dispositifs tag et la surveillance des véhicules.",
         "contributions": [
-            "Développement d'une plateforme de back-office web pour un système de péage à flux libre de véhicules.",
-            "Simplification de la gestion de la perception des péages à travers divers aspects (Clients, Paiements, Surveillance des véhicules).",
-            "Contribution au développement de maquettes d'API pour améliorer l'expérience développeur (DevExp)."
+            "J’ai développé une plateforme de back-office web pour un système de péage à flux libre de véhicules.",
+            "J’ai simplifié la gestion de la perception des péages sur plusieurs aspects (clients, paiements, surveillance des véhicules).",
+            "J’ai contribué à des mocks d’API pour améliorer l’expérience développeur."
         ],
         "technologies": [
             "Angular / NodeJS",
@@ -180,19 +179,19 @@
         "section": "experiences",
         "start_year": 2011,
         "end_year": 2016,
-        "company": "Petroleum of Venezuela (PDVSA)",
+        "company": "Petróleos de Venezuela (PDVSA)",
         "country": "Venezuela",
         "sector": "Énergie et Hydrocarbures",
         "location": "Caracas, Venezuela",
         "flag_asset": "/src/assets/svg/flag_venezuela.svg",
-        "position": "Ingénieur Logiciel Produit (Technologies Web, Ingénierie de Données, et R+D+i)",
+        "position": "Ingénieur Logiciel Produit (Technologies Web, Ingénierie de Données et R&D)",
         "period": "Mai 2011 - Janv. 2016",
         "isOngoing": false,
-        "description": "Collaboration avec des équipes interfonctionnelles pour concevoir, développer et livrer une application web en temps réel pour l'analyse de scénarios économiques, en exploitant des outils SIG et d'intelligence des données pour visualiser, analyser et modéliser des données de géoscience, financières et de production d'hydrocarbures, favorisant la prise de décision basée sur les données.",
+        "description": "Ingénieur logiciel sur une application web d’analyse de scénarios économiques dans le pétrole et le gaz. J’ai travaillé avec des géoscientifiques et des économistes sur la visualisation, le SIG et les modèles de production et financiers.",
         "contributions": [
-            "Collaboration avec des équipes interfonctionnelles pour concevoir, développer et livrer des applications web en temps réel.",
-            "Exploitation des outils SIG et d'intelligence des données pour visualiser, analyser et modéliser des données (Géoscience, Financières, Hydrocarbures).",
-            "Favorisé la prise de décision basée sur les données (Production pétrolière et modèles financiers)."
+            "J’ai travaillé sur une application web d’analyse de scénarios économiques dans le pétrole et le gaz.",
+            "J’ai travaillé avec des géoscientifiques et des économistes sur la visualisation et le SIG.",
+            "J’ai travaillé sur des modèles de production et financiers."
         ],
         "technologies": [
             "jQuery",
@@ -211,7 +210,7 @@
         "section": "experiences",
         "start_year": 2009,
         "end_year": 2011,
-        "company": "Savings and Loan Association of Miranda’s Public Employees (CAPEM)",
+        "company": "CAPEM (caisse d'épargne et de prêts des employés publics de Miranda)",
         "country": "Venezuela",
         "sector": "Finances à but non lucratif",
         "location": "Los Teques, Venezuela",
@@ -219,11 +218,10 @@
         "position": "Responsable des Systèmes Informatiques",
         "period": "Nov. 2009 - Mai 2011",
         "isOngoing": false,
-        "description": "Direction de la conception et du développement d'un CRM web, intégrant les départements pour améliorer la gestion du service client et conception d'un kiosque libre-service pour la gestion automatisée des files d'attente et la consultation des soldes.",
+        "description": "J’ai conçu et développé un CRM web utilisé entre les services, ainsi qu’un kiosque libre-service pour la gestion des files d’attente et la consultation des soldes.",
         "contributions": [
-            "Direction de la conception et du développement d'un CRM web (Support client, surveillance des performances des employés, etc.).",
-            "Intégration de divers systèmes de départements pour améliorer la gestion du service client.",
-            "Conception d'un kiosque libre-service pour : gestion automatisée des files d'attente, consultation des soldes."
+            "J’ai conçu et développé un CRM web utilisé entre les services.",
+            "J’ai développé un kiosque libre-service pour la gestion des files d’attente et la consultation des soldes."
         ],
         "technologies": [
             "jQuery",

@@ -9,18 +9,18 @@
         "sector": "Manufacturing Provider and Supply Chain Business",
         "location": "Shanghai, China (Remote from Spain)",
         "flag_asset": "/src/assets/svg/flag_spain.svg",
-        "position": "Product Advisor and Digital Growth Consultant",
+        "position": "Product and technical advisor",
         "period": "Sep 2025 - Present",
         "isOngoing": true,
-        "description": "As a Digital Consultant for OptimusTC, I lead the optimization and maintenance of their digital ecosystem, enhancing their online presence through active website management and validation of the application’s core features by ensuring seamless performance and technical reliability.",
+        "description": "Digital consultant for OptimusTC. I maintain the WordPress site, work on web performance, and review the core behavior of the application.",
         "contributions": [
-            "Lead the optimization and maintenance of their digital ecosystem.",
-            "Enhance online presence through engagement in active website management.",
-            "Validation of the application’s core features ensuring seamless performance and technical reliability."
+            "Maintain the WordPress site and its performance.",
+            "Review core application behavior and technical issues.",
+            "Advise on technical changes to the site."
         ],
         "technologies": [
             "Web performance optimization",
-            "Wordpress",
+            "WordPress",
             "Technical Solution Design"
         ]
     },
@@ -37,11 +37,11 @@
         "position": "Senior Product Software Engineer (Front-end focus)",
         "period": "May 2024 - Jul 2025",
         "isOngoing": false,
-        "description": "Collaboratively driving the evolution of the web application platform by anticipating opportunities, ensuring robust application quality, and contributing to innovative feature development that aligns with industry trends in the mobility sector.",
+        "description": "Senior frontend engineer on Zeelo’s web platform, a marketplace for selling trips and tools for managing routes. I built product features in React and TypeScript and maintained end-to-end and regression tests.",
         "contributions": [
-            "Collaborate to drive the evolution of the web application platform (Marketplace to sell trips, platform to manage routes).",
-            "Anticipate opportunities and ensure robust application quality (E2E and Regression testing).",
-            "Contribute to innovative feature development that aligns with mobility sector trends."
+            "Built product features for the trip marketplace and the route-management tools.",
+            "Maintained end-to-end and regression tests.",
+            "Worked on the front end in React and TypeScript."
         ],
         "technologies": [
             "ReactJS / TypeScript / NodeJS / Zod",
@@ -69,11 +69,10 @@
         "position": "Solutions Engineer · Full Stack Software Engineer",
         "period": "Oct 2020 - Jun 2023",
         "isOngoing": false,
-        "description": "Contributor to crafting technological solutions that optimized customer experiences in last-mile logistics. (Backoffices for streamlining external API integrations, monitoring tools, and product design development).",
+        "description": "Full-stack engineer on internal tools for last-mile delivery. I built back offices for external API integrations and monitoring views for driver deliveries and operations.",
         "contributions": [
-            "Contributed to crafting technological solutions that optimized customer experiences in last-mile logistics.",
-            "Developed back-offices for streamlining external API integrations.",
-            "Involved in product design development and created monitoring tools (Driver deliveries, Operational activities)."
+            "Built back offices for external API integrations.",
+            "Built monitoring views for driver deliveries and operations."
         ],
         "technologies": [
             "ReactJS / TypeScript / NodeJS / Sequelize",
@@ -99,14 +98,14 @@
         "sector": "Financial Services",
         "location": "Barcelona, Spain",
         "flag_asset": "/src/assets/svg/flag_spain.svg",
-        "position": "Frontend Developer Architect",
+        "position": "Frontend Engineer",
         "period": "Nov 2019 - Oct 2020",
         "isOngoing": false,
-        "description": "Led the front-end architecture of a fintech web app, driving compliance, user experience, and functionality through integrations (payment gateway, e-mailing/SMS systems, loggers) and improvements following product requirements.",
+        "description": "Frontend engineer on a loan marketplace. I worked on the Vue.js front-end structure and on integrations with payment, email/SMS, and logging, following product requirements.",
         "contributions": [
-            "Led the front-end architecture of a fintech web app (Marketplace to offer and managing loans).",
-            "Drive compliance and enhance user experience according to product specs.",
-            "Implemented integrations based on product requirements (Payment gateways, E-mailing/SMS systems, Loggers)."
+            "Worked on the Vue.js front-end structure of a loan marketplace.",
+            "Implemented front-end changes from product requirements.",
+            "Integrated payment, email/SMS, and logging services."
         ],
         "technologies": [
             "VueJS / NodeJS",
@@ -131,11 +130,11 @@
         "position": "Frontend Software Engineer",
         "period": "Nov 2018 - Oct 2019",
         "isOngoing": false,
-        "description": "Automated front-end workflows and crafted a data-driven chatbot UI with interactive visualizations and an augmented reality mashup app to visualize sales trends, leveraging modern web technologies and chatbot frameworks.",
+        "description": "I automated front-end workflows and built a chatbot UI and an augmented-reality demo to explore sales data in Qlik Sense.",
         "contributions": [
-            "Automated front-end workflows using modern web technologies and chabot frameworks.",
-            "Crafted a data-driven chatbot UI with interactive visualizations.",
-            "Developed an augmented reality (AR) mashup app to visualize sales trends."
+            "Automated front-end workflows.",
+            "Built a chatbot UI for exploring sales data in Qlik Sense.",
+            "Built an augmented-reality demo for exploring sales data."
         ],
         "technologies": [
             "VueJS / Angular / NodeJS",
@@ -160,11 +159,11 @@
         "position": "Frontend User Interface Developer",
         "period": "Jun 2016 - Oct 2017",
         "isOngoing": false,
-        "description": "Developed a web-based back-office platform for a vehicle free-flow tolling system, streamlining toll collection management across various aspects: Customer management, Payment processing, Tag device management, Vehicle monitoring, and others.",
+        "description": "Developed a web-based back-office platform for a vehicle free-flow tolling system, covering customer management, payment processing, tag devices, and vehicle monitoring.",
         "contributions": [
             "Developed a web-based back-office platform for a vehicle free-flow tolling system.",
             "Streamlined toll collection management across various aspects (Customers, Payments, Vehicle monitoring).",
-            "Contributed in developing API mocks to enhance developer experience (DevExp)."
+            "Contributed in developing API mocks to enhance developer experience."
         ],
         "technologies": [
             "Angular / NodeJS",
@@ -185,14 +184,14 @@
         "sector": "Energy and Hydrocarbons",
         "location": "Caracas, Venezuela",
         "flag_asset": "/src/assets/svg/flag_venezuela.svg",
-        "position": "Product Software Engineer (Web technologies, Data Engineering, and I+D+i)",
+        "position": "Product Software Engineer (Web technologies, Data Engineering, and R&D)",
         "period": "May 2011 - Jan 2016",
         "isOngoing": false,
-        "description": "Collaborated with cross-functional teams to conceive, design, develop, and deliver a real-time web app for economic scenario analysis, leveraging GIS and data intelligence tools to visualize, analyze, and model geoscience, financial, and hydrocarbon production data, empowering data-driven decision-making.",
+        "description": "Software engineer on a web application for economic scenario analysis in oil and gas. I worked with geoscientists and economists on visualization, GIS, and models of production and financial data.",
         "contributions": [
-            "Collaborated with cross-functional teams to conceive, develop, and deliver real-time web applications.",
-            "Leveraged GIS and data intelligence tools to visualize, analyze, and model data (Geoscience, Financial, Hydrocarbon).",
-            "Empowered data-driven decision-making (Oil production and financial models)."
+            "Worked on a web application for economic scenario analysis in oil and gas.",
+            "Worked with geoscientists and economists on visualization and GIS.",
+            "Worked on models of production and financial data."
         ],
         "technologies": [
             "jQuery",
@@ -211,7 +210,7 @@
         "section": "experiences",
         "start_year": 2009,
         "end_year": 2011,
-        "company": "Savings and Loan Association of Miranda’s Public Employees (CAPEM)",
+        "company": "CAPEM (savings and loan association for Miranda public employees)",
         "country": "Venezuela",
         "sector": "Non-profit Finances",
         "location": "Los Teques, Venezuela",
@@ -219,11 +218,10 @@
         "position": "IT Systems Responsible",
         "period": "Nov 2009 - May 2011",
         "isOngoing": false,
-        "description": "Spearheaded the design and development of a web-based CRM, integrating departments to enhance customer service management and crafting a self-service kiosk for automated queue management and balance inquiries.",
+        "description": "I designed and built a web CRM used across departments and a self-service kiosk for queue management and balance inquiries.",
         "contributions": [
-            "Spearheaded the design and development of a web-based CRM (Client support, monitor employee performance, etc.).",
-            "Integrated various department's systems to enhance customer service management.",
-            "Crafted a self-service kiosk for: automated queue management, balance inquires."
+            "Designed and built a web CRM used across departments.",
+            "Built a self-service kiosk for queue management and balance inquiries."
         ],
         "technologies": [
             "jQuery",

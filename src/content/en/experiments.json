@@ -3,7 +3,7 @@
         "id": "experiment-healthy-culture-engineering-teams",
         "section": "experiments",
         "title": "Promoting a healthy culture within engineering teams",
-        "description": "Examine the critical role of leadership in fostering a healthy culture within engineering teams. We argue that a technology leader's role extends beyond strategy and implementation to actively promoting a positive work environment.",
+        "description": "Academic case study of engineering culture after an acquisition, based on an anonymized AI-services company. It proposes a change approach using SWOT, empathy maps, RASCI, and ADKAR.",
         "image": "/src/assets/images/engineer_management.png",
         "tags": [
             "Engineering Management",
@@ -16,14 +16,14 @@
         "url": "https://drive.google.com/file/d/1yprBUaMhTifIBizEOwrhScjqB7WsA7-K/view?usp=sharing",
         "isSandbox": false,
         "display": true,
-        "abstract": "This case study explores how to foster a healthy engineering culture in technology teams facing management practices that undermine wellbeing, professional growth, and employee engagement.The analysis is based on an anonymized AI services company (B2B2C) that experienced rapid hypergrowth after being acquired. The organization, with over 600 employees across multiple countries, underwent significant leadership changes and departmental restructurings. These shifts led to favoritism in promotions, technical dominance by a few individuals, limited career development support, reduced psychological safety, decreased innovation, and progressive talent attrition.The purpose of the work is to propose a practical approach to co-create a healthier engineering culture. The scope focuses on three main areas: maturity of technological leadership, team dynamics, and the creation of psychologically safe and enriching work environments.Key objectives include strengthening talent management skills, defining shared mission and collaboration agreements between teams, and promoting continuous development, innovation, and soft skills. The proposed strategy combines situation assessment tools (SWOT, empathy maps, RASCI, system diagrams), concrete actions to rebuild trust and career clarity, soft-skills and leadership training programs, and a structured change management approach based on the ADKAR model to address resistance.The study provides a structured framework that technology leaders can adapt to reverse toxic patterns and build more sustainable, engaging, and high-performing engineering organizations.",
+        "abstract": "Academic case study from 2023 on how to rebuild a healthier engineering culture after an acquisition. The case uses an anonymized B2B2C company that sells AI services and grew very quickly and reached more than 600 people in several countries. Leadership changes and departmental restructuring were followed by favoritism in promotions, technical decisions concentrated in a few people, little support for career development, less psychological safety, and people leaving. The study proposes a practical way to rebuild that culture. It looks at the maturity of technical leadership, how teams work together, and whether the environment is safe enough to learn. The suggested approach reads the situation with SWOT, empathy maps, RASCI, and system diagrams, then works on shared agreements, clearer career paths, and training in leadership and collaboration. The change itself is framed with the ADKAR model.",
         "year": 2023
     },
     {
         "id": "experiment-bi-adventure-works",
         "section": "experiments",
-        "title": "Business Intelligence Enterprise Project: Adventure Works Cycles",
-        "description": "Enhance knowledge creation by streamlining data management through the creation of ETL pipelines and data refinement processes. This enables smarter, data-driven decisions supported by a custom web application and dashboards.",
+        "title": "Adventure Works Cycles, a business intelligence project",
+        "description": "Academic BI project on the Adventure Works Cycles sample data. I built an ETL pipeline, a star-schema warehouse, and dashboards in Power BI and Qlik Sense.",
         "image": "/src/assets/images/bi_project.jpg",
         "tags": [
             "Data Analysis / Visualization",
@@ -32,18 +32,18 @@
         ],
         "role": "Author",
         "type": "Data Engineering",
-        "category": "Project",
+        "category": "Academic Works",
         "url": "https://drive.google.com/file/d/1UN8-YdFhR7UuhvARsf61kCxITTgot3Cf/view?usp=sharing",
         "isSandbox": false,
         "display": true,
-        "abstract": "This case study demonstrates the architecture and implementation of a comprehensive Business Intelligence (BI) solution designed to solve complex data accessibility challenges within a multinational manufacturing and distribution enterprise. Based on the Adventure Works Cycles ecosystem, the project addresses the critical friction between transactional database complexity and executive decision-making needs during fluctuating market demands.The core of the solution is a decoupled data pipeline. It covers rigorous source analysis, structural extraction, data consolidation, and dimensional logic modeling (Star Schema). The target architecture integrates isolated dimensions—such as detailed customer profiling (demographics, purchasing preferences), localized sales territories, and product catalogs—around core transaction fact tables to establish an absolute Single Source of Truth.The resulting system delivers high-performing data exploration capabilities and executive analytical dashboards built on Power BI, Qlik Sense, and advanced modeling. This enablement facilitates descriptive regional forecasting, audience segmentation, and preventive market analysis. Ultimately, the study showcases how aligning raw enterprise data infrastructures with business intelligence methodology mitigates silent operational failures and unlocks predictable revenue growth channels.",
+        "abstract": "Academic business-intelligence project from 2018, built on the Adventure Works Cycles sample data, the fictional manufacturing and distribution company used in BI courses. The exercise looks at the distance between a complex transactional database and the questions a management team would ask when demand changes. I analyzed the sources, extracted and consolidated the data, and modeled a star schema around sales facts, with dimensions for customers, sales territories, and products. The result is a set of dashboards in Power BI and Qlik Sense for regional sales, customer segments, and descriptive forecasts. It is a course project on sample data, not a system delivered to a real company.",
         "year": 2018
     },
     {
         "id": "experiment-circuitos",
         "section": "experiments",
-        "title": "Circuitos: Discover Your Artistic Hub",
-        "description": "Discover and share your artistic and cultural interests with a like-minded community. Our platform is a go-to for anyone who wants to explore new experiences and connect with others who love art as much as they do.",
+        "title": "Circuitos, discover your artistic hub",
+        "description": "UX concept for a mobile product to find cultural events and city routes. I contributed to the research, the product concept, and the interface prototypes. Course work, 2017.",
         "image": "/src/assets/images/circuitos.jpg",
         "tags": [
             "Product Design and Prototyping",
@@ -52,18 +52,18 @@
         ],
         "role": "Contributor",
         "type": "UX Design and Research Concept",
-        "category": "Project",
+        "category": "Academic Works",
         "url": "https://drive.google.com/file/d/1eIRVupKq6ct5eN00Z6vhNl4uG5JnA6G8/view?usp=sharing",
         "isSandbox": false,
         "display": true,
-        "abstract": "This case study details the concept, product architecture, and user experience (UX) engineering of Circuitos, a mobile platform designed to bridge the gap between urban cultural assets and local citizens. The project addresses the problem of fragmented event schedules and hidden historical or artistic points of interest within dense urban environments (such as design centers, local museums, and street art murals).The core of the system focuses on a modular data architecture supporting multiple highly interactive sub-modules: a dynamic local event aggregator with custom scheduling, a geolocalized routing system (Circuitos) to guide users through curated cultural paths, and an isolated local storage mechanism allowing users to log personal notes and bookmark favorites. The technical layout prioritizes high-fidelity view states, fluid transition logics, and geographic asset mapping to ensure a responsive, data-light mobile experience.The study demonstrates strong competencies in end-to-end mobile product discovery, structural frontend hierarchies, and cross-functional feature planning. By aligning geospatial discovery with event management, the project highlights how interactive engineering can transform raw urban data into an engaging, cohesive, and modern user experience.",
+        "abstract": "UX course concept from 2017 for a mobile product that helps people find cultural events and places in the city, such as design centers, local museums, and street art, when those schedules and spots are scattered. The concept has three parts. A local event list with personal scheduling, geolocated routes through curated cultural paths, and local storage for personal notes and favorites. I contributed to the research, the product concept, and the interface prototypes. It is a design concept from the course, not a shipped application.",
         "year": 2017
     },
     {
         "id": "project-agent-orchestrator",
         "section": "experiments",
-        "title": "Agent Orchestrator Web App: Real-Time AI Telemetry Dashboard",
-        "description": "A monitoring dashboard providing real-time status and telemetry for simulated AI agents. The architecture leverages Vue 3, TypeScript, and optimized Docker multi-stage builds, focusing on high performance and maintainability through decoupled service and composable layers.",
+        "title": "Agent Orchestrator, a real-time AI telemetry dashboard",
+        "description": "Dashboard of status and telemetry for simulated AI agents, built with Vue 3, TypeScript, and Docker.",
         "image": "/src/assets/images/agent-orchestrator.jpg",
         "tags": [
             "Vue 3 / TypeScript",
@@ -81,8 +81,8 @@
     {
         "id": "experiment-idea-cultural-activities-app",
         "section": "experiments",
-        "title": "Idea: Application for promoting cultural activities",
-        "description": "Platform that helps you find and participate in cultural events by creating a network tailored to your specific preferences. We make it simple to discover and connect with a community of people who share your artistic and cultural interests.",
+        "title": "An idea for an application to promote cultural activities",
+        "description": "Master's project on a business case for a product to promote cultural events in Barcelona, including market analysis, a business model, and a marketing plan.",
         "image": "/src/assets/images/design_process.jpg",
         "tags": [
             "e-Business",
@@ -96,13 +96,13 @@
         "url": "https://drive.google.com/file/d/1nVCuBsmsfOd7009AsGPlxSOo00pIHaCo/view?usp=sharing",
         "isSandbox": false,
         "display": true,
-        "abstract": "This comprehensive business case details the strategic planning, financial forecasting, and technical framework for a digital startup aimed at driving public engagement within Barcelona's diverse artistic and cultural sectors. The project addresses the historical gap between local event discovery platforms and highly segmented audience behaviors in a post-digital urban landscape.The core of the study is a structured digital product roadmap. It covers a rigorous market entry analysis (target audience profiling, competitive landscape auditing), a sustainable monetization model, and a data-driven online marketing framework detailing multi-channel acquisition funnels and operational key performance indicators (KPIs). The delivery scope integrates Agile project frameworks with chosen software technologies to align execution timelines with budgetary boundaries.The thesis showcases deep competencies in digital product management, commercial scaling, and executive resource allocation. By bridging technical solution architecture with entrepreneurial unit economics, the study highlights how analytical engineering principles can be leveraged to transform a cultural concept into a structured, highly predictable, and scalable digital business model.",
+        "abstract": "Master's project from 2020, a business case for a digital product that would promote artistic and cultural events in Barcelona. It starts from the gap between general local listings and audiences looking for very specific kinds of culture. The case includes a market-entry analysis, with target audiences and competitors, a monetization model, and an online marketing plan with acquisition channels and operating indicators. Delivery is sketched as an agile timeline and a software stack kept inside a budget. It is a planning document for a concept, not a company that was launched.",
         "year": 2020
     },
     {
         "id": "experiment-tv-movie-streaming-like-webapp",
         "section": "experiments",
-        "title": "TMDB Web Explorer: Real-Time Movie & TV Series Database",
+        "title": "TMDB catalog for movies and series",
         "description": "Full-stack web application designed for anyone who loves movies and TV shows. It provides a seamless, fast way to browse a comprehensive catalog of titles, giving you all the details you need in one place. You can explore a wide variety of content through a user-friendly interface.",
         "image": "/src/assets/images/tv_app.jpg",
         "tags": [
@@ -121,7 +121,7 @@
     {
         "id": "experiment-pokedex-pwa-application",
         "section": "experiments",
-        "title": "Pokédex: Gotta Catch 'Em All",
+        "title": "Pokédex, gotta catch 'em all",
         "description": "Progressive web application (PWA) built under Svelte, a modern JavaScript framework. It leverages the Pokémon API to provide a comprehensive and engaging Pokédex experience, data persistence with LocalStorage, the SpeechSynthesis, and Plotly charts.",
         "image": "/src/assets/images/pokedex.jpg",
         "tags": [
@@ -140,13 +140,13 @@
     {
         "id": "experiment-restaurant-browser-app",
         "section": "experiments",
-        "title": "On-Demand Food Delivery & Restaurant Web App",
-        "description": "Conceptual application designed to help users discover and connect with local restaurants. Built as a Progressive Web app (PWA), it gives you the convenience of a native app without requiring a download from an app store. Using your device's Geolocation API, the app instantly finds the restaurants closest to you.",
+        "title": "Restaurant finder",
+        "description": "Progressive web app to find nearby restaurants with the Geolocation API. It does not take orders or handle delivery.",
         "image": "/src/assets/images/restaurant_browser.jpg",
         "tags": [
             "Front-end development",
             "ReactJS / TypeScript / Vite",
-            "Daisy UI / Tailwind CCS",
+            "Daisy UI / Tailwind CSS",
             "Geolocation API"
         ],
         "role": "Author",
@@ -197,7 +197,7 @@
         "id": "experiment-express-api-boilerplate",
         "section": "experiments",
         "title": "Express API Backend Architecture",
-        "description": "A production-ready REST API boilerplate built with Node.js, Express, and MongoDB. It features containerization with Docker and a robust automated testing suite using Jest and Supertest for integration and unit testing.",
+        "description": "REST API boilerplate with Node.js, Express, MongoDB, Docker, Jest, and Supertest. A reference structure for a small API, not a system in production.",
         "image": "/src/assets/images/express_api_boilerplate.jpg",
         "tags": [
             "Back-end development",
@@ -237,7 +237,7 @@
         "id": "experiment-dynamic-pricing-calendar-webapp",
         "section": "experiments",
         "title": "Management System Pricing Calendar simulation with React, TypeScript, and TanStack Query",
-        "description": "An interactive Revenue Management simulation featuring real-time dynamic rates visualization. Built on a decoupled full-stack architecture powered by a high-performance API server and reactive data flows.",
+        "description": "An interactive revenue-management simulation with dynamic rate visualization. Built on a decoupled full-stack architecture, with an API server and reactive data flows.",
         "image": "/src/assets/images/dynamic_pricing_calendar.png",
         "tags": [
             "FullStack Development",
@@ -277,7 +277,7 @@
         "id": "experiment-type-safe-graphql-api",
         "section": "experiments",
         "title": "Type-safe GraphQL API (Domain-driven)",
-        "description": "Production-oriented GraphQL API built with TypeScript, Apollo Server and a modern ORM. Features strong end-to-end type safety, custom scalars, optimized data loading patterns, automated documentation and an experimental natural-language query layer.",
+        "description": "GraphQL API in progress with TypeScript and Apollo Server. It includes end-to-end types, custom scalars, data loading, generated docs, and an experimental natural-language query layer. Not released.",
         "image": "/src/assets/images/graphql_api_architecture.jpeg",
         "tags": [
             "GraphQL",
