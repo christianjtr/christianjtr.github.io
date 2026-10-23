@@ -252,6 +252,24 @@
         "display": true
     },
     {
+        "id": "experiment-basic-sticky-notes-webapp",
+        "section": "experiments",
+        "title": "Tableau de notes autocollantes avec React, TypeScript et Vite.",
+        "description": "Un tableau interactif de notes autocollantes conçu sur une surface de papier chaleureuse avec les couleurs réelles d'un bloc-notes. Comprend le glisser-déposer personnalisé, le redimensionnement par pointeur, le regroupement par contextes, la persistance automatique via localStorage et des normes d'accessibilité robustes.",
+        "image": "/src/assets/images/sticky_notes.png",
+        "tags": [
+            "Frontend Development",
+            "ReactJS / TypeScript / Vite",
+            "Web APIs & Accessibility"
+        ],
+        "role": "Author",
+        "category": "Preuve de Concept (PoC)",
+        "type": "Application web (Notes autocollantes basiques)",
+        "url": "https://christianjtr.github.io/sticky-notes/",
+        "isSandbox": false,
+        "display": true
+    },
+    {
         "id": "experiment-engram-semantic-cli",
         "section": "experiments",
         "title": "Semantic Graph CLI",

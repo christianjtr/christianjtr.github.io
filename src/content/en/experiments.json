@@ -252,6 +252,24 @@
         "display": true
     },
     {
+        "id": "experiment-basic-sticky-notes-webapp",
+        "section": "experiments",
+        "title": "Basic Sticky Notes board with React, TypeScript, and Vite",
+        "description": "An interactive sticky notes board built on a warm paper surface with real pad colors. Features custom dragging, pointer-driven resizing, context grouping, automatic localStorage persistence, and robust accessibility standards.",
+        "image": "/src/assets/images/sticky_notes.png",
+        "tags": [
+            "Frontend Development",
+            "ReactJS / TypeScript / Vite",
+            "Web APIs & Accessibility"
+        ],
+        "role": "Author",
+        "category": "Proof of Concept (PoC)",
+        "type": "Web app (Basic Sticky Notes)",
+        "url": "https://christianjtr.github.io/sticky-notes/",
+        "isSandbox": false,
+        "display": true
+    },
+    {
         "id": "experiment-engram-semantic-cli",
         "section": "experiments",
         "title": "Semantic Graph CLI",

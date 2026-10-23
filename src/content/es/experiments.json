@@ -252,6 +252,24 @@
         "display": true
     },
     {
+        "id": "experiment-basic-sticky-notes-webapp",
+        "section": "experiments",
+        "title": "Tablero de notas adhesivas con React, TypeScript y Vite.",
+        "description": "Tablero interactivo de notas adhesivas diseñado sobre una superficie de papel cálido con colores de bloc reales. Implementa arrastre personalizado, cambio de tamaño mediante puntero, agrupación por contextos, persistencia automática en localStorage y estándares avanzados de accesibilidad.",
+        "image": "/src/assets/images/sticky_notes.png",
+        "tags": [
+            "Frontend Development",
+            "ReactJS / TypeScript / Vite",
+            "Web APIs & Accessibility"
+        ],
+        "role": "Author",
+        "category": "Prueba de Concepto (PoC)",
+        "type": "Aplicación web (Notas adhesivas básicas)",
+        "url": "https://christianjtr.github.io/sticky-notes/",
+        "isSandbox": false,
+        "display": true
+    },
+    {
         "id": "experiment-engram-semantic-cli",
         "section": "experiments",
         "title": "Semantic Graph CLI",
