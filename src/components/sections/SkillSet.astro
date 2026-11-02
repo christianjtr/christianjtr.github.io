@@ -1,14 +1,28 @@
 ---
-import { getEntry } from 'astro:content';
+import { getEntry, getCollection } from 'astro:content';
+
+import { toSlug } from '@utils/userPreferences';
 import type { ContentDataEntryType } from '@app-types/Content';
+import type { Experiment } from '@schemas/ExperimentSchema';
 import type { AboutMeData } from '@schemas/AboutMeSchema';
 import { CONTENT } from '@app-types/Content';
 import Logo from '@assets/svg/people.svg';
 import { Section, VerticalSpacer } from "../";
 
 const { lang } = Astro.params;
-const commonData = await getEntry(lang as ContentDataEntryType, `${lang}/${CONTENT.COMMON}`);
+
+const [commonData, [ experimentsData ]] = await Promise.all([
+    await getEntry(lang as ContentDataEntryType, `${lang}/${CONTENT.COMMON}`),
+    await getCollection(lang as ContentDataEntryType, (collection) => collection.id === `${lang}/${CONTENT.EXPERIMENTS}`)
+]);
+
+
 const { section_skills, section_about, common } = (commonData?.data as AboutMeData) || {};
+const { data: experiments } = experimentsData as { data: Experiment[] };
+
+const wipExperiment = experiments.find((experiment) => experiment.isWIP && experiment.display && !experiment.isSandbox);
+const hasInProgressExperiments = Boolean(wipExperiment);
+const wipCategorySlug = wipExperiment ? toSlug(wipExperiment.category) : '';
 
 type StyleItem = { text: string; bg: string; };
 
@@ -36,6 +50,18 @@ const skills = section_about.expertise.subjects.map((subject) => {
   <Section headingTitle={section_skills.title} subtitle={section_skills.subtitle} class="container mx-auto px-1 lg:px-10">
     <Logo slot="beforeHeading" width={90} height={90} />
     <VerticalSpacer />
+  {hasInProgressExperiments && (
+        <div class="flex w-full mx-auto px-10 mb-7 md:justify-end justify-center">
+            <a href={`?category=${wipCategorySlug}#selected_works`} class="btn-wip-indicator">
+                <span class="wip-pulse-container">
+                    <span class="wip-pulse-ping"></span>
+                    <span class="wip-pulse-dot"></span>
+                </span>
+                <span>{wipExperiment?.category}</span>
+                <span class="text-sm font-bold">↓</span>
+            </a>
+        </div>
+    )}
     <div class="group-main w-full mx-auto flex flex-col md:flex-row px-2 gap-6 md:gap-4 items-center md:items-stretch relative">
       <div class="w-full md:w-1/5 flex items-center justify-center md:justify-start z-10">
         <div class="vshape-box vshape-target w-full p-4 rounded-lg text-center max-w-[150px] transition-all duration-300">
@@ -103,6 +129,34 @@ const skills = section_about.expertise.subjects.map((subject) => {
 
 <style>
   @reference "@styles/global.css";
+
+  .btn-wip-indicator {
+      @apply inline-flex items-center gap-2.5 px-5 py-3 rounded-full 
+          text-xs font-mono font-bold uppercase tracking-wider 
+          transition-all duration-200 shadow-xs hover:shadow-md cursor-pointer
+          bg-primary/10 hover:bg-primary/20 border border-primary/30 text-primary;
+    }
+
+  :global(html[data-theme="dark"]) .btn-wip-indicator {
+      @apply bg-accent/10 hover:bg-accent/20 border-accent/30 text-accent;
+  }
+
+  .wip-pulse-container {
+      @apply relative flex h-2.5 w-2.5 shrink-0;
+  }
+
+  .wip-pulse-ping {
+      @apply animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 bg-primary;
+  }
+
+  .wip-pulse-dot {
+      @apply relative inline-flex rounded-full h-2.5 w-2.5 bg-primary;
+  }
+
+  :global(html[data-theme="dark"]) .wip-pulse-ping,
+  :global(html[data-theme="dark"]) .wip-pulse-dot {
+      @apply bg-accent;
+  }
 
   /* ==================== EDITORIAL CARDS ==================== */
   .apple-editorial-grid {
