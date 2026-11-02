@@ -27,8 +27,17 @@ const [commonData, [ experimentsData ]] = await Promise.all([
 const { section_experiments, common, header } = (commonData?.data as AboutMeData) || {};
 const { data: experiments } = experimentsData as { data: Experiment[]};
 
-const experimentsToDisplay = experiments.filter(exp => exp.display);
-const uniqueCategories = Array.from(new Set([...experimentsToDisplay.map(({ category }) => category)])).map((category) => ({ category, slug: toSlug(category) }));
+const experimentsToDisplay = experiments.filter(exp => exp.display && !exp.isSandbox);
+const uniqueCategories = Array.from(
+    experimentsToDisplay.reduce((map, { category }) => {
+        if (!map.has(category)) {
+            map.set(category, { category, slug: toSlug(category), count: 0 });
+        }
+        map.get(category).count += 1;
+        return map;
+    }, new Map()).values()
+);
+
 const featuredExperiments = experimentsToDisplay.filter(exp => !exp.isSandbox);
 const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
 ---
@@ -45,8 +54,8 @@ const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
                         {common.filter_experience}
                     </h3>
                     <form class="flex flex-col gap-4">
-                        {uniqueCategories.map(({category, slug}) => (
-                            <div class="flex items-center gap-3">
+                        {uniqueCategories.map(({category, slug, count}) => (
+                            <div class="flex items-center gap-3 w-full">
                                 <input 
                                     class="checkbox checkbox-primary checkbox-sm category-filter"
                                     type="checkbox" 
@@ -54,12 +63,19 @@ const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
                                     value={category}
                                     name="experiments_type" 
                                 />
-                                <label for={category} class="cursor-pointer font-medium text-sm filter-label" data-category={category}>
-                                    {category}
+                                <label 
+                                    for={slug} 
+                                    class="cursor-pointer font-medium text-sm filter-label flex-1 flex items-center justify-between" 
+                                    data-category={category}
+                                >
+                                    <span>{category}</span>
+                                    <span class="badge badge-ghost badge-sm font-semibold">
+                                        {count}
+                                    </span>
                                 </label>
                             </div>
                         ))}
-                        <div class="pt-4 mt-3 flex justify-end border-t border-neutral-200">
+                        <div class="pt-4 mt-3 flex border-t border-neutral-200">
                             <button type="reset" class="btn btn-sm btn-circle btn-primary" aria-label="Reset Filters">
                                 <TrashIcon class="w-4 h-4" />
                             </button>
@@ -67,7 +83,8 @@ const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
                     </form>
                 </div>
 
-                {sandboxExperiments.length > 0 && (
+                <!--TODO: Review these projects before displaying the section -->
+                <!-- {sandboxExperiments.length > 0 && (
                     <div class="lg:block p-5 rounded-lg sandbox-panel">
                         <h3 class="text-xs font-bold uppercase tracking-wider text-neutral-400">🧪 {common.laboratory}</h3>
                         <div class="flex flex-col gap-2 pt-6">
@@ -88,7 +105,7 @@ const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
                             ))}
                         </div>
                     </div>
-                )}
+                )} -->
 
             </aside>
             <main class="lg:col-span-3 space-y-8">
