@@ -65,7 +65,7 @@ const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
                                 />
                                 <label 
                                     for={slug} 
-                                    class="cursor-pointer font-medium text-sm filter-label flex-1 flex items-center justify-between" 
+                                    class="cursor-pointer font-medium text-xs filter-label flex-1 flex items-center justify-between" 
                                     data-category={category}
                                 >
                                     <span>{category}</span>
@@ -75,7 +75,7 @@ const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
                                 </label>
                             </div>
                         ))}
-                        <div class="pt-4 mt-3 flex border-t border-neutral-200">
+                        <div class="pt-4 flex border-t border-neutral-200">
                             <button type="reset" class="btn btn-sm btn-circle btn-primary" aria-label="Reset Filters">
                                 <TrashIcon class="w-4 h-4" />
                             </button>
