@@ -7,11 +7,19 @@
         "period": "Sep 2025 – Present",
         "category": "consulting",
         "category_description": "Consulting",
-        "summary": null,
-        "tags": ["tag001", "tag002", "tag003"],
-        "resource": "/src/assets/svg/flag_spain.svg",
-        "contributions": [],
-        "display": false
+        "summary": "Advise the founding team on product direction, technical stack selection, and delivery for an early-stage supply chain and digital manufacturing web platform. By leveraging AI-assisted tools (Webflow, Framer, WordPress, Glide), he delivers high-fidelity PoCs to validate UX across landing pages and back-office management systems.",
+        "tags": [
+            "AI-assisted tools (low-code)",
+            "Prototyping and Wireframing",
+            "Webflow, Framer, WordPress, Glide"
+        ],
+        "resource": "/src/assets/images/optimus_case_study.jpg",
+        "contributions": [
+            "Advised the founding team on overall product direction, architecture decisions, and technology stack selection on an on-demand basis",
+            "Built high-fidelity proof-of-concepts (PoCs) using AI-assisted and low-code tools (Webflow, Framer, WordPress, Glide) to iterate and validate UX for both landing pages and back-office tools",
+            "Streamlined the digital growth strategy, allowing the business to rapidly test feature workflows and accelerate launch cycles"
+        ],
+        "display": true
     },
     {
         "id": "zeelo-scaling-developer-velocity",

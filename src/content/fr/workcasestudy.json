@@ -7,11 +7,19 @@
         "period": "Sept. 2025 – Aujourd'hui",
         "category": "consulting",
         "category_description": "Consultant",
-        "summary": null,
-        "tags": [],
-        "resource": null,
-        "contributions": [],
-        "display": false
+        "summary": "Conseille l'équipe fondatrice sur la vision produit, les choix technologiques et le déploiement d'une plateforme web pour la chaîne d'approvisionnement et la fabrication numérique. En s'appuyant sur des outils assistés par IA (Webflow, Framer, WordPress, Glide), il conçoit des PoCs à haute fidélité pour valider l'expérience utilisateur (UX) de la vitrine web et des outils back-office.",
+        "tags": [
+            "AI-assisted tools (low-code)",
+            "Prototyping and Wireframing",
+            "Webflow, Framer, WordPress, Glide"
+        ],
+        "resource": "/src/assets/images/optimus_case_study.jpg",
+        "contributions": [
+            "J'ai conseillé l'équipe fondatrice sur l'orientation générale du produit, les choix d'architecture et la sélection de la stack technologique, dans le cadre d'interventions à la demande",
+            "J'ai développé des preuves de concept (PoC) haute fidélité à l'aide d'outils assistés par l'IA et de plateformes low-code (Webflow, Framer, WordPress et Glide), afin d'itérer et de valider l'expérience utilisateur (UX) des pages d'atterrissage et des outils de back-office",
+            "J'ai optimisé la stratégie de croissance digitale en facilitant la validation rapide de parcours fonctionnels et en accélérant les cycles de lancement"
+        ],
+        "display": true
     },
     {
         "id": "zeelo-scaling-developer-velocity",

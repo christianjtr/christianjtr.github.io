@@ -7,10 +7,18 @@
         "period": "Sep. 2025 – Actualidad",
         "category": "consulting",
         "category_description": "Consultoría",
-        "summary": null,
-        "tags": [],
-        "resource": null,
-        "contributions": [],
+        "summary": "Asesorar al equipo fundador en la dirección de producto, arquitectura tecnológica y entrega acelerada de su plataforma web de cadena de suministro y manufactura digital. Mediante la creación de pruebas de concepto (PoCs) de alta fidelidad con herramientas asistidas por IA (Webflow, Framer, WordPress, Glide), valida la experiencia de usuario (UX) tanto en la landing page como en las herramientas de back-office.",
+        "tags": [
+            "AI-assisted tools (low-code)",
+            "Prototyping and Wireframing",
+            "Webflow, Framer, WordPress, Glide"
+        ],
+        "resource": "/src/assets/images/optimus_case_study.jpg",
+        "contributions": [
+            "Asesoré al equipo fundador en la dirección general del producto, las decisiones de arquitectura y la selección del stack tecnológico, mediante colaboraciones bajo demanda",
+            "Desarrollé pruebas de concepto (PoC) de alta fidelidad utilizando herramientas asistidas por IA y plataformas low-code (Webflow, Framer, WordPress y Glide) para iterar y validar la experiencia de usuario (UX) tanto en landing pages como en herramientas de back-office",
+            "Agilicé la estrategia de crecimiento digital, facilitando la validación rápida de flujos funcionales y acelerando los ciclos de lanzamiento"
+        ],
         "display": false
     },
     {
