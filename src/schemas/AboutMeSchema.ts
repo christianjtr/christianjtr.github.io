@@ -24,7 +24,7 @@ const CommonTextSchema = z.object({
     companies_worked_for: z.string(),
     key_areas: z.string(),
     interact_with: z.string(),
-    key_contribuitions: z.string(),
+    key_contributions: z.string(),
     ongoing: z.string(),
     cannot_load_content: z.string(),
     author: z.string(),
