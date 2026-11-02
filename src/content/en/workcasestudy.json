@@ -15,9 +15,9 @@
         ],
         "resource": "/src/assets/images/optimus_case_study.jpg",
         "contributions": [
-            "Advised the founding team on overall product direction, architecture decisions, and technology stack selection on an on-demand basis",
-            "Built high-fidelity proof-of-concepts (PoCs) using AI-assisted and low-code tools (Webflow, Framer, WordPress, Glide) to iterate and validate UX for both landing pages and back-office tools",
-            "Streamlined the digital growth strategy, allowing the business to rapidly test feature workflows and accelerate launch cycles"
+            "Advised the founding team on product direction, architecture, and technology choices",
+            "Built high-fidelity PoCs using AI-assisted and low-code tools to validate UX and product workflows",
+            "Enabled faster experimentation with digital workflows, supporting product validation and shorter launch cycles"
         ],
         "display": true
     },
@@ -40,9 +40,9 @@
         ],
         "resource": "/src/assets/images/zeelo_case_study.jpg",
         "contributions": [
-            "Co-led the migration to TypeScript for end-to-end type safety, refactored the data layer utilizing TanStack Query, and modernized the build system",
-            "Acted as a Monorepo Strategy Advocate, driving the consolidation into a high-performance workspace to eliminate cross-repo integration friction and version drift",
-            "Streamlined dependency management and versioning, fostering cross-functional alignment to eliminate heavy DTO/mapper layers and accelerate feature delivery"
+            "Co-led the TypeScript migration, improving end-to-end type safety and modernizing the data layer with TanStack Query",
+            "Drove monorepo adoption to reduce cross-repository integration friction and version inconsistencies",
+            "Simplified dependency management and removed complex DTO/mapper layers to streamline feature delivery"
         ],
         "display": true
     },
@@ -67,9 +67,9 @@
         ],
         "resource": "/src/assets/images/stuart_case_study.jpeg",
         "contributions": [
-            "Designed the modular Abstract Map Component covering interface/types, theming, implementation, and map engine integration",
-            "Co-developed REST and GraphQL APIs within the transport layer to secure real-time tracking and synchronization",
-            "Implemented automated performance KPIs and metrics, empowering operators to seamlessly monitor and manage subcontractor drivers"
+            "Designed a modular Abstract Map component, covering interfaces, theming, and map engine integration",
+            "Co-developed REST and GraphQL APIs to support real-time tracking and data synchronization",
+            "Implemented automated KPIs and performance metrics for monitoring and managing subcontractor drivers"
         ],
         "display": true
     },
@@ -81,10 +81,19 @@
         "period": "Nov 2009 – May 2011",
         "category": "enterprise-software",
         "category_description": "Enterprise Software",
-        "summary": null,
-        "tags": ["tag001", "tag002", "tag003"],
-        "resource": "/src/assets/svg/flag_spain.svg",
-        "contributions": [],
-        "display": false
+        "summary": "Modernized in-person customer service through system automation and integration. Designed and implemented a web-based service platform featuring self-service touchscreen kiosks connected to the core financial software, enabling members to independently check and print their account balances. Also developed a centralized web CRM to coordinate the institution's departments, automate queue management, and track real-time operational metrics such as waiting times and service analyst performance",
+        "tags": [
+            "Web Development",
+            "System Integrations",
+            "Enterprise Solution Engineering",
+            "MySQL, PHP, Web technologies, Flash (ActionScript)"
+        ],
+        "resource": "/src/assets/images/capem_case_study.jpg",
+        "contributions": [
+            "Built a self-service touchscreen kiosk integrated with the financial system for account setup, balance checks, and receipt printing",
+            "Created real-time dashboards to monitor analyst performance, handling times, and case volume, helping reduce customer wait times",
+            "Developed a centralized CRM and queue management system to automate ticket assignment across departments"
+        ],
+        "display": true
     }
 ]

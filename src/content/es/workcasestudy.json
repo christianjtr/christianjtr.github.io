@@ -15,11 +15,11 @@
         ],
         "resource": "/src/assets/images/optimus_case_study.jpg",
         "contributions": [
-            "Asesoré al equipo fundador en la dirección general del producto, las decisiones de arquitectura y la selección del stack tecnológico, mediante colaboraciones bajo demanda",
-            "Desarrollé pruebas de concepto (PoC) de alta fidelidad utilizando herramientas asistidas por IA y plataformas low-code (Webflow, Framer, WordPress y Glide) para iterar y validar la experiencia de usuario (UX) tanto en landing pages como en herramientas de back-office",
-            "Agilicé la estrategia de crecimiento digital, facilitando la validación rápida de flujos funcionales y acelerando los ciclos de lanzamiento"
+            "Asesoré al equipo fundador en la dirección del producto, las decisiones de arquitectura y la selección tecnológica",
+            "Desarrollé PoC de alta fidelidad con herramientas asistidas por IA y low-code para validar la experiencia de usuario y los flujos del producto",
+            "Facilité la experimentación rápida con flujos digitales, apoyando la validación del producto y la reducción de los ciclos de lanzamiento"
         ],
-        "display": false
+        "display": true
     },
     {
         "id": "zeelo-scaling-developer-velocity",
@@ -40,9 +40,9 @@
         ],
         "resource": "/src/assets/images/zeelo_case_study.jpg",
         "contributions": [
-            "Codirigí la migración a TypeScript para garantizar el tipado de e2e, refactoricé la capa de datos utilizando TanStack Query y modernicé el sistema de compilación",
-            "Impulsé la estrategia Monorepo, promoviendo la consolidación en un entorno de trabajo de alto rendimiento para eliminar las fricciones de integración y las inconsistencias de versiones",
-            "Simplifiqué la gestión de dependencias y el versionado, fomentando la colaboración entre equipos para eliminar capas complejas de DTOs/mapeadores y agilizar la entrega de funcionalidades"
+            "Codirigí la migración a TypeScript, mejorando el tipado de extremo a extremo y modernizando la capa de datos con TanStack Query",
+            "Impulsé la adopción de un monorepo para reducir las fricciones de integración entre repositorios y las inconsistencias de versiones",
+            "Simplifiqué la gestión de dependencias y eliminé capas complejas de DTOs y mapeadores para agilizar la entrega de funcionalidades"
         ],
         "display": true
     },
@@ -67,9 +67,9 @@
         ],
         "resource": "/src/assets/images/stuart_case_study.jpeg",
         "contributions": [
-            "Diseñé el componente modular Abstract Map, abarcando la definición de interfaces y tipos, tematización, implementación e integración con el motor de mapas",
-            "Co-desarrollé APIs REST y GraphQL en la capa de transporte para garantizar el seguimiento en tiempo real y la sincronización de datos",
-            "Implementé KPIs y métricas automatizadas de rendimiento, facilitando a los equipos de operaciones la supervisión y gestión de conductores de empresas subcontratadas"
+            "Diseñé el componente modular Abstract Map, incluyendo interfaces, tematización e integración con el motor cartográfico",
+            "Codirigí el desarrollo de APIs REST y GraphQL para habilitar el seguimiento en tiempo real y la sincronización de datos",
+            "Implementé KPIs y métricas automatizadas para supervisar y gestionar a los conductores de empresas subcontratadas"
         ],
         "display": true
     },
@@ -81,10 +81,19 @@
         "period": "Nov. 2009 – May 2011",
         "category": "enterprise-software",
         "category_description": "Software Empresarial",
-        "summary": null,
-        "tags": [],
-        "resource": null,
-        "contributions": [],
-        "display": false
+        "summary": "Modernización de la atención presencial mediante la automatización y la integración de sistemas. Diseñé e implementé una plataforma web de atención con quioscos táctiles de autoservicio conectados al software financiero central, que permitían a los asociados consultar e imprimir sus saldos de forma autónoma. Además, desarrollé un CRM web centralizado para coordinar las distintas áreas de la institución, automatizar la gestión de turnos y registrar métricas operativas en tiempo real, como los tiempos de espera y el rendimiento del personal de atención",
+        "tags": [
+            "Web Development",
+            "System Integrations",
+            "Enterprise Solution Engineering",
+            "MySQL, PHP, Web technologies, Flash (ActionScript)"
+        ],
+        "resource": "/src/assets/images/capem_case_study.jpg",
+        "contributions": [
+            "Desarrollé un quiosco táctil de autoservicio integrado con el sistema financiero para gestionar accesos, consultar saldos e imprimir recibos",
+            "Creé dashboards en tiempo real para supervisar el rendimiento de los analistas, los tiempos de atención y el volumen de solicitudes, contribuyendo a reducir las esperas",
+            "Desarrollé un CRM centralizado con gestión de turnos para automatizar la asignación de tickets entre departamentos"
+        ],
+        "display": true
     }
 ]

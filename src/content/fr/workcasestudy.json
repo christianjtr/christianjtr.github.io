@@ -15,9 +15,9 @@
         ],
         "resource": "/src/assets/images/optimus_case_study.jpg",
         "contributions": [
-            "J'ai conseillé l'équipe fondatrice sur l'orientation générale du produit, les choix d'architecture et la sélection de la stack technologique, dans le cadre d'interventions à la demande",
-            "J'ai développé des preuves de concept (PoC) haute fidélité à l'aide d'outils assistés par l'IA et de plateformes low-code (Webflow, Framer, WordPress et Glide), afin d'itérer et de valider l'expérience utilisateur (UX) des pages d'atterrissage et des outils de back-office",
-            "J'ai optimisé la stratégie de croissance digitale en facilitant la validation rapide de parcours fonctionnels et en accélérant les cycles de lancement"
+            "J'ai conseillé l'équipe fondatrice sur l'orientation produit, les choix d'architecture et les technologies à adopter",
+            "J'ai développé des PoC haute fidélité à l'aide d'outils assistés par l'IA et low-code pour valider l'expérience utilisateur et les parcours produit",
+            "J'ai facilité l'expérimentation rapide de flux numériques, contribuant à la validation du produit et à la réduction des cycles de lancement"
         ],
         "display": true
     },
@@ -40,9 +40,9 @@
         ],
         "resource": "/src/assets/images/zeelo_case_study.jpg",
         "contributions": [
-            "J'ai co-piloté la migration vers TypeScript afin de garantir le typage de e2e, refactorisé la couche de données avec TanStack Query et modernisé le système de build",
-            "J'ai co-porté la stratégie Monorepo en favorisant la consolidation dans un espace de travail performant afin d'éliminer les frictions d'intégration et les divergences de versions",
-            "J'ai simplifié la gestion des dépendances et du versionnage, en favorisant la collaboration entre équipes pour supprimer les couches complexes de DTO et de mapping, et accélérer la livraison des fonctionnalités"
+            "J'ai co-piloté la migration vers TypeScript, renforçant le typage de bout en bout et modernisant la couche de données avec TanStack Query",
+            "J'ai impulsé l'adoption d'un monorepo afin de réduire les frictions d'intégration entre dépôts et les incohérences de versions",
+            "J'ai simplifié la gestion des dépendances et supprimé les couches complexes de DTO et de mapping afin d'accélérer la livraison des fonctionnalités"
         ],
         "display": true
     },
@@ -67,9 +67,9 @@
         ],
         "resource": "/src/assets/images/stuart_case_study.jpeg",
         "contributions": [
-            "Conçu le composant modulaire Abstract Map, couvrant la définition des interfaces et des types, la gestion des thèmes, l'implémentation et l'intégration du moteur cartographique",
-            "Co-développé des API REST et GraphQL au sein de la couche de transport afin d'assurer le suivi en temps réel et la synchronisation des données",
-            "Mis en place des indicateurs clés de performance (KPI) et des métriques automatisées, permettant aux équipes opérationnelles de superviser et de gérer efficacement les conducteurs des sous-traitants"
+            "J'ai conçu le composant cartographique modulaire Abstract Map, couvrant les interfaces, la gestion des thèmes et l'intégration du moteur cartographique",
+            "J'ai co-développé des API REST et GraphQL pour assurer le suivi en temps réel et la synchronisation des données",
+            "J'ai mis en place des KPI et des métriques automatisées pour superviser et gérer les conducteurs des entreprises sous-traitantes"
         ],
         "display": true
     },
@@ -81,10 +81,19 @@
         "period": "Nov. 2009 – Mai 2011",
         "category": "enterprise-software",
         "category_description": "Logiciels d'Entreprise",
-        "summary": null,
-        "tags": [],
-        "resource": null,
-        "contributions": [],
-        "display": false
+        "summary": "Modernisation de l'accueil en présentiel grâce à l'automatisation et à l'intégration des systèmes. J'ai conçu et mis en place une plateforme web de gestion de l'accueil intégrant des bornes tactiles en libre-service connectées au logiciel financier central, permettant aux adhérents de consulter et d'imprimer leurs soldes en toute autonomie. J'ai également développé un CRM web centralisé pour coordonner les différents services de l'établissement, automatiser la gestion des files d'attente et suivre en temps réel des indicateurs opérationnels tels que les temps d'attente et les performances du personnel d'accueil",
+        "tags": [
+            "Web Development",
+            "System Integrations",
+            "Enterprise Solution Engineering",
+            "MySQL, PHP, Web technologies, Flash (ActionScript)"
+        ],
+        "resource": "/src/assets/images/capem_case_study.jpg",
+        "contributions": [
+            "Développé une borne tactile en libre-service connectée au système financier pour gérer les accès, consulter les soldes et imprimer des reçus",
+            "Créé des tableaux de bord en temps réel pour suivre les performances des analystes, les délais de traitement et le volume des demandes, contribuant à réduire l'attente",
+            "Développé un CRM centralisé avec gestion des files d'attente pour automatiser l'attribution des tickets entre les services"
+        ],
+        "display": true
     }
 ]
