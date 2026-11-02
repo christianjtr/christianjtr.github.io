@@ -1,0 +1,82 @@
+[
+    {
+        "id": "optimus-product-discovery-rapid-prototyping",
+        "company": "Optimus Shanghai",
+        "title": "Definición de Producto y Prototipado para una Plataforma de Cadena de Suministro",
+        "role": "Consultor Técnico de Producto",
+        "period": "Sep. 2025 – Actualidad",
+        "category": "consulting",
+        "category_description": "Consultoría",
+        "summary": null,
+        "tags": [],
+        "resource": null,
+        "contributions": [],
+        "display": false
+    },
+    {
+        "id": "zeelo-scaling-developer-velocity",
+        "company": "Zeelo",
+        "title": "Mejora del DevExp y Desarrollo mediante la Simplificación del Sistema y la Seguridad de Tipos",
+        "role": "Ingeniero Sénior de Software de Producto (Orientación Frontend)",
+        "period": "May. 2024 – Jul. 2025",
+        "category": "product-engineering",
+        "category_description": "Ingeniería de Producto",
+        "summary": null,
+        "tags": [
+            "React/TypeScript",
+            "ReactQuery",
+            "Redux",
+            "Zod",
+            "Jest/Cypress",
+            "Storybook"
+        ],
+        "resource": "/src/assets/images/zeelo_case_study.jpg",
+        "contributions": [
+            "Codirigí la migración a TypeScript para garantizar el tipado de e2e, refactoricé la capa de datos utilizando TanStack Query y modernicé el sistema de compilación",
+            "Impulsé la estrategia Monorepo, promoviendo la consolidación en un entorno de trabajo de alto rendimiento para eliminar las fricciones de integración y las inconsistencias de versiones",
+            "Simplifiqué la gestión de dependencias y el versionado, fomentando la colaboración entre equipos para eliminar capas complejas de DTOs/mapeadores y agilizar la entrega de funcionalidades"
+        ],
+        "display": true
+    },
+    {
+        "id": "stuart-live-monitoring-engine",
+        "company": "Stuart Delivery",
+        "title": "Monitorización en Tiempo Real y Seguimiento de Flotas",
+        "role": "Ingeniero de Soluciones (Orientación Full-Stack)",
+        "period": "Oct. 2020 – Jun. 2023",
+        "category": "solutions-engineering",
+        "category_description": "Ingeniería de Soluciones",
+        "summary": "Este caso de estudio sintetiza el desarrollo de la plataforma Live Monitoring & Fleet Tracking Engine, diseñada para centralizar la visibilidad operativa en tiempo real de flotas subcontratadas. Mediante una arquitectura basada en monorepo, la solución elimina los procesos manuales y los silos de información, proporcionando a los operadores métricas en directo, alertas y mapas interactivos para optimizar la toma de decisiones.",
+        "tags": [
+            "React/TypeScript",
+            "NodeJS/Express",
+            "Sequelize ORM",
+            "MySQL/PostgreSLQ",
+            "AWS EC2",
+            "RESTFul APIs",
+            "GraphQL",
+            "WebSockets"
+        ],
+        "resource": "/src/assets/images/stuart_case_study.jpeg",
+        "contributions": [
+            "Diseñé el componente modular Abstract Map, abarcando la definición de interfaces y tipos, tematización, implementación e integración con el motor de mapas",
+            "Co-desarrollé APIs REST y GraphQL en la capa de transporte para garantizar el seguimiento en tiempo real y la sincronización de datos",
+            "Implementé KPIs y métricas automatizadas de rendimiento, facilitando a los equipos de operaciones la supervisión y gestión de conductores de empresas subcontratadas"
+        ],
+        "display": true
+    },
+    {
+        "id": "capem-customer-service-workflow",
+        "company": "Caja de Ahorros y Préstamos para Empleados Públicos de Miranda (CAPEM)",
+        "title": "CRM de Atención al Cliente y Gestión de Flujos de Trabajo",
+        "role": "Responsable de Sistemas Informáticos",
+        "period": "Nov. 2009 – May 2011",
+        "category": "enterprise-software",
+        "category_description": "Software Empresarial",
+        "summary": null,
+        "tags": [],
+        "resource": null,
+        "contributions": [],
+        "display": false
+    }
+]

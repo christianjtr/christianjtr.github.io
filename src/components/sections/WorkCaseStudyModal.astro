@@ -1,0 +1,106 @@
+---
+import { getEntry } from 'astro:content';
+
+import type { ContentDataEntryType } from '@app-types/Content';
+import type { AboutMeData } from '@schemas/AboutMeSchema';
+import { AsyncImage, BadgeList } from '../';
+import { CONTENT } from '@app-types/Content';
+import type { WorkCaseStudy } from '@schemas/ProjectSchema';
+
+interface Props {
+    workcase: WorkCaseStudy;
+    modalId: string;
+}
+
+const { lang } = Astro.params;
+const { workcase, modalId } = Astro.props;
+
+const commonData = await getEntry(lang as ContentDataEntryType, `${lang}/${CONTENT.COMMON}`);
+const { common } = (commonData?.data as AboutMeData) || {};
+---
+
+<dialog id={modalId} class="modal modal-middle px-4 md:px-0" onclick="event.stopPropagation()">
+    <div class="modal-box workcase-modal-box">
+        <div class="workcase-modal-header">
+            <div>
+                <span class="workcase-modal-label">{common.key_contributions}</span>
+                <h3 class="workcase-modal-title">{workcase.title}</h3>
+                <div class="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-base-content/60">
+                    <span class="font-semibold text-base-content">{workcase.company}</span>
+                    <span>{workcase.role}</span>
+                    <span>{workcase.period}</span>
+                </div>
+            </div>
+            <form method="dialog">
+                <button class="btn btn-sm btn-circle btn-ghost text-neutral-400 dark:text-neutral-500 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">✕</button>
+            </form>
+        </div>
+        <section class="space-y-3">
+            <div class="grid grid-cols-1 md:grid-cols-6 gap-3">
+                <figure class="md:col-span-5 min-w-0">
+                    <AsyncImage
+                    imagePath={workcase.resource}
+                    title={workcase.title}
+                    loading="lazy"
+                    />
+                </figure>
+                <ul class="list md:col-span-1">
+                    <li class="pb-2 text-xs uppercase text-primary font-semibold tracking-wide">{common.contribuition}</li>
+                    {workcase.contributions?.map((item) => (
+                    <li class="list-row py-3 px-0">
+                        <p class="text-xs font-light wrap-break-word">{item}</p>
+                    </li>
+                    ))}
+                </ul>
+            </div>
+            <BadgeList items={workcase.tags || []} badgeClass='badge-sm' wrapperClass="mt-5"/>
+        </section>
+    </div>
+    <form method="dialog" class="modal-backdrop">
+        <button>close</button>
+    </form>
+
+</dialog>
+
+<style>
+    @reference "@styles/global.css";
+
+    .workcase-modal-box {
+        @apply bg-base-100 border-neutral-200 text-neutral-900 border rounded-2xl p-6 w-11/12 max-w-5xl transition-all duration-300 shadow-2xl;
+    }
+
+    .workcase-modal-header {
+        @apply flex items-center justify-between pb-3 mb-5 border-b border-neutral-100;
+    }
+
+    .workcase-modal-label {
+        @apply text-[10px] font-bold tracking-widest text-primary uppercase font-mono;
+    }
+
+    .workcase-modal-title {
+        @apply text-xl font-bold text-neutral-900;
+    }
+
+    .workcase-modal-chip-separator {
+        @apply text-neutral-300 font-normal select-none mx-0.5;
+    }
+
+    html[data-theme="dark"] {
+        & .workcase-modal-box {
+            @apply bg-neutral-900 border-neutral-800 text-white;
+        }
+
+        & .workcase-modal-header {
+            @apply border-neutral-800;
+        }
+
+        & .workcase-modal-label {
+            @apply text-accent;
+        }
+
+        & .workcase-modal-title {
+            @apply text-white;
+        }
+    }
+</style>
+

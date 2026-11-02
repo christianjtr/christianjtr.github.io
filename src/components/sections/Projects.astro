@@ -2,109 +2,145 @@
 import { getCollection, getEntry } from 'astro:content';
 
 import type { ContentDataEntryType } from '@app-types/Content';
-import type { Project } from '@schemas/ProjectSchema';
+import type { Project, WorkCaseStudy } from '@schemas/ProjectSchema';
 import type { AboutMeData } from '@schemas/AboutMeSchema';
 import { CONTENT } from '@app-types/Content';
 import { LinkButton, Section, BadgeList, Badge, AsyncImage, VerticalSpacer } from "../";
+import WorkCaseStudyModal from './WorkCaseStudyModal.astro';
 import Logo from '@assets/svg/projects.svg';
 import PinIcon from '@assets/svg/pin.svg';
 import MonitorIcon from '@assets/svg/monitor.svg';
+import ChevronIcon from '@assets/svg/chevron.svg';
 
 const { lang } = Astro.params;
 
-const [commonData, [ projectData ]] = await Promise.all([
+const [commonData, [ projectData ], [ workcaseData ]] = await Promise.all([
     await getEntry(lang as ContentDataEntryType, `${lang}/${CONTENT.COMMON}`),
     await getCollection(lang as ContentDataEntryType, (collection) => collection.id === `${lang}/${CONTENT.PROJECTS}`),
+    await getCollection(lang as ContentDataEntryType, (collection) => collection.id === `${lang}/${CONTENT.WORKCASESTUDY}`),
 ]);
 
 const { section_projects, common, header } = (commonData?.data as AboutMeData) || {};
 const { data: projects } = projectData as { data: Project[] };
+const { data: workcases } = workcaseData as { data: WorkCaseStudy[] };
 ---
 
 <div class="bg-primary/5 py-10" id={header.main_sections[0].anchorId}>
     <Section headingTitle={section_projects.title} subtitle={section_projects.subtitle} class="container mx-auto px-1 lg:px-10">
         <Logo slot="beforeHeading" width={96} height={96} />
         <VerticalSpacer />
-        <div class="px-2 md:px-14">
-            {projects.map((project: Project, index: number) => (
-                <div class="collapse collapse-arrow project-card" tabindex="0">
-                    <input type="radio" name="project" checked={index === 0} aria-label={
-                        `Select project ${project.title}`
-                    } />
-                    <div class="collapse-title card-header">
-                        <div class="tech-timeline-indicator">
-                            <div class="timeline-dot-outer">
-                                <div class="timeline-dot-inner"></div>
+        <div class="px-2 md:px-14 flex flex-col-reverse lg:flex-row gap-3">
+            <div class="w-full lg:w-4/5">
+                {projects.map((project: Project, index: number) => (
+                    <div class="collapse collapse-arrow project-card" tabindex="0">
+                        <input type="radio" name="project" checked={index === 0} aria-label={
+                            `Select project ${project.title}`
+                        } />
+                        <div class="collapse-title card-header">
+                            <div class="tech-timeline-indicator">
+                                <div class="timeline-dot-outer">
+                                    <div class="timeline-dot-inner"></div>
+                                </div>
+                                <div class="timeline-line-track">
+                                    <div class="timeline-line-active"></div>
+                                </div>
                             </div>
-                            <div class="timeline-line-track">
-                                <div class="timeline-line-active"></div>
+                            <div class="header-text-container">
+                                <h2 class="title">{project.title}</h2>
+                                <p class="summary">{project.summary}</p>
+                                <span class="primary-text owner-text">{project.owner}</span>
                             </div>
                         </div>
-                        <div class="header-text-container">
-                            <h2 class="title">{project.title}</h2>
-                            <p class="summary">{project.summary}</p>
-                            <span class="primary-text owner-text">{project.owner}</span>
-                        </div>
-                    </div>
-                    <div class="collapse-content card-body">
-                        <div class="body-grid">
-                            
-                            <div class="text-column">
-                                <div class="info-section">
-                                    <h4 class="section-title text-muted-label">{common.overview}</h4>
-                                    <p class="project-paragraph text-body-content mt-7">{project.overview}</p>
+                        <div class="collapse-content card-body">
+                            <div class="body-grid">
+                                
+                                <div class="text-column">
+                                    <div class="info-section">
+                                        <h4 class="section-title text-muted-label">{common.overview}</h4>
+                                        <p class="project-paragraph text-body-content mt-7">{project.overview}</p>
+                                    </div>
+                                    <div class="info-section">
+                                        <h4 class="section-title text-muted-label">{common.contribuition}</h4>
+                                        <p class="project-paragraph text-body-content mt-7">{project.contributions}</p>
+                                    </div>
                                 </div>
-                                <div class="info-section">
-                                    <h4 class="section-title text-muted-label">{common.contribuition}</h4>
-                                    <p class="project-paragraph text-body-content mt-7">{project.contributions}</p>
-                                </div>
-                                <div class="tech-container">
-                                    <MonitorIcon width={14} height={14} class="text-neutral-400 shrink-0 mt-0.5" />
-                                    <div class="flex-1 space-y-1">
-                                        <h4 class="section-title text-muted-label block mb-5">{common.technologies}</h4>
-                                        <div class="pt-0.5 text-xs font-medium tracking-wide">
-                                            <BadgeList items={project.technologies} badgeClass='badge-sm' />
+
+                                <div class="media-column">
+                                    <figure class="visual-studio-mesh">
+                                        <div class="industrial-matte-sheet">
+                                            <div class="glass-reflection-overlay"></div>
+                                            <AsyncImage 
+                                                imagePath={project.project_asset} 
+                                                title={project.title} 
+                                                class="inner-asset" 
+                                            />
+                                        </div>
+                                    </figure>
+                                    <div class="info-section">
+                                        <h4 class="section-title text-muted-label">{common.project_result_title}</h4>
+                                        <p class="project-paragraph text-body-content mt-7">{project.outcome}</p>
+                                    </div>
+                                    <div class="tech-container">
+                                        <MonitorIcon width={14} height={14} class="text-neutral-400 shrink-0 mt-0.5" />
+                                        <div class="flex-1 space-y-1">
+                                            <h4 class="section-title text-muted-label block mb-5">{common.technologies}</h4>
+                                            <div class="pt-0.5 text-xs font-medium tracking-wide">
+                                                <BadgeList items={project.technologies} badgeClass='badge-sm' />
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="media-column">
-                                <figure class="image-wrapper visual-studio-mesh">
-                                    <div class="project-image-frame industrial-matte-sheet">
-                                        <div class="glass-reflection-overlay"></div>
-                                        <AsyncImage 
-                                            imagePath={project.project_asset} 
-                                            title={project.title} 
-                                            class="inner-asset" 
-                                        />
+                            <div class="card-footer">
+                                <div class="footer-meta">
+                                    <PinIcon width={14} height={14} class="shrink-0 text-neutral-400" />
+                                    <div class="meta-inline-flow">
+                                        <span class="font-medium text-showcase">{project.showcased_at}</span>
+                                        <span class="text-location">({project.location})</span>
+                                        <span class="hidden md:inline text-bullet-separator">•</span>
+                                        <Badge class="badge-warning font-semibold badge-sm">{project.period}</Badge>
                                     </div>
-                                </figure>
-                                <div class="info-section">
-                                    <h4 class="section-title text-muted-label">{common.project_result_title}</h4>
-                                    <p class="project-paragraph text-body-content mt-7">{project.outcome}</p>
+                                </div>
+                                <div class="footer-action-wrapper">
+                                    <LinkButton href={project.url} class="btn-md w-full md:w-auto flex justify-center" target="_blank" rel="noopener noreferrer" displayDefaultIcon>
+                                        {common.view_more}
+                                    </LinkButton>
                                 </div>
                             </div>
                         </div>
-                        <div class="card-footer">
-                            <div class="footer-meta">
-                                <PinIcon width={14} height={14} class="shrink-0 text-neutral-400" />
-                                <div class="meta-inline-flow">
-                                    <span class="font-medium text-showcase">{project.showcased_at}</span>
-                                    <span class="text-location">({project.location})</span>
-                                    <span class="hidden md:inline text-bullet-separator">•</span>
-                                    <Badge class="badge-warning font-semibold badge-sm">{project.period}</Badge>
+                    </div>    
+                ))}
+            </div>
+            <div class="w-full lg:w-1/4 xl:w-1/5">
+                <ul class="list space-y-2 lg:sticky lg:top-24">
+                    {workcases.filter(({ display }) => display).map((item, index) => (
+                        <li>
+                            <div class="group block rounded-xl p-3 transition-all duration-200 hover:bg-primary/10 cursor-pointer" onclick={`document.getElementById('workcase_modal_${index}').showModal()`}>
+                                <div class="flex items-center text-xs justify-between gap-2 text-base-content/60">
+                                    <span class="truncate font-medium tracking-wider">
+                                        {item.company}
+                                    </span>
+                                    <span class="shrink-0 text-[10px]">
+                                        {item.period}
+                                    </span>
+                                </div>
+                                <h3 class="mt-3 text-sm font-medium leading-snug transition-colors group-hover:text-primary/95">
+                                    {item.title}
+                                </h3>
+                                <div class="mt-3 flex justify-between">
+                                    <span class="badge badge-secondary badge-sm font-light">
+                                        {item.category_description}
+                                    </span>
+                                    <span class="chevron-icon">
+                                        <ChevronIcon height={16} width={16} />
+                                    </span>
                                 </div>
                             </div>
-                            <div class="footer-action-wrapper">
-                                <LinkButton href={project.url} class="btn-md w-full md:w-auto flex justify-center" target="_blank" rel="noopener noreferrer" displayDefaultIcon>
-                                    {common.view_more}
-                                </LinkButton>
-                            </div>
-                        </div>
-                    </div>
-                </div>    
-            ))}
+                        </li>
+                        <WorkCaseStudyModal workcase={item} modalId={`workcase_modal_${index}`} />
+                    ))}
+                </ul>
+            </div>
         </div>
     </Section>
 </div>
@@ -194,7 +230,7 @@ const { data: projects } = projectData as { data: Project[] };
     .media-column { @apply flex flex-col gap-5 col-span-full lg:col-span-8; }
 
     .visual-studio-mesh {
-        @apply w-full rounded-2xl flex items-center justify-center p-2 md:p-8 overflow-hidden relative border border-neutral-100;
+        @apply w-full rounded-2xl flex items-center justify-center p-2 md:p-4 overflow-hidden relative border border-neutral-100;
         background-color: #fafafa;
         background-image: linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
         background-size: 24px 24px;
@@ -221,6 +257,14 @@ const { data: projects } = projectData as { data: Project[] };
     :global(html[data-theme="dark"]) .glass-reflection-overlay {
         @apply opacity-20;
         background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0.2) 100%);
+    }
+
+    .chevron-icon {
+        @apply text-primary group-hover:opacity-100 group-hover:translate-x-0.5 transition-all duration-200 shrink-0 pr-1;
+    }
+
+    html[data-theme="dark"] .chevron-icon {
+        @apply text-accent;
     }
 
     .inner-asset { @apply w-full h-auto object-contain max-h-[380px] rounded-lg relative z-0; }

@@ -7,7 +7,7 @@ import { i18nLocalesConfig } from '../i18n.config.mjs';
 
 import { AboutMeSchema } from './schemas/AboutMeSchema';
 import { CredentialSchema } from './schemas/CredentialSchema';
-import { ProjectSchema } from './schemas/ProjectSchema';
+import { ProjectSchema, WorkCaseStudySchema } from './schemas/ProjectSchema';
 import { ExperienceSchema } from './schemas/ExperienceSchema';
 import { StudySchema } from './schemas/StudySchema';
 import { ExperimentSchema } from './schemas/ExperimentSchema';
@@ -23,6 +23,7 @@ const schema = z.union([
     z.array(ExperienceSchema),
     z.array(StudySchema),
     z.array(ExperimentSchema),
+    z.array(WorkCaseStudySchema),
 ]);
 
 export const collections = locales.reduce((acc, locale) => {

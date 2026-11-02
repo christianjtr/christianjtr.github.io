@@ -4,7 +4,8 @@ export enum CONTENT {
     EXPERIENCES = "experiences",
     EXPERIMENTS = "experiments",
     PROJECTS = "projects",
-    STUDIES = "studies"
+    STUDIES = "studies",
+    WORKCASESTUDY = "workcasestudy"
 }
 export type ContentType = `${CONTENT}`;
 

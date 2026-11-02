@@ -1,0 +1,82 @@
+[
+    {
+        "id": "optimus-product-discovery-rapid-prototyping",
+        "company": "Optimus Shanghai",
+        "title": "Découverte Produit et Prototypage pour une Plateforme de Chaîne d'Approvisionnement",
+        "role": "Consultant Technique Produit",
+        "period": "Sept. 2025 – Aujourd'hui",
+        "category": "consulting",
+        "category_description": "Consultant",
+        "summary": null,
+        "tags": [],
+        "resource": null,
+        "contributions": [],
+        "display": false
+    },
+    {
+        "id": "zeelo-scaling-developer-velocity",
+        "company": "Zeelo",
+        "title": "Accélérer le Développement et DevExp grâce à la Simplification du Système et à la Sécurité des Types",
+        "role": "Ingénieur Logiciel Produit Senior (Orientation Front-end)",
+        "period": "Mai 2024 – Juil. 2025",
+        "category": "product-engineering",
+        "category_description": "Ingénierie Produit Logiciel",
+        "summary": null,
+        "tags": [
+            "React/TypeScript",
+            "ReactQuery",
+            "Redux",
+            "Zod",
+            "Jest/Cypress",
+            "Storybook"
+        ],
+        "resource": "/src/assets/images/zeelo_case_study.jpg",
+        "contributions": [
+            "J'ai co-piloté la migration vers TypeScript afin de garantir le typage de e2e, refactorisé la couche de données avec TanStack Query et modernisé le système de build",
+            "J'ai co-porté la stratégie Monorepo en favorisant la consolidation dans un espace de travail performant afin d'éliminer les frictions d'intégration et les divergences de versions",
+            "J'ai simplifié la gestion des dépendances et du versionnage, en favorisant la collaboration entre équipes pour supprimer les couches complexes de DTO et de mapping, et accélérer la livraison des fonctionnalités"
+        ],
+        "display": true
+    },
+    {
+        "id": "stuart-live-monitoring-engine",
+        "company": "Stuart Delivery",
+        "title": "Supervision en Temps Réel et de Suivi des Flottes",
+        "role": "Ingénieur Solutions (à Dominante Full-Stack)",
+        "period": "Oct. 2020 – Juin 2023",
+        "category": "solutions-engineering",
+        "category_description": "Ingénierie de Solutions",
+        "summary": "Présentation de l'étude de cas sur la plateforme Live Monitoring & Fleet Tracking Engine, conçue pour centraliser la visibilité opérationnelle en temps réel des flottes sous-traitantes. Grâce à une architecture moderne en monorepo, cette solution élimine les processus manuels et les silos d'information, offrant aux opérateurs des métriques en direct, des alertes et des cartes interactives pour optimiser la prise de décision.",
+        "tags": [
+            "React/TypeScript",
+            "NodeJS/Express",
+            "Sequelize ORM",
+            "MySQL/PostgreSLQ",
+            "AWS EC2",
+            "RESTFul APIs",
+            "GraphQL",
+            "WebSockets"
+        ],
+        "resource": "/src/assets/images/stuart_case_study.jpeg",
+        "contributions": [
+            "Conçu le composant modulaire Abstract Map, couvrant la définition des interfaces et des types, la gestion des thèmes, l'implémentation et l'intégration du moteur cartographique",
+            "Co-développé des API REST et GraphQL au sein de la couche de transport afin d'assurer le suivi en temps réel et la synchronisation des données",
+            "Mis en place des indicateurs clés de performance (KPI) et des métriques automatisées, permettant aux équipes opérationnelles de superviser et de gérer efficacement les conducteurs des sous-traitants"
+        ],
+        "display": true
+    },
+    {
+        "id": "capem-customer-service-workflow",
+        "company": "Caisse d'épargne et de crédit des employés publics de Miranda (CAPEM)",
+        "title": "CRM de Gestion du Service Client et de Travail",
+        "role": "Responsable des Systèmes Informatiques",
+        "period": "Nov. 2009 – Mai 2011",
+        "category": "enterprise-software",
+        "category_description": "Logiciels d'Entreprise",
+        "summary": null,
+        "tags": [],
+        "resource": null,
+        "contributions": [],
+        "display": false
+    }
+]

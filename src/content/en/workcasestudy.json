@@ -1,0 +1,82 @@
+[
+    {
+        "id": "optimus-product-discovery-rapid-prototyping",
+        "company": "Optimus Shanghai",
+        "title": "Product Discovery & Rapid Prototyping for a Supply Chain Platform",
+        "role": "Technical Product Consultant",
+        "period": "Sep 2025 – Present",
+        "category": "consulting",
+        "category_description": "Consulting",
+        "summary": null,
+        "tags": ["tag001", "tag002", "tag003"],
+        "resource": "/src/assets/svg/flag_spain.svg",
+        "contributions": [],
+        "display": false
+    },
+    {
+        "id": "zeelo-scaling-developer-velocity",
+        "company": "Zeelo",
+        "title": "Scaling Developer Velocity through System Simplification and Type Safety",
+        "role": "Senior Product Software Engineer (Front-end leaning)",
+        "period": "May 2024 – Jul 2025",
+        "category": "product-engineering",
+        "category_description": "Product Engineering",
+        "summary": null,
+        "tags": [
+            "React/TypeScript",
+            "ReactQuery",
+            "Redux",
+            "Zod",
+            "Jest/Cypress",
+            "Storybook"
+        ],
+        "resource": "/src/assets/images/zeelo_case_study.jpg",
+        "contributions": [
+            "Co-led the migration to TypeScript for end-to-end type safety, refactored the data layer utilizing TanStack Query, and modernized the build system",
+            "Acted as a Monorepo Strategy Advocate, driving the consolidation into a high-performance workspace to eliminate cross-repo integration friction and version drift",
+            "Streamlined dependency management and versioning, fostering cross-functional alignment to eliminate heavy DTO/mapper layers and accelerate feature delivery"
+        ],
+        "display": true
+    },
+    {
+        "id": "stuart-live-monitoring-engine",
+        "company": "Stuart Delivery",
+        "title": "Live Monitoring & Fleet Tracking Engine",
+        "role": "Solutions Engineer (Full Stack Software Engineer leaning)",
+        "period": "Oct 2020 – Jun 2023",
+        "category": "solutions-engineering",
+        "category_description": "Solutions Engineering",
+        "summary": "A case study overview of the Live Monitoring & Fleet Tracking Engine, designed to centralize real-time operational visibility for subcontractor courier fleets. Leveraging a modern monorepo architecture, this solution eliminates manual workflows and data silos, providing operators with live metrics, alerts, and interactive mapping to streamline decision-making.",
+        "tags": [
+            "React/TypeScript",
+            "NodeJS/Express",
+            "Sequelize ORM",
+            "MySQL/PostgreSLQ",
+            "AWS EC2",
+            "RESTFul APIs",
+            "GraphQL",
+            "WebSockets"
+        ],
+        "resource": "/src/assets/images/stuart_case_study.jpeg",
+        "contributions": [
+            "Designed the modular Abstract Map Component covering interface/types, theming, implementation, and map engine integration",
+            "Co-developed REST and GraphQL APIs within the transport layer to secure real-time tracking and synchronization",
+            "Implemented automated performance KPIs and metrics, empowering operators to seamlessly monitor and manage subcontractor drivers"
+        ],
+        "display": true
+    },
+    {
+        "id": "capem-customer-service-workflow",
+        "company": "Miranda's Public Employees S&L (CAPEM)",
+        "title": "Customer Service CRM & Workflow Management",
+        "role": "IT Systems Responsible",
+        "period": "Nov 2009 – May 2011",
+        "category": "enterprise-software",
+        "category_description": "Enterprise Software",
+        "summary": null,
+        "tags": ["tag001", "tag002", "tag003"],
+        "resource": "/src/assets/svg/flag_spain.svg",
+        "contributions": [],
+        "display": false
+    }
+]

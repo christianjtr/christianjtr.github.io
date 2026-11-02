@@ -1,5 +1,12 @@
 import { z } from 'astro/zod';
 
+const WorkCategorySchema = z.enum([
+    "consulting",
+    "product-engineering",
+    "solutions-engineering",
+    "enterprise-software",
+]);
+
 export const ProjectSchema = z.object({
     id: z.string(),
     title: z.string(),
@@ -20,4 +27,21 @@ export const ProjectSchema = z.object({
     outcome: z.string()
 });
 
+export const WorkCaseStudySchema = z.object({
+    id: z.string(),
+    company: z.string().trim().min(1),
+    title: z.string(),
+    role: z.string().trim().min(1),
+    period: z.string(),
+    category: WorkCategorySchema,
+    category_description: z.string(),
+    summary: z.string().nullable().optional(),
+    tags: z.array(z.string().trim().min(1)).nullable().optional(),
+    resource: z.string().nullable().optional(),
+    display: z.boolean(),
+    contributions: z.array(z.string())
+});
+
+export type WorkCaseStudy = z.infer<typeof WorkCaseStudySchema>;
+export type WorkCategory = z.infer<typeof WorkCategorySchema>;
 export type Project = z.infer<typeof ProjectSchema>;
