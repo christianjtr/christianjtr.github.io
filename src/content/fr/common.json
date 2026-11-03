@@ -287,7 +287,7 @@
     },
     "section_skills": {
         "title": "Écosystème de Travail",
-        "subtitle": "Stack technique utilisé et appliqué à des projets concrets"
+        "subtitle": "Technologies et outils appliqués dans des projets professionnels et expérimentaux"
     },
     "section_credentials": {
         "title": "Certifications",
@@ -295,7 +295,7 @@
     },
     "section_projects": {
         "title": "Projets Phares",
-        "subtitle": "Projets d'ingénierie présentés lors de Conférences Internationales et Études de Cas"
+        "subtitle": "Une sélection d'études de cas et de travaux présentés lors de conférences internationales"
     },
     "section_experiments": {
         "title": "Sélection de travaux",
