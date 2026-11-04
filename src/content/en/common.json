@@ -12,6 +12,7 @@
         "key_areas": "Key areas",
         "interact_with": "Interact with the nodes to map the tech stack",
         "key_contributions": "Key contributions",
+        "close_dialog": "Close case study",
         "ongoing": "Ongoing",
         "cannot_load_content": "Content could not be loaded",
         "author": "Author",
@@ -295,7 +296,7 @@
     },
     "section_projects": {
         "title": "Featured Projects",
-        "subtitle": "A selection of case studies and papers presented at international conferences"
+        "subtitle": "A selection of case studies and works presented at international conferences"
     },
     "section_experiments": {
         "title": "Selected Works",

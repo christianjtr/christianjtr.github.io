@@ -19,45 +19,51 @@ const commonData = await getEntry(lang as ContentDataEntryType, `${lang}/${CONTE
 const { common } = (commonData?.data as AboutMeData) || {};
 ---
 
-<dialog id={modalId} class="modal modal-middle px-4 md:px-0" onclick="event.stopPropagation()">
+<dialog id={modalId} class="modal modal-middle px-4 md:px-0" aria-labelledby={`${modalId}_title`}>
     <div class="modal-box workcase-modal-box">
         <div class="workcase-modal-header">
             <div>
                 <span class="workcase-modal-label">{common.key_contributions}</span>
-                <h3 class="workcase-modal-title">{workcase.title}</h3>
-                <div class="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-base-content/60">
+                <h3 id={`${modalId}_title`} class="workcase-modal-title">{workcase.title}</h3>
+                <div class="workcase-modal-meta">
                     <span class="font-semibold text-base-content">{workcase.company}</span>
                     <span>{workcase.role}</span>
                     <span>{workcase.period}</span>
                 </div>
             </div>
             <form method="dialog">
-                <button class="btn btn-sm btn-circle btn-ghost text-neutral-400 dark:text-neutral-500 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">✕</button>
+                <button
+                    type="submit"
+                    aria-label={common.close_dialog}
+                    class="btn btn-sm btn-circle btn-ghost workcase-modal-close"
+                >✕</button>
             </form>
         </div>
-        <section class="space-y-3">
-            <div class="grid grid-cols-1 md:grid-cols-6 gap-3">
-                <figure class="md:col-span-5 min-w-0">
+        <section class="workcase-modal-content" aria-labelledby={`${modalId}_contributions`}>
+            <figure class="workcase-modal-visual">
                     <AsyncImage
                     imagePath={workcase.resource}
                     title={workcase.title}
                     loading="lazy"
                     />
-                </figure>
-                <ul class="list md:col-span-1">
-                    <li class="pb-2 text-xs uppercase text-primary font-semibold tracking-wide">{common.contribuition}</li>
+            </figure>
+            <div class="workcase-contributions">
+                <h4 id={`${modalId}_contributions`} class="workcase-contributions-title">{common.contribuition}</h4>
+                <ol class="workcase-contributions-list">
                     {workcase.contributions?.map((item) => (
-                    <li class="list-row py-3 px-0">
-                        <p class="text-xs font-light wrap-break-word">{item}</p>
+                    <li class="workcase-contribution">
+                        <p>{item}</p>
                     </li>
                     ))}
-                </ul>
+                </ol>
             </div>
-            <BadgeList items={workcase.tags || []} badgeClass='badge-sm' wrapperClass="mt-5"/>
+            <div class="workcase-modal-tags">
+                <BadgeList items={workcase.tags || []} badgeClass='badge-sm' />
+            </div>
         </section>
     </div>
     <form method="dialog" class="modal-backdrop">
-        <button>close</button>
+        <button aria-label={common.close_dialog}>close</button>
     </form>
 
 </dialog>
@@ -66,41 +72,125 @@ const { common } = (commonData?.data as AboutMeData) || {};
     @reference "@styles/global.css";
 
     .workcase-modal-box {
-        @apply bg-base-100 border-neutral-200 text-neutral-900 border rounded-2xl p-6 w-11/12 max-w-5xl transition-all duration-300 shadow-2xl;
+        @apply max-h-[90dvh] w-[calc(100%-2rem)] max-w-6xl overflow-y-auto rounded-3xl border border-neutral-200 bg-base-100 p-5 text-neutral-900 shadow-2xl sm:p-8;
+        scrollbar-gutter: stable;
     }
 
     .workcase-modal-header {
-        @apply flex items-center justify-between pb-3 mb-5 border-b border-neutral-100;
+        @apply mb-6 flex items-start justify-between gap-5 border-b border-neutral-200 pb-5;
+    }
+
+    .workcase-modal-meta {
+        @apply mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm leading-relaxed text-base-content/60;
     }
 
     .workcase-modal-label {
-        @apply text-[10px] font-bold tracking-widest text-primary uppercase font-mono;
+        @apply text-[11px] font-bold tracking-[0.16em] text-primary uppercase;
     }
 
     .workcase-modal-title {
-        @apply text-xl font-bold text-neutral-900;
+        @apply mt-2 max-w-4xl text-2xl font-bold leading-tight tracking-tight text-neutral-900 sm:text-3xl;
     }
 
-    .workcase-modal-chip-separator {
-        @apply text-neutral-300 font-normal select-none mx-0.5;
+    .workcase-modal-close {
+        @apply shrink-0 text-base-content/55 transition-colors hover:bg-base-200 hover:text-base-content;
     }
 
-    html[data-theme="dark"] {
-        & .workcase-modal-box {
-            @apply bg-neutral-900 border-neutral-800 text-white;
-        }
+    .workcase-modal-content {
+        @apply grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1.35fr)_minmax(16rem,0.8fr)];
+    }
 
-        & .workcase-modal-header {
-            @apply border-neutral-800;
-        }
+    .workcase-modal-visual {
+        @apply flex min-h-56 items-center justify-center overflow-hidden rounded-2xl border border-base-200 bg-base-200/60 p-2 sm:min-h-80 sm:p-3;
+    }
 
-        & .workcase-modal-label {
-            @apply text-accent;
-        }
+    :global(.workcase-modal-visual img) {
+        @apply max-h-[58vh] w-full rounded-xl object-contain;
+    }
 
-        & .workcase-modal-title {
-            @apply text-white;
+    .workcase-contributions {
+        @apply min-w-0;
+    }
+
+    .workcase-contributions-title {
+        @apply mb-3 text-xs font-bold tracking-[0.14em] text-primary uppercase;
+    }
+
+    .workcase-contributions-list {
+        @apply m-0 list-none space-y-0 p-0;
+    }
+
+    .workcase-contribution {
+        @apply grid grid-cols-[2rem_minmax(0,1fr)] gap-3 border-t border-base-200 py-4;
+    }
+
+    .workcase-contribution::before {
+        counter-increment: contribution;
+        content: counter(contribution, decimal-leading-zero);
+        @apply pt-0.5 font-mono text-xs font-semibold text-primary/70;
+    }
+
+    .workcase-contributions-list {
+        counter-reset: contribution;
+    }
+
+    .workcase-contribution p {
+        @apply m-0 text-sm leading-relaxed text-base-content/80 sm:text-[15px];
+    }
+
+    .workcase-modal-tags {
+        @apply col-span-full border-t border-base-200 pt-5;
+    }
+
+    dialog[open] .workcase-modal-box {
+        animation: workcase-modal-enter 280ms cubic-bezier(0.2, 0.75, 0.25, 1) both;
+    }
+
+    dialog[open] .workcase-modal-visual {
+        animation: workcase-visual-enter 460ms 70ms cubic-bezier(0.2, 0.75, 0.25, 1) both;
+    }
+
+    @keyframes workcase-modal-enter {
+        from { opacity: 0; transform: translateY(0.75rem) scale(0.99); }
+        to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    @keyframes workcase-visual-enter {
+        from { opacity: 0; transform: translateY(0.5rem); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    :global(html[data-theme="dark"]) .workcase-modal-box {
+        @apply border-neutral-800 bg-neutral-900 text-white;
+    }
+
+    :global(html[data-theme="dark"]) .workcase-modal-header,
+    :global(html[data-theme="dark"]) .workcase-contribution,
+    :global(html[data-theme="dark"]) .workcase-modal-tags {
+        @apply border-neutral-800;
+    }
+
+    :global(html[data-theme="dark"]) .workcase-modal-label,
+    :global(html[data-theme="dark"]) .workcase-contributions-title {
+        @apply text-accent;
+    }
+
+    :global(html[data-theme="dark"]) .workcase-modal-title {
+        @apply text-white;
+    }
+
+    :global(html[data-theme="dark"]) .workcase-modal-visual {
+        @apply border-neutral-800 bg-neutral-950;
+    }
+
+    :global(html[data-theme="dark"]) .workcase-contribution::before {
+        @apply text-accent/70;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        dialog[open] .workcase-modal-box,
+        dialog[open] .workcase-modal-visual {
+            animation: none;
         }
     }
 </style>
-

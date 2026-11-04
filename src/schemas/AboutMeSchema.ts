@@ -25,6 +25,7 @@ const CommonTextSchema = z.object({
     key_areas: z.string(),
     interact_with: z.string(),
     key_contributions: z.string(),
+    close_dialog: z.string(),
     ongoing: z.string(),
     cannot_load_content: z.string(),
     author: z.string(),

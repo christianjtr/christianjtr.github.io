@@ -29,8 +29,8 @@ const { data: workcases } = workcaseData as { data: WorkCaseStudy[] };
     <Section headingTitle={section_projects.title} subtitle={section_projects.subtitle} class="container mx-auto px-1 lg:px-10">
         <Logo slot="beforeHeading" width={96} height={96} />
         <VerticalSpacer />
-        <div class="px-2 md:px-14 flex flex-col-reverse lg:flex-row gap-3">
-            <div class="w-full lg:w-4/5">
+        <div class="projects-layout">
+            <div class="projects-list">
                 {projects.map((project: Project, index: number) => (
                     <div class="collapse collapse-arrow project-card" tabindex="0">
                         <input type="radio" name="project" checked={index === 0} aria-label={
@@ -46,9 +46,12 @@ const { data: workcases } = workcaseData as { data: WorkCaseStudy[] };
                                 </div>
                             </div>
                             <div class="header-text-container">
+                                <div class="project-header-meta">
+                                    <span class="primary-text owner-text">{project.owner}</span>
+                                    <span class="project-index" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+                                </div>
                                 <h2 class="title">{project.title}</h2>
                                 <p class="summary">{project.summary}</p>
-                                <span class="primary-text owner-text">{project.owner}</span>
                             </div>
                         </div>
                         <div class="collapse-content card-body">
@@ -66,13 +69,12 @@ const { data: workcases } = workcaseData as { data: WorkCaseStudy[] };
                                 </div>
 
                                 <div class="media-column">
-                                    <figure class="visual-studio-mesh">
+                                    <figure>
                                         <div class="industrial-matte-sheet">
                                             <div class="glass-reflection-overlay"></div>
                                             <AsyncImage 
                                                 imagePath={project.project_asset} 
                                                 title={project.title} 
-                                                class="inner-asset" 
                                             />
                                         </div>
                                     </figure>
@@ -111,12 +113,18 @@ const { data: workcases } = workcaseData as { data: WorkCaseStudy[] };
                     </div>    
                 ))}
             </div>
-            <div class="w-full lg:w-1/4 xl:w-1/5">
-                <ul class="list space-y-2 lg:sticky lg:top-24">
+            <aside class="workcase-sidebar" aria-label={section_projects.title}>
+                <ul class="workcase-list">
                     {workcases.filter(({ display }) => display).map((item, index) => (
                         <li>
-                            <div class="group block rounded-xl p-3 transition-all duration-200 hover:bg-primary/10 cursor-pointer" onclick={`document.getElementById('workcase_modal_${index}').showModal()`}>
-                                <div class="flex items-center text-xs justify-between gap-2 text-base-content/60">
+                            <button
+                                type="button"
+                                class="workcase-card group cursor-pointer"
+                                aria-haspopup="dialog"
+                                aria-controls={`workcase_modal_${index}`}
+                                onclick={`document.getElementById('workcase_modal_${index}').showModal()`}
+                            >
+                                <div class="flex items-center text-xs justify-between gap-1 text-base-content/60 mb-2">
                                     <span class="truncate font-medium tracking-wider">
                                         {item.company}
                                     </span>
@@ -124,23 +132,24 @@ const { data: workcases } = workcaseData as { data: WorkCaseStudy[] };
                                         {item.period}
                                     </span>
                                 </div>
-                                <h3 class="mt-3 text-sm font-medium leading-snug transition-colors group-hover:text-primary/95">
-                                    {item.title}
-                                </h3>
-                                <div class="mt-3 flex justify-between">
-                                    <span class="badge badge-secondary badge-sm font-light">
-                                        {item.category_description}
-                                    </span>
-                                    <span class="chevron-icon">
-                                        <ChevronIcon height={16} width={16} />
-                                    </span>
-                                </div>
-                            </div>
+                                <figure class="workcase-card-visual">
+                                    <AsyncImage imagePath={item.resource} title={item.title} />
+                                </figure>
+                                <h3 class="workcase-title">{item.title}</h3>
+                                <p class="workcase-card-meta justify-between">
+                                    <span class="badge badge-primary badge-xs font-light">{item.category_description}</span>
+                                    <ChevronIcon height={16} width={16} class="chevron-icon" />
+                                </p>
+                            </button>
                         </li>
-                        <WorkCaseStudyModal workcase={item} modalId={`workcase_modal_${index}`} />
                     ))}
                 </ul>
-            </div>
+                <div class="workcase-dialogs">
+                    {workcases.filter(({ display }) => display).map((item, index) => (
+                        <WorkCaseStudyModal workcase={item} modalId={`workcase_modal_${index}`} />
+                    ))}
+                </div>
+            </aside>
         </div>
     </Section>
 </div>
@@ -151,6 +160,29 @@ const { data: workcases } = workcaseData as { data: WorkCaseStudy[] };
 
     .primary-text { @apply text-primary; }
     :global(html[data-theme="dark"]) .primary-text { @apply text-accent; }
+
+    .projects-layout {
+        @apply grid grid-cols-1 gap-6 px-2 md:px-14 lg:grid-cols-[minmax(0,1fr)_minmax(16rem,0.32fr)] lg:items-start;
+    }
+    .projects-list { @apply min-w-0; }
+    .workcase-sidebar { @apply min-w-0 lg:sticky lg:top-24; }
+    .workcase-list { @apply m-0 grid grid-cols-[minmax(0,1fr)] list-none gap-3 p-0; }
+    .workcase-list > li { @apply min-w-0; }
+    .workcase-card {
+        @apply block min-w-0 w-full overflow-hidden rounded-xl border border-neutral-200/80 bg-base-100 p-3 text-left text-base-content shadow-xs transition duration-200;
+        @apply hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary;
+    }
+    :global(html[data-theme="dark"]) .workcase-card {
+        @apply border-neutral-800 bg-neutral-900 hover:border-accent/60 hover:shadow-accent/5 focus-visible:outline-accent;
+    }
+    .workcase-company { @apply mb-2 block truncate text-xs font-semibold tracking-wide text-base-content/65; }
+    .workcase-card-visual { @apply mb-3 w-full min-w-0 aspect-2/1 overflow-hidden rounded-xl bg-base-200; }
+    :global(.workcase-card-visual img) { @apply h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]; }
+    .workcase-title { @apply block text-xs font-medium leading-snug tracking-tight text-base-content transition-colors group-hover:text-primary; }
+    :global(html[data-theme="dark"]) .workcase-title { @apply group-hover:text-accent; }
+    .workcase-card-meta { @apply mt-3 flex items-center gap-2; }
+    .workcase-period { @apply min-w-0 flex-1 truncate text-[11px] text-base-content/55; }
+    .workcase-dialogs { @apply contents; }
 
     .project-card { 
         @apply border mb-6 p-3 rounded-xl transition-all duration-300 relative overflow-hidden; 
@@ -209,12 +241,24 @@ const { data: workcases } = workcaseData as { data: WorkCaseStudy[] };
     }
 
     .card-header { @apply flex flex-row items-start gap-5 p-6 md:p-8 select-none; }
-    .header-text-container { @apply flex flex-col space-y-2 grow pr-6; }
-    .title { @apply text-xl md:text-xl font-extrabold tracking-tight leading-snug text-neutral-800; }
+    .header-text-container { @apply flex min-w-0 grow flex-col gap-2.5 pr-6; }
+    .project-header-meta { @apply flex items-center justify-between gap-4; }
+    .project-index {
+        @apply shrink-0 font-mono text-sm font-semibold tracking-widest text-neutral-300 transition-colors duration-300;
+    }
+    :global(html[data-theme="dark"]) .project-index { @apply text-neutral-700; }
+    .project-card:has(input:checked) .project-index { @apply text-primary/70; }
+    :global(html[data-theme="dark"]) .project-card:has(input:checked) .project-index { @apply text-accent/70; }
+    .title { @apply text-xl font-extrabold leading-tight tracking-tight text-neutral-800 transition-colors duration-300 md:text-2xl; }
     :global(html[data-theme="dark"]) .title { @apply text-white; }
-    .summary { @apply text-sm md:text-sm leading-relaxed font-normal text-neutral-500 max-w-3xl; }
+    .summary {
+        @apply line-clamp-2 max-w-3xl text-sm font-normal leading-relaxed text-neutral-700 transition-colors duration-300;
+    }
+    .project-card:has(input:checked) .summary { @apply line-clamp-none; }
     :global(html[data-theme="dark"]) .summary { @apply text-gray-400; }
-    .owner-text { @apply font-bold text-xs tracking-wider uppercase pt-1 block; }
+    .owner-text { @apply block truncate text-[11px] font-bold uppercase tracking-[0.12em]; }
+    .project-card:has(input:checked) .title { @apply text-primary; }
+    :global(html[data-theme="dark"]) .project-card:has(input:checked) .title { @apply text-accent; }
 
     .card-body { @apply pb-4 pl-5 pt-0 md:pl-20; }
     .body-grid { @apply grid grid-cols-1 lg:grid-cols-12 gap-10 pt-6; }
@@ -230,25 +274,29 @@ const { data: workcases } = workcaseData as { data: WorkCaseStudy[] };
     .media-column { @apply flex flex-col gap-5 col-span-full lg:col-span-8; }
 
     .visual-studio-mesh {
-        @apply w-full rounded-2xl flex items-center justify-center p-2 md:p-4 overflow-hidden relative border border-neutral-100;
+        @apply relative flex w-full items-center justify-center overflow-hidden rounded-2xl border border-neutral-100 p-3 transition-colors duration-300 md:p-6;
         background-color: #fafafa;
-        background-image: linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
-        background-size: 24px 24px;
+        background-image: radial-gradient(ellipse at 50% 50%, rgba(72,79,217,0.08), transparent 68%), linear-gradient(rgba(0,0,0,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.035) 1px, transparent 1px);
+        background-size: auto, 24px 24px, 24px 24px;
     }
     :global(html[data-theme="dark"]) .visual-studio-mesh {
         @apply border-neutral-800/80;
         background-color: #0c101b;
-        background-image: linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+        background-image: radial-gradient(ellipse at 50% 50%, rgba(41,242,185,0.08), transparent 68%), linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+        background-size: auto, 24px 24px, 24px 24px;
     }
 
     .industrial-matte-sheet {
-        @apply relative w-full h-auto overflow-hidden border border-neutral-200/60 bg-white flex items-center justify-center p-1 z-0;
-        box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.02), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+        @apply relative z-0 flex h-auto w-full items-center justify-center overflow-hidden rounded-xl border border-neutral-200/70 bg-white p-2 transition-transform duration-500 md:rounded-2xl md:p-3;
     }
     :global(html[data-theme="dark"]) .industrial-matte-sheet {
         @apply border-neutral-800/80 bg-neutral-950;
-        box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.03), inset 0 1px 0 rgba(255, 255, 255, 0.05);
     }
+    .project-card:has(input:checked) .industrial-matte-sheet { @apply -translate-y-0.5; }
+    :global(.industrial-matte-sheet img) {
+        @apply relative z-0 h-auto max-h-[460px] w-full rounded-lg object-contain transition-transform duration-700;
+    }
+    .project-card:has(input:checked) .industrial-matte-sheet img { @apply scale-[1.01]; }
 
     .glass-reflection-overlay {
         @apply absolute inset-0 pointer-events-none z-10 opacity-40;
@@ -267,7 +315,6 @@ const { data: workcases } = workcaseData as { data: WorkCaseStudy[] };
         @apply text-accent;
     }
 
-    .inner-asset { @apply w-full h-auto object-contain max-h-[380px] rounded-lg relative z-0; }
     .tech-container { @apply flex items-start gap-2.5 pt-1; }
 
     .card-footer { 
@@ -290,4 +337,15 @@ const { data: workcases } = workcaseData as { data: WorkCaseStudy[] };
     .text-bullet-separator { @apply text-neutral-300; }
     :global(html[data-theme="dark"]) .text-bullet-separator { @apply text-neutral-700; }
     figure { @apply w-full; }
+
+    @media (prefers-reduced-motion: reduce) {
+        .project-index,
+        .title,
+        .summary,
+        .visual-studio-mesh,
+        .industrial-matte-sheet,
+        :global(.industrial-matte-sheet img) {
+            transition-duration: 0.01ms;
+        }
+    }
 </style>
