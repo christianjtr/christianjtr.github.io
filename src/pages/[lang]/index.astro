@@ -52,10 +52,14 @@ const { header } = (entry?.data as AboutMeData) || {};
         <button 
             id="scroll-top-button" 
             class="scroll-top-button" 
-            aria-label="Scroll to top button"
+            type="button"
+            aria-label="Scroll to top"
+            aria-hidden="true"
             transition:name="scroll-top"
         >
-            ☝🏼
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+                <path d="M12 19V5m0 0L6 11m6-6 6 6" />
+            </svg>
         </button>
         <Footer transition:persist />
 
@@ -74,43 +78,100 @@ const { header } = (entry?.data as AboutMeData) || {};
     }
 
     .scroll-top-button {
-        @apply btn btn-xl btn-circle text-4xl border-0 hidden fixed justify-center items-center w-16 h-16 bottom-16 right-5 z-10 rounded-full;
-        opacity: 0.8;
-        background: var(--color-vibrant-pink);
+        position: fixed;
+        right: clamp(1.25rem, 3vw, 2.5rem);
+        bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px));
+        z-index: 40;
+        display: none;
+        width: 3.5rem;
+        height: 3.5rem;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid color-mix(in srgb, var(--color-primary) 30%, white);
+        border-radius: 50%;
+        background: color-mix(in srgb, var(--color-primary) 92%, white);
+        color: white;
+        box-shadow: 0 8px 24px rgb(15 23 42 / 0.2), inset 0 1px 0 rgb(255 255 255 / 0.22);
+        cursor: pointer;
+        transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .scroll-top-button svg {
+        width: 1.35rem;
+        height: 1.35rem;
+        stroke: currentColor;
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
     }
 
     .scroll-top-button:hover {
-        filter: contrast(150%);
+        transform: translateY(-3px);
+        background: var(--color-primary);
+        box-shadow: 0 12px 28px rgb(15 23 42 / 0.26), 0 0 0 4px color-mix(in srgb, var(--color-primary) 14%, transparent);
     }
 
-    .scroll-top-button:focus {
-        @apply outline-none;
+    .scroll-top-button:focus-visible {
+        outline: 3px solid var(--color-accent);
+        outline-offset: 4px;
+    }
+
+    :global(html[data-theme="dark"]) .scroll-top-button {
+        border-color: color-mix(in srgb, var(--color-accent) 48%, transparent);
+        background: var(--color-accent);
+        color: #0f172a;
+        box-shadow: 0 8px 24px rgb(0 0 0 / 0.36), inset 0 1px 0 rgb(255 255 255 / 0.3);
+    }
+
+    :global(html[data-theme="dark"]) .scroll-top-button:hover {
+        background: color-mix(in srgb, var(--color-accent) 84%, white);
+        box-shadow: 0 12px 28px rgb(0 0 0 / 0.44), 0 0 0 4px color-mix(in srgb, var(--color-accent) 18%, transparent);
+    }
+
+    @media (max-width: 640px) {
+        .scroll-top-button {
+            right: 1rem;
+            bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+            width: 3rem;
+            height: 3rem;
+        }
+
+        .scroll-top-button svg {
+            width: 1.2rem;
+            height: 1.2rem;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .scroll-top-button {
+            transition: none;
+        }
+
+        .scroll-top-button:hover {
+            transform: none;
+        }
     }
 </style>
 
 <script>
-    window.onscroll = function() { scroll(); };
-      
     const scrollDownUntil = 2500;
-      
     const scrollToTopButton = document.getElementById("scroll-top-button");
-    scrollToTopButton?.addEventListener("click", () => {
-        goTotop();
-    });
-      
-    function removeAnchors() {
-        window.history.replaceState({}, "", window.location.href.split("#")[0]);
-    }
 
-    function scroll() {
-        const validation = document.body.scrollTop > scrollDownUntil || document.documentElement.scrollTop > scrollDownUntil;
-        scrollToTopButton!.style.display = validation ? "flex" : "none";
-    }
+    if (scrollToTopButton instanceof HTMLButtonElement) {
+        const updateScrollButton = () => {
+            const isVisible = window.scrollY > scrollDownUntil;
+            scrollToTopButton.style.display = isVisible ? "flex" : "none";
+            scrollToTopButton.setAttribute("aria-hidden", String(!isVisible));
+        };
 
-    function goTotop() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-        removeAnchors();
+        window.addEventListener("scroll", updateScrollButton, { passive: true });
+        updateScrollButton();
+
+        scrollToTopButton.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            window.history.replaceState({}, "", window.location.href.split("#")[0]);
+        });
     }
 </script>
  
