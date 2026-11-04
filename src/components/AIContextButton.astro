@@ -194,11 +194,44 @@ const grokHref = `https://grok.com/?q=${encodedUrlPrompt}`;
   }
 
   html[data-theme="dark"] .ai-context {
-    @apply bg-base-200 border-base-300 shadow-none;
+    @apply relative border-neutral-700 bg-neutral-900 text-neutral-100;
+    box-shadow: 0 10px 28px -20px rgba(0, 0, 0, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  }
+
+  html[data-theme="dark"] .ai-context::before {
+    content: '';
+    position: absolute;
+    inset-block: 0.7rem;
+    inset-inline-start: -1px;
+    width: 3px;
+    border-radius: 0 9999px 9999px 0;
+    background: #29f2b9;
+    box-shadow: 0 0 12px rgba(41, 242, 185, 0.22);
   }
 
   html[data-theme="dark"] .ai-context:hover {
-    @apply border-accent;
+    @apply border-accent/70;
+    box-shadow: 0 12px 32px -18px rgba(41, 242, 185, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  }
+
+  html[data-theme="dark"] #ai-context-button {
+    @apply rounded-l-2xl transition-colors duration-200 hover:bg-accent/5 focus-visible:outline-accent;
+  }
+
+  html[data-theme="dark"] #ai-context-button > span:first-child > span:first-child {
+    @apply text-accent;
+  }
+
+  html[data-theme="dark"] #ai-context-button.copied {
+    @apply text-accent;
+  }
+
+  html[data-theme="dark"] .ai-context-menu > summary {
+    @apply border-neutral-700 text-neutral-400 transition-colors duration-200 hover:bg-neutral-800 hover:text-accent;
+  }
+
+  html[data-theme="dark"] .ai-context-menu[open] > summary {
+    @apply bg-neutral-800 text-accent;
   }
 
   .ai-menu-chevron {
@@ -215,6 +248,14 @@ const grokHref = `https://grok.com/?q=${encodedUrlPrompt}`;
 
   .dropdown-menu-content {
     @apply bg-base-300 rounded-box shadow-xl border border-base-content/5 p-1;
+  }
+
+  html[data-theme="dark"] .dropdown-menu-content {
+    @apply border-neutral-700 bg-neutral-900 text-neutral-100 shadow-2xl;
+  }
+
+  html[data-theme="dark"] .dropdown-menu-content a {
+    @apply rounded-lg transition-colors duration-150 hover:bg-neutral-800 hover:text-accent;
   }
 
   summary::-webkit-details-marker {
