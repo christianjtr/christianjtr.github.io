@@ -29,13 +29,16 @@ const { data: experiments } = experimentsData as { data: Experiment[]};
 
 const experimentsToDisplay = experiments.filter(exp => exp.display && !exp.isSandbox);
 const uniqueCategories = Array.from(
-    experimentsToDisplay.reduce((map, { category }) => {
-        if (!map.has(category)) {
-            map.set(category, { category, slug: toSlug(category), count: 0 });
-        }
-        map.get(category).count += 1;
-        return map;
-    }, new Map()).values()
+    experimentsToDisplay.reduce((categories, { category }) => {
+        const current = categories.get(category);
+        categories.set(category, {
+            category,
+            slug: current?.slug ?? toSlug(category),
+            count: (current?.count ?? 0) + 1
+        });
+        return categories;
+    }, new Map<string, { category: string; slug: string; count: number }>())
+        .values()
 );
 
 const featuredExperiments = experimentsToDisplay.filter(exp => !exp.isSandbox);
@@ -48,16 +51,21 @@ const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
         <Logo slot="beforeHeading" width={96} height={96} />
         <br />
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 px-2 md:px-14 mt-6 items-start">
-            <aside class="lg:col-span-1 lg:sticky lg:top-24 space-y-6 self-start">
-                <div class="p-6 rounded-lg filter-panel">
-                    <h3 class="text-xs font-bold uppercase tracking-wider text-neutral-400 mb-6">
-                        {common.filter_experience}
-                    </h3>
-                    <form class="flex flex-col gap-4">
+            <aside class="experiment-filters lg:col-span-1 lg:sticky lg:top-24 self-start">
+                <div class="filter-panel">
+                    <div class="filter-panel__header">
+                        <div>
+                            <span class="filter-panel__eyebrow">{common.filter_experience}</span>
+                        </div>
+                        <button type="reset" form="experiments-filter-form" class="filter-reset" aria-label="Reset Filters">
+                            <TrashIcon class="w-4 h-4" />
+                        </button>
+                    </div>
+                    <form id="experiments-filter-form" class="filter-options">
                         {uniqueCategories.map(({category, slug, count}) => (
-                            <div class="flex items-center gap-3 w-full">
+                            <div class="category-option">
                                 <input 
-                                    class="checkbox checkbox-primary checkbox-sm category-filter"
+                                    class="category-filter"
                                     type="checkbox" 
                                     id={slug}
                                     value={category}
@@ -65,21 +73,14 @@ const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
                                 />
                                 <label 
                                     for={slug} 
-                                    class="cursor-pointer font-medium text-xs filter-label flex-1 flex items-center justify-between" 
+                                    class="filter-label"
                                     data-category={category}
                                 >
-                                    <span>{category}</span>
-                                    <span class="badge badge-ghost badge-sm font-semibold">
-                                        {count}
-                                    </span>
+                                    <span class="category-option__name">{category}</span>
+                                    <span class="category-option__count">{count}</span>
                                 </label>
                             </div>
                         ))}
-                        <div class="pt-4 flex border-t border-neutral-200">
-                            <button type="reset" class="btn btn-sm btn-circle btn-primary" aria-label="Reset Filters">
-                                <TrashIcon class="w-4 h-4" />
-                            </button>
-                        </div>
                     </form>
                 </div>
 
@@ -200,22 +201,217 @@ const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
         @apply border-accent/70 shadow-accent/5;
     }
 
-    .filter-panel, .sandbox-panel {
-        @apply bg-base-100 border-neutral-200 shadow-sm;
+    .filter-panel {
+        position: relative;
+        overflow: hidden;
+        padding: 1.15rem;
+        border: 1px solid #e2e8f0;
+        border-radius: 1rem;
+        background: #fff;
+        box-shadow: 0 14px 34px -28px rgb(15 23 42 / 0.4);
+    }
+
+    .filter-panel__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+    }
+
+    .filter-panel__eyebrow {
+        color: #64748b;
+        font-family: var(--font-mono);
+        font-size: 0.68rem;
+        font-weight: 800;
+        letter-spacing: 0.11em;
+        line-height: 1.4;
+        text-transform: uppercase;
+    }
+
+    .filter-reset {
+        display: inline-grid;
+        width: 2rem;
+        height: 2rem;
+        flex: 0 0 auto;
+        place-items: center;
+        border: 1px solid #e2e8f0;
+        border-radius: 0.65rem;
+        background: #fff;
+        color: #64748b;
+        cursor: pointer;
+        transition: border-color 160ms ease, color 160ms ease, background-color 160ms ease;
+    }
+
+    .filter-reset:hover {
+        border-color: #fecaca;
+        background: #fef2f2;
+        color: #dc2626;
+    }
+
+    .filter-options {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0.45rem;
+        margin: 0;
+    }
+
+    .category-option {
+        position: relative;
+        min-width: 0;
+    }
+
+    .category-filter {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        clip-path: inset(50%);
+        white-space: nowrap;
     }
 
     .filter-label {
-        @apply text-neutral-700 dark:text-base-content;
+        display: flex;
+        min-height: 2.65rem;
+        min-width: 0;
+        align-items: center;
+        gap: 0.55rem;
+        padding: 0.5rem 0.6rem;
+        border: 1px solid transparent;
+        border-radius: 0.7rem;
+        background: #f8fafc;
+        color: #334155;
+        cursor: pointer;
+        font-size: 0.75rem;
+        font-weight: 650;
+        line-height: 1.3;
+        transition: border-color 160ms ease, background-color 160ms ease, color 160ms ease, transform 160ms ease;
+    }
+
+    .filter-label::before {
+        display: inline-grid;
+        width: 1rem;
+        height: 1rem;
+        flex: 0 0 auto;
+        place-items: center;
+        border: 1.5px solid #cbd5e1;
+        border-radius: 0.3rem;
+        background: #fff;
+        color: transparent;
+        content: "✓";
+        font-size: 0.65rem;
+        font-weight: 900;
+        transition: border-color 160ms ease, background-color 160ms ease, color 160ms ease;
+    }
+
+    .filter-label:hover {
+        transform: translateY(-1px);
+        border-color: #c7d2fe;
+        background: #f5f7ff;
+        color: #3730a3;
+    }
+
+    .category-filter:checked + .filter-label {
+        border-color: rgb(72 79 217 / 0.24);
+        background: #eef2ff;
+        color: #3730a3;
+    }
+
+    .category-filter:checked + .filter-label::before {
+        border-color: #484fd9;
+        background: #484fd9;
+        color: #fff;
+    }
+
+    .category-filter:focus-visible + .filter-label {
+        outline: 3px solid color-mix(in srgb, var(--color-accent) 70%, transparent);
+        outline-offset: 2px;
+    }
+
+    .category-option__name {
+        min-width: 0;
+        flex: 1 1 auto;
+        overflow-wrap: anywhere;
+    }
+
+    .category-option__count {
+        display: inline-flex;
+        min-width: 1.5rem;
+        height: 1.5rem;
+        flex: 0 0 auto;
+        align-items: center;
+        justify-content: center;
+        padding-inline: 0.35rem;
+        border: 1px solid #e2e8f0;
+        border-radius: 999px;
+        background: #fff;
+        color: #64748b;
+        font-family: var(--font-mono);
+        font-size: 0.65rem;
+        font-weight: 800;
     }
 
     html[data-theme="dark"] .sandbox-link-title {
         @apply text-white;
     }
 
-    html[data-theme="dark"] .filter-panel, html[data-theme="dark"] .sandbox-panel {
-        @apply bg-neutral-900 border-neutral-800 text-white;
+    html[data-theme="dark"] .filter-panel {
+        border-color: #334155;
+        background: #111827;
+        box-shadow: 0 16px 38px -28px rgb(0 0 0 / 0.9);
     }
-    
+
+    html[data-theme="dark"] .filter-panel__eyebrow {
+        color: #94a3b8;
+    }
+
+    html[data-theme="dark"] .filter-reset {
+        border-color: #334155;
+        background: #0f172a;
+        color: #94a3b8;
+    }
+
+    html[data-theme="dark"] .filter-reset:hover {
+        border-color: #7f1d1d;
+        background: #450a0a;
+        color: #fca5a5;
+    }
+
+    html[data-theme="dark"] .filter-label {
+        background: #1f2937;
+        color: #e2e8f0;
+    }
+
+    html[data-theme="dark"] .filter-label::before {
+        border-color: #475569;
+        background: #0f172a;
+    }
+
+    html[data-theme="dark"] .filter-label:hover {
+        border-color: #475569;
+        background: #263244;
+        color: #a7f3d0;
+    }
+
+    html[data-theme="dark"] .category-filter:checked + .filter-label {
+        border-color: #64748b;
+        background: #263244;
+        color: #a7f3d0;
+    }
+
+    html[data-theme="dark"] .category-filter:checked + .filter-label::before {
+        border-color: #94a3b8;
+        background: #64748b;
+        color: #0f172a;
+    }
+
+    html[data-theme="dark"] .category-option__count {
+        border-color: #334155;
+        background: #0f172a;
+        color: #cbd5e1;
+    }
+
     .chevron-icon {
         @apply text-xs text-primary group-hover:opacity-100 group-hover:translate-x-0.5 transition-all duration-200 shrink-0 pr-1;
     }
@@ -225,7 +421,7 @@ const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
     }
 
     .experiment-image-wrap {
-        @apply overflow-hidden border-b border-neutral-200 dark:border-neutral-800;
+        @apply overflow-hidden border-b border-neutral-400;
     }
 
     .experiment-image-stage {
@@ -282,6 +478,37 @@ const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
 
     .card-description {
         @apply dark:text-base-content;
+    }
+
+    @media (max-width: 1023px) {
+        .filter-panel {
+            padding: 1rem;
+        }
+
+        .filter-options {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    @media (max-width: 479px) {
+        .filter-options {
+            gap: 0.35rem;
+        }
+
+        .filter-label {
+            min-height: 2.5rem;
+            gap: 0.4rem;
+            padding: 0.45rem;
+            font-size: 0.69rem;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .filter-label,
+        .filter-label::before,
+        .filter-reset {
+            transition-duration: 0.01ms;
+        }
     }
 </style>
 
