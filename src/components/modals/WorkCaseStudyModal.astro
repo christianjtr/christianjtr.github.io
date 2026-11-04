@@ -44,7 +44,10 @@ const { common } = (commonData?.data as AboutMeData) || {};
                     />
             </figure>
             <div class="workcase-contributions">
-                <h4 id={`${modalId}_contributions`} class="workcase-contributions-title">{common.contribuition}</h4>
+                <div class="flex justify-between">
+                    <h4 id={`${modalId}_contributions`} class="workcase-contributions-title">{common.contribuition}</h4>
+                    <span class="badge badge-primary badge-xs uppercase font-light">{workcase.category_description}</span>
+                </div>
                 <ol class="workcase-contributions-list">
                     {workcase.contributions?.map((item) => (
                     <li class="workcase-contribution">
