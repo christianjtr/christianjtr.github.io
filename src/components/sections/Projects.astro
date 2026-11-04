@@ -164,8 +164,8 @@ const { data: workcases } = workcaseData as { data: WorkCaseStudy[] };
     .projects-layout {
         @apply grid grid-cols-1 gap-6 px-2 md:px-14 lg:grid-cols-[minmax(0,1fr)_minmax(16rem,0.32fr)] lg:items-start;
     }
-    .projects-list { @apply min-w-0; }
-    .workcase-sidebar { @apply min-w-0 lg:sticky lg:top-24; }
+    .projects-list { @apply order-2 min-w-0 lg:order-1; }
+    .workcase-sidebar { @apply order-1 min-w-0 lg:sticky lg:top-24 lg:order-2; }
     .workcase-list { @apply m-0 grid grid-cols-[minmax(0,1fr)] list-none gap-3 p-0; }
     .workcase-list > li { @apply min-w-0; }
     .workcase-card {
@@ -183,6 +183,13 @@ const { data: workcases } = workcaseData as { data: WorkCaseStudy[] };
     .workcase-card-meta { @apply mt-3 flex items-center gap-2; }
     .workcase-period { @apply min-w-0 flex-1 truncate text-[11px] text-base-content/55; }
     .workcase-dialogs { @apply contents; }
+
+    @media (max-width: 1023px) {
+        .workcase-card-visual { display: none; }
+        .workcase-card { @apply rounded-xl px-4 py-3; }
+        .workcase-title { @apply text-sm leading-snug; }
+        .workcase-card-meta { @apply mt-2; }
+    }
 
     .project-card { 
         @apply border mb-6 p-3 rounded-xl transition-all duration-300 relative overflow-hidden; 
