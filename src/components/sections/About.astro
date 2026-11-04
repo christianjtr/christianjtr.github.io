@@ -29,126 +29,112 @@ const entry = await getEntry(lang as ContentDataEntryType, `${lang}/${CONTENT.CO
 const { common, section_about, section_experiences, section_studies } = (entry?.data as AboutMeData) || {};
 ---
 
-<div class="container mx-auto px-1 md:px-5 mt-10">
-    <div class="grid lg:grid-cols-6 relative w-full">
-        <div class="absolute inset-0 overflow-hidden select-none pointer-events-none z-0 hidden lg:block">
-            <div class="absolute left-0 top-[20%] opacity-15 dark:opacity-5">
-                <svg width="400" height="200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 20h400M0 80h400M0 140h400M60 0v200M180 0v200M300 0v200" stroke="currentColor" stroke-width="1"/>
-                    <circle cx="180" cy="80" r="4" class="fill-accent animate-ping" />
-                    <circle cx="180" cy="80" r="3" class="fill-accent" />
-                </svg>
-            </div>
+<div class="about-page container mx-auto mt-4 px-3 sm:mt-8 sm:px-5">
+    <section class="about-hero">
+        <div class="about-grid-mark" aria-hidden="true">
+            <svg viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 20h400M0 80h400M0 140h400M60 0v200M180 0v200M300 0v200" stroke="currentColor" stroke-width="1"/>
+                <circle cx="180" cy="80" r="4" class="fill-accent animate-ping" />
+                <circle cx="180" cy="80" r="3" class="fill-accent" />
+            </svg>
         </div>
-        <div class="col-span-3 space-y-4 m-3 mb-5 lg:mb-0 lg:m-12 content-center z-10">
-            <p class="flex items-center gap-2 font-medium">
-                <Image src={WaveAnimation} width="84" height="84" alt="Waving" aria-label="Waving"/>
-                <span class="text-3xl font-semibold text-accent">{section_about.greeting}</span>
+        <div class="about-intro">
+            <p class="about-greeting">
+                <Image src={WaveAnimation} width="84" height="84" alt="" aria-hidden="true" />
+                <span>{section_about.greeting}</span>
             </p>
-            <h1 class="font-semibold text-5xl lg:text-6xl leading-16" set:html={section_about.my_name_template} />
-            <div class="w-2/3 h-px bg-linear-to-r from-accent via-base-content/20 to-transparent my-4 relative">
-                <span class="absolute -top-1 left-1/3 w-2 h-2 rounded-full bg-accent animate-pulse"></span>
-            </div>
-            <p class="text-lg lg:text-xl leading-8 p-2 mb-5">{section_about.summary}</p>
+            <h1 class="about-name" set:html={section_about.my_name_template} />
+            <div class="about-rule" aria-hidden="true"><span></span></div>
+            <p class="about-summary">{section_about.summary}</p>
             <AIContextButton />
         </div>
-        <div class="col-span-3 p-14 relative flex justify-center z-1">
-            <details class="absolute top-0.5 right-5 md:top-4 md:right-4 z-1 flex flex-col items-end text-right group/hobbies dropdown dropdown-end mobile-hobbies">
-                <summary class="btn btn-sm font-mono uppercase tracking-wider bg-base-200/80 hover:bg-primary/20 hover:border-primary hover:text-primary hover:font-bold border text-xs border-neutral-300 px-3.5 py-5 rounded-full cursor-pointer select-none transition-all duration-200 flex items-center gap-2 shadow-sm list-none">
-                    <span class="text-sm">🧩</span>
+        <div class="about-visual">
+            <details class="about-hobbies dropdown dropdown-end mobile-hobbies">
+                <summary class="about-hobbies-toggle list-none">
+                    <span aria-hidden="true">🧩</span>
                     <span>{section_about.hobbies_title}</span>
+                    <svg class="about-hobbies-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                        <path d="m5 7.5 5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
                 </summary>
-                <div class="dropdown-content flex flex-col items-end gap-1.5 w-max pt-2.5">
+                <div class="dropdown-content about-hobbies-list">
                     {section_about.hobbies.map((hobby) => (
-                        <span class="text-[11px] font-semibold px-2.5 py-1 backdrop-blur-sm bg-base-100/90 border border-primary/20 rounded-lg shadow whitespace-nowrap hover:border-primary/40 transition-colors">
+                        <span class="about-hobby">
                             {hobby.emoji} {hobby.name}
                         </span>
                     ))}
                 </div>
             </details>
-            <figure class="avatar-image w-5/6 md:w-full" transition:name="avatar">
-                <Image src={activeAvatar} alt="My image" aria-label="My image" class="md:w-full"  />
+            <figure class="avatar-image about-avatar" transition:name="avatar">
+                <Image src={activeAvatar} alt="My image" aria-label="My image" />
             </figure>
-            <div class="absolute top-50 md:top-72 left-4 lg:flex z-1 filter drop-shadow-lg w-max max-w-[280px]">
-                <div class="bg-base-100/90 border border-primary/30 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-xl flex items-center gap-2 w-full overflow-hidden">
-                    <span class="relative flex h-2 w-2 shrink-0">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-                    </span>
-                    <div class="text-slider-mask overflow-hidden w-full">
-                        <div class="text-slider font-sans text-xs font-semibold leading-relaxed tracking-wide text-base-content/90 whitespace-nowrap">
+            <div class="avatar-message">
+                <div class="avatar-message__surface">
+                    <span class="avatar-message__status" aria-hidden="true"></span>
+                    <div class="text-slider-mask">
+                        <div class="text-slider">
                             {section_about.avatar_messages.map((message: string) => (
-                                <p class="no-select py-0.5">{message}</p>
+                                <p class="no-select">{message}</p>
                             ))}
-                            <p class="py-0.5">{section_about.avatar_messages[0]}</p>
+                            <p>{section_about.avatar_messages[0]}</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <VerticalSpacer />
-    <div class="grid grid-cols-1 lg:grid-cols-6 gap-6 w-full max-w-7xl mx-auto px-3 md:px-10">
-        <div class="col-span-1 lg:col-span-2 space-y-2">
-            <div class="flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-primary dark:bg-accent animate-pulse shrink-0"></span>
-                <span class="text-sm font-mono font-bold tracking-widest uppercase text-primary">
-                    {section_about.systems_thinking_mindset}
-                </span>
+    </section>
+
+    <div class="about-expertise-heading">
+        <div>
+            <div class="about-eyebrow">
+                <span aria-hidden="true"></span>
+                <span>{section_about.systems_thinking_mindset}</span>
             </div>
-            <h3 class="text-2xl lg:text-4xl font-bold text-base-content tracking-tight mt-5">
-                {section_about.expertise.title}
-            </h3>
+            <h2>{section_about.expertise.title}</h2>
         </div>
-        <div class="col-span-1 lg:col-span-4">
-            <div class="divider divider-end flex items-center border-dashed">
-                <Image 
-                    src={CrystalBallAnimation} 
-                    width="80"
-                    height="80"
-                    alt="Crystal ball interface asset" 
-                    aria-label="Crystal ball animation"
-                    class="object-contain"
-                />
-            </div>
+        <div class="crystal-divider" aria-hidden="true">
+            <span></span>
+            <Image
+                src={CrystalBallAnimation}
+                width="80"
+                height="80"
+                alt=""
+                class="object-contain"
+            />
         </div>
     </div>
-    <VerticalSpacer />
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mx-auto px-2 md:px-10 items-stretch mt-5 w-full">
-        <div class="lg:col-span-5 flex flex-col justify-center text-left lg:pr-6 space-y-5">
-            <div class="relative">
-                <p class="manifesto-title">{section_about.about_me_title}</p>
-                <br />
+
+    <div class="about-details-grid">
+        <div class="about-profile-panel">
+            <div class="about-manifesto">
+                <h3 class="manifesto-title">{section_about.about_me_title}</h3>
                 <p class="manifesto-body">{section_about.about_me}</p>
             </div>
-            <div class="pt-5 space-y-2.5">
-                <div class="flex items-center gap-2 text-xs font-bold font-mono uppercase tracking-widest text-base-content/70 select-none mb-5">
-                    <span class="w-1.5 h-1.5 rounded-full bg-accent animate-pulse shrink-0"></span>
+            <div class="about-languages">
+                <div class="about-detail-label">
+                    <span class="about-detail-pulse" aria-hidden="true"></span>
                     <span>{section_about.language_tip}</span>
                 </div>
                 {section_about.languages.map((language) => (
-                    <div class="flex items-center justify-between font-medium px-1 md:px-">
-                        <div class="flex items-center gap-2 min-w-0 text-sm">
-                            <span class="select-none text-3xl">{language.emoji}</span>
-                            <span class="font-bold text-base-content shrink-0">{language.name}</span>
-                            <span class="text-base-content/25 dark:text-neutral-700 hidden sm:inline">—</span>
-                            <span class="text-base-content/60 truncate">{language.proficiency}</span>
+                    <div class="language-row">
+                        <div class="language-copy">
+                            <span class="language-emoji" aria-hidden="true">{language.emoji}</span>
+                            <span class="language-name">{language.name}</span>
+                            <span class="language-proficiency">{language.proficiency}</span>
                         </div>
-                        <div class="flex gap-0.5 h-2 items-center shrink-0" role="progressbar" aria-label={`${language.name} proficiency`} aria-valuemin="0" aria-valuemax="100" aria-valuenow={language.value}>
+                        <div class="language-meter" role="progressbar" aria-label={`${language.name} proficiency`} aria-valuemin="0" aria-valuemax="100" aria-valuenow={language.value}>
                             {Array.from({ length: 5 }).map((_, index) => {
                                 const threshold = (index + 1) * 20;
                                 const isFilled = language.value >= threshold;
                                 const isPartial = language.value >= threshold - 20 && language.value < threshold;
 
                                 return (
-                                    <div 
-                                        class={`w-2 h-2 rounded-xs transition-colors duration-200 ${
-                                            isFilled 
-                                                ? 'bg-primary' 
-                                                : isPartial 
-                                                    ? 'animate-pulse bg-primary/40' 
-                                                    : 'bg-base-300 dark:bg-neutral-800'
-                                        }`}
+                                    <span
+                                        class:list={[
+                                            'language-meter__segment',
+                                            isFilled && 'is-filled',
+                                            isPartial && 'is-partial'
+                                        ]}
                                     />
                                 );
                             })}
@@ -156,71 +142,623 @@ const { common, section_about, section_experiences, section_studies } = (entry?.
                     </div>
                 ))}
             </div>
-            <div class="pt-4 space-y-7">
-                <div class="space-y-2">
-                    <div class="flex items-center gap-2 text-xs font-bold font-mono uppercase tracking-widest text-base-content/70 select-none">
-                        <AcademicCapIcon width={22} height={22} class="stroke-2 shrink-0" />
+            <div class="about-background">
+                <div class="about-background-item">
+                    <div class="about-detail-label">
+                        <AcademicCapIcon width={20} height={20} class="stroke-2 shrink-0" />
                         <span>{section_studies.title}</span>
                     </div>
-                    <div class="px-1 space-y-2">
-                        <span class="text-xs text-base-content/60 leading-relaxed block font-medium">
-                            {section_experiences.academic_foundation}
-                        </span>
-                        <div class="border-l-2 border-primary dark:border-accent pl-3 py-0.5 flex items-center gap-2">
-                            <span class="text-base font-black tracking-tight text-base-content">
-                                {section_studies.educational_level}
-                            </span>
+                    <div class="about-background-copy">
+                        <span class="about-foundation">{section_experiences.academic_foundation}</span>
+                        <div class="about-education-level">
+                            <span>{section_studies.educational_level}</span>
                             <div class="tooltip tooltip-top md:tooltip-right tooltip-primary dark:tooltip-accent cursor-help" data-tip={common.details_on_linkedin}>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 text-base-content/40 hover:text-primary dark:hover:text-accent transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-4 w-4 text-base-content/40 transition-colors hover:text-primary dark:hover:text-accent">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
                                 </svg>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="space-y-3">
-                    <div class="flex items-center gap-2 text-xs font-bold font-mono uppercase tracking-widest text-base-content/70 select-none">
-                        <BuildingIcon width={22} height={22} class="stroke-2 shrink-0" />
+                <div class="about-background-item">
+                    <div class="about-detail-label">
+                        <BuildingIcon width={20} height={20} class="stroke-2 shrink-0" />
                         <span>{section_experiences.companies_across_regions}</span>
                     </div>
-                    <div class="flex flex-wrap gap-1 px-1 mt-5">
+                    <div class="about-countries">
                         <BadgeList items={section_experiences.full_countries} badgeClass="font-semibold badge-soft text-[11px]" />
                     </div>
                 </div>
             </div>
         </div>
-        <div class="lg:col-span-7">
+        <div class="about-expertise-grid">
             <ExpertiseFeatureGrid subjects={section_about.expertise.subjects} />
         </div>
     </div>
 </div>
-<br />
 <VerticalSpacer />
+
+<script>
+    document.addEventListener('click', (event) => {
+        const target = event.target;
+        if (!(target instanceof Node)) return;
+
+        document.querySelectorAll<HTMLDetailsElement>('.about-hobbies[open]').forEach((menu) => {
+            if (!menu.contains(target)) menu.open = false;
+        });
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key !== 'Escape') return;
+
+        document.querySelectorAll<HTMLDetailsElement>('.about-hobbies[open]').forEach((menu) => {
+            menu.open = false;
+            menu.querySelector('summary')?.focus();
+        });
+    });
+</script>
 
 <style is:global>
     @reference "@styles/global.css";
+
+    .about-hero {
+        position: relative;
+        isolation: isolate;
+        display: grid;
+        grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+        align-items: center;
+        gap: clamp(1.5rem, 4vw, 4rem);
+        overflow: visible;
+        padding: clamp(2rem, 0vw, 4.5rem);
+        border: 0;
+        border-radius: 1.75rem;
+        background: var(--color-base-100);
+    }
+
+    .about-grid-mark {
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+        overflow: hidden;
+        border-radius: inherit;
+        pointer-events: none;
+        color: var(--color-primary);
+        opacity: 0.07;
+    }
+
+    .about-grid-mark svg {
+        position: absolute;
+        top: 8%;
+        left: -1rem;
+        width: min(32rem, 55%);
+        height: auto;
+    }
+
+    .about-intro {
+        position: relative;
+        z-index: 4;
+        min-width: 0;
+    }
+
+    .about-intro :global(.ai-context) {
+        position: relative;
+        z-index: 5;
+    }
+
+    .about-intro :global(.ai-context-menu[open]) {
+        z-index: 20;
+    }
+
+    .about-greeting {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin: 0 0 0.5rem;
+        color: var(--color-accent);
+        font-size: clamp(1.35rem, 2.5vw, 1.875rem);
+        font-weight: 700;
+        line-height: 1.25;
+    }
+
+    .about-greeting img {
+        width: clamp(2.5rem, 5vw, 3.5rem);
+        height: clamp(2.5rem, 5vw, 3.5rem);
+        object-fit: contain;
+    }
+
+    .about-name {
+        margin: 0;
+        color: var(--color-base-content);
+        font-size: clamp(2.5rem, 5.9vw, 5rem);
+        font-weight: 800;
+        letter-spacing: -0.055em;
+        line-height: 1.02;
+        text-wrap: balance;
+    }
+
+    .about-name > span {
+        color: var(--color-base-content);
+    }
+
+    .about-name > span > .text-accent {
+        color: var(--color-accent);
+    }
+
+    .about-name :is(strong, em) {
+        color: var(--color-primary);
+    }
+
+    html[data-theme="dark"] .about-name :is(strong, em) {
+        color: var(--color-accent);
+    }
+
+    .about-rule {
+        position: relative;
+        width: min(13rem, 58%);
+        height: 2px;
+        margin: 1.5rem 0;
+        background: var(--color-base-300);
+    }
+
+    .about-rule span {
+        position: absolute;
+        top: -2px;
+        left: 0;
+        width: 3.25rem;
+        height: 6px;
+        border-radius: 999px;
+        background: var(--color-accent);
+    }
+
+    .about-summary {
+        max-width: 38rem;
+        margin: 0 0 1.5rem;
+        color: var(--color-base-content);
+        font-size: clamp(0.98rem, 1.4vw, 1.15rem);
+        line-height: 1.75;
+        opacity: 0.78;
+    }
+
+    .about-visual {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        min-width: 0;
+        min-height: 30rem;
+        place-items: center;
+    }
+
+    .avatar-image {
+        position: relative;
+        z-index: 1;
+        width: clamp(27rem, 32vw, 26rem);
+        aspect-ratio: 1;
+        overflow: hidden;
+        margin: 0;
+        border-radius: 50%;
+        background:
+            linear-gradient(
+                135deg,
+                color-mix(in srgb, var(--color-cobalt-blue) 65%, transparent) 0%,
+                color-mix(in srgb, var(--color-electric-teal) 55%, transparent) 100%
+            ),
+            var(--color-base-200);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid color-mix(in srgb, var(--color-electric-teal) 60%, transparent);
+        box-shadow:
+            inset 0 4px 16px color-mix(in srgb, white 25%, transparent),
+            inset 0 -4px 12px color-mix(in srgb, black 20%, transparent),
+            0 16px 40px color-mix(in srgb, var(--color-cobalt-blue) 35%, transparent),
+            0 4px 12px color-mix(in srgb, var(--color-electric-teal) 20%, transparent);
+        outline: 1px solid color-mix(in srgb, var(--color-cobalt-blue) 45%, transparent);
+        outline-offset: 4px;
+        transition: all 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .avatar-image img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .avatar-image:hover {
+        transform: scale(1.03) translateY(-2px);
+        outline: 1.5px solid color-mix(in srgb, var(--color-electric-teal) 75%, transparent);
+        outline-offset: 6px;
+        border-color: color-mix(in srgb, var(--color-electric-teal) 85%, transparent);
+        box-shadow:
+            inset 0 6px 20px color-mix(in srgb, white 35%, transparent),
+            inset 0 -2px 10px color-mix(in srgb, black 15%, transparent),
+            0 8px 20px color-mix(in srgb, var(--color-electric-teal) 30%, transparent);
+    }
+
+    .about-hobbies {
+        position: absolute;
+        z-index: 3;
+        top: 0.25rem;
+        right: 0.25rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .about-hobbies-toggle::-webkit-details-marker {
+        display: none;
+    }
+
+    .about-hobbies-toggle {
+        display: inline-flex;
+        min-height: 2.5rem;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 0.8rem;
+        border: 1px solid var(--color-base-300);
+        border-radius: 999px;
+        background: var(--color-base-100);
+        color: var(--color-base-content);
+        cursor: pointer;
+        font-family: var(--font-mono);
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        transition: border-color 180ms ease, color 180ms ease, transform 180ms ease;
+    }
+
+    .about-hobbies-toggle:hover,
+    .about-hobbies[open] .about-hobbies-toggle {
+        transform: translateY(-1px);
+        border-color: var(--color-primary);
+        color: var(--color-primary);
+    }
+
+    html[data-theme="dark"] .about-hobbies-toggle:hover,
+    html[data-theme="dark"] .about-hobbies[open] .about-hobbies-toggle {
+        border-color: var(--color-accent);
+        color: var(--color-accent);
+    }
+
+    .about-hobbies-chevron {
+        width: 0.9rem;
+        height: 0.9rem;
+        transition: transform 180ms ease;
+    }
+
+    .about-hobbies[open] .about-hobbies-chevron {
+        transform: rotate(180deg);
+    }
+
+    .about-hobbies-list {
+        display: flex;
+        width: max-content;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.4rem;
+        padding-top: 0.5rem;
+    }
+
+    .about-hobby {
+        padding: 0.4rem 0.65rem;
+        border: 1px solid color-mix(in srgb, var(--color-primary) 20%, var(--color-base-300));
+        border-radius: 0.65rem;
+        background: var(--color-base-100);
+        color: var(--color-base-content);
+        font-size: 0.7rem;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+
+    .avatar-message {
+        position: absolute;
+        z-index: 2;
+        top: 12.5rem;
+        left: 1rem;
+        width: max-content;
+        max-width: 17.5rem;
+        filter: drop-shadow(0 0.5rem 0.75rem rgb(15 23 42 / 0.16));
+    }
+
+    .avatar-message__surface {
+        display: flex;
+        min-height: 2.25rem;
+        align-items: center;
+        gap: 0.5rem;
+        overflow: hidden;
+        padding: 0.375rem 0.875rem;
+        border: 1px solid color-mix(in srgb, var(--color-primary) 30%, transparent);
+        border-radius: 999px;
+        background: color-mix(in srgb, var(--color-base-100) 90%, transparent);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+    }
+
+    .avatar-message__status {
+        position: relative;
+        width: 0.5rem;
+        height: 0.5rem;
+        flex: 0 0 auto;
+        border-radius: 50%;
+        background: var(--color-accent);
+    }
+
+    .avatar-message__status::after {
+        position: absolute;
+        inset: -0.1rem;
+        border-radius: inherit;
+        background: var(--color-accent);
+        content: "";
+        animation: avatar-status-ping 1.8s ease-out infinite;
+    }
+
+    .text-slider-mask {
+        height: 1.2rem;
+        min-width: 0;
+        overflow: hidden;
+    }
+
+    .text-slider {
+        animation: slideText 16s infinite cubic-bezier(0.7, 0, 0.3, 1);
+        color: var(--color-base-content);
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        line-height: 1.2rem;
+        white-space: nowrap;
+    }
+
+    .text-slider p {
+        margin: 0;
+        user-select: none;
+        -webkit-user-select: none;
+    }
+
+    .about-expertise-heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.5rem;
+        margin: clamp(3rem, 7vw, 6rem) auto 1.5rem;
+        padding: 0 clamp(0.25rem, 2vw, 1.5rem);
+    }
+
+    .about-eyebrow,
+    .about-detail-label {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        color: var(--color-primary);
+        font-family: var(--font-mono);
+        font-size: 0.68rem;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        line-height: 1.5;
+        text-transform: uppercase;
+    }
+
+    .about-eyebrow > span:first-child,
+    .about-detail-pulse {
+        width: 0.45rem;
+        height: 0.45rem;
+        flex: 0 0 auto;
+        border-radius: 50%;
+        background: var(--color-accent);
+        box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-accent) 14%, transparent);
+    }
+
+    html[data-theme="dark"] .about-eyebrow,
+    html[data-theme="dark"] .about-detail-label {
+        color: var(--color-accent);
+    }
+
+    .about-expertise-heading h2 {
+        max-width: 42rem;
+        margin: 0.6rem 0 0;
+        color: var(--color-base-content);
+        font-size: clamp(1.65rem, 3.7vw, 3rem);
+        font-weight: 800;
+        letter-spacing: -0.045em;
+        line-height: 1.08;
+        text-wrap: balance;
+    }
+
+    .crystal-divider {
+        display: flex;
+        min-width: 8rem;
+        flex: 1 1 auto;
+        align-items: center;
+        justify-content: flex-end;
+        margin-left: clamp(1rem, 4vw, 3rem);
+    }
+
+    .crystal-divider > span {
+        height: 1px;
+        flex: 1 1 auto;
+        border-top: 1px dashed var(--color-base-300);
+    }
+
+    .crystal-divider img {
+        width: 5rem;
+        height: 5rem;
+        flex: 0 0 auto;
+        object-fit: contain;
+    }
+
+    .about-details-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+        align-items: stretch;
+        gap: clamp(1.25rem, 3vw, 2.5rem);
+        padding: 0 clamp(0.25rem, 2vw, 1.5rem);
+    }
+
+    .about-profile-panel {
+        align-self: start;
+        padding: clamp(1.1rem, 2.5vw, 1.75rem);
+    }
+
+    .manifesto-title {
+        margin: 0;
+        color: var(--color-base-content);
+        font-size: clamp(1.08rem, 1.6vw, 1.35rem);
+        font-weight: 800;
+        letter-spacing: -0.025em;
+        line-height: 1.4;
+        text-wrap: pretty;
+    }
+
+    .manifesto-body {
+        margin: 0.85rem 0 0;
+        padding-left: 0.9rem;
+        border-left: 2px solid var(--color-primary);
+        color: var(--color-base-content);
+        font-size: 0.92rem;
+        line-height: 1.75;
+        opacity: 0.76;
+    }
+
+    html[data-theme="dark"] .manifesto-body {
+        border-color: var(--color-accent);
+    }
+
+    .about-languages {
+        display: grid;
+        gap: 0.55rem;
+        margin-top: 1.5rem;
+        padding-top: 1.25rem;
+    }
+
+    .about-languages .about-detail-label {
+        margin-bottom: 0.35rem;
+    }
+
+    .language-row {
+        display: flex;
+        min-width: 0;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+        padding: 0.2rem 0;
+    }
+
+    .language-copy {
+        display: flex;
+        min-width: 0;
+        align-items: center;
+        gap: 0.45rem;
+        color: var(--color-base-content);
+        font-size: 0.78rem;
+    }
+
+    .language-emoji {
+        font-size: 1.2rem;
+        line-height: 1;
+    }
+
+    .language-name {
+        flex: 0 0 auto;
+        font-weight: 800;
+    }
+
+    .language-proficiency {
+        overflow: hidden;
+        color: var(--color-base-content);
+        opacity: 0.62;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .language-meter {
+        display: flex;
+        height: 0.5rem;
+        flex: 0 0 auto;
+        align-items: center;
+        gap: 0.16rem;
+    }
+
+    .language-meter__segment {
+        width: 0.38rem;
+        height: 0.38rem;
+        border-radius: 2px;
+        background: var(--color-base-300);
+    }
+
+    .language-meter__segment.is-filled {
+        background: var(--color-primary);
+    }
+
+    html[data-theme="dark"] .language-meter__segment.is-filled {
+        background: var(--color-accent);
+    }
+
+    .language-meter__segment.is-partial {
+        animation: language-pulse 1.8s ease-in-out infinite alternate;
+        background: color-mix(in srgb, var(--color-primary) 48%, var(--color-base-300));
+    }
+
+    html[data-theme="dark"] .language-meter__segment.is-partial {
+        background: color-mix(in srgb, var(--color-accent) 55%, var(--color-base-300));
+    }
+
+    .about-background {
+        display: grid;
+        gap: 1.15rem;
+        margin-top: 1.4rem;
+        padding-top: 1.25rem;
+    }
+
+    .about-background-item {
+        min-width: 0;
+    }
+
+    .about-background-copy {
+        margin: 0.65rem 0 0 1.8rem;
+    }
+
+    .about-foundation {
+        display: block;
+        margin-bottom: 0.55rem;
+        color: var(--color-base-content);
+        font-size: 0.75rem;
+        font-weight: 600;
+        line-height: 1.55;
+        opacity: 0.66;
+    }
+
+    .about-education-level {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding-left: 0.65rem;
+        border-left: 2px solid var(--color-primary);
+        color: var(--color-base-content);
+        font-size: 0.9rem;
+        font-weight: 800;
+        line-height: 1.4;
+    }
+
+    html[data-theme="dark"] .about-education-level {
+        border-color: var(--color-accent);
+    }
+
+    .about-countries {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35rem;
+        margin: 0.65rem 0 0 1.8rem;
+    }
+
+    .about-expertise-grid {
+        min-width: 0;
+    }
+
     .primary-text {
         @apply text-primary;
     }
 
     .tooltip-wrapper {
         @apply tooltip tooltip-primary;
-    }
-    
-    .manifesto-title {
-        @apply text-xl lg:text-2xl font-black tracking-tight leading-snug text-neutral-900;
-    }
-
-    .manifesto-body {
-        @apply text-base leading-relaxed text-neutral-900 mt-4 border-l-2 border-neutral-200 pl-6 font-medium;
-    }
-
-    html[data-theme="dark"] .manifesto-title {
-        @apply text-white;
-    }
-
-    html[data-theme="dark"] .manifesto-body {
-        @apply text-base-content border-primary;
     }
 
     html[data-theme="dark"] .primary-text {
@@ -230,14 +768,6 @@ const { common, section_about, section_experiences, section_studies } = (entry?.
     html[data-theme="dark"] .tooltip-wrapper {
         @apply tooltip-accent;
     }
-    
-    .about-me-wrapper {
-        @apply gap-8 shadow rounded-lg px-5 py-4 border border-neutral-100;
-    }
-
-    html[data-theme="dark"] .about-me-wrapper {
-        @apply bg-neutral-900 border-neutral-800 text-white;
-    }
 
     .text-info-content-color {
         @apply text-neutral-500;
@@ -245,69 +775,6 @@ const { common, section_about, section_experiences, section_studies } = (entry?.
 
     html[data-theme="dark"] .text-info-content-color {
         @apply text-base-content;
-    }
-    
-    .avatar-image {
-        background: linear-gradient(
-            135deg, 
-            color-mix(in srgb, var(--color-cobalt-blue) 65%, transparent) 0%, 
-            color-mix(in srgb, var(--color-electric-teal) 55%, transparent) 100%
-        );
-        
-        border-radius: 50%;
-        
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        
-        border: 1px solid color-mix(in srgb, var(--color-electric-teal) 60%, transparent);
-        
-        box-shadow: 
-            inset 0 4px 16px color-mix(in srgb, white 25%, transparent),
-            inset 0 -4px 12px color-mix(in srgb, black 20%, transparent),
-            0 16px 40px color-mix(in srgb, var(--color-cobalt-blue) 35%, transparent),
-            0 4px 12px color-mix(in srgb, var(--color-electric-teal) 20%, transparent);
-            
-        outline: 1px solid color-mix(in srgb, var(--color-cobalt-blue) 45%, transparent);
-        outline-offset: 4px;
-        
-        
-        transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-        
-        
-        overflow: hidden; 
-}
-    .avatar-image img {
-        image-rendering: smooth;
-    }
-    .avatar-image:hover {
-        
-        transform: scale(1.03) translateY(-2px);
-        outline: 1.5px solid color-mix(in srgb, var(--color-electric-teal) 75%, transparent);
-        outline-offset: 6px;
-        
-        border-color: color-mix(in srgb, var(--color-electric-teal) 85%, transparent);
-        
-        box-shadow: 
-            inset 0 6px 20px color-mix(in srgb, white 35%, transparent),
-            inset 0 -2px 10px color-mix(in srgb, black 15%, transparent),
-            0 8px 20px color-mix(in srgb, var(--color-electric-teal) 30%, transparent);
-    }
-    
-    .text-slider-mask {
-        @apply h-[1.3rem] overflow-hidden;
-    }
-
-    .text-slider {
-        animation: slideText 16s infinite cubic-bezier(0.7, 0, 0.3, 1);
-    }
-
-    .text-slider p {
-        line-height: 1.3em;
-        user-select: none;
-        -webkit-user-select: none;
-    }
-    summary::-webkit-details-marker {
-        display: none;
     }
 
     @media (min-width: 1024px) {
@@ -320,11 +787,129 @@ const { common, section_about, section_experiences, section_studies } = (entry?.
         @apply bg-slate-500;
     }
 
+    @keyframes orbit-dot-pulse {
+        to { opacity: 0.55; transform: scale(0.75); }
+    }
+
+    @keyframes language-pulse {
+        to { opacity: 0.55; }
+    }
+
+    @keyframes avatar-status-ping {
+        0% { opacity: 0.65; transform: scale(1); }
+        100% { opacity: 0; transform: scale(2.5); }
+    }
+
     @keyframes slideText {
         0%, 25% { transform: translateY(0%); }
         30%, 45% { transform: translateY(-25%); }
         50%, 70% { transform: translateY(-50%); }
         75%, 94.99% { transform: translateY(-75%); }
         95%, 100% { transform: translateY(0%); }
+    }
+
+    @media (max-width: 1023px) {
+        .about-hero {
+            grid-template-columns: minmax(0, 1fr);
+            gap: 0;
+            padding: clamp(1.25rem, 5vw, 2rem);
+        }
+
+        .about-visual {
+            min-height: clamp(21rem, 82vw, 25rem);
+        }
+
+        .about-grid-mark {
+            opacity: 0.045;
+        }
+
+        .avatar-image {
+            width: clamp(15rem, 72vw, 19rem);
+        }
+
+        .about-hobbies {
+            top: 0.25rem;
+            right: 0.25rem;
+        }
+
+        .avatar-message {
+            top: 12.5rem;
+            left: 1rem;
+            max-width: min(17.5rem, calc(100vw - 5rem));
+        }
+
+        .about-details-grid {
+            grid-template-columns: minmax(0, 1fr);
+        }
+
+        .about-profile-panel {
+            padding: clamp(1rem, 4vw, 1.5rem);
+        }
+    }
+
+    @media (max-width: 639px) {
+        .about-expertise-heading {
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+
+        .about-eyebrow,
+        .about-detail-label {
+            font-size: 0.6rem;
+            letter-spacing: 0.09em;
+        }
+
+        .crystal-divider {
+            min-width: 3rem;
+            margin-left: 0.5rem;
+        }
+
+        .crystal-divider img {
+            width: 3.75rem;
+            height: 3.75rem;
+        }
+
+        .about-details-grid {
+            gap: 1.25rem;
+        }
+
+        .language-copy {
+            gap: 0.35rem;
+            font-size: 0.72rem;
+        }
+
+        .language-meter {
+            gap: 0.12rem;
+        }
+
+        .language-meter__segment {
+            width: 0.32rem;
+            height: 0.32rem;
+        }
+
+        .about-background-copy,
+        .about-countries {
+            margin-left: 1.6rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .about-hero {
+            min-height: 31rem;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .avatar-message {
+            top: 18rem;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .text-slider,
+        .language-meter__segment.is-partial,
+        .avatar-message__status::after {
+            animation: none;
+        }
     }
 </style>
