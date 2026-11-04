@@ -16,47 +16,188 @@ const appVersion = __APP_VERSION__;
 const copyrights = `Copyrights © ${new Date().getFullYear()}`;
 ---
 
-<footer>
-  <div>
-    <nav>
-      <p class="space-y-0.5">
-        <span class="block text-lg font-semibold" set:html={section_about.my_name}></span>
-        <span class="uppercase block text-xs">{copyrights}</span>
-        <span class="block text-xs">v{appVersion}</span>
-      </p>
-    </nav>
-    <nav>
+<footer class="site-footer">
+  <div class="footer-shell">
+    <div class="footer-brand">
+        <p class="footer-name" set:html={section_about.my_name}></p>
+        <div class="footer-meta">
+          <span>{copyrights}</span>
+          <span class="footer-version">v{appVersion}</span>
+        </div>
+    </div>
+    <nav class="footer-group">
       <h6 class="footer-title">{footer.powered_and_themed_by}</h6>
-      <div class="links-container">
-        <a href="https://astro.build" target="_blank" rel="noopener noreferrer" aria-label="Astro website">
-          <AstroIcon class="w-24" />
+        <div class="footer-logos">
+          <a class="footer-logo-link" href="https://astro.build" target="_blank" rel="noopener noreferrer" aria-label="Astro website">
+            <AstroIcon class="footer-logo" />
         </a>
-        <a href="https://daisyui.com" target="_blank" rel="noopener noreferrer" aria-label="DaisyUI website">
-          <DaisyUIIcon class="w-24" />
+          <a class="footer-logo-link" href="https://daisyui.com" target="_blank" rel="noopener noreferrer" aria-label="DaisyUI website">
+            <DaisyUIIcon class="footer-logo" />
         </a>
       </div>
     </nav>
-    <nav>
+    <nav class="footer-group">
       <h6 class="footer-title">{footer.assets}</h6>
-      <div class="links-container">
-          <a href="https://www.svgrepo.com" target="_blank" rel="noopener noreferrer" class="link link-hover">SVG Repo</a>
-          <a href="https://googlefonts.github.io/noto-emoji-animation" target="_blank" rel="noopener noreferrer" class="link link-hover">Animated Emoji</a>
+        <div class="footer-links">
+          <a href="https://www.svgrepo.com" target="_blank" rel="noopener noreferrer">SVG Repo</a>
+          <a href="https://googlefonts.github.io/noto-emoji-animation" target="_blank" rel="noopener noreferrer">Animated Emoji</a>
       </div>
     </nav>
   </div>
 </footer>
 
 <style>
-    @reference "@styles/global.css";
-    footer {
-        @apply footer sm:footer-horizontal bg-neutral-800 text-neutral-content p-5 lg:py-5 lg:px-52;
+  @reference "@styles/global.css";
+
+  .site-footer {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(1.25rem, 3vw, 2rem) clamp(1.25rem, 5vw, 4rem);
+    background: #202635;
+    color: #f8fafc;
+  }
+
+  .site-footer::before {
+    position: absolute;
+    inset: 0 0 auto;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color-electric-teal), var(--color-cobalt-blue), transparent);
+    content: "";
+  }
+
+  .footer-shell {
+    display: grid;
+    width: min(100%, 80rem);
+    grid-template-columns: minmax(12rem, 1.2fr) minmax(12rem, 1fr) minmax(10rem, 0.8fr);
+    align-items: start;
+    gap: clamp(1.25rem, 3vw, 2.5rem);
+    margin-inline: auto;
+  }
+
+  .footer-brand,
+  .footer-group {
+    min-width: 0;
+  }
+
+  .footer-name {
+    margin: 0;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .footer-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.8rem;
+    margin-top: 0.35rem;
+    color: #aeb8c7;
+    font-size: 0.72rem;
+  }
+
+  .footer-version {
+    color: var(--color-electric-teal);
+    font-family: var(--font-mono);
+  }
+
+  .footer-group :global(.footer-title) {
+    margin: 0 0 0.55rem;
+    color: #aeb8c7;
+    font-size: 0.67rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+  }
+
+  .footer-logos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .footer-logo-link {
+    display: inline-flex;
+    min-height: 2.25rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4rem 0.65rem;
+    border: 1px solid rgb(255 255 255 / 0.12);
+    border-radius: 0.7rem;
+    background: rgb(255 255 255 / 0.04);
+    transition: border-color 180ms ease, background-color 180ms ease, transform 180ms ease;
+  }
+
+  .footer-logo-link:hover {
+    transform: translateY(-2px);
+    border-color: rgb(41 242 185 / 0.45);
+    background: rgb(255 255 255 / 0.08);
+  }
+
+  .footer-logo {
+    display: block;
+    width: 5.25rem;
+    max-height: 1.5rem;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+
+  .footer-links a {
+    color: #f8fafc;
+    font-size: 0.84rem;
+    text-decoration-color: transparent;
+    text-underline-offset: 0.2em;
+    transition: color 180ms ease, text-decoration-color 180ms ease;
+  }
+
+  .footer-links a:hover {
+    color: var(--color-electric-teal);
+    text-decoration: underline;
+    text-decoration-color: currentColor;
+  }
+
+  @media (max-width: 767px) {
+    .footer-shell {
+        grid-template-columns: minmax(0, 1fr);
+        justify-items: center;
+        gap: 1rem;
+        text-align: center;
     }
 
-    footer div {
-      @apply container mx-auto flex justify-between flex-col sm:flex-row;
+    .footer-meta {
+        justify-content: center;
     }
 
-    .links-container {
-        @apply grid grid-flow-col lg:gap-4;
+    .footer-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
+
+    .footer-group :global(.footer-title) {
+        margin-bottom: 0.4rem;
+    }
+
+    .footer-logos {
+        justify-content: center;
+    }
+
+    .footer-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem 1rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .footer-logo-link {
+        transition: none;
+    }
+  }
 </style>
