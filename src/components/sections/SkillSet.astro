@@ -84,7 +84,7 @@ const skills = section_about.expertise.subjects.map((subject) => {
             <div class={`pillar-card pilar-${skill.id} px-5 py-4 rounded-lg cursor-pointer transition-all duration-300 hover:scale-[1.01] flex flex-col gap-3 relative`}>
               <div class="flex items-center justify-between w-full">
                 <div class="flex flex-col text-left">
-                  <span class="text-xs font-bold uppercase tracking-widest text-slate-400">{skill.category}</span>
+                  <span class="pillar-category text-xs font-bold uppercase tracking-widest">{skill.category}</span>
                   <span class="pillar-name text-sm sm:text-base font-extrabold transition-colors">{skill.name}</span>
                 </div>
               </div>
@@ -277,27 +277,115 @@ const skills = section_about.expertise.subjects.map((subject) => {
     @apply bg-base-100 border border-slate-400 text-slate-700; 
   }
 
+  .vshape-box {
+    @apply relative overflow-hidden rounded-2xl;
+    background-color: #f8fafc;
+    border-color: rgba(72, 79, 217, 0.32);
+    box-shadow: 0 10px 24px -20px rgba(72, 79, 217, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  }
+
+  .vshape-box::after {
+    content: "";
+    @apply absolute -right-5 -top-5 h-16 w-16 rounded-full border;
+    border-color: rgba(41, 242, 185, 0.38);
+    box-shadow: 0 0 0 8px rgba(41, 242, 185, 0.05);
+  }
+
+  :global(html[data-theme="dark"]) .vshape-box {
+    @apply border-neutral-700 bg-neutral-950 text-white;
+    background-color: #0a0f1c;
+    box-shadow: 0 12px 26px -22px rgba(41, 242, 185, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  }
+
   .pillar-name { 
-    @apply text-slate-800; 
+    @apply text-slate-800;
+  }
+
+  .pillar-card {
+    --pillar-accent: #0284c7;
+    --pillar-accent-border: rgba(2, 132, 199, 0.3);
+    @apply relative isolate overflow-hidden rounded-xl border bg-base-100 transition-all duration-300;
+    border-color: var(--pillar-accent-border);
+    box-shadow: 0 6px 16px -16px var(--pillar-accent);
+  }
+
+  .pillar-card::before {
+    content: "";
+    @apply absolute bottom-3 left-0 top-3 w-1 rounded-r-full transition-all duration-300;
+    background: var(--pillar-accent);
+    opacity: 0.8;
+  }
+
+  .pilar-product {
+    --pillar-accent: #0284c7;
+    --pillar-accent-border: rgba(2, 132, 199, 0.34);
+  }
+
+  .pilar-coding {
+    --pillar-accent: #c026d3;
+    --pillar-accent-border: rgba(192, 38, 211, 0.32);
+  }
+
+  .pilar-data {
+    --pillar-accent: #059669;
+    --pillar-accent-border: rgba(5, 150, 105, 0.34);
+  }
+
+  .pilar-ai {
+    --pillar-accent: #7c3aed;
+    --pillar-accent-border: rgba(124, 58, 237, 0.32);
+  }
+
+  .pillar-category {
+    color: var(--pillar-accent);
+  }
+
+  :global(html[data-theme="dark"]) .pillar-card {
+    position: relative;
+    z-index: 1;
+    background-color: #111827 !important;
+    border-color: color-mix(in srgb, var(--pillar-accent) 48%, #334155);
+    box-shadow: 0 8px 18px -18px var(--pillar-accent);
+  }
+
+  :global(html[data-theme="dark"]) .pillar-card::before {
+    opacity: 1;
   }
   
   .ghost-container {
-    @apply border border-dashed border-slate-400 rounded-lg p-5 flex flex-col justify-center items-center text-center 
-           min-h-[280px] md:min-h-auto overflow-hidden mt-4 md:mt-0 bg-slate-100/30;
+    @apply relative overflow-hidden rounded-2xl border border-dashed border-primary/40 p-5 text-center
+           mt-4 flex min-h-[280px] flex-col items-center justify-center bg-base-100 md:mt-0 md:min-h-auto;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
   }
 
   .placeholder-icon { 
-    @apply bg-slate-700 text-white; 
+    @apply bg-primary text-white shadow-lg shadow-primary/25;
   }
 
   .placeholder-text { 
-    @apply text-slate-400; 
+    @apply text-slate-600;
   }
 
   .topics-list {
-    @apply hidden flex-col w-full h-full justify-start absolute inset-0 p-5 bg-slate-700 z-1 
-           transition-all duration-300 opacity-0;
+    @apply absolute inset-0 z-1 hidden h-full w-full flex-col justify-start overflow-hidden rounded-2xl p-5
+           bg-slate-800 transition-all duration-300 opacity-0;
+    background-color: #1e293b;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 12px 28px -24px rgba(15, 23, 42, 0.6);
   }
+
+  :global(html[data-theme="dark"]) .ghost-container {
+    @apply border-neutral-600 bg-neutral-900;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  }
+
+  :global(html[data-theme="dark"]) .placeholder-icon {
+    @apply bg-accent text-neutral-950 shadow-accent/20;
+  }
+
+  .topics-product { border-color: rgba(56, 189, 248, 0.52); }
+  .topics-coding { border-color: rgba(244, 114, 182, 0.52); }
+  .topics-data { border-color: rgba(52, 211, 153, 0.52); }
+  .topics-ai { border-color: rgba(192, 132, 252, 0.52); }
 
   .topic-pill {
     @apply px-3 py-1.5 rounded-lg border text-left shadow-sm scale-95 
@@ -307,13 +395,13 @@ const skills = section_about.expertise.subjects.map((subject) => {
   }
 
   /* Dark Theme Elements */
-  :global(html[theme="dark"]) .vshape-box { @apply text-white bg-slate-950; }
-  :global(html[theme="dark"]) .pillar-card { @apply bg-neutral-900 border-neutral-600 text-slate-200; }
-  :global(html[theme="dark"]) .pillar-name { @apply text-slate-200; }
-  :global(html[theme="dark"]) .ghost-container { @apply border-neutral-500 bg-neutral-900; }
-  :global(html[theme="dark"]) .placeholder-text { @apply text-slate-500; }
-  :global(html[theme="dark"]) .topics-list { @apply bg-slate-950; }
-  :global(html[theme="dark"]) .topic-pill {
+  :global(html[data-theme="dark"]) .pillar-name { @apply text-slate-100; }
+  :global(html[data-theme="dark"]) .placeholder-text { @apply text-slate-400; }
+  :global(html[data-theme="dark"]) .topics-list {
+    background-color: #020617;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 18px 36px -24px rgba(0, 0, 0, 0.8);
+  }
+  :global(html[data-theme="dark"]) .topic-pill {
     border-color: rgba(148, 163, 184, 0.35);
     background: rgba(15, 23, 42, 0.85);
   }
@@ -326,65 +414,70 @@ const skills = section_about.expertise.subjects.map((subject) => {
     transition: all 0.3s ease !important; 
   }
 
+  svg .line-product { stroke: #0284c7 !important; opacity: 0.55 !important; }
+  svg .line-coding { stroke: #c026d3 !important; opacity: 0.55 !important; }
+  svg .line-data { stroke: #059669 !important; opacity: 0.55 !important; }
+  svg .line-ai { stroke: #7c3aed !important; opacity: 0.55 !important; }
+
   /* Atenúa las líneas inactivas en hover */
   .group-main:has(.pillar-card:hover) svg .laser-path {
     opacity: 0.08 !important;
     stroke-width: 1px !important;
   }
 
-  /* LÍNEA ACTIVA HOVERED: Colores intensos + Drop Shadow en Tema Claro */
+  /* LÍNEA ACTIVA HOVERED: acento de color moderado */
   .group-main:has(.pilar-product:hover) svg .line-product { 
     stroke: #0284c7 !important;
-    filter: drop-shadow(0 0 3px rgba(2, 132, 199, 0.8)) !important;
+    filter: drop-shadow(0 0 2px rgba(2, 132, 199, 0.4)) !important;
     opacity: 1 !important;
-    stroke-width: 5px !important;
-    stroke-dasharray: 12 6 !important;
-    animation: laserStream 0.8s linear infinite !important;
+    stroke-width: 3px !important;
+    stroke-dasharray: 8 6 !important;
+    animation: laserStream 1.4s linear infinite !important;
   }
 
   .group-main:has(.pilar-coding:hover) svg .line-coding { 
     stroke: #c026d3 !important;
-    filter: drop-shadow(0 0 3px rgba(192, 38, 211, 0.8)) !important;
+    filter: drop-shadow(0 0 2px rgba(192, 38, 211, 0.4)) !important;
     opacity: 1 !important;
-    stroke-width: 5px !important;
-    stroke-dasharray: 12 6 !important;
-    animation: laserStream 0.8s linear infinite !important;
+    stroke-width: 3px !important;
+    stroke-dasharray: 8 6 !important;
+    animation: laserStream 1.4s linear infinite !important;
   }
 
   .group-main:has(.pilar-data:hover) svg .line-data { 
     stroke: #059669 !important;
-    filter: drop-shadow(0 0 3px rgba(5, 150, 105, 0.8)) !important;
+    filter: drop-shadow(0 0 2px rgba(5, 150, 105, 0.4)) !important;
     opacity: 1 !important;
-    stroke-width: 5px !important;
-    stroke-dasharray: 12 6 !important;
-    animation: laserStream 0.8s linear infinite !important;
+    stroke-width: 3px !important;
+    stroke-dasharray: 8 6 !important;
+    animation: laserStream 1.4s linear infinite !important;
   }
 
   .group-main:has(.pilar-ai:hover) svg .line-ai { 
     stroke: #7c3aed !important;
-    filter: drop-shadow(0 0 3px rgba(124, 58, 237, 0.8)) !important;
+    filter: drop-shadow(0 0 2px rgba(124, 58, 237, 0.4)) !important;
     opacity: 1 !important;
-    stroke-width: 5px !important;
-    stroke-dasharray: 12 6 !important;
-    animation: laserStream 0.8s linear infinite !important;
+    stroke-width: 3px !important;
+    stroke-dasharray: 8 6 !important;
+    animation: laserStream 1.4s linear infinite !important;
   }
 
   /* LÍNEA ACTIVA HOVERED: Colores brillantes en Tema Oscuro */
   html[data-theme="dark"] .group-main:has(.pilar-product:hover) svg .line-product { 
     stroke: #38bdf8 !important; 
-    filter: drop-shadow(0 0 6px #38bdf8) !important;
+    filter: drop-shadow(0 0 3px rgba(56, 189, 248, 0.5)) !important;
   }
   html[data-theme="dark"] .group-main:has(.pilar-coding:hover) svg .line-coding { 
     stroke: #f472b6 !important; 
-    filter: drop-shadow(0 0 6px #f472b6) !important;
+    filter: drop-shadow(0 0 3px rgba(244, 114, 182, 0.5)) !important;
   }
   html[data-theme="dark"] .group-main:has(.pilar-data:hover) svg .line-data { 
     stroke: #34d399 !important; 
-    filter: drop-shadow(0 0 6px #34d399) !important;
+    filter: drop-shadow(0 0 3px rgba(52, 211, 153, 0.5)) !important;
   }
   html[data-theme="dark"] .group-main:has(.pilar-ai:hover) svg .line-ai { 
     stroke: #c084fc !important; 
-    filter: drop-shadow(0 0 6px #c084fc) !important;
+    filter: drop-shadow(0 0 3px rgba(192, 132, 252, 0.5)) !important;
   }
 
   /* ==================== HOVER STATES ==================== */
@@ -406,14 +499,27 @@ const skills = section_about.expertise.subjects.map((subject) => {
   .group-main:has(.pilar-coding:hover) .vshape-target,
   .group-main:has(.pilar-data:hover) .vshape-target,
   .group-main:has(.pilar-ai:hover) .vshape-target { 
-    @apply bg-slate-700;
+    background-color: rgba(2, 132, 199, 0.1);
+    border-color: #0284c7;
   }
 
-  html[data-theme="dark"] .group-main:has(.pilar-product:hover) .vshape-target,
-  html[data-theme="dark"] .group-main:has(.pilar-coding:hover) .vshape-target,
-  html[data-theme="dark"] .group-main:has(.pilar-data:hover) .vshape-target,
-  html[data-theme="dark"] .group-main:has(.pilar-ai:hover) .vshape-target { 
-    @apply bg-slate-950;
+  .group-main:has(.pilar-coding:hover) .vshape-target {
+    background-color: rgba(192, 38, 211, 0.1);
+    border-color: #c026d3;
+  }
+
+  .group-main:has(.pilar-data:hover) .vshape-target {
+    background-color: rgba(5, 150, 105, 0.1);
+    border-color: #059669;
+  }
+
+  .group-main:has(.pilar-ai:hover) .vshape-target {
+    background-color: rgba(124, 58, 237, 0.1);
+    border-color: #7c3aed;
+  }
+
+  :global(html[data-theme="dark"]) .group-main:has(.pillar-card:hover) .vshape-target {
+    background-color: #111827;
   }
 
   .group-main:has(.pilar-product:hover) .vshape-target { border-color: #38bdf8 !important; box-shadow: 0 0 20px rgba(2, 132, 199, 0.4) !important; }
@@ -436,26 +542,20 @@ const skills = section_about.expertise.subjects.map((subject) => {
   html[data-theme="dark"] .group-main:has(.pilar-data:hover) .vshape-text { color: #34d399 !important; }
   html[data-theme="dark"] .group-main:has(.pilar-ai:hover) .vshape-text { color: #c084fc !important; }
 
-  .pilar-product:hover, .pilar-coding:hover, .pilar-data:hover, .pilar-ai:hover {
-    @apply bg-slate-700;
-  }
+  .pilar-product:hover { background-color: color-mix(in srgb, var(--color-base-100) 92%, #0284c7); }
+  .pilar-coding:hover { background-color: color-mix(in srgb, var(--color-base-100) 92%, #c026d3); }
+  .pilar-data:hover { background-color: color-mix(in srgb, var(--color-base-100) 92%, #059669); }
+  .pilar-ai:hover { background-color: color-mix(in srgb, var(--color-base-100) 92%, #7c3aed); }
 
-  html[data-theme="dark"] .pilar-product:hover, 
-  html[data-theme="dark"] .pilar-coding:hover, 
-  html[data-theme="dark"] .pilar-data:hover, 
-  html[data-theme="dark"] .pilar-ai:hover {
-    @apply bg-slate-950;
-  }
+  .pilar-product:hover { border-color: #0284c7 !important; box-shadow: 0 8px 22px -18px #0284c7 !important; }
+  .pilar-coding:hover { border-color: #c026d3 !important; box-shadow: 0 8px 22px -18px #c026d3 !important; }
+  .pilar-data:hover { border-color: #059669 !important; box-shadow: 0 8px 22px -18px #059669 !important; }
+  .pilar-ai:hover { border-color: #7c3aed !important; box-shadow: 0 8px 22px -18px #7c3aed !important; }
 
-  .pilar-product:hover { border-color: #38bdf8 !important; box-shadow: 0 0 20px rgba(2, 132, 199, 0.4) !important; }
-  .pilar-coding:hover { border-color: #f472b6 !important; box-shadow: 0 0 20px rgba(192, 38, 211, 0.4) !important; }
-  .pilar-data:hover { border-color: #34d399 !important; box-shadow: 0 0 20px rgba(5, 150, 105, 0.4) !important; }
-  .pilar-ai:hover { border-color: #c084fc !important; box-shadow: 0 0 20px rgba(124, 58, 237, 0.4) !important; }
-
-  html[data-theme="dark"] .pilar-product:hover { border-color: #38bdf8 !important; box-shadow: 0 0 20px rgba(56, 189, 248, 0.4) !important; }
-  html[data-theme="dark"] .pilar-coding:hover { border-color: #f472b6 !important; box-shadow: 0 0 20px rgba(244, 114, 182, 0.4) !important; }
-  html[data-theme="dark"] .pilar-data:hover { border-color: #34d399 !important; box-shadow: 0 0 20px rgba(52, 211, 153, 0.4) !important; }
-  html[data-theme="dark"] .pilar-ai:hover { border-color: #c084fc !important; box-shadow: 0 0 20px rgba(192, 132, 252, 0.4) !important; }
+  :global(html[data-theme="dark"]) .pilar-product:hover { background-color: #142638 !important; border-color: #38bdf8 !important; box-shadow: 0 8px 22px -18px #38bdf8 !important; }
+  :global(html[data-theme="dark"]) .pilar-coding:hover { background-color: #2a1b30 !important; border-color: #f472b6 !important; box-shadow: 0 8px 22px -18px #f472b6 !important; }
+  :global(html[data-theme="dark"]) .pilar-data:hover { background-color: #142820 !important; border-color: #34d399 !important; box-shadow: 0 8px 22px -18px #34d399 !important; }
+  :global(html[data-theme="dark"]) .pilar-ai:hover { background-color: #241b35 !important; border-color: #c084fc !important; box-shadow: 0 8px 22px -18px #c084fc !important; }
 
   .pilar-product:hover .pillar-name { color: #38bdf8 !important; }
   .pilar-coding:hover .pillar-name { color: #f472b6 !important; }
