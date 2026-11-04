@@ -13,7 +13,7 @@
             "Prototyping and Wireframing",
             "Webflow, Framer, WordPress, Glide"
         ],
-        "resource": "/src/assets/images/optimus_case_study.jpg",
+        "resource": "/src/assets/images/optimus_case_study.jpeg",
         "contributions": [
             "Advised the founding team on product direction, architecture, and technology choices",
             "Built high-fidelity PoCs using AI-assisted and low-code tools to validate UX and product workflows",
@@ -88,7 +88,7 @@
             "Enterprise Solution Engineering",
             "MySQL, PHP, Web technologies, Flash (ActionScript)"
         ],
-        "resource": "/src/assets/images/capem_case_study.jpg",
+        "resource": "/src/assets/images/capem_case_study.jpeg",
         "contributions": [
             "Built a self-service touchscreen kiosk integrated with the financial system for account setup, balance checks, and receipt printing",
             "Created real-time dashboards to monitor analyst performance, handling times, and case volume, helping reduce customer wait times",
