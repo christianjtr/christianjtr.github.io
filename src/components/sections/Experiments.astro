@@ -111,14 +111,13 @@ const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
             <main class="lg:col-span-3 space-y-8">
                 {featuredExperiments.map((experiment: Experiment, index) => (
                     <div class="card experiment-card flex flex-col w-full bg-base-100" data-category={experiment.category}>
-                        <div class="border-b border-neutral-200 overflow-hidden rounded-t-lg">
-                            <figure class="w-full visual-studio-mesh">
-                                <div class="industrial-matte-sheet">
-                                    <div class="glass-reflection-overlay"></div>
+                        <div class="experiment-image-wrap">
+                            <figure class="experiment-image-stage">
+                                <div class="experiment-image-frame">
+                                    <div class="experiment-image-reflection"></div>
                                     <AsyncImage 
                                         imagePath={experiment.image} 
                                         title={experiment.title} 
-                                        class="inner-asset" 
                                         loading="lazy"
                                     />
                                 </div>
@@ -225,38 +224,60 @@ const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
         @apply text-accent;
     }
 
-    .visual-studio-mesh {
-        @apply w-full rounded-t-lg flex items-center justify-center p-2 md:p-8 overflow-hidden relative border border-neutral-100;
-        background-color: #fafafa;
-        background-image: linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
-        background-size: 24px 24px;
-    }
-    html[data-theme="dark"] .visual-studio-mesh {
-        @apply border-neutral-800/80;
-        background-color: #0c101b;
-        background-image: linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+    .experiment-image-wrap {
+        @apply overflow-hidden border-b border-neutral-200 dark:border-neutral-800;
     }
 
-    .industrial-matte-sheet {
-        @apply relative w-full h-auto overflow-hidden border border-neutral-200/60 bg-white flex items-center justify-center p-1 z-0;
+    .experiment-image-stage {
+        @apply relative flex w-full items-center justify-center overflow-hidden p-3 md:p-6;
+        background-color: #fafafa;
+        background-image: radial-gradient(ellipse at 50% 50%, rgba(72,79,217,0.08), transparent 68%), linear-gradient(rgba(0,0,0,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.035) 1px, transparent 1px);
+        background-size: auto, 24px 24px, 24px 24px;
+    }
+
+    :global(html[data-theme="dark"]) .experiment-image-stage {
+        background-color: #0c101b;
+        background-image: radial-gradient(ellipse at 50% 50%, rgba(41,242,185,0.08), transparent 68%), linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+        background-size: auto, 24px 24px, 24px 24px;
+    }
+
+    .experiment-image-frame {
+        @apply relative z-0 flex h-auto w-full items-center justify-center overflow-hidden rounded-xl border border-neutral-200/70 bg-white p-2 transition-transform duration-500 md:rounded-2xl md:p-3;
         box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.02), inset 0 1px 0 rgba(255, 255, 255, 0.6);
     }
-    html[data-theme="dark"] .industrial-matte-sheet {
+
+    :global(html[data-theme="dark"]) .experiment-image-frame {
         @apply border-neutral-800/80 bg-neutral-950;
         box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.03), inset 0 1px 0 rgba(255, 255, 255, 0.05);
     }
 
-    .glass-reflection-overlay {
+    :global(.experiment-image-frame img) {
+        @apply relative z-0 h-auto max-h-[460px] w-full rounded-lg object-contain transition-transform duration-700;
+    }
+
+    .experiment-card:hover .experiment-image-frame {
+        @apply -translate-y-0.5;
+    }
+
+    .experiment-card:hover .experiment-image-frame img {
+        @apply scale-[1.01];
+    }
+
+    .experiment-image-reflection {
         @apply absolute inset-0 pointer-events-none z-10 opacity-40;
         background: linear-gradient(135deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0) 40%, rgba(0,0,0,0.03) 60%, rgba(0,0,0,0) 100%);
     }
-    html[data-theme="dark"] .glass-reflection-overlay {
+
+    :global(html[data-theme="dark"]) .experiment-image-reflection {
         @apply opacity-20;
         background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0.2) 100%);
     }
 
-    .inner-asset {
-        @apply w-full h-auto object-contain max-h-[340px] relative z-0 select-none;
+    @media (prefers-reduced-motion: reduce) {
+        .experiment-image-frame,
+        :global(.experiment-image-frame img) {
+            transition-duration: 0.01ms;
+        }
     }
 
     .card-description {

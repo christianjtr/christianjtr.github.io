@@ -30,7 +30,7 @@ const { common } = (commonData?.data as AboutMeData) || {};
                 <h3 class="expertise-modal-title">{subject.name}</h3>
             </div>
             <form method="dialog">
-                <button class="btn btn-sm btn-circle btn-ghost text-neutral-400 dark:text-neutral-500 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">✕</button>
+                <button aria-label={common.close_dialog} class="btn btn-sm btn-circle btn-ghost text-neutral-400 dark:text-neutral-500 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">✕</button>
             </form>
         </div>
 
@@ -42,7 +42,6 @@ const { common } = (commonData?.data as AboutMeData) || {};
             ))}
         </div>
     </div>
-    
     <form method="dialog" class="modal-backdrop">
         <button>close</button>
     </form>

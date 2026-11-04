@@ -25,18 +25,14 @@ const { common } = (commonData?.data as AboutMeData) || {};
             <div>
                 <span class="workcase-modal-label">{common.key_contributions}</span>
                 <h3 id={`${modalId}_title`} class="workcase-modal-title">{workcase.title}</h3>
-                <div class="workcase-modal-meta">
+                <p class="workcase-modal-meta">
                     <span class="font-semibold text-base-content">{workcase.company}</span>
                     <span>{workcase.role}</span>
                     <span>{workcase.period}</span>
-                </div>
+                </p>
             </div>
             <form method="dialog">
-                <button
-                    type="submit"
-                    aria-label={common.close_dialog}
-                    class="btn btn-sm btn-circle btn-ghost workcase-modal-close"
-                >✕</button>
+                <button aria-label={common.close_dialog} class="btn btn-sm btn-circle btn-ghost text-neutral-400 dark:text-neutral-500 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">✕</button>
             </form>
         </div>
         <section class="workcase-modal-content" aria-labelledby={`${modalId}_contributions`}>
@@ -57,15 +53,9 @@ const { common } = (commonData?.data as AboutMeData) || {};
                     ))}
                 </ol>
             </div>
-            <div class="workcase-modal-tags">
-                <BadgeList items={workcase.tags || []} badgeClass='badge-sm' />
-            </div>
+            <BadgeList items={workcase.tags || []} badgeClass='badge-sm' wrapperClass="workcase-modal-tags" />
         </section>
     </div>
-    <form method="dialog" class="modal-backdrop">
-        <button aria-label={common.close_dialog}>close</button>
-    </form>
-
 </dialog>
 
 <style>
@@ -90,10 +80,6 @@ const { common } = (commonData?.data as AboutMeData) || {};
 
     .workcase-modal-title {
         @apply mt-2 max-w-4xl text-2xl font-bold leading-tight tracking-tight text-neutral-900 sm:text-3xl;
-    }
-
-    .workcase-modal-close {
-        @apply shrink-0 text-base-content/55 transition-colors hover:bg-base-200 hover:text-base-content;
     }
 
     .workcase-modal-content {
