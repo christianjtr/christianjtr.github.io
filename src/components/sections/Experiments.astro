@@ -6,11 +6,11 @@ import type { ContentDataEntryType } from '@app-types/Content';
 import type { AboutMeData } from '@schemas/AboutMeSchema';
 import type { Experiment, ExperimentRole } from '@schemas/ExperimentSchema';
 import { CONTENT } from '@app-types/Content';
-import { BadgeList, LinkButton, Section, Badge, AsyncImage } from "../";
+import { BadgeList, LinkButton, Section, Badge, AsyncImage } from "@components";
 import Logo from '@assets/svg/case_of_studies.svg';
 import TrashIcon from '@assets/svg/trash.svg';
 import ChevronIcon from '@assets/svg/chevron.svg';
-import ExperimentAbstractModal from './ExperimentAbstractModal.astro'
+import ExperimentAbstractModal from '@components/modals/ExperimentAbstractModal.astro';
 
 const roleIcons: Record<ExperimentRole, string> = {
     'Author': '🧑🏻‍💻',
