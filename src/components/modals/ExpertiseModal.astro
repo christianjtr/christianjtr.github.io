@@ -30,7 +30,7 @@ const { common } = (commonData?.data as AboutMeData) || {};
                 <h3 class="expertise-modal-title">{subject.name}</h3>
             </div>
             <form method="dialog">
-                <button aria-label={common.close_dialog} class="btn btn-sm btn-circle btn-ghost text-neutral-400 dark:text-neutral-500 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">✕</button>
+                <button aria-label={common.close_dialog} class="btn btn-sm btn-circle btn-ghost modal-close-button">✕</button>
             </form>
         </div>
 
@@ -51,19 +51,19 @@ const { common } = (commonData?.data as AboutMeData) || {};
     @reference "@styles/global.css";
 
     .expertise-modal-box {
-        @apply bg-base-100 border-neutral-200 text-neutral-900 border rounded-2xl p-6 max-w-md w-full transition-all duration-300 shadow-2xl;
+        @apply w-full max-w-md rounded-2xl border border-base-300 bg-base-100 p-6 text-base-content shadow-2xl transition-all duration-300;
     }
 
     .expertise-modal-header {
-        @apply flex items-center justify-between pb-3 mb-5 border-b border-neutral-100;
+        @apply mb-5 flex items-center justify-between border-b border-base-200 pb-3;
     }
 
     .expertise-modal-label {
-        @apply text-[10px] font-bold tracking-widest text-primary uppercase font-mono;
+        @apply font-mono text-[10px] font-bold tracking-widest text-primary uppercase;
     }
 
     .expertise-modal-title {
-        @apply text-xl font-bold text-neutral-900;
+        @apply text-xl font-bold text-base-content;
     }
 
     .expertise-modal-chip-list {
@@ -71,36 +71,14 @@ const { common } = (commonData?.data as AboutMeData) || {};
     }
 
     .expertise-modal-chip {
-        @apply bg-neutral-100 border-neutral-200 text-neutral-700 px-3 py-1.5 rounded-xl border hover:border-primary/50 transition-colors duration-200 cursor-default select-none;
+        @apply cursor-default select-none rounded-xl border border-base-300 bg-base-200 px-3 py-1.5 text-base-content/80 transition-colors duration-200 hover:border-primary/50;
     }
 
-    .expertise-modal-chip-separator {
-        @apply text-neutral-300 font-normal select-none mx-0.5;
+    :global(html[data-theme="dark"]) .expertise-modal-chip:hover {
+        @apply border-accent/50;
     }
 
-    html[data-theme="dark"] {
-        & .expertise-modal-box {
-            @apply bg-neutral-900 border-neutral-800 text-white;
-        }
-
-        & .expertise-modal-header {
-            @apply border-neutral-800;
-        }
-
-        & .expertise-modal-label {
-            @apply text-accent;
-        }
-
-        & .expertise-modal-title {
-            @apply text-white;
-        }
-
-        & .expertise-modal-chip {
-            @apply bg-neutral-950 border-neutral-800 text-neutral-200 hover:border-accent/50;
-        }
-
-        & .expertise-modal-chip-separator {
-            @apply text-neutral-700;
-        }
+    .modal-close-button {
+        @apply text-base-content/50 transition-colors hover:bg-base-200;
     }
 </style>

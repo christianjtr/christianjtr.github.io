@@ -14,8 +14,8 @@ const { headingTitle, headingClass, subtitle, ...attributes } = Astro.props;
     <div class="title-wrapper">
         <slot name="beforeHeading"/>
         <div>
-            <h1 class:list={[headingClass, 'section-header']}>{headingTitle}</h1>
-            {subtitle && (<span class="subtitle">{subtitle}</span>)}
+            <h1 class:list={[headingClass, 'section-heading']}>{headingTitle}</h1>
+            {subtitle && (<span class="section-subtitle">{subtitle}</span>)}
         </div>
     </div>
     <slot />
@@ -23,27 +23,22 @@ const { headingTitle, headingClass, subtitle, ...attributes } = Astro.props;
 
 <style>
     @reference "@styles/global.css";
-    
+
     .title-wrapper {
-        @apply flex lg:items-center gap-3 my-6 flex-col items-start lg:flex-row px-5 lg:px-0;
+        @apply my-6 flex flex-col items-start gap-3 px-5 lg:flex-row lg:items-center lg:px-0;
     }
 
-    .subtitle {
-        @apply text-neutral-500 text-lg font-light block dark:text-base-content;
-    }
-
-    h1 {
-        @apply font-semibold mb-1;
+    .section-heading {
+        @apply mb-1 font-semibold text-base-content;
         font-size: clamp(2rem, 3vw, 2.75rem);
-        color: var(--color-neutral-dark);
     }
 
-    html[data-theme="dark"] h1 {
-        color: var(--color-neutral-light); 
+    .section-subtitle {
+        @apply block text-lg font-light text-neutral-500 dark:text-base-content;
     }
-   h1::after {
-        @apply text-5xl;
+
+    h1::after {
         content: ".";
-        color: var(--color-accent);
+        @apply text-5xl text-accent;
     }
 </style>

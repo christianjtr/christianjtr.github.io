@@ -19,7 +19,7 @@ const { sections } = Astro.props;
     </summary>
     
     <div class="card card-sm dropdown-content z-50 mt-2 min-w-[200px]">
-        <div class="card-body dropdown-menu-content p-3">
+        <div class="card-body rounded-box border border-base-content/5 bg-base-300 p-3 shadow-xl">
             <nav aria-label="Mobile navigation">
                 <ul class="menu menu-md p-0 gap-1">
                     {sections.filter((section) => section.active).map((section) => (
@@ -70,11 +70,6 @@ const { sections } = Astro.props;
 </script>
 
 <style>
-    @reference "@styles/global.css";
-    
-    .dropdown-menu-content {
-        @apply bg-base-300 rounded-box shadow-xl border border-base-content/5;
-    }
     summary::-webkit-details-marker {
         display: none;
     }

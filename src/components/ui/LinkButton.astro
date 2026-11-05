@@ -10,7 +10,7 @@ interface Props extends HTMLAttributes<'a'> {
 const { displayDefaultIcon = false, class: className = "", ...attributes } = Astro.props;
 ---
 
-<a class:list={['btn btn-lg bg-primary animated-btn', [className]]} {...attributes}>
+<a class:list={['link-button', className]} {...attributes}>
     <slot />
     <slot name="icon" />
     {displayDefaultIcon && <ExternalLinkIcon />}
@@ -19,19 +19,17 @@ const { displayDefaultIcon = false, class: className = "", ...attributes } = Ast
 <style>
     @reference "tailwindcss";
 
-    a {
-        @apply text-white w-fit rounded-4xl border-0 flex gap-2;
+    @reference "@styles/global.css";
+
+    .link-button {
+        @apply btn btn-lg flex w-fit gap-2 rounded-4xl border-0 bg-primary text-white transition-all duration-300 ease-in-out;
+    }
+
+    .link-button:hover {
+        @apply scale-110;
     }
 
     a.btn-circle {
         @apply w-9 h-9;
-    }
-
-    a.animated-btn {
-        @apply transition-all duration-300 ease-in-out transform;
-    }
-
-    a.animated-btn:hover {
-        @apply scale-110;
     }
 </style>

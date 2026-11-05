@@ -134,7 +134,7 @@ const backgroundItems: Background[] = [
                 </div>
             </div>
             <div class="w-full">
-                <div class="w-full flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-6 py-3.5 my-5 font-sans items-start">
+                <div class="experience-section-heading">
                     <h1 class="text-xl font-black uppercase tracking-wide leading-none">
                         {common.experiences}
                     </h1>
@@ -178,7 +178,7 @@ const backgroundItems: Background[] = [
                                                             <span class="font-extrabold text-md block text-primary">{item.organization}</span>
                                                             <span class="text-sm font-semibold block leading-tight">{item.title}</span>
                                                         </div>
-                                                        <span class="badge badge-ghost badge-sm font-sans font-bold uppercase text-[10px] tracking-wider px-2 py-1 h-auto animate-pulse shrink-0 select-none">
+                                                        <span class="badge badge-ghost badge-sm experience-ongoing-badge">
                                                             {common.ongoing}
                                                         </span>
                                                     </div>
@@ -204,7 +204,7 @@ const backgroundItems: Background[] = [
                             );
                         })}
                     </div>
-                    <div class="lg:col-span-4 editorial-card rounded-lg p-5 shadow-2xs flex flex-col w-full space-y-4 lg:sticky lg:top-24 hover:border-secondary/40 transition-colors duration-200">
+                    <div class="lg:col-span-4 editorial-card academic-study-card">
                         <div class="flex items-center justify-between pb-2.5 w-full">
                             <div class="flex items-center gap-2">
                                 <AcademicCapIcon width={14} height={14} class="text-secondary stroke-2" />
@@ -245,6 +245,22 @@ const backgroundItems: Background[] = [
 
     .editorial-card:hover {
         @apply border border-primary/70 shadow-lg shadow-primary/10 -translate-y-1;
+    }
+
+    .academic-study-card {
+        @apply space-y-4 shadow-2xs transition-colors duration-200 lg:sticky lg:top-24;
+    }
+
+    .academic-study-card:hover {
+        @apply border-secondary/40;
+    }
+
+    .experience-section-heading {
+        @apply my-5 flex w-full flex-col items-start justify-between gap-3 px-6 py-3.5 font-sans sm:flex-row sm:items-center;
+    }
+
+    .experience-ongoing-badge {
+        @apply h-auto shrink-0 select-none px-2 py-1 font-sans text-[10px] font-bold tracking-wider uppercase animate-pulse;
     }
 
     .background-item {

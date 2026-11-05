@@ -109,31 +109,6 @@ const { subjects } = Astro.props;
         @apply text-neutral-400;
     }
 
-    .expertise-feature-grid .expertise-feature-card__tools {
-        @apply flex flex-wrap gap-1.5 items-center text-[11px] opacity-95;
-    }
-
-    .expertise-feature-card__tool-pill {
-        @apply font-medium tracking-wide text-neutral-600;
-    }
-    html[data-theme="dark"] .expertise-feature-card__tool-pill {
-        @apply text-neutral-400;
-    }
-
-    .expertise-feature-card__tool-separator {
-        @apply text-neutral-300;
-    }
-    html[data-theme="dark"] .expertise-feature-card__tool-separator {
-        @apply text-neutral-700;
-    }
-
-    .expertise-feature-card__more-badge {
-        @apply text-[11px] uppercase font-bold px-1.5 py-0.5 rounded bg-primary text-white font-mono;
-    }
-    html[data-theme="dark"] .expertise-feature-card__more-badge {
-        @apply bg-accent text-neutral-950;
-    }
-
     @media (max-width: 639px) {
         .expertise-feature-card {
             padding: 0.875rem;

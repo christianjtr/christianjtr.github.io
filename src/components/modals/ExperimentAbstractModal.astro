@@ -22,10 +22,10 @@ const { common } = (commonData?.data as AboutMeData) || {};
         <div class="experiment-modal-header">
             <h4 class="experiment-modal-label">{common.abstract}</h4>
             <form method="dialog">
-                <button class="btn btn-sm btn-circle btn-ghost text-neutral-400 dark:text-neutral-500 hover:bg-neutral-100 dark:hover:bg-neutral-800">✕</button>
+                <button class="btn btn-sm btn-circle btn-ghost modal-close-button">✕</button>
             </form>
         </div>
-        <p class="space-y-4 text-base">{text}</p>
+        <p class="experiment-modal-copy">{text}</p>
     </div>
 </dialog>
 
@@ -33,36 +33,22 @@ const { common } = (commonData?.data as AboutMeData) || {};
     @reference "@styles/global.css";
 
     .experiment-modal-box {
-        @apply bg-base-100 border-neutral-200 text-neutral-900 border rounded-2xl w-full transition-all duration-300 shadow-2xl;
+        @apply w-full max-w-md rounded-2xl border border-base-300 bg-base-100 text-base-content shadow-2xl transition-all duration-300;
     }
 
     .experiment-modal-header {
-        @apply flex items-center justify-between pb-3 mb-5 border-b border-neutral-100;
+        @apply mb-5 flex items-center justify-between border-b border-base-200 pb-3;
     }
 
     .experiment-modal-label {
-        @apply text-sm font-bold tracking-widest text-primary uppercase font-mono;
+        @apply font-mono text-sm font-bold tracking-widest text-primary uppercase;
     }
 
-    .experiment-modal-title {
-        @apply text-xl font-bold text-neutral-900;
+    .experiment-modal-copy {
+        @apply text-base leading-relaxed;
     }
 
-    html[data-theme="dark"] {
-        & .experiment-modal-box {
-            @apply bg-neutral-900 border-neutral-800 text-white;
-        }
-
-        & .experiment-modal-header {
-            @apply border-neutral-800;
-        }
-
-        & .experiment-modal-label {
-            @apply text-accent;
-        }
-
-        & .experiment-modal-title {
-            @apply text-white;
-        }
+    .modal-close-button {
+        @apply text-base-content/50 transition-colors hover:bg-base-200;
     }
 </style>

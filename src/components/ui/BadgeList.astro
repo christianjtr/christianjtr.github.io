@@ -15,7 +15,7 @@ const { items = [], badgeClass = "", wrapperClass, ...attributes } = Astro.props
 const shouldRenderItems = items.length > 0;
 ---
 
-<div  class:list={['badge-list-wrapper', wrapperClass]} {...attributes}>
+<div class:list={['badge-list-wrapper', wrapperClass]} {...attributes}>
     <slot />
     {shouldRenderItems && items?.map((item) => (
         <Badge class:list={["badge-soft", badgeClass]}>{item}</Badge>
@@ -23,8 +23,8 @@ const shouldRenderItems = items.length > 0;
 </div>
 
 <style>
-    @reference "tailwindcss";
-    
+    @reference "@styles/global.css";
+
     .badge-list-wrapper {
         @apply flex flex-wrap gap-3;
     }

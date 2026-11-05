@@ -752,34 +752,10 @@ const { common, section_about, section_experiences, section_studies } = (entry?.
         min-width: 0;
     }
 
-    .primary-text {
-        @apply text-primary;
-    }
-
-    .tooltip-wrapper {
-        @apply tooltip tooltip-secondary;
-    }
-
-    html[data-theme="dark"] .primary-text {
-        @apply text-accent;
-    }
-
-    .text-info-content-color {
-        @apply text-neutral-500;
-    }
-
-    html[data-theme="dark"] .text-info-content-color {
-        @apply text-base-content;
-    }
-
     @media (min-width: 1024px) {
         .mobile-hobbies:hover div {
             display: flex !important;
         }
-    }
-
-    html[data-theme="dark"] .chat-bubble {
-        @apply bg-slate-500;
     }
 
     @keyframes orbit-dot-pulse {

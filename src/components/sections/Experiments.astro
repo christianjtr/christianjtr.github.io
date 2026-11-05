@@ -8,7 +8,6 @@ import { CONTENT } from '@app-types/Content';
 import { BadgeList, LinkButton, Section, Badge, AsyncImage } from "@components";
 import Logo from '@assets/svg/case_of_studies.svg';
 import TrashIcon from '@assets/svg/trash.svg';
-import ChevronIcon from '@assets/svg/chevron.svg';
 import ExperimentAbstractModal from '@components/modals/ExperimentAbstractModal.astro';
 
 const roleIcons: Record<ExperimentRole, string> = {
@@ -27,8 +26,7 @@ const { section_experiments, common, header } = (commonData?.data as AboutMeData
 const { data: experiments } = experimentsData as { data: Experiment[]};
 
 const experimentsToDisplay = experiments.filter(exp => exp.display && !exp.isSandbox);
-const featuredExperiments = experimentsToDisplay.filter(exp => !exp.isSandbox);
-const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
+const featuredExperiments = experimentsToDisplay;
 const uniqueTopics = Array.from(
     featuredExperiments.reduce((topics, { topic }) => {
         topics.set(topic, (topics.get(topic) ?? 0) + 1);
@@ -42,8 +40,8 @@ const uniqueTopics = Array.from(
     <Section headingTitle={section_experiments.title} subtitle={section_experiments.subtitle} class="container mx-auto px-1 lg:px-10">
         <Logo slot="beforeHeading" width={96} height={96} />
         <br />
-        <div class="grid grid-cols-1 gap-6 px-2 md:grid-cols-4 md:px-4 lg:grid-cols-4 lg:px-14 mt-6 items-start">
-            <aside class="experiment-filters md:col-span-1 lg:col-span-1 lg:sticky lg:top-24 self-start">
+        <div class="experiments-layout">
+            <aside class="experiment-filters-column">
                 <div class="filter-panel">
                     <div class="filter-panel__header">
                         <h3 class="filter-panel__title">{common.filter_experience}</h3>
@@ -80,35 +78,11 @@ const uniqueTopics = Array.from(
                     </form>
                 </div>
 
-                <!--TODO: Review these projects before displaying the section -->
-                <!-- {sandboxExperiments.length > 0 && (
-                    <div class="lg:block p-5 rounded-lg sandbox-panel">
-                        <h3 class="text-xs font-bold uppercase tracking-wider text-neutral-400">🧪 {common.laboratory}</h3>
-                        <div class="flex flex-col gap-2 pt-6">
-                            {sandboxExperiments.map((exp) => (
-                                <a 
-                                    href={exp.url} 
-                                    target="_blank" 
-                                    rel="noopener noreferrer" 
-                                    class="group flex items-center gap-3 p-2 rounded-lg hover:bg-neutral-100/30 transition-all duration-200 sandbox-link"
-                                >
-                                    <h4 class="flex-1 font-medium text-xs text-neutral-700 group-hover:text-primary transition-colors sandbox-link-title leading-5">
-                                        {exp.title}
-                                    </h4>
-                                    <span class="chevron-icon">
-                                        <ChevronIcon />
-                                    </span>
-                                </a>
-                            ))}
-                        </div>
-                    </div>
-                )} -->
-
             </aside>
-            <main class="md:col-span-3 lg:col-span-3 space-y-8">
+            <main class="experiment-cards">
                 {featuredExperiments.map((experiment: Experiment, index) => (
                     <div
-                        class="card experiment-card flex flex-col w-full bg-base-100"
+                        class="card experiment-card"
                         data-topic={experiment.topic}
                         data-wip={experiment.isWIP ? 'true' : 'false'}
                     >
@@ -124,14 +98,14 @@ const uniqueTopics = Array.from(
                                 </div>
                             </figure>
                         </div>
-                        <div class="p-8 flex flex-col justify-between flex-1">
-                                <div class="flex flex-col gap-2 sm:flex-row sm:justify-between sm:items-center mb-2">
-                                    <div class="flex flex-wrap gap-2">
+                        <div class="experiment-card-content">
+                                <div class="experiment-card-topline">
+                                    <div class="experiment-card-badges">
                                         <Badge class="badge-sm badge-primary uppercase">{experiment.category}</Badge>
                                         {experiment.year && <Badge class="badge-warning font-semibold badge-sm">{experiment.year}</Badge>}
                                     </div>
                                     {experiment.url && (
-                                        <div class="flex gap-3 items-center justify-between sm:justify-end w-full sm:w-auto mt-1 sm:mt-0">
+                                        <div class="experiment-card-actions">
                                             {experiment.abstract && (
                                                 <button 
                                                     class="btn btn-outline btn-xs text-secondary" 
@@ -156,18 +130,18 @@ const uniqueTopics = Array.from(
                                         </div>
                                     )}
                                 </div>
-                                <div class="flex items-center gap-2 mb-2">
+                                <div class="experiment-card-role">
                                     <span class="text-xl">{roleIcons[experiment.role]}</span>
-                                    <span class="text-xs text-neutral-500 font-medium uppercase">
+                                    <span class="experiment-card-role-label">
                                         {experiment.role === "Author" ? `${common.author}` : `${common.contributor}`}
                                     </span>
                                 </div>
-                                <h2 class="text-xl font-semibold mb-1">{experiment.title}</h2>
-                                <div class="mb-3 text-sm font-semibold primary-text">{experiment.type}</div>
-                                <p class="text-neutral-800 text-md leading-7 mb-5 card-description">
+                                <h2 class="experiment-card-title">{experiment.title}</h2>
+                                <div class="experiment-card-type">{experiment.type}</div>
+                                <p class="experiment-card-description">
                                     {experiment.description}
                                 </p>
-                            <div class="mt-auto pt-4 border-t border-base-300"> 
+                            <div class="experiment-card-footer">
                                 <BadgeList items={experiment.tags} badgeClass="font-semibold badge-soft text-[11px]" />
                             </div>
                         </div>
@@ -183,11 +157,20 @@ const uniqueTopics = Array.from(
 <style>
     @reference "@styles/global.css";
     
-    .primary-text { @apply text-primary; }
-    html[data-theme="dark"] .primary-text { @apply text-accent; }
+    .experiments-layout {
+        @apply mt-6 grid grid-cols-1 items-start gap-6 px-2 md:grid-cols-4 md:px-4 lg:grid-cols-4 lg:px-14;
+    }
+
+    .experiment-filters-column {
+        @apply self-start md:col-span-1 lg:sticky lg:top-24 lg:col-span-1;
+    }
+
+    .experiment-cards {
+        @apply space-y-8 md:col-span-3 lg:col-span-3;
+    }
     
     .card {
-        @apply border border-neutral-200/80 overflow-hidden rounded-lg transition-all duration-300 text-neutral-900;
+        @apply flex w-full flex-col overflow-hidden rounded-lg border border-neutral-200/80 bg-base-100 text-neutral-900 transition-all duration-300;
     }
     .card:hover {
         @apply border border-primary/70 shadow-lg shadow-primary/10 -translate-y-1;
@@ -199,6 +182,50 @@ const uniqueTopics = Array.from(
 
     html[data-theme="dark"] .card:hover {
         @apply border-accent/70 shadow-accent/5;
+    }
+
+    .experiment-card-content {
+        @apply flex flex-1 flex-col justify-between p-8;
+    }
+
+    .experiment-card-topline {
+        @apply mb-2 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between;
+    }
+
+    .experiment-card-badges {
+        @apply flex flex-wrap gap-2;
+    }
+
+    .experiment-card-actions {
+        @apply mt-1 flex w-full items-center justify-between gap-3 sm:mt-0 sm:w-auto sm:justify-end;
+    }
+
+    .experiment-card-role {
+        @apply mb-2 flex items-center gap-2;
+    }
+
+    .experiment-card-role-label {
+        @apply text-xs font-medium text-neutral-500 uppercase;
+    }
+
+    .experiment-card-title {
+        @apply mb-1 text-xl font-semibold;
+    }
+
+    .experiment-card-type {
+        @apply mb-3 text-sm font-semibold text-primary;
+    }
+
+    html[data-theme="dark"] .experiment-card-type {
+        @apply text-accent;
+    }
+
+    .experiment-card-description {
+        @apply mb-5 text-base leading-7 text-base-content;
+    }
+
+    .experiment-card-footer {
+        @apply mt-auto border-t border-base-300 pt-4;
     }
 
     .filter-panel {
@@ -408,10 +435,6 @@ const uniqueTopics = Array.from(
         overflow-wrap: anywhere;
     }
 
-    html[data-theme="dark"] .sandbox-link-title {
-        @apply text-white;
-    }
-
     html[data-theme="dark"] .filter-panel {
         @apply border-neutral-800 bg-neutral-900;
         box-shadow: 0 16px 38px -28px rgb(0 0 0 / 0.9);
@@ -462,14 +485,6 @@ const uniqueTopics = Array.from(
 
     html[data-theme="dark"] .topic-filter:checked + .filter-choice-label {
         @apply border-accent/70 bg-accent/5 text-accent;
-    }
-
-    .chevron-icon {
-        @apply text-xs text-primary group-hover:opacity-100 group-hover:translate-x-0.5 transition-all duration-200 shrink-0 pr-1;
-    }
-
-    html[data-theme="dark"] .chevron-icon {
-        @apply text-accent;
     }
 
     .experiment-image-wrap {
@@ -526,10 +541,6 @@ const uniqueTopics = Array.from(
         :global(.experiment-image-frame img) {
             transition-duration: 0.01ms;
         }
-    }
-
-    .card-description {
-        @apply dark:text-base-content;
     }
 
     @media (max-width: 1023px) {

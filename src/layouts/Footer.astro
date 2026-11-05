@@ -50,154 +50,86 @@ const copyrights = `Copyrights © ${new Date().getFullYear()}`;
   @reference "@styles/global.css";
 
   .site-footer {
-    position: relative;
-    overflow: hidden;
+    @apply relative overflow-hidden bg-[#202635] text-slate-50;
     padding: clamp(1.25rem, 3vw, 2rem) clamp(1.25rem, 5vw, 4rem);
-    background: #202635;
-    color: #f8fafc;
   }
 
   .site-footer::before {
     position: absolute;
     inset: 0 0 auto;
     height: 2px;
-    background: linear-gradient(90deg, transparent, var(--color-electric-teal), var(--color-cobalt-blue), transparent);
+    background: linear-gradient(90deg, transparent, var(--color-accent), var(--color-primary), transparent);
     content: "";
+    pointer-events: none;
   }
 
   .footer-shell {
-    display: grid;
-    width: min(100%, 80rem);
+    @apply mx-auto grid w-full max-w-[80rem] items-start;
     grid-template-columns: minmax(12rem, 1.2fr) minmax(12rem, 1fr) minmax(10rem, 0.8fr);
-    align-items: start;
     gap: clamp(1.25rem, 3vw, 2.5rem);
-    margin-inline: auto;
   }
 
   .footer-brand,
   .footer-group {
-    min-width: 0;
+    @apply min-w-0;
   }
 
   .footer-name {
-    margin: 0;
-    color: #fff;
-    font-size: 1.1rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
+    @apply m-0 text-[1.1rem] font-bold tracking-[-0.02em] text-white;
   }
 
   .footer-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem 0.8rem;
-    margin-top: 0.35rem;
-    color: #aeb8c7;
-    font-size: 0.72rem;
+    @apply mt-[0.35rem] flex flex-wrap gap-x-[0.8rem] gap-y-[0.4rem] text-[0.72rem] text-[#aeb8c7];
   }
 
   .footer-version {
-    color: var(--color-electric-teal);
-    font-family: var(--font-mono);
+    @apply font-mono text-accent;
   }
 
-  .footer-group :global(.footer-title) {
-    margin: 0 0 0.55rem;
-    color: #aeb8c7;
-    font-size: 0.67rem;
-    font-weight: 700;
-    letter-spacing: 0.13em;
+  .footer-title {
+    @apply m-0 mb-[0.55rem] text-[0.67rem] font-bold tracking-[0.13em] text-[#aeb8c7];
   }
 
   .footer-logos {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.75rem;
+    @apply flex flex-wrap items-center gap-3;
   }
 
   .footer-logo-link {
-    display: inline-flex;
-    min-height: 2.25rem;
-    align-items: center;
-    justify-content: center;
-    padding: 0.4rem 0.65rem;
-    border: 1px solid rgb(255 255 255 / 0.12);
-    border-radius: 0.7rem;
-    background: rgb(255 255 255 / 0.04);
-    transition: border-color 180ms ease, background-color 180ms ease, transform 180ms ease;
-  }
-
-  .footer-logo-link:hover {
-    transform: translateY(-2px);
-    border-color: rgb(41 242 185 / 0.45);
-    background: rgb(255 255 255 / 0.08);
+    @apply inline-flex min-h-9 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] px-[0.65rem] py-[0.4rem] transition-[border-color,background-color,transform] duration-200 hover:-translate-y-0.5 hover:border-accent/45 hover:bg-white/[0.08];
   }
 
   .footer-logo {
-    display: block;
-    width: 5.25rem;
-    max-height: 1.5rem;
+    @apply block max-h-6 w-[5.25rem];
   }
 
   .footer-links {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.35rem;
+    @apply flex flex-col items-start gap-[0.35rem];
   }
 
   .footer-links a {
-    color: #f8fafc;
-    font-size: 0.84rem;
-    text-decoration-color: transparent;
-    text-underline-offset: 0.2em;
-    transition: color 180ms ease, text-decoration-color 180ms ease;
-  }
-
-  .footer-links a:hover {
-    color: var(--color-electric-teal);
-    text-decoration: underline;
-    text-decoration-color: currentColor;
+    @apply text-[0.84rem] text-white decoration-transparent underline-offset-[0.2em] transition-colors duration-200 hover:text-accent hover:underline;
   }
 
   @media (max-width: 767px) {
     .footer-shell {
-        grid-template-columns: minmax(0, 1fr);
-        justify-items: center;
-        gap: 1rem;
-        text-align: center;
+      @apply grid-cols-1 justify-items-center gap-4 text-center;
     }
 
-    .footer-meta {
-        justify-content: center;
+    .footer-meta,
+    .footer-logos {
+      @apply justify-center;
     }
 
     .footer-group {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+      @apply flex flex-col items-center;
     }
 
-    .footer-group :global(.footer-title) {
-        margin-bottom: 0.4rem;
-    }
-
-    .footer-logos {
-        justify-content: center;
+    .footer-title {
+      @apply mb-[0.4rem];
     }
 
     .footer-links {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.5rem 1rem;
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .footer-logo-link {
-        transition: none;
+      @apply flex-row flex-wrap justify-center gap-x-4 gap-y-2;
     }
   }
 </style>

@@ -32,7 +32,7 @@ const { common } = (commonData?.data as AboutMeData) || {};
                 </p>
             </div>
             <form method="dialog">
-                <button aria-label={common.close_dialog} class="btn btn-sm btn-circle btn-ghost text-neutral-400 dark:text-neutral-500 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">✕</button>
+                <button aria-label={common.close_dialog} class="btn btn-sm btn-circle btn-ghost modal-close-button">✕</button>
             </form>
         </div>
         <section class="workcase-modal-content" aria-labelledby={`${modalId}_contributions`}>
@@ -67,6 +67,10 @@ const { common } = (commonData?.data as AboutMeData) || {};
     .workcase-modal-box {
         @apply max-h-[90dvh] w-full max-w-6xl overflow-y-auto rounded-3xl border border-neutral-200 bg-base-100 p-5 text-neutral-900 shadow-2xl sm:p-8;
         scrollbar-gutter: stable;
+    }
+
+    .modal-close-button {
+        @apply text-neutral-400 transition-colors hover:bg-neutral-100 dark:text-neutral-500 dark:hover:bg-neutral-800;
     }
 
     .workcase-modal-header {

@@ -175,13 +175,11 @@ const { data: workcases } = workcaseData as { data: WorkCaseStudy[] };
     :global(html[data-theme="dark"]) .workcase-card {
         @apply border-neutral-800 bg-neutral-900 hover:border-accent/60 hover:shadow-accent/5 focus-visible:outline-accent;
     }
-    .workcase-company { @apply mb-2 block truncate text-xs font-semibold tracking-wide text-base-content/65; }
     .workcase-card-visual { @apply mb-3 w-full min-w-0 aspect-2/1 overflow-hidden rounded-xl bg-base-200; }
     :global(.workcase-card-visual img) { @apply h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]; }
     .workcase-title { @apply block text-sm font-medium leading-snug tracking-tight text-base-content transition-colors group-hover:text-primary; }
     :global(html[data-theme="dark"]) .workcase-title { @apply group-hover:text-accent; }
     .workcase-card-meta { @apply mt-3 flex items-center gap-2; }
-    .workcase-period { @apply min-w-0 flex-1 truncate text-[11px] text-base-content/55; }
     .workcase-dialogs { @apply contents; }
 
     @media (max-width: 1023px) {
@@ -290,19 +288,6 @@ const { data: workcases } = workcaseData as { data: WorkCaseStudy[] };
 
     .media-column { @apply flex flex-col gap-5 col-span-full lg:col-span-8; }
 
-    .visual-studio-mesh {
-        @apply relative flex w-full items-center justify-center overflow-hidden rounded-2xl border border-neutral-100 p-3 transition-colors duration-300 md:p-6;
-        background-color: #fafafa;
-        background-image: radial-gradient(ellipse at 50% 50%, rgba(72,79,217,0.08), transparent 68%), linear-gradient(rgba(0,0,0,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.035) 1px, transparent 1px);
-        background-size: auto, 24px 24px, 24px 24px;
-    }
-    :global(html[data-theme="dark"]) .visual-studio-mesh {
-        @apply border-neutral-800/80;
-        background-color: #0c101b;
-        background-image: radial-gradient(ellipse at 50% 50%, rgba(41,242,185,0.08), transparent 68%), linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
-        background-size: auto, 24px 24px, 24px 24px;
-    }
-
     .industrial-matte-sheet {
         @apply relative z-0 flex h-auto w-full items-center justify-center overflow-hidden rounded-xl border border-neutral-200/70 bg-white p-2 transition-transform duration-500 md:rounded-2xl md:p-3;
     }
@@ -359,7 +344,6 @@ const { data: workcases } = workcaseData as { data: WorkCaseStudy[] };
         .project-index,
         .title,
         .summary,
-        .visual-studio-mesh,
         .industrial-matte-sheet,
         :global(.industrial-matte-sheet img) {
             transition-duration: 0.01ms;

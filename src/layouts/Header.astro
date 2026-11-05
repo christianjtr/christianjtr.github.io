@@ -17,7 +17,7 @@ const entry = await getEntry(lang as ContentDataEntryType, `${lang}/${CONTENT.CO
 const { header } = (entry?.data as AboutMeData) || {};
 ---
 
-<header transition:name="header" transition:persist>
+<header class="site-header" transition:name="header" transition:persist>
     <div class="navbar-container">
         <div class="navbar">
             <div class="navbar-start">
@@ -29,7 +29,7 @@ const { header } = (entry?.data as AboutMeData) || {};
                 {header.main_sections.filter((section) => section.active).map((section) => (
                     <a 
                         role="button"
-                        class="navbar-link hover:text-primary" 
+                        class="navbar-link"
                         href={`#${section.anchorId}`}
                         aria-label={`Go to ${section.label}`}
                     >
@@ -48,7 +48,7 @@ const { header } = (entry?.data as AboutMeData) || {};
                     >
                         <LanguageIcon width={24} height={24} />
                     </div>
-                    <ul tabindex="0" class="dropdown-content menu dropdown-menu-content" role="menu" aria-label="Language selector">
+                    <ul tabindex="0" class="dropdown-content menu z-1 mt-1 rounded-box bg-base-300 p-1 shadow-sm" role="menu" aria-label="Language selector">
                         {header.languages.map(({ name, locale}) => (
                             <li class:list={["lg:text-lg p-1.5", { "text-primary font-semibold": Astro.currentLocale === locale }]}>
                                 <a href={`/${locale}/`}>{name}</a>
@@ -68,33 +68,18 @@ const { header } = (entry?.data as AboutMeData) || {};
 </header>
 
 <style>
-   @reference "@styles/global.css";
+    @reference "@styles/global.css";
 
-    header {
-        @apply sticky top-0 z-50 transition-all duration-300 shadow-xs;
-        background: rgba(248, 250, 252, 0.8);
-        border: 1px solid rgba(226, 232, 240, 0.6);
-        backdrop-filter: blur(20px);
-    }
-    html[data-theme="dark"] header {
-        background: rgba(30, 41, 59, 0.85);
-        border-color: rgba(51, 65, 85, 0.5);
+    .site-header {
+        @apply sticky top-0 z-50 border border-base-300/60 bg-base-100/80 shadow-xs backdrop-blur-xl transition-all duration-300;
     }
 
     .navbar-container {
-        @apply container mx-auto w-full flex items-center justify-between h-20 px-3 md:px-14;
-    }
-
-    html[theme="dark"] header {
-        @apply bg-neutral-800/70;
+        @apply container mx-auto flex h-20 w-full items-center justify-between px-3 md:px-14;
     }
 
     .navbar-link {
-        @apply text-xl no-underline font-semibold;
-    }
-
-    .dropdown-menu-content {
-        @apply bg-base-300 rounded-box z-1 mt-1 p-1 shadow-sm;
+        @apply text-xl font-semibold no-underline hover:text-primary;
     }
 </style>
 
