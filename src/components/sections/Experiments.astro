@@ -59,7 +59,7 @@ const uniqueTopics = Array.from(
                             <h4 class="filter-topic-heading">{common.filter_topics}</h4>
                             <div class="filter-choices topic-options">
                                 {uniqueTopics.map(([topic, count], index) => (
-                                    <div class="filter-option topic-option" data-topic={topic}>
+                                    <div class="topic-option" data-topic={topic}>
                                         <input
                                             class="topic-filter"
                                             type="checkbox"
@@ -229,131 +229,55 @@ const uniqueTopics = Array.from(
     }
 
     .filter-panel {
-        position: relative;
-        overflow: hidden;
-        padding: 1rem;
-        border: 1px solid var(--color-base-300);
-        border-radius: 0.85rem;
-        background: var(--color-base-100);
-        box-shadow: 0 16px 38px -30px rgb(15 23 42 / 0.5);
+        @apply relative overflow-hidden rounded-lg border border-base-300 bg-base-100 p-4 shadow-sm;
     }
 
     .filter-panel__header {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        gap: 0.5rem;
-        margin-bottom: 0.9rem;
+        @apply mb-4 flex items-start justify-between gap-2;
     }
 
     .filter-panel__title {
-        margin: 0;
-        color: color-mix(in srgb, var(--color-base-content) 60%, transparent);
-        font-size: 0.95rem;
-        font-weight: 800;
-        letter-spacing: -0.025em;
-        line-height: 1.3;
+        @apply m-0 text-[0.95rem] leading-tight font-extrabold tracking-tight text-base-content/60;
     }
 
     .filter-reset {
-        display: inline-flex;
-        min-height: 1.9rem;
-        flex: 0 0 auto;
-        align-items: center;
-        justify-content: center;
-        gap: 0.35rem;
-        padding: 0.35rem 0.5rem;
-        border: 1px solid transparent;
-        border-radius: 0.55rem;
-        background: transparent;
-        color: var(--color-primary);
-        cursor: pointer;
-        font-size: 0.67rem;
-        font-weight: 700;
-        line-height: 1;
-        transition: border-color 160ms ease, color 160ms ease, background-color 160ms ease;
+        @apply inline-flex min-h-8 shrink-0 cursor-pointer items-center justify-center gap-1.5 rounded-lg border border-transparent bg-transparent px-2 py-1 text-[0.67rem] leading-none font-bold text-base-content/60 transition-colors duration-150;
     }
 
     .filter-reset:hover {
-        border-color: color-mix(in srgb, var(--color-error) 35%, var(--color-base-300));
-        background: color-mix(in srgb, var(--color-error) 8%, var(--color-base-100));
-        color: var(--color-error);
+        @apply border-error/35 bg-error/10 text-error;
     }
 
     .filter-reset:focus-visible {
-        outline: 3px solid color-mix(in srgb, var(--color-error) 65%, transparent);
-        outline-offset: 2px;
+        @apply outline-3 outline-error/65 outline-offset-2;
     }
 
     .filter-options {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr);
-        gap: 0.8rem;
-        margin: 0;
+        @apply m-0 grid grid-cols-1 gap-3;
     }
 
     .filter-topic-group {
-        display: grid;
-        gap: 0.55rem;
+        @apply grid gap-2;
     }
 
     .filter-topic-heading {
-        margin: 0;
-        color: color-mix(in srgb, var(--color-base-content) 52%, transparent);
-        font-family: var(--font-mono);
-        font-size: 0.62rem;
-        font-weight: 800;
-        letter-spacing: 0.12em;
-        line-height: 1.3;
-        text-transform: uppercase;
+        @apply m-0 font-mono text-[0.62rem] leading-tight font-extrabold tracking-[0.12em] text-base-content/50 uppercase;
     }
 
     .filter-choice-count {
-        display: inline-flex;
-        min-width: 1.25rem;
-        height: 1.25rem;
-        flex: 0 0 auto;
-        align-items: center;
-        justify-content: center;
-        padding-inline: 0.3rem;
-        border: 1px solid var(--color-base-300);
-        border-radius: 999px;
-        background: var(--color-base-100);
-        color: color-mix(in srgb, var(--color-base-content) 62%, transparent);
-        font-family: var(--font-mono);
-        font-size: 0.62rem;
-        font-weight: 800;
-        letter-spacing: normal;
-        line-height: 1;
+        @apply inline-flex h-5 min-w-5 shrink-0 items-center justify-center rounded-full border border-base-300 bg-base-100 px-1 font-mono text-[0.62rem] leading-none font-extrabold tracking-normal text-base-content/60;
     }
 
     .filter-choices {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.45rem;
+        @apply flex flex-wrap gap-2;
     }
 
     .wip-filter-label {
-        display: flex;
-        min-height: 2.75rem;
-        align-items: center;
-        gap: 0.55rem;
-        padding: 0.55rem 0.65rem;
-        border: 1px solid var(--color-base-300);
-        border-radius: 0.7rem;
-        background: var(--color-base-200);
-        color: var(--color-base-content);
-        cursor: pointer;
-        font-size: 0.75rem;
-        font-weight: 700;
-        line-height: 1.3;
-        transition: border-color 160ms ease, background-color 160ms ease, color 160ms ease;
+        @apply flex min-h-11 cursor-pointer items-center gap-2 rounded-xl border border-base-300 bg-base-200 px-2.5 py-2 text-xs leading-tight font-bold text-base-content transition-colors duration-150;
     }
 
     .wip-filter {
-        flex: 0 0 auto;
-        margin: 0;
-        cursor: pointer;
+        @apply m-0 shrink-0 cursor-pointer;
     }
 
     :global(html[data-theme="dark"]) .wip-filter {
@@ -361,78 +285,46 @@ const uniqueTopics = Array.from(
     }
 
     .wip-filter-label:has(.wip-filter:checked) {
-        border-color: color-mix(in srgb, var(--color-primary) 45%, var(--color-base-300));
-        background: color-mix(in srgb, var(--color-primary) 12%, var(--color-base-100));
-        color: var(--color-primary);
+        @apply border-primary/45 bg-primary/10 text-primary;
         box-shadow: inset 3px 0 0 var(--color-primary);
     }
 
     .wip-filter:focus-visible {
-        outline: 3px solid color-mix(in srgb, var(--color-accent) 70%, transparent);
-        outline-offset: 2px;
+        @apply outline-3 outline-accent/70 outline-offset-2;
     }
 
     .topic-options {
-        padding-bottom: 0.1rem;
-    }
-
-    .filter-option {
-        position: relative;
-        min-width: 0;
+        @apply pb-px;
     }
 
     .topic-filter {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        clip-path: inset(50%);
-        white-space: nowrap;
+        @apply sr-only;
     }
 
     .filter-choice-label {
-        display: inline-flex;
-        min-height: 2.1rem;
-        max-width: 100%;
-        align-items: center;
-        gap: 0.5rem;
-        padding: 0.35rem 0.45rem 0.35rem 0.7rem;
-        border: 1px solid var(--color-base-300);
-        border-radius: 0.7rem;
-        background: var(--color-base-100);
-        color: color-mix(in srgb, var(--color-base-content) 78%, transparent);
-        cursor: pointer;
-        font-size: 0.69rem;
-        font-weight: 700;
-        line-height: 1.25;
-        overflow-wrap: anywhere;
-        transition: border-color 160ms ease, background-color 160ms ease, color 160ms ease, transform 160ms ease;
+        @apply inline-flex min-h-[2.1rem] max-w-full cursor-pointer items-center gap-2 rounded-xl border border-base-300 bg-base-100 py-1 pr-1.5 pl-2.5 text-[0.69rem] leading-tight font-bold text-base-content/80 wrap-break-word transition-all duration-150;
+        @apply max-[479px]:text-[0.68rem];
     }
 
     .filter-choice-label:hover {
-        transform: translateY(-1px);
-        border-color: color-mix(in srgb, var(--color-primary) 45%, var(--color-base-300));
-        background: color-mix(in srgb, var(--color-primary) 7%, var(--color-base-100));
-        color: var(--color-primary);
+        @apply -translate-y-px border-primary/45 bg-primary/10 text-primary;
     }
 
     .topic-filter:checked + .filter-choice-label {
-        border-color: color-mix(in srgb, var(--color-primary) 45%, var(--color-base-300));
-        background: color-mix(in srgb, var(--color-primary) 12%, var(--color-base-100));
-        color: var(--color-primary);
+        @apply border-primary/45 bg-primary/10 text-primary;
         box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--color-primary) 9%, transparent);
     }
 
     .topic-filter:focus-visible + .filter-choice-label {
-        outline: 3px solid color-mix(in srgb, var(--color-accent) 70%, transparent);
-        outline-offset: 2px;
+        @apply outline-3 outline-accent/70 outline-offset-2;
     }
 
     .filter-choice-name {
-        min-width: 0;
-        flex: 1 1 auto;
-        overflow-wrap: anywhere;
+        @apply min-w-0 flex-1 wrap-break-word;
+    }
+
+    html[data-theme="dark"] .filter-choice-label {
+        @apply border-neutral-800 bg-neutral-900 text-neutral-300;
     }
 
     html[data-theme="dark"] .filter-panel {
@@ -441,33 +333,11 @@ const uniqueTopics = Array.from(
     }
 
     html[data-theme="dark"] .filter-panel__title {
-        color: var(--color-accent);
-    }
-
-    html[data-theme="dark"] .filter-reset {
-        border-color: transparent;
-        background: transparent;
-        @apply text-base-content/60;
+        @apply text-accent;
     }
 
     html[data-theme="dark"] .filter-reset:hover {
-        border-color: color-mix(in srgb, var(--color-error) 55%, var(--color-base-300));
-        background: color-mix(in srgb, var(--color-error) 14%, var(--color-base-100));
-        color: var(--color-error);
-    }
-
-    html[data-theme="dark"] .filter-choice-count {
-        border-color: var(--color-base-300);
-        background: var(--color-base-100);
-        color: color-mix(in srgb, var(--color-base-content) 68%, transparent);
-    }
-
-    html[data-theme="dark"] .filter-choice-label {
-        @apply border-neutral-800 bg-neutral-900 text-neutral-300;
-    }
-
-    html[data-theme="dark"] .filter-topic-heading {
-        color: color-mix(in srgb, var(--color-base-content) 52%, transparent);
+        @apply border-error/55 bg-error/15;
     }
 
     html[data-theme="dark"] .wip-filter-label {
@@ -543,25 +413,6 @@ const uniqueTopics = Array.from(
         }
     }
 
-    @media (max-width: 1023px) {
-        .filter-panel {
-            padding: 1rem;
-        }
-    }
-
-    @media (max-width: 479px) {
-        .filter-choice-label {
-            font-size: 0.68rem;
-        }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-        .filter-choice-label,
-        .filter-reset,
-        .wip-filter-label {
-            transition-duration: 0.01ms;
-        }
-    }
 </style>
 
 <script>
