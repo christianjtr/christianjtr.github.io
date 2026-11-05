@@ -4,7 +4,8 @@ on:
     push:
         branches: [main]
         paths-ignore:
-            - 'README.md'
+            - "README.md"
+            - "public/**"
     workflow_dispatch:
 
 permissions:
