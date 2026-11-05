@@ -191,6 +191,16 @@ const { data: workcases } = workcaseData as { data: WorkCaseStudy[] };
         .workcase-card-meta { @apply mt-2; }
     }
 
+    @media (min-width: 768px) and (max-width: 1023px) {
+        .projects-layout { @apply px-4; }
+        .workcase-list { @apply grid-cols-2; }
+        .card-header { @apply p-5; }
+        .card-body { @apply pl-5; }
+        .body-grid { @apply grid-cols-12 gap-6; }
+        .text-column { @apply col-span-5; }
+        .media-column { @apply col-span-7; }
+    }
+
     .project-card { 
         @apply border mb-6 p-3 rounded-xl transition-all duration-300 relative overflow-hidden; 
         @apply bg-base-100 border-neutral-200/80 text-neutral-800 shadow-xs;

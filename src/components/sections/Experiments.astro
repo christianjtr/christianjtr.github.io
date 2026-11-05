@@ -50,8 +50,8 @@ const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
     <Section headingTitle={section_experiments.title} subtitle={section_experiments.subtitle} class="container mx-auto px-1 lg:px-10">
         <Logo slot="beforeHeading" width={96} height={96} />
         <br />
-        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 px-2 md:px-14 mt-6 items-start">
-            <aside class="experiment-filters lg:col-span-1 lg:sticky lg:top-24 self-start">
+        <div class="grid grid-cols-1 gap-6 px-2 md:grid-cols-4 md:px-4 lg:grid-cols-4 lg:px-14 mt-6 items-start">
+            <aside class="experiment-filters md:col-span-1 lg:col-span-1 lg:sticky lg:top-24 self-start">
                 <div class="filter-panel">
                     <div class="filter-panel__header">
                         <div>
@@ -109,7 +109,7 @@ const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
                 )} -->
 
             </aside>
-            <main class="lg:col-span-3 space-y-8">
+            <main class="md:col-span-3 lg:col-span-3 space-y-8">
                 {featuredExperiments.map((experiment: Experiment, index) => (
                     <div class="card experiment-card flex flex-col w-full bg-base-100" data-category={experiment.category}>
                         <div class="experiment-image-wrap">
@@ -206,7 +206,7 @@ const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
         overflow: hidden;
         padding: 1.15rem;
         border: 1px solid #e2e8f0;
-        border-radius: 1rem;
+        border-radius: 0.5rem;
         background: #fff;
         box-shadow: 0 14px 34px -28px rgb(15 23 42 / 0.4);
     }
@@ -483,10 +483,6 @@ const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
     @media (max-width: 1023px) {
         .filter-panel {
             padding: 1rem;
-        }
-
-        .filter-options {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
         }
     }
 
