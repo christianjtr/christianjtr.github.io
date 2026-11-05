@@ -15,6 +15,7 @@ export const ExperimentSchema = z.object({
     tags: z.array(z.string()),
     role: z.enum(EXPERIMENT_ROLE),
     category: z.string(),
+    topic: z.string(),
     type: z.string(),
     url: z.url().nullable(),
     section: z.literal('experiments'),

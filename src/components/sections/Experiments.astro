@@ -1,7 +1,6 @@
 ---
 import { getCollection, getEntry } from 'astro:content';
 
-import { toSlug } from '@utils/userPreferences';
 import type { ContentDataEntryType } from '@app-types/Content';
 import type { AboutMeData } from '@schemas/AboutMeSchema';
 import type { Experiment, ExperimentRole } from '@schemas/ExperimentSchema';
@@ -28,21 +27,14 @@ const { section_experiments, common, header } = (commonData?.data as AboutMeData
 const { data: experiments } = experimentsData as { data: Experiment[]};
 
 const experimentsToDisplay = experiments.filter(exp => exp.display && !exp.isSandbox);
-const uniqueCategories = Array.from(
-    experimentsToDisplay.reduce((categories, { category }) => {
-        const current = categories.get(category);
-        categories.set(category, {
-            category,
-            slug: current?.slug ?? toSlug(category),
-            count: (current?.count ?? 0) + 1
-        });
-        return categories;
-    }, new Map<string, { category: string; slug: string; count: number }>())
-        .values()
-);
-
 const featuredExperiments = experimentsToDisplay.filter(exp => !exp.isSandbox);
 const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
+const uniqueTopics = Array.from(
+    featuredExperiments.reduce((topics, { topic }) => {
+        topics.set(topic, (topics.get(topic) ?? 0) + 1);
+        return topics;
+    }, new Map<string, number>())
+).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
 ---
 
 <div class="bg-primary/5 py-10" id={header.main_sections[2].anchorId}>
@@ -54,33 +46,37 @@ const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
             <aside class="experiment-filters md:col-span-1 lg:col-span-1 lg:sticky lg:top-24 self-start">
                 <div class="filter-panel">
                     <div class="filter-panel__header">
-                        <div>
-                            <span class="filter-panel__eyebrow">{common.filter_experience}</span>
-                        </div>
-                        <button type="reset" form="experiments-filter-form" class="filter-reset" aria-label="Reset Filters">
+                        <h3 class="filter-panel__title">{common.filter_experience}</h3>
+                        <button type="reset" form="experiments-filter-form" class="filter-reset" aria-label={common.reset_filters}>
                             <TrashIcon class="w-4 h-4" />
+                            <span>{common.reset_filters}</span>
                         </button>
                     </div>
                     <form id="experiments-filter-form" class="filter-options">
-                        {uniqueCategories.map(({category, slug, count}) => (
-                            <div class="category-option">
-                                <input 
-                                    class="category-filter"
-                                    type="checkbox" 
-                                    id={slug}
-                                    value={category}
-                                    name="experiments_type" 
-                                />
-                                <label 
-                                    for={slug} 
-                                    class="filter-label"
-                                    data-category={category}
-                                >
-                                    <span class="category-option__name">{category}</span>
-                                    <span class="category-option__count">{count}</span>
-                                </label>
+                        <label class="wip-filter-label">
+                            <input class="checkbox checkbox-primary checkbox-sm wip-filter" type="checkbox" name="experiments_wip" />
+                            <span>{common.filter_wip}</span>
+                        </label>
+                        <div class="filter-topic-group">
+                            <h4 class="filter-topic-heading">{common.filter_topics}</h4>
+                            <div class="filter-choices topic-options">
+                                {uniqueTopics.map(([topic, count], index) => (
+                                    <div class="filter-option topic-option" data-topic={topic}>
+                                        <input
+                                            class="topic-filter"
+                                            type="checkbox"
+                                            id={`topic-filter-${index}`}
+                                            value={topic}
+                                            name="experiments_topic"
+                                        />
+                                        <label for={`topic-filter-${index}`} class="filter-choice-label">
+                                            <span class="filter-choice-name">{topic}</span>
+                                            <span class="filter-choice-count">{count}</span>
+                                        </label>
+                                    </div>
+                                ))}
                             </div>
-                        ))}
+                        </div>
                     </form>
                 </div>
 
@@ -111,7 +107,11 @@ const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
             </aside>
             <main class="md:col-span-3 lg:col-span-3 space-y-8">
                 {featuredExperiments.map((experiment: Experiment, index) => (
-                    <div class="card experiment-card flex flex-col w-full bg-base-100" data-category={experiment.category}>
+                    <div
+                        class="card experiment-card flex flex-col w-full bg-base-100"
+                        data-topic={experiment.topic}
+                        data-wip={experiment.isWIP ? 'true' : 'false'}
+                    >
                         <div class="experiment-image-wrap">
                             <figure class="experiment-image-stage">
                                 <div class="experiment-image-frame">
@@ -204,64 +204,157 @@ const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
     .filter-panel {
         position: relative;
         overflow: hidden;
-        padding: 1.15rem;
-        border: 1px solid #e2e8f0;
-        border-radius: 0.5rem;
-        background: #fff;
-        box-shadow: 0 14px 34px -28px rgb(15 23 42 / 0.4);
+        padding: 1rem;
+        border: 1px solid var(--color-base-300);
+        border-radius: 0.85rem;
+        background: var(--color-base-100);
+        box-shadow: 0 16px 38px -30px rgb(15 23 42 / 0.5);
     }
 
     .filter-panel__header {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-between;
-        gap: 0.75rem;
-        margin-bottom: 1rem;
+        gap: 0.5rem;
+        margin-bottom: 0.9rem;
     }
 
-    .filter-panel__eyebrow {
-        color: #64748b;
-        font-family: var(--font-mono);
-        font-size: 0.68rem;
+    .filter-panel__title {
+        margin: 0;
+        color: color-mix(in srgb, var(--color-base-content) 60%, transparent);
+        font-size: 0.95rem;
         font-weight: 800;
-        letter-spacing: 0.11em;
-        line-height: 1.4;
-        text-transform: uppercase;
+        letter-spacing: -0.025em;
+        line-height: 1.3;
     }
 
     .filter-reset {
-        display: inline-grid;
-        width: 2rem;
-        height: 2rem;
+        display: inline-flex;
+        min-height: 1.9rem;
         flex: 0 0 auto;
-        place-items: center;
-        border: 1px solid #e2e8f0;
-        border-radius: 0.65rem;
-        background: #fff;
-        color: #64748b;
+        align-items: center;
+        justify-content: center;
+        gap: 0.35rem;
+        padding: 0.35rem 0.5rem;
+        border: 1px solid transparent;
+        border-radius: 0.55rem;
+        background: transparent;
+        color: var(--color-primary);
         cursor: pointer;
+        font-size: 0.67rem;
+        font-weight: 700;
+        line-height: 1;
         transition: border-color 160ms ease, color 160ms ease, background-color 160ms ease;
     }
 
     .filter-reset:hover {
-        border-color: #fecaca;
-        background: #fef2f2;
-        color: #dc2626;
+        border-color: color-mix(in srgb, var(--color-error) 35%, var(--color-base-300));
+        background: color-mix(in srgb, var(--color-error) 8%, var(--color-base-100));
+        color: var(--color-error);
+    }
+
+    .filter-reset:focus-visible {
+        outline: 3px solid color-mix(in srgb, var(--color-error) 65%, transparent);
+        outline-offset: 2px;
     }
 
     .filter-options {
         display: grid;
         grid-template-columns: minmax(0, 1fr);
-        gap: 0.45rem;
+        gap: 0.8rem;
         margin: 0;
     }
 
-    .category-option {
+    .filter-topic-group {
+        display: grid;
+        gap: 0.55rem;
+    }
+
+    .filter-topic-heading {
+        margin: 0;
+        color: color-mix(in srgb, var(--color-base-content) 52%, transparent);
+        font-family: var(--font-mono);
+        font-size: 0.62rem;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        line-height: 1.3;
+        text-transform: uppercase;
+    }
+
+    .filter-choice-count {
+        display: inline-flex;
+        min-width: 1.25rem;
+        height: 1.25rem;
+        flex: 0 0 auto;
+        align-items: center;
+        justify-content: center;
+        padding-inline: 0.3rem;
+        border: 1px solid var(--color-base-300);
+        border-radius: 999px;
+        background: var(--color-base-100);
+        color: color-mix(in srgb, var(--color-base-content) 62%, transparent);
+        font-family: var(--font-mono);
+        font-size: 0.62rem;
+        font-weight: 800;
+        letter-spacing: normal;
+        line-height: 1;
+    }
+
+    .filter-choices {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.45rem;
+    }
+
+    .wip-filter-label {
+        display: flex;
+        min-height: 2.75rem;
+        align-items: center;
+        gap: 0.55rem;
+        padding: 0.55rem 0.65rem;
+        border: 1px solid var(--color-base-300);
+        border-radius: 0.7rem;
+        background: var(--color-base-200);
+        color: var(--color-base-content);
+        cursor: pointer;
+        font-size: 0.75rem;
+        font-weight: 700;
+        line-height: 1.3;
+        transition: border-color 160ms ease, background-color 160ms ease, color 160ms ease;
+    }
+
+    .wip-filter {
+        flex: 0 0 auto;
+        margin: 0;
+        cursor: pointer;
+    }
+
+    :global(html[data-theme="dark"]) .wip-filter {
+        --input-color: var(--color-accent);
+    }
+
+    .wip-filter-label:has(.wip-filter:checked) {
+        border-color: color-mix(in srgb, var(--color-primary) 45%, var(--color-base-300));
+        background: color-mix(in srgb, var(--color-primary) 12%, var(--color-base-100));
+        color: var(--color-primary);
+        box-shadow: inset 3px 0 0 var(--color-primary);
+    }
+
+    .wip-filter:focus-visible {
+        outline: 3px solid color-mix(in srgb, var(--color-accent) 70%, transparent);
+        outline-offset: 2px;
+    }
+
+    .topic-options {
+        padding-bottom: 0.1rem;
+    }
+
+    .filter-option {
         position: relative;
         min-width: 0;
     }
 
-    .category-filter {
+    .topic-filter {
         position: absolute;
         width: 1px;
         height: 1px;
@@ -271,85 +364,48 @@ const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
         white-space: nowrap;
     }
 
-    .filter-label {
-        display: flex;
-        min-height: 2.65rem;
-        min-width: 0;
+    .filter-choice-label {
+        display: inline-flex;
+        min-height: 2.1rem;
+        max-width: 100%;
         align-items: center;
-        gap: 0.55rem;
-        padding: 0.5rem 0.6rem;
-        border: 1px solid transparent;
+        gap: 0.5rem;
+        padding: 0.35rem 0.45rem 0.35rem 0.7rem;
+        border: 1px solid var(--color-base-300);
         border-radius: 0.7rem;
-        background: #f8fafc;
-        color: #334155;
+        background: var(--color-base-100);
+        color: color-mix(in srgb, var(--color-base-content) 78%, transparent);
         cursor: pointer;
-        font-size: 0.75rem;
-        font-weight: 650;
-        line-height: 1.3;
+        font-size: 0.69rem;
+        font-weight: 700;
+        line-height: 1.25;
+        overflow-wrap: anywhere;
         transition: border-color 160ms ease, background-color 160ms ease, color 160ms ease, transform 160ms ease;
     }
 
-    .filter-label::before {
-        display: inline-grid;
-        width: 1rem;
-        height: 1rem;
-        flex: 0 0 auto;
-        place-items: center;
-        border: 1.5px solid #cbd5e1;
-        border-radius: 0.3rem;
-        background: #fff;
-        color: transparent;
-        content: "✓";
-        font-size: 0.65rem;
-        font-weight: 900;
-        transition: border-color 160ms ease, background-color 160ms ease, color 160ms ease;
-    }
-
-    .filter-label:hover {
+    .filter-choice-label:hover {
         transform: translateY(-1px);
-        border-color: #c7d2fe;
-        background: #f5f7ff;
-        color: #3730a3;
+        border-color: color-mix(in srgb, var(--color-primary) 45%, var(--color-base-300));
+        background: color-mix(in srgb, var(--color-primary) 7%, var(--color-base-100));
+        color: var(--color-primary);
     }
 
-    .category-filter:checked + .filter-label {
-        border-color: rgb(72 79 217 / 0.24);
-        background: #eef2ff;
-        color: #3730a3;
+    .topic-filter:checked + .filter-choice-label {
+        border-color: color-mix(in srgb, var(--color-primary) 45%, var(--color-base-300));
+        background: color-mix(in srgb, var(--color-primary) 12%, var(--color-base-100));
+        color: var(--color-primary);
+        box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--color-primary) 9%, transparent);
     }
 
-    .category-filter:checked + .filter-label::before {
-        border-color: #484fd9;
-        background: #484fd9;
-        color: #fff;
-    }
-
-    .category-filter:focus-visible + .filter-label {
+    .topic-filter:focus-visible + .filter-choice-label {
         outline: 3px solid color-mix(in srgb, var(--color-accent) 70%, transparent);
         outline-offset: 2px;
     }
 
-    .category-option__name {
+    .filter-choice-name {
         min-width: 0;
         flex: 1 1 auto;
         overflow-wrap: anywhere;
-    }
-
-    .category-option__count {
-        display: inline-flex;
-        min-width: 1.5rem;
-        height: 1.5rem;
-        flex: 0 0 auto;
-        align-items: center;
-        justify-content: center;
-        padding-inline: 0.35rem;
-        border: 1px solid #e2e8f0;
-        border-radius: 999px;
-        background: #fff;
-        color: #64748b;
-        font-family: var(--font-mono);
-        font-size: 0.65rem;
-        font-weight: 800;
     }
 
     html[data-theme="dark"] .sandbox-link-title {
@@ -357,59 +413,55 @@ const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
     }
 
     html[data-theme="dark"] .filter-panel {
-        border-color: #334155;
-        background: #111827;
+        @apply border-neutral-800 bg-neutral-900;
         box-shadow: 0 16px 38px -28px rgb(0 0 0 / 0.9);
     }
 
-    html[data-theme="dark"] .filter-panel__eyebrow {
-        color: #94a3b8;
+    html[data-theme="dark"] .filter-panel__title {
+        color: var(--color-accent);
     }
 
     html[data-theme="dark"] .filter-reset {
-        border-color: #334155;
-        background: #0f172a;
-        color: #94a3b8;
+        border-color: transparent;
+        background: transparent;
+        @apply text-base-content/60;
     }
 
     html[data-theme="dark"] .filter-reset:hover {
-        border-color: #7f1d1d;
-        background: #450a0a;
-        color: #fca5a5;
+        border-color: color-mix(in srgb, var(--color-error) 55%, var(--color-base-300));
+        background: color-mix(in srgb, var(--color-error) 14%, var(--color-base-100));
+        color: var(--color-error);
     }
 
-    html[data-theme="dark"] .filter-label {
-        background: #1f2937;
-        color: #e2e8f0;
+    html[data-theme="dark"] .filter-choice-count {
+        border-color: var(--color-base-300);
+        background: var(--color-base-100);
+        color: color-mix(in srgb, var(--color-base-content) 68%, transparent);
     }
 
-    html[data-theme="dark"] .filter-label::before {
-        border-color: #475569;
-        background: #0f172a;
+    html[data-theme="dark"] .filter-choice-label {
+        @apply border-neutral-800 bg-neutral-900 text-neutral-300;
     }
 
-    html[data-theme="dark"] .filter-label:hover {
-        border-color: #475569;
-        background: #263244;
-        color: #a7f3d0;
+    html[data-theme="dark"] .filter-topic-heading {
+        color: color-mix(in srgb, var(--color-base-content) 52%, transparent);
     }
 
-    html[data-theme="dark"] .category-filter:checked + .filter-label {
-        border-color: #64748b;
-        background: #263244;
-        color: #a7f3d0;
+    html[data-theme="dark"] .wip-filter-label {
+        @apply border-neutral-800 bg-neutral-900 text-neutral-300;
     }
 
-    html[data-theme="dark"] .category-filter:checked + .filter-label::before {
-        border-color: #94a3b8;
-        background: #64748b;
-        color: #0f172a;
+    html[data-theme="dark"] .wip-filter-label:has(.wip-filter:checked) {
+        @apply border-accent/70 bg-accent/5 text-accent;
+        box-shadow: inset 3px 0 0 var(--color-accent);
     }
 
-    html[data-theme="dark"] .category-option__count {
-        border-color: #334155;
-        background: #0f172a;
-        color: #cbd5e1;
+    html[data-theme="dark"] .filter-choice-label:hover {
+        @apply border-accent/70 bg-accent/5 text-accent;
+    }
+
+    html[data-theme="dark"] .topic-filter:checked + .filter-choice-label {
+        @apply border-accent/70 bg-accent/5 text-accent;
     }
 
     .chevron-icon {
@@ -487,22 +539,15 @@ const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
     }
 
     @media (max-width: 479px) {
-        .filter-options {
-            gap: 0.35rem;
-        }
-
-        .filter-label {
-            min-height: 2.5rem;
-            gap: 0.4rem;
-            padding: 0.45rem;
-            font-size: 0.69rem;
+        .filter-choice-label {
+            font-size: 0.68rem;
         }
     }
 
     @media (prefers-reduced-motion: reduce) {
-        .filter-label,
-        .filter-label::before,
-        .filter-reset {
+        .filter-choice-label,
+        .filter-reset,
+        .wip-filter-label {
             transition-duration: 0.01ms;
         }
     }
@@ -510,7 +555,9 @@ const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
 
 <script>
     const setupFilters = () => {
-    const checkboxes = document.querySelectorAll<HTMLInputElement>('.category-filter');
+    const topicFilters = document.querySelectorAll<HTMLInputElement>('.topic-filter');
+    const wipFilter = document.querySelector<HTMLInputElement>('.wip-filter');
+    const topicOptions = document.querySelectorAll<HTMLElement>('.topic-option');
     const cards = document.querySelectorAll<HTMLElement>('.experiment-card');
     const resetBtn = document.querySelector('button[type="reset"]');
 
@@ -522,37 +569,72 @@ const sandboxExperiments = experimentsToDisplay.filter(exp => exp.isSandbox);
     };
 
     const filter = () => {
-        const activeCategories = Array.from(checkboxes)
-            .filter(element => element.checked)
-            .map(element => element.value);
+        const wipOnly = wipFilter?.checked ?? false;
+        const activeTopics = new Set(
+            Array.from(topicFilters)
+                .filter(element => element.checked)
+                .map(element => element.value)
+        );
+
+        topicOptions.forEach(option => {
+            const topic = option.dataset.topic;
+            const matchingCount = Array.from(cards).filter(card =>
+                (!wipOnly || card.dataset.wip === 'true') && card.dataset.topic === topic
+            ).length;
+            const count = option.querySelector<HTMLElement>('.filter-choice-count');
+            const selected = option.querySelector<HTMLInputElement>('.topic-filter')?.checked ?? false;
+
+            if (count) count.textContent = String(matchingCount);
+            option.hidden = matchingCount === 0 && !selected;
+        });
 
         cards.forEach(card => {
-            const cardCategory = card.dataset.category;
-            if (activeCategories.length === 0 || activeCategories.includes(cardCategory!)) {
-                card.style.display = '';
-            } else {
-                card.style.display = 'none';
-            }
+            const matchesWip = !wipOnly || card.dataset.wip === 'true';
+            const matchesTopic = activeTopics.size === 0 || activeTopics.has(card.dataset.topic ?? '');
+            card.style.display = matchesWip && matchesTopic ? '' : 'none';
         });
     };
 
     const urlParams = new URLSearchParams(window.location.search);
-    const filterParam = urlParams.get('category');
+    const wipParam = urlParams.get('wip');
+    const topicParam = urlParams.get('topic');
+    let appliedUrlFilter = false;
 
-    if (filterParam) {
-        const targetCheckbox = document.getElementById(filterParam) as HTMLInputElement | null;
-    
-        if (targetCheckbox) {
-            targetCheckbox.checked = true;
-            filter();
-            clearUrlParams();
+    if (wipParam === 'true' && wipFilter) {
+        wipFilter.checked = true;
+        appliedUrlFilter = true;
+    }
+
+    if (topicParam) {
+        const targetFilter = Array.from(topicFilters).find(element => element.value === topicParam);
+        if (targetFilter) {
+            targetFilter.checked = true;
+            appliedUrlFilter = true;
         }
     }
 
-    checkboxes.forEach(cb => cb.addEventListener('change', () => {
+    if (appliedUrlFilter) {
+        filter();
+        clearUrlParams();
+    }
+
+    topicFilters.forEach(input => input.addEventListener('change', () => {
         filter();
         clearUrlParams();
     }));
+
+    wipFilter?.addEventListener('change', () => {
+        if (wipFilter.checked) {
+            topicFilters.forEach(topicFilter => {
+                const hasWipProjects = Array.from(cards).some(card =>
+                    card.dataset.wip === 'true' && card.dataset.topic === topicFilter.value
+                );
+                if (!hasWipProjects) topicFilter.checked = false;
+            });
+        }
+        filter();
+        clearUrlParams();
+    });
     
     resetBtn?.addEventListener('click', () => {
         setTimeout(() => {

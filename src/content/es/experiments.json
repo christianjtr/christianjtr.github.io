@@ -17,7 +17,8 @@
         "isSandbox": false,
         "display": true,
         "abstract": "Caso de estudio académico de 2023 sobre cómo reconstruir una cultura de ingeniería más sana después de una adquisición. El caso usa una empresa de servicios de IA anonimizada, de tipo B2B2C, que creció muy rápido y superó las 600 personas en varios países. Los cambios de liderazgo y las reestructuraciones fueron seguidos de favoritismos en los ascensos, decisiones técnicas concentradas en pocas personas, poco apoyo al desarrollo de carrera, menos seguridad psicológica y salida de talento. El trabajo propone una forma práctica de reconstruir esa cultura. Mira la madurez del liderazgo técnico, cómo colaboran los equipos y si el entorno permite aprender. El enfoque lee la situación con DAFO, mapas de empatía, RASCI y diagramas de sistemas, y luego trabaja acuerdos compartidos, trayectorias más claras y formación en liderazgo y colaboración. El cambio se plantea con el modelo ADKAR.",
-        "year": 2023
+        "year": 2023,
+        "topic": "Negocio y liderazgo"
     },
     {
         "id": "experiment-bi-adventure-works",
@@ -37,7 +38,8 @@
         "isSandbox": false,
         "display": true,
         "abstract": "Proyecto académico de inteligencia de negocio de 2018, sobre los datos de ejemplo de Adventure Works Cycles, la empresa ficticia de fabricación y distribución que se usa en los cursos de BI. El ejercicio trata la distancia entre una base de datos transaccional compleja y las preguntas que haría un equipo de dirección cuando cambia la demanda. Analicé las fuentes, extraje y consolidé los datos, y modelé un esquema en estrella alrededor de los hechos de venta, con dimensiones de clientes, territorios y productos. El resultado son cuadros de mando en Power BI y Qlik Sense para ventas regionales, segmentos de clientes y previsiones descriptivas. Es un trabajo de curso con datos de ejemplo, no un sistema entregado a una empresa real.",
-        "year": 2018
+        "year": 2018,
+        "topic": "Datos y analítica"
     },
     {
         "id": "experiment-circuitos",
@@ -57,7 +59,8 @@
         "isSandbox": false,
         "display": true,
         "abstract": "Concepto de UX de un curso de 2017 para un producto móvil con el que encontrar eventos y lugares culturales en la ciudad, como centros de diseño, museos locales y arte urbano, cuando agendas y sitios están dispersos. El concepto tiene tres partes. Un listado de eventos locales con agenda personal, rutas geolocalizadas por recorridos culturales, y almacenamiento local para notas y favoritos. Participé en la investigación, el concepto de producto y los prototipos de interfaz. Es un concepto de diseño del curso, no una aplicación publicada.",
-        "year": 2017
+        "year": 2017,
+        "topic": "Producto y UX"
     },
     {
         "id": "project-agent-orchestrator",
@@ -76,7 +79,8 @@
         "category": "Prueba de Concepto (PoC)",
         "url": "https://christianjtr.github.io/agent-orchestrator/",
         "isSandbox": true,
-        "display": true
+        "display": true,
+        "topic": "Software e IA"
     },
     {
         "id": "experiment-idea-cultural-activities-app",
@@ -97,7 +101,8 @@
         "isSandbox": false,
         "display": true,
         "abstract": "Proyecto de máster de 2020, un caso de negocio para un producto digital que promovería eventos artísticos y culturales en Barcelona. Parte de la distancia entre los listados locales generales y públicos que buscan tipos de cultura muy concretos. El caso incluye un análisis de entrada al mercado, con públicos objetivo y competidores, un modelo de monetización y un plan de marketing online con canales de captación e indicadores de operación. La entrega se esboza con un calendario ágil y un stack de software contenido en un presupuesto. Es un documento de planificación de un concepto, no una empresa que se llegara a lanzar.",
-        "year": 2020
+        "year": 2020,
+        "topic": "Negocio y liderazgo"
     },
     {
         "id": "experiment-tv-movie-streaming-like-webapp",
@@ -116,7 +121,8 @@
         "type": "Aplicación Web (Catálogo de Películas/Series de TV)",
         "url": "https://christianjtr.github.io/tv-app/",
         "isSandbox": false,
-        "display": true
+        "display": true,
+        "topic": "Software e IA"
     },
     {
         "id": "experiment-pokedex-pwa-application",
@@ -135,7 +141,8 @@
         "type": "Aplicación Web (Catálogo Pokémon)",
         "url": "https://christianjtr.github.io/svelte-pokedex-pwa/",
         "isSandbox": true,
-        "display": true
+        "display": true,
+        "topic": "Software e IA"
     },
     {
         "id": "experiment-restaurant-browser-app",
@@ -154,7 +161,8 @@
         "type": "Aplicación Web (Aplicación de Restaurantes)",
         "url": "https://christianjtr.github.io/restaurant-browser-app/",
         "isSandbox": true,
-        "display": true
+        "display": true,
+        "topic": "Producto y UX"
     },
     {
         "id": "experiment-data-visualization-error-reporting-chart",
@@ -173,7 +181,8 @@
         "type": "Aplicación Web (Dashboard de Monitoreo de Errores)",
         "url": null,
         "isSandbox": false,
-        "display": true
+        "display": true,
+        "topic": "Datos y analítica"
     },
     {
         "id": "experiment-erp-management-dashboard",
@@ -191,7 +200,8 @@
         "type": "Aplicación Web (Dashboard de Gestión de Empleados)",
         "url": "https://christianjtr.github.io/manage-employees-dashboard/#/",
         "isSandbox": true,
-        "display": false
+        "display": false,
+        "topic": "Negocio y liderazgo"
     },
     {
         "id": "experiment-express-api-boilerplate",
@@ -211,7 +221,8 @@
         "type": "API REST (Plantilla Backend)",
         "url": "https://github.com/christianjtr/express-api-mongodb-docker-jest-supertest",
         "isSandbox": true,
-        "display": true
+        "display": true,
+        "topic": "Software e IA"
     },
     {
         "id": "experiment-sticky-notes",
@@ -231,7 +242,8 @@
         "type": "Aplicación web (Tablero de notas)",
         "url": "https://christianjtr.github.io/sticky-notes/",
         "isSandbox": true,
-        "display": false
+        "display": false,
+        "topic": "Producto y UX"
     },
     {
         "id": "experiment-dynamic-pricing-calendar-webapp",
@@ -249,7 +261,8 @@
         "type": "Aplicación web (Calendario de precios dinámicos)",
         "url": "https://github.com/christianjtr/dynamic-pricing-calendar",
         "isSandbox": false,
-        "display": true
+        "display": true,
+        "topic": "Datos y analítica"
     },
     {
         "id": "experiment-basic-sticky-notes-webapp",
@@ -267,7 +280,8 @@
         "type": "Aplicación web (Notas adhesivas básicas)",
         "url": "https://christianjtr.github.io/sticky-notes/",
         "isSandbox": false,
-        "display": true
+        "display": true,
+        "topic": "Producto y UX"
     },
     {
         "id": "experiment-engram-semantic-cli",
@@ -289,7 +303,8 @@
         "isSandbox": false,
         "display": true,
         "year": 2026,
-        "isWIP": true
+        "isWIP": true,
+        "topic": "Datos y analítica"
     },
     {
         "id": "experiment-type-safe-graphql-api",
@@ -311,7 +326,8 @@
         "isSandbox": false,
         "display": true,
         "year": 2026,
-        "isWIP": true
+        "isWIP": true,
+        "topic": "Software e IA"
     },
     {
         "id": "experiment-cognitive-usability-tool",
@@ -333,7 +349,8 @@
         "isSandbox": false,
         "display": true,
         "year": 2026,
-        "isWIP": true
+        "isWIP": true,
+        "topic": "Producto y UX"
     },
     {
         "id": "experiment-team-memory-health",
@@ -341,7 +358,13 @@
         "title": "Team-Memory-Health (TMH)",
         "description": "CLI y habilidad de agente para evaluar el pulso cualitativo y la alineación de la memoria compartida de un equipo de desarrollo. Analiza coherencia, frescura, cobertura y distribución de fuentes sin asignar calificaciones individuales ni alterar datos.",
         "image": "/src/assets/images/team_memory_health.jpeg",
-        "tags": ["TypeScript", "CLI", "Agent Skill", "Engram", "AI Tools"],
+        "tags": [
+            "TypeScript",
+            "CLI",
+            "Agent Skill",
+            "Engram",
+            "AI Tools"
+        ],
         "role": "Author",
         "category": "En curso (WIP)",
         "type": "CLI TypeScript / Agent Skill",
@@ -349,6 +372,7 @@
         "isSandbox": false,
         "display": true,
         "year": 2026,
-        "isWIP": true
+        "isWIP": true,
+        "topic": "Software e IA"
     }
 ]
