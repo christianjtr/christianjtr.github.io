@@ -3,28 +3,29 @@ import { getEntry } from 'astro:content';
 import type { ContentDataEntryType } from '@app-types/Content';
 import type { AboutMeData } from '@schemas/AboutMeSchema';
 import { CONTENT } from '@app-types/Content';
+import { ModalHeader } from '@components';
 
 interface Props {
     text: string;
+    title: string;
     modalId: string;
 }
 
 const { lang } = Astro.params;
-const { text, modalId } = Astro.props;
+const { text, title, modalId } = Astro.props;
 
 const commonData = await getEntry(lang as ContentDataEntryType, `${lang}/${CONTENT.COMMON}`);
 const { common } = (commonData?.data as AboutMeData) || {};
 ---
 
-<dialog id={modalId} class="modal modal-middle px-4 md:px-0" onclick="event.stopPropagation()">
+<dialog id={modalId} class="modal modal-middle px-4 md:px-0" aria-labelledby={`${modalId}_title`} onclick="event.stopPropagation()">
     <div class="modal-box experiment-modal-box">
-        
-        <div class="experiment-modal-header">
-            <h4 class="experiment-modal-label">{common.abstract}</h4>
-            <form method="dialog">
-                <button class="btn btn-sm btn-circle btn-ghost modal-close-button">✕</button>
-            </form>
-        </div>
+        <ModalHeader
+            eyebrow={common.abstract}
+            title={title}
+            titleId={`${modalId}_title`}
+            closeLabel={common.close_dialog}
+        />
         <p class="experiment-modal-copy">{text}</p>
     </div>
 </dialog>
@@ -36,19 +37,8 @@ const { common } = (commonData?.data as AboutMeData) || {};
         @apply w-full max-w-md rounded-2xl border border-base-300 bg-base-100 text-base-content shadow-2xl transition-all duration-300;
     }
 
-    .experiment-modal-header {
-        @apply mb-5 flex items-center justify-between border-b border-base-200 pb-3;
-    }
-
-    .experiment-modal-label {
-        @apply font-mono text-sm font-bold tracking-widest text-primary uppercase;
-    }
-
     .experiment-modal-copy {
         @apply text-base leading-relaxed;
     }
 
-    .modal-close-button {
-        @apply text-base-content/50 transition-colors hover:bg-base-200;
-    }
 </style>

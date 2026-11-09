@@ -1,0 +1,21 @@
+---
+interface Props {
+    eyebrow: string;
+    title: string;
+    titleId: string;
+    closeLabel: string;
+}
+
+const { eyebrow, title, titleId, closeLabel } = Astro.props;
+---
+
+<header class="app-modal-header">
+    <div class="app-modal-heading">
+        <span class="app-modal-eyebrow">{eyebrow}</span>
+        <h2 id={titleId} class="app-modal-title">{title}</h2>
+        <slot />
+    </div>
+    <form method="dialog">
+        <button aria-label={closeLabel} class="btn btn-sm btn-circle btn-ghost app-modal-close">✕</button>
+    </form>
+</header>

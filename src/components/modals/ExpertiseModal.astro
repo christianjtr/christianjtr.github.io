@@ -3,6 +3,7 @@ import { getEntry } from 'astro:content';
 import type { ContentDataEntryType } from '@app-types/Content';
 import type { AboutMeData } from '@schemas/AboutMeSchema';
 import { CONTENT } from '@app-types/Content';
+import { ModalHeader } from '@components';
 
 interface ExpertiseSubject {
     name: string;
@@ -21,19 +22,14 @@ const commonData = await getEntry(lang as ContentDataEntryType, `${lang}/${CONTE
 const { common } = (commonData?.data as AboutMeData) || {};
 ---
 
-<dialog id={modalId} class="modal modal-middle px-4 md:px-0" onclick="event.stopPropagation()">
+<dialog id={modalId} class="modal modal-middle px-4 md:px-0" aria-labelledby={`${modalId}_title`} onclick="event.stopPropagation()">
     <div class="modal-box expertise-modal-box">
-        
-        <div class="expertise-modal-header">
-            <div>
-                <span class="expertise-modal-label">{common.key_areas}</span>
-                <h3 class="expertise-modal-title">{subject.name}</h3>
-            </div>
-            <form method="dialog">
-                <button aria-label={common.close_dialog} class="btn btn-sm btn-circle btn-ghost modal-close-button">✕</button>
-            </form>
-        </div>
-
+        <ModalHeader
+            eyebrow={common.key_areas}
+            title={subject.name}
+            titleId={`${modalId}_title`}
+            closeLabel={common.close_dialog}
+        />
         <div class="expertise-modal-chip-list">
             {subject.topics.map((topic) => (
                 <span class="expertise-modal-chip">
@@ -54,18 +50,6 @@ const { common } = (commonData?.data as AboutMeData) || {};
         @apply w-full max-w-md rounded-2xl border border-base-300 bg-base-100 p-6 text-base-content shadow-2xl transition-all duration-300;
     }
 
-    .expertise-modal-header {
-        @apply mb-5 flex items-center justify-between border-b border-base-200 pb-3;
-    }
-
-    .expertise-modal-label {
-        @apply font-mono text-[10px] font-bold tracking-widest text-primary uppercase;
-    }
-
-    .expertise-modal-title {
-        @apply text-xl font-bold text-base-content;
-    }
-
     .expertise-modal-chip-list {
         @apply flex flex-wrap items-center gap-x-2 gap-y-3 text-sm font-semibold tracking-tight;
     }
@@ -78,7 +62,4 @@ const { common } = (commonData?.data as AboutMeData) || {};
         @apply border-accent/50;
     }
 
-    .modal-close-button {
-        @apply text-base-content/50 transition-colors hover:bg-base-200;
-    }
 </style>

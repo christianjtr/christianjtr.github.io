@@ -3,7 +3,7 @@ import { getEntry } from 'astro:content';
 
 import type { ContentDataEntryType } from '@app-types/Content';
 import type { AboutMeData } from '@schemas/AboutMeSchema';
-import { AsyncImage, BadgeList } from '@components';
+import { AsyncImage, BadgeList, ModalHeader } from '@components';
 import { CONTENT } from '@app-types/Content';
 import type { WorkCaseStudy } from '@schemas/ProjectSchema';
 
@@ -21,20 +21,18 @@ const { common } = (commonData?.data as AboutMeData) || {};
 
 <dialog id={modalId} class="modal modal-middle px-4 md:px-0" aria-labelledby={`${modalId}_title`}>
     <div class="modal-box workcase-modal-box">
-        <div class="workcase-modal-header">
-            <div>
-                <span class="workcase-modal-label">{common.key_contributions}</span>
-                <h3 id={`${modalId}_title`} class="workcase-modal-title">{workcase.title}</h3>
-                <p class="workcase-modal-meta">
-                    <span class="font-semibold text-base-content">{workcase.company}</span>
-                    <span>{workcase.role}</span>
-                    <span>{workcase.period}</span>
-                </p>
-            </div>
-            <form method="dialog">
-                <button aria-label={common.close_dialog} class="btn btn-sm btn-circle btn-ghost modal-close-button">✕</button>
-            </form>
-        </div>
+        <ModalHeader
+            eyebrow={common.key_contributions}
+            title={workcase.title}
+            titleId={`${modalId}_title`}
+            closeLabel={common.close_dialog}
+        >
+            <p class="workcase-modal-meta">
+                <span class="font-semibold text-base-content">{workcase.company}</span>
+                <span>{workcase.role}</span>
+                <span>{workcase.period}</span>
+            </p>
+        </ModalHeader>
         <section class="workcase-modal-content" aria-labelledby={`${modalId}_contributions`}>
             <figure class="workcase-modal-visual">
                     <AsyncImage
@@ -69,24 +67,8 @@ const { common } = (commonData?.data as AboutMeData) || {};
         scrollbar-gutter: stable;
     }
 
-    .modal-close-button {
-        @apply text-neutral-400 transition-colors hover:bg-neutral-100 dark:text-neutral-500 dark:hover:bg-neutral-800;
-    }
-
-    .workcase-modal-header {
-        @apply mb-6 flex items-start justify-between gap-5 border-b border-neutral-200 pb-5;
-    }
-
     .workcase-modal-meta {
         @apply mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm leading-relaxed text-base-content/60;
-    }
-
-    .workcase-modal-label {
-        @apply text-[11px] font-bold tracking-[0.16em] text-primary uppercase;
-    }
-
-    .workcase-modal-title {
-        @apply mt-2 max-w-4xl text-2xl font-bold leading-tight tracking-tight text-neutral-900 sm:text-3xl;
     }
 
     .workcase-modal-content {
@@ -157,19 +139,13 @@ const { common } = (commonData?.data as AboutMeData) || {};
         @apply border-neutral-800 bg-neutral-900 text-white;
     }
 
-    :global(html[data-theme="dark"]) .workcase-modal-header,
     :global(html[data-theme="dark"]) .workcase-contribution,
     :global(html[data-theme="dark"]) .workcase-modal-tags {
         @apply border-neutral-800;
     }
 
-    :global(html[data-theme="dark"]) .workcase-modal-label,
     :global(html[data-theme="dark"]) .workcase-contributions-title {
         @apply text-accent;
-    }
-
-    :global(html[data-theme="dark"]) .workcase-modal-title {
-        @apply text-white;
     }
 
     :global(html[data-theme="dark"]) .workcase-modal-visual {
