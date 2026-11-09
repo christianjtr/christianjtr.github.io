@@ -6,6 +6,7 @@ export { default as AsyncImage } from './ui/AsyncImage.astro';
 export { default as AIContextButton } from './ui/AIContextButton.astro';
 export { default as VerticalSpacer } from './layout/VerticalSpacer.astro';
 export { default as Section } from './layout/Section.astro';
+export { default as ModalHeader } from './layout/ModalHeader.astro';
 export { default as VerticalIconMenu } from './layout/VerticalIconMenu.astro';
 export { default as HeadingContextMenu } from './layout/HeadingContextMenu.astro';
 export { default as LocaleBanner } from './layout/LocaleBanner.astro';
