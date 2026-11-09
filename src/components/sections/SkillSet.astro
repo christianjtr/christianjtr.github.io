@@ -43,7 +43,7 @@ const skills = section_about.expertise.subjects.map((subject) => {
 });
 ---
 
-<div class="bg-base-300 py-10">
+<div class="skillset-section py-10">
   <Section headingTitle={section_skills.title} subtitle={section_skills.subtitle} class="container mx-auto px-1 lg:px-10">
     <Logo slot="beforeHeading" width={90} height={90} />
     <VerticalSpacer />
@@ -126,6 +126,22 @@ const skills = section_about.expertise.subjects.map((subject) => {
 
 <style>
   @reference "@styles/global.css";
+
+  .skillset-section {
+    background-color: #eef2f8;
+    background-image:
+      radial-gradient(ellipse at 18% 18%, rgb(72 79 217 / 0.07), transparent 38%),
+      radial-gradient(ellipse at 82% 72%, rgb(41 180 170 / 0.06), transparent 34%),
+      linear-gradient(135deg, #eef2f8, #e8edf5);
+  }
+
+  :global(html[data-theme="dark"]) .skillset-section {
+    background-color: #111827;
+    background-image:
+      radial-gradient(ellipse at 18% 18%, rgb(72 79 217 / 0.12), transparent 38%),
+      radial-gradient(ellipse at 82% 72%, rgb(41 242 185 / 0.07), transparent 34%),
+      linear-gradient(135deg, #111827, #131c2b);
+  }
 
   .btn-wip-indicator {
       @apply inline-flex items-center gap-2.5 px-5 py-3 rounded-full 

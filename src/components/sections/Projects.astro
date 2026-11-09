@@ -169,11 +169,14 @@ const { data: workcases } = workcaseData as { data: WorkCaseStudy[] };
     .workcase-list { @apply m-0 grid grid-cols-[minmax(0,1fr)] list-none gap-3 p-0; }
     .workcase-list > li { @apply min-w-0; }
     .workcase-card {
-        @apply block min-w-0 w-full overflow-hidden rounded-xl border border-neutral-200/80 bg-base-100 p-3 text-left text-base-content shadow-xs transition duration-200;
-        @apply hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary;
+        @apply block min-w-0 w-full overflow-hidden border-b border-l-2 border-b-base-300/80 border-l-transparent bg-transparent px-3 py-3 text-left text-base-content transition-colors duration-200;
+        @apply hover:border-l-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary;
+        background-color: color-mix(in srgb, var(--color-base-200) 32%, transparent);
+        background-image: none;
     }
+    .workcase-card:hover { background-color: color-mix(in srgb, var(--color-base-200) 48%, transparent); }
     :global(html[data-theme="dark"]) .workcase-card {
-        @apply border-neutral-800 bg-neutral-900 hover:border-accent/60 hover:shadow-accent/5 focus-visible:outline-accent;
+        @apply border-b-neutral-800/80 hover:border-l-accent focus-visible:outline-accent;
     }
     .workcase-card-visual { @apply mb-3 w-full min-w-0 aspect-2/1 overflow-hidden rounded-xl bg-base-200; }
     :global(.workcase-card-visual img) { @apply h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]; }
@@ -184,7 +187,7 @@ const { data: workcases } = workcaseData as { data: WorkCaseStudy[] };
 
     @media (max-width: 1023px) {
         .workcase-card-visual { display: none; }
-        .workcase-card { @apply rounded-xl px-4 py-3; }
+        .workcase-card { @apply px-4 py-3; }
         .workcase-title { @apply text-sm leading-snug; }
         .workcase-card-meta { @apply mt-2; }
     }
@@ -199,19 +202,30 @@ const { data: workcases } = workcaseData as { data: WorkCaseStudy[] };
         .media-column { @apply col-span-7; }
     }
 
-    .project-card { 
-        @apply border mb-6 p-3 rounded-xl transition-all duration-300 relative overflow-hidden; 
-        @apply bg-base-100 border-neutral-200/80 text-neutral-800 shadow-xs;
+    .project-card {
+        @apply relative mb-4 overflow-hidden border-0 border-b border-base-300/80 rounded-none bg-transparent p-0 text-neutral-800 shadow-none transition-colors duration-300;
+        background-color: color-mix(in srgb, var(--color-base-200) 26%, transparent);
+        background-image: none;
     }
-    .project-card:hover { 
-        @apply border-primary/70 shadow-lg shadow-primary/5 -translate-y-1; 
+    .project-card:hover {
+        @apply border-b-primary/45;
+        background-color: color-mix(in srgb, var(--color-base-200) 40%, transparent);
+    }
+
+    .project-card:has(input:checked) {
+        background-color: color-mix(in srgb, var(--color-base-200) 44%, transparent);
+        box-shadow: inset 3px 0 0 color-mix(in srgb, var(--color-primary) 65%, transparent);
     }
     
     :global(html[data-theme="dark"]) .project-card {
-        @apply bg-neutral-900 border-neutral-800 text-white shadow-none;
+        @apply border-b-neutral-700/80 text-white;
+        box-shadow: none;
     }
     :global(html[data-theme="dark"]) .project-card:hover {
-        @apply border-accent/70 shadow-lg shadow-accent/5;
+        @apply border-b-accent/50;
+    }
+    :global(html[data-theme="dark"]) .project-card:has(input:checked) {
+        box-shadow: inset 3px 0 0 color-mix(in srgb, var(--color-accent) 65%, transparent);
     }
 
     .tech-timeline-indicator {
