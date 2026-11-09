@@ -98,36 +98,9 @@ const uniqueTopics = Array.from(
                             </figure>
                         </div>
                         <div class="experiment-card-content">
-                                <div class="experiment-card-topline">
-                                    <div class="experiment-card-badges">
-                                        <Badge class="badge-sm badge-primary uppercase">{experiment.category}</Badge>
-                                        {experiment.year && <Badge class="badge-warning font-semibold badge-sm">{experiment.year}</Badge>}
-                                    </div>
-                                    {experiment.url && (
-                                        <div class="experiment-card-actions">
-                                            {experiment.abstract && (
-                                                <button 
-                                                    class="btn btn-outline btn-xs text-secondary" 
-                                                    onclick={`document.getElementById('experiment_modal_${index}')?.showModal()`} 
-                                                    aria-haspopup="dialog" 
-                                                    aria-label={common.abstract}
-                                                >
-                                                    {common.abstract}
-                                                </button>
-                                            )}
-                                            <LinkButton
-                                                href={experiment.url}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                class='btn-circle btn-sm'
-                                                displayDefaultIcon
-                                                aria-label={`Open experiment: ${experiment.title}`}
-                                                title={`Open experiment: ${experiment.title}`}
-                                            >
-                                                <span class="sr-only">Open experiment: {experiment.title}</span>
-                                            </LinkButton>
-                                        </div>
-                                    )}
+                                <div class="experiment-card-meta">
+                                    <Badge class="badge-sm badge-primary uppercase">{experiment.category}</Badge>
+                                    {experiment.year && <Badge class="badge-warning badge-sm font-semibold experiment-card-year">{experiment.year}</Badge>}
                                 </div>
                                 <div class="experiment-card-role">
                                     <span class="text-xl">{roleIcons[experiment.role]}</span>
@@ -141,10 +114,41 @@ const uniqueTopics = Array.from(
                                     {experiment.description}
                                 </p>
                             <div class="experiment-card-footer">
-                                <BadgeList items={experiment.tags} badgeClass="font-semibold badge-soft text-[11px]" />
+                                <BadgeList items={experiment.tags} badgeClass="font-semibold badge-soft text-[11px]" wrapperClass="experiment-card-tags" />
+                                {(experiment.abstract || experiment.url) && (
+                                    <div class="experiment-card-actions">
+                                        {experiment.abstract && (
+                                            <button
+                                                class="btn btn-ghost btn-xs experiment-abstract-action"
+                                                onclick={`document.getElementById('experiment_modal_${index}')?.showModal()`}
+                                                aria-haspopup="dialog"
+                                                aria-label={common.abstract}
+                                            >
+                                                <svg aria-hidden="true" viewBox="0 0 20 20" fill="none" class="h-3.5 w-3.5">
+                                                    <circle cx="10" cy="10" r="7.25" stroke="currentColor" stroke-width="1.5" />
+                                                    <path d="M10 9v4m0-6h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                                                </svg>
+                                                {common.abstract}
+                                            </button>
+                                        )}
+                                        {experiment.url && (
+                                            <LinkButton
+                                                href={experiment.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="btn-circle btn-sm"
+                                                displayDefaultIcon
+                                                aria-label={`Open experiment: ${experiment.title}`}
+                                                title={`Open experiment: ${experiment.title}`}
+                                            >
+                                                <span class="sr-only">Open experiment: {experiment.title}</span>
+                                            </LinkButton>
+                                        )}
+                                    </div>
+                                )}
                             </div>
                         </div>
-                        {experiment.abstract && <ExperimentAbstractModal text={experiment.abstract} modalId={`experiment_modal_${index}`} /> }
+                        {experiment.abstract && <ExperimentAbstractModal text={experiment.abstract} title={experiment.title} modalId={`experiment_modal_${index}`} /> }
                     </div>
                 ))}
             </main>
@@ -173,7 +177,7 @@ const uniqueTopics = Array.from(
     }
 
     .card:hover {
-        @apply border-primary/35;
+        @apply border-primary;
     }
 
     html[data-theme="dark"] .card {
@@ -181,23 +185,19 @@ const uniqueTopics = Array.from(
     }
 
     html[data-theme="dark"] .card:hover {
-        @apply border-accent/35;
+        @apply border-accent/75;
     }
 
     .experiment-card-content {
         @apply flex flex-1 flex-col justify-between p-3 sm:p-4;
     }
 
-    .experiment-card-topline {
-        @apply mb-2 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between;
+    .experiment-card-meta {
+        @apply mb-2 flex items-center gap-2;
     }
 
-    .experiment-card-badges {
-        @apply flex flex-wrap gap-2;
-    }
-
-    .experiment-card-actions {
-        @apply mt-1 flex w-full items-center justify-between gap-3 sm:mt-0 sm:w-auto sm:justify-end;
+    .experiment-card-year {
+        @apply font-mono tracking-wide;
     }
 
     .experiment-card-role {
@@ -210,14 +210,6 @@ const uniqueTopics = Array.from(
 
     .experiment-card-title {
         @apply mb-1 text-lg font-semibold leading-snug transition-colors;
-    }
-
-    .experiment-card:hover .experiment-card-title {
-        @apply text-primary;
-    }
-
-    html[data-theme="dark"] .experiment-card:hover .experiment-card-title {
-        @apply text-accent;
     }
 
     .experiment-card-type {
@@ -234,6 +226,18 @@ const uniqueTopics = Array.from(
 
     .experiment-card-footer {
         @apply mt-auto border-t border-base-300 pt-2.5;
+    }
+
+    :global(.experiment-card-tags) {
+        @apply w-full gap-2;
+    }
+
+    .experiment-card-actions {
+        @apply mt-3 flex items-center justify-between gap-2 border-t border-base-300/70 pt-2.5;
+    }
+
+    .experiment-abstract-action {
+        @apply gap-1.5;
     }
 
     .filter-panel {
@@ -388,7 +392,7 @@ const uniqueTopics = Array.from(
     }
 
     html[data-theme="dark"] .wip-filter-label:hover {
-        @apply bg-accent/5;
+        @apply border-accent/50 bg-accent/10 text-accent;
     }
 
     html[data-theme="dark"] .wip-filter-label:has(.wip-filter:checked) {
@@ -421,7 +425,7 @@ const uniqueTopics = Array.from(
     }
 
     .experiment-image-wrap {
-        @apply min-w-0 overflow-hidden border-b border-base-300/70;
+        @apply min-w-0 overflow-hidden border-b border-base-300/70 transition-colors duration-300;
     }
 
     .experiment-image-stage {
@@ -443,10 +447,6 @@ const uniqueTopics = Array.from(
 
     :global(.experiment-image-frame img) {
         @apply relative z-0 h-auto max-h-[260px] w-full rounded-lg object-contain transition-transform duration-500;
-    }
-
-    .experiment-card:hover .experiment-image-frame {
-        @apply -translate-y-0.5;
     }
 
     @media (prefers-reduced-motion: reduce) {

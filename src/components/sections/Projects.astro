@@ -170,13 +170,13 @@ const { data: workcases } = workcaseData as { data: WorkCaseStudy[] };
     .workcase-list > li { @apply min-w-0; }
     .workcase-card {
         @apply block min-w-0 w-full overflow-hidden border-b border-l-2 border-b-base-300/80 border-l-transparent bg-transparent px-3 py-3 text-left text-base-content transition-colors duration-200;
-        @apply hover:border-l-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary;
+        @apply hover:border-b-primary/50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary;
         background-color: color-mix(in srgb, var(--color-base-200) 32%, transparent);
         background-image: none;
     }
     .workcase-card:hover { background-color: color-mix(in srgb, var(--color-base-200) 48%, transparent); }
     :global(html[data-theme="dark"]) .workcase-card {
-        @apply border-b-neutral-800/80 hover:border-l-accent focus-visible:outline-accent;
+        @apply border-b-neutral-800/80 hover:border-b-accent/50 focus-visible:outline-accent;
     }
     .workcase-card-visual { @apply mb-3 w-full min-w-0 aspect-2/1 overflow-hidden rounded-xl bg-base-200; }
     :global(.workcase-card-visual img) { @apply h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]; }
@@ -204,16 +204,15 @@ const { data: workcases } = workcaseData as { data: WorkCaseStudy[] };
 
     .project-card {
         @apply relative mb-4 overflow-hidden border-0 border-b border-base-300/80 rounded-none bg-transparent p-0 text-neutral-800 shadow-none transition-colors duration-300;
-        background-color: color-mix(in srgb, var(--color-base-200) 26%, transparent);
+        background-color: var(--color-base-200);
         background-image: none;
     }
     .project-card:hover {
         @apply border-b-primary/45;
-        background-color: color-mix(in srgb, var(--color-base-200) 40%, transparent);
     }
 
     .project-card:has(input:checked) {
-        background-color: color-mix(in srgb, var(--color-base-200) 44%, transparent);
+        background-color: color-mix(in srgb, var(--color-base-200) 65%, var(--color-base-300));
         box-shadow: inset 3px 0 0 color-mix(in srgb, var(--color-primary) 65%, transparent);
     }
     
@@ -249,19 +248,15 @@ const { data: workcases } = workcaseData as { data: WorkCaseStudy[] };
     :global(html[data-theme="dark"]) .timeline-line-track { @apply bg-neutral-800; }
     :global(html[data-theme="dark"]) .timeline-line-active { @apply bg-accent; }
 
-    .project-card:hover .timeline-dot-outer,
     .project-card:has(input:checked) .timeline-dot-outer {
         @apply border-primary bg-primary/5;
     }
-    :global(html[data-theme="dark"]) .project-card:hover .timeline-dot-outer,
     :global(html[data-theme="dark"]) .project-card:has(input:checked) .timeline-dot-outer {
         @apply border-accent bg-accent/5;
     }
-    .project-card:hover .timeline-dot-inner,
     .project-card:has(input:checked) .timeline-dot-inner {
         @apply bg-primary;
     }
-    :global(html[data-theme="dark"]) .project-card:hover .timeline-dot-inner,
     :global(html[data-theme="dark"]) .project-card:has(input:checked) .timeline-dot-inner {
         @apply bg-accent;
     }
