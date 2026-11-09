@@ -131,6 +131,7 @@ const SectionAboutSchema = z.object({
     about_me: z.string(),
     systems_thinking_mindset: z.string(),
     summary: z.string(),
+    availability: z.string(),
     hobbies_title: z.string(),
     hobbies: z.array(HoobySchema),
     v_shaped_profile: z.string(),

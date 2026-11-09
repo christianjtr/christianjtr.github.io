@@ -44,7 +44,7 @@ const { common, section_about, section_experiences, section_studies } = (entry?.
             </p>
             <h1 class="about-name" set:html={section_about.my_name_template} />
             <div class="about-rule" aria-hidden="true"><span></span></div>
-            <p class="about-summary">{section_about.summary}</p>
+            <p class="about-summary" set:html={section_about.summary} />
             <AIContextButton />
         </div>
         <div class="about-visual">
@@ -107,6 +107,10 @@ const { common, section_about, section_experiences, section_studies } = (entry?.
         <div class="about-profile-panel">
             <div class="about-manifesto">
                 <h3 class="manifesto-title">{section_about.about_me_title}</h3>
+                <p class="about-availability">
+                    <span class="about-availability-indicator" aria-hidden="true"></span>
+                    {section_about.availability}
+                </p>
                 <p class="manifesto-body">{section_about.about_me}</p>
             </div>
             <div class="about-languages">
@@ -311,11 +315,41 @@ const { common, section_about, section_experiences, section_studies } = (entry?.
 
     .about-summary {
         max-width: 38rem;
-        margin: 0 0 1.5rem;
+        margin: 0 0 0.75rem;
         color: var(--color-base-content);
         font-size: clamp(0.98rem, 1.4vw, 1.15rem);
         line-height: 1.75;
         opacity: 0.78;
+    }
+
+    .about-summary :global(strong) {
+        color: var(--color-primary);
+        font-weight: 800;
+        opacity: 1;
+    }
+
+    html[data-theme="dark"] .about-summary :global(strong) {
+        color: var(--color-accent);
+    }
+
+    .about-availability {
+        @apply text-xs;
+        display: flex;
+        align-items: center;
+        gap: 0.55rem;
+        margin: 0.65rem 0 0;
+        color: var(--color-secondary);
+        font-weight: 600;
+        line-height: 1.5;
+    }
+
+    .about-availability-indicator {
+        width: 0.5rem;
+        height: 0.5rem;
+        flex: 0 0 auto;
+        border-radius: 50%;
+        background: var(--color-secondary);
+        box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-secondary) 15%, transparent);
     }
 
     .about-visual {

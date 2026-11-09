@@ -103,10 +103,11 @@
         "greeting": "Welcome, I am",
         "my_name": "Christian José Torrealba Rondón<span class='text-accent text-3xl'>.</span>",
         "my_name_template": "Christian José <br><span class='text-[0.85em] font-medium tracking-wide inline-block mt-1'>Torrealba Rondón<span class='text-accent'>.</span></span>",
-        "about_me_title": "Product-minded engineer who integrates strategy and technical execution to deliver data-driven solutions.",
+        "about_me_title": "Engineer who integrates strategy and technical execution to deliver data-driven solutions.",
         "about_me": "I work with product and engineering teams to turn requirements into solutions, including web applications, UI interfaces, integrations, and the tests that keep them reliable.",
         "systems_thinking_mindset": "Systems Thinking Mindset",
-        "summary": "Building digital products and solutions through data-driven engineering and user-centered design.",
+        "summary": "Product-minded engineer with a <strong>Systems Engineering background</strong>, bridging strategy, data, and user-centered product delivery.",
+        "availability": "Open to relocation / consulting opportunities",
         "hobbies_title": "Hobbies",
         "hobbies": [
             { "name": "Outdoor", "emoji": "☀️" },
