@@ -1,0 +1,27 @@
+---
+import type { AboutMeData } from '@schemas/AboutMeSchema';
+import AboutBackground from './AboutBackground.astro';
+import AboutLanguages from './AboutLanguages.astro';
+
+interface Props {
+    common: AboutMeData['common'];
+    sectionAbout: AboutMeData['section_about'];
+    experiences: AboutMeData['section_experiences'];
+    studies: AboutMeData['section_studies'];
+}
+
+const { common, sectionAbout, experiences, studies } = Astro.props;
+---
+
+<div class="about-profile-panel">
+    <div class="about-manifesto">
+        <h3 class="manifesto-title">{sectionAbout.about_me_title}</h3>
+        <p class="about-availability">
+            <span class="about-availability-indicator" aria-hidden="true"></span>
+            {sectionAbout.availability}
+        </p>
+        <p class="manifesto-body">{sectionAbout.about_me}</p>
+    </div>
+    <AboutLanguages languages={sectionAbout.languages} languageTip={sectionAbout.language_tip} />
+    <AboutBackground common={common} experiences={experiences} studies={studies} />
+</div>

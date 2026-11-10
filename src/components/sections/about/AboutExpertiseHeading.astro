@@ -1,0 +1,32 @@
+---
+import { Image } from 'astro:assets';
+
+import type { AboutMeData } from '@schemas/AboutMeSchema';
+import CrystalBallAnimation from '@assets/gifs/crystal_ball.gif';
+
+interface Props {
+    sectionAbout: AboutMeData['section_about'];
+}
+
+const { sectionAbout } = Astro.props;
+---
+
+<div class="about-expertise-heading">
+    <div>
+        <div class="about-eyebrow">
+            <span aria-hidden="true"></span>
+            <span>{sectionAbout.systems_thinking_mindset}</span>
+        </div>
+        <h2>{sectionAbout.expertise.title}</h2>
+    </div>
+    <div class="crystal-divider" aria-hidden="true">
+        <span></span>
+        <Image
+            src={CrystalBallAnimation}
+            width="80"
+            height="80"
+            alt=""
+            class="object-contain"
+        />
+    </div>
+</div>

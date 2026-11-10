@@ -1,0 +1,88 @@
+---
+import { Image } from 'astro:assets';
+
+import type { AboutMeData } from '@schemas/AboutMeSchema';
+import { AIContextButton } from '@components';
+import WaveAnimation from '@assets/gifs/wave.gif';
+
+interface Props {
+    sectionAbout: AboutMeData['section_about'];
+    activeAvatar: ImageMetadata;
+}
+
+const { sectionAbout, activeAvatar } = Astro.props;
+---
+
+<section class="about-hero">
+    <div class="about-grid-mark" aria-hidden="true">
+        <svg viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 20h400M0 80h400M0 140h400M60 0v200M180 0v200M300 0v200" stroke="currentColor" stroke-width="1"/>
+            <circle cx="180" cy="80" r="4" class="fill-accent animate-ping" />
+            <circle cx="180" cy="80" r="3" class="fill-accent" />
+        </svg>
+    </div>
+    <div class="about-intro">
+        <p class="about-greeting">
+            <Image src={WaveAnimation} width="84" height="84" alt="" aria-hidden="true" />
+            <span>{sectionAbout.greeting}</span>
+        </p>
+        <h1 class="about-name" set:html={sectionAbout.my_name_template} />
+        <div class="about-rule" aria-hidden="true"><span></span></div>
+        <p class="about-summary" set:html={sectionAbout.summary} />
+        <AIContextButton />
+    </div>
+    <div class="about-visual">
+        <details class="about-hobbies dropdown dropdown-end mobile-hobbies">
+            <summary class="about-hobbies-toggle list-none">
+                <span aria-hidden="true">🧩</span>
+                <span>{sectionAbout.hobbies_title}</span>
+                <svg class="about-hobbies-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="m5 7.5 5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </summary>
+            <div class="dropdown-content about-hobbies-list">
+                {sectionAbout.hobbies.map((hobby) => (
+                    <span class="about-hobby">
+                        {hobby.emoji} {hobby.name}
+                    </span>
+                ))}
+            </div>
+        </details>
+        <figure class="avatar-image about-avatar" transition:name="avatar">
+            <Image src={activeAvatar} alt="My image" aria-label="My image" />
+        </figure>
+        <div class="avatar-message">
+            <div class="avatar-message__surface">
+                <span class="avatar-message__status" aria-hidden="true"></span>
+                <div class="text-slider-mask">
+                    <div class="text-slider">
+                        {sectionAbout.avatar_messages.map((message) => (
+                            <p class="no-select">{message}</p>
+                        ))}
+                        <p>{sectionAbout.avatar_messages[0]}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('click', (event) => {
+        const target = event.target;
+        if (!(target instanceof Node)) return;
+
+        document.querySelectorAll<HTMLDetailsElement>('.about-hobbies[open]').forEach((menu) => {
+            if (!menu.contains(target)) menu.open = false;
+        });
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key !== 'Escape') return;
+
+        document.querySelectorAll<HTMLDetailsElement>('.about-hobbies[open]').forEach((menu) => {
+            menu.open = false;
+            menu.querySelector('summary')?.focus();
+        });
+    });
+</script>

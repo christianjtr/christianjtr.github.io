@@ -1,0 +1,43 @@
+---
+import type { AboutMeData } from '@schemas/AboutMeSchema';
+
+interface Props {
+    languages: AboutMeData['section_about']['languages'];
+    languageTip: string;
+}
+
+const { languages, languageTip } = Astro.props;
+---
+
+<div class="about-languages">
+    <div class="about-detail-label">
+        <span class="about-detail-pulse" aria-hidden="true"></span>
+        <span>{languageTip}</span>
+    </div>
+    {languages.map((language) => (
+        <div class="language-row">
+            <div class="language-copy">
+                <span class="language-emoji" aria-hidden="true">{language.emoji}</span>
+                <span class="language-name">{language.name}</span>
+                <span class="language-proficiency">{language.proficiency}</span>
+            </div>
+            <div class="language-meter" role="progressbar" aria-label={`${language.name} proficiency`} aria-valuemin="0" aria-valuemax="100" aria-valuenow={language.value}>
+                {Array.from({ length: 5 }).map((_, index) => {
+                    const threshold = (index + 1) * 20;
+                    const isFilled = language.value >= threshold;
+                    const isPartial = language.value >= threshold - 20 && language.value < threshold;
+
+                    return (
+                        <span
+                            class:list={[
+                                'language-meter__segment',
+                                isFilled && 'is-filled',
+                                isPartial && 'is-partial'
+                            ]}
+                        />
+                    );
+                })}
+            </div>
+        </div>
+    ))}
+</div>

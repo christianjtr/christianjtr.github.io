@@ -1,0 +1,43 @@
+---
+import type { AboutMeData } from '@schemas/AboutMeSchema';
+import { BadgeList } from '@components';
+import AcademicCapIcon from '@assets/svg/academic_cap.svg';
+import BuildingIcon from '@assets/svg/building.svg';
+
+interface Props {
+    common: AboutMeData['common'];
+    experiences: AboutMeData['section_experiences'];
+    studies: AboutMeData['section_studies'];
+}
+
+const { common, experiences, studies } = Astro.props;
+---
+
+<div class="about-background">
+    <div class="about-background-item">
+        <div class="about-detail-label">
+            <AcademicCapIcon width={20} height={20} class="stroke-2 shrink-0" />
+            <span>{studies.title}</span>
+        </div>
+        <div class="about-background-copy">
+            <span class="about-foundation">{experiences.academic_foundation}</span>
+            <div class="about-education-level">
+                <span>{studies.educational_level}</span>
+                <div class="tooltip tooltip-top md:tooltip-right tooltip-secondary cursor-help" data-tip={common.details_on_linkedin}>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-4 w-4 text-base-content/40 transition-colors hover:text-secondary">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="about-background-item">
+        <div class="about-detail-label">
+            <BuildingIcon width={20} height={20} class="stroke-2 shrink-0" />
+            <span>{experiences.companies_across_regions}</span>
+        </div>
+        <div class="about-countries">
+            <BadgeList items={experiences.full_countries} badgeClass="font-semibold badge-soft text-[11px]" />
+        </div>
+    </div>
+</div>

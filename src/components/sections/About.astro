@@ -1,19 +1,17 @@
 ---
 import { getEntry } from 'astro:content';
-import { Image } from 'astro:assets';
 
 import type { ContentDataEntryType } from '@app-types/Content';
 import type { AboutMeData } from '@schemas/AboutMeSchema';
 import { CONTENT } from '@app-types/Content';
-import { VerticalSpacer, BadgeList, AIContextButton } from "@components";
+import { VerticalSpacer } from '@components';
 import ExpertiseFeatureGrid from '@components/sections/ExpertiseFeatureGrid.astro';
-import WaveAnimation from "@assets/gifs/wave.gif";
-import CrystalBallAnimation from "@assets/gifs/crystal_ball.gif";
-import MeENImg from "@assets/images/me.png";
-import MeFRImg from "@assets/images/me-fr.png";
-import MeESImg from "@assets/images/me-es.png";
-import BuildingIcon from "@assets/svg/building.svg";
-import AcademicCapIcon from "@assets/svg/academic_cap.svg"; 
+import AboutExpertiseHeading from './about/AboutExpertiseHeading.astro';
+import AboutHero from './about/AboutHero.astro';
+import AboutProfilePanel from './about/AboutProfilePanel.astro';
+import MeENImg from '@assets/images/me.png';
+import MeFRImg from '@assets/images/me-fr.png';
+import MeESImg from '@assets/images/me-es.png';
 
 const { lang } = Astro.params;
 
@@ -29,177 +27,22 @@ const { common, section_about, section_experiences, section_studies } = (entry?.
 ---
 
 <div class="about-page container mx-auto mt-4 px-3 sm:mt-8 sm:px-5">
-    <section class="about-hero">
-        <div class="about-grid-mark" aria-hidden="true">
-            <svg viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 20h400M0 80h400M0 140h400M60 0v200M180 0v200M300 0v200" stroke="currentColor" stroke-width="1"/>
-                <circle cx="180" cy="80" r="4" class="fill-accent animate-ping" />
-                <circle cx="180" cy="80" r="3" class="fill-accent" />
-            </svg>
-        </div>
-        <div class="about-intro">
-            <p class="about-greeting">
-                <Image src={WaveAnimation} width="84" height="84" alt="" aria-hidden="true" />
-                <span>{section_about.greeting}</span>
-            </p>
-            <h1 class="about-name" set:html={section_about.my_name_template} />
-            <div class="about-rule" aria-hidden="true"><span></span></div>
-            <p class="about-summary" set:html={section_about.summary} />
-            <AIContextButton />
-        </div>
-        <div class="about-visual">
-            <details class="about-hobbies dropdown dropdown-end mobile-hobbies">
-                <summary class="about-hobbies-toggle list-none">
-                    <span aria-hidden="true">🧩</span>
-                    <span>{section_about.hobbies_title}</span>
-                    <svg class="about-hobbies-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                        <path d="m5 7.5 5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </summary>
-                <div class="dropdown-content about-hobbies-list">
-                    {section_about.hobbies.map((hobby) => (
-                        <span class="about-hobby">
-                            {hobby.emoji} {hobby.name}
-                        </span>
-                    ))}
-                </div>
-            </details>
-            <figure class="avatar-image about-avatar" transition:name="avatar">
-                <Image src={activeAvatar} alt="My image" aria-label="My image" />
-            </figure>
-            <div class="avatar-message">
-                <div class="avatar-message__surface">
-                    <span class="avatar-message__status" aria-hidden="true"></span>
-                    <div class="text-slider-mask">
-                        <div class="text-slider">
-                            {section_about.avatar_messages.map((message: string) => (
-                                <p class="no-select">{message}</p>
-                            ))}
-                            <p>{section_about.avatar_messages[0]}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="about-expertise-heading">
-        <div>
-            <div class="about-eyebrow">
-                <span aria-hidden="true"></span>
-                <span>{section_about.systems_thinking_mindset}</span>
-            </div>
-            <h2>{section_about.expertise.title}</h2>
-        </div>
-        <div class="crystal-divider" aria-hidden="true">
-            <span></span>
-            <Image
-                src={CrystalBallAnimation}
-                width="80"
-                height="80"
-                alt=""
-                class="object-contain"
-            />
-        </div>
-    </div>
+    <AboutHero sectionAbout={section_about} activeAvatar={activeAvatar} />
+    <AboutExpertiseHeading sectionAbout={section_about} />
 
     <div class="about-details-grid">
-        <div class="about-profile-panel">
-            <div class="about-manifesto">
-                <h3 class="manifesto-title">{section_about.about_me_title}</h3>
-                <p class="about-availability">
-                    <span class="about-availability-indicator" aria-hidden="true"></span>
-                    {section_about.availability}
-                </p>
-                <p class="manifesto-body">{section_about.about_me}</p>
-            </div>
-            <div class="about-languages">
-                <div class="about-detail-label">
-                    <span class="about-detail-pulse" aria-hidden="true"></span>
-                    <span>{section_about.language_tip}</span>
-                </div>
-                {section_about.languages.map((language) => (
-                    <div class="language-row">
-                        <div class="language-copy">
-                            <span class="language-emoji" aria-hidden="true">{language.emoji}</span>
-                            <span class="language-name">{language.name}</span>
-                            <span class="language-proficiency">{language.proficiency}</span>
-                        </div>
-                        <div class="language-meter" role="progressbar" aria-label={`${language.name} proficiency`} aria-valuemin="0" aria-valuemax="100" aria-valuenow={language.value}>
-                            {Array.from({ length: 5 }).map((_, index) => {
-                                const threshold = (index + 1) * 20;
-                                const isFilled = language.value >= threshold;
-                                const isPartial = language.value >= threshold - 20 && language.value < threshold;
-
-                                return (
-                                    <span
-                                        class:list={[
-                                            'language-meter__segment',
-                                            isFilled && 'is-filled',
-                                            isPartial && 'is-partial'
-                                        ]}
-                                    />
-                                );
-                            })}
-                        </div>
-                    </div>
-                ))}
-            </div>
-            <div class="about-background">
-                <div class="about-background-item">
-                    <div class="about-detail-label">
-                        <AcademicCapIcon width={20} height={20} class="stroke-2 shrink-0" />
-                        <span>{section_studies.title}</span>
-                    </div>
-                    <div class="about-background-copy">
-                        <span class="about-foundation">{section_experiences.academic_foundation}</span>
-                        <div class="about-education-level">
-                            <span>{section_studies.educational_level}</span>
-                            <div class="tooltip tooltip-top md:tooltip-right tooltip-secondary cursor-help" data-tip={common.details_on_linkedin}>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-4 w-4 text-base-content/40 transition-colors hover:text-secondary">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-background-item">
-                    <div class="about-detail-label">
-                        <BuildingIcon width={20} height={20} class="stroke-2 shrink-0" />
-                        <span>{section_experiences.companies_across_regions}</span>
-                    </div>
-                    <div class="about-countries">
-                        <BadgeList items={section_experiences.full_countries} badgeClass="font-semibold badge-soft text-[11px]" />
-                    </div>
-                </div>
-            </div>
-        </div>
+        <AboutProfilePanel
+            common={common}
+            sectionAbout={section_about}
+            experiences={section_experiences}
+            studies={section_studies}
+        />
         <div class="about-expertise-grid">
             <ExpertiseFeatureGrid subjects={section_about.expertise.subjects} />
         </div>
     </div>
 </div>
 <VerticalSpacer />
-
-<script>
-    document.addEventListener('click', (event) => {
-        const target = event.target;
-        if (!(target instanceof Node)) return;
-
-        document.querySelectorAll<HTMLDetailsElement>('.about-hobbies[open]').forEach((menu) => {
-            if (!menu.contains(target)) menu.open = false;
-        });
-    });
-
-    document.addEventListener('keydown', (event) => {
-        if (event.key !== 'Escape') return;
-
-        document.querySelectorAll<HTMLDetailsElement>('.about-hobbies[open]').forEach((menu) => {
-            menu.open = false;
-            menu.querySelector('summary')?.focus();
-        });
-    });
-</script>
 
 <style is:global>
     @reference "@styles/global.css";
@@ -779,7 +622,7 @@ const { common, section_about, section_experiences, section_studies } = (entry?.
         display: flex;
         flex-wrap: wrap;
         gap: 0.35rem;
-        margin: 0.65rem 0 0 1.8rem;
+        margin: 1.5rem 0 0 1.8rem;
     }
 
     .about-expertise-grid {
