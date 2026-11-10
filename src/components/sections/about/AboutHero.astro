@@ -86,3 +86,401 @@ const { sectionAbout, activeAvatar } = Astro.props;
         });
     });
 </script>
+
+<style is:global>
+    .about-hero {
+        position: relative;
+        isolation: isolate;
+        display: grid;
+        grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+        align-items: center;
+        gap: clamp(1.5rem, 4vw, 4rem);
+        overflow: visible;
+        padding: clamp(2rem, 0vw, 4.5rem);
+        border: 0;
+        border-radius: 1.75rem;
+        background: var(--color-base-100);
+    }
+
+    .about-grid-mark {
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+        overflow: hidden;
+        border-radius: inherit;
+        pointer-events: none;
+        color: var(--color-primary);
+        opacity: 0.07;
+    }
+
+    .about-grid-mark svg {
+        position: absolute;
+        top: 8%;
+        left: -1rem;
+        width: min(32rem, 55%);
+        height: auto;
+    }
+
+    .about-intro {
+        position: relative;
+        z-index: 4;
+        min-width: 0;
+    }
+
+    .about-intro :global(.ai-context) {
+        position: relative;
+        z-index: 5;
+    }
+
+    .about-intro :global(.ai-context-menu[open]) {
+        z-index: 20;
+    }
+
+    .about-greeting {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin: 0 0 0.5rem;
+        color: var(--color-accent);
+        font-size: clamp(1.35rem, 2.5vw, 1.875rem);
+        font-weight: 700;
+        line-height: 1.25;
+    }
+
+    .about-greeting img {
+        width: clamp(2.5rem, 5vw, 3.5rem);
+        height: clamp(2.5rem, 5vw, 3.5rem);
+        object-fit: contain;
+    }
+
+    .about-name {
+        margin: 0;
+        color: var(--color-base-content);
+        font-size: clamp(2.5rem, 5.9vw, 5rem);
+        font-weight: 800;
+        letter-spacing: -0.055em;
+        line-height: 1.02;
+        text-wrap: balance;
+    }
+
+    .about-name > span {
+        color: var(--color-base-content);
+    }
+
+    .about-name > span > .text-accent {
+        color: var(--color-accent);
+    }
+
+    .about-name :is(strong, em) {
+        color: var(--color-primary);
+    }
+
+    html[data-theme="dark"] .about-name :is(strong, em) {
+        color: var(--color-accent);
+    }
+
+    .about-rule {
+        position: relative;
+        width: min(13rem, 58%);
+        height: 2px;
+        margin: 1.5rem 0;
+        background: var(--color-base-300);
+    }
+
+    .about-rule span {
+        position: absolute;
+        top: -2px;
+        left: 0;
+        width: 3.25rem;
+        height: 6px;
+        border-radius: 999px;
+        background: var(--color-accent);
+    }
+
+    .about-summary {
+        max-width: 38rem;
+        margin: 0 0 0.75rem;
+        color: var(--color-base-content);
+        font-size: clamp(0.98rem, 1.4vw, 1.15rem);
+        line-height: 1.75;
+        opacity: 0.78;
+    }
+
+    .about-summary :global(strong) {
+        color: var(--color-primary);
+        font-weight: 800;
+        opacity: 1;
+    }
+
+    html[data-theme="dark"] .about-summary :global(strong) {
+        color: var(--color-accent);
+    }
+
+    .about-visual {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        min-width: 0;
+        min-height: 30rem;
+        place-items: center;
+    }
+
+    .avatar-image {
+        position: relative;
+        z-index: 1;
+        width: clamp(27rem, 32vw, 26rem);
+        aspect-ratio: 1;
+        overflow: hidden;
+        margin: 0;
+        border-radius: 50%;
+        background:
+        linear-gradient(
+        135deg,
+        color-mix(in srgb, var(--color-cobalt-blue) 65%, transparent) 0%,
+        color-mix(in srgb, var(--color-electric-teal) 55%, transparent) 100%
+        ),
+        var(--color-base-200);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid color-mix(in srgb, var(--color-electric-teal) 60%, transparent);
+        box-shadow:
+        inset 0 4px 16px color-mix(in srgb, white 25%, transparent),
+        inset 0 -4px 12px color-mix(in srgb, black 20%, transparent),
+        0 16px 40px color-mix(in srgb, var(--color-cobalt-blue) 35%, transparent),
+        0 4px 12px color-mix(in srgb, var(--color-electric-teal) 20%, transparent);
+        outline: 1px solid color-mix(in srgb, var(--color-cobalt-blue) 45%, transparent);
+        outline-offset: 4px;
+        transition: all 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .avatar-image img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .avatar-image:hover {
+        transform: scale(1.03) translateY(-2px);
+        outline: 1.5px solid color-mix(in srgb, var(--color-electric-teal) 75%, transparent);
+        outline-offset: 6px;
+        border-color: color-mix(in srgb, var(--color-electric-teal) 85%, transparent);
+        box-shadow:
+        inset 0 6px 20px color-mix(in srgb, white 35%, transparent),
+        inset 0 -2px 10px color-mix(in srgb, black 15%, transparent),
+        0 8px 20px color-mix(in srgb, var(--color-electric-teal) 30%, transparent);
+    }
+
+    .about-hobbies {
+        position: absolute;
+        z-index: 3;
+        top: 0.25rem;
+        right: 0.25rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .about-hobbies-toggle::-webkit-details-marker {
+        display: none;
+    }
+
+    .about-hobbies-toggle {
+        display: inline-flex;
+        min-height: 2.5rem;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 0.8rem;
+        border: 1px solid var(--color-base-300);
+        border-radius: 999px;
+        background: var(--color-base-100);
+        color: var(--color-base-content);
+        cursor: pointer;
+        font-family: var(--font-mono);
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        transition: border-color 180ms ease, color 180ms ease, transform 180ms ease;
+    }
+
+    .about-hobbies-toggle:hover,
+    .about-hobbies[open] .about-hobbies-toggle {
+        transform: translateY(-1px);
+        border-color: var(--color-primary);
+        color: var(--color-primary);
+    }
+
+    html[data-theme="dark"] .about-hobbies-toggle:hover,
+    html[data-theme="dark"] .about-hobbies[open] .about-hobbies-toggle {
+        border-color: var(--color-accent);
+        color: var(--color-accent);
+    }
+
+    .about-hobbies-chevron {
+        width: 0.9rem;
+        height: 0.9rem;
+        transition: transform 180ms ease;
+    }
+
+    .about-hobbies[open] .about-hobbies-chevron {
+        transform: rotate(180deg);
+    }
+
+    .about-hobbies-list {
+        display: flex;
+        width: max-content;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.4rem;
+        padding-top: 0.5rem;
+    }
+
+    .about-hobby {
+        padding: 0.4rem 0.65rem;
+        border: 1px solid color-mix(in srgb, var(--color-primary) 20%, var(--color-base-300));
+        border-radius: 0.65rem;
+        background: var(--color-base-100);
+        color: var(--color-base-content);
+        font-size: 0.7rem;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+
+    .avatar-message {
+        position: absolute;
+        z-index: 2;
+        top: 12.5rem;
+        left: 1rem;
+        width: max-content;
+        max-width: 17.5rem;
+        filter: drop-shadow(0 0.5rem 0.75rem rgb(15 23 42 / 0.16));
+    }
+
+    .avatar-message__surface {
+        display: flex;
+        min-height: 2.25rem;
+        align-items: center;
+        gap: 0.5rem;
+        overflow: hidden;
+        padding: 0.375rem 0.875rem;
+        border: 1px solid color-mix(in srgb, var(--color-primary) 30%, transparent);
+        border-radius: 999px;
+        background: color-mix(in srgb, var(--color-base-100) 90%, transparent);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+    }
+
+    .avatar-message__status {
+        position: relative;
+        width: 0.5rem;
+        height: 0.5rem;
+        flex: 0 0 auto;
+        border-radius: 50%;
+        background: var(--color-accent);
+    }
+
+    .avatar-message__status::after {
+        position: absolute;
+        inset: -0.1rem;
+        border-radius: inherit;
+        background: var(--color-accent);
+        content: "";
+        animation: avatar-status-ping 1.8s ease-out infinite;
+    }
+
+    .text-slider-mask {
+        height: 1.2rem;
+        min-width: 0;
+        overflow: hidden;
+    }
+
+    .text-slider {
+        animation: slideText 16s infinite cubic-bezier(0.7, 0, 0.3, 1);
+        color: var(--color-base-content);
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        line-height: 1.2rem;
+        white-space: nowrap;
+    }
+
+    .text-slider p {
+        margin: 0;
+        user-select: none;
+        -webkit-user-select: none;
+    }
+
+    @media (min-width: 1024px) {
+        .mobile-hobbies:hover div {
+            display: flex !important;
+        }
+    }
+
+    @keyframes orbit-dot-pulse {
+        to { opacity: 0.55; transform: scale(0.75); }
+    }
+
+    @keyframes avatar-status-ping {
+        0% { opacity: 0.65; transform: scale(1); }
+        100% { opacity: 0; transform: scale(2.5); }
+    }
+
+    @keyframes slideText {
+        0%, 25% { transform: translateY(0%); }
+        30%, 45% { transform: translateY(-25%); }
+        50%, 70% { transform: translateY(-50%); }
+        75%, 94.99% { transform: translateY(-75%); }
+        95%, 100% { transform: translateY(0%); }
+    }
+
+    @media (max-width: 1023px) {
+        .about-hero {
+            grid-template-columns: minmax(0, 1fr);
+            gap: 0;
+            padding: clamp(1.25rem, 5vw, 2rem);
+        }
+
+        .about-visual {
+            min-height: clamp(21rem, 82vw, 25rem);
+        }
+
+        .about-grid-mark {
+            opacity: 0.045;
+        }
+
+        .avatar-image {
+            width: clamp(15rem, 72vw, 19rem);
+        }
+
+        .about-hobbies {
+            top: 0.25rem;
+            right: 0.25rem;
+        }
+
+        .avatar-message {
+            top: 12.5rem;
+            left: 1rem;
+            max-width: min(17.5rem, calc(100vw - 5rem));
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .about-hero {
+            min-height: 31rem;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .avatar-message {
+            top: 18rem;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .text-slider,
+        .avatar-message__status::after {
+            animation: none;
+        }
+    }
+</style>

@@ -41,3 +41,59 @@ const { common, experiences, studies } = Astro.props;
         </div>
     </div>
 </div>
+
+<style is:global>
+    .about-background {
+        display: grid;
+        gap: 1.15rem;
+        margin-top: 1.4rem;
+    }
+
+    .about-background-item {
+        min-width: 0;
+    }
+
+    .about-background-copy {
+        margin: 0.65rem 0 0 1.8rem;
+    }
+
+    .about-foundation {
+        display: block;
+        margin-bottom: 0.55rem;
+        color: var(--color-base-content);
+        font-size: 0.75rem;
+        font-weight: 600;
+        line-height: 1.55;
+        opacity: 0.66;
+    }
+
+    .about-education-level {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding-left: 0.65rem;
+        border-left: 2px solid var(--color-primary);
+        color: var(--color-base-content);
+        font-size: 0.9rem;
+        font-weight: 800;
+        line-height: 1.4;
+    }
+
+    html[data-theme="dark"] .about-education-level {
+        border-color: var(--color-accent);
+    }
+
+    .about-countries {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35rem;
+        margin: 1.5rem 0 0 1.8rem;
+    }
+
+    @media (max-width: 639px) {
+        .about-background-copy,
+        .about-countries {
+            margin-left: 1.6rem;
+        }
+    }
+</style>

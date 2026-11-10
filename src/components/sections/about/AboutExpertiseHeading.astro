@@ -30,3 +30,95 @@ const { sectionAbout } = Astro.props;
         />
     </div>
 </div>
+
+<style is:global>
+    .about-expertise-heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.5rem;
+        margin: clamp(3rem, 7vw, 6rem) auto 1.5rem;
+        padding: 0 clamp(0.25rem, 2vw, 1.5rem);
+    }
+
+    .about-eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        color: var(--color-primary);
+        font-family: var(--font-mono);
+        font-size: 0.68rem;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        line-height: 1.5;
+        text-transform: uppercase;
+    }
+
+    .about-eyebrow > span:first-child {
+        width: 0.45rem;
+        height: 0.45rem;
+        flex: 0 0 auto;
+        border-radius: 50%;
+        background: var(--color-accent);
+        box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-accent) 14%, transparent);
+    }
+
+    html[data-theme="dark"] .about-eyebrow {
+        color: var(--color-accent);
+    }
+
+    .about-expertise-heading h2 {
+        max-width: 42rem;
+        margin: 0.6rem 0 0;
+        color: var(--color-base-content);
+        font-size: clamp(1.65rem, 3.7vw, 3rem);
+        font-weight: 800;
+        letter-spacing: -0.045em;
+        line-height: 1.08;
+        text-wrap: balance;
+    }
+
+    .crystal-divider {
+        display: flex;
+        min-width: 8rem;
+        flex: 1 1 auto;
+        align-items: center;
+        justify-content: flex-end;
+        margin-left: clamp(1rem, 4vw, 3rem);
+    }
+
+    .crystal-divider > span {
+        height: 1px;
+        flex: 1 1 auto;
+        border-top: 1px dashed var(--color-base-300);
+    }
+
+    .crystal-divider img {
+        width: 5rem;
+        height: 5rem;
+        flex: 0 0 auto;
+        object-fit: contain;
+    }
+
+    @media (max-width: 639px) {
+        .about-expertise-heading {
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+
+        .about-eyebrow {
+            font-size: 0.6rem;
+            letter-spacing: 0.09em;
+        }
+
+        .crystal-divider {
+            min-width: 3rem;
+            margin-left: 0.5rem;
+        }
+
+        .crystal-divider img {
+            width: 3.75rem;
+            height: 3.75rem;
+        }
+    }
+</style>

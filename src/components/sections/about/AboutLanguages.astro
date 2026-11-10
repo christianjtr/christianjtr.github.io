@@ -41,3 +41,105 @@ const { languages, languageTip } = Astro.props;
         </div>
     ))}
 </div>
+
+<style is:global>
+    .about-languages {
+        display: grid;
+        gap: 0.55rem;
+        margin-top: 1.5rem;
+    }
+
+    .language-row {
+        display: flex;
+        min-width: 0;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+        padding: 0.2rem 0;
+    }
+
+    .language-copy {
+        display: flex;
+        min-width: 0;
+        align-items: center;
+        gap: 0.45rem;
+        color: var(--color-base-content);
+        font-size: 0.78rem;
+    }
+
+    .language-emoji {
+        font-size: 1.2rem;
+        line-height: 1;
+    }
+
+    .language-name {
+        flex: 0 0 auto;
+        font-weight: 800;
+    }
+
+    .language-proficiency {
+        overflow: hidden;
+        color: var(--color-base-content);
+        opacity: 0.62;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .language-meter {
+        display: flex;
+        height: 0.5rem;
+        flex: 0 0 auto;
+        align-items: center;
+        gap: 0.16rem;
+    }
+
+    .language-meter__segment {
+        width: 0.38rem;
+        height: 0.38rem;
+        border-radius: 2px;
+        background: var(--color-base-300);
+    }
+
+    .language-meter__segment.is-filled {
+        background: var(--color-primary);
+    }
+
+    html[data-theme="dark"] .language-meter__segment.is-filled {
+        background: var(--color-accent);
+    }
+
+    .language-meter__segment.is-partial {
+        animation: language-pulse 1.8s ease-in-out infinite alternate;
+        background: color-mix(in srgb, var(--color-primary) 48%, var(--color-base-300));
+    }
+
+    html[data-theme="dark"] .language-meter__segment.is-partial {
+        background: color-mix(in srgb, var(--color-accent) 55%, var(--color-base-300));
+    }
+
+    @keyframes language-pulse {
+        to { opacity: 0.55; }
+    }
+
+    @media (max-width: 639px) {
+        .language-copy {
+            gap: 0.35rem;
+            font-size: 0.72rem;
+        }
+
+        .language-meter {
+            gap: 0.12rem;
+        }
+
+        .language-meter__segment {
+            width: 0.32rem;
+            height: 0.32rem;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .language-meter__segment.is-partial {
+            animation: none;
+        }
+    }
+</style>
