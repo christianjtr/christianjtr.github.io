@@ -79,7 +79,7 @@ Time focused on upskilling through the Expert Diploma in Technology Management (
 ### R&D Product Software Engineer (Web and Data)
 **Petroleum of Venezuela (PDVSA)** | Venezuela | Energy and Hydrocarbons | *May 2011 – Jan 2016*
 - Led the conception, design, development, and delivery of a real-time web app for economic scenario analysis, leveraging GIS technologies (Google Earth, KML/KMZ) for geoscience and economic data. Showcased at the American Association of Petroleum Geologists in 2011.
-- Created BI/ETL/DWH models over hydrocarbon production and facilities data, and developed economic and financial simulations using R to assess venture viability and risk.
+- Created BI/ETL/ELT/DWH models over hydrocarbon production and facilities data, and developed economic and financial simulations using R to assess venture viability and risk.
 - **Stack:** jQuery, PHP, MySQL, PostgreSQL, R, Pentaho BI, Highcharts, ArcGIS
 
 ### IT Systems Responsible

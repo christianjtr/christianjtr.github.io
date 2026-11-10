@@ -223,12 +223,12 @@
                     "description": "Diseño de arquitectura de datos y analítica para la toma de decisiones.",
                     "topics": [
                         "Habilidades analíticas",
-                        "Modelado de ETL/DWH",
+                        "Modelado de ETL/ELT/DWH",
                         "Limpieza y visualización de datos",
                         "Cuadros de mando y reportes"
                     ],
                     "tools": [
-                        "ETL/DWH",
+                        "ETL/ELT/DWH",
                         "SQL Server",
                         "PostgreSQL",
                         "MySQL",
@@ -247,7 +247,8 @@
                         "Herramientas para desarrolladores",
                         "Integración de LLMs",
                         "Flujos de trabajo de IA",
-                        "Automatización de procesos"
+                        "Automatización de procesos",
+                        "Agentic AI & MCPs"
                     ],
                     "tools": [
                         "Python",

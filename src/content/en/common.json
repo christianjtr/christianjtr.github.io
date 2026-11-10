@@ -223,12 +223,12 @@
                     "description": "Data architecture and analytics design for business decision-making.",
                     "topics": [
                         "Analytical Skills",
-                        "ETL/DWH Modeling",
+                        "ETL/ELT/DWH Modeling",
                         "Data Cleansing and Visualization",
                         "Dashboards and Reporting"
                     ],
                     "tools": [
-                        "ETL/DWH",
+                        "ETL/ELT/DWH",
                         "SQL Server",
                         "PostgreSQL",
                         "MySQL",
@@ -247,7 +247,8 @@
                         "Developer tools",
                         "LLM Integration",
                         "AI Workflows",
-                        "Process Automation"
+                        "Process Automation",
+                        "Agentic AI & MCPs"
                     ],
                     "tools": [
                         "Python",

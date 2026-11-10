@@ -223,12 +223,12 @@
                     "description": "Conception d'architecture de données et d'analytique pour la prise de décision.",
                     "topics": [
                         "Compétences analytiques",
-                        "Modélisation ETL/DWH",
+                        "Modélisation ETL/ELT/DWH",
                         "Nettoyage et visualisation des données",
                         "Tableaux de bord et reporting"
                     ],
                     "tools": [
-                        "ETL/DWH",
+                        "ETL/ELT/DWH",
                         "SQL Server",
                         "PostgreSQL",
                         "MySQL",
@@ -247,7 +247,8 @@
                         "Outils pour développeurs",
                         "Intégration de LLM",
                         "Workflows d'IA",
-                        "Automatisation des processus"
+                        "Automatisation des processus",
+                        "Agentic AI & MCPs"
                     ],
                     "tools": [
                         "Python",
