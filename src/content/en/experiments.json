@@ -4,7 +4,7 @@
         "section": "experiments",
         "title": "Promoting a healthy culture within engineering teams",
         "description": "Academic case study of engineering culture after an acquisition, based on an anonymized AI-services company. It proposes a change approach using SWOT, empathy maps, RASCI, and ADKAR.",
-        "image": "/src/assets/images/engineer_management.png",
+        "image": "/src/assets/images/experiments/engineer_management.webp",
         "tags": [
             "Engineering Management",
             "Leadership Development",
@@ -25,7 +25,7 @@
         "section": "experiments",
         "title": "Adventure Works Cycles, a business intelligence project",
         "description": "Academic BI project on the Adventure Works Cycles sample data. I built an ETL pipeline, a star-schema warehouse, and dashboards in Power BI and Qlik Sense.",
-        "image": "/src/assets/images/bi_project.jpg",
+        "image": "/src/assets/images/experiments/bi_project.webp",
         "tags": [
             "Data Analysis / Visualization",
             "ETL / DWH",
@@ -46,7 +46,7 @@
         "section": "experiments",
         "title": "Circuitos, discover your artistic hub",
         "description": "UX concept for a mobile product to find cultural events and city routes. I contributed to the research, the product concept, and the interface prototypes. Course work, 2017.",
-        "image": "/src/assets/images/circuitos.jpg",
+        "image": "/src/assets/images/experiments/circuitos.webp",
         "tags": [
             "Product Design and Prototyping",
             "User Experience and Research",
@@ -87,7 +87,7 @@
         "section": "experiments",
         "title": "An idea for an application to promote cultural activities",
         "description": "Master's project on a business case for a product to promote cultural events in Barcelona, including market analysis, a business model, and a marketing plan.",
-        "image": "/src/assets/images/design_process.jpg",
+        "image": "/src/assets/images/experiments/design_process.webp",
         "tags": [
             "e-Business",
             "Business Model Canvas",
@@ -109,7 +109,7 @@
         "section": "experiments",
         "title": "TMDB catalog for movies and series",
         "description": "Full-stack web application designed for anyone who loves movies and TV shows. It provides a seamless, fast way to browse a comprehensive catalog of titles, giving you all the details you need in one place. You can explore a wide variety of content through a user-friendly interface.",
-        "image": "/src/assets/images/tv_app.jpg",
+        "image": "/src/assets/images/experiments/tv_app.webp",
         "tags": [
             "FullStack Development",
             "ReactJS / NodeJS / TypeScript",
@@ -169,7 +169,7 @@
         "section": "experiments",
         "title": "Visualization Dashboard for Monitoring",
         "description": "Web application designed to help you easily understand complex data. Using the powerful D3.js library, it creates interactive and visually engaging charts for a business intelligence dashboard. You can effortlessly switch between different timeframes—by day, week, month, or year—to analyze error reports and other data.",
-        "image": "/src/assets/images/chart.jpg",
+        "image": "/src/assets/images/experiments/chart.webp",
         "tags": [
             "Front-end development",
             "VueJS / Vuetify / Vuex",
@@ -250,7 +250,7 @@
         "section": "experiments",
         "title": "Management System Pricing Calendar simulation with React, TypeScript, and TanStack Query",
         "description": "An interactive revenue-management simulation with dynamic rate visualization. Built on a decoupled full-stack architecture, with an API server and reactive data flows.",
-        "image": "/src/assets/images/dynamic_pricing_calendar.png",
+        "image": "/src/assets/images/experiments/dynamic_pricing_calendar.webp",
         "tags": [
             "FullStack Development",
             "ReactJS / NodeJS / TypeScript",
@@ -269,7 +269,7 @@
         "section": "experiments",
         "title": "Basic Sticky Notes board with React, TypeScript, and Vite",
         "description": "An interactive sticky notes board built on a warm paper surface with real pad colors. Features custom dragging, pointer-driven resizing, context grouping, automatic localStorage persistence, and robust accessibility standards.",
-        "image": "/src/assets/images/sticky_notes.png",
+        "image": "/src/assets/images/experiments/sticky_notes.webp",
         "tags": [
             "Frontend Development",
             "ReactJS / TypeScript / Vite",
@@ -288,7 +288,7 @@
         "section": "experiments",
         "title": "Semantic Graph CLI",
         "description": "Standalone TypeScript CLI plugin for Engram that reads memory data through a local HTTP server to generate deterministic semantic graph snapshots in JSON. Handles project-scoped filtering, stale lifecycle observation checks, and atomic file publication without mutating core data.",
-        "image": "/src/assets/images/semantic_graph_cli.jpeg",
+        "image": "/src/assets/images/experiments/semantic_graph_cli.webp",
         "tags": [
             "TypeScript",
             "CLI",
@@ -311,7 +311,7 @@
         "section": "experiments",
         "title": "Type-safe GraphQL API (Domain-driven)",
         "description": "GraphQL API in progress with TypeScript and Apollo Server. It includes end-to-end types, custom scalars, data loading, generated docs, and an experimental natural-language query layer. Not released.",
-        "image": "/src/assets/images/graphql_api_architecture.jpeg",
+        "image": "/src/assets/images/experiments/graphql_api_architecture.webp",
         "tags": [
             "GraphQL",
             "TypeScript",
@@ -334,7 +334,7 @@
         "section": "experiments",
         "title": "Cognitive Usability Analysis Tool",
         "description": "Experimental command-line tool inspired by cognitive usability principles. Analyzes web interfaces from a human-centered perspective to help identify friction points and improve clarity. Currently in early development.",
-        "image": "/src/assets/images/cognitive_usability_tool.jpeg",
+        "image": "/src/assets/images/experiments/cognitive_usability_tool.webp",
         "tags": [
             "Usability",
             "Developer Tools",
@@ -357,7 +357,7 @@
         "section": "experiments",
         "title": "Team-Memory-Health (TMH)",
         "description": "Agent-native CLI and skill to evaluate the qualitative pulse and alignment of a development team's shared memory. Analyzes coherence, freshness, coverage, and source distribution without assigning individual scores or mutating data.",
-        "image": "/src/assets/images/team_memory_health.jpeg",
+        "image": "/src/assets/images/experiments/team_memory_health.webp",
         "tags": [
             "TypeScript",
             "CLI",

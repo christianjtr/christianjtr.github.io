@@ -4,7 +4,7 @@
         "section": "experiments",
         "title": "Promoviendo una cultura saludable en equipos de ingeniería",
         "description": "Caso de estudio académico sobre la cultura de ingeniería tras una adquisición, a partir de una empresa de servicios de IA anonimizada. Propone un enfoque de cambio con DAFO, mapas de empatía, RASCI y ADKAR.",
-        "image": "/src/assets/images/engineer_management.png",
+        "image": "/src/assets/images/experiments/engineer_management.webp",
         "tags": [
             "Gestión de Ingeniería",
             "Desarrollo de Liderazgo",
@@ -25,7 +25,7 @@
         "section": "experiments",
         "title": "Adventure Works Cycles, proyecto empresarial de inteligencia de negocios",
         "description": "Proyecto académico de BI sobre los datos de ejemplo de Adventure Works Cycles. Monté un pipeline ETL, un almacén en estrella y cuadros de mando en Power BI y Qlik Sense.",
-        "image": "/src/assets/images/bi_project.jpg",
+        "image": "/src/assets/images/experiments/bi_project.webp",
         "tags": [
             "Análisis / Visualización de Datos",
             "ETL / DWH",
@@ -46,7 +46,7 @@
         "section": "experiments",
         "title": "Circuitos, descubre tu centro artístico",
         "description": "Concepto de UX para un producto móvil con el que encontrar eventos culturales y rutas por la ciudad. Participé en la investigación, el concepto de producto y los prototipos de interfaz. Trabajo de curso, 2017.",
-        "image": "/src/assets/images/circuitos.jpg",
+        "image": "/src/assets/images/experiments/circuitos.webp",
         "tags": [
             "Diseño y Prototipado de Producto",
             "Experiencia de Usuario e Investigación",
@@ -87,7 +87,7 @@
         "section": "experiments",
         "title": "Idea de aplicación para la promoción de actividades culturales",
         "description": "Proyecto de máster con el caso de negocio de un producto para promover eventos culturales en Barcelona, con análisis de mercado, modelo de negocio y plan de marketing.",
-        "image": "/src/assets/images/design_process.jpg",
+        "image": "/src/assets/images/experiments/design_process.webp",
         "tags": [
             "e-Business",
             "Lienzo de Modelo de Negocio",
@@ -109,7 +109,7 @@
         "section": "experiments",
         "title": "Catálogo TMDB de películas y series",
         "description": "Aplicación web full-stack diseñada para cualquiera que ame las películas y las series de TV. Proporciona una forma fluida y rápida de explorar un catálogo completo de títulos, brindándote todos los detalles que necesitas en un solo lugar. Puedes explorar una amplia variedad de contenido a través de una interfaz fácil de usar.",
-        "image": "/src/assets/images/tv_app.jpg",
+        "image": "/src/assets/images/experiments/tv_app.webp",
         "tags": [
             "Desarrollo FullStack",
             "ReactJS / NodeJS / TypeScript",
@@ -169,7 +169,7 @@
         "section": "experiments",
         "title": "Dashboard de Visualización para Monitoreo",
         "description": "Aplicación web diseñada para ayudarte a comprender fácilmente datos complejos. Utilizando la potente librería D3.js, crea gráficos interactivos y visualmente atractivos para un dashboard de inteligencia de negocios. Puedes cambiar sin esfuerzo entre diferentes marcos de tiempo —por día, semana, mes o año— para analizar informes de errores y otros datos.",
-        "image": "/src/assets/images/chart.jpg",
+        "image": "/src/assets/images/experiments/chart.webp",
         "tags": [
             "Desarrollo Front-end",
             "VueJS / Vuetify / Vuex",
@@ -250,7 +250,7 @@
         "section": "experiments",
         "title": "Simulación de calendario de precios para sistema de gestión con React, TypeScript y TanStack Query.",
         "description": "Simulador interactivo de gestión de ingresos (Revenue Management) para la visualización de tarifas en tiempo real. Implementa un flujo de datos unidireccional y reactivo alimentado por un servidor API full-stack desacoplado.",
-        "image": "/src/assets/images/dynamic_pricing_calendar.png",
+        "image": "/src/assets/images/experiments/dynamic_pricing_calendar.webp",
         "tags": [
             "FullStack Development",
             "ReactJS / NodeJS / TypeScript",
@@ -269,7 +269,7 @@
         "section": "experiments",
         "title": "Tablero de notas adhesivas con React, TypeScript y Vite.",
         "description": "Tablero interactivo de notas adhesivas diseñado sobre una superficie de papel cálido con colores de bloc reales. Implementa arrastre personalizado, cambio de tamaño mediante puntero, agrupación por contextos, persistencia automática en localStorage y estándares avanzados de accesibilidad.",
-        "image": "/src/assets/images/sticky_notes.png",
+        "image": "/src/assets/images/experiments/sticky_notes.webp",
         "tags": [
             "Frontend Development",
             "ReactJS / TypeScript / Vite",
@@ -288,7 +288,7 @@
         "section": "experiments",
         "title": "Semantic Graph CLI",
         "description": "CLI independiente en TypeScript para Engram que lee datos de memoria a través de un servidor HTTP local para generar instantáneas deterministas de grafos semánticos en JSON. Gestiona el filtrado por proyectos, la verificación del ciclo de vida de observaciones obsoletas y la publicación atómica de archivos sin mutar los datos del núcleo.",
-        "image": "/src/assets/images/semantic_graph_cli.jpeg",
+        "image": "/src/assets/images/experiments/semantic_graph_cli.webp",
         "tags": [
             "TypeScript",
             "CLI",
@@ -311,7 +311,7 @@
         "section": "experiments",
         "title": "API GraphQL con Tipado Seguro (Domain-Driven)",
         "description": "API GraphQL en curso con TypeScript y Apollo Server. Incluye tipos de extremo a extremo, escalares propios, carga de datos, documentación generada y una capa experimental de consulta en lenguaje natural. Sin publicar.",
-        "image": "/src/assets/images/graphql_api_architecture.jpeg",
+        "image": "/src/assets/images/experiments/graphql_api_architecture.webp",
         "tags": [
             "GraphQL",
             "TypeScript",
@@ -334,7 +334,7 @@
         "section": "experiments",
         "title": "Herramientas de Análisis de Usabilidad Cognitiva",
         "description": "Herramienta experimental de línea de comandos inspirada en principios de usabilidad cognitiva. Analiza interfaces web desde una perspectiva centrada en el ser humano para ayudar a identificar puntos de fricción y mejorar la claridad. Actualmente en fase inicial de desarrollo.",
-        "image": "/src/assets/images/cognitive_usability_tool.jpeg",
+        "image": "/src/assets/images/experiments/cognitive_usability_tool.webp",
         "tags": [
             "Usabilidad",
             "Herramientas de Desarrollo",
@@ -357,7 +357,7 @@
         "section": "experiments",
         "title": "Team-Memory-Health (TMH)",
         "description": "CLI y habilidad de agente para evaluar el pulso cualitativo y la alineación de la memoria compartida de un equipo de desarrollo. Analiza coherencia, frescura, cobertura y distribución de fuentes sin asignar calificaciones individuales ni alterar datos.",
-        "image": "/src/assets/images/team_memory_health.jpeg",
+        "image": "/src/assets/images/experiments/team_memory_health.webp",
         "tags": [
             "TypeScript",
             "CLI",
