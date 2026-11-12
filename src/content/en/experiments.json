@@ -267,8 +267,8 @@
     {
         "id": "experiment-basic-sticky-notes-webapp",
         "section": "experiments",
-        "title": "Basic Sticky Notes board with React, TypeScript, and Vite",
-        "description": "An interactive sticky notes board built on a warm paper surface with real pad colors. Features custom dragging, pointer-driven resizing, context grouping, automatic localStorage persistence, and robust accessibility standards.",
+        "title": "Context-aware sticky note board with React, TypeScript, and Vite",
+        "description": "A tactile, accessible board for capturing and organizing ideas. Create, edit, move, resize, and delete notes; group them into named contexts to filter the board or file notes. Notes and contexts are saved in your browser, with keyboard controls and screen-reader announcements supporting use beyond pointer interactions.",
         "image": "/src/assets/images/experiments/sticky_notes.webp",
         "tags": [
             "Frontend Development",
@@ -277,7 +277,7 @@
         ],
         "role": "Author",
         "category": "Proof of Concept (PoC)",
-        "type": "Web app (Basic Sticky Notes)",
+        "type": "Web app (Sticky Notes Board)",
         "url": "https://christianjtr.github.io/sticky-notes/",
         "isSandbox": false,
         "display": true,

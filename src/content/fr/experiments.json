@@ -267,8 +267,8 @@
     {
         "id": "experiment-basic-sticky-notes-webapp",
         "section": "experiments",
-        "title": "Tableau de notes autocollantes avec React, TypeScript et Vite.",
-        "description": "Un tableau interactif de notes autocollantes conçu sur une surface de papier chaleureuse avec les couleurs réelles d'un bloc-notes. Comprend le glisser-déposer personnalisé, le redimensionnement par pointeur, le regroupement par contextes, la persistance automatique via localStorage et des normes d'accessibilité robustes.",
+        "title": "Tableau de notes autocollantes par contexte avec React, TypeScript et Vite",
+        "description": "Un tableau tactile et accessible pour noter et organiser des idées. Créez, modifiez, déplacez, redimensionnez et supprimez des notes ; regroupez-les dans des contextes nommés pour filtrer le tableau ou classer les notes. Les notes et leurs contextes sont enregistrés dans le navigateur, et les commandes au clavier ainsi que les annonces pour lecteurs d’écran permettent de l’utiliser autrement qu’avec le pointeur.",
         "image": "/src/assets/images/experiments/sticky_notes.webp",
         "tags": [
             "Frontend Development",
@@ -277,7 +277,7 @@
         ],
         "role": "Author",
         "category": "Preuve de Concept (PoC)",
-        "type": "Application web (Notes autocollantes basiques)",
+        "type": "Application web (Tableau de notes autocollantes)",
         "url": "https://christianjtr.github.io/sticky-notes/",
         "isSandbox": false,
         "display": true,

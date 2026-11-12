@@ -267,8 +267,8 @@
     {
         "id": "experiment-basic-sticky-notes-webapp",
         "section": "experiments",
-        "title": "Tablero de notas adhesivas con React, TypeScript y Vite.",
-        "description": "Tablero interactivo de notas adhesivas diseñado sobre una superficie de papel cálido con colores de bloc reales. Implementa arrastre personalizado, cambio de tamaño mediante puntero, agrupación por contextos, persistencia automática en localStorage y estándares avanzados de accesibilidad.",
+        "title": "Tablero de notas adhesivas por contextos con React, TypeScript y Vite",
+        "description": "Un tablero táctil y accesible para capturar y organizar ideas. Permite crear, editar, mover, redimensionar y eliminar notas, además de agruparlas en contextos con nombre para filtrar el tablero o archivar notas. Las notas y sus contextos se guardan en el navegador; los controles de teclado y los anuncios para lectores de pantalla permiten usarlo sin depender solo del puntero.",
         "image": "/src/assets/images/experiments/sticky_notes.webp",
         "tags": [
             "Frontend Development",
@@ -277,7 +277,7 @@
         ],
         "role": "Author",
         "category": "Prueba de Concepto (PoC)",
-        "type": "Aplicación web (Notas adhesivas básicas)",
+        "type": "Aplicación web (Tablero de notas adhesivas)",
         "url": "https://christianjtr.github.io/sticky-notes/",
         "isSandbox": false,
         "display": true,
