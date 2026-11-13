@@ -29,6 +29,7 @@
         "filter_experience": "Filtrar proyectos",
         "filter_topics": "Temas",
         "filter_wip": "Solo proyectos en curso (WIP)",
+        "in_progress": "En desarrollo",
         "reset_filters": "Limpiar filtros",
         "laboratory": "Laboratorio",
         "project_result_title": "Resultados Clave",

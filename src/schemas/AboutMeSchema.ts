@@ -42,6 +42,7 @@ const CommonTextSchema = z.object({
     filter_experience: z.string(),
     filter_topics: z.string(),
     filter_wip: z.string(),
+    in_progress: z.string(),
     reset_filters: z.string(),
     laboratory: z.string(),
     project_result_title: z.string(),
