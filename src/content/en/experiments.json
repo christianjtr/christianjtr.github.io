@@ -3,7 +3,7 @@
         "id": "experiment-healthy-culture-engineering-teams",
         "section": "experiments",
         "title": "Promoting a healthy culture within engineering teams",
-        "description": "Academic case study of engineering culture after an acquisition, based on an anonymized AI-services company. It proposes a change approach using SWOT, empathy maps, RASCI, and ADKAR.",
+        "description": "An academic case study of engineering culture in an anonymized AI services company following an acquisition. It outlines a change approach informed by SWOT analysis, empathy maps, RASCI, and ADKAR.",
         "image": "/src/assets/images/experiments/engineer_management.webp",
         "tags": [
             "Engineering Management",
@@ -24,7 +24,7 @@
         "id": "experiment-bi-adventure-works",
         "section": "experiments",
         "title": "Adventure Works Cycles, a business intelligence project",
-        "description": "Academic BI project on the Adventure Works Cycles sample data. I built an ETL pipeline, a star-schema warehouse, and dashboards in Power BI and Qlik Sense.",
+        "description": "An academic business intelligence project using the Adventure Works Cycles sample data. It covers an ETL pipeline, a star-schema data warehouse, and dashboards built with Power BI and Qlik Sense.",
         "image": "/src/assets/images/experiments/bi_project.webp",
         "tags": [
             "Data Analysis / Visualization",
@@ -45,7 +45,7 @@
         "id": "experiment-circuitos",
         "section": "experiments",
         "title": "Circuitos, discover your artistic hub",
-        "description": "UX concept for a mobile product to find cultural events and city routes. I contributed to the research, the product concept, and the interface prototypes. Course work, 2017.",
+        "description": "A UX concept for a mobile product that helps people discover cultural events and routes around the city. The 2017 course project covered user research, product definition, and interface prototypes.",
         "image": "/src/assets/images/experiments/circuitos.webp",
         "tags": [
             "Product Design and Prototyping",
@@ -66,7 +66,7 @@
         "id": "project-agent-orchestrator",
         "section": "experiments",
         "title": "Agent Orchestrator, a real-time AI telemetry dashboard",
-        "description": "Dashboard of status and telemetry for simulated AI agents, built with Vue 3, TypeScript, and Docker.",
+        "description": "A real-time dashboard for monitoring the status and telemetry of simulated AI agents. Built with Vue 3, TypeScript, and Docker.",
         "image": "/src/assets/images/agent-orchestrator.jpg",
         "tags": [
             "Vue 3 / TypeScript",
@@ -86,7 +86,7 @@
         "id": "experiment-idea-cultural-activities-app",
         "section": "experiments",
         "title": "An idea for an application to promote cultural activities",
-        "description": "Master's project on a business case for a product to promote cultural events in Barcelona, including market analysis, a business model, and a marketing plan.",
+        "description": "A master's project developing a business case for a product that promotes cultural events in Barcelona. It includes market research, a business model, and a marketing plan.",
         "image": "/src/assets/images/experiments/design_process.webp",
         "tags": [
             "e-Business",
@@ -108,7 +108,7 @@
         "id": "experiment-tv-movie-streaming-like-webapp",
         "section": "experiments",
         "title": "TMDB catalog for movies and series",
-        "description": "Full-stack web application designed for anyone who loves movies and TV shows. It provides a seamless, fast way to browse a comprehensive catalog of titles, giving you all the details you need in one place. You can explore a wide variety of content through a user-friendly interface.",
+        "description": "A full-stack web app for browsing a catalog of movies and TV series. It brings title information together in a straightforward interface.",
         "image": "/src/assets/images/experiments/tv_app.webp",
         "tags": [
             "FullStack Development",
@@ -128,7 +128,7 @@
         "id": "experiment-pokedex-pwa-application",
         "section": "experiments",
         "title": "Pokédex, gotta catch 'em all",
-        "description": "Progressive web application (PWA) built under Svelte, a modern JavaScript framework. It leverages the Pokémon API to provide a comprehensive and engaging Pokédex experience, data persistence with LocalStorage, the SpeechSynthesis, and Plotly charts.",
+        "description": "A Svelte progressive web app that explores Pokémon data through the Pokémon API. It combines local data persistence, speech synthesis, and Plotly charts in a Pokédex experience.",
         "image": "/src/assets/images/pokedex.jpg",
         "tags": [
             "Front-end development",
@@ -148,7 +148,7 @@
         "id": "experiment-restaurant-browser-app",
         "section": "experiments",
         "title": "Restaurant finder",
-        "description": "Progressive web app to find nearby restaurants with the Geolocation API. It does not take orders or handle delivery.",
+        "description": "A progressive web app that uses geolocation to help users find nearby restaurants. It is a discovery tool and does not support orders or delivery.",
         "image": "/src/assets/images/restaurant_browser.jpg",
         "tags": [
             "Front-end development",
@@ -168,7 +168,7 @@
         "id": "experiment-data-visualization-error-reporting-chart",
         "section": "experiments",
         "title": "Visualization Dashboard for Monitoring",
-        "description": "Web application designed to help you easily understand complex data. Using the powerful D3.js library, it creates interactive and visually engaging charts for a business intelligence dashboard. You can effortlessly switch between different timeframes—by day, week, month, or year—to analyze error reports and other data.",
+        "description": "A D3.js dashboard for exploring error reports and other monitoring data through interactive charts. Users can switch between daily, weekly, monthly, and yearly views.",
         "image": "/src/assets/images/experiments/chart.webp",
         "tags": [
             "Front-end development",
@@ -188,7 +188,7 @@
         "id": "experiment-erp-management-dashboard",
         "section": "experiments",
         "title": "Management Dashboard",
-        "description": "Management dashboard designed to streamline employee data handling. It's a simple web application that provides you with complete control over your team's information. With straightforward CRUD (Create, Read, Update, Delete) functionality.",
+        "description": "A web dashboard for managing employee information with create, read, update, and delete operations. The project demonstrates a focused CRUD workflow for team data.",
         "image": "/src/assets/images/erp_management.jpg",
         "tags": [
             "Front-end development",
@@ -207,7 +207,7 @@
         "id": "experiment-express-api-boilerplate",
         "section": "experiments",
         "title": "Express API Backend Architecture",
-        "description": "REST API boilerplate with Node.js, Express, MongoDB, Docker, Jest, and Supertest. A reference structure for a small API, not a system in production.",
+        "description": "A starter structure for a small REST API using Node.js, Express, MongoDB, and Docker, with Jest and Supertest for testing. It is a reference project, not a production system.",
         "image": "/src/assets/images/express_api_boilerplate.jpg",
         "tags": [
             "Back-end development",
@@ -228,7 +228,7 @@
         "id": "experiment-sticky-notes",
         "section": "experiments",
         "title": "Basic Sticky Notes",
-        "description": "A clean, interactive digital board application for managing virtual sticky notes. Features smooth drag-and-drop interactions, resizing, auto-save editing, and full keyboard navigation with client-side persistence.",
+        "description": "A browser-based board for creating, editing, moving, resizing, and deleting sticky notes. Changes are saved locally, and keyboard navigation supports use beyond pointer interactions.",
         "image": "/src/assets/images/sticky_notes.jpg",
         "tags": [
             "Front-end development",
@@ -249,7 +249,7 @@
         "id": "experiment-dynamic-pricing-calendar-webapp",
         "section": "experiments",
         "title": "Management System Pricing Calendar simulation with React, TypeScript, and TanStack Query",
-        "description": "An interactive revenue-management simulation with dynamic rate visualization. Built on a decoupled full-stack architecture, with an API server and reactive data flows.",
+        "description": "A revenue-management simulation for exploring rates on an interactive pricing calendar. It uses a decoupled full-stack architecture with an API server and reactive data flows.",
         "image": "/src/assets/images/experiments/dynamic_pricing_calendar.webp",
         "tags": [
             "FullStack Development",
@@ -268,7 +268,7 @@
         "id": "experiment-basic-sticky-notes-webapp",
         "section": "experiments",
         "title": "Context-aware sticky note board with React, TypeScript, and Vite",
-        "description": "A tactile, accessible board for capturing and organizing ideas. Create, edit, move, resize, and delete notes; group them into named contexts to filter the board or file notes. Notes and contexts are saved in your browser, with keyboard controls and screen-reader announcements supporting use beyond pointer interactions.",
+        "description": "An accessible board for capturing and organizing ideas with sticky notes. Create, edit, move, resize, and delete notes; group them into named contexts to filter the board or file notes. Notes and contexts are saved in the browser, with keyboard controls and screen-reader announcements supporting use beyond pointer interactions.",
         "image": "/src/assets/images/experiments/sticky_notes.webp",
         "tags": [
             "Frontend Development",
@@ -287,7 +287,7 @@
         "id": "experiment-engram-semantic-cli",
         "section": "experiments",
         "title": "Semantic Graph CLI",
-        "description": "Standalone TypeScript CLI plugin for Engram that reads memory data through a local HTTP server to generate deterministic semantic graph snapshots in JSON. Handles project-scoped filtering, stale lifecycle observation checks, and atomic file publication without mutating core data.",
+        "description": "A standalone TypeScript CLI for Engram that reads memory data from a local HTTP server and generates deterministic semantic graph snapshots in JSON. It supports project filtering, checks for stale observations, and publishes files atomically without changing the source data.",
         "image": "/src/assets/images/experiments/semantic_graph_cli.webp",
         "tags": [
             "TypeScript",
@@ -310,7 +310,7 @@
         "id": "experiment-type-safe-graphql-api",
         "section": "experiments",
         "title": "Type-safe GraphQL API (Domain-driven)",
-        "description": "GraphQL API in progress with TypeScript and Apollo Server. It includes end-to-end types, custom scalars, data loading, generated docs, and an experimental natural-language query layer. Not released.",
+        "description": "An in-progress GraphQL API built with TypeScript and Apollo Server, featuring end-to-end types, custom scalars, data loading, and generated documentation. An experimental natural-language query layer is also being explored; the project has not been released.",
         "image": "/src/assets/images/experiments/graphql_api_architecture.webp",
         "tags": [
             "GraphQL",
@@ -333,7 +333,7 @@
         "id": "experiment-cognitive-usability-tool",
         "section": "experiments",
         "title": "Cognitive Usability Analysis Tool",
-        "description": "Experimental command-line tool inspired by cognitive usability principles. Analyzes web interfaces from a human-centered perspective to help identify friction points and improve clarity. Currently in early development.",
+        "description": "An experimental command-line tool that analyzes web interfaces through the lens of cognitive usability. It aims to identify friction points and opportunities to improve clarity, and is in early development.",
         "image": "/src/assets/images/experiments/cognitive_usability_tool.webp",
         "tags": [
             "Usability",
@@ -356,7 +356,7 @@
         "id": "experiment-team-memory-health",
         "section": "experiments",
         "title": "Team-Memory-Health (TMH)",
-        "description": "Agent-native CLI and skill to evaluate the qualitative pulse and alignment of a development team's shared memory. Analyzes coherence, freshness, coverage, and source distribution without assigning individual scores or mutating data.",
+        "description": "An agent-native CLI and skill for assessing the quality and alignment of a development team's shared memory. It examines coherence, freshness, coverage, and source distribution without scoring individuals or changing the data.",
         "image": "/src/assets/images/experiments/team_memory_health.webp",
         "tags": [
             "TypeScript",
