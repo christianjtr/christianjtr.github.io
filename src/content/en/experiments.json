@@ -167,21 +167,25 @@
     {
         "id": "experiment-data-visualization-error-reporting-chart",
         "section": "experiments",
-        "title": "Visualization Dashboard for Monitoring",
-        "description": "A D3.js dashboard for exploring error reports and other monitoring data through interactive charts. Users can switch between daily, weekly, monthly, and yearly views.",
-        "image": "/src/assets/images/experiments/chart.webp",
+        "title": "Vitalscope — Web Vitals & Gateway Health Dashboard",
+        "description": "A self-hosted dashboard that brings website availability, Google PageSpeed and real-user Web Vitals, and backend gateway health into one view. It supports browser and Node.js agents, secure metric ingestion, and automatically generated panels; it is in active development.",
+        "image": "/src/assets/images/experiments/vitalscope.webp",
         "tags": [
-            "Front-end development",
-            "VueJS / Vuetify / Vuex",
-            "NodeJS / Express",
-            "D3.js"
+            "Vue 3 / Vuetify / Pinia",
+            "TypeScript / ECharts",
+            "Node.js / Express / tRPC",
+            "Web Vitals / Telemetry",
+            "Browser & Node.js Agents"
         ],
         "role": "Author",
         "category": "Application / tool",
-        "type": "Web app (Error Monitoring Dashboard)",
-        "url": null,
+        "type": "Self-hosted Web Vitals & Gateway Health Dashboard",
+        "url": "https://github.com/christianjtr/chart-metric-dashboard",
         "isSandbox": false,
         "display": true,
+        "abstract": "Vitalscope is a self-hosted status page and health dashboard for monitoring a website and its backend from one screen. It combines availability checks, Google PageSpeed and real-user Web Vitals, and gateway metrics such as latency, traffic, errors, CPU, memory, and uptime. Browser and Node.js agents can send custom metrics through a token-protected ingest endpoint, where new metrics can create panels automatically. The project is actively being developed and tested.",
+        "year": 2026,
+        "isWIP": true,
         "topic": "Data & Analytics"
     },
     {

@@ -167,21 +167,25 @@
     {
         "id": "experiment-data-visualization-error-reporting-chart",
         "section": "experiments",
-        "title": "Dashboard de Visualización para Monitoreo",
-        "description": "Dashboard con D3.js para explorar informes de errores y otros datos de monitoreo mediante gráficos interactivos. Permite cambiar entre vistas diarias, semanales, mensuales y anuales.",
-        "image": "/src/assets/images/experiments/chart.webp",
+        "title": "Vitalscope — panel de Web Vitals y salud del gateway",
+        "description": "Dashboard autoalojado que reúne en una sola vista la disponibilidad del sitio, Google PageSpeed y Web Vitals de usuarios reales, y la salud del gateway backend. Incluye agentes para navegador y Node.js, recepción segura de métricas y paneles que se generan automáticamente; está en desarrollo activo.",
+        "image": "/src/assets/images/experiments/vitalscope.webp",
         "tags": [
-            "Desarrollo Front-end",
-            "VueJS / Vuetify / Vuex",
-            "NodeJS / Express",
-            "D3.js"
+            "Vue 3 / Vuetify / Pinia",
+            "TypeScript / ECharts",
+            "Node.js / Express / tRPC",
+            "Web Vitals / Telemetría",
+            "Agentes para navegador y Node.js"
         ],
         "role": "Author",
         "category": "Aplicación / herramienta",
-        "type": "Aplicación Web (Dashboard de Monitoreo de Errores)",
-        "url": null,
+        "type": "Dashboard autoalojado de Web Vitals y salud del gateway",
+        "url": "https://github.com/christianjtr/chart-metric-dashboard",
         "isSandbox": false,
         "display": true,
+        "abstract": "Vitalscope es una página de estado y dashboard autoalojado para supervisar un sitio web y su backend desde una sola pantalla. Combina comprobaciones de disponibilidad, Google PageSpeed y Web Vitals de usuarios reales, y métricas del gateway como latencia, tráfico, errores, CPU, memoria y tiempo activo. Los agentes para navegador y Node.js pueden enviar métricas personalizadas a un endpoint de recepción protegido por token, que puede crear paneles automáticamente. El proyecto está en desarrollo y pruebas activas.",
+        "year": 2026,
+        "isWIP": true,
         "topic": "Datos y analítica"
     },
     {

@@ -167,21 +167,25 @@
     {
         "id": "experiment-data-visualization-error-reporting-chart",
         "section": "experiments",
-        "title": "Tableau de Bord de Visualisation pour la Surveillance",
-        "description": "Tableau de bord D3.js pour explorer les rapports d’erreurs et d’autres données de suivi à l’aide de graphiques interactifs. Il permet de passer d’une vue quotidienne, hebdomadaire, mensuelle ou annuelle à une autre.",
-        "image": "/src/assets/images/experiments/chart.webp",
+        "title": "Vitalscope — tableau de bord Web Vitals et santé de la passerelle",
+        "description": "Un tableau de bord auto-hébergé qui réunit la disponibilité du site, Google PageSpeed et les Web Vitals des utilisateurs, ainsi que l’état de la passerelle backend. Il prend en charge des agents navigateur et Node.js, l’ingestion sécurisée de métriques et la création automatique de panneaux ; le projet est en développement actif.",
+        "image": "/src/assets/images/experiments/vitalscope.webp",
         "tags": [
-            "Développement Front-end",
-            "VueJS / Vuetify / Vuex",
-            "NodeJS / Express",
-            "D3.js"
+            "Vue 3 / Vuetify / Pinia",
+            "TypeScript / ECharts",
+            "Node.js / Express / tRPC",
+            "Web Vitals / Télémétrie",
+            "Agents navigateur et Node.js"
         ],
         "role": "Author",
         "category": "Application / outil",
-        "type": "Application Web (Tableau de Bord de Surveillance des Erreurs)",
-        "url": null,
+        "type": "Tableau de bord auto-hébergé Web Vitals et santé de la passerelle",
+        "url": "https://github.com/christianjtr/chart-metric-dashboard",
         "isSandbox": false,
         "display": true,
+        "abstract": "Vitalscope est une page d’état et un tableau de bord auto-hébergés qui surveillent un site web et son backend depuis un seul écran. Il combine les contrôles de disponibilité, Google PageSpeed et les Web Vitals des utilisateurs, ainsi que les métriques de la passerelle : latence, trafic, erreurs, processeur, mémoire et disponibilité. Des agents navigateur et Node.js peuvent envoyer des métriques personnalisées via un point d’ingestion protégé par jeton, qui peut créer automatiquement des panneaux. Le projet est en développement et en phase de test.",
+        "year": 2026,
+        "isWIP": true,
         "topic": "Données et analytique"
     },
     {
