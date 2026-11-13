@@ -14,9 +14,15 @@ const commonData = await getEntry(language as ContentDataEntryType, `${language}
 const { open_graph } = (commonData?.data as AboutMeData) || {};
 
 const defaultImage = 'https://raw.githubusercontent.com/christianjtr/christianjtr.github.io/refs/heads/main/public/web_cover.png';
-const siteName = 'https://christianjtr.github.io/';
-const canonical = `${siteName}${Astro.url.pathname}`;
-const basePath = Astro.url.pathname.replace(`/${language}`, '');
+const siteUrl = new URL(Astro.site ?? 'https://christianjtr.github.io');
+const canonical = new URL(Astro.url.pathname, siteUrl).href;
+const localePrefix = `/${language}`;
+const basePath = Astro.url.pathname.startsWith(`${localePrefix}/`)
+  ? Astro.url.pathname.slice(localePrefix.length)
+  : Astro.url.pathname === localePrefix
+    ? '/'
+    : Astro.url.pathname;
+const localizedUrl = (locale: string) => new URL(`/${locale}${basePath}`, siteUrl).href;
 ---
 
 <meta name="author" content={open_graph?.title} />
@@ -26,10 +32,10 @@ const basePath = Astro.url.pathname.replace(`/${language}`, '');
   <link
     rel="alternate"
     hreflang={locale}
-    href={`${siteName}${locale}${basePath}`}
+    href={localizedUrl(locale)}
   />
 ))}
-<link rel="alternate" hreflang="x-default" href={`${siteName}${defaultLocale}${basePath}`} />
+<link rel="alternate" hreflang="x-default" href={localizedUrl(defaultLocale)} />
 
 <meta property="og:type" content="website" />
 <meta property="og:url" content={canonical} />
