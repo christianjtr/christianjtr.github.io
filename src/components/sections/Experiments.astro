@@ -56,7 +56,6 @@ const uniqueTopics = Array.from(
                             <input class="toggle toggle-primary toggle-sm wip-filter" type="checkbox" name="experiments_wip" />
                         </label>
                         <div class="filter-topic-group">
-                            <h4 class="filter-topic-heading">{common.filter_topics}</h4>
                             <div class="filter-choices topic-options">
                                 {uniqueTopics.map(([topic, count], index) => (
                                     <div class="topic-option" data-topic={topic}>
@@ -160,7 +159,7 @@ const uniqueTopics = Array.from(
     @reference "@styles/global.css";
     
     .experiments-layout {
-        @apply mt-6 flex flex-col gap-6 px-2 md:px-4 lg:px-14;
+        @apply mt-4 flex flex-col gap-4 px-2 md:px-4 lg:px-14;
     }
 
     .experiment-filters-column {
@@ -194,7 +193,7 @@ const uniqueTopics = Array.from(
     }
 
     .experiment-card-content {
-        @apply flex min-w-0 flex-col gap-3 p-4 sm:p-5;
+        @apply flex min-w-0 flex-1 flex-col gap-3 p-4 sm:p-5;
     }
 
     .experiment-card-meta {
@@ -246,19 +245,19 @@ const uniqueTopics = Array.from(
     }
 
     .filter-panel {
-        @apply rounded-xl border border-base-300/80 bg-base-100 p-3;
+        @apply rounded-xl border border-base-300/80 bg-base-100 px-3 py-2;
     }
 
     .filter-panel__header {
-        @apply mb-2 flex items-center justify-between gap-2 border-b border-base-300/80 pb-2;
+        @apply mb-1 flex items-center justify-between gap-2;
     }
 
     .filter-panel__title {
-        @apply m-0 text-base leading-tight font-extrabold tracking-tight text-base-content;
+        @apply m-0 text-sm leading-tight font-extrabold tracking-tight text-base-content;
     }
 
     .filter-reset {
-        @apply inline-flex min-h-8 shrink-0 cursor-pointer items-center justify-center gap-1.5 rounded-lg border border-transparent bg-transparent px-2 py-1 text-xs leading-none font-bold text-base-content/55 transition-colors duration-150;
+        @apply inline-flex min-h-7 shrink-0 cursor-pointer items-center justify-center gap-1 rounded-lg border border-transparent bg-transparent px-1.5 py-1 text-[11px] leading-none font-bold text-base-content/55 transition-colors duration-150;
     }
 
     .filter-reset:hover {
@@ -270,27 +269,27 @@ const uniqueTopics = Array.from(
     }
 
     .filter-options {
-        @apply m-0 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4;
+        @apply m-0 flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-3;
     }
 
     .filter-topic-group {
-        @apply flex min-w-0 flex-1 flex-col gap-2 sm:flex-row sm:items-center sm:gap-3;
+        @apply flex min-w-0 flex-1 flex-col gap-1.5 sm:flex-row sm:items-center sm:gap-2;
     }
 
     .filter-topic-heading {
-        @apply m-0 shrink-0 font-mono text-xs leading-tight font-extrabold tracking-[0.12em] text-base-content/55 uppercase;
+        @apply m-0 shrink-0 font-mono text-[10px] leading-tight font-extrabold tracking-[0.12em] text-base-content/55 uppercase;
     }
 
     .filter-choice-count {
-        @apply inline-flex h-5 min-w-5 shrink-0 items-center justify-center rounded-full border border-base-300/80 bg-base-200/80 px-1 font-mono text-[0.7rem] leading-none font-extrabold tracking-normal text-base-content/60 transition-colors;
+        @apply inline-flex h-4 min-w-4 shrink-0 items-center justify-center rounded-full border border-base-300/80 bg-base-200/80 px-1 font-mono text-[10px] leading-none font-extrabold tracking-normal text-base-content/60 transition-colors;
     }
 
     .filter-choices {
-        @apply flex flex-wrap gap-2;
+        @apply flex flex-wrap gap-1.5;
     }
 
     .wip-filter-label {
-        @apply flex min-h-10 cursor-pointer items-center justify-between gap-3 rounded-lg border border-base-300/70 bg-base-200/45 px-3 py-2 text-sm leading-snug font-bold text-base-content transition-all duration-200 sm:w-auto sm:shrink-0;
+        @apply flex min-h-8 cursor-pointer items-center justify-between gap-2 rounded-lg border border-base-300/70 bg-base-200/45 px-2.5 py-1 text-xs leading-snug font-bold text-base-content transition-all duration-200 sm:w-auto sm:shrink-0;
     }
 
     .wip-filter {
@@ -323,7 +322,7 @@ const uniqueTopics = Array.from(
     }
 
     .filter-choice-label {
-        @apply inline-flex min-h-10 max-w-full cursor-pointer items-center gap-2 rounded-full border border-base-300/80 bg-base-100/75 py-1.5 pl-3 pr-2 text-sm leading-tight font-bold text-base-content/75 wrap-break-word transition-all duration-200;
+        @apply inline-flex min-h-8 max-w-full cursor-pointer items-center gap-1.5 rounded-full border border-base-300/80 bg-base-100/75 py-1 pl-2.5 pr-1.5 text-xs leading-tight font-bold text-base-content/75 wrap-break-word transition-all duration-200;
     }
 
     .filter-choice-label::before {
