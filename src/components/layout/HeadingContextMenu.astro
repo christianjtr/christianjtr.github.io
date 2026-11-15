@@ -14,11 +14,11 @@ const { sections } = Astro.props;
 ---
 
 <details class="dropdown dropdown-end lg:hidden mobile-menu-details">
-    <summary class="btn btn-ghost btn-circle scale-x-[-1] list-none cursor-pointer">
+    <summary class="btn btn-ghost btn-circle scale-x-[-1] list-none cursor-pointer mobile-menu-toggle">
         <DropdownIcon width={24} height={24} />
     </summary>
     
-    <div class="card card-sm dropdown-content z-50 mt-2 min-w-[200px]">
+    <div class="card card-sm dropdown-content z-50 mt-2 mobile-menu-panel">
         <div class="card-body rounded-box border border-base-content/5 bg-base-300 p-3 shadow-xl">
             <nav aria-label="Mobile navigation">
                 <ul class="menu menu-md p-0 gap-1">
@@ -50,7 +50,7 @@ const { sections } = Astro.props;
                         {eachLink.id === "github" && <GitHubIcon width={22} height={22} />}
                         {eachLink.id === "linkedin" && <LinkedInIcon width={22} height={22} />}
                         {eachLink.id === "llms" && <LLMSIcon width={22} height={22} />}
-                        <span class="text-[10px] opacity-80">{eachLink.text}</span>
+                        <span class="text-[11px] opacity-80">{eachLink.text}</span>
                     </a>
                 ))}
             </div>
@@ -66,11 +66,32 @@ const { sections } = Astro.props;
                 mobileMenu.removeAttribute('open');
             });
         });
+
+        document.addEventListener('pointerdown', (event) => {
+            if (event.target instanceof Node && !mobileMenu.contains(event.target)) {
+                mobileMenu.removeAttribute('open');
+            }
+        });
     }
 </script>
 
 <style>
     summary::-webkit-details-marker {
         display: none;
+    }
+
+    .mobile-menu-toggle {
+        width: 2.75rem;
+        height: 2.75rem;
+        min-height: 2.75rem;
+    }
+
+    .mobile-menu-panel {
+        width: min(15rem, calc(100vw - 1rem));
+        min-width: 12rem;
+    }
+
+    .mobile-menu-panel .menu a {
+        min-height: 2.75rem;
     }
 </style>
