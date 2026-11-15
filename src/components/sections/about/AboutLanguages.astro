@@ -64,7 +64,7 @@ const { languages, languageTip } = Astro.props;
         align-items: center;
         gap: 0.45rem;
         color: var(--color-base-content);
-        font-size: 0.78rem;
+        font-size: 0.84rem;
     }
 
     .language-emoji {
@@ -87,17 +87,17 @@ const { languages, languageTip } = Astro.props;
 
     .language-meter {
         display: flex;
-        height: 0.5rem;
+        height: 0.6rem;
         flex: 0 0 auto;
         align-items: center;
         gap: 0.16rem;
     }
 
     .language-meter__segment {
-        width: 0.38rem;
-        height: 0.38rem;
+        width: 0.44rem;
+        height: 0.44rem;
         border-radius: 2px;
-        background: var(--color-base-300);
+        background: color-mix(in srgb, var(--color-base-content) 16%, var(--color-base-300));
     }
 
     .language-meter__segment.is-filled {
@@ -124,7 +124,7 @@ const { languages, languageTip } = Astro.props;
     @media (max-width: 639px) {
         .language-copy {
             gap: 0.35rem;
-            font-size: 0.72rem;
+            font-size: 0.78rem;
         }
 
         .language-meter {
@@ -132,8 +132,15 @@ const { languages, languageTip } = Astro.props;
         }
 
         .language-meter__segment {
-            width: 0.32rem;
-            height: 0.32rem;
+            width: 0.36rem;
+            height: 0.36rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .about-languages {
+            gap: 0.4rem;
+            margin-top: 1rem;
         }
     }
 

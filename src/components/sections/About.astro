@@ -59,6 +59,12 @@ const { common, section_about, section_experiences, section_studies } = (entry?.
         min-width: 0;
     }
 
+    @media (min-width: 1024px) {
+        .about-expertise-grid .expertise-feature-grid {
+            height: 100%;
+        }
+    }
+
     @media (max-width: 1023px) {
         .about-details-grid {
             grid-template-columns: minmax(0, 1fr);
