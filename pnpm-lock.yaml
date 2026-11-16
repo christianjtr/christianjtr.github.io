@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@astrojs/check':
-        specifier: ^0.9.12
-        version: 0.9.12(@emnapi/runtime@2.0.0-beta.2)(prettier@3.9.10)(typescript@5.9.3)
       '@fontsource/lato':
         specifier: ^5.2.7
         version: 5.2.7
@@ -27,6 +24,9 @@ importers:
         specifier: ^0.34.5
         version: 0.34.5
     devDependencies:
+      '@astrojs/check':
+        specifier: ^0.9.12
+        version: 0.9.12(@emnapi/runtime@2.0.0-beta.2)(prettier@3.9.10)(typescript@5.9.3)
       '@astrojs/ts-plugin':
         specifier: ^1.10.12
         version: 1.10.12
