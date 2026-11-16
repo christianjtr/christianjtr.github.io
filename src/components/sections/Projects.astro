@@ -26,13 +26,13 @@ const { data: workcases } = workcaseData as { data: WorkCaseStudy[] };
 ---
 
 <div class="bg-primary/5 py-10" id={header.main_sections[0].anchorId}>
-    <Section headingTitle={section_projects.title} subtitle={section_projects.subtitle} class="container mx-auto px-1 lg:px-10">
+    <Section headingTitle={section_projects.title} subtitle={section_projects.subtitle} headingLevel={1} class="container mx-auto px-1 lg:px-10">
         <Logo slot="beforeHeading" width={96} height={96} />
         <VerticalSpacer />
         <div class="projects-layout">
             <div class="projects-list">
                 {projects.map((project: Project, index: number) => (
-                    <div class="collapse collapse-arrow project-card" tabindex="0">
+                    <div class="collapse collapse-arrow project-card">
                         <input type="radio" name="project" checked={index === 0} aria-label={
                             `Select project ${project.title}`
                         } />
@@ -59,11 +59,11 @@ const { data: workcases } = workcaseData as { data: WorkCaseStudy[] };
                                 
                                 <div class="text-column">
                                     <div class="info-section">
-                                        <h4 class="section-title text-muted-label">{common.overview}</h4>
+                                        <h3 class="section-title text-muted-label">{common.overview}</h3>
                                         <p class="project-paragraph text-body-content mt-7">{project.overview}</p>
                                     </div>
                                     <div class="info-section">
-                                        <h4 class="section-title text-muted-label">{common.contribuition}</h4>
+                                        <h3 class="section-title text-muted-label">{common.contribuition}</h3>
                                         <p class="project-paragraph text-body-content mt-7">{project.contributions}</p>
                                     </div>
                                 </div>
@@ -79,13 +79,13 @@ const { data: workcases } = workcaseData as { data: WorkCaseStudy[] };
                                         </div>
                                     </figure>
                                     <div class="info-section">
-                                        <h4 class="section-title text-muted-label">{common.project_result_title}</h4>
+                                        <h3 class="section-title text-muted-label">{common.project_result_title}</h3>
                                         <p class="project-paragraph text-body-content mt-7">{project.outcome}</p>
                                     </div>
                                     <div class="tech-container">
                                         <MonitorIcon width={14} height={14} class="text-neutral-400 shrink-0 mt-0.5" />
                                         <div class="flex-1 space-y-1">
-                                            <h4 class="section-title text-muted-label block mb-5">{common.technologies}</h4>
+                                            <h3 class="section-title text-muted-label block mb-5">{common.technologies}</h3>
                                             <div class="pt-0.5 text-xs font-medium tracking-wide">
                                                 <BadgeList items={project.technologies} badgeClass='badge-sm' />
                                             </div>
@@ -207,6 +207,12 @@ const { data: workcases } = workcaseData as { data: WorkCaseStudy[] };
         background-color: var(--color-base-200);
         background-image: none;
     }
+
+    .project-card > input[type="radio"] {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin: 0.75rem;
+    }
     .project-card:hover {
         @apply border-b-primary/45;
     }
@@ -268,11 +274,11 @@ const { data: workcases } = workcaseData as { data: WorkCaseStudy[] };
     .header-text-container { @apply flex min-w-0 grow flex-col gap-2.5 pr-6; }
     .project-header-meta { @apply flex items-center justify-between gap-4; }
     .project-index {
-        @apply shrink-0 font-mono text-sm font-semibold tracking-widest text-neutral-300 transition-colors duration-300;
+        @apply shrink-0 font-mono text-sm font-semibold tracking-widest text-neutral-600 transition-colors duration-300;
     }
-    :global(html[data-theme="dark"]) .project-index { @apply text-neutral-700; }
-    .project-card:has(input:checked) .project-index { @apply text-primary/70; }
-    :global(html[data-theme="dark"]) .project-card:has(input:checked) .project-index { @apply text-accent/70; }
+    :global(html[data-theme="dark"]) .project-index { @apply text-neutral-300; }
+    .project-card:has(input:checked) .project-index { @apply text-primary; }
+    :global(html[data-theme="dark"]) .project-card:has(input:checked) .project-index { @apply text-cyan-300; }
     .title { @apply text-xl font-extrabold leading-tight tracking-tight text-neutral-800 transition-colors duration-300 md:text-2xl; }
     :global(html[data-theme="dark"]) .title { @apply text-white; }
     .summary {
@@ -289,8 +295,8 @@ const { data: workcases } = workcaseData as { data: WorkCaseStudy[] };
 
     .text-column { @apply space-y-6 col-span-full lg:col-span-4; }
     .info-section { @apply space-y-1.5; }
-    .section-title { @apply text-xs font-bold uppercase tracking-wider block text-neutral-400; }
-    :global(html[data-theme="dark"]) .section-title { @apply text-gray-500; }
+    .section-title { @apply m-0 text-xs font-bold uppercase tracking-wider block text-neutral-600; }
+    :global(html[data-theme="dark"]) .section-title { @apply text-gray-300; }
     
     .project-paragraph { @apply text-base leading-relaxed font-normal text-neutral-600; }
     :global(html[data-theme="dark"]) .project-paragraph { @apply text-gray-300; }
@@ -343,8 +349,8 @@ const { data: workcases } = workcaseData as { data: WorkCaseStudy[] };
 
     .text-showcase { @apply text-neutral-700; }
     :global(html[data-theme="dark"]) .text-showcase { @apply text-gray-300; }
-    .text-location { @apply text-neutral-400; }
-    :global(html[data-theme="dark"]) .text-location { @apply text-neutral-500; }
+    .text-location { @apply text-neutral-600; }
+    :global(html[data-theme="dark"]) .text-location { @apply text-neutral-300; }
     .text-bullet-separator { @apply text-neutral-300; }
     :global(html[data-theme="dark"]) .text-bullet-separator { @apply text-neutral-700; }
     figure { @apply w-full; }

@@ -5,16 +5,21 @@ interface Props extends HTMLAttributes<'section'> {
     headingTitle: string;
     subtitle?: string;
     headingClass?: string;
+    headingLevel?: 1 | 2;
 }
 
-const { headingTitle, headingClass, subtitle, ...attributes } = Astro.props;
+const { headingTitle, headingClass, subtitle, headingLevel = 2, ...attributes } = Astro.props;
 ---
 
 <section {...attributes}>
     <div class="title-wrapper">
         <slot name="beforeHeading"/>
         <div>
-            <h1 class:list={[headingClass, 'section-heading']}>{headingTitle}</h1>
+            {headingLevel === 1 ? (
+                <h1 class:list={[headingClass, 'section-heading']}>{headingTitle}</h1>
+            ) : (
+                <h2 class:list={[headingClass, 'section-heading']}>{headingTitle}</h2>
+            )}
             {subtitle && (<span class="section-subtitle">{subtitle}</span>)}
         </div>
     </div>
@@ -37,7 +42,7 @@ const { headingTitle, headingClass, subtitle, ...attributes } = Astro.props;
         @apply block text-lg font-light text-neutral-500 dark:text-base-content;
     }
 
-    h1::after {
+    .section-heading::after {
         content: ".";
         @apply text-5xl text-accent;
     }

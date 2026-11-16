@@ -44,7 +44,7 @@ const skills = section_about.expertise.subjects.map((subject) => {
 ---
 
 <div class="skillset-section py-10">
-  <Section headingTitle={section_skills.title} subtitle={section_skills.subtitle} class="container mx-auto px-1 lg:px-10">
+  <Section headingTitle={section_skills.title} subtitle={section_skills.subtitle} headingLevel={1} class="container mx-auto px-1 lg:px-10">
     <Logo slot="beforeHeading" width={90} height={90} />
     <VerticalSpacer />
   {hasInProgressExperiments && (
@@ -62,9 +62,9 @@ const skills = section_about.expertise.subjects.map((subject) => {
     <div class="group-main">
       <div class="w-full md:w-1/5 flex items-center justify-center md:justify-start z-10">
         <div class="vshape-box vshape-target">
-          <h5 class="vshape-text">
+          <p class="vshape-text">
             {section_about.v_shaped_profile}
-          </h5>
+          </p>
         </div>
       </div>
       <svg class="absolute inset-0 w-full h-full pointer-events-none z-0 hidden md:block" viewBox="0 0 896 320" preserveAspectRatio="none">
@@ -328,6 +328,7 @@ const skills = section_about.expertise.subjects.map((subject) => {
 
   .pillar-card {
     --pillar-accent: #0284c7;
+    --pillar-label-color: #075985;
     --pillar-accent-border: rgba(2, 132, 199, 0.3);
     @apply relative isolate overflow-hidden rounded-xl border bg-base-100 transition-all duration-300;
     border-color: var(--pillar-accent-border);
@@ -343,26 +344,50 @@ const skills = section_about.expertise.subjects.map((subject) => {
 
   .pilar-product {
     --pillar-accent: #0284c7;
+    --pillar-label-color: #075985;
     --pillar-accent-border: rgba(2, 132, 199, 0.34);
   }
 
   .pilar-coding {
     --pillar-accent: #c026d3;
+    --pillar-label-color: #86198f;
     --pillar-accent-border: rgba(192, 38, 211, 0.32);
   }
 
   .pilar-data {
     --pillar-accent: #059669;
+    --pillar-label-color: #047857;
     --pillar-accent-border: rgba(5, 150, 105, 0.34);
   }
 
   .pilar-ai {
     --pillar-accent: #7c3aed;
+    --pillar-label-color: #6d28d9;
     --pillar-accent-border: rgba(124, 58, 237, 0.32);
   }
 
   .pillar-category {
-    color: var(--pillar-accent);
+    color: var(--pillar-label-color);
+  }
+
+  .pillar-category { @apply text-xs font-bold uppercase tracking-widest; }
+
+  .pillar-category { color: var(--pillar-label-color); }
+
+  :global(html[data-theme="dark"]) .pilar-product {
+    --pillar-label-color: #38bdf8;
+  }
+
+  :global(html[data-theme="dark"]) .pilar-coding {
+    --pillar-label-color: #e879f9;
+  }
+
+  :global(html[data-theme="dark"]) .pilar-data {
+    --pillar-label-color: #34d399;
+  }
+
+  :global(html[data-theme="dark"]) .pilar-ai {
+    --pillar-label-color: #a78bfa;
   }
 
   :global(html[data-theme="dark"]) .pillar-card {

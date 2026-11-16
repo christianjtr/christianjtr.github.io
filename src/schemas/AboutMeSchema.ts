@@ -73,6 +73,7 @@ const LocaleBannerSchema = z.object({
 
 const HeaderSchema = z.object({
     languages_title: z.string(),
+    theme_toggle: z.string(),
     languages: z.array(z.object({
         locale: z.string(),
         name: z.string()

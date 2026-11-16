@@ -53,6 +53,7 @@
     },
     "header": {
         "languages_title": "Languages",
+        "theme_toggle": "Toggle color theme",
         "languages": [
             {
                 "locale": "en",

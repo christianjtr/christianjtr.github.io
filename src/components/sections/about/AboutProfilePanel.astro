@@ -15,7 +15,7 @@ const { common, sectionAbout, experiences, studies } = Astro.props;
 
 <div class="about-profile-panel">
     <div class="about-manifesto">
-        <h3 class="manifesto-title">{sectionAbout.about_me_title}</h3>
+        <h2 class="manifesto-title">{sectionAbout.about_me_title}</h2>
         <p class="about-availability">
             <span class="about-availability-indicator" aria-hidden="true"></span>
             {sectionAbout.availability}
@@ -35,9 +35,13 @@ const { common, sectionAbout, experiences, studies } = Astro.props;
         align-items: center;
         gap: 0.55rem;
         margin: 0.65rem 0 0;
-        color: var(--color-secondary);
+        color: #a50e5d;
         font-weight: 600;
         line-height: 1.5;
+    }
+
+    html[data-theme="dark"] .about-availability {
+        color: #f9a8d4;
     }
 
     .about-availability-indicator {

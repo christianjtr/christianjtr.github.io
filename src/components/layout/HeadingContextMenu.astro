@@ -14,13 +14,13 @@ const { sections } = Astro.props;
 ---
 
 <details class="dropdown dropdown-end lg:hidden mobile-menu-details">
-    <summary class="btn btn-ghost btn-circle scale-x-[-1] list-none cursor-pointer mobile-menu-toggle">
-        <DropdownIcon width={24} height={24} />
+    <summary class="btn btn-ghost btn-circle scale-x-[-1] list-none cursor-pointer mobile-menu-toggle" aria-label="Open navigation menu">
+        <DropdownIcon width={24} height={24} aria-hidden="true" />
     </summary>
     
     <div class="card card-sm dropdown-content z-50 mt-2 mobile-menu-panel">
         <div class="card-body rounded-box border border-base-content/5 bg-base-300 p-3 shadow-xl">
-            <nav aria-label="Mobile navigation">
+                <nav aria-label="Mobile navigation">
                 <ul class="menu menu-md p-0 gap-1">
                     {sections.filter((section) => section.active).map((section) => (
                         <li>

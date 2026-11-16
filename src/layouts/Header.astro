@@ -21,14 +21,13 @@ const { header } = (entry?.data as AboutMeData) || {};
     <div class="navbar-container">
         <div class="navbar">
             <div class="navbar-start">
-                <a class="btn btn-link btn-circle" href="/">
-                    <Image src={BrandIcon} alt="Brand logo" aria-label="Brand logo" />
+                <a class="btn btn-link btn-circle" href="/" aria-label="Home">
+                    <Image src={BrandIcon} alt="" />
                 </a>
             </div>
             <div class="navbar-center hidden lg:flex lg:gap-10 xl:gap-16">
                 {header.main_sections.filter((section) => section.active).map((section) => (
                     <a 
-                        role="button"
                         class="navbar-link"
                         href={`#${section.anchorId}`}
                         aria-label={`Go to ${section.label}`}
@@ -38,28 +37,23 @@ const { header } = (entry?.data as AboutMeData) || {};
                 ))}
             </div>
             <div class="navbar-end gap-3">
-                <div class="dropdown dropdown-end">
-                    <div
-                        tabindex="0"
-                        role="button"
-                        class="btn btn-ghost btn-circle header-control"
-                        aria-label="Open language selector"
-                        aria-haspopup="listbox"
-                    >
-                        <LanguageIcon width={24} height={24} />
-                    </div>
-                    <ul tabindex="0" class="dropdown-content menu z-1 mt-1 rounded-box bg-base-300 p-1 shadow-sm" role="menu" aria-label="Language selector">
+                <details class="dropdown dropdown-end language-selector">
+                    <summary class="btn btn-ghost btn-circle header-control list-none" aria-label={header.languages_title}>
+                        <LanguageIcon width={24} height={24} aria-hidden="true" />
+                    </summary>
+                    <ul class="dropdown-content menu z-1 mt-1 rounded-box bg-base-300 p-1 shadow-sm">
                         {header.languages.map(({ name, locale}) => (
                             <li class:list={["lg:text-lg p-1.5", { "text-primary font-semibold": Astro.currentLocale === locale }]}>
                                 <a href={`/${locale}/`}>{name}</a>
                             </li>
                         ))}
                     </ul>
-                </div>
+                </details>
                 <label class="btn btn-circle btn-ghost swap swap-rotate header-control">
-                    <input id="theme-controller" type="checkbox" class="theme-controller" value="synthwave" aria-label="Toggle color theme" />
-                    <SunIcon />
-                    <MoonIcon />
+                    <input id="theme-controller" type="checkbox" class="theme-controller" value="synthwave" />
+                    <span class="sr-only">{header.theme_toggle}</span>
+                    <SunIcon aria-hidden="true" />
+                    <MoonIcon aria-hidden="true" />
                 </label>
                 <HeadingContextMenu sections={header.main_sections} />
             </div>
@@ -79,7 +73,7 @@ const { header } = (entry?.data as AboutMeData) || {};
     }
 
     .navbar-link {
-        @apply text-xl font-semibold no-underline hover:text-primary;
+        @apply inline-flex min-h-6 items-center text-xl font-semibold no-underline hover:text-primary;
     }
 
     @media (max-width: 639px) {
@@ -136,9 +130,19 @@ const { header } = (entry?.data as AboutMeData) || {};
         const LOCALE_STORAGE_KEY = 'user-locale-preference';
         const BANNER_DISMISSED_KEY = 'locale-banner-dismissed';
         const localeLinks = document.querySelectorAll('.dropdown-content a[href^="/"]');
+        const languageSelector = document.querySelector('.language-selector');
+
+        if (languageSelector) {
+            document.addEventListener('pointerdown', (event) => {
+                if (event.target instanceof Node && !languageSelector.contains(event.target)) {
+                    languageSelector.removeAttribute('open');
+                }
+            });
+        }
         
         localeLinks.forEach(function(link) {
             link.addEventListener('click', function() {
+                languageSelector?.removeAttribute('open');
                 const href = link.getAttribute('href') || '';
                 const match = href.match(/^\/([a-z]{2})\//);
                 if (match && match[1]) {

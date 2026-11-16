@@ -46,7 +46,6 @@ const grokHref = `https://grok.com/?q=${encodedUrlPrompt}`;
     data-lang={lang}
     data-copied-text={copiedText}
     data-tip={copyOption}
-    aria-label={copyOption}
   >
     <span class="flex flex-col items-start">
       <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-primary/75 transition-colors duration-200">
@@ -122,14 +121,12 @@ const grokHref = `https://grok.com/?q=${encodedUrlPrompt}`;
       if (timeoutId) clearTimeout(timeoutId);
 
       button.classList.add('copied');
-      button.setAttribute('aria-label', copiedText);
       button.setAttribute('data-tip', copiedText);
       labelSpan.textContent = copiedText;
 
       timeoutId = window.setTimeout(() => {
         button.classList.remove('copied');
-        button.setAttribute('aria-label', originalAria);
-        button.setAttribute('data-tip', originalAria);
+        button.setAttribute('data-tip', copyOption);
         labelSpan.textContent = originalText;
       }, 2200);
     };
@@ -175,6 +172,10 @@ const grokHref = `https://grok.com/?q=${encodedUrlPrompt}`;
 
   .ai-context-button {
     @apply flex min-w-0 flex-1 cursor-pointer items-center justify-between rounded-l-2xl p-3 text-left;
+  }
+
+  .ai-context-button > span:first-child > span:first-child {
+    color: #3730a3;
   }
 
   .ai-context-icon {
