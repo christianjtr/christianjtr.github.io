@@ -87,7 +87,7 @@ const { sectionAbout, activeAvatar } = Astro.props;
     });
 </script>
 
-<style is:global>
+<style>
     .about-hero {
         position: relative;
         isolation: isolate;
@@ -127,12 +127,12 @@ const { sectionAbout, activeAvatar } = Astro.props;
         min-width: 0;
     }
 
-    .about-intro :global(.ai-context) {
+    .about-intro .ai-context {
         position: relative;
         z-index: 5;
     }
 
-    .about-intro :global(.ai-context-menu[open]) {
+    .about-intro .ai-context .ai-context-menu[open] {
         z-index: 20;
     }
 
@@ -210,13 +210,13 @@ const { sectionAbout, activeAvatar } = Astro.props;
         opacity: 0.78;
     }
 
-    .about-summary :global(strong) {
+    .about-summary strong {
         color: var(--color-primary);
         font-weight: 800;
         opacity: 1;
     }
 
-    html[data-theme="dark"] .about-summary :global(strong) {
+    html[data-theme="dark"] .about-summary strong {
         color: var(--color-accent);
     }
 
