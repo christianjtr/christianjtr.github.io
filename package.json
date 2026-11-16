@@ -27,9 +27,19 @@
         "typescript": "^5.8.2"
     },
     "pnpm": {
+        "overrides": {
+            "@ungap/structured-clone": "^1.4.0"
+        },
         "onlyBuiltDependencies": [
             "esbuild",
             "sharp"
-        ]
+        ],
+        "packageExtensions": {
+            "@astrojs/astro2tsx": {
+                "dependencies": {
+                    "@emnapi/runtime": "1.11.3"
+                }
+            }
+        }
     }
 }
