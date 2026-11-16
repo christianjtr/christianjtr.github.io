@@ -96,7 +96,6 @@ const grokHref = `https://grok.com/?q=${encodedUrlPrompt}`;
   if (button && labelSpan && menu) {
     const copiedText = button.dataset.copiedText || 'Copied';
     const originalText = labelSpan.textContent || '';
-    const originalAria = button.getAttribute('aria-label') || originalText;
     let timeoutId = null;
 
     const executeCopyAction = async () => {
@@ -104,16 +103,8 @@ const grokHref = `https://grok.com/?q=${encodedUrlPrompt}`;
       try {
         await navigator.clipboard.writeText(promptInstruction);
         return true;
-      } catch (error) {
-        const input = document.createElement("textarea");
-        input.value = promptInstruction;
-        input.style.position = "fixed";
-        input.style.opacity = "0";
-        document.body.appendChild(input);
-        input.select();
-        const success = document.execCommand('copy');
-        document.body.removeChild(input);
-        return success;
+      } catch {
+        return false;
       }
     };
 

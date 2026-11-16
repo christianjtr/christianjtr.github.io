@@ -10,6 +10,7 @@
     themes:
         light --default,
         dark --prefersdark;
+    exclude: properties, radialprogress;
 }
 
 @plugin "daisyui/theme" {
