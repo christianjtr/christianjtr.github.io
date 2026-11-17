@@ -67,7 +67,9 @@ html {
 
 .app-modal-close {
     color: color-mix(in srgb, var(--color-base-content) 55%, transparent);
-    transition: color 150ms ease, background-color 150ms ease;
+    transition:
+        color 150ms ease,
+        background-color 150ms ease;
 }
 
 .app-modal-close:hover {
@@ -78,12 +80,13 @@ html[data-theme="dark"] .app-modal-eyebrow {
     color: var(--color-accent);
 }
 
-html[data-theme="dark"] :is(
-    .credential-item,
-    .editorial-card,
-    .expertise-feature-card,
-    .experiment-card
-) {
+html[data-theme="dark"]
+    :is(
+        .credential-item,
+        .editorial-card,
+        .expertise-feature-card,
+        .experiment-card
+    ) {
     background-image: linear-gradient(
         145deg,
         color-mix(in srgb, var(--color-accent) 2.5%, transparent),
@@ -91,10 +94,7 @@ html[data-theme="dark"] :is(
     );
 }
 
-html[data-theme="light"] :is(
-    .editorial-card,
-    .experiment-card
-) {
+html[data-theme="light"] :is(.editorial-card, .experiment-card) {
     background-image: linear-gradient(
         145deg,
         color-mix(in srgb, var(--color-primary) 3%, var(--color-base-100)),
@@ -102,12 +102,8 @@ html[data-theme="light"] :is(
     );
 }
 
-html[data-theme="dark"] :is(
-    #featured_projects,
-    #credentials,
-    #selected_works,
-    #background
-) {
+html[data-theme="dark"]
+    :is(#featured_projects, #credentials, #selected_works, #background) {
     background-image: linear-gradient(
         115deg,
         color-mix(in srgb, var(--color-accent) 1.5%, transparent),
@@ -116,12 +112,8 @@ html[data-theme="dark"] :is(
     );
 }
 
-html[data-theme="light"] :is(
-    #featured_projects,
-    #credentials,
-    #selected_works,
-    #background
-) {
+html[data-theme="light"]
+    :is(#featured_projects, #credentials, #selected_works, #background) {
     background-image: linear-gradient(
         115deg,
         color-mix(in srgb, var(--color-primary) 1.25%, transparent),
