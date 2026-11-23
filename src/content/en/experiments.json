@@ -171,7 +171,7 @@
         "description": "An administrative dashboard designed to streamline employee directory management, organizational tracking, and team operations. Built with a clean, responsive interface for quick CRUD operations, role filtering, and clear data visualization.",
         "image": "/src/assets/images/experiments/manage-employees.webp",
         "tags": [
-            "React / TypeScript",
+            "Vue / TypeScript",
             "Dashboard UI",
             "CRUD Operations",
             "State Management",

@@ -171,7 +171,7 @@
         "description": "Un tableau de bord administratif conçu pour simplifier la gestion de l'annuaire des employés, le suivi organisationnel et les opérations d'équipe. Doté d'une interface claire et réactive pour des opérations CRUD rapides, le filtrage par rôle et une visualisation efficace des données.",
         "image": "/src/assets/images/experiments/manage-employees.webp",
         "tags": [
-            "React / TypeScript",
+            "Vue / TypeScript",
             "Interface Dashboard",
             "Opérations CRUD",
             "Gestion d'État",

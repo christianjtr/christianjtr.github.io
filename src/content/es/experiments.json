@@ -171,7 +171,7 @@
         "description": "Un panel administrativo diseñado para agilizar la gestión del directorio de empleados, el seguimiento organizacional y las operaciones de equipo. Construido con una interfaz limpia y responsiva para operaciones CRUD rápidas, filtrado por roles y visualización clara de datos.",
         "image": "/src/assets/images/experiments/manage-employees.webp",
         "tags": [
-            "React / TypeScript",
+            "Vue / TypeScript",
             "Interfaz de Dashboard",
             "Operaciones CRUD",
             "Gestión de Estado",
