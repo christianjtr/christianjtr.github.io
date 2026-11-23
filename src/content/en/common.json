@@ -105,22 +105,49 @@
         "greeting": "Welcome, I am",
         "my_name": "Christian José Torrealba Rondón<span class='text-accent text-3xl'>.</span>",
         "my_name_template": "Christian José <br><span class='text-[0.85em] font-medium tracking-wide inline-block mt-1'>Torrealba Rondón<span class='text-accent'>.</span></span>",
-        "about_me_title": "Engineer who integrates strategy and technical execution to deliver data-driven solutions.",
-        "about_me": "I work with product and engineering teams to turn requirements into solutions, including web applications, UI interfaces, integrations, and the tests that keep them reliable.",
+        "about_me_title": "Systems and product engineer who designs and delivers complex web applications, modern architectures, and AI solutions driven by business impact.",
+        "about_me": "I partner with product and engineering teams to transform complex requirements into scalable web applications, combining accessible interfaces, type-safe architectures, AI integrations, and automated testing to ensure reliability.",
         "systems_thinking_mindset": "Systems Thinking Mindset",
-        "summary": "Product-minded engineer with a <strong>Systems Engineering background</strong>, bridging strategy, data, and user-centered product delivery.",
+        "summary": "Product-minded engineer with a <strong>Systems Engineering background</strong>, connecting modern web architecture, analytics, and human-centered artificial intelligence.",
         "availability": "Open to relocation / consulting opportunities",
         "hobbies_title": "Hobbies",
         "hobbies": [
-            { "name": "Outdoor", "emoji": "☀️" },
-            { "name": "Beach", "emoji": "🏖️" },
-            { "name": "Parks", "emoji": "🎡" },
-            { "name": "Gelato", "emoji": "🍦" },
-            { "name": "Gaming", "emoji": "🎮" },
-            { "name": "Running", "emoji": "🏃🏻" },
-            { "name": "Pets", "emoji": "🐶" },
-            { "name": "Travel", "emoji": "✈️" },
-            { "name": "Languages", "emoji": "🗣️" }
+            {
+                "name": "Outdoor",
+                "emoji": "☀️"
+            },
+            {
+                "name": "Beach",
+                "emoji": "🏖️"
+            },
+            {
+                "name": "Parks",
+                "emoji": "🎡"
+            },
+            {
+                "name": "Gelato",
+                "emoji": "🍦"
+            },
+            {
+                "name": "Gaming",
+                "emoji": "🎮"
+            },
+            {
+                "name": "Running",
+                "emoji": "🏃🏻"
+            },
+            {
+                "name": "Pets",
+                "emoji": "🐶"
+            },
+            {
+                "name": "Travel",
+                "emoji": "✈️"
+            },
+            {
+                "name": "Languages",
+                "emoji": "🗣️"
+            }
         ],
         "v_shaped_profile": "V-Shaped Profile",
         "v_shaped_explanation": "Combines specialization in one relevant area with broad, cross-functional knowledge",
@@ -316,7 +343,11 @@
         "companies_across_regions": "Worked across different markets",
         "companies_and_countries_lived_in": "Countries Lived, Worked, and Studied in",
         "academic_foundation": "Level of formal education and verified credentials supporting technical execution.",
-        "countries": ["Venezuela", "Argentina", "Spain"],
+        "countries": [
+            "Venezuela",
+            "Argentina",
+            "Spain"
+        ],
         "full_countries": [
             "Venezuela",
             "Argentina",

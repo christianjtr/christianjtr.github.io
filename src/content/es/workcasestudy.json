@@ -29,7 +29,7 @@
         "period": "May. 2024 – Jul. 2025",
         "category": "product-engineering",
         "category_description": "Ingeniería de Producto",
-        "summary": null,
+        "summary": "Modernización y escalabilidad de la arquitectura frontend para acelerar el ciclo de desarrollo en la plataforma de movilidad corporativa de Zeelo. La iniciativa abordó la fragmentación del código y los cuellos de botella de integración mediante la migración estratégica a TypeScript, la adopción de una arquitectura basada en monorepo y la estandarización del flujo de datos asíncronos con TanStack Query y validación con Zod, reduciendo drásticamente los errores en tiempo de ejecución y acelerando la entrega de producto.",
         "tags": [
             "React/TypeScript",
             "ReactQuery",
