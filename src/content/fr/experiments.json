@@ -24,6 +24,27 @@
         "topic": "Produit et UX"
     },
     {
+        "id": "project-agent-orchestrator",
+        "section": "experiments",
+        "title": "Agent Orchestrator, tableau de bord de télémétrie IA en temps réel",
+        "description": "Tableau de bord en temps réel pour suivre l’état et la télémétrie d’agents d’IA simulés. Réalisé avec Vue 3, TypeScript et Docker.",
+        "image": "/src/assets/images/agent-orchestrator.jpg",
+        "tags": [
+            "Vue 3 / TypeScript",
+            "Real-Time / WebSockets",
+            "Docker / NGINX",
+            "Tailwind CSS / Responsiveness"
+        ],
+        "role": "Author",
+        "type": "Tableau de Bord / Surveillance",
+        "category": "PoC technique",
+        "url": "https://christianjtr.github.io/agent-orchestrator/",
+        "isSandbox": false,
+        "display": true,
+        "topic": "Logiciel et IA",
+        "year": 2026
+    },
+    {
         "id": "experiment-data-visualization-error-reporting-chart",
         "section": "experiments",
         "title": "Vitalscope — tableau de bord Web Vitals et santé de la passerelle",
@@ -305,26 +326,6 @@
         "abstract": "Concept UX d'un cours de 2017 pour un produit mobile qui aide à trouver des événements et des lieux culturels dans la ville, comme des centres de design, des musées locaux et de l'art urbain, quand les agendas et les lieux sont dispersés. Le concept a trois parties. Une liste d'événements locaux avec un agenda personnel, des parcours géolocalisés à travers des itinéraires culturels, et un stockage local pour des notes et des favoris. J'ai contribué à la recherche, au concept produit et aux prototypes d'interface. C'est un concept de design issu du cours, pas une application publiée.",
         "year": 2017,
         "topic": "Académique et recherche"
-    },
-    {
-        "id": "project-agent-orchestrator",
-        "section": "experiments",
-        "title": "Agent Orchestrator, tableau de bord de télémétrie IA en temps réel",
-        "description": "Tableau de bord en temps réel pour suivre l’état et la télémétrie d’agents d’IA simulés. Réalisé avec Vue 3, TypeScript et Docker.",
-        "image": "/src/assets/images/agent-orchestrator.jpg",
-        "tags": [
-            "Vue 3 / TypeScript",
-            "Real-Time / WebSockets",
-            "Docker / NGINX",
-            "Tailwind CSS / Responsiveness"
-        ],
-        "role": "Author",
-        "type": "Tableau de Bord / Surveillance",
-        "category": "PoC technique",
-        "url": "https://christianjtr.github.io/agent-orchestrator/",
-        "isSandbox": true,
-        "display": true,
-        "topic": "Logiciel et IA"
     },
     {
         "id": "experiment-pokedex-pwa-application",

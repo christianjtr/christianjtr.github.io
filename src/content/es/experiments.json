@@ -24,6 +24,27 @@
         "topic": "Producto y UX"
     },
     {
+        "id": "project-agent-orchestrator",
+        "section": "experiments",
+        "title": "Agent Orchestrator, panel de telemetría de IA en tiempo real",
+        "description": "Panel en tiempo real para consultar el estado y la telemetría de agentes de IA simulados. Desarrollado con Vue 3, TypeScript y Docker.",
+        "image": "/src/assets/images/agent-orchestrator.jpg",
+        "tags": [
+            "Vue 3 / TypeScript",
+            "Real-Time / WebSockets",
+            "Docker / NGINX",
+            "Tailwind CSS / Responsiveness"
+        ],
+        "role": "Author",
+        "type": "Dashboard / Monitoreo",
+        "category": "PoC técnico",
+        "url": "https://christianjtr.github.io/agent-orchestrator/",
+        "isSandbox": false,
+        "display": true,
+        "topic": "Software e IA",
+        "year": 2026
+    },
+    {
         "id": "experiment-data-visualization-error-reporting-chart",
         "section": "experiments",
         "title": "Vitalscope — panel de Web Vitals y salud del gateway",
@@ -305,26 +326,6 @@
         "abstract": "Concepto de UX de un curso de 2017 para un producto móvil con el que encontrar eventos y lugares culturales en la ciudad, como centros de diseño, museos locales y arte urbano, cuando agendas y sitios están dispersos. El concepto tiene tres partes. Un listado de eventos locales con agenda personal, rutas geolocalizadas por recorridos culturales, y almacenamiento local para notas y favoritos. Participé en la investigación, el concepto de producto y los prototipos de interfaz. Es un concepto de diseño del curso, no una aplicación publicada.",
         "year": 2017,
         "topic": "Académico e investigación"
-    },
-    {
-        "id": "project-agent-orchestrator",
-        "section": "experiments",
-        "title": "Agent Orchestrator, panel de telemetría de IA en tiempo real",
-        "description": "Panel en tiempo real para consultar el estado y la telemetría de agentes de IA simulados. Desarrollado con Vue 3, TypeScript y Docker.",
-        "image": "/src/assets/images/agent-orchestrator.jpg",
-        "tags": [
-            "Vue 3 / TypeScript",
-            "Real-Time / WebSockets",
-            "Docker / NGINX",
-            "Tailwind CSS / Responsiveness"
-        ],
-        "role": "Author",
-        "type": "Dashboard / Monitoreo",
-        "category": "PoC técnico",
-        "url": "https://christianjtr.github.io/agent-orchestrator/",
-        "isSandbox": true,
-        "display": true,
-        "topic": "Software e IA"
     },
     {
         "id": "experiment-pokedex-pwa-application",
