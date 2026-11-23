@@ -189,6 +189,30 @@
         "topic": "Datos y analítica"
     },
     {
+        "id": "experiment-tasklane-local-first-kanban",
+        "section": "experiments",
+        "title": "Tasklane — tablero Kanban local-first",
+        "description": "Tablero Kanban local-first para organizar proyectos y tareas directamente en el navegador sin cuentas, servidores ni sincronización en la nube. Los datos persisten en IndexedDB con Dexie, con navegación por teclado, cambio de tema y portabilidad mediante respaldos JSON versionados.",
+        "image": "/src/assets/images/experiments/tasklane.webp",
+        "tags": [
+            "TypeScript / Vite",
+            "Ant Design",
+            "IndexedDB / Dexie / Zod",
+            "Arquitectura Local-First",
+            "Vitest / Playwright"
+        ],
+        "role": "Author",
+        "category": "Aplicación / herramienta",
+        "type": "Gestor de tareas Kanban local-first",
+        "url": "https://github.com/christianjtr/simple-task-manager",
+        "isSandbox": false,
+        "display": true,
+        "abstract": "Tasklane es un tablero Kanban local-first ejecutado íntegramente en el navegador para gestionar hasta 50 proyectos y sus tareas sin dependencias de backend. Emplea IndexedDB a través de Dexie para el almacenamiento persistente en el cliente y Zod para la validación de esquemas. Permite filtrar tareas por texto, prioridad o etiquetas, reordenar tarjetas con ratón o teclado, alternar entre modo claro y oscuro, y exportar o importar todo el espacio de trabajo en archivos JSON validados.",
+        "year": 2026,
+        "isWIP": false,
+        "topic": "Producto y UX"
+    },
+    {
         "id": "experiment-erp-management-dashboard",
         "section": "experiments",
         "title": "Dashboard de Gestión",
@@ -362,13 +386,7 @@
         "title": "Team-Memory-Health (TMH)",
         "description": "CLI y habilidad de agente para evaluar la calidad y la alineación de la memoria compartida de un equipo de desarrollo. Analiza coherencia, actualidad, cobertura y distribución de fuentes sin puntuar a las personas ni modificar los datos.",
         "image": "/src/assets/images/experiments/team_memory_health.webp",
-        "tags": [
-            "TypeScript",
-            "CLI",
-            "Agent Skill",
-            "Engram",
-            "AI Tools"
-        ],
+        "tags": ["TypeScript", "CLI", "Agent Skill", "Engram", "AI Tools"],
         "role": "Author",
         "category": "Aplicación / herramienta",
         "type": "CLI TypeScript / Agent Skill",

@@ -189,6 +189,30 @@
         "topic": "Données et analytique"
     },
     {
+        "id": "experiment-tasklane-local-first-kanban",
+        "section": "experiments",
+        "title": "Tasklane — tableau Kanban local-first",
+        "description": "Un tableau Kanban local-first pour organiser projets et tâches directement dans le navigateur, sans compte, serveur ni synchronisation cloud. Les données sont stockées localement dans IndexedDB via Dexie, avec navigation au clavier, gestion des thèmes et sauvegarde portable en JSON.",
+        "image": "/src/assets/images/experiments/tasklane.webp",
+        "tags": [
+            "TypeScript / Vite",
+            "Ant Design",
+            "IndexedDB / Dexie / Zod",
+            "Architecture Local-First",
+            "Vitest / Playwright"
+        ],
+        "role": "Author",
+        "category": "Application / outil",
+        "type": "Gestionnaire de tâches Kanban local-first",
+        "url": "https://github.com/christianjtr/simple-task-manager",
+        "isSandbox": false,
+        "display": true,
+        "abstract": "Tasklane est un tableau Kanban local-first conçu pour organiser jusqu’à 50 projets et leurs tâches directement dans le navigateur, sans aucun serveur externe. Il s’appuie sur IndexedDB via Dexie pour le stockage persistant côté client et sur Zod pour la validation des schémas. L’interface permet de filtrer les tâches par texte, priorité ou étiquettes, de réorganiser les cartes à la souris ou au clavier, de basculer entre les thèmes clair et sombre, et d’exporter ou importer l’espace de travail via des sauvegardes JSON validées.",
+        "year": 2026,
+        "isWIP": false,
+        "topic": "Produit et UX"
+    },
+    {
         "id": "experiment-erp-management-dashboard",
         "section": "experiments",
         "title": "Tableau de Bord de Gestion",
@@ -362,13 +386,7 @@
         "title": "Team-Memory-Health (TMH)",
         "description": "CLI et compétence d’agent pour évaluer la qualité et l’alignement de la mémoire partagée d’une équipe de développement. L’analyse porte sur la cohérence, l’actualité, la couverture et la répartition des sources, sans noter les personnes ni modifier les données.",
         "image": "/src/assets/images/experiments/team_memory_health.webp",
-        "tags": [
-            "TypeScript",
-            "CLI",
-            "Agent Skill",
-            "Engram",
-            "AI Tools"
-        ],
+        "tags": ["TypeScript", "CLI", "Agent Skill", "Engram", "AI Tools"],
         "role": "Author",
         "category": "Application / outil",
         "type": "CLI TypeScript / Agent Skill",

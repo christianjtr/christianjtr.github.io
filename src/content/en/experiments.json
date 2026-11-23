@@ -189,6 +189,30 @@
         "topic": "Data & Analytics"
     },
     {
+        "id": "experiment-tasklane-local-first-kanban",
+        "section": "experiments",
+        "title": "Tasklane — Local-First Kanban Board",
+        "description": "A local-first Kanban board for organizing projects and tasks directly in your browser without accounts, servers, or cloud sync. Data persists in IndexedDB with Dexie, featuring keyboard navigation, theme switching, and versioned JSON backup portability.",
+        "image": "/src/assets/images/experiments/tasklane.webp",
+        "tags": [
+            "TypeScript / Vite",
+            "Ant Design",
+            "IndexedDB / Dexie / Zod",
+            "Local-First Architecture",
+            "Vitest / Playwright"
+        ],
+        "role": "Author",
+        "category": "Application / tool",
+        "type": "Local-First Kanban Task Manager",
+        "url": "https://github.com/christianjtr/simple-task-manager",
+        "isSandbox": false,
+        "display": true,
+        "abstract": "Tasklane is a browser-based, local-first Kanban board built to organize up to 50 projects and tasks with zero backend dependencies. It uses IndexedDB via Dexie for persistent client-side storage and Zod for runtime schema validation. Users can filter tasks by text, priority, or tags, reorder cards across columns using mouse or keyboard, toggle between light and dark themes, and export or import their entire workspace as a validated JSON backup.",
+        "year": 2026,
+        "isWIP": false,
+        "topic": "Product & UX"
+    },
+    {
         "id": "experiment-erp-management-dashboard",
         "section": "experiments",
         "title": "Management Dashboard",
@@ -362,13 +386,7 @@
         "title": "Team-Memory-Health (TMH)",
         "description": "An agent-native CLI and skill for assessing the quality and alignment of a development team's shared memory. It examines coherence, freshness, coverage, and source distribution without scoring individuals or changing the data.",
         "image": "/src/assets/images/experiments/team_memory_health.webp",
-        "tags": [
-            "TypeScript",
-            "CLI",
-            "Agent Skill",
-            "Engram",
-            "AI Tools"
-        ],
+        "tags": ["TypeScript", "CLI", "Agent Skill", "Engram", "AI Tools"],
         "role": "Author",
         "category": "Application / tool",
         "type": "TypeScript CLI / Agent Skill",
