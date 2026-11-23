@@ -204,7 +204,7 @@
         "role": "Author",
         "category": "Application / outil",
         "type": "Gestionnaire de tâches Kanban local-first",
-        "url": "https://github.com/christianjtr/simple-task-manager",
+        "url": "https://christianjtr.github.io/simple-task-manager/",
         "isSandbox": false,
         "display": true,
         "abstract": "Tasklane est un tableau Kanban local-first conçu pour organiser jusqu’à 50 projets et leurs tâches directement dans le navigateur, sans aucun serveur externe. Il s’appuie sur IndexedDB via Dexie pour le stockage persistant côté client et sur Zod pour la validation des schémas. L’interface permet de filtrer les tâches par texte, priorité ou étiquettes, de réorganiser les cartes à la souris ou au clavier, de basculer entre les thèmes clair et sombre, et d’exporter ou importer l’espace de travail via des sauvegardes JSON validées.",

@@ -204,7 +204,7 @@
         "role": "Author",
         "category": "Application / tool",
         "type": "Local-First Kanban Task Manager",
-        "url": "https://github.com/christianjtr/simple-task-manager",
+        "url": "https://christianjtr.github.io/simple-task-manager/",
         "isSandbox": false,
         "display": true,
         "abstract": "Tasklane is a browser-based, local-first Kanban board built to organize up to 50 projects and tasks with zero backend dependencies. It uses IndexedDB via Dexie for persistent client-side storage and Zod for runtime schema validation. Users can filter tasks by text, priority, or tags, reorder cards across columns using mouse or keyboard, toggle between light and dark themes, and export or import their entire workspace as a validated JSON backup.",
