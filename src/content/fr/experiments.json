@@ -165,6 +165,30 @@
         "topic": "Produit et UX"
     },
     {
+        "id": "experiment-manage-employees-dashboard",
+        "section": "experiments",
+        "title": "Tableau de Bord de Gestion des Employés",
+        "description": "Un tableau de bord administratif conçu pour simplifier la gestion de l'annuaire des employés, le suivi organisationnel et les opérations d'équipe. Doté d'une interface claire et réactive pour des opérations CRUD rapides, le filtrage par rôle et une visualisation efficace des données.",
+        "image": "/src/assets/images/experiments/manage-employees.webp",
+        "tags": [
+            "React / TypeScript",
+            "Interface Dashboard",
+            "Opérations CRUD",
+            "Gestion d'État",
+            "Design Réactif"
+        ],
+        "role": "Author",
+        "category": "Application / outil",
+        "type": "Tableau de bord RH et gestion des employés",
+        "url": "https://christianjtr.github.io/manage-employees-dashboard/#/",
+        "isSandbox": false,
+        "display": true,
+        "abstract": "Ce tableau de bord de gestion des employés propose une interface centralisée pour administrer les dossiers du personnel et la structure des équipes. Il permet d'ajouter, de modifier, de rechercher et de filtrer les profils par département ou par rôle, avec une ergonomie pensée pour l'efficacité opérationnelle.",
+        "year": 2026,
+        "isWIP": false,
+        "topic": "Logiciel et IA"
+    },
+    {
         "id": "experiment-data-visualization-error-reporting-chart",
         "section": "experiments",
         "title": "Vitalscope — tableau de bord Web Vitals et santé de la passerelle",
