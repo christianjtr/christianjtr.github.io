@@ -1,192 +1,27 @@
 [
     {
-        "id": "experiment-healthy-culture-engineering-teams",
+        "id": "experiment-tasklane-local-first-kanban",
         "section": "experiments",
-        "title": "Étude de cas pour promouvoir une culture saine au sein des équipes d'ingénierie",
-        "description": "Étude académique sur la culture d’ingénierie au sein d’une entreprise de services d’IA anonymisée après une acquisition. Elle propose une démarche de changement fondée sur une analyse SWOT, des cartes d’empathie, RASCI et ADKAR.",
-        "image": "/src/assets/images/experiments/engineer_management.webp",
+        "title": "Tasklane — tableau Kanban local-first",
+        "description": "Un tableau Kanban local-first pour organiser projets et tâches directement dans le navigateur, sans compte, serveur ni synchronisation cloud. Les données sont stockées localement dans IndexedDB via Dexie, avec navigation au clavier, gestion des thèmes et sauvegarde portable en JSON.",
+        "image": "/src/assets/images/experiments/tasklane.webp",
         "tags": [
-            "Gestion d'Ingénierie",
-            "Développement du Leadership",
-            "Dynamique d'Équipe"
-        ],
-        "role": "Author",
-        "type": "Essai sur le Leadership",
-        "category": "Étude académique",
-        "url": "https://drive.google.com/file/d/1yprBUaMhTifIBizEOwrhScjqB7WsA7-K/view?usp=sharing",
-        "isSandbox": false,
-        "display": true,
-        "abstract": "Étude de cas académique de 2023 sur la façon de reconstruire une culture d'ingénierie plus saine après une acquisition. Le cas s'appuie sur une entreprise anonymisée de services d'IA, en B2B2C, qui a grandi très vite et dépassé 600 personnes dans plusieurs pays. Les changements de direction et les restructurations ont été suivis de favoritisme dans les promotions, de décisions techniques concentrées sur quelques personnes, de peu de soutien au développement de carrière, d'une sécurité psychologique plus faible et de départs. Le travail propose une manière pratique de reconstruire cette culture. Il regarde la maturité du leadership technique, la façon dont les équipes collaborent, et si l'environnement permet d'apprendre. La démarche lit la situation avec SWOT, des cartes d'empathie, RASCI et des diagrammes de système, puis travaille sur des accords partagés, des parcours plus clairs et une formation au leadership et à la collaboration. Le changement est cadré avec le modèle ADKAR.",
-        "year": 2023,
-        "topic": "Entreprise et leadership"
-    },
-    {
-        "id": "experiment-bi-adventure-works",
-        "section": "experiments",
-        "title": "Adventure Works Cycles, projet d'entreprise en informatique décisionnelle",
-        "description": "Projet académique de business intelligence utilisant les données d’exemple d’Adventure Works Cycles. Il comprend un pipeline ETL, un entrepôt de données en étoile et des tableaux de bord réalisés avec Power BI et Qlik Sense.",
-        "image": "/src/assets/images/experiments/bi_project.webp",
-        "tags": [
-            "Analyse / Visualisation de Données",
-            "ETL / DWH",
-            "Applications basées sur les données"
-        ],
-        "role": "Author",
-        "type": "Ingénierie de Données",
-        "category": "Étude académique",
-        "url": "https://drive.google.com/file/d/1UN8-YdFhR7UuhvARsf61kCxITTgot3Cf/view?usp=sharing",
-        "isSandbox": false,
-        "display": true,
-        "abstract": "Projet académique d'informatique décisionnelle de 2018, sur les données d'exemple d'Adventure Works Cycles, l'entreprise fictive de fabrication et de distribution utilisée dans les cours de BI. L'exercice traite la distance entre une base transactionnelle complexe et les questions qu'une direction poserait quand la demande change. J'ai analysé les sources, extrait et consolidé les données, et modélisé un schéma en étoile autour des faits de vente, avec des dimensions clients, territoires et produits. Le résultat est un ensemble de tableaux de bord dans Power BI et Qlik Sense pour les ventes régionales, les segments de clients et des prévisions descriptives. C'est un travail de cours sur des données d'exemple, pas un système livré à une entreprise réelle.",
-        "year": 2018,
-        "topic": "Données et analytique"
-    },
-    {
-        "id": "experiment-circuitos",
-        "section": "experiments",
-        "title": "Circuitos, découvrez votre pôle artistique",
-        "description": "Concept UX d’une application mobile pour découvrir des événements culturels et des itinéraires en ville. Ce projet de cours réalisé en 2017 comprend la recherche utilisateur, la définition du produit et des prototypes d’interface.",
-        "image": "/src/assets/images/experiments/circuitos.webp",
-        "tags": [
-            "Conception et Prototypage de Produit",
-            "Expérience Utilisateur et Recherche",
-            "Pensée Design"
-        ],
-        "role": "Contributor",
-        "type": "Concept UX Design et Recherche",
-        "category": "Concept produit / business",
-        "url": "https://drive.google.com/file/d/1eIRVupKq6ct5eN00Z6vhNl4uG5JnA6G8/view?usp=sharing",
-        "isSandbox": false,
-        "display": true,
-        "abstract": "Concept UX d'un cours de 2017 pour un produit mobile qui aide à trouver des événements et des lieux culturels dans la ville, comme des centres de design, des musées locaux et de l'art urbain, quand les agendas et les lieux sont dispersés. Le concept a trois parties. Une liste d'événements locaux avec un agenda personnel, des parcours géolocalisés à travers des itinéraires culturels, et un stockage local pour des notes et des favoris. J'ai contribué à la recherche, au concept produit et aux prototypes d'interface. C'est un concept de design issu du cours, pas une application publiée.",
-        "year": 2017,
-        "topic": "Produit et UX"
-    },
-    {
-        "id": "project-agent-orchestrator",
-        "section": "experiments",
-        "title": "Agent Orchestrator, tableau de bord de télémétrie IA en temps réel",
-        "description": "Tableau de bord en temps réel pour suivre l’état et la télémétrie d’agents d’IA simulés. Réalisé avec Vue 3, TypeScript et Docker.",
-        "image": "/src/assets/images/agent-orchestrator.jpg",
-        "tags": [
-            "Vue 3 / TypeScript",
-            "Real-Time / WebSockets",
-            "Docker / NGINX",
-            "Tailwind CSS / Responsiveness"
-        ],
-        "role": "Author",
-        "type": "Tableau de Bord / Surveillance",
-        "category": "PoC technique",
-        "url": "https://christianjtr.github.io/agent-orchestrator/",
-        "isSandbox": true,
-        "display": true,
-        "topic": "Logiciel et IA"
-    },
-    {
-        "id": "experiment-idea-cultural-activities-app",
-        "section": "experiments",
-        "title": "Idée d'application pour la promotion d'activités culturelles",
-        "description": "Projet de master développant un cas d’affaires pour un produit qui promeut les événements culturels à Barcelone. Il comprend une étude de marché, un modèle économique et un plan marketing.",
-        "image": "/src/assets/images/experiments/design_process.webp",
-        "tags": [
-            "e-Business",
-            "Canevas de Modèle Économique",
-            "Lean Startup",
-            "Marketing Numérique (SEO/SEA)"
-        ],
-        "role": "Author",
-        "type": "Concept e-Business et Analyse de Niche de Marché",
-        "category": "Concept produit / business",
-        "url": "https://drive.google.com/file/d/1nVCuBsmsfOd7009AsGPlxSOo00pIHaCo/view?usp=sharing",
-        "isSandbox": false,
-        "display": true,
-        "abstract": "Projet de master de 2020, un cas d'affaires pour un produit numérique qui ferait la promotion d'événements artistiques et culturels à Barcelone. Il part de l'écart entre les listings locaux généraux et des publics qui cherchent des formes de culture très précises. Le cas comprend une analyse d'entrée sur le marché, avec publics cibles et concurrents, un modèle de monétisation, et un plan de marketing en ligne avec des canaux d'acquisition et des indicateurs d'exploitation. La livraison est esquissée avec un calendrier agile et une stack logicielle tenue dans un budget. C'est un document de planification pour un concept, pas une entreprise qui aurait été lancée.",
-        "year": 2020,
-        "topic": "Entreprise et leadership"
-    },
-    {
-        "id": "experiment-tv-movie-streaming-like-webapp",
-        "section": "experiments",
-        "title": "Catalogue TMDB de films et de séries",
-        "description": "Application web full-stack permettant de parcourir un catalogue de films et de séries. Elle rassemble les informations sur les titres dans une interface simple.",
-        "image": "/src/assets/images/experiments/tv_app.webp",
-        "tags": [
-            "Développement FullStack",
-            "ReactJS / NodeJS / TypeScript",
-            "Tests Unitaires / E2E",
-            "Processus CI/CD"
+            "TypeScript / Vite",
+            "Ant Design",
+            "IndexedDB / Dexie / Zod",
+            "Architecture Local-First",
+            "Vitest / Playwright"
         ],
         "role": "Author",
         "category": "Application / outil",
-        "type": "Application Web (Catalogue Films/Séries TV)",
-        "url": "https://christianjtr.github.io/tv-app/",
+        "type": "Gestionnaire de tâches Kanban local-first",
+        "url": "https://christianjtr.github.io/simple-task-manager/",
         "isSandbox": false,
         "display": true,
-        "topic": "Logiciel et IA"
-    },
-    {
-        "id": "experiment-pokedex-pwa-application",
-        "section": "experiments",
-        "title": "Pokédex, attrapez-les tous",
-        "description": "Application web progressive développée avec Svelte pour explorer les données Pokémon via l’API Pokémon. Elle associe persistance locale, synthèse vocale et graphiques Plotly dans une expérience de Pokédex.",
-        "image": "/src/assets/images/pokedex.jpg",
-        "tags": [
-            "Développement Front-end",
-            "Svelte / Vite+PWA",
-            "API SpeechSynthesis",
-            "Bibliothèque Graphique Plotly"
-        ],
-        "role": "Author",
-        "category": "Application / outil",
-        "type": "Application Web (Catalogue Pokémon)",
-        "url": "https://christianjtr.github.io/svelte-pokedex-pwa/",
-        "isSandbox": true,
-        "display": true,
-        "topic": "Logiciel et IA"
-    },
-    {
-        "id": "experiment-restaurant-browser-app",
-        "section": "experiments",
-        "title": "Recherche de restaurants",
-        "description": "Application web progressive qui utilise la géolocalisation pour trouver des restaurants à proximité. Elle sert à découvrir des adresses et ne permet ni de commander ni de gérer des livraisons.",
-        "image": "/src/assets/images/restaurant_browser.jpg",
-        "tags": [
-            "Développement Front-end",
-            "ReactJS / TypeScript / Vite",
-            "Daisy UI / Tailwind CSS",
-            "API de Géolocalisation"
-        ],
-        "role": "Author",
-        "category": "Application / outil",
-        "type": "Application Web (Application de Restaurants)",
-        "url": "https://christianjtr.github.io/restaurant-browser-app/",
-        "isSandbox": true,
-        "display": true,
-        "topic": "Produit et UX"
-    },
-    {
-        "id": "experiment-manage-employees-dashboard",
-        "section": "experiments",
-        "title": "Tableau de Bord de Gestion des Employés",
-        "description": "Un tableau de bord administratif conçu pour simplifier la gestion de l'annuaire des employés, le suivi organisationnel et les opérations d'équipe. Doté d'une interface claire et réactive pour des opérations CRUD rapides, le filtrage par rôle et une visualisation efficace des données.",
-        "image": "/src/assets/images/experiments/manage-employees.webp",
-        "tags": [
-            "Vue / TypeScript",
-            "Interface Dashboard",
-            "Opérations CRUD",
-            "Gestion d'État",
-            "Design Réactif"
-        ],
-        "role": "Author",
-        "category": "Application / outil",
-        "type": "Tableau de bord RH et gestion des employés",
-        "url": "https://christianjtr.github.io/manage-employees-dashboard/#/",
-        "isSandbox": false,
-        "display": true,
-        "abstract": "Ce tableau de bord de gestion des employés propose une interface centralisée pour administrer les dossiers du personnel et la structure des équipes. Il permet d'ajouter, de modifier, de rechercher et de filtrer les profils par département ou par rôle, avec une ergonomie pensée pour l'efficacité opérationnelle.",
+        "abstract": "Tasklane est un tableau Kanban local-first conçu pour organiser jusqu’à 50 projets et leurs tâches directement dans le navigateur, sans aucun serveur externe. Il s’appuie sur IndexedDB via Dexie pour le stockage persistant côté client et sur Zod pour la validation des schémas. L’interface permet de filtrer les tâches par texte, priorité ou étiquettes, de réorganiser les cartes à la souris ou au clavier, de basculer entre les thèmes clair et sombre, et d’exporter ou importer l’espace de travail via des sauvegardes JSON validées.",
         "year": 2026,
         "isWIP": false,
-        "topic": "Logiciel et IA"
+        "topic": "Produit et UX"
     },
     {
         "id": "experiment-data-visualization-error-reporting-chart",
@@ -213,127 +48,51 @@
         "topic": "Données et analytique"
     },
     {
-        "id": "experiment-tasklane-local-first-kanban",
+        "id": "experiment-manage-employees-dashboard",
         "section": "experiments",
-        "title": "Tasklane — tableau Kanban local-first",
-        "description": "Un tableau Kanban local-first pour organiser projets et tâches directement dans le navigateur, sans compte, serveur ni synchronisation cloud. Les données sont stockées localement dans IndexedDB via Dexie, avec navigation au clavier, gestion des thèmes et sauvegarde portable en JSON.",
-        "image": "/src/assets/images/experiments/tasklane.webp",
+        "title": "Tableau de Bord de Gestion des Employés",
+        "description": "Un tableau de bord administratif conçu pour simplifier la gestion de l'annuaire des employés, le suivi organisationnel et les opérations d'équipe. Doté d'une interface claire et réactive pour des opérations CRUD rapides, le filtrage par rôle et une visualisation efficace des données.",
+        "image": "/src/assets/images/experiments/manage-employees.webp",
         "tags": [
-            "TypeScript / Vite",
-            "Ant Design",
-            "IndexedDB / Dexie / Zod",
-            "Architecture Local-First",
-            "Vitest / Playwright"
+            "Vue / TypeScript",
+            "Interface Dashboard",
+            "Opérations CRUD",
+            "Gestion d'État",
+            "Design Réactif"
         ],
         "role": "Author",
         "category": "Application / outil",
-        "type": "Gestionnaire de tâches Kanban local-first",
-        "url": "https://christianjtr.github.io/simple-task-manager/",
+        "type": "Tableau de bord RH et gestion des employés",
+        "url": "https://christianjtr.github.io/manage-employees-dashboard/#/",
         "isSandbox": false,
         "display": true,
-        "abstract": "Tasklane est un tableau Kanban local-first conçu pour organiser jusqu’à 50 projets et leurs tâches directement dans le navigateur, sans aucun serveur externe. Il s’appuie sur IndexedDB via Dexie pour le stockage persistant côté client et sur Zod pour la validation des schémas. L’interface permet de filtrer les tâches par texte, priorité ou étiquettes, de réorganiser les cartes à la souris ou au clavier, de basculer entre les thèmes clair et sombre, et d’exporter ou importer l’espace de travail via des sauvegardes JSON validées.",
+        "abstract": "Ce tableau de bord de gestion des employés propose une interface centralisée pour administrer les dossiers du personnel et la structure des équipes. Il permet d'ajouter, de modifier, de rechercher et de filtrer les profils par département ou par rôle, avec une ergonomie pensée pour l'efficacité opérationnelle.",
         "year": 2026,
         "isWIP": false,
-        "topic": "Produit et UX"
-    },
-    {
-        "id": "experiment-erp-management-dashboard",
-        "section": "experiments",
-        "title": "Tableau de Bord de Gestion",
-        "description": "Tableau de bord web pour gérer les informations des employés avec des opérations de création, consultation, mise à jour et suppression. Le projet illustre un flux CRUD dédié aux données d’une équipe.",
-        "image": "/src/assets/images/erp_management.jpg",
-        "tags": [
-            "Développement Front-end",
-            "VueJS / Vuetify / Vuex",
-            "Conception Matérielle (Material Design)"
-        ],
-        "role": "Author",
-        "category": "Application / outil",
-        "type": "Application Web (Tableau de Bord de Gestion des Employés)",
-        "url": "https://christianjtr.github.io/manage-employees-dashboard/#/",
-        "isSandbox": true,
-        "display": false,
-        "topic": "Entreprise et leadership"
-    },
-    {
-        "id": "experiment-express-api-boilerplate",
-        "section": "experiments",
-        "title": "Express API Backend Architecture",
-        "description": "Structure de démarrage pour une petite API REST avec Node.js, Express, MongoDB et Docker, testée avec Jest et Supertest. Il s’agit d’un projet de référence, et non d’un système de production.",
-        "image": "/src/assets/images/express_api_boilerplate.jpg",
-        "tags": [
-            "Développement Back-end",
-            "Node.js / Express",
-            "MongoDB / Mongoose",
-            "Docker / Conteneurisation",
-            "Jest / Supertest"
-        ],
-        "role": "Author",
-        "category": "PoC technique",
-        "type": "API REST (Modèle Backend)",
-        "url": "https://github.com/christianjtr/express-api-mongodb-docker-jest-supertest",
-        "isSandbox": true,
-        "display": true,
         "topic": "Logiciel et IA"
     },
     {
-        "id": "experiment-sticky-notes",
+        "id": "experiment-team-memory-health",
         "section": "experiments",
-        "title": "Basic Sticky Notes",
-        "description": "Tableau dans le navigateur pour créer, modifier, déplacer, redimensionner et supprimer des notes autocollantes. Les modifications sont enregistrées localement et la navigation au clavier permet de l’utiliser sans dépendre uniquement du pointeur.",
-        "image": "/src/assets/images/sticky_notes.jpg",
+        "title": "Team-Memory-Health (TMH)",
+        "description": "CLI et compétence d’agent pour évaluer la qualité et l’alignement de la mémoire partagée d’une équipe de développement. L’analyse porte sur la cohérence, l’actualité, la couverture et la répartition des sources, sans noter les personnes ni modifier les données.",
+        "image": "/src/assets/images/experiments/team_memory_health.webp",
         "tags": [
-            "Développement Front-end",
-            "React 19 / TypeScript",
-            "Vite / CSS Modules",
-            "API Drag and Drop HTML5",
-            "Accessibilité Web (ARIA)"
+            "TypeScript",
+            "CLI",
+            "Agent Skill",
+            "Engram",
+            "AI Tools"
         ],
         "role": "Author",
         "category": "Application / outil",
-        "type": "Application web (Tableau de notes)",
-        "url": "https://christianjtr.github.io/sticky-notes/",
-        "isSandbox": true,
-        "display": false,
-        "topic": "Produit et UX"
-    },
-    {
-        "id": "experiment-dynamic-pricing-calendar-webapp",
-        "section": "experiments",
-        "title": "Simulation de calendrier de tarification pour système de gestion avec React, TypeScript et TanStack Query.",
-        "description": "Simulateur de gestion des revenus permettant d’explorer les tarifs dans un calendrier interactif. Il repose sur une architecture full-stack découplée, avec un serveur API et des flux de données réactifs.",
-        "image": "/src/assets/images/experiments/dynamic_pricing_calendar.webp",
-        "tags": [
-            "FullStack Development",
-            "ReactJS / NodeJS / TypeScript",
-            "TanStack Query"
-        ],
-        "role": "Author",
-        "category": "PoC technique",
-        "type": "Application web (Calendrier de tarification dynamique)",
-        "url": "https://github.com/christianjtr/dynamic-pricing-calendar",
+        "type": "CLI TypeScript / Agent Skill",
+        "url": null,
         "isSandbox": false,
         "display": true,
-        "topic": "Données et analytique"
-    },
-    {
-        "id": "experiment-basic-sticky-notes-webapp",
-        "section": "experiments",
-        "title": "Tableau de notes autocollantes par contexte avec React, TypeScript et Vite",
-        "description": "Tableau accessible pour noter et organiser des idées à l’aide de notes autocollantes. Créez, modifiez, déplacez, redimensionnez et supprimez des notes, puis regroupez-les dans des contextes nommés pour filtrer le tableau ou les classer. Les notes et leurs contextes sont enregistrés dans le navigateur ; des commandes au clavier et des annonces pour lecteurs d’écran facilitent une utilisation sans pointeur.",
-        "image": "/src/assets/images/experiments/sticky_notes.webp",
-        "tags": [
-            "Frontend Development",
-            "ReactJS / TypeScript / Vite",
-            "Web APIs & Accessibility"
-        ],
-        "role": "Author",
-        "category": "Application / outil",
-        "type": "Application web (Tableau de notes autocollantes)",
-        "url": "https://christianjtr.github.io/sticky-notes/",
-        "isSandbox": false,
-        "display": true,
-        "topic": "Produit et UX"
+        "year": 2026,
+        "isWIP": true,
+        "topic": "Logiciel et IA"
     },
     {
         "id": "experiment-engram-semantic-cli",
@@ -405,20 +164,227 @@
         "topic": "Produit et UX"
     },
     {
-        "id": "experiment-team-memory-health",
+        "id": "experiment-basic-sticky-notes-webapp",
         "section": "experiments",
-        "title": "Team-Memory-Health (TMH)",
-        "description": "CLI et compétence d’agent pour évaluer la qualité et l’alignement de la mémoire partagée d’une équipe de développement. L’analyse porte sur la cohérence, l’actualité, la couverture et la répartition des sources, sans noter les personnes ni modifier les données.",
-        "image": "/src/assets/images/experiments/team_memory_health.webp",
-        "tags": ["TypeScript", "CLI", "Agent Skill", "Engram", "AI Tools"],
+        "title": "Tableau de notes autocollantes par contexte avec React, TypeScript et Vite",
+        "description": "Tableau accessible pour noter et organiser des idées à l’aide de notes autocollantes. Créez, modifiez, déplacez, redimensionnez et supprimez des notes, puis regroupez-les dans des contextes nommés pour filtrer le tableau ou les classer. Les notes et leurs contextes sont enregistrés dans le navigateur ; des commandes au clavier et des annonces pour lecteurs d’écran facilitent une utilisation sans pointeur.",
+        "image": "/src/assets/images/experiments/sticky_notes.webp",
+        "tags": [
+            "Frontend Development",
+            "ReactJS / TypeScript / Vite",
+            "Web APIs & Accessibility"
+        ],
         "role": "Author",
         "category": "Application / outil",
-        "type": "CLI TypeScript / Agent Skill",
-        "url": null,
+        "type": "Application web (Tableau de notes autocollantes)",
+        "url": "https://christianjtr.github.io/sticky-notes/",
         "isSandbox": false,
         "display": true,
-        "year": 2026,
-        "isWIP": true,
+        "topic": "Produit et UX"
+    },
+    {
+        "id": "experiment-dynamic-pricing-calendar-webapp",
+        "section": "experiments",
+        "title": "Simulation de calendrier de tarification pour système de gestion avec React, TypeScript et TanStack Query.",
+        "description": "Simulateur de gestion des revenus permettant d’explorer les tarifs dans un calendrier interactif. Il repose sur une architecture full-stack découplée, avec un serveur API et des flux de données réactifs.",
+        "image": "/src/assets/images/experiments/dynamic_pricing_calendar.webp",
+        "tags": [
+            "FullStack Development",
+            "ReactJS / NodeJS / TypeScript",
+            "TanStack Query"
+        ],
+        "role": "Author",
+        "category": "PoC technique",
+        "type": "Application web (Calendrier de tarification dynamique)",
+        "url": "https://github.com/christianjtr/dynamic-pricing-calendar",
+        "isSandbox": false,
+        "display": true,
+        "topic": "Données et analytique"
+    },
+    {
+        "id": "experiment-tv-movie-streaming-like-webapp",
+        "section": "experiments",
+        "title": "Catalogue TMDB de films et de séries",
+        "description": "Application web full-stack permettant de parcourir un catalogue de films et de séries. Elle rassemble les informations sur les titres dans une interface simple.",
+        "image": "/src/assets/images/experiments/tv_app.webp",
+        "tags": [
+            "Développement FullStack",
+            "ReactJS / NodeJS / TypeScript",
+            "Tests Unitaires / E2E",
+            "Processus CI/CD"
+        ],
+        "role": "Author",
+        "category": "Application / outil",
+        "type": "Application Web (Catalogue Films/Séries TV)",
+        "url": "https://christianjtr.github.io/tv-app/",
+        "isSandbox": false,
+        "display": true,
+        "topic": "Logiciel et IA"
+    },
+    {
+        "id": "experiment-healthy-culture-engineering-teams",
+        "section": "experiments",
+        "title": "Étude de cas pour promouvoir une culture saine au sein des équipes d'ingénierie",
+        "description": "Étude académique sur la culture d’ingénierie au sein d’une entreprise de services d’IA anonymisée après une acquisition. Elle propose une démarche de changement fondée sur une analyse SWOT, des cartes d’empathie, RASCI et ADKAR.",
+        "image": "/src/assets/images/experiments/engineer_management.webp",
+        "tags": [
+            "Gestion d'Ingénierie",
+            "Développement du Leadership",
+            "Dynamique d'Équipe"
+        ],
+        "role": "Author",
+        "type": "Essai sur le Leadership",
+        "category": "Étude académique",
+        "url": "https://drive.google.com/file/d/1yprBUaMhTifIBizEOwrhScjqB7WsA7-K/view?usp=sharing",
+        "isSandbox": false,
+        "display": true,
+        "abstract": "Étude de cas académique de 2023 sur la façon de reconstruire une culture d'ingénierie plus saine après une acquisition. Le cas s'appuie sur une entreprise anonymisée de services d'IA, en B2B2C, qui a grandi très vite et dépassé 600 personnes dans plusieurs pays. Les changements de direction et les restructurations ont été suivis de favoritisme dans les promotions, de décisions techniques concentrées sur quelques personnes, de peu de soutien au développement de carrière, d'une sécurité psychologique plus faible et de départs. Le travail propose une manière pratique de reconstruire cette culture. Il regarde la maturité du leadership technique, la façon dont les équipes collaborent, et si l'environnement permet d'apprendre. La démarche lit la situation avec SWOT, des cartes d'empathie, RASCI et des diagrammes de système, puis travaille sur des accords partagés, des parcours plus clairs et une formation au leadership et à la collaboration. Le changement est cadré avec le modèle ADKAR.",
+        "year": 2023,
+        "topic": "Académique et recherche"
+    },
+    {
+        "id": "experiment-bi-adventure-works",
+        "section": "experiments",
+        "title": "Adventure Works Cycles, projet d'entreprise en informatique décisionnelle",
+        "description": "Projet académique de business intelligence utilisant les données d’exemple d’Adventure Works Cycles. Il comprend un pipeline ETL, un entrepôt de données en étoile et des tableaux de bord réalisés avec Power BI et Qlik Sense.",
+        "image": "/src/assets/images/experiments/bi_project.webp",
+        "tags": [
+            "Analyse / Visualisation de Données",
+            "ETL / DWH",
+            "Applications basées sur les données"
+        ],
+        "role": "Author",
+        "type": "Ingénierie de Données",
+        "category": "Étude académique",
+        "url": "https://drive.google.com/file/d/1UN8-YdFhR7UuhvARsf61kCxITTgot3Cf/view?usp=sharing",
+        "isSandbox": false,
+        "display": true,
+        "abstract": "Projet académique d'informatique décisionnelle de 2018, sur les données d'exemple d'Adventure Works Cycles, l'entreprise fictive de fabrication et de distribution utilisée dans les cours de BI. L'exercice traite la distance entre une base transactionnelle complexe et les questions qu'une direction poserait quand la demande change. J'ai analysé les sources, extrait et consolidé les données, et modélisé un schéma en étoile autour des faits de vente, avec des dimensions clients, territoires et produits. Le résultat est un ensemble de tableaux de bord dans Power BI et Qlik Sense pour les ventes régionales, les segments de clients et des prévisions descriptives. C'est un travail de cours sur des données d'exemple, pas un système livré à une entreprise réelle.",
+        "year": 2018,
+        "topic": "Académique et recherche"
+    },
+    {
+        "id": "experiment-idea-cultural-activities-app",
+        "section": "experiments",
+        "title": "Idée d'application pour la promotion d'activités culturelles",
+        "description": "Projet de master développant un cas d’affaires pour un produit qui promeut les événements culturels à Barcelone. Il comprend une étude de marché, un modèle économique et un plan marketing.",
+        "image": "/src/assets/images/experiments/design_process.webp",
+        "tags": [
+            "e-Business",
+            "Canevas de Modèle Économique",
+            "Lean Startup",
+            "Marketing Numérique (SEO/SEA)"
+        ],
+        "role": "Author",
+        "type": "Concept e-Business et Analyse de Niche de Marché",
+        "category": "Concept produit / business",
+        "url": "https://drive.google.com/file/d/1nVCuBsmsfOd7009AsGPlxSOo00pIHaCo/view?usp=sharing",
+        "isSandbox": false,
+        "display": true,
+        "abstract": "Projet de master de 2020, un cas d'affaires pour un produit numérique qui ferait la promotion d'événements artistiques et culturels à Barcelone. Il part de l'écart entre les listings locaux généraux et des publics qui cherchent des formes de culture très précises. Le cas comprend une analyse d'entrée sur le marché, avec publics cibles et concurrents, un modèle de monétisation, et un plan de marketing en ligne avec des canaux d'acquisition et des indicateurs d'exploitation. La livraison est esquissée avec un calendrier agile et une stack logicielle tenue dans un budget. C'est un document de planification pour un concept, pas une entreprise qui aurait été lancée.",
+        "year": 2020,
+        "topic": "Académique et recherche"
+    },
+    {
+        "id": "experiment-circuitos",
+        "section": "experiments",
+        "title": "Circuitos, découvrez votre pôle artistique",
+        "description": "Concept UX d’une application mobile pour découvrir des événements culturels et des itinéraires en ville. Ce projet de cours réalisé en 2017 comprend la recherche utilisateur, la définition du produit et des prototypes d’interface.",
+        "image": "/src/assets/images/experiments/circuitos.webp",
+        "tags": [
+            "Conception et Prototypage de Produit",
+            "Expérience Utilisateur et Recherche",
+            "Pensée Design"
+        ],
+        "role": "Contributor",
+        "type": "Concept UX Design et Recherche",
+        "category": "Concept produit / business",
+        "url": "https://drive.google.com/file/d/1eIRVupKq6ct5eN00Z6vhNl4uG5JnA6G8/view?usp=sharing",
+        "isSandbox": false,
+        "display": true,
+        "abstract": "Concept UX d'un cours de 2017 pour un produit mobile qui aide à trouver des événements et des lieux culturels dans la ville, comme des centres de design, des musées locaux et de l'art urbain, quand les agendas et les lieux sont dispersés. Le concept a trois parties. Une liste d'événements locaux avec un agenda personnel, des parcours géolocalisés à travers des itinéraires culturels, et un stockage local pour des notes et des favoris. J'ai contribué à la recherche, au concept produit et aux prototypes d'interface. C'est un concept de design issu du cours, pas une application publiée.",
+        "year": 2017,
+        "topic": "Académique et recherche"
+    },
+    {
+        "id": "project-agent-orchestrator",
+        "section": "experiments",
+        "title": "Agent Orchestrator, tableau de bord de télémétrie IA en temps réel",
+        "description": "Tableau de bord en temps réel pour suivre l’état et la télémétrie d’agents d’IA simulés. Réalisé avec Vue 3, TypeScript et Docker.",
+        "image": "/src/assets/images/agent-orchestrator.jpg",
+        "tags": [
+            "Vue 3 / TypeScript",
+            "Real-Time / WebSockets",
+            "Docker / NGINX",
+            "Tailwind CSS / Responsiveness"
+        ],
+        "role": "Author",
+        "type": "Tableau de Bord / Surveillance",
+        "category": "PoC technique",
+        "url": "https://christianjtr.github.io/agent-orchestrator/",
+        "isSandbox": true,
+        "display": true,
+        "topic": "Logiciel et IA"
+    },
+    {
+        "id": "experiment-pokedex-pwa-application",
+        "section": "experiments",
+        "title": "Pokédex, attrapez-les tous",
+        "description": "Application web progressive développée avec Svelte pour explorer les données Pokémon via l’API Pokémon. Elle associe persistance locale, synthèse vocale et graphiques Plotly dans une expérience de Pokédex.",
+        "image": "/src/assets/images/pokedex.jpg",
+        "tags": [
+            "Développement Front-end",
+            "Svelte / Vite+PWA",
+            "API SpeechSynthesis",
+            "Bibliothèque Graphique Plotly"
+        ],
+        "role": "Author",
+        "category": "Application / outil",
+        "type": "Application Web (Catalogue Pokémon)",
+        "url": "https://christianjtr.github.io/svelte-pokedex-pwa/",
+        "isSandbox": true,
+        "display": true,
+        "topic": "Logiciel et IA"
+    },
+    {
+        "id": "experiment-restaurant-browser-app",
+        "section": "experiments",
+        "title": "Recherche de restaurants",
+        "description": "Application web progressive qui utilise la géolocalisation pour trouver des restaurants à proximité. Elle sert à découvrir des adresses et ne permet ni de commander ni de gérer des livraisons.",
+        "image": "/src/assets/images/restaurant_browser.jpg",
+        "tags": [
+            "Développement Front-end",
+            "ReactJS / TypeScript / Vite",
+            "Daisy UI / Tailwind CSS",
+            "API de Géolocalisation"
+        ],
+        "role": "Author",
+        "category": "Application / outil",
+        "type": "Application Web (Application de Restaurants)",
+        "url": "https://christianjtr.github.io/restaurant-browser-app/",
+        "isSandbox": true,
+        "display": true,
+        "topic": "Produit et UX"
+    },
+    {
+        "id": "experiment-express-api-boilerplate",
+        "section": "experiments",
+        "title": "Express API Backend Architecture",
+        "description": "Structure de démarrage pour une petite API REST avec Node.js, Express, MongoDB et Docker, testée avec Jest et Supertest. Il s’agit d’un projet de référence, et non d’un système de production.",
+        "image": "/src/assets/images/express_api_boilerplate.jpg",
+        "tags": [
+            "Développement Back-end",
+            "Node.js / Express",
+            "MongoDB / Mongoose",
+            "Docker / Conteneurisation",
+            "Jest / Supertest"
+        ],
+        "role": "Author",
+        "category": "PoC technique",
+        "type": "API REST (Modèle Backend)",
+        "url": "https://github.com/christianjtr/express-api-mongodb-docker-jest-supertest",
+        "isSandbox": true,
+        "display": true,
         "topic": "Logiciel et IA"
     }
 ]

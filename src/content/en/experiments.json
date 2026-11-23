@@ -1,192 +1,27 @@
 [
     {
-        "id": "experiment-healthy-culture-engineering-teams",
+        "id": "experiment-tasklane-local-first-kanban",
         "section": "experiments",
-        "title": "Promoting a healthy culture within engineering teams",
-        "description": "An academic case study of engineering culture in an anonymized AI services company following an acquisition. It outlines a change approach informed by SWOT analysis, empathy maps, RASCI, and ADKAR.",
-        "image": "/src/assets/images/experiments/engineer_management.webp",
+        "title": "Tasklane — Local-First Kanban Board",
+        "description": "A local-first Kanban board for organizing projects and tasks directly in your browser without accounts, servers, or cloud sync. Data persists in IndexedDB with Dexie, featuring keyboard navigation, theme switching, and versioned JSON backup portability.",
+        "image": "/src/assets/images/experiments/tasklane.webp",
         "tags": [
-            "Engineering Management",
-            "Leadership Development",
-            "Team Dynamics"
-        ],
-        "role": "Author",
-        "type": "Leadership Essay",
-        "category": "Academic study",
-        "url": "https://drive.google.com/file/d/1yprBUaMhTifIBizEOwrhScjqB7WsA7-K/view?usp=sharing",
-        "isSandbox": false,
-        "display": true,
-        "abstract": "Academic case study from 2023 on how to rebuild a healthier engineering culture after an acquisition. The case uses an anonymized B2B2C company that sells AI services and grew very quickly and reached more than 600 people in several countries. Leadership changes and departmental restructuring were followed by favoritism in promotions, technical decisions concentrated in a few people, little support for career development, less psychological safety, and people leaving. The study proposes a practical way to rebuild that culture. It looks at the maturity of technical leadership, how teams work together, and whether the environment is safe enough to learn. The suggested approach reads the situation with SWOT, empathy maps, RASCI, and system diagrams, then works on shared agreements, clearer career paths, and training in leadership and collaboration. The change itself is framed with the ADKAR model.",
-        "year": 2023,
-        "topic": "Business & Leadership"
-    },
-    {
-        "id": "experiment-bi-adventure-works",
-        "section": "experiments",
-        "title": "Adventure Works Cycles, a business intelligence project",
-        "description": "An academic business intelligence project using the Adventure Works Cycles sample data. It covers an ETL pipeline, a star-schema data warehouse, and dashboards built with Power BI and Qlik Sense.",
-        "image": "/src/assets/images/experiments/bi_project.webp",
-        "tags": [
-            "Data Analysis / Visualization",
-            "ETL / DWH",
-            "Data-driven applications"
-        ],
-        "role": "Author",
-        "type": "Data Engineering",
-        "category": "Academic study",
-        "url": "https://drive.google.com/file/d/1UN8-YdFhR7UuhvARsf61kCxITTgot3Cf/view?usp=sharing",
-        "isSandbox": false,
-        "display": true,
-        "abstract": "Academic business-intelligence project from 2018, built on the Adventure Works Cycles sample data, the fictional manufacturing and distribution company used in BI courses. The exercise looks at the distance between a complex transactional database and the questions a management team would ask when demand changes. I analyzed the sources, extracted and consolidated the data, and modeled a star schema around sales facts, with dimensions for customers, sales territories, and products. The result is a set of dashboards in Power BI and Qlik Sense for regional sales, customer segments, and descriptive forecasts. It is a course project on sample data, not a system delivered to a real company.",
-        "year": 2018,
-        "topic": "Data & Analytics"
-    },
-    {
-        "id": "experiment-circuitos",
-        "section": "experiments",
-        "title": "Circuitos, discover your artistic hub",
-        "description": "A UX concept for a mobile product that helps people discover cultural events and routes around the city. The 2017 course project covered user research, product definition, and interface prototypes.",
-        "image": "/src/assets/images/experiments/circuitos.webp",
-        "tags": [
-            "Product Design and Prototyping",
-            "User Experience and Research",
-            "Design Thinking"
-        ],
-        "role": "Contributor",
-        "type": "UX Design and Research Concept",
-        "category": "Product / business concept",
-        "url": "https://drive.google.com/file/d/1eIRVupKq6ct5eN00Z6vhNl4uG5JnA6G8/view?usp=sharing",
-        "isSandbox": false,
-        "display": true,
-        "abstract": "UX course concept from 2017 for a mobile product that helps people find cultural events and places in the city, such as design centers, local museums, and street art, when those schedules and spots are scattered. The concept has three parts. A local event list with personal scheduling, geolocated routes through curated cultural paths, and local storage for personal notes and favorites. I contributed to the research, the product concept, and the interface prototypes. It is a design concept from the course, not a shipped application.",
-        "year": 2017,
-        "topic": "Product & UX"
-    },
-    {
-        "id": "project-agent-orchestrator",
-        "section": "experiments",
-        "title": "Agent Orchestrator, a real-time AI telemetry dashboard",
-        "description": "A real-time dashboard for monitoring the status and telemetry of simulated AI agents. Built with Vue 3, TypeScript, and Docker.",
-        "image": "/src/assets/images/agent-orchestrator.jpg",
-        "tags": [
-            "Vue 3 / TypeScript",
-            "Real-Time / WebSockets",
-            "Docker / NGINX",
-            "Tailwind CSS / Responsiveness"
-        ],
-        "role": "Author",
-        "type": "Dashboard / Monitoring",
-        "category": "Technical PoC",
-        "url": "https://christianjtr.github.io/agent-orchestrator/",
-        "isSandbox": true,
-        "display": true,
-        "topic": "Software & AI"
-    },
-    {
-        "id": "experiment-idea-cultural-activities-app",
-        "section": "experiments",
-        "title": "An idea for an application to promote cultural activities",
-        "description": "A master's project developing a business case for a product that promotes cultural events in Barcelona. It includes market research, a business model, and a marketing plan.",
-        "image": "/src/assets/images/experiments/design_process.webp",
-        "tags": [
-            "e-Business",
-            "Business Model Canvas",
-            "Lean Startup",
-            "Digital Marketing (SEO/SEA)"
-        ],
-        "role": "Author",
-        "type": "e-Business Concept and Market Niche Analysis",
-        "category": "Product / business concept",
-        "url": "https://drive.google.com/file/d/1nVCuBsmsfOd7009AsGPlxSOo00pIHaCo/view?usp=sharing",
-        "isSandbox": false,
-        "display": true,
-        "abstract": "Master's project from 2020, a business case for a digital product that would promote artistic and cultural events in Barcelona. It starts from the gap between general local listings and audiences looking for very specific kinds of culture. The case includes a market-entry analysis, with target audiences and competitors, a monetization model, and an online marketing plan with acquisition channels and operating indicators. Delivery is sketched as an agile timeline and a software stack kept inside a budget. It is a planning document for a concept, not a company that was launched.",
-        "year": 2020,
-        "topic": "Business & Leadership"
-    },
-    {
-        "id": "experiment-tv-movie-streaming-like-webapp",
-        "section": "experiments",
-        "title": "TMDB catalog for movies and series",
-        "description": "A full-stack web app for browsing a catalog of movies and TV series. It brings title information together in a straightforward interface.",
-        "image": "/src/assets/images/experiments/tv_app.webp",
-        "tags": [
-            "FullStack Development",
-            "ReactJS / NodeJS / TypeScript",
-            "Unit / E2E Testing",
-            "CI/CD processes"
+            "TypeScript / Vite",
+            "Ant Design",
+            "IndexedDB / Dexie / Zod",
+            "Local-First Architecture",
+            "Vitest / Playwright"
         ],
         "role": "Author",
         "category": "Application / tool",
-        "type": "Web app (Movie/TV Series Catalog)",
-        "url": "https://christianjtr.github.io/tv-app/",
+        "type": "Local-First Kanban Task Manager",
+        "url": "https://christianjtr.github.io/simple-task-manager/",
         "isSandbox": false,
         "display": true,
-        "topic": "Software & AI"
-    },
-    {
-        "id": "experiment-pokedex-pwa-application",
-        "section": "experiments",
-        "title": "Pokédex, gotta catch 'em all",
-        "description": "A Svelte progressive web app that explores Pokémon data through the Pokémon API. It combines local data persistence, speech synthesis, and Plotly charts in a Pokédex experience.",
-        "image": "/src/assets/images/pokedex.jpg",
-        "tags": [
-            "Front-end development",
-            "Svelte / Vite+PWA",
-            "SpeechSynthesis API",
-            "Plotly Graphing Library"
-        ],
-        "role": "Author",
-        "category": "Application / tool",
-        "type": "Web app (Pokémon Catalog)",
-        "url": "https://christianjtr.github.io/svelte-pokedex-pwa/",
-        "isSandbox": true,
-        "display": true,
-        "topic": "Software & AI"
-    },
-    {
-        "id": "experiment-restaurant-browser-app",
-        "section": "experiments",
-        "title": "Restaurant finder",
-        "description": "A progressive web app that uses geolocation to help users find nearby restaurants. It is a discovery tool and does not support orders or delivery.",
-        "image": "/src/assets/images/restaurant_browser.jpg",
-        "tags": [
-            "Front-end development",
-            "ReactJS / TypeScript / Vite",
-            "Daisy UI / Tailwind CSS",
-            "Geolocation API"
-        ],
-        "role": "Author",
-        "category": "Application / tool",
-        "type": "Web app (Restaurants application)",
-        "url": "https://christianjtr.github.io/restaurant-browser-app/",
-        "isSandbox": true,
-        "display": true,
-        "topic": "Product & UX"
-    },
-    {
-        "id": "experiment-manage-employees-dashboard",
-        "section": "experiments",
-        "title": "Employee Management Dashboard",
-        "description": "An administrative dashboard designed to streamline employee directory management, organizational tracking, and team operations. Built with a clean, responsive interface for quick CRUD operations, role filtering, and clear data visualization.",
-        "image": "/src/assets/images/experiments/manage-employees.webp",
-        "tags": [
-            "Vue / TypeScript",
-            "Dashboard UI",
-            "CRUD Operations",
-            "State Management",
-            "Responsive Design"
-        ],
-        "role": "Author",
-        "category": "Application / tool",
-        "type": "HR & Employee Management Dashboard",
-        "url": "https://christianjtr.github.io/manage-employees-dashboard/#/",
-        "isSandbox": false,
-        "display": true,
-        "abstract": "This employee management dashboard provides a centralized interface for handling workforce records and team structures. It allows administrators to add, edit, search, and filter employee profiles by department or role, offering an intuitive layout focused on operational efficiency and clarity.",
+        "abstract": "Tasklane is a browser-based, local-first Kanban board built to organize up to 50 projects and tasks with zero backend dependencies. It uses IndexedDB via Dexie for persistent client-side storage and Zod for runtime schema validation. Users can filter tasks by text, priority, or tags, reorder cards across columns using mouse or keyboard, toggle between light and dark themes, and export or import their entire workspace as a validated JSON backup.",
         "year": 2026,
         "isWIP": false,
-        "topic": "Software & AI"
+        "topic": "Product & UX"
     },
     {
         "id": "experiment-data-visualization-error-reporting-chart",
@@ -213,127 +48,51 @@
         "topic": "Data & Analytics"
     },
     {
-        "id": "experiment-tasklane-local-first-kanban",
+        "id": "experiment-manage-employees-dashboard",
         "section": "experiments",
-        "title": "Tasklane — Local-First Kanban Board",
-        "description": "A local-first Kanban board for organizing projects and tasks directly in your browser without accounts, servers, or cloud sync. Data persists in IndexedDB with Dexie, featuring keyboard navigation, theme switching, and versioned JSON backup portability.",
-        "image": "/src/assets/images/experiments/tasklane.webp",
+        "title": "Employee Management Dashboard",
+        "description": "An administrative dashboard designed to streamline employee directory management, organizational tracking, and team operations. Built with a clean, responsive interface for quick CRUD operations, role filtering, and clear data visualization.",
+        "image": "/src/assets/images/experiments/manage-employees.webp",
         "tags": [
-            "TypeScript / Vite",
-            "Ant Design",
-            "IndexedDB / Dexie / Zod",
-            "Local-First Architecture",
-            "Vitest / Playwright"
+            "Vue / TypeScript",
+            "Dashboard UI",
+            "CRUD Operations",
+            "State Management",
+            "Responsive Design"
         ],
         "role": "Author",
         "category": "Application / tool",
-        "type": "Local-First Kanban Task Manager",
-        "url": "https://christianjtr.github.io/simple-task-manager/",
+        "type": "HR & Employee Management Dashboard",
+        "url": "https://christianjtr.github.io/manage-employees-dashboard/#/",
         "isSandbox": false,
         "display": true,
-        "abstract": "Tasklane is a browser-based, local-first Kanban board built to organize up to 50 projects and tasks with zero backend dependencies. It uses IndexedDB via Dexie for persistent client-side storage and Zod for runtime schema validation. Users can filter tasks by text, priority, or tags, reorder cards across columns using mouse or keyboard, toggle between light and dark themes, and export or import their entire workspace as a validated JSON backup.",
+        "abstract": "This employee management dashboard provides a centralized interface for handling workforce records and team structures. It allows administrators to add, edit, search, and filter employee profiles by department or role, offering an intuitive layout focused on operational efficiency and clarity.",
         "year": 2026,
         "isWIP": false,
-        "topic": "Product & UX"
-    },
-    {
-        "id": "experiment-erp-management-dashboard",
-        "section": "experiments",
-        "title": "Management Dashboard",
-        "description": "A web dashboard for managing employee information with create, read, update, and delete operations. The project demonstrates a focused CRUD workflow for team data.",
-        "image": "/src/assets/images/erp_management.jpg",
-        "tags": [
-            "Front-end development",
-            "VueJS / Vuetify / Vuex",
-            "Material Design"
-        ],
-        "role": "Author",
-        "category": "Application / tool",
-        "type": "Web app (Employee Management Dashboard)",
-        "url": "https://christianjtr.github.io/manage-employees-dashboard/#/",
-        "isSandbox": true,
-        "display": false,
-        "topic": "Business & Leadership"
-    },
-    {
-        "id": "experiment-express-api-boilerplate",
-        "section": "experiments",
-        "title": "Express API Backend Architecture",
-        "description": "A starter structure for a small REST API using Node.js, Express, MongoDB, and Docker, with Jest and Supertest for testing. It is a reference project, not a production system.",
-        "image": "/src/assets/images/express_api_boilerplate.jpg",
-        "tags": [
-            "Back-end development",
-            "Node.js / Express",
-            "MongoDB / Mongoose",
-            "Docker / Containerization",
-            "Jest / Supertest"
-        ],
-        "role": "Author",
-        "category": "Technical PoC",
-        "type": "REST API (Backend Boilerplate)",
-        "url": "https://github.com/christianjtr/express-api-mongodb-docker-jest-supertest",
-        "isSandbox": true,
-        "display": true,
         "topic": "Software & AI"
     },
     {
-        "id": "experiment-sticky-notes",
+        "id": "experiment-team-memory-health",
         "section": "experiments",
-        "title": "Basic Sticky Notes",
-        "description": "A browser-based board for creating, editing, moving, resizing, and deleting sticky notes. Changes are saved locally, and keyboard navigation supports use beyond pointer interactions.",
-        "image": "/src/assets/images/sticky_notes.jpg",
+        "title": "Team-Memory-Health (TMH)",
+        "description": "An agent-native CLI and skill for assessing the quality and alignment of a development team's shared memory. It examines coherence, freshness, coverage, and source distribution without scoring individuals or changing the data.",
+        "image": "/src/assets/images/experiments/team_memory_health.webp",
         "tags": [
-            "Front-end development",
-            "React 19 / TypeScript",
-            "Vite / CSS Modules",
-            "HTML5 Drag and Drop API",
-            "Web Accessibility (ARIA)"
+            "TypeScript",
+            "CLI",
+            "Agent Skill",
+            "Engram",
+            "AI Tools"
         ],
         "role": "Author",
         "category": "Application / tool",
-        "type": "Web app (Sticky Notes Board)",
-        "url": "https://christianjtr.github.io/sticky-notes/",
-        "isSandbox": true,
-        "display": false,
-        "topic": "Product & UX"
-    },
-    {
-        "id": "experiment-dynamic-pricing-calendar-webapp",
-        "section": "experiments",
-        "title": "Management System Pricing Calendar simulation with React, TypeScript, and TanStack Query",
-        "description": "A revenue-management simulation for exploring rates on an interactive pricing calendar. It uses a decoupled full-stack architecture with an API server and reactive data flows.",
-        "image": "/src/assets/images/experiments/dynamic_pricing_calendar.webp",
-        "tags": [
-            "FullStack Development",
-            "ReactJS / NodeJS / TypeScript",
-            "TanStack Query"
-        ],
-        "role": "Author",
-        "category": "Technical PoC",
-        "type": "Web app (Dynamic Pricing Calendar)",
-        "url": "https://github.com/christianjtr/dynamic-pricing-calendar",
+        "type": "TypeScript CLI / Agent Skill",
+        "url": null,
         "isSandbox": false,
         "display": true,
-        "topic": "Data & Analytics"
-    },
-    {
-        "id": "experiment-basic-sticky-notes-webapp",
-        "section": "experiments",
-        "title": "Context-aware sticky note board with React, TypeScript, and Vite",
-        "description": "An accessible board for capturing and organizing ideas with sticky notes. Create, edit, move, resize, and delete notes; group them into named contexts to filter the board or file notes. Notes and contexts are saved in the browser, with keyboard controls and screen-reader announcements supporting use beyond pointer interactions.",
-        "image": "/src/assets/images/experiments/sticky_notes.webp",
-        "tags": [
-            "Frontend Development",
-            "ReactJS / TypeScript / Vite",
-            "Web APIs & Accessibility"
-        ],
-        "role": "Author",
-        "category": "Application / tool",
-        "type": "Web app (Sticky Notes Board)",
-        "url": "https://christianjtr.github.io/sticky-notes/",
-        "isSandbox": false,
-        "display": true,
-        "topic": "Product & UX"
+        "year": 2026,
+        "isWIP": true,
+        "topic": "Software & AI"
     },
     {
         "id": "experiment-engram-semantic-cli",
@@ -405,20 +164,227 @@
         "topic": "Product & UX"
     },
     {
-        "id": "experiment-team-memory-health",
+        "id": "experiment-basic-sticky-notes-webapp",
         "section": "experiments",
-        "title": "Team-Memory-Health (TMH)",
-        "description": "An agent-native CLI and skill for assessing the quality and alignment of a development team's shared memory. It examines coherence, freshness, coverage, and source distribution without scoring individuals or changing the data.",
-        "image": "/src/assets/images/experiments/team_memory_health.webp",
-        "tags": ["TypeScript", "CLI", "Agent Skill", "Engram", "AI Tools"],
+        "title": "Context-aware sticky note board with React, TypeScript, and Vite",
+        "description": "An accessible board for capturing and organizing ideas with sticky notes. Create, edit, move, resize, and delete notes; group them into named contexts to filter the board or file notes. Notes and contexts are saved in the browser, with keyboard controls and screen-reader announcements supporting use beyond pointer interactions.",
+        "image": "/src/assets/images/experiments/sticky_notes.webp",
+        "tags": [
+            "Frontend Development",
+            "ReactJS / TypeScript / Vite",
+            "Web APIs & Accessibility"
+        ],
         "role": "Author",
         "category": "Application / tool",
-        "type": "TypeScript CLI / Agent Skill",
-        "url": null,
+        "type": "Web app (Sticky Notes Board)",
+        "url": "https://christianjtr.github.io/sticky-notes/",
         "isSandbox": false,
         "display": true,
-        "year": 2026,
-        "isWIP": true,
+        "topic": "Product & UX"
+    },
+    {
+        "id": "experiment-dynamic-pricing-calendar-webapp",
+        "section": "experiments",
+        "title": "Management System Pricing Calendar simulation with React, TypeScript, and TanStack Query",
+        "description": "A revenue-management simulation for exploring rates on an interactive pricing calendar. It uses a decoupled full-stack architecture with an API server and reactive data flows.",
+        "image": "/src/assets/images/experiments/dynamic_pricing_calendar.webp",
+        "tags": [
+            "FullStack Development",
+            "ReactJS / NodeJS / TypeScript",
+            "TanStack Query"
+        ],
+        "role": "Author",
+        "category": "Technical PoC",
+        "type": "Web app (Dynamic Pricing Calendar)",
+        "url": "https://github.com/christianjtr/dynamic-pricing-calendar",
+        "isSandbox": false,
+        "display": true,
+        "topic": "Data & Analytics"
+    },
+    {
+        "id": "experiment-tv-movie-streaming-like-webapp",
+        "section": "experiments",
+        "title": "TMDB catalog for movies and series",
+        "description": "A full-stack web app for browsing a catalog of movies and TV series. It brings title information together in a straightforward interface.",
+        "image": "/src/assets/images/experiments/tv_app.webp",
+        "tags": [
+            "FullStack Development",
+            "ReactJS / NodeJS / TypeScript",
+            "Unit / E2E Testing",
+            "CI/CD processes"
+        ],
+        "role": "Author",
+        "category": "Application / tool",
+        "type": "Web app (Movie/TV Series Catalog)",
+        "url": "https://christianjtr.github.io/tv-app/",
+        "isSandbox": false,
+        "display": true,
+        "topic": "Software & AI"
+    },
+    {
+        "id": "experiment-healthy-culture-engineering-teams",
+        "section": "experiments",
+        "title": "Promoting a healthy culture within engineering teams",
+        "description": "An academic case study of engineering culture in an anonymized AI services company following an acquisition. It outlines a change approach informed by SWOT analysis, empathy maps, RASCI, and ADKAR.",
+        "image": "/src/assets/images/experiments/engineer_management.webp",
+        "tags": [
+            "Engineering Management",
+            "Leadership Development",
+            "Team Dynamics"
+        ],
+        "role": "Author",
+        "type": "Leadership Essay",
+        "category": "Academic study",
+        "url": "https://drive.google.com/file/d/1yprBUaMhTifIBizEOwrhScjqB7WsA7-K/view?usp=sharing",
+        "isSandbox": false,
+        "display": true,
+        "abstract": "Academic case study from 2023 on how to rebuild a healthier engineering culture after an acquisition. The case uses an anonymized B2B2C company that sells AI services and grew very quickly and reached more than 600 people in several countries. Leadership changes and departmental restructuring were followed by favoritism in promotions, technical decisions concentrated in a few people, little support for career development, less psychological safety, and people leaving. The study proposes a practical way to rebuild that culture. It looks at the maturity of technical leadership, how teams work together, and whether the environment is safe enough to learn. The suggested approach reads the situation with SWOT, empathy maps, RASCI, and system diagrams, then works on shared agreements, clearer career paths, and training in leadership and collaboration. The change itself is framed with the ADKAR model.",
+        "year": 2023,
+        "topic": "Academic & Research"
+    },
+    {
+        "id": "experiment-bi-adventure-works",
+        "section": "experiments",
+        "title": "Adventure Works Cycles, a business intelligence project",
+        "description": "An academic business intelligence project using the Adventure Works Cycles sample data. It covers an ETL pipeline, a star-schema data warehouse, and dashboards built with Power BI and Qlik Sense.",
+        "image": "/src/assets/images/experiments/bi_project.webp",
+        "tags": [
+            "Data Analysis / Visualization",
+            "ETL / DWH",
+            "Data-driven applications"
+        ],
+        "role": "Author",
+        "type": "Data Engineering",
+        "category": "Academic study",
+        "url": "https://drive.google.com/file/d/1UN8-YdFhR7UuhvARsf61kCxITTgot3Cf/view?usp=sharing",
+        "isSandbox": false,
+        "display": true,
+        "abstract": "Academic business-intelligence project from 2018, built on the Adventure Works Cycles sample data, the fictional manufacturing and distribution company used in BI courses. The exercise looks at the distance between a complex transactional database and the questions a management team would ask when demand changes. I analyzed the sources, extracted and consolidated the data, and modeled a star schema around sales facts, with dimensions for customers, sales territories, and products. The result is a set of dashboards in Power BI and Qlik Sense for regional sales, customer segments, and descriptive forecasts. It is a course project on sample data, not a system delivered to a real company.",
+        "year": 2018,
+        "topic": "Academic & Research"
+    },
+    {
+        "id": "experiment-idea-cultural-activities-app",
+        "section": "experiments",
+        "title": "An idea for an application to promote cultural activities",
+        "description": "A master's project developing a business case for a product that promotes cultural events in Barcelona. It includes market research, a business model, and a marketing plan.",
+        "image": "/src/assets/images/experiments/design_process.webp",
+        "tags": [
+            "e-Business",
+            "Business Model Canvas",
+            "Lean Startup",
+            "Digital Marketing (SEO/SEA)"
+        ],
+        "role": "Author",
+        "type": "e-Business Concept and Market Niche Analysis",
+        "category": "Product / business concept",
+        "url": "https://drive.google.com/file/d/1nVCuBsmsfOd7009AsGPlxSOo00pIHaCo/view?usp=sharing",
+        "isSandbox": false,
+        "display": true,
+        "abstract": "Master's project from 2020, a business case for a digital product that would promote artistic and cultural events in Barcelona. It starts from the gap between general local listings and audiences looking for very specific kinds of culture. The case includes a market-entry analysis, with target audiences and competitors, a monetization model, and an online marketing plan with acquisition channels and operating indicators. Delivery is sketched as an agile timeline and a software stack kept inside a budget. It is a planning document for a concept, not a company that was launched.",
+        "year": 2020,
+        "topic": "Academic & Research"
+    },
+    {
+        "id": "experiment-circuitos",
+        "section": "experiments",
+        "title": "Circuitos, discover your artistic hub",
+        "description": "A UX concept for a mobile product that helps people discover cultural events and routes around the city. The 2017 course project covered user research, product definition, and interface prototypes.",
+        "image": "/src/assets/images/experiments/circuitos.webp",
+        "tags": [
+            "Product Design and Prototyping",
+            "User Experience and Research",
+            "Design Thinking"
+        ],
+        "role": "Contributor",
+        "type": "UX Design and Research Concept",
+        "category": "Product / business concept",
+        "url": "https://drive.google.com/file/d/1eIRVupKq6ct5eN00Z6vhNl4uG5JnA6G8/view?usp=sharing",
+        "isSandbox": false,
+        "display": true,
+        "abstract": "UX course concept from 2017 for a mobile product that helps people find cultural events and places in the city, such as design centers, local museums, and street art, when those schedules and spots are scattered. The concept has three parts. A local event list with personal scheduling, geolocated routes through curated cultural paths, and local storage for personal notes and favorites. I contributed to the research, the product concept, and the interface prototypes. It is a design concept from the course, not a shipped application.",
+        "year": 2017,
+        "topic": "Academic & Research"
+    },
+    {
+        "id": "project-agent-orchestrator",
+        "section": "experiments",
+        "title": "Agent Orchestrator, a real-time AI telemetry dashboard",
+        "description": "A real-time dashboard for monitoring the status and telemetry of simulated AI agents. Built with Vue 3, TypeScript, and Docker.",
+        "image": "/src/assets/images/agent-orchestrator.jpg",
+        "tags": [
+            "Vue 3 / TypeScript",
+            "Real-Time / WebSockets",
+            "Docker / NGINX",
+            "Tailwind CSS / Responsiveness"
+        ],
+        "role": "Author",
+        "type": "Dashboard / Monitoring",
+        "category": "Technical PoC",
+        "url": "https://christianjtr.github.io/agent-orchestrator/",
+        "isSandbox": true,
+        "display": true,
+        "topic": "Software & AI"
+    },
+    {
+        "id": "experiment-pokedex-pwa-application",
+        "section": "experiments",
+        "title": "Pokédex, gotta catch 'em all",
+        "description": "A Svelte progressive web app that explores Pokémon data through the Pokémon API. It combines local data persistence, speech synthesis, and Plotly charts in a Pokédex experience.",
+        "image": "/src/assets/images/pokedex.jpg",
+        "tags": [
+            "Front-end development",
+            "Svelte / Vite+PWA",
+            "SpeechSynthesis API",
+            "Plotly Graphing Library"
+        ],
+        "role": "Author",
+        "category": "Application / tool",
+        "type": "Web app (Pokémon Catalog)",
+        "url": "https://christianjtr.github.io/svelte-pokedex-pwa/",
+        "isSandbox": true,
+        "display": true,
+        "topic": "Software & AI"
+    },
+    {
+        "id": "experiment-restaurant-browser-app",
+        "section": "experiments",
+        "title": "Restaurant finder",
+        "description": "A progressive web app that uses geolocation to help users find nearby restaurants. It is a discovery tool and does not support orders or delivery.",
+        "image": "/src/assets/images/restaurant_browser.jpg",
+        "tags": [
+            "Front-end development",
+            "ReactJS / TypeScript / Vite",
+            "Daisy UI / Tailwind CSS",
+            "Geolocation API"
+        ],
+        "role": "Author",
+        "category": "Application / tool",
+        "type": "Web app (Restaurants application)",
+        "url": "https://christianjtr.github.io/restaurant-browser-app/",
+        "isSandbox": true,
+        "display": true,
+        "topic": "Product & UX"
+    },
+    {
+        "id": "experiment-express-api-boilerplate",
+        "section": "experiments",
+        "title": "Express API Backend Architecture",
+        "description": "A starter structure for a small REST API using Node.js, Express, MongoDB, and Docker, with Jest and Supertest for testing. It is a reference project, not a production system.",
+        "image": "/src/assets/images/express_api_boilerplate.jpg",
+        "tags": [
+            "Back-end development",
+            "Node.js / Express",
+            "MongoDB / Mongoose",
+            "Docker / Containerization",
+            "Jest / Supertest"
+        ],
+        "role": "Author",
+        "category": "Technical PoC",
+        "type": "REST API (Backend Boilerplate)",
+        "url": "https://github.com/christianjtr/express-api-mongodb-docker-jest-supertest",
+        "isSandbox": true,
+        "display": true,
         "topic": "Software & AI"
     }
 ]
