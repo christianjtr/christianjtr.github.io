@@ -38,7 +38,7 @@
             "Jest/Cypress",
             "Storybook"
         ],
-        "resource": "/src/assets/images/zeelo_case_study.jpg",
+        "resource": "/src/assets/images/zeelo_case_study.jpeg",
         "contributions": [
             "Co-led the TypeScript migration, improving end-to-end type safety and modernizing the data layer with TanStack Query",
             "Drove monorepo adoption to reduce cross-repository integration friction and version inconsistencies",
