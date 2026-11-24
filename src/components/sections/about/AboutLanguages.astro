@@ -1,8 +1,8 @@
 ---
-import type { AboutMeData } from '@schemas/AboutMeSchema';
+import type { AboutMeData } from "@schemas/AboutMeSchema";
 
 interface Props {
-    languages: AboutMeData['section_about']['languages'];
+    languages: AboutMeData["section_about"]["languages"];
     languageTip: string;
 }
 
@@ -10,137 +10,227 @@ const { languages, languageTip } = Astro.props;
 ---
 
 <div class="about-languages">
-    <div class="about-detail-label">
+    <div class="about-detail-label spacer-bottom-10">
         <span class="about-detail-pulse" aria-hidden="true"></span>
         <span>{languageTip}</span>
     </div>
-    {languages.map((language) => (
-        <div class="language-row">
-            <div class="language-copy">
-                <span class="language-emoji" aria-hidden="true">{language.emoji}</span>
-                <span class="language-name">{language.name}</span>
-                <span class="language-proficiency">{language.proficiency}</span>
-            </div>
-            <div class="language-meter" role="progressbar" aria-label={`${language.name} proficiency`} aria-valuemin="0" aria-valuemax="100" aria-valuenow={language.value}>
-                {Array.from({ length: 5 }).map((_, index) => {
-                    const threshold = (index + 1) * 20;
-                    const isFilled = language.value >= threshold;
-                    const isPartial = language.value >= threshold - 20 && language.value < threshold;
+    <div class="languages-list">
+        {languages.map((language) => (
+            <div class="language-row">
+                <div class="language-identity">
+                    <span class="language-emoji" aria-hidden="true">
+                        {language.emoji}
+                    </span>
+                    <span class="language-name">{language.name}</span>
+                </div>
+                <div class="language-level-group">
+                    <div
+                        class="language-meter"
+                        role="progressbar"
+                        aria-label={`${language.name} proficiency: ${language.proficiency} (${language.value}%)`}
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        aria-valuenow={language.value}
+                        title={`${language.value}%`}
+                    >
+                        {Array.from({ length: 5 }).map((_, index) => {
+                            const threshold = (index + 1) * 20;
+                            const isFilled = language.value >= threshold;
+                            const isPartial =
+                                language.value >= threshold - 20 &&
+                                language.value < threshold;
 
-                    return (
-                        <span
-                            class:list={[
-                                'language-meter__segment',
-                                isFilled && 'is-filled',
-                                isPartial && 'is-partial'
-                            ]}
-                        />
-                    );
-                })}
+                            return (
+                                <span
+                                    class:list={[
+                                        "language-meter__segment",
+                                        isFilled && "is-filled",
+                                        isPartial && "is-partial",
+                                    ]}
+                                />
+                            );
+                        })}
+                    </div>
+                    <span class="language-proficiency">
+                        {language.proficiency}
+                    </span>
+                </div>
             </div>
-        </div>
-    ))}
+        ))}
+    </div>
 </div>
 
 <style is:global>
     .about-languages {
         display: grid;
-        gap: 0.55rem;
-        margin-top: 1.5rem;
+        gap: 0.75rem;
+        margin-top: clamp(2rem, 3.5vw, 2.75rem);
+    }
+
+    .spacer-bottom-10 {
+        margin-bottom: 0.75rem !important;
+    }
+
+    .languages-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.45rem;
     }
 
     .language-row {
         display: flex;
         min-width: 0;
         align-items: center;
-        justify-content: space-between;
-        gap: 0.5rem;
-        padding: 0.2rem 0;
+        gap: 0.85rem;
+        padding: 0.35rem 0.5rem;
+        border-radius: 0.65rem;
+        transition: background-color 0.2s ease;
     }
 
-    .language-copy {
+    .language-row:hover {
+        background-color: color-mix(
+            in srgb,
+            var(--color-base-content) 4%,
+            transparent
+        );
+    }
+
+    .language-identity {
         display: flex;
         min-width: 0;
+        flex: 0 0 7rem;
         align-items: center;
         gap: 0.45rem;
-        color: var(--color-base-content);
-        font-size: 0.84rem;
     }
 
     .language-emoji {
-        font-size: 1.2rem;
+        font-size: 1.8rem;
         line-height: 1;
+        flex-shrink: 0;
     }
 
     .language-name {
-        flex: 0 0 auto;
-        font-weight: 800;
-    }
-
-    .language-proficiency {
-        overflow: hidden;
+        font-weight: 700;
+        font-size: 0.95rem;
         color: var(--color-base-content);
-        opacity: 1;
-        text-overflow: ellipsis;
         white-space: nowrap;
     }
 
-    .language-meter {
+    .language-level-group {
         display: flex;
-        height: 0.6rem;
+        min-width: 0;
+        align-items: center;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+    }
+
+    .language-meter {
+        display: inline-flex;
+        height: 0.65rem;
         flex: 0 0 auto;
         align-items: center;
-        gap: 0.16rem;
+        gap: 0.22rem;
     }
 
     .language-meter__segment {
-        width: 0.44rem;
-        height: 0.44rem;
-        border-radius: 2px;
-        background: color-mix(in srgb, var(--color-base-content) 16%, var(--color-base-300));
+        width: 0.9rem;
+        height: 0.36rem;
+        border-radius: 9999px;
+        background: color-mix(
+            in srgb,
+            var(--color-base-content) 14%,
+            var(--color-base-200)
+        );
+        transition: all 0.25s ease;
+    }
+
+    html[data-theme="dark"] .language-meter__segment {
+        background: rgba(255, 255, 255, 0.12);
     }
 
     .language-meter__segment.is-filled {
         background: var(--color-primary);
+        box-shadow: 0 1px 2px
+            color-mix(in srgb, var(--color-primary) 30%, transparent);
     }
 
     html[data-theme="dark"] .language-meter__segment.is-filled {
         background: var(--color-accent);
+        box-shadow: 0 0 6px
+            color-mix(in srgb, var(--color-accent) 40%, transparent);
+    }
+
+    .language-row:hover .language-meter__segment.is-filled {
+        filter: brightness(1.1);
     }
 
     .language-meter__segment.is-partial {
         animation: language-pulse 1.8s ease-in-out infinite alternate;
-        background: color-mix(in srgb, var(--color-primary) 48%, var(--color-base-300));
+        background: color-mix(
+            in srgb,
+            var(--color-primary) 50%,
+            var(--color-base-300)
+        );
     }
 
     html[data-theme="dark"] .language-meter__segment.is-partial {
-        background: color-mix(in srgb, var(--color-accent) 55%, var(--color-base-300));
+        background: color-mix(
+            in srgb,
+            var(--color-accent) 55%,
+            rgba(255, 255, 255, 0.15)
+        );
+    }
+
+    .language-proficiency {
+        font-size: 0.8rem;
+        font-weight: 500;
+        color: color-mix(in srgb, var(--color-base-content) 72%, transparent);
+        white-space: nowrap;
     }
 
     @keyframes language-pulse {
-        to { opacity: 0.55; }
+        to {
+            opacity: 0.55;
+        }
     }
 
     @media (max-width: 639px) {
-        .language-copy {
+        .language-row {
+            gap: 0.6rem;
+            padding: 0.3rem 0.35rem;
+        }
+
+        .language-identity {
+            flex: 0 0 6.2rem;
             gap: 0.35rem;
-            font-size: 0.78rem;
+        }
+
+        .language-name {
+            font-size: 0.8rem;
+        }
+
+        .language-level-group {
+            gap: 0.55rem;
         }
 
         .language-meter {
-            gap: 0.12rem;
+            gap: 0.18rem;
         }
 
         .language-meter__segment {
-            width: 0.36rem;
-            height: 0.36rem;
+            width: 0.72rem;
+            height: 0.32rem;
+        }
+
+        .language-proficiency {
+            font-size: 0.74rem;
         }
     }
 
     @media (min-width: 1024px) {
         .about-languages {
-            gap: 0.4rem;
-            margin-top: 1rem;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
         }
     }
 

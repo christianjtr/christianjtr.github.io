@@ -1,40 +1,43 @@
 ---
-import type { AboutMeData } from '@schemas/AboutMeSchema';
-import AboutBackground from './AboutBackground.astro';
-import AboutLanguages from './AboutLanguages.astro';
+import type { AboutMeData } from "@schemas/AboutMeSchema";
+import AboutLanguages from "./AboutLanguages.astro";
 
 interface Props {
-    common: AboutMeData['common'];
-    sectionAbout: AboutMeData['section_about'];
-    experiences: AboutMeData['section_experiences'];
-    studies: AboutMeData['section_studies'];
+    sectionAbout: AboutMeData["section_about"];
 }
 
-const { common, sectionAbout, experiences, studies } = Astro.props;
+const { sectionAbout } = Astro.props;
 ---
 
 <div class="about-profile-panel">
     <div class="about-manifesto">
         <h2 class="manifesto-title">{sectionAbout.about_me_title}</h2>
+        <br />
         <p class="about-availability">
-            <span class="about-availability-indicator" aria-hidden="true"></span>
+            <span
+                class="about-availability-indicator"
+                aria-hidden="true"
+            ></span>
             {sectionAbout.availability}
         </p>
         <p class="manifesto-body">{sectionAbout.about_me}</p>
     </div>
-    <AboutLanguages languages={sectionAbout.languages} languageTip={sectionAbout.language_tip} />
-    <AboutBackground common={common} experiences={experiences} studies={studies} />
+    <br />
+    <AboutLanguages
+        languages={sectionAbout.languages}
+        languageTip={sectionAbout.language_tip}
+    />
 </div>
 
 <style is:global>
     @reference "@styles/global.css";
 
     .about-availability {
-        @apply text-xs;
+        @apply text-sm;
         display: flex;
         align-items: center;
         gap: 0.55rem;
-        margin: 0.65rem 0 0;
+        margin: 1.15rem 0 0;
         color: #a50e5d;
         font-weight: 600;
         line-height: 1.5;
@@ -50,7 +53,8 @@ const { common, sectionAbout, experiences, studies } = Astro.props;
         flex: 0 0 auto;
         border-radius: 50%;
         background: var(--color-secondary);
-        box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-secondary) 15%, transparent);
+        box-shadow: 0 0 0 3px
+            color-mix(in srgb, var(--color-secondary) 15%, transparent);
     }
 
     .about-detail-label {
@@ -72,7 +76,8 @@ const { common, sectionAbout, experiences, studies } = Astro.props;
         flex: 0 0 auto;
         border-radius: 50%;
         background: var(--color-accent);
-        box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-accent) 14%, transparent);
+        box-shadow: 0 0 0 4px
+            color-mix(in srgb, var(--color-accent) 14%, transparent);
     }
 
     html[data-theme="dark"] .about-detail-label {
@@ -81,27 +86,36 @@ const { common, sectionAbout, experiences, studies } = Astro.props;
 
     .about-profile-panel {
         align-self: start;
-        padding: clamp(1.1rem, 2.5vw, 1.75rem);
+        padding: clamp(0.25rem, 1vw, 0.75rem) 0;
+        border: 0;
+        background: transparent;
+        box-shadow: none;
+    }
+
+    html[data-theme="dark"] .about-profile-panel {
+        border: 0;
+        background: transparent;
+        box-shadow: none;
     }
 
     .manifesto-title {
         margin: 0;
         color: var(--color-base-content);
-        font-size: clamp(1.08rem, 1.6vw, 1.35rem);
+        font-size: clamp(1.12rem, 1.65vw, 1.4rem);
         font-weight: 800;
         letter-spacing: -0.025em;
-        line-height: 1.4;
+        line-height: 1.5;
         text-wrap: pretty;
     }
 
     .manifesto-body {
-        margin: 0.85rem 0 0;
-        padding-left: 0.9rem;
-        border-left: 2px solid var(--color-primary);
+        margin: 1.5rem 0 0;
+        padding-left: 1rem;
+        border-left: 3px solid var(--color-primary);
         color: var(--color-base-content);
-        font-size: 0.92rem;
-        line-height: 1.75;
-        opacity: 0.76;
+        font-size: 0.95rem;
+        line-height: 1.85;
+        opacity: 0.82;
     }
 
     html[data-theme="dark"] .manifesto-body {
@@ -114,7 +128,7 @@ const { common, sectionAbout, experiences, studies } = Astro.props;
 
     @media (max-width: 1023px) {
         .about-profile-panel {
-            padding: clamp(1rem, 4vw, 1.5rem);
+            padding: clamp(0.25rem, 1vw, 0.75rem) 0;
         }
     }
 
@@ -126,16 +140,12 @@ const { common, sectionAbout, experiences, studies } = Astro.props;
     }
 
     @media (min-width: 1024px) {
-        .about-profile-panel {
-            padding-bottom: 0.5rem;
-        }
-
         .about-availability {
-            margin-top: 0.5rem;
+            margin-top: 1.15rem;
         }
 
         .manifesto-body {
-            margin-top: 0.65rem;
+            margin-top: 1.5rem;
         }
     }
 </style>

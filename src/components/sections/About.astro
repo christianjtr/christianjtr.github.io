@@ -1,29 +1,34 @@
 ---
-import { getEntry } from 'astro:content';
+import { getEntry } from "astro:content";
 
-import type { ContentDataEntryType } from '@app-types/Content';
-import type { AboutMeData } from '@schemas/AboutMeSchema';
-import { CONTENT } from '@app-types/Content';
-import { VerticalSpacer } from '@components';
-import ExpertiseFeatureGrid from '@components/sections/ExpertiseFeatureGrid.astro';
-import AboutExpertiseHeading from './about/AboutExpertiseHeading.astro';
-import AboutHero from './about/AboutHero.astro';
-import AboutProfilePanel from './about/AboutProfilePanel.astro';
-import MeENImg from '@assets/images/me.png';
-import MeFRImg from '@assets/images/me-fr.png';
-import MeESImg from '@assets/images/me-es.png';
+import type { ContentDataEntryType } from "@app-types/Content";
+import type { AboutMeData } from "@schemas/AboutMeSchema";
+import { CONTENT } from "@app-types/Content";
+import { VerticalSpacer } from "@components";
+import ExpertiseFeatureGrid from "@components/sections/ExpertiseFeatureGrid.astro";
+import AboutExpertiseHeading from "./about/AboutExpertiseHeading.astro";
+import AboutHero from "./about/AboutHero.astro";
+import AboutProfilePanel from "./about/AboutProfilePanel.astro";
+import AboutBackground from "./about/AboutBackground.astro";
+import MeENImg from "@assets/images/me.png";
+import MeFRImg from "@assets/images/me-fr.png";
+import MeESImg from "@assets/images/me-es.png";
 
 const { lang } = Astro.params;
 
-const avatarMap: Record<string, ImageMetadata> = {  
+const avatarMap: Record<string, ImageMetadata> = {
     en: MeENImg,
     fr: MeFRImg,
     es: MeESImg,
 };
 
 const activeAvatar = avatarMap[lang as string] || MeENImg;
-const entry = await getEntry(lang as ContentDataEntryType, `${lang}/${CONTENT.COMMON}`);
-const { common, section_about, section_experiences, section_studies } = (entry?.data as AboutMeData) || {};
+const entry = await getEntry(
+    lang as ContentDataEntryType,
+    `${lang}/${CONTENT.COMMON}`,
+);
+const { common, section_about, section_experiences, section_studies } =
+    (entry?.data as AboutMeData) || {};
 ---
 
 <div class="about-page container mx-auto mt-4 px-3 sm:mt-8 sm:px-5">
@@ -31,14 +36,14 @@ const { common, section_about, section_experiences, section_studies } = (entry?.
     <AboutExpertiseHeading sectionAbout={section_about} />
 
     <div class="about-details-grid">
-        <AboutProfilePanel
-            common={common}
-            sectionAbout={section_about}
-            experiences={section_experiences}
-            studies={section_studies}
-        />
-        <div class="about-expertise-grid">
+        <AboutProfilePanel sectionAbout={section_about} />
+        <div class="about-expertise-column">
             <ExpertiseFeatureGrid subjects={section_about.expertise.subjects} />
+            <AboutBackground
+                common={common}
+                experiences={section_experiences}
+                studies={section_studies}
+            />
         </div>
     </div>
 </div>
@@ -50,19 +55,16 @@ const { common, section_about, section_experiences, section_studies } = (entry?.
     .about-details-grid {
         display: grid;
         grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
-        align-items: stretch;
-        gap: clamp(1.25rem, 3vw, 2.5rem);
+        align-items: start;
+        gap: clamp(1.75rem, 3.5vw, 3rem);
         padding: 0 clamp(0.25rem, 2vw, 1.5rem);
     }
 
-    .about-expertise-grid {
+    .about-expertise-column {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
         min-width: 0;
-    }
-
-    @media (min-width: 1024px) {
-        .about-expertise-grid .expertise-feature-grid {
-            height: 100%;
-        }
     }
 
     @media (max-width: 1023px) {
@@ -73,7 +75,7 @@ const { common, section_about, section_experiences, section_studies } = (entry?.
 
     @media (max-width: 639px) {
         .about-details-grid {
-            gap: 1.25rem;
+            gap: 2rem;
         }
     }
 </style>
