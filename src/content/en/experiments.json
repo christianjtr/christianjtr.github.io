@@ -71,7 +71,7 @@
     {
         "id": "experiment-manage-employees-dashboard",
         "section": "experiments",
-        "title": "Employee Management Dashboard",
+        "title": "TeamMap - Employee Management Dashboard",
         "description": "An administrative dashboard designed to streamline employee directory management, organizational tracking, and team operations. Built with a clean, responsive interface for quick CRUD operations, role filtering, and clear data visualization.",
         "image": "/src/assets/images/experiments/manage-employees.webp",
         "tags": [
@@ -83,11 +83,11 @@
         ],
         "role": "Author",
         "category": "Application / tool",
-        "type": "HR & Employee Management Dashboard",
+        "type": "Management Dashboard",
         "url": "https://christianjtr.github.io/manage-employees-dashboard/#/",
         "isSandbox": false,
         "display": true,
-        "abstract": "This employee management dashboard provides a centralized interface for handling workforce records and team structures. It allows administrators to add, edit, search, and filter employee profiles by department or role, offering an intuitive layout focused on operational efficiency and clarity.",
+        "abstract": "This dashboard provides a centralized interface for handling workforce records and team structures. It allows administrators to add, edit, search, and filter employee profiles by department or role, offering an intuitive layout focused on operational efficiency and clarity.",
         "year": 2026,
         "isWIP": false,
         "topic": "Software & AI"

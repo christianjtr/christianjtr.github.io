@@ -71,7 +71,7 @@
     {
         "id": "experiment-manage-employees-dashboard",
         "section": "experiments",
-        "title": "Panel de Gestión de Empleados",
+        "title": "TeamMap - Panel de Gestión de Empleados",
         "description": "Un panel administrativo diseñado para agilizar la gestión del directorio de empleados, el seguimiento organizacional y las operaciones de equipo. Construido con una interfaz limpia y responsiva para operaciones CRUD rápidas, filtrado por roles y visualización clara de datos.",
         "image": "/src/assets/images/experiments/manage-employees.webp",
         "tags": [
@@ -83,7 +83,7 @@
         ],
         "role": "Author",
         "category": "Aplicación / herramienta",
-        "type": "Panel de Gestión de RR. HH. y Empleados",
+        "type": "Panel de Gestión",
         "url": "https://christianjtr.github.io/manage-employees-dashboard/#/",
         "isSandbox": false,
         "display": true,
