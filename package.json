@@ -1,7 +1,7 @@
 {
     "name": "christianjtr.github.io",
     "type": "module",
-    "version": "1.26.16",
+    "version": "1.26.17",
     "packageManager": "pnpm@10.20.0",
     "scripts": {
         "dev": "astro dev",
