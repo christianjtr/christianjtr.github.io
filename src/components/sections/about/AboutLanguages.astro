@@ -15,8 +15,8 @@ const { languages, languageTip } = Astro.props;
         <span>{languageTip}</span>
     </div>
     <div class="languages-list">
-        {languages.map((language) => (
-            <div class="language-row">
+        {languages.map((language, rowIndex) => (
+            <div class="language-row" style={`--row-index: ${rowIndex};`}>
                 <div class="language-identity">
                     <span class="language-emoji" aria-hidden="true">
                         {language.emoji}
@@ -47,6 +47,7 @@ const { languages, languageTip } = Astro.props;
                                         isFilled && "is-filled",
                                         isPartial && "is-partial",
                                     ]}
+                                    style={`--seg-index: ${index};`}
                                 />
                             );
                         })}
@@ -60,11 +61,49 @@ const { languages, languageTip } = Astro.props;
     </div>
 </div>
 
+<script>
+    function initLanguageMeterObserver() {
+        const container = document.querySelector('.about-languages');
+        if (!container) return;
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.35 }
+        );
+
+        observer.observe(container);
+    }
+
+    // Run on initial load and after Astro page transitions
+    initLanguageMeterObserver();
+    document.addEventListener('astro:page-load', initLanguageMeterObserver);
+</script>
+
 <style is:global>
+    /* ── Color tokens (resolve once per theme) ───────────────────────── */
     .about-languages {
+        --lang-fill: var(--color-primary);
+        --lang-fill-shadow: color-mix(in srgb, var(--color-primary) 32%, transparent);
+        --lang-partial: color-mix(in srgb, var(--color-primary) 50%, var(--color-base-300));
+        --lang-empty: color-mix(in srgb, var(--color-base-content) 14%, var(--color-base-200));
+
         display: grid;
         gap: 0.75rem;
         margin-top: clamp(2rem, 3.5vw, 2.75rem);
+    }
+
+    html[data-theme="dark"] .about-languages {
+        --lang-fill: var(--color-accent);
+        --lang-fill-shadow: color-mix(in srgb, var(--color-accent) 42%, transparent);
+        --lang-partial: color-mix(in srgb, var(--color-accent) 55%, rgba(255,255,255,0.15));
+        --lang-empty: rgba(255, 255, 255, 0.12);
     }
 
     .spacer-bottom-10 {
@@ -77,36 +116,45 @@ const { languages, languageTip } = Astro.props;
         gap: 0.45rem;
     }
 
+    /* ── Row ─────────────────────────────────────────────────────────── */
     .language-row {
         display: flex;
         min-width: 0;
         align-items: center;
         gap: 0.85rem;
-        padding: 0.35rem 0.5rem;
-        border-radius: 0.65rem;
-        transition: background-color 0.2s ease;
+        padding: 0.4rem 0.6rem;
+        border-radius: 0.75rem;
+        transition: background-color 0.25s ease;
     }
 
     .language-row:hover {
         background-color: color-mix(
             in srgb,
-            var(--color-base-content) 4%,
+            var(--color-base-content) 5%,
             transparent
         );
     }
 
+    /* ── Identity ────────────────────────────────────────────────────── */
     .language-identity {
         display: flex;
         min-width: 0;
         flex: 0 0 7rem;
         align-items: center;
-        gap: 0.45rem;
+        gap: 0.5rem;
     }
 
     .language-emoji {
         font-size: 1.8rem;
         line-height: 1;
         flex-shrink: 0;
+        display: inline-block;
+        transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        transform-origin: center bottom;
+    }
+
+    .language-row:hover .language-emoji {
+        transform: scale(1.18) rotate(-6deg);
     }
 
     .language-name {
@@ -116,6 +164,7 @@ const { languages, languageTip } = Astro.props;
         white-space: nowrap;
     }
 
+    /* ── Level group ─────────────────────────────────────────────────── */
     .language-level-group {
         display: flex;
         min-width: 0;
@@ -126,74 +175,133 @@ const { languages, languageTip } = Astro.props;
 
     .language-meter {
         display: inline-flex;
-        height: 0.65rem;
+        height: 1.1rem;
         flex: 0 0 auto;
         align-items: center;
-        gap: 0.22rem;
+        gap: 0.24rem;
+        padding: 0.15rem 0.25rem;
+        border-radius: 9999px;
     }
 
+    /* ── Segments: base state ────────────────────────────────────────── */
     .language-meter__segment {
         width: 0.9rem;
-        height: 0.36rem;
+        height: 0.6rem;
         border-radius: 9999px;
+        background: var(--lang-empty);
+        transition:
+            transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+            background-color 0.25s ease,
+            box-shadow 0.25s ease,
+            filter 0.25s ease;
+        transform-origin: center;
+    }
+
+    /* ── Filled segments: before scroll-reveal they look empty ───────── */
+    .language-meter__segment.is-filled {
+        /* visually indistinguishable from empty until .is-visible fires */
+        background: var(--lang-empty);
+        box-shadow: none;
+    }
+
+    /* ── Scroll-reveal: container becomes .is-visible ────────────────── */
+    .about-languages.is-visible .language-meter__segment.is-filled {
+        animation:
+            lang-segment-reveal 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        animation-delay: calc(
+            var(--row-index, 0) * 110ms +
+            var(--seg-index, 0) * 60ms +
+            80ms
+        );
+    }
+
+    /* ── Partial segment (always animated, independent) ─────────────── */
+    .language-meter__segment.is-partial {
+        background: var(--lang-partial);
+        animation: lang-pulse 2s ease-in-out infinite alternate;
+    }
+
+    /* Wait for reveal then blend into pulse */
+    .about-languages.is-visible .language-meter__segment.is-partial {
+        animation:
+            lang-segment-reveal 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
+            lang-pulse 2s ease-in-out infinite alternate;
+        animation-delay:
+            calc(var(--row-index, 0) * 110ms + var(--seg-index, 0) * 60ms + 80ms),
+            calc(var(--row-index, 0) * 110ms + var(--seg-index, 0) * 60ms + 680ms);
+    }
+
+    /* ── Hover effects (only after reveal) ───────────────────────────── */
+    .about-languages.is-visible .language-row:hover
+        .language-meter__segment.is-filled {
+        transform: translateY(-2px) scaleY(1.25);
+        transition-delay: calc(var(--seg-index, 0) * 35ms);
+        filter: brightness(1.18);
+        box-shadow: 0 4px 10px var(--lang-fill-shadow);
+    }
+
+    .about-languages.is-visible .language-row:hover
+        .language-meter__segment:not(.is-filled):not(.is-partial) {
         background: color-mix(
             in srgb,
-            var(--color-base-content) 14%,
+            var(--color-base-content) 22%,
             var(--color-base-200)
         );
-        transition: all 0.25s ease;
+        transition-delay: calc(var(--seg-index, 0) * 30ms);
     }
 
-    html[data-theme="dark"] .language-meter__segment {
-        background: rgba(255, 255, 255, 0.12);
+    html[data-theme="dark"] .about-languages.is-visible .language-row:hover
+        .language-meter__segment:not(.is-filled):not(.is-partial) {
+        background: rgba(255, 255, 255, 0.22);
     }
 
-    .language-meter__segment.is-filled {
-        background: var(--color-primary);
-        box-shadow: 0 1px 2px
-            color-mix(in srgb, var(--color-primary) 30%, transparent);
+    .about-languages.is-visible .language-row:hover
+        .language-meter__segment.is-partial {
+        transform: translateY(-2px) scaleY(1.25);
+        animation-duration: 0.9s;
     }
 
-    html[data-theme="dark"] .language-meter__segment.is-filled {
-        background: var(--color-accent);
-        box-shadow: 0 0 6px
-            color-mix(in srgb, var(--color-accent) 40%, transparent);
-    }
-
-    .language-row:hover .language-meter__segment.is-filled {
-        filter: brightness(1.1);
-    }
-
-    .language-meter__segment.is-partial {
-        animation: language-pulse 1.8s ease-in-out infinite alternate;
-        background: color-mix(
-            in srgb,
-            var(--color-primary) 50%,
-            var(--color-base-300)
-        );
-    }
-
-    html[data-theme="dark"] .language-meter__segment.is-partial {
-        background: color-mix(
-            in srgb,
-            var(--color-accent) 55%,
-            rgba(255, 255, 255, 0.15)
-        );
-    }
-
+    /* ── Proficiency label ───────────────────────────────────────────── */
     .language-proficiency {
         font-size: 0.8rem;
         font-weight: 500;
         color: color-mix(in srgb, var(--color-base-content) 72%, transparent);
         white-space: nowrap;
+        transition: color 0.2s ease, transform 0.2s ease;
     }
 
-    @keyframes language-pulse {
-        to {
-            opacity: 0.55;
+    .language-row:hover .language-proficiency {
+        color: var(--color-base-content);
+        transform: translateX(3px);
+    }
+
+    /* ── Keyframes ───────────────────────────────────────────────────── */
+    @keyframes lang-segment-reveal {
+        0% {
+            background: var(--lang-empty);
+            transform: scaleX(0.15) scaleY(0.5);
+            opacity: 0.3;
+            box-shadow: none;
+        }
+        55% {
+            transform: scaleX(1.1) scaleY(1.28);
+        }
+        100% {
+            background: var(--lang-fill);
+            transform: scaleX(1) scaleY(1);
+            opacity: 1;
+            box-shadow: 0 1px 3px var(--lang-fill-shadow);
         }
     }
 
+    @keyframes lang-pulse {
+        to {
+            opacity: 0.42;
+            transform: scale(0.95);
+        }
+    }
+
+    /* ── Responsive ──────────────────────────────────────────────────── */
     @media (max-width: 639px) {
         .language-row {
             gap: 0.6rem;
@@ -205,8 +313,12 @@ const { languages, languageTip } = Astro.props;
             gap: 0.35rem;
         }
 
+        .language-emoji {
+            font-size: 1.5rem;
+        }
+
         .language-name {
-            font-size: 0.8rem;
+            font-size: 0.82rem;
         }
 
         .language-level-group {
@@ -219,7 +331,7 @@ const { languages, languageTip } = Astro.props;
 
         .language-meter__segment {
             width: 0.72rem;
-            height: 0.32rem;
+            height: 0.5rem;
         }
 
         .language-proficiency {
@@ -234,9 +346,26 @@ const { languages, languageTip } = Astro.props;
         }
     }
 
+    /* ── Reduced motion ──────────────────────────────────────────────── */
     @media (prefers-reduced-motion: reduce) {
-        .language-meter__segment.is-partial {
-            animation: none;
+        .language-emoji,
+        .language-row,
+        .language-proficiency,
+        .language-meter__segment {
+            transition: none !important;
+            animation: none !important;
+            transform: none !important;
+        }
+
+        /* Still show filled segments correctly without animation */
+        .about-languages.is-visible .language-meter__segment.is-filled,
+        .about-languages .language-meter__segment.is-filled {
+            background: var(--lang-fill) !important;
+            box-shadow: 0 1px 3px var(--lang-fill-shadow) !important;
+        }
+
+        .about-languages .language-meter__segment.is-partial {
+            background: var(--lang-partial) !important;
         }
     }
 </style>
