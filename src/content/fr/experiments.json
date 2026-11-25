@@ -98,13 +98,7 @@
         "title": "Team-Memory-Health (TMH)",
         "description": "CLI et compétence d’agent pour évaluer la qualité et l’alignement de la mémoire partagée d’une équipe de développement. L’analyse porte sur la cohérence, l’actualité, la couverture et la répartition des sources, sans noter les personnes ni modifier les données.",
         "image": "/src/assets/images/experiments/team_memory_health.webp",
-        "tags": [
-            "TypeScript",
-            "CLI",
-            "Agent Skill",
-            "Engram",
-            "AI Tools"
-        ],
+        "tags": ["TypeScript", "CLI", "Agent Skill", "Engram", "AI Tools"],
         "role": "Author",
         "category": "Application / outil",
         "type": "CLI TypeScript / Agent Skill",
@@ -206,21 +200,21 @@
     {
         "id": "experiment-dynamic-pricing-calendar-webapp",
         "section": "experiments",
-        "title": "Simulation de calendrier de tarification pour système de gestion avec React, TypeScript et TanStack Query.",
-        "description": "Simulateur de gestion des revenus permettant d’explorer les tarifs dans un calendrier interactif. Il repose sur une architecture full-stack découplée, avec un serveur API et des flux de données réactifs.",
+        "title": "Application de référence de calendrier tarifaire contract-first avec OpenAPI 3.1, Zod et Vite.",
+        "description": "Application de référence pilotée par contrat HTTP pour afficher et éditer les tarifs d'un backend externe. Inclut une spécification OpenAPI 3.1.1 canonique, des validateurs Zod générés, une documentation Swagger intégrée et un serveur de test local.",
         "image": "/src/assets/images/experiments/dynamic_pricing_calendar.webp",
         "tags": [
-            "FullStack Development",
-            "ReactJS / NodeJS / TypeScript",
-            "TanStack Query"
+            "Contract-First Architecture",
+            "OpenAPI 3.1 / Zod",
+            "TypeScript / React / Vite"
         ],
         "role": "Author",
-        "category": "PoC technique",
+        "category": "Application de référence",
         "type": "Application web (Calendrier de tarification dynamique)",
         "url": "https://github.com/christianjtr/dynamic-pricing-calendar",
         "isSandbox": false,
         "display": true,
-        "topic": "Données et analytique"
+        "topic": "Software & AI"
     },
     {
         "id": "experiment-tv-movie-streaming-like-webapp",
