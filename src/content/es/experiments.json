@@ -200,7 +200,7 @@
     {
         "id": "experiment-dynamic-pricing-calendar-webapp",
         "section": "experiments",
-        "title": "Aplicación de referencia de calendario de precios contract-first con OpenAPI 3.1, Zod y Vite.",
+        "title": "Aplicación de referencia de calendario de precios contract-first con OpenAPI",
         "description": "Aplicación de referencia guiada por contrato HTTP para visualizar y editar tarifas desde un backend externo. Incluye una especificación OpenAPI 3.1.1 canónica, validadores Zod generados, documentación Swagger integrada y un servidor de pruebas local.",
         "image": "/src/assets/images/experiments/dynamic_pricing_calendar.webp",
         "tags": [
