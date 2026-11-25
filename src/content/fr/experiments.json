@@ -209,12 +209,12 @@
             "TypeScript / React / Vite"
         ],
         "role": "Author",
-        "category": "Application de référence",
+        "category": "Application / outil",
         "type": "Application web (Calendrier de tarification dynamique)",
         "url": "https://github.com/christianjtr/dynamic-pricing-calendar",
         "isSandbox": false,
         "display": true,
-        "topic": "Software & AI"
+        "topic": "Logiciel et IA"
     },
     {
         "id": "experiment-tv-movie-streaming-like-webapp",
